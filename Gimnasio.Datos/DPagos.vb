@@ -2,30 +2,18 @@
 Imports Gimnasio.Entidades
 Imports LogDeErrores
 
+''' <summary>
+''' Clase de acceso a datos para la gestión de pagos en el sistema de gimnasio.
+''' Hereda de <see cref="ConexionBase"/> y utiliza la entidad <see cref="Pagos"/>.
+''' Proporciona métodos CRUD y de búsqueda para la tabla <c>pagos</c> y la vista <c>vista_pagos</c>.
+''' </summary>
 Public Class DPagos
     Inherits ConexionBase
 
-    'VIEW `vista_pagos` AS
-    'SELECT 
-    '    `p`.`id_pago` AS `id_pago`,
-    '    `p`.`id_membresia` AS `id_membresia`,
-    '    `p`.`id_usuario_registro` AS `id_usuario_registro`,
-    '    `m`.`apellido` AS `apellido_miembro`,
-    '    `m`.`nombre` AS `nombre_miembro`,
-    '    `m`.`dni` AS `dni_miembro`,
-    '    `pm`.`nombre_plan` AS `nombre_plan`,
-    '    `p`.`monto_pagado` AS `monto`,
-    '    `p`.`metodo_pago` AS `metodo`,
-    '    `p`.`numero_comprobante` AS `comprobante`,
-    '    `p`.`fecha_pago` AS `fecha_pago`,
-    '    `us`.`nombre_completo` AS `nombre_usuario`
-    'FROM
-    '    ((((`pagos` `p`
-    '    LEFT JOIN `membresias_miembro` `mm` ON ((`p`.`id_membresia` = `mm`.`id_membresia`)))
-    '    LEFT JOIN `miembros` `m` ON ((`mm`.`id_miembro` = `m`.`id_miembro`)))
-    '    LEFT JOIN `planes_membresia` `pm` ON ((`mm`.`id_plan` = `pm`.`id_plan`)))
-    '    LEFT JOIN `usuarios_sistema` `us` ON ((`p`.`id_usuario_registro` = `us`.`id_usuario`)))
-    'ORDER BY `p`.`fecha_pago` DESC
+    ''' <summary>
+    ''' Obtiene todos los pagos desde la vista <c>vista_pagos</c>.
+    ''' </summary>
+    ''' <returns><see cref="DataTable"/> con los datos de los pagos.</returns>
     Public Function Listar() As DataTable
         Try
             Dim query As String = "SELECT * FROM vista_pagos"
@@ -36,6 +24,11 @@ Public Class DPagos
         End Try
     End Function
 
+    ''' <summary>
+    ''' Inserta un nuevo pago en la base de datos.
+    ''' Utiliza los datos de la entidad <see cref="Pagos"/>.
+    ''' </summary>
+    ''' <param name="pago">Instancia de <see cref="Pagos"/> a insertar.</param>
     Public Sub Insertar(pago As Pagos)
         Try
             Dim query As String = "INSERT INTO pagos (id_membresia, id_usuario_registro, monto_pagado, metodo_pago, numero_comprobante, notas) VALUES (@idmem, @idus, @mont, @met, @num, @notas)"
@@ -54,6 +47,10 @@ Public Class DPagos
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Elimina un pago de la base de datos según su identificador.
+    ''' </summary>
+    ''' <param name="id">Identificador único del pago a eliminar.</param>
     Public Sub Eliminar(id As UInteger)
         Try
             Dim query As String = "DELETE FROM pagos WHERE id_pago = @id"
@@ -67,7 +64,12 @@ Public Class DPagos
         End Try
     End Sub
 
-
+    ''' <summary>
+    ''' Busca pagos por rango de fechas utilizando la vista <c>vista_pagos</c>.
+    ''' </summary>
+    ''' <param name="fechaInicio">Fecha de inicio del rango.</param>
+    ''' <param name="fechaFin">Fecha de fin del rango.</param>
+    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
     Public Function ListarPorFecha(fechaInicio As DateTime, fechaFin As DateTime) As DataTable
         Try
             Dim query As String = "SELECT * FROM vista_pagos WHERE fecha_pago BETWEEN @fechaInicio AND @fechaFin"
@@ -82,6 +84,11 @@ Public Class DPagos
         End Try
     End Function
 
+    ''' <summary>
+    ''' Busca pagos por coincidencia parcial de DNI utilizando la vista <c>vista_pagos</c>.
+    ''' </summary>
+    ''' <param name="dni">DNI o parte del DNI del miembro a buscar.</param>
+    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
     Public Function ListarPorDni(dni As String) As DataTable
         Try
             Dim query As String = "SELECT * FROM vista_pagos WHERE dni_miembro LIKE @dni"
@@ -95,6 +102,11 @@ Public Class DPagos
         End Try
     End Function
 
+    ''' <summary>
+    ''' Busca pagos por coincidencia parcial de nombre de plan utilizando la vista <c>vista_pagos</c>.
+    ''' </summary>
+    ''' <param name="nombre">Nombre o parte del nombre del plan a buscar.</param>
+    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
     Public Function ListarPorNombrePlan(nombre As String) As DataTable
         Try
             Dim query As String = "SELECT * FROM vista_pagos WHERE nombre_plan LIKE @nombre"
@@ -108,6 +120,11 @@ Public Class DPagos
         End Try
     End Function
 
+    ''' <summary>
+    ''' Busca pagos por método de pago utilizando la vista <c>vista_pagos</c>.
+    ''' </summary>
+    ''' <param name="metodoPago">Método de pago a buscar.</param>
+    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
     Public Function ListarPorMetodoPago(metodoPago As String) As DataTable
         Try
             Dim query As String = "SELECT * FROM vista_pagos WHERE metodo = @metodoPago"
@@ -121,6 +138,12 @@ Public Class DPagos
         End Try
     End Function
 
+    ''' <summary>
+    ''' Busca pagos por rango de montos utilizando la vista <c>vista_pagos</c>.
+    ''' </summary>
+    ''' <param name="montoMin">Monto mínimo.</param>
+    ''' <param name="montoMax">Monto máximo.</param>
+    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
     Public Function ListarPorMontos(montoMin As Decimal, montoMax As Decimal) As DataTable
         Try
             Dim query As String = "

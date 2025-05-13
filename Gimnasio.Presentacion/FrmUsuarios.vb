@@ -2,10 +2,29 @@
 Imports Gimnasio.Negocio
 Imports LogDeErrores
 
+''' <summary>
+''' Formulario para la gestión de usuarios del sistema del gimnasio.
+''' Permite listar, buscar, agregar, actualizar y eliminar usuarios.
+''' Utiliza la clase <see cref="NUsuarios"/> para la lógica de negocio y la clase <see cref="Usuarios"/> como entidad.
+''' </summary>
 Public Class FrmUsuarios
+    ''' <summary>
+    ''' Instancia de la capa de negocio para usuarios.
+    ''' </summary>
     Private nUsuarios As New NUsuarios()
+    ''' <summary>
+    ''' Indica si la operación actual es de inserción (<c>True</c>) o actualización (<c>False</c>).
+    ''' </summary>
     Private esNuevo As Boolean
+    ''' <summary>
+    ''' Usuario seleccionado para actualizar.
+    ''' </summary>
     Private UsuarioPorActualizar As Usuarios
+
+    ''' <summary>
+    ''' Evento que se ejecuta al cargar el formulario.
+    ''' Inicializa el listado de usuarios y configura las columnas del <see cref="DataGridView"/>.
+    ''' </summary>
     Private Sub frmUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             ActualizarDataGridView()
@@ -24,6 +43,9 @@ Public Class FrmUsuarios
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Actualiza el <see cref="DataGridView"/> con la lista de usuarios obtenida desde <see cref="NUsuarios.Listar"/>.
+    ''' </summary>
     Public Sub ActualizarDataGridView()
         Try
             Dim dvUsuarios As DataTable = nUsuarios.Listar()
@@ -35,11 +57,18 @@ Public Class FrmUsuarios
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Habilita la vista de listado de usuarios y oculta el panel de ingreso.
+    ''' </summary>
     Public Sub HabilitarListado()
         panelDatosIngreso.Visible = False
         panelListado.Enabled = True
     End Sub
 
+    ''' <summary>
+    ''' Habilita el panel de ingreso de datos para agregar o actualizar un usuario.
+    ''' Limpia los campos de entrada.
+    ''' </summary>
     Public Sub HabilitarIngreso()
         panelDatosIngreso.Visible = True
         panelDatosIngreso.Dock = DockStyle.Fill
@@ -51,6 +80,10 @@ Public Class FrmUsuarios
         cbRol.SelectedIndex = 0
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Insertar".
+    ''' Habilita el panel de ingreso para agregar un nuevo usuario.
+    ''' </summary>
     Private Sub btnInsertar_Click(sender As Object, e As EventArgs) Handles btnInsertar.Click
         Try
             HabilitarIngreso()
@@ -62,6 +95,10 @@ Public Class FrmUsuarios
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Actualizar".
+    ''' Carga los datos del usuario seleccionado en el panel de ingreso para su edición.
+    ''' </summary>
     Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
         Try
             If dgvListado.SelectedRows.Count > 0 Then
@@ -88,6 +125,10 @@ Public Class FrmUsuarios
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Guardar".
+    ''' Inserta o actualiza un usuario utilizando <see cref="NUsuarios.Insertar"/> o <see cref="NUsuarios.Actualizar"/>.
+    ''' </summary>
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Try
             If String.IsNullOrWhiteSpace(tbNombreUsuario.Text) OrElse String.IsNullOrWhiteSpace(tbContraseña.Text) OrElse String.IsNullOrWhiteSpace(tbNombreCompleto.Text) OrElse String.IsNullOrWhiteSpace(cbRol.Text) Then
@@ -123,6 +164,10 @@ Public Class FrmUsuarios
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Cancelar".
+    ''' Vuelve a la vista de listado de usuarios.
+    ''' </summary>
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Try
             HabilitarListado()
@@ -131,6 +176,10 @@ Public Class FrmUsuarios
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el icono para mostrar u ocultar la contraseña.
+    ''' Cambia la visibilidad del campo de contraseña.
+    ''' </summary>
     Private Sub pbMostrarContraseña_Click(sender As Object, e As EventArgs) Handles pbMostrarContraseña.Click
         Try
             If tbContraseña.UseSystemPasswordChar Then
@@ -146,6 +195,10 @@ Public Class FrmUsuarios
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al cambiar el texto en el campo de búsqueda.
+    ''' Permite buscar usuarios por nombre utilizando <see cref="NUsuarios.ListarPorNombre"/>.
+    ''' </summary>
     Private Sub tbBuscar_TextChanged(sender As Object, e As EventArgs) Handles tbBuscar.TextChanged
         Try
             If cbOpcionBuscar.SelectedIndex = 0 Then
@@ -159,6 +212,10 @@ Public Class FrmUsuarios
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Eliminar".
+    ''' Elimina el usuario seleccionado utilizando <see cref="NUsuarios.Eliminar"/>.
+    ''' </summary>
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Try
             If dgvListado.SelectedRows.Count > 0 Then

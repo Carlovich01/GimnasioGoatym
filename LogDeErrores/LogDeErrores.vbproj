@@ -3,6 +3,7 @@
   <PropertyGroup>
     <RootNamespace>LogDeErrores</RootNamespace>
     <TargetFramework>net9.0</TargetFramework>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
 </Project>

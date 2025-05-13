@@ -2,23 +2,18 @@
 Imports Gimnasio.Entidades
 Imports LogDeErrores
 
+''' <summary>
+''' Clase de acceso a datos para la gestión de reclamos en el sistema de gimnasio.
+''' Hereda de <see cref="ConexionBase"/> y utiliza la entidad <see cref="Reclamos"/>.
+''' Proporciona métodos CRUD y de búsqueda para la tabla <c>reclamos</c> y la vista <c>vista_reclamos</c>.
+''' </summary>
 Public Class DReclamos
     Inherits ConexionBase
 
-    'VIEW `vista_reclamos` AS
-    'Select Case
-    '    `r`.`id_reclamos` AS `id_reclamos`,
-    '    `r`.`tipo` AS `tipo`,
-    '    `r`.`descripcion` AS `descripcion`,
-    '    `r`.`fecha_envio` AS `fecha_envio`,
-    '    `r`.`estado` AS `estado`,
-    '    `r`.`respuesta` AS `respuesta`,
-    '    `r`.`fecha_respuesta` AS `fecha_respuesta`,
-    '    `m`.`dni` AS `dni_miembro`
-    'FROM
-    '    (`reclamos` `r`
-    '    LEFT JOIN `miembros` `m` On ((`r`.`id_miembro` = `m`.`id_miembro`)))
-    'ORDER BY `r`.`fecha_envio` DESC
+    ''' <summary>
+    ''' Obtiene todos los reclamos desde la vista <c>vista_reclamos</c>.
+    ''' </summary>
+    ''' <returns><see cref="DataTable"/> con los datos de los reclamos.</returns>
     Public Function Listar() As DataTable
         Try
             Dim query As String = "SELECT * FROM vista_reclamos"
@@ -29,6 +24,11 @@ Public Class DReclamos
         End Try
     End Function
 
+    ''' <summary>
+    ''' Inserta un nuevo reclamo en la base de datos.
+    ''' Utiliza los datos de la entidad <see cref="Reclamos"/>.
+    ''' </summary>
+    ''' <param name="Obj">Instancia de <see cref="Reclamos"/> a insertar.</param>
     Public Sub Insertar(Obj As Reclamos)
         Try
             Dim query As String = "INSERT INTO reclamos (tipo, descripcion, id_miembro) VALUES (@tipo, @des, @idMiembro)"
@@ -44,6 +44,10 @@ Public Class DReclamos
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Actualiza los datos de un reclamo existente en la base de datos.
+    ''' </summary>
+    ''' <param name="Obj">Instancia de <see cref="Reclamos"/> con los datos actualizados.</param>
     Public Sub Actualizar(Obj As Reclamos)
         Try
             Dim query As String = "UPDATE reclamos SET tipo = @tipo, descripcion = @des, id_miembro = @idMiembro WHERE id_reclamos = @id"
@@ -60,6 +64,10 @@ Public Class DReclamos
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Elimina un reclamo de la base de datos según su identificador.
+    ''' </summary>
+    ''' <param name="id">Identificador único del reclamo a eliminar.</param>
     Public Sub Eliminar(id As UInteger)
         Try
             Dim query As String = "DELETE FROM reclamos WHERE id_reclamos = @id"
@@ -73,6 +81,10 @@ Public Class DReclamos
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Cambia el estado de un reclamo a "resuelto".
+    ''' </summary>
+    ''' <param name="id">Identificador único del reclamo.</param>
     Public Sub ActualizarElEstadoAResuelto(id As UInteger)
         Try
             Dim query As String = "UPDATE reclamos SET estado = 'resuelto' WHERE id_reclamos = @id"
@@ -86,6 +98,10 @@ Public Class DReclamos
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Cambia el estado de un reclamo a "pendiente".
+    ''' </summary>
+    ''' <param name="id">Identificador único del reclamo.</param>
     Public Sub ActualizarElEstadoAPendiente(id As UInteger)
         Try
             Dim query As String = "UPDATE reclamos SET estado = 'pendiente' WHERE id_reclamos = @id"
@@ -99,6 +115,10 @@ Public Class DReclamos
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Actualiza la respuesta y la fecha de respuesta de un reclamo.
+    ''' </summary>
+    ''' <param name="Obj">Instancia de <see cref="Reclamos"/> con la respuesta actualizada.</param>
     Public Sub ActualizarRespuesta(Obj As Reclamos)
         Try
             Dim query As String = "UPDATE reclamos SET respuesta = @respuesta, fecha_respuesta = @fechr WHERE id_reclamos = @id"
@@ -114,6 +134,11 @@ Public Class DReclamos
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Busca reclamos por estado utilizando la vista <c>vista_reclamos</c>.
+    ''' </summary>
+    ''' <param name="Estado">Estado del reclamo (por ejemplo: "pendiente", "resuelto").</param>
+    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
     Public Function ListarPorEstado(Estado As String) As DataTable
         Try
             Dim query As String = "SELECT * FROM vista_reclamos WHERE estado = @estado"
@@ -127,3 +152,4 @@ Public Class DReclamos
         End Try
     End Function
 End Class
+

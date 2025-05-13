@@ -2,18 +2,42 @@
 Imports Gimnasio.Negocio
 Imports LogDeErrores
 
+''' <summary>
+''' Formulario para la gestión de miembros en el sistema del gimnasio.
+''' Permite listar, buscar, agregar, actualizar y eliminar miembros.
+''' Utiliza la clase <see cref="NMiembros"/> para la lógica de negocio y la clase <see cref="Miembros"/> como entidad.
+''' </summary>
 Public Class FrmMiembros
+    ''' <summary>
+    ''' Instancia de la capa de negocio para miembros.
+    ''' </summary>
     Private nMiembros As New NMiembros()
+    ''' <summary>
+    ''' Indica si la operación actual es de inserción (<c>True</c>) o actualización (<c>False</c>).
+    ''' </summary>
     Private esNuevo As Boolean
+    ''' <summary>
+    ''' Miembro seleccionado para actualizar.
+    ''' </summary>
     Private miembroPorActualizar As Miembros
+    ''' <summary>
+    ''' Referencia al formulario principal para navegación y acceso al usuario actual.
+    ''' </summary>
     Private frmPrincipal As FrmPrincipal
 
+    ''' <summary>
+    ''' Constructor del formulario de miembros.
+    ''' </summary>
+    ''' <param name="frmPrincipal">Instancia de <see cref="FrmPrincipal"/> para navegación y acceso al usuario actual.</param>
     Public Sub New(frmPrincipal As FrmPrincipal)
         InitializeComponent()
         Me.frmPrincipal = frmPrincipal
     End Sub
 
-
+    ''' <summary>
+    ''' Evento que se ejecuta al cargar el formulario.
+    ''' Inicializa el listado de miembros y configura las columnas del <see cref="DataGridView"/>.
+    ''' </summary>
     Private Sub frmMiembros_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             ActualizarDataGridView()
@@ -36,6 +60,9 @@ Public Class FrmMiembros
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Actualiza el <see cref="DataGridView"/> con la lista de miembros obtenida desde <see cref="NMiembros.Listar"/>.
+    ''' </summary>
     Public Sub ActualizarDataGridView()
         Try
             Dim dvMiembros As DataTable = nMiembros.Listar()
@@ -46,11 +73,19 @@ Public Class FrmMiembros
             MsgBox("Error al cargar los miembros: " & ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
     End Sub
+
+    ''' <summary>
+    ''' Habilita la vista de listado de miembros y oculta el panel de ingreso de datos.
+    ''' </summary>
     Public Sub HabilitarListado()
         panelDatosIngreso.Visible = False
         panelListado.Enabled = True
     End Sub
 
+    ''' <summary>
+    ''' Habilita el panel de ingreso de datos para agregar o actualizar un miembro.
+    ''' Limpia los campos de entrada.
+    ''' </summary>
     Public Sub HabilitarIngreso()
         panelDatosIngreso.Visible = True
         panelDatosIngreso.Dock = DockStyle.Fill
@@ -63,6 +98,10 @@ Public Class FrmMiembros
         tbEmail.Clear()
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Insertar".
+    ''' Habilita el panel de ingreso para agregar un nuevo miembro.
+    ''' </summary>
     Private Sub btnInsertar_Click(sender As Object, e As EventArgs) Handles btnInsertar.Click
         Try
             HabilitarIngreso()
@@ -74,6 +113,10 @@ Public Class FrmMiembros
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Actualizar".
+    ''' Carga los datos del miembro seleccionado en el panel de ingreso para su edición.
+    ''' </summary>
     Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
         Try
             If dgvListado.SelectedRows.Count > 0 Then
@@ -105,6 +148,11 @@ Public Class FrmMiembros
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Guardar".
+    ''' Inserta o actualiza un miembro utilizando <see cref="NMiembros.Insertar"/> o <see cref="NMiembros.Actualizar"/>.
+    ''' Si se agrega un nuevo miembro, ofrece la opción de agregar una membresía.
+    ''' </summary>
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Try
             If String.IsNullOrWhiteSpace(tbDni.Text) OrElse String.IsNullOrWhiteSpace(tbNombre.Text) OrElse String.IsNullOrWhiteSpace(tbApellido.Text) Then
@@ -154,6 +202,10 @@ Public Class FrmMiembros
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Cancelar".
+    ''' Vuelve a la vista de listado de miembros.
+    ''' </summary>
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Try
             HabilitarListado()
@@ -163,6 +215,10 @@ Public Class FrmMiembros
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Eliminar".
+    ''' Elimina el miembro seleccionado utilizando <see cref="NMiembros.Eliminar"/>.
+    ''' </summary>
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Try
             If dgvListado.SelectedRows.Count > 0 Then
@@ -184,6 +240,10 @@ Public Class FrmMiembros
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al cambiar el texto en el campo de búsqueda.
+    ''' Realiza la búsqueda de miembros por nombre o DNI utilizando <see cref="NMiembros.ListarPorNombre"/> o <see cref="NMiembros.ListarPorDni"/>.
+    ''' </summary>
     Private Sub tbBuscar_TextChanged(sender As Object, e As EventArgs) Handles tbBuscar.TextChanged
         Try
             If cbOpcionBuscar.SelectedIndex = 0 Then

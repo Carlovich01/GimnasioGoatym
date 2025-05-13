@@ -1,9 +1,21 @@
 ﻿Imports Gimnasio.Negocio
 Imports LogDeErrores
 
+''' <summary>
+''' Formulario para el registro de asistencias de miembros mediante el ingreso de DNI.
+''' Permite registrar el ingreso, mostrar el estado de las membresías y los días restantes.
+''' Utiliza la clase <see cref="NAsistencia"/> para la lógica de negocio de asistencias y <see cref="NMembresias"/> para la consulta de membresías.
+''' </summary>
 Public Class FrmAsistencias
+    ''' <summary>
+    ''' Instancia de la capa de negocio para asistencias.
+    ''' </summary>
     Private nAsistencias As New NAsistencia()
 
+    ''' <summary>
+    ''' Evento que se ejecuta al cargar el formulario.
+    ''' Inicializa la visibilidad del <see cref="DataGridView"/> de resultados.
+    ''' </summary>
     Private Sub frmAsistencias_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             dgvListado.Visible = False
@@ -13,6 +25,13 @@ Public Class FrmAsistencias
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al presionar una tecla en el campo de texto del DNI.
+    ''' Si se presiona Enter, intenta registrar la asistencia mediante <see cref="NAsistencia.RegistrarIngresoPorDNI"/>.
+    ''' Muestra el estado de las membresías y los días restantes utilizando <see cref="NMembresias.ObtenerPorDni"/>.
+    ''' </summary>
+    ''' <param name="sender">Objeto que genera el evento.</param>
+    ''' <param name="e">Argumentos de la tecla presionada.</param>
     Private Sub tbDNI_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbDNI.KeyPress
         Try
             dgvListado.Visible = False
@@ -32,7 +51,7 @@ Public Class FrmAsistencias
                                              $"¡Ingreso Exitoso. Bienvenido {nombreMiembro}! El estado de sus planes actualmente es:",
                                              $"Ingreso Erróneo. Posee membresía/s vencidas: {nombreMiembro}. El estado de sus planes actualmente es:")
 
-
+                        ' Calcula los días restantes para cada membresía
                         If Not membresias.Columns.Contains("dias_restantes") Then
                             membresias.Columns.Add("dias_restantes", GetType(UInteger))
                         End If

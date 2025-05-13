@@ -2,9 +2,22 @@
 Imports Gimnasio.Negocio
 Imports LogDeErrores
 
+''' <summary>
+''' Formulario para la gestión y consulta de pagos en el sistema del gimnasio.
+''' Permite listar, buscar, filtrar y eliminar pagos realizados por los miembros.
+''' Utiliza la clase <see cref="NPagos"/> para la lógica de negocio y la clase <see cref="Pagos"/> como entidad.
+''' </summary>
 Public Class FrmPagos
+    ''' <summary>
+    ''' Instancia de la capa de negocio para pagos.
+    ''' </summary>
     Private nPagos As New NPagos()
 
+    ''' <summary>
+    ''' Constructor del formulario de pagos.
+    ''' Configura la interfaz según el rol del usuario.
+    ''' </summary>
+    ''' <param name="usuario">Instancia de <see cref="Usuarios"/> que representa al usuario logueado.</param>
     Sub New(usuario As Usuarios)
         InitializeComponent()
         If usuario.IdRol = 2 Then
@@ -12,6 +25,11 @@ Public Class FrmPagos
             btnEliminar.Enabled = False
         End If
     End Sub
+
+    ''' <summary>
+    ''' Evento que se ejecuta al cargar el formulario.
+    ''' Inicializa el listado de pagos y configura las columnas del <see cref="DataGridView"/>.
+    ''' </summary>
     Private Sub frmPagos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             ActualizarDataGridView()
@@ -37,6 +55,10 @@ Public Class FrmPagos
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Actualiza el <see cref="DataGridView"/> con la lista de pagos obtenida desde <see cref="NPagos.Listar"/>.
+    ''' Calcula y muestra el total de ingresos.
+    ''' </summary>
     Public Sub ActualizarDataGridView()
         Try
             Dim dvMembresias As DataTable = nPagos.Listar()
@@ -55,6 +77,10 @@ Public Class FrmPagos
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón para buscar pagos por fecha.
+    ''' Filtra los pagos utilizando <see cref="NPagos.ListarPorFecha"/>.
+    ''' </summary>
     Private Sub btnBuscarFecha_Click(sender As Object, e As EventArgs) Handles BtnBuscarFecha.Click
         Try
             Dim fechaInicio = dtpFechaInicio.Value.Date
@@ -76,6 +102,10 @@ Public Class FrmPagos
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al cambiar la opción de búsqueda.
+    ''' Permite filtrar pagos por fecha, DNI, nombre de plan, monto o método de pago utilizando los métodos de <see cref="NPagos"/>.
+    ''' </summary>
     Private Sub cbOpcionBuscar_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbOpcionBuscar.SelectedIndexChanged
         Try
             ActualizarDataGridView()
@@ -124,6 +154,10 @@ Public Class FrmPagos
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al cambiar el texto en el campo de búsqueda.
+    ''' Permite buscar pagos por DNI o nombre de plan utilizando <see cref="NPagos.ListarPorDni"/> o <see cref="NPagos.ListarPorNombrePlan"/>.
+    ''' </summary>
     Private Sub tbBuscar_TextChanged(sender As Object, e As EventArgs) Handles tbBuscar.TextChanged
         Try
             Select Case cbOpcionBuscar.SelectedIndex
@@ -152,6 +186,10 @@ Public Class FrmPagos
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón para buscar pagos por monto.
+    ''' Filtra los pagos utilizando <see cref="NPagos.ListarPorMontos"/>.
+    ''' </summary>
     Private Sub btnBuscarMonto_Click(sender As Object, e As EventArgs) Handles btnBuscarMonto.Click
         Try
             Dim dvPagos As DataTable = nPagos.ListarPorMontos(CDec(tbMontoInicial.Text), CDec(tbMontoFinal.Text))
@@ -168,6 +206,10 @@ Public Class FrmPagos
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Eliminar".
+    ''' Elimina el pago seleccionado utilizando <see cref="NPagos.Eliminar"/>.
+    ''' </summary>
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Try
             If dgvListado.SelectedRows.Count > 0 Then

@@ -2,11 +2,33 @@
 Imports Gimnasio.Entidades
 Imports LogDeErrores
 
+''' <summary>
+''' Formulario para la gestión de planes en el sistema de gimnasio.
+''' Permite listar, buscar, agregar, actualizar y eliminar planes.
+''' </summary>
+''' <remarks>
+''' Utiliza la clase <see cref="NPlanes"/> para la lógica de negocio y la clase <see cref="Planes"/> como entidad.
+''' El acceso a las operaciones de mantenimiento depende del rol del usuario (<see cref="Usuarios"/>).
+''' </remarks>
 Public Class FrmPlanes
+    ''' <summary>
+    ''' Instancia de la capa de negocio para planes.
+    ''' </summary>
     Private ReadOnly nPlanes As New NPlanes()
+    ''' <summary>
+    ''' Indica si la operación actual es de inserción (<c>True</c>) o actualización (<c>False</c>).
+    ''' </summary>
     Private esNuevo As Boolean
+    ''' <summary>
+    ''' Plan seleccionado para actualizar.
+    ''' </summary>
     Private planPorActualizar As Planes
 
+    ''' <summary>
+    ''' Constructor del formulario de planes.
+    ''' Configura la interfaz según el rol del usuario.
+    ''' </summary>
+    ''' <param name="usuario">Instancia de <see cref="Usuarios"/> que representa al usuario logueado.</param>
     Sub New(usuario As Usuarios)
         InitializeComponent()
         If usuario.IdRol = 2 Then
@@ -19,6 +41,10 @@ Public Class FrmPlanes
         End If
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al cargar el formulario.
+    ''' Inicializa el listado de planes y configura las columnas del <see cref="DataGridView"/>.
+    ''' </summary>
     Private Sub frmPlanes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             ActualizarDataGridView()
@@ -36,6 +62,9 @@ Public Class FrmPlanes
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Actualiza el <see cref="DataGridView"/> con la lista de planes obtenida desde <see cref="NPlanes.Listar"/>.
+    ''' </summary>
     Public Sub ActualizarDataGridView()
         Try
             dgvListado.DataSource = nPlanes.Listar()
@@ -46,11 +75,18 @@ Public Class FrmPlanes
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Habilita la vista de listado de planes y oculta el panel de ingreso de datos.
+    ''' </summary>
     Public Sub HabilitarListado()
         panelDatosIngreso.Visible = False
         panelListado.Enabled = True
     End Sub
 
+    ''' <summary>
+    ''' Habilita el panel de ingreso de datos para agregar o actualizar un plan.
+    ''' Limpia los campos de entrada.
+    ''' </summary>
     Public Sub HabilitarIngreso()
         panelDatosIngreso.Visible = True
         panelDatosIngreso.Dock = DockStyle.Fill
@@ -61,6 +97,10 @@ Public Class FrmPlanes
         tbPrecio.Clear()
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Insertar".
+    ''' Habilita el panel de ingreso para agregar un nuevo plan.
+    ''' </summary>
     Private Sub btnInsertar_Click(sender As Object, e As EventArgs) Handles btnInsertar.Click
         Try
             HabilitarIngreso()
@@ -72,6 +112,10 @@ Public Class FrmPlanes
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Actualizar".
+    ''' Carga los datos del plan seleccionado en el panel de ingreso para su edición.
+    ''' </summary>
     Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
         Try
             If dgvListado.SelectedRows.Count > 0 Then
@@ -100,6 +144,10 @@ Public Class FrmPlanes
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Guardar".
+    ''' Inserta o actualiza un plan utilizando <see cref="NPlanes.Insertar"/> o <see cref="NPlanes.Actualizar"/>.
+    ''' </summary>
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Try
             If String.IsNullOrWhiteSpace(tbNombre.Text) OrElse String.IsNullOrWhiteSpace(tbDuracion.Text) OrElse String.IsNullOrWhiteSpace(tbPrecio.Text) Then
@@ -142,6 +190,10 @@ Public Class FrmPlanes
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Cancelar".
+    ''' Vuelve a la vista de listado de planes.
+    ''' </summary>
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Try
             HabilitarListado()
@@ -151,6 +203,10 @@ Public Class FrmPlanes
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Eliminar".
+    ''' Elimina el plan seleccionado utilizando <see cref="NPlanes.Eliminar"/>.
+    ''' </summary>
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Try
             If dgvListado.SelectedRows.Count > 0 Then
@@ -170,6 +226,11 @@ Public Class FrmPlanes
             MsgBox("Error al eliminar el plan: " & ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
     End Sub
+
+    ''' <summary>
+    ''' Evento que se ejecuta al cambiar el texto en el campo de búsqueda.
+    ''' Realiza la búsqueda de planes por nombre utilizando <see cref="NPlanes.ListarPorNombre"/>.
+    ''' </summary>
     Private Sub tbBuscar_TextChanged(sender As Object, e As EventArgs) Handles tbBuscar.TextChanged
         Try
             If cbOpcionBuscar.SelectedIndex = 0 Then
@@ -183,6 +244,10 @@ Public Class FrmPlanes
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al presionar una tecla en el campo de búsqueda.
+    ''' Permite buscar por duración o precio según la opción seleccionada utilizando <see cref="NPlanes.ListarPorDuracion"/> o <see cref="NPlanes.ListarPorPrecio"/>.
+    ''' </summary>
     Private Sub tbBuscar_KeyDown(sender As Object, e As KeyEventArgs) Handles tbBuscar.KeyDown
         Try
             If e.KeyCode = Keys.Enter Then

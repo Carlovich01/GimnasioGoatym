@@ -3,6 +3,7 @@
   <PropertyGroup>
     <RootNamespace>Gimnasio.Datos</RootNamespace>
     <TargetFramework>net9.0</TargetFramework>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

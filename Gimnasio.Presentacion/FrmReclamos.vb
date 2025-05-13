@@ -2,12 +2,30 @@
 Imports Gimnasio.Entidades
 Imports LogDeErrores
 
-
+''' <summary>
+''' Formulario para la gestión de reclamos en el sistema del gimnasio.
+''' Permite listar, buscar, agregar, actualizar, responder, cambiar estado y eliminar reclamos.
+''' Utiliza la clase <see cref="NReclamos"/> para la lógica de negocio y la clase <see cref="Reclamos"/> como entidad.
+''' </summary>
 Public Class FrmReclamos
+    ''' <summary>
+    ''' Instancia de la capa de negocio para reclamos.
+    ''' </summary>
     Private nReclamos As New NReclamos()
+    ''' <summary>
+    ''' Indica si la operación actual es de inserción (<c>True</c>) o actualización (<c>False</c>).
+    ''' </summary>
     Private esNuevo As Boolean
+    ''' <summary>
+    ''' Reclamo seleccionado para actualizar o responder.
+    ''' </summary>
     Private reclamoPorActualizar As Reclamos
 
+    ''' <summary>
+    ''' Constructor del formulario de reclamos.
+    ''' Configura la interfaz según el rol del usuario.
+    ''' </summary>
+    ''' <param name="usuario">Instancia de <see cref="Usuarios"/> que representa al usuario logueado.</param>
     Sub New(usuario As Usuarios)
         InitializeComponent()
         If usuario.IdRol = 2 Then
@@ -20,6 +38,10 @@ Public Class FrmReclamos
         End If
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al cargar el formulario.
+    ''' Inicializa el listado de reclamos y configura las columnas del <see cref="DataGridView"/>.
+    ''' </summary>
     Private Sub frmReclamos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             ActualizarDataGridView()
@@ -39,6 +61,9 @@ Public Class FrmReclamos
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Actualiza el <see cref="DataGridView"/> con la lista de reclamos obtenida desde <see cref="NReclamos.Listar"/>.
+    ''' </summary>
     Public Sub ActualizarDataGridView()
         Try
             Dim dvReclamos As DataTable = nReclamos.Listar()
@@ -50,12 +75,19 @@ Public Class FrmReclamos
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Habilita la vista de listado de reclamos y oculta los paneles de ingreso y respuesta.
+    ''' </summary>
     Public Sub HabilitarListado()
         panelDatosIngreso.Visible = False
         panelRespuestaIngreso.Visible = False
         panelListado.Enabled = True
     End Sub
 
+    ''' <summary>
+    ''' Habilita el panel de ingreso de datos para agregar o actualizar un reclamo.
+    ''' Limpia los campos de entrada.
+    ''' </summary>
     Public Sub HabilitarIngreso()
         panelDatosIngreso.Visible = True
         panelDatosIngreso.Dock = DockStyle.Fill
@@ -66,6 +98,9 @@ Public Class FrmReclamos
         TbRespuesta.Clear()
     End Sub
 
+    ''' <summary>
+    ''' Habilita el panel de ingreso de respuesta para un reclamo.
+    ''' </summary>
     Public Sub HabilitarRespuesta()
         panelRespuestaIngreso.Visible = True
         panelRespuestaIngreso.Dock = DockStyle.Fill
@@ -73,6 +108,10 @@ Public Class FrmReclamos
         TbRespuesta.Clear()
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Insertar".
+    ''' Habilita el panel de ingreso para agregar un nuevo reclamo.
+    ''' </summary>
     Private Sub btnInsertar_Click(sender As Object, e As EventArgs) Handles btnInsertar.Click
         Try
             HabilitarIngreso()
@@ -84,7 +123,10 @@ Public Class FrmReclamos
         End Try
     End Sub
 
-
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Actualizar".
+    ''' Carga los datos del reclamo seleccionado en el panel de ingreso para su edición.
+    ''' </summary>
     Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
         Try
             If dgvListado.SelectedRows.Count > 0 Then
@@ -107,7 +149,10 @@ Public Class FrmReclamos
         End Try
     End Sub
 
-
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Responder".
+    ''' Habilita el panel de respuesta para el reclamo seleccionado.
+    ''' </summary>
     Private Sub btnResponder_Click(sender As Object, e As EventArgs) Handles btnResponder.Click
         Try
             If dgvListado.SelectedRows.Count > 0 Then
@@ -126,6 +171,10 @@ Public Class FrmReclamos
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Guardar".
+    ''' Inserta o actualiza un reclamo utilizando <see cref="NReclamos.Insertar"/> o <see cref="NReclamos.Actualizar"/>.
+    ''' </summary>
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Try
             If String.IsNullOrWhiteSpace(cbTipo.Text) OrElse String.IsNullOrWhiteSpace(tbDescripcion.Text) Then
@@ -133,7 +182,6 @@ Public Class FrmReclamos
                 Return
             End If
             If esNuevo Then
-
                 Dim nuevoReclamo As New Reclamos()
                 nuevoReclamo.Tipo = cbTipo.Text
                 nuevoReclamo.Descripcion = tbDescripcion.Text
@@ -172,6 +220,10 @@ Public Class FrmReclamos
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Guardar Respuesta".
+    ''' Actualiza la respuesta de un reclamo utilizando <see cref="NReclamos.ActualizarRespuesta"/>.
+    ''' </summary>
     Private Sub tbGuardarRespuesta_Click(sender As Object, e As EventArgs) Handles tbGuardarRespuesta.Click
         Try
             If String.IsNullOrEmpty(TbRespuesta.Text.ToString) Then
@@ -191,6 +243,10 @@ Public Class FrmReclamos
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Cancelar".
+    ''' Vuelve a la vista de listado de reclamos.
+    ''' </summary>
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Try
             HabilitarListado()
@@ -200,6 +256,10 @@ Public Class FrmReclamos
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Eliminar".
+    ''' Elimina el reclamo seleccionado utilizando <see cref="NReclamos.Eliminar"/>.
+    ''' </summary>
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Try
             If dgvListado.SelectedRows.Count > 0 Then
@@ -221,6 +281,10 @@ Public Class FrmReclamos
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al cambiar la opción de búsqueda.
+    ''' Permite filtrar reclamos por estado utilizando <see cref="NReclamos.ListarPorEstado"/>.
+    ''' </summary>
     Private Sub cbOpcionBuscar_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbOpcionBuscar.SelectedIndexChanged
         Try
             Dim dvPlanes = nReclamos.ListarPorEstado(If(cbOpcionBuscar.SelectedIndex = 0, "pendiente", "resuelto"))
@@ -232,6 +296,10 @@ Public Class FrmReclamos
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Cambiar Estado".
+    ''' Cambia el estado del reclamo seleccionado entre "pendiente" y "resuelto" utilizando <see cref="NReclamos.ActualizarElEstadoAResuelto"/> y <see cref="NReclamos.ActualizarElEstadoAPendiente"/>.
+    ''' </summary>
     Private Sub btnCambiarEstado_Click(sender As Object, e As EventArgs) Handles btnCambiarEstado.Click
         Try
             If dgvListado.SelectedRows.Count > 0 Then
@@ -258,6 +326,10 @@ Public Class FrmReclamos
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Cancelar Respuesta".
+    ''' Vuelve a la vista de listado de reclamos.
+    ''' </summary>
     Private Sub tbCancelarRespuesta_Click(sender As Object, e As EventArgs) Handles tbCancelarRespuesta.Click
         Try
             HabilitarListado()

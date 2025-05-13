@@ -2,24 +2,18 @@
 Imports Gimnasio.Entidades
 Imports LogDeErrores
 
+''' <summary>
+''' Clase de acceso a datos para la gestión de asistencias en el sistema de gimnasio.
+''' Hereda de <see cref="ConexionBase"/> y utiliza la entidad <see cref="Asistencia"/>.
+''' Proporciona métodos CRUD y de búsqueda para la tabla <c>asistencia</c> y la vista <c>vista_asistencia</c>.
+''' </summary>
 Public Class DAsistencia
     Inherits ConexionBase
 
-    'VIEW `vista_asistencia` AS
-    'Select Case
-    '    `a`.`id_asistencia` AS `id_asistencia`,
-    '    `a`.`id_miembro` AS `id_miembro`,
-    '    `a`.`id_membresia_valida` AS `id_membresia`,
-    '    `m`.`dni` AS `dni_miembro`,
-    '    `m`.`nombre` AS `nombre_miembro`,
-    '    `m`.`apellido` AS `apellido_miembro`,
-    '    `a`.`fecha_hora_checkin` AS `fecha_ingreso`,
-    '    `a`.`resultado` AS `resultado`
-    'FROM
-    '    ((`asistencia` `a`
-    '    JOIN `miembros` `m` ON ((`a`.`id_miembro` = `m`.`id_miembro`)))
-    '    LEFT JOIN `membresias_miembro` `mm` On ((`a`.`id_membresia_valida` = `mm`.`id_membresia`)))
-    'ORDER BY `a`.`fecha_hora_checkin` DESC
+    ''' <summary>
+    ''' Obtiene todos los registros de asistencia desde la vista <c>vista_asistencia</c>.
+    ''' </summary>
+    ''' <returns><see cref="DataTable"/> con los datos de las asistencias.</returns>
     Public Function Listar() As DataTable
         Try
             Dim query As String = "SELECT * FROM vista_asistencia"
@@ -30,6 +24,10 @@ Public Class DAsistencia
         End Try
     End Function
 
+    ''' <summary>
+    ''' Elimina un registro de asistencia de la base de datos según su identificador.
+    ''' </summary>
+    ''' <param name="id">Identificador único de la asistencia a eliminar.</param>
     Public Sub Eliminar(id As UInteger)
         Try
             Dim query As String = "DELETE FROM asistencia WHERE id_asistencia = @id"
@@ -43,6 +41,11 @@ Public Class DAsistencia
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Inserta un nuevo registro de asistencia en la base de datos.
+    ''' Utiliza los datos de la entidad <see cref="Asistencia"/>.
+    ''' </summary>
+    ''' <param name="asistencia">Instancia de <see cref="Asistencia"/> a registrar.</param>
     Public Sub RegistrarAsistencia(asistencia As Asistencia)
         Try
             Dim query As String = "INSERT INTO asistencia (id_miembro, fecha_hora_checkin, resultado, id_membresia_valida) VALUES (@idMiembro, @fechaHoraCheckin, @resultado, @idMembresiaValida)"
@@ -59,6 +62,11 @@ Public Class DAsistencia
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Busca asistencias por coincidencia parcial de DNI utilizando la vista <c>vista_asistencia</c>.
+    ''' </summary>
+    ''' <param name="dni">DNI o parte del DNI del miembro a buscar.</param>
+    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
     Public Function ListarPorDNI(dni As String) As DataTable
         Try
             Dim query As String = "SELECT * FROM vista_asistencia WHERE dni_miembro LIKE @dni"
@@ -72,6 +80,12 @@ Public Class DAsistencia
         End Try
     End Function
 
+    ''' <summary>
+    ''' Busca asistencias por rango de fechas utilizando la vista <c>vista_asistencia</c>.
+    ''' </summary>
+    ''' <param name="fechaInicio">Fecha de inicio del rango.</param>
+    ''' <param name="fechaFin">Fecha de fin del rango.</param>
+    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
     Public Function ListarPorFecha(fechaInicio As DateTime, fechaFin As DateTime) As DataTable
         Try
             Dim query As String = "SELECT * FROM vista_asistencia WHERE fecha_ingreso BETWEEN @fechaInicio AND @fechaFin"
@@ -86,4 +100,5 @@ Public Class DAsistencia
         End Try
     End Function
 End Class
+
 

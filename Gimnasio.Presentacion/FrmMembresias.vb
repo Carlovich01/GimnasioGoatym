@@ -2,12 +2,34 @@
 Imports Gimnasio.Negocio
 Imports LogDeErrores
 
+''' <summary>
+''' Formulario para la gestión de membresías en el sistema del gimnasio.
+''' Permite listar, buscar, agregar, actualizar, eliminar membresías y registrar pagos asociados.
+''' Utiliza la clase <see cref="NMembresias"/> para la lógica de negocio y la clase <see cref="Membresias"/> como entidad.
+''' </summary>
 Public Class FrmMembresias
+    ''' <summary>
+    ''' Instancia de la capa de negocio para membresías.
+    ''' </summary>
     Private nMembresias As New NMembresias()
+    ''' <summary>
+    ''' Instancia de la membresía seleccionada o en edición.
+    ''' </summary>
     Private membresia As Membresias
+    ''' <summary>
+    ''' Usuario actualmente logueado, utilizado para registrar pagos.
+    ''' </summary>
     Private usuarioActual As Usuarios
+    ''' <summary>
+    ''' Indica si la operación actual es de inserción (<c>True</c>) o actualización (<c>False</c>).
+    ''' </summary>
     Private esNuevo As Boolean
 
+    ''' <summary>
+    ''' Constructor del formulario de membresías.
+    ''' Configura la interfaz según el rol del usuario.
+    ''' </summary>
+    ''' <param name="usuario">Instancia de <see cref="Usuarios"/> que representa al usuario logueado.</param>
     Sub New(usuario As Usuarios)
         InitializeComponent()
         usuarioActual = usuario
@@ -17,6 +39,10 @@ Public Class FrmMembresias
         End If
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al cargar el formulario.
+    ''' Inicializa el listado de membresías y configura las columnas del <see cref="DataGridView"/>.
+    ''' </summary>
     Private Sub frmMembresias_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             ActualizarDataGridView()
@@ -47,6 +73,9 @@ Public Class FrmMembresias
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Actualiza el <see cref="DataGridView"/> con la lista de membresías obtenida desde <see cref="NMembresias.Listar"/>.
+    ''' </summary>
     Public Sub ActualizarDataGridView()
         Try
             Dim dvMembresias As DataTable = nMembresias.Listar()
@@ -57,12 +86,20 @@ Public Class FrmMembresias
             MsgBox("Error al cargar listado de membresias: " & ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
     End Sub
+
+    ''' <summary>
+    ''' Habilita la vista de listado de membresías y oculta los paneles de ingreso y pago.
+    ''' </summary>
     Public Sub HabilitarListado()
         panelDatosIngreso.Visible = False
         panelPagoIngreso.Visible = False
         panelListado.Enabled = True
     End Sub
 
+    ''' <summary>
+    ''' Habilita el panel de ingreso de datos para agregar o actualizar una membresía.
+    ''' Inicializa los listados de miembros y planes.
+    ''' </summary>
     Public Sub HabilitarIngreso()
         panelDatosIngreso.Visible = True
         panelDatosIngreso.Dock = DockStyle.Fill
@@ -97,6 +134,10 @@ Public Class FrmMembresias
         cbBuscarOpcionPlan.SelectedIndex = 0
     End Sub
 
+    ''' <summary>
+    ''' Habilita el panel de ingreso de membresía con un miembro preseleccionado por DNI.
+    ''' </summary>
+    ''' <param name="dni">DNI del miembro a preseleccionar.</param>
     Public Sub HabilitarIngresoConMiembro(dni As String)
         HabilitarIngreso()
         tbBuscarMiembro.Text = dni
@@ -104,6 +145,10 @@ Public Class FrmMembresias
         esNuevo = True
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Insertar".
+    ''' Habilita el panel de ingreso para agregar una nueva membresía.
+    ''' </summary>
     Private Sub btnInsertar_Click(sender As Object, e As EventArgs) Handles btnInsertar.Click
         Try
             HabilitarIngreso()
@@ -115,6 +160,11 @@ Public Class FrmMembresias
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Guardar".
+    ''' Inserta o actualiza una membresía utilizando <see cref="NMembresias.Insertar"/> o <see cref="NMembresias.Actualizar"/>.
+    ''' Si se agrega una nueva membresía, ofrece la opción de registrar un pago.
+    ''' </summary>
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Try
 
@@ -159,6 +209,10 @@ Public Class FrmMembresias
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Cancelar".
+    ''' Vuelve a la vista de listado de membresías.
+    ''' </summary>
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Try
             HabilitarListado()
@@ -168,6 +222,9 @@ Public Class FrmMembresias
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Habilita el panel de ingreso de pago para una membresía.
+    ''' </summary>
     Public Sub HabilitarIngresoPago()
         panelPagoIngreso.Visible = True
         panelDatosIngreso.Visible = False
@@ -179,6 +236,10 @@ Public Class FrmMembresias
         tbNotas.Clear()
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Pagar".
+    ''' Permite registrar un pago para una membresía inactiva.
+    ''' </summary>
     Private Sub BtnPagar_Click(sender As Object, e As EventArgs) Handles BtnPagar.Click
         Try
             If dgvListado.SelectedRows.Count > 0 Then
@@ -207,6 +268,10 @@ Public Class FrmMembresias
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Guardar Pago".
+    ''' Inserta un pago asociado a la membresía utilizando <see cref="NPagos.Insertar"/>.
+    ''' </summary>
     Private Sub btnGuardarPago_Click(sender As Object, e As EventArgs) Handles btnGuardarPago.Click
         Try
             Dim pago As New Pagos
@@ -229,6 +294,10 @@ Public Class FrmMembresias
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Cancelar Pago".
+    ''' Vuelve a la vista de listado de membresías.
+    ''' </summary>
     Private Sub btnCancelarPago_Click(sender As Object, e As EventArgs) Handles btnCancelarPago.Click
         Try
             HabilitarListado()
@@ -238,7 +307,10 @@ Public Class FrmMembresias
         End Try
     End Sub
 
-
+    ''' <summary>
+    ''' Evento que se ejecuta al cambiar el texto en el campo de búsqueda de membresías.
+    ''' Realiza la búsqueda de membresías por DNI o nombre de plan utilizando <see cref="NMembresias.ListarPorDni"/> o <see cref="NMembresias.ListarPorNombrePlan"/>.
+    ''' </summary>
     Private Sub tbBuscarMembresias_TextChanged(sender As Object, e As EventArgs) Handles tbBuscar.TextChanged
         Try
             If cbOpcionBuscar.SelectedIndex = 0 Then
@@ -256,6 +328,10 @@ Public Class FrmMembresias
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al cambiar la opción de búsqueda de membresías.
+    ''' Permite filtrar por estado (activa/inactiva) utilizando <see cref="NMembresias.ListarPorEstado"/>.
+    ''' </summary>
     Private Sub cbOpcionBuscar_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbOpcionBuscar.SelectedIndexChanged
         Try
             If cbOpcionBuscar.SelectedIndex = 2 Then
@@ -277,6 +353,10 @@ Public Class FrmMembresias
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al cambiar el texto en el campo de búsqueda de miembros en el panel de ingreso.
+    ''' Realiza la búsqueda de miembros por nombre o DNI utilizando <see cref="NMiembros.ListarPorNombre"/> o <see cref="NMiembros.ObtenerPorDni"/>.
+    ''' </summary>
     Private Sub tbBuscarMiembro_TextChanged(sender As Object, e As EventArgs) Handles tbBuscarMiembro.TextChanged
         Try
             Dim nMiembros As New NMiembros
@@ -294,11 +374,15 @@ Public Class FrmMembresias
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al cambiar el texto en el campo de búsqueda de planes en el panel de ingreso.
+    ''' Realiza la búsqueda de planes por nombre utilizando <see cref="NPlanes.ListarPorNombre"/>.
+    ''' </summary>
     Private Sub tbBuscarPlan_TextChanged(sender As Object, e As EventArgs) Handles tbBuscarPlan.TextChanged
         Try
             Dim nPLan As New NPlanes()
             If cbBuscarOpcionPlan.SelectedIndex = 0 Then
-                Dim dvPlan As DataTable = NPlan.ListarPorNombre(tbBuscarPlan.Text)
+                Dim dvPlan As DataTable = nPLan.ListarPorNombre(tbBuscarPlan.Text)
                 dgvPlan.DataSource = dvPlan
             End If
         Catch ex As Exception
@@ -307,6 +391,10 @@ Public Class FrmMembresias
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Eliminar".
+    ''' Elimina la membresía seleccionada utilizando <see cref="NMembresias.Eliminar"/>.
+    ''' </summary>
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Try
             If dgvListado.SelectedRows.Count > 0 Then
@@ -328,6 +416,10 @@ Public Class FrmMembresias
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Actualizar".
+    ''' Carga los datos de la membresía seleccionada en el panel de ingreso para su edición.
+    ''' </summary>
     Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
         Try
             If dgvListado.SelectedRows.Count > 0 Then

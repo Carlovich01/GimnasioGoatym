@@ -2,9 +2,18 @@
 Imports Gimnasio.Entidades
 Imports LogDeErrores
 
+''' <summary>
+''' Clase de acceso a datos para la gestión de planes de membresía.
+''' Hereda de <see cref="ConexionBase"/> y utiliza la entidad <see cref="Planes"/>.
+''' Proporciona métodos CRUD y de búsqueda para la tabla <c>planes_membresia</c>.
+''' </summary>
 Public Class DPlanes
     Inherits ConexionBase
 
+    ''' <summary>
+    ''' Obtiene todos los planes de la base de datos ordenados por la última modificación.
+    ''' </summary>
+    ''' <returns><see cref="DataTable"/> con los datos de los planes.</returns>
     Public Function Listar() As DataTable
         Try
             Dim query As String = "SELECT * FROM planes_membresia ORDER BY ultima_modificacion DESC"
@@ -15,6 +24,12 @@ Public Class DPlanes
         End Try
     End Function
 
+    ''' <summary>
+    ''' Inserta un nuevo plan en la base de datos.
+    ''' Utiliza los datos de la entidad <see cref="Planes"/>.
+    ''' </summary>
+    ''' <param name="Obj">Instancia de <see cref="Planes"/> a insertar.</param>
+    ''' <exception cref="Exception">Se lanza si el nombre del plan ya existe o por errores de la base de datos.</exception>
     Public Sub Insertar(Obj As Planes)
         Try
             Dim query As String = "INSERT INTO planes_membresia (nombre_plan, descripcion, duracion_dias, precio) VALUES (@nom, @des, @dur, @pre)"
@@ -35,6 +50,10 @@ Public Class DPlanes
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Actualiza los datos de un plan existente en la base de datos.
+    ''' </summary>
+    ''' <param name="Obj">Instancia de <see cref="Planes"/> con los datos actualizados.</param>
     Public Sub Actualizar(Obj As Planes)
         Try
             Dim query As String = "UPDATE planes_membresia SET nombre_plan = @nom, descripcion = @des, duracion_dias = @dur, precio = @pre WHERE id_plan = @id"
@@ -52,6 +71,11 @@ Public Class DPlanes
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Elimina un plan de la base de datos según su identificador.
+    ''' </summary>
+    ''' <param name="id">Identificador único del plan a eliminar.</param>
+    ''' <exception cref="Exception">Se lanza si el plan tiene membresías asociadas o por errores de la base de datos.</exception>
     Public Sub Eliminar(id As UInteger)
         Try
             Dim query As String = "DELETE FROM planes_membresia WHERE id_plan = @id"
@@ -70,6 +94,11 @@ Public Class DPlanes
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Busca planes por nombre utilizando la cláusula LIKE.
+    ''' </summary>
+    ''' <param name="nombre">Nombre o parte del nombre del plan a buscar.</param>
+    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
     Public Function ListarPorNombre(nombre As String) As DataTable
         Try
             Dim query As String = "SELECT * FROM planes_membresia WHERE nombre_plan LIKE @nombre ORDER BY ultima_modificacion DESC"
@@ -83,6 +112,11 @@ Public Class DPlanes
         End Try
     End Function
 
+    ''' <summary>
+    ''' Busca planes por duración exacta en días.
+    ''' </summary>
+    ''' <param name="duracion">Duración en días del plan.</param>
+    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
     Public Function ListarPorDuracion(duracion As UInteger) As DataTable
         Try
             Dim query As String = "SELECT * FROM planes_membresia WHERE duracion_dias = @duracion ORDER BY ultima_modificacion DESC"
@@ -96,6 +130,11 @@ Public Class DPlanes
         End Try
     End Function
 
+    ''' <summary>
+    ''' Busca planes por precio exacto.
+    ''' </summary>
+    ''' <param name="precio">Precio del plan.</param>
+    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
     Public Function ListarPorPrecio(precio As Decimal) As DataTable
         Try
             Dim query As String = "SELECT * FROM planes_membresia WHERE precio = @precio ORDER BY ultima_modificacion DESC"

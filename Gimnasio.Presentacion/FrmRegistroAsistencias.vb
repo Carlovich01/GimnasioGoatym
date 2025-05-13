@@ -2,9 +2,22 @@
 Imports Gimnasio.Entidades
 Imports LogDeErrores
 
+''' <summary>
+''' Formulario para la gestión y consulta de asistencias de los miembros en el sistema del gimnasio.
+''' Permite listar, buscar por DNI o fecha, y eliminar registros de asistencia.
+''' Utiliza la clase <see cref="NAsistencia"/> para la lógica de negocio.
+''' </summary>
 Public Class FrmRegistroAsistencias
+    ''' <summary>
+    ''' Instancia de la capa de negocio para asistencias.
+    ''' </summary>
     Private nAsistencias As New NAsistencia()
 
+    ''' <summary>
+    ''' Constructor del formulario de asistencias.
+    ''' Configura la interfaz según el rol del usuario.
+    ''' </summary>
+    ''' <param name="usuario">Instancia de <see cref="Usuarios"/> que representa al usuario logueado.</param>
     Sub New(usuario As Usuarios)
         InitializeComponent()
         If usuario.IdRol = 2 Then
@@ -13,6 +26,10 @@ Public Class FrmRegistroAsistencias
         End If
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al cargar el formulario.
+    ''' Inicializa el listado de asistencias y configura las columnas del <see cref="DataGridView"/>.
+    ''' </summary>
     Private Sub frmRegistroAsistencias_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             ActualizarDataGridView()
@@ -36,6 +53,9 @@ Public Class FrmRegistroAsistencias
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Actualiza el <see cref="DataGridView"/> con la lista de asistencias obtenida desde <see cref="NAsistencia.Listar"/>.
+    ''' </summary>
     Public Sub ActualizarDataGridView()
         Try
             Dim dvAsistencias As DataTable = nAsistencias.Listar()
@@ -47,6 +67,10 @@ Public Class FrmRegistroAsistencias
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al cambiar la opción de búsqueda.
+    ''' Permite buscar asistencias por DNI o por rango de fechas utilizando los métodos de <see cref="NAsistencia"/>.
+    ''' </summary>
     Private Sub cbOpcionBuscar_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbOpcionBuscar.SelectedIndexChanged
         Try
             ActualizarDataGridView()
@@ -66,6 +90,11 @@ Public Class FrmRegistroAsistencias
             MsgBox("Error al buscar asistencias: " & ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
     End Sub
+
+    ''' <summary>
+    ''' Evento que se ejecuta al cambiar el texto en el campo de búsqueda.
+    ''' Permite buscar asistencias por DNI utilizando <see cref="NAsistencia.ListarPorDNI"/>.
+    ''' </summary>
     Private Sub tbBuscar_TextChanged(sender As Object, e As EventArgs) Handles tbBuscar.TextChanged
         Try
             If cbOpcionBuscar.SelectedIndex = 0 Then
@@ -79,6 +108,10 @@ Public Class FrmRegistroAsistencias
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón para buscar asistencias por fecha.
+    ''' Filtra las asistencias utilizando <see cref="NAsistencia.ListarPorFecha"/>.
+    ''' </summary>
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
         Try
             Dim fechaInicio = dtpFechaInicio.Value.Date
@@ -93,6 +126,10 @@ Public Class FrmRegistroAsistencias
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Eliminar".
+    ''' Elimina la asistencia seleccionada utilizando <see cref="NAsistencia.Eliminar"/>.
+    ''' </summary>
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Try
             If dgvListado.SelectedRows.Count > 0 Then
