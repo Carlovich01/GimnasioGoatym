@@ -234,9 +234,14 @@ Public Class FrmPlanes
     Private Sub tbBuscar_TextChanged(sender As Object, e As EventArgs) Handles tbBuscar.TextChanged
         Try
             If cbOpcionBuscar.SelectedIndex = 0 Then
-                Dim dvPlanes = nPlanes.ListarPorNombre(tbBuscar.Text)
-                dgvListado.DataSource = dvPlanes
+                Dim dtPlanes = nPlanes.ListarPorNombre(tbBuscar.Text)
+                dgvListado.DataSource = dtPlanes
                 lblTotal.Text = "Total Planes: " & dgvListado.Rows.Count.ToString
+                If dgvListado.Rows.Count = 0 Then
+                    MsgBox("No se encontró ningún plan con ese criterio.", MsgBoxStyle.Information, "Sin resultados")
+                    tbBuscar.Clear()
+                    ActualizarDataGridView()
+                End If
             End If
         Catch ex As Exception
             Logger.LogError("Capa Presentación", ex)
@@ -252,18 +257,49 @@ Public Class FrmPlanes
         Try
             If e.KeyCode = Keys.Enter Then
                 If cbOpcionBuscar.SelectedIndex = 1 Then
-                    Dim dvPlanes = nPlanes.ListarPorDuracion(CInt(tbBuscar.Text))
-                    dgvListado.DataSource = dvPlanes
+                    If Not IsNumeric(tbBuscar.Text) OrElse CInt(tbBuscar.Text) <= 0 Then
+                        MsgBox("La duración debe ser numerica.", MsgBoxStyle.Exclamation, "Aviso")
+                        tbBuscar.Clear()
+                        Return
+                    End If
+                    Dim dtPlanes = nPlanes.ListarPorDuracion(CInt(tbBuscar.Text))
+                    dgvListado.DataSource = dtPlanes
                     lblTotal.Text = "Total Planes: " & dgvListado.Rows.Count.ToString
+                    BusquedaSinResultados()
                 ElseIf cbOpcionBuscar.SelectedIndex = 2 Then
-                    Dim dvPlanes = nPlanes.ListarPorPrecio(tbBuscar.Text)
-                    dgvListado.DataSource = dvPlanes
+                    If Not IsNumeric(tbBuscar.Text) OrElse CInt(tbBuscar.Text) <= 0 Then
+                        MsgBox("El precio debe ser numerico.", MsgBoxStyle.Exclamation, "Aviso")
+                        tbBuscar.Clear()
+                        Return
+                    End If
+                    Dim dtPlanes = nPlanes.ListarPorPrecio(tbBuscar.Text)
+                    dgvListado.DataSource = dtPlanes
                     lblTotal.Text = "Total Planes: " & dgvListado.Rows.Count.ToString
+                    BusquedaSinResultados()
                 End If
             End If
         Catch ex As Exception
             Logger.LogError("Capa Presentación", ex)
             MsgBox("Error al buscar plan:", MsgBoxStyle.Critical, "Error")
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' Verifica si la búsqueda no devolvió resultados y muestra un mensaje al usuario.
+    ''' </summary>
+    ''' <remarks>
+    ''' Se utiliza para mostrar un mensaje cuando no se encuentran planes según el criterio de búsqueda.
+    ''' </remarks>
+    Public Sub BusquedaSinResultados()
+        Try
+            If dgvListado.Rows.Count = 0 And Not String.IsNullOrEmpty(tbBuscar.Text) Then
+                MsgBox("No se encontró ningún plan con ese criterio.", MsgBoxStyle.Information, "Sin resultados")
+                tbBuscar.Clear()
+                ActualizarDataGridView()
+            End If
+        Catch ex As Exception
+            Logger.LogError("Capa Presentación", ex)
+            MsgBox("Error al buscar los planes", MsgBoxStyle.Critical, "Error")
         End Try
     End Sub
 End Class

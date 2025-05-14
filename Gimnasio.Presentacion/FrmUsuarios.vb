@@ -205,6 +205,11 @@ Public Class FrmUsuarios
                 Dim dvUsuaurio = nUsuarios.ListarPorNombre(tbBuscar.Text)
                 dgvListado.DataSource = dvUsuaurio
                 lblTotal.Text = "Total: " & dgvListado.Rows.Count.ToString
+                If dgvListado.Rows.Count = 0 And Not String.IsNullOrEmpty(tbBuscar.Text) Then
+                    MsgBox("No se encontró ningún usuario con ese criterio.", MsgBoxStyle.Information, "Sin resultados")
+                    tbBuscar.Clear()
+                    ActualizarDataGridView()
+                End If
             End If
         Catch ex As Exception
             Logger.LogError("Capa Presentacion", ex)

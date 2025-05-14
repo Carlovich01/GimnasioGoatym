@@ -101,6 +101,11 @@ Public Class FrmRegistroAsistencias
                 Dim dvAsistencias As DataTable = nAsistencias.ListarPorDNI(tbBuscar.Text)
                 dgvListado.DataSource = dvAsistencias
                 lblTotal.Text = "Total Asistencias: " & dgvListado.Rows.Count.ToString()
+                If dgvListado.Rows.Count = 0 And Not String.IsNullOrEmpty(tbBuscar.Text) Then
+                    MsgBox("No se encontró ningún miembro con ese criterio.", MsgBoxStyle.Information, "Sin resultados")
+                    tbBuscar.Clear()
+                    ActualizarDataGridView()
+                End If
             End If
         Catch ex As Exception
             Logger.LogError("Capa Presentacion ", ex)
@@ -116,10 +121,19 @@ Public Class FrmRegistroAsistencias
         Try
             Dim fechaInicio = dtpFechaInicio.Value.Date
             Dim fechaFin = dtpFechaFin.Value.Date.AddDays(1).AddTicks(-1)
+            If fechaInicio > fechaFin Then
+                MsgBox("La fecha de inicio no puede ser mayor que la fecha de fin.", MsgBoxStyle.Exclamation, "Error")
+                Return
+            End If
             Dim dvAsistencias = nAsistencias.ListarPorFecha(fechaInicio, fechaFin)
             dgvListado.DataSource = dvAsistencias
-
             lblTotal.Text = "Total Asistencias: " & dgvListado.Rows.Count.ToString
+            If dgvListado.Rows.Count = 0 Then
+                MsgBox("No se encontraron ingresos en el rango de fechas seleccionado.", MsgBoxStyle.Information, "Sin resultados")
+                ActualizarDataGridView()
+                dtpFechaInicio.Value = DateTime.Now
+                dtpFechaFin.Value = DateTime.Now
+            End If
         Catch ex As Exception
             Logger.LogError("Capa Presentacion ", ex)
             MsgBox("Error al buscar asistencias por fecha: " & ex.Message, MsgBoxStyle.Critical, "Error")

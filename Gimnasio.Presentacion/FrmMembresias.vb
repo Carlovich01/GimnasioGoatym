@@ -1,4 +1,5 @@
-﻿Imports Gimnasio.Entidades
+﻿Imports System.Numerics
+Imports Gimnasio.Entidades
 Imports Gimnasio.Negocio
 Imports LogDeErrores
 
@@ -322,11 +323,13 @@ Public Class FrmMembresias
             If cbOpcionBuscar.SelectedIndex = 0 Then
                 Dim dvMembresia = nMembresias.ListarPorDni(tbBuscar.Text)
                 dgvListado.DataSource = dvMembresia
-                lblTotal.Text = "Total: " & dgvListado.Rows.Count.ToString
+                lblTotal.Text = "Total Membresias: " & dgvListado.Rows.Count.ToString
+                BusquedaSinResultados(0)
             ElseIf cbOpcionBuscar.SelectedIndex = 1 Then
                 Dim dvMembresia = nMembresias.ListarPorNombrePlan(tbBuscar.Text)
                 dgvListado.DataSource = dvMembresia
-                lblTotal.Text = "Total: " & dgvListado.Rows.Count.ToString
+                lblTotal.Text = "Total Membresias: " & dgvListado.Rows.Count.ToString
+                BusquedaSinResultados(0)
             End If
         Catch ex As Exception
             Logger.LogError("Capa Presentacion ", ex)
@@ -343,13 +346,15 @@ Public Class FrmMembresias
             If cbOpcionBuscar.SelectedIndex = 2 Then
                 Dim dvMembresia = nMembresias.ListarPorEstado("Activa")
                 dgvListado.DataSource = dvMembresia
-                lblTotal.Text = "Total: " & dgvListado.Rows.Count.ToString
+                lblTotal.Text = "Total Membresias: " & dgvListado.Rows.Count.ToString
                 tbBuscar.Enabled = False
+                BusquedaSinResultados(1)
             ElseIf cbOpcionBuscar.SelectedIndex = 3 Then
                 Dim dvMembresia = nMembresias.ListarPorEstado("Inactiva")
                 dgvListado.DataSource = dvMembresia
-                lblTotal.Text = "Total: " & dgvListado.Rows.Count.ToString
+                lblTotal.Text = "Total Membresias: " & dgvListado.Rows.Count.ToString
                 tbBuscar.Enabled = False
+                BusquedaSinResultados(2)
             Else
                 tbBuscar.Enabled = True
             End If
@@ -367,12 +372,14 @@ Public Class FrmMembresias
         Try
             Dim nMiembros As New NMiembros
             If cbOpcionBuscarMiembro.SelectedIndex = 0 Then
-                Dim dvMiembro = nMiembros.ListarPorNombre(tbBuscarMiembro.Text)
-                dgvMiembro.DataSource = dvMiembro
+                Dim dtMiembro = nMiembros.ListarPorNombre(tbBuscarMiembro.Text)
+                dgvMiembro.DataSource = dtMiembro
+                BusquedaSinResultados(3)
 
             ElseIf cbOpcionBuscarMiembro.SelectedIndex = 1 Then
-                Dim dvMiembro = nMiembros.ObtenerPorDni(tbBuscarMiembro.Text)
-                dgvMiembro.DataSource = dvMiembro
+                Dim dtMiembro = nMiembros.ObtenerPorDni(tbBuscarMiembro.Text)
+                dgvMiembro.DataSource = dtMiembro
+                BusquedaSinResultados(3)
             End If
         Catch ex As Exception
             Logger.LogError("Capa Presentacion ", ex)
@@ -388,14 +395,70 @@ Public Class FrmMembresias
         Try
             Dim nPLan As New NPlanes()
             If cbBuscarOpcionPlan.SelectedIndex = 0 Then
-                Dim dvPlan As DataTable = nPLan.ListarPorNombre(tbBuscarPlan.Text)
-                dgvPlan.DataSource = dvPlan
+                Dim dtPlan As DataTable = nPLan.ListarPorNombre(tbBuscarPlan.Text)
+                dgvPlan.DataSource = dtPlan
+                BusquedaSinResultados(4)
             End If
         Catch ex As Exception
             Logger.LogError("Capa Presentacion ", ex)
             MsgBox("Error al buscar plan: " & ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
     End Sub
+
+    ''' <summary>
+    ''' Verifica si la búsqueda de membresías, miembros o planes no devolvió resultados.
+    ''' Muestra un mensaje informativo y restablece el campo de búsqueda.
+    ''' </summary>
+    ''' <param name="caso">Caso que indica qué tipo de búsqueda se realizó.</param>
+    ''' <remarks>0: Membresías, 1: Membresías activas, 2: Membresías inactivas, 3: Miembros, 4: Planes</remarks>
+    Public Sub BusquedaSinResultados(caso As Integer)
+        Try
+            Select Case caso
+                Case 0
+                    If dgvListado.Rows.Count = 0 And Not String.IsNullOrEmpty(tbBuscar.Text) Then
+                        MsgBox("No se encontró ninguna membresía con ese criterio.", MsgBoxStyle.Information, "Sin resultados")
+                        tbBuscar.Clear()
+                        ActualizarDataGridView()
+                    End If
+                Case 1
+                    If dgvListado.Rows.Count = 0 Then
+                        MsgBox("No se encontró ninguna membresía activa.", MsgBoxStyle.Information, "Sin resultados")
+                        tbBuscar.Clear()
+                        ActualizarDataGridView()
+                        tbBuscar.Enabled = True
+                        cbOpcionBuscar.SelectedIndex = 0
+                    End If
+                Case 2
+                    If dgvListado.Rows.Count = 0 Then
+                        MsgBox("No se encontró ninguna membresía inactiva.", MsgBoxStyle.Information, "Sin resultados")
+                        tbBuscar.Clear()
+                        ActualizarDataGridView()
+                        tbBuscar.Enabled = True
+                        cbOpcionBuscar.SelectedIndex = 0
+                    End If
+                Case 3
+                    Dim nMiembros As New NMiembros
+                    If dgvMiembro.Rows.Count = 0 And Not String.IsNullOrEmpty(tbBuscarMiembro.Text) Then
+                        MsgBox("No se encontró ningún miembro con ese criterio.", MsgBoxStyle.Information, "Sin resultados")
+                        tbBuscarMiembro.Clear()
+                        Dim dtMiembros As DataTable = nMiembros.Listar()
+                        dgvMiembro.DataSource = dtMiembros
+                    End If
+                Case 4
+                    Dim nPlan As New NPlanes
+                    If dgvPlan.Rows.Count = 0 And Not String.IsNullOrEmpty(tbBuscarPlan.Text) Then
+                        MsgBox("No se encontró ningún plan con ese criterio.", MsgBoxStyle.Information, "Sin resultados")
+                        tbBuscarPlan.Clear()
+                        Dim dtPlanes As DataTable = nPlan.Listar()
+                        dgvPlan.DataSource = dtPlanes
+                    End If
+            End Select
+        Catch ex As Exception
+            Logger.LogError("Capa Presentación", ex)
+            MsgBox("Error al buscar las membresias", MsgBoxStyle.Critical, "Error")
+        End Try
+    End Sub
+
 
     ''' <summary>
     ''' Evento que se ejecuta al hacer clic en el botón "Eliminar".
@@ -455,4 +518,7 @@ Public Class FrmMembresias
         End Try
     End Sub
 
+    Private Sub panelListado_Paint(sender As Object, e As PaintEventArgs) Handles panelListado.Paint
+
+    End Sub
 End Class

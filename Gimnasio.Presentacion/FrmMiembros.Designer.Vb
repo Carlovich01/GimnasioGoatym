@@ -85,9 +85,9 @@ Partial Class FrmMiembros
         cbOpcionBuscar.Font = New Font("Segoe UI", 12F)
         cbOpcionBuscar.FormattingEnabled = True
         cbOpcionBuscar.Items.AddRange(New Object() {"Buscar por nombre", "Buscar por DNI"})
-        cbOpcionBuscar.Location = New Point(842, 13)
+        cbOpcionBuscar.Location = New Point(811, 13)
         cbOpcionBuscar.Name = "cbOpcionBuscar"
-        cbOpcionBuscar.Size = New Size(155, 29)
+        cbOpcionBuscar.Size = New Size(186, 29)
         cbOpcionBuscar.TabIndex = 30
         ' 
         ' lblTotal
@@ -153,7 +153,7 @@ Partial Class FrmMiembros
         tbBuscar.Font = New Font("Segoe UI", 12F)
         tbBuscar.Location = New Point(11, 13)
         tbBuscar.Name = "tbBuscar"
-        tbBuscar.Size = New Size(809, 29)
+        tbBuscar.Size = New Size(785, 29)
         tbBuscar.TabIndex = 26
         ' 
         ' btnInsertar

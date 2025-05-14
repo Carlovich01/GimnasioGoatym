@@ -290,6 +290,11 @@ Public Class FrmReclamos
             Dim dvPlanes = nReclamos.ListarPorEstado(If(cbOpcionBuscar.SelectedIndex = 0, "pendiente", "resuelto"))
             dgvListado.DataSource = dvPlanes
             lblTotal.Text = "Total Reclamos: " & dgvListado.Rows.Count.ToString
+            If dgvListado.Rows.Count = 0 And cbOpcionBuscar.SelectedIndex = 1 Then
+                MsgBox("No hay reclamos resueltos.", MsgBoxStyle.Information, "Sin resultados")
+                ActualizarDataGridView()
+                cbOpcionBuscar.SelectedIndex = 0
+            End If
         Catch ex As Exception
             Logger.LogError("Capa Presentacion ", ex)
             MsgBox("Error al buscar reclamos: " & ex.Message, MsgBoxStyle.Critical, "Error")

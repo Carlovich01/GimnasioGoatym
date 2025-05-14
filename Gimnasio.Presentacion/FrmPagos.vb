@@ -85,6 +85,10 @@ Public Class FrmPagos
         Try
             Dim fechaInicio = dtpFechaInicio.Value.Date
             Dim fechaFin = dtpFechaFin.Value.Date.AddDays(1).AddTicks(-1)
+            If fechaInicio > fechaFin Then
+                MsgBox("La fecha de inicio no puede ser mayor que la fecha de fin.", MsgBoxStyle.Exclamation, "Error")
+                Return
+            End If
             Dim dvPagos = nPagos.ListarPorFecha(fechaInicio, fechaFin)
             dgvListado.DataSource = dvPagos
 
@@ -96,6 +100,13 @@ Public Class FrmPagos
             Next
 
             lbIngresosTotales.Text = "Ingresos Totales: $" & totalIngresos.ToString
+
+            If dgvListado.Rows.Count = 0 Then
+                MsgBox("No se encontraron pagos en el rango de fechas seleccionado.", MsgBoxStyle.Information, "Sin resultados")
+                ActualizarDataGridView()
+                dtpFechaInicio.Value = DateTime.Now
+                dtpFechaFin.Value = DateTime.Now
+            End If
         Catch ex As Exception
             Logger.LogError("Capa Presentacion ", ex)
             MsgBox("Error al buscar pagos por fecha: " & ex.Message, MsgBoxStyle.Critical, "Error")
@@ -147,6 +158,11 @@ Public Class FrmPagos
                         totalIngresos += Convert.ToDecimal(row.Cells("monto").Value)
                     Next
                     lbIngresosTotales.Text = "Ingresos Totales: $" & totalIngresos.ToString()
+                    If dgvListado.Rows.Count = 0 Then
+                        MsgBox("No se encontraron pagos con el método de pago seleccionado.", MsgBoxStyle.Information, "Sin resultados")
+                        ActualizarDataGridView()
+                        cbOpcionBuscar.SelectedIndex = 0
+                    End If
             End Select
         Catch ex As Exception
             Logger.LogError("Capa Presentacion ", ex)
@@ -170,6 +186,7 @@ Public Class FrmPagos
                         totalIngresos += Convert.ToDecimal(row.Cells("monto").Value)
                     Next
                     lbIngresosTotales.Text = "Ingresos Totales: $" & totalIngresos.ToString()
+                    BusquedaSinResultados()
                 Case 2
                     Dim dvPagos As DataTable = nPagos.ListarPorNombrePlan(tbBuscar.Text)
                     dgvListado.DataSource = dvPagos
@@ -179,10 +196,29 @@ Public Class FrmPagos
                         totalIngresos += Convert.ToDecimal(row.Cells("monto").Value)
                     Next
                     lbIngresosTotales.Text = "Ingresos Totales: $" & totalIngresos.ToString()
+                    BusquedaSinResultados()
             End Select
         Catch ex As Exception
             Logger.LogError("Capa Presentacion ", ex)
             MsgBox("Error al buscar pagos: " & ex.Message, MsgBoxStyle.Critical, "Error")
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' Método que verifica si no se encontraron resultados en la búsqueda.
+    ''' Si no se encuentran resultados, muestra un mensaje y actualiza el DataGridView.
+    ''' </summary>
+    ''' <remarks>Este método es llamado desde <see cref="tbBuscar_TextChanged"/>.</remarks>
+    Public Sub BusquedaSinResultados()
+        Try
+            If dgvListado.Rows.Count = 0 And Not String.IsNullOrEmpty(tbBuscar.Text) Then
+                MsgBox("No se encontró ninguna pago con ese criterio.", MsgBoxStyle.Information, "Sin resultados")
+                tbBuscar.Clear()
+                ActualizarDataGridView()
+            End If
+        Catch ex As Exception
+            Logger.LogError("Capa Presentación", ex)
+            MsgBox("Error al buscar los pagos", MsgBoxStyle.Critical, "Error")
         End Try
     End Sub
 
@@ -192,6 +228,18 @@ Public Class FrmPagos
     ''' </summary>
     Private Sub btnBuscarMonto_Click(sender As Object, e As EventArgs) Handles btnBuscarMonto.Click
         Try
+            If String.IsNullOrWhiteSpace(tbMontoInicial.Text) Or String.IsNullOrWhiteSpace(tbMontoFinal.Text) Then
+                MsgBox("Por favor, ingrese ambos montos para realizar la búsqueda.", MsgBoxStyle.Exclamation, "Error")
+                Return
+            End If
+            If Not IsNumeric(tbMontoInicial.Text) Or Not IsNumeric(tbMontoFinal.Text) Then
+                MsgBox("Los montos deben ser numéricos.", MsgBoxStyle.Exclamation, "Error")
+                Return
+            End If
+            If CDec(tbMontoInicial.Text) > CDec(tbMontoFinal.Text) Then
+                MsgBox("El monto inicial no puede ser mayor que el monto final.", MsgBoxStyle.Exclamation, "Error")
+                Return
+            End If
             Dim dvPagos As DataTable = nPagos.ListarPorMontos(CDec(tbMontoInicial.Text), CDec(tbMontoFinal.Text))
             dgvListado.DataSource = dvPagos
             lblTotal.Text = "Total Pagos: " & dgvListado.Rows.Count.ToString()
@@ -200,6 +248,12 @@ Public Class FrmPagos
                 totalIngresos += Convert.ToDecimal(row.Cells("monto").Value)
             Next
             lbIngresosTotales.Text = "Ingresos Totales: $" & totalIngresos.ToString()
+            If dgvListado.Rows.Count = 0 And Not String.IsNullOrEmpty(tbMontoInicial.Text) And Not String.IsNullOrEmpty(tbMontoFinal.Text) Then
+                MsgBox("No se encontraron pagos en el rango de montos seleccionado.", MsgBoxStyle.Information, "Sin resultados")
+                ActualizarDataGridView()
+                tbMontoInicial.Clear()
+                tbMontoFinal.Clear()
+            End If
         Catch ex As Exception
             Logger.LogError("Capa Presentacion ", ex)
             MsgBox("Error al buscar pagos por monto: " & ex.Message, MsgBoxStyle.Critical, "Error")

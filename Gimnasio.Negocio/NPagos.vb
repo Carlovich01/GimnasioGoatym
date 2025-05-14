@@ -104,11 +104,6 @@ Public Class NPagos
     ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Function ListarPorFecha(fechaInicio As DateTime, fechaFin As DateTime) As DataTable
         Try
-            If fechaInicio > fechaFin Then
-                Dim temp As DateTime = fechaInicio
-                fechaInicio = fechaFin
-                fechaFin = temp
-            End If
             Dim dvPagos As DataTable
             dvPagos = dPagos.ListarPorFecha(fechaInicio, fechaFin)
             Return dvPagos
@@ -186,11 +181,6 @@ Public Class NPagos
         Try
             If montoMin < 0 Or montoMax < 0 Then
                 Throw New Exception("Los montos no pueden ser negativos.")
-            End If
-            If montoMin > montoMax Then
-                Dim temp As Decimal = montoMin
-                montoMin = montoMax
-                montoMax = temp
             End If
             Return dPagos.ListarPorMontos(montoMin, montoMax)
         Catch ex As Exception

@@ -110,11 +110,6 @@ Public Class NAsistencia
     ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Function ListarPorFecha(fechaInicio As DateTime, fechaFin As DateTime) As DataTable
         Try
-            If fechaInicio > fechaFin Then
-                Dim temp As DateTime = fechaInicio
-                fechaInicio = fechaFin
-                fechaFin = temp
-            End If
             Dim dvPagos As DataTable
             dvPagos = dAsistencias.ListarPorFecha(fechaInicio, fechaFin)
             Return dvPagos

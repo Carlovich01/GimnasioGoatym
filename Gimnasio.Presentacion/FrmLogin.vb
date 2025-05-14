@@ -29,8 +29,8 @@ Public Class FrmLogin
     ''' </summary>
     Public Sub Formato()
         tbContraseña.UseSystemPasswordChar = True
-        tbUsuario.Text = ""
-        tbContraseña.Text = ""
+        tbUsuario.Text = "admin"
+        tbContraseña.Text = "1234"
     End Sub
 
     ''' <summary>
@@ -42,8 +42,8 @@ Public Class FrmLogin
     ''' <param name="e">Argumentos del evento.</param>
     Private Sub btIniciarSesion_Click(sender As Object, e As EventArgs) Handles btIniciarSesion.Click
         Try
-            Dim username As String = tbUsuario.Text.Trim()
-            Dim password As String = tbContraseña.Text.Trim()
+            Dim username As String = tbUsuario.Text
+            Dim password As String = tbContraseña.Text
 
             If String.IsNullOrWhiteSpace(username) OrElse String.IsNullOrWhiteSpace(password) Then
                 MsgBox("Por favor, ingrese su usuario y contraseña.", MsgBoxStyle.Exclamation, "Aviso")

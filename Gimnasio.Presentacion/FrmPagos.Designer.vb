@@ -132,9 +132,9 @@ Partial Class FrmPagos
         ' dtpFechaFin
         ' 
         dtpFechaFin.Font = New Font("Segoe UI", 12F)
-        dtpFechaFin.Location = New Point(312, 13)
+        dtpFechaFin.Location = New Point(329, 12)
         dtpFechaFin.Name = "dtpFechaFin"
-        dtpFechaFin.Size = New Size(200, 29)
+        dtpFechaFin.Size = New Size(216, 29)
         dtpFechaFin.TabIndex = 25
         ' 
         ' dtpFechaInicio
@@ -142,7 +142,7 @@ Partial Class FrmPagos
         dtpFechaInicio.Font = New Font("Segoe UI", 12F)
         dtpFechaInicio.Location = New Point(59, 13)
         dtpFechaInicio.Name = "dtpFechaInicio"
-        dtpFechaInicio.Size = New Size(200, 29)
+        dtpFechaInicio.Size = New Size(216, 29)
         dtpFechaInicio.TabIndex = 25
         ' 
         ' PanelFecha
@@ -164,7 +164,7 @@ Partial Class FrmPagos
         Label2.BackColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
         Label2.Font = New Font("Segoe UI", 12F)
         Label2.ForeColor = Color.White
-        Label2.Location = New Point(270, 15)
+        Label2.Location = New Point(289, 17)
         Label2.Name = "Label2"
         Label2.Size = New Size(34, 21)
         Label2.TabIndex = 21
@@ -187,7 +187,7 @@ Partial Class FrmPagos
         ' 
         BtnBuscarFecha.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         BtnBuscarFecha.Font = New Font("Segoe UI", 12F)
-        BtnBuscarFecha.Location = New Point(551, 13)
+        BtnBuscarFecha.Location = New Point(574, 13)
         BtnBuscarFecha.Name = "BtnBuscarFecha"
         BtnBuscarFecha.Size = New Size(92, 28)
         BtnBuscarFecha.TabIndex = 22
@@ -206,7 +206,7 @@ Partial Class FrmPagos
         PanelMonto.Controls.Add(Button1)
         PanelMonto.Location = New Point(275, 5)
         PanelMonto.Name = "PanelMonto"
-        PanelMonto.Size = New Size(669, 49)
+        PanelMonto.Size = New Size(682, 49)
         PanelMonto.TabIndex = 28
         ' 
         ' btnBuscarMonto
@@ -244,17 +244,17 @@ Partial Class FrmPagos
         ' tbMontoFinal
         ' 
         tbMontoFinal.Font = New Font("Segoe UI", 12F)
-        tbMontoFinal.Location = New Point(362, 12)
+        tbMontoFinal.Location = New Point(342, 12)
         tbMontoFinal.Name = "tbMontoFinal"
-        tbMontoFinal.Size = New Size(147, 29)
+        tbMontoFinal.Size = New Size(167, 29)
         tbMontoFinal.TabIndex = 24
         ' 
         ' tbMontoInicial
         ' 
         tbMontoInicial.Font = New Font("Segoe UI", 12F)
-        tbMontoInicial.Location = New Point(109, 12)
+        tbMontoInicial.Location = New Point(92, 12)
         tbMontoInicial.Name = "tbMontoInicial"
-        tbMontoInicial.Size = New Size(137, 29)
+        tbMontoInicial.Size = New Size(154, 29)
         tbMontoInicial.TabIndex = 23
         ' 
         ' Label4
@@ -264,7 +264,7 @@ Partial Class FrmPagos
         Label4.BackColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
         Label4.Font = New Font("Segoe UI", 12F)
         Label4.ForeColor = Color.White
-        Label4.Location = New Point(739, -36)
+        Label4.Location = New Point(752, -36)
         Label4.Name = "Label4"
         Label4.Size = New Size(34, 21)
         Label4.TabIndex = 21
@@ -277,7 +277,7 @@ Partial Class FrmPagos
         Label5.BackColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
         Label5.Font = New Font("Segoe UI", 12F)
         Label5.ForeColor = Color.White
-        Label5.Location = New Point(472, -36)
+        Label5.Location = New Point(485, -36)
         Label5.Name = "Label5"
         Label5.Size = New Size(50, 21)
         Label5.TabIndex = 21
@@ -315,8 +315,8 @@ Partial Class FrmPagos
         Controls.Add(cbOpcionBuscar)
         Controls.Add(lbIngresosTotales)
         Controls.Add(lblTotal)
-        Controls.Add(PanelMonto)
         Controls.Add(dgvListado)
+        Controls.Add(PanelMonto)
         Controls.Add(PanelFecha)
         Controls.Add(tbBuscar)
         Name = "FrmPagos"

@@ -249,14 +249,33 @@ Public Class FrmMiembros
                 Dim dvMiembro = nMiembros.ListarPorNombre(tbBuscar.Text)
                 dgvListado.DataSource = dvMiembro
                 lblTotal.Text = "Total Miembros:" & dgvListado.Rows.Count.ToString
+                BusquedaSinResultados()
             ElseIf cbOpcionBuscar.SelectedIndex = 1 Then
                 Dim dvMiembro = nMiembros.ListarPorDni(tbBuscar.Text)
                 dgvListado.DataSource = dvMiembro
                 lblTotal.Text = "Total Miembros:" & dgvListado.Rows.Count.ToString
+                BusquedaSinResultados()
             End If
         Catch ex As Exception
             Logger.LogError("Capa Presentacion ", ex)
             MsgBox("Error al buscar miembro: " & ex.Message, MsgBoxStyle.Critical, "Error")
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' Verifica si la búsqueda no devolvió resultados y muestra un mensaje al usuario.
+    ''' </summary>
+    ''' <remarks>Este método se llama después de realizar una búsqueda para informar al usuario si no se encontraron resultados.</remarks>
+    Public Sub BusquedaSinResultados()
+        Try
+            If dgvListado.Rows.Count = 0 And Not String.IsNullOrEmpty(tbBuscar.Text) Then
+                MsgBox("No se encontró ningún miembro con ese criterio.", MsgBoxStyle.Information, "Sin resultados")
+                tbBuscar.Clear()
+                ActualizarDataGridView()
+            End If
+        Catch ex As Exception
+            Logger.LogError("Capa Presentación", ex)
+            MsgBox("Error al buscar los miembros", MsgBoxStyle.Critical, "Error")
         End Try
     End Sub
 
