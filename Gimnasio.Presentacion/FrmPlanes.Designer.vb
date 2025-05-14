@@ -66,6 +66,7 @@ Partial Class FrmPlanes
         ' 
         ' cbOpcionBuscar
         ' 
+        cbOpcionBuscar.DropDownStyle = ComboBoxStyle.DropDownList
         cbOpcionBuscar.Font = New Font("Segoe UI", 12F)
         cbOpcionBuscar.FormattingEnabled = True
         cbOpcionBuscar.Items.AddRange(New Object() {"Buscar por nombre", "Buscar por duracion (Presione Enter)", "Buscar por precio (Presione Enter)"})

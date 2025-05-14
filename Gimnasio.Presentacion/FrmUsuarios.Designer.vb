@@ -33,6 +33,7 @@ Partial Class FrmUsuarios
         tbBuscar = New TextBox()
         btnInsertar = New Button()
         panelDatosIngreso = New Panel()
+        lblDatosIngreso = New Label()
         pbMostrarContraseña = New PictureBox()
         tbEmail = New TextBox()
         cbRol = New ComboBox()
@@ -46,7 +47,6 @@ Partial Class FrmUsuarios
         tbContraseña = New TextBox()
         Label6 = New Label()
         Label1 = New Label()
-        lblDatosIngreso = New Label()
         panelListado.SuspendLayout()
         CType(dgvListado, ComponentModel.ISupportInitialize).BeginInit()
         panelDatosIngreso.SuspendLayout()
@@ -81,6 +81,7 @@ Partial Class FrmUsuarios
         ' 
         ' cbOpcionBuscar
         ' 
+        cbOpcionBuscar.DropDownStyle = ComboBoxStyle.DropDownList
         cbOpcionBuscar.Font = New Font("Segoe UI", 12F)
         cbOpcionBuscar.FormattingEnabled = True
         cbOpcionBuscar.Items.AddRange(New Object() {"Buscar por nombre"})
@@ -187,6 +188,18 @@ Partial Class FrmUsuarios
         panelDatosIngreso.Size = New Size(700, 449)
         panelDatosIngreso.TabIndex = 48
         panelDatosIngreso.Visible = False
+        ' 
+        ' lblDatosIngreso
+        ' 
+        lblDatosIngreso.AutoSize = True
+        lblDatosIngreso.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblDatosIngreso.ForeColor = Color.White
+        lblDatosIngreso.ImageAlign = ContentAlignment.TopLeft
+        lblDatosIngreso.Location = New Point(310, 13)
+        lblDatosIngreso.Name = "lblDatosIngreso"
+        lblDatosIngreso.Size = New Size(124, 21)
+        lblDatosIngreso.TabIndex = 68
+        lblDatosIngreso.Text = "Agregar Usuario"
         ' 
         ' pbMostrarContraseña
         ' 
@@ -330,18 +343,6 @@ Partial Class FrmUsuarios
         Label1.Size = New Size(109, 21)
         Label1.TabIndex = 59
         Label1.Text = "Contraseña(*):"
-        ' 
-        ' lblDatosIngreso
-        ' 
-        lblDatosIngreso.AutoSize = True
-        lblDatosIngreso.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblDatosIngreso.ForeColor = Color.White
-        lblDatosIngreso.ImageAlign = ContentAlignment.TopLeft
-        lblDatosIngreso.Location = New Point(310, 13)
-        lblDatosIngreso.Name = "lblDatosIngreso"
-        lblDatosIngreso.Size = New Size(124, 21)
-        lblDatosIngreso.TabIndex = 68
-        lblDatosIngreso.Text = "Agregar Usuario"
         ' 
         ' FrmUsuarios
         ' 

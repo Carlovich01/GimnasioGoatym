@@ -22,6 +22,7 @@ Public Class NPlanes
         If Obj.NombrePlan.Length > 100 Then
             Throw New Exception("El nombre del plan no puede exceder los 100 caracteres.")
         End If
+
         If Obj.Precio > 9999999999 Then
             Throw New Exception("El precio no puede exceder los 10 dígitos.")
         End If

@@ -95,7 +95,7 @@ Public Class FrmAsistencias
             End If
         Catch ex As Exception
             Logger.LogError("Capa Presentacion ", ex)
-            MsgBox("Error al registrar asitencia:" & ex.Message, MsgBoxStyle.Critical, "Error")
+            MsgBox("Error al registrar asistencia:" & ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
     End Sub
 End Class

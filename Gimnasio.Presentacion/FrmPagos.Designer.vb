@@ -55,7 +55,7 @@ Partial Class FrmPagos
         lblTotal.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         lblTotal.AutoSize = True
         lblTotal.BackColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
-        lblTotal.Font = New Font("Segoe UI", 12.0F)
+        lblTotal.Font = New Font("Segoe UI", 12F)
         lblTotal.ForeColor = Color.White
         lblTotal.Location = New Point(433, 690)
         lblTotal.Name = "lblTotal"
@@ -73,7 +73,7 @@ Partial Class FrmPagos
         dgvListado.BackgroundColor = Color.FromArgb(CByte(85), CByte(96), CByte(105))
         DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = SystemColors.Window
-        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9.0F)
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F)
         DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
         DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
@@ -87,7 +87,7 @@ Partial Class FrmPagos
         dgvListado.ReadOnly = True
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = SystemColors.Window
-        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9.0F)
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F)
         DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
         DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
@@ -99,7 +99,7 @@ Partial Class FrmPagos
         ' 
         ' tbBuscar
         ' 
-        tbBuscar.Font = New Font("Segoe UI", 12.0F)
+        tbBuscar.Font = New Font("Segoe UI", 12F)
         tbBuscar.Location = New Point(288, 14)
         tbBuscar.Name = "tbBuscar"
         tbBuscar.Size = New Size(669, 29)
@@ -110,7 +110,7 @@ Partial Class FrmPagos
         lbIngresosTotales.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         lbIngresosTotales.AutoSize = True
         lbIngresosTotales.BackColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
-        lbIngresosTotales.Font = New Font("Segoe UI", 12.0F)
+        lbIngresosTotales.Font = New Font("Segoe UI", 12F)
         lbIngresosTotales.ForeColor = Color.White
         lbIngresosTotales.Location = New Point(657, 690)
         lbIngresosTotales.Name = "lbIngresosTotales"
@@ -120,7 +120,8 @@ Partial Class FrmPagos
         ' 
         ' cbOpcionBuscar
         ' 
-        cbOpcionBuscar.Font = New Font("Segoe UI", 12.0F)
+        cbOpcionBuscar.DropDownStyle = ComboBoxStyle.DropDownList
+        cbOpcionBuscar.Font = New Font("Segoe UI", 12F)
         cbOpcionBuscar.FormattingEnabled = True
         cbOpcionBuscar.Items.AddRange(New Object() {"Buscar por fechas", "Buscar por DNI", "Buscar por plan", "Buscar por monto", "Efectivo", "Tarjeta Débito", "Tarjeta Crédito", "Transferencia Bancaria", "Mercado Pago", "Otro"})
         cbOpcionBuscar.Location = New Point(12, 16)
@@ -130,7 +131,7 @@ Partial Class FrmPagos
         ' 
         ' dtpFechaFin
         ' 
-        dtpFechaFin.Font = New Font("Segoe UI", 12.0F)
+        dtpFechaFin.Font = New Font("Segoe UI", 12F)
         dtpFechaFin.Location = New Point(312, 13)
         dtpFechaFin.Name = "dtpFechaFin"
         dtpFechaFin.Size = New Size(200, 29)
@@ -138,7 +139,7 @@ Partial Class FrmPagos
         ' 
         ' dtpFechaInicio
         ' 
-        dtpFechaInicio.Font = New Font("Segoe UI", 12.0F)
+        dtpFechaInicio.Font = New Font("Segoe UI", 12F)
         dtpFechaInicio.Location = New Point(59, 13)
         dtpFechaInicio.Name = "dtpFechaInicio"
         dtpFechaInicio.Size = New Size(200, 29)
@@ -161,7 +162,7 @@ Partial Class FrmPagos
         Label2.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         Label2.AutoSize = True
         Label2.BackColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
-        Label2.Font = New Font("Segoe UI", 12.0F)
+        Label2.Font = New Font("Segoe UI", 12F)
         Label2.ForeColor = Color.White
         Label2.Location = New Point(270, 15)
         Label2.Name = "Label2"
@@ -174,7 +175,7 @@ Partial Class FrmPagos
         Label1.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         Label1.AutoSize = True
         Label1.BackColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
-        Label1.Font = New Font("Segoe UI", 12.0F)
+        Label1.Font = New Font("Segoe UI", 12F)
         Label1.ForeColor = Color.White
         Label1.Location = New Point(3, 15)
         Label1.Name = "Label1"
@@ -185,7 +186,7 @@ Partial Class FrmPagos
         ' BtnBuscarFecha
         ' 
         BtnBuscarFecha.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
-        BtnBuscarFecha.Font = New Font("Segoe UI", 12.0F)
+        BtnBuscarFecha.Font = New Font("Segoe UI", 12F)
         BtnBuscarFecha.Location = New Point(551, 13)
         BtnBuscarFecha.Name = "BtnBuscarFecha"
         BtnBuscarFecha.Size = New Size(92, 28)
@@ -210,7 +211,7 @@ Partial Class FrmPagos
         ' 
         ' btnBuscarMonto
         ' 
-        btnBuscarMonto.Font = New Font("Segoe UI", 12.0F)
+        btnBuscarMonto.Font = New Font("Segoe UI", 12F)
         btnBuscarMonto.Location = New Point(553, 10)
         btnBuscarMonto.Name = "btnBuscarMonto"
         btnBuscarMonto.Size = New Size(87, 32)
@@ -221,7 +222,7 @@ Partial Class FrmPagos
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Segoe UI", 12.0F)
+        Label7.Font = New Font("Segoe UI", 12F)
         Label7.ForeColor = Color.White
         Label7.Location = New Point(287, 14)
         Label7.Name = "Label7"
@@ -232,7 +233,7 @@ Partial Class FrmPagos
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Segoe UI", 12.0F)
+        Label6.Font = New Font("Segoe UI", 12F)
         Label6.ForeColor = Color.White
         Label6.Location = New Point(33, 12)
         Label6.Name = "Label6"
@@ -242,7 +243,7 @@ Partial Class FrmPagos
         ' 
         ' tbMontoFinal
         ' 
-        tbMontoFinal.Font = New Font("Segoe UI", 12.0F)
+        tbMontoFinal.Font = New Font("Segoe UI", 12F)
         tbMontoFinal.Location = New Point(362, 12)
         tbMontoFinal.Name = "tbMontoFinal"
         tbMontoFinal.Size = New Size(147, 29)
@@ -250,7 +251,7 @@ Partial Class FrmPagos
         ' 
         ' tbMontoInicial
         ' 
-        tbMontoInicial.Font = New Font("Segoe UI", 12.0F)
+        tbMontoInicial.Font = New Font("Segoe UI", 12F)
         tbMontoInicial.Location = New Point(109, 12)
         tbMontoInicial.Name = "tbMontoInicial"
         tbMontoInicial.Size = New Size(137, 29)
@@ -261,7 +262,7 @@ Partial Class FrmPagos
         Label4.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         Label4.AutoSize = True
         Label4.BackColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
-        Label4.Font = New Font("Segoe UI", 12.0F)
+        Label4.Font = New Font("Segoe UI", 12F)
         Label4.ForeColor = Color.White
         Label4.Location = New Point(739, -36)
         Label4.Name = "Label4"
@@ -274,7 +275,7 @@ Partial Class FrmPagos
         Label5.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         Label5.AutoSize = True
         Label5.BackColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
-        Label5.Font = New Font("Segoe UI", 12.0F)
+        Label5.Font = New Font("Segoe UI", 12F)
         Label5.ForeColor = Color.White
         Label5.Location = New Point(472, -36)
         Label5.Name = "Label5"
@@ -285,7 +286,7 @@ Partial Class FrmPagos
         ' Button1
         ' 
         Button1.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
-        Button1.Font = New Font("Segoe UI", 12.0F)
+        Button1.Font = New Font("Segoe UI", 12F)
         Button1.Location = New Point(551, -38)
         Button1.Name = "Button1"
         Button1.Size = New Size(92, 28)
@@ -296,7 +297,7 @@ Partial Class FrmPagos
         ' btnEliminar
         ' 
         btnEliminar.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
-        btnEliminar.Font = New Font("Segoe UI", 12.0F)
+        btnEliminar.Font = New Font("Segoe UI", 12F)
         btnEliminar.Location = New Point(12, 684)
         btnEliminar.Name = "btnEliminar"
         btnEliminar.Size = New Size(80, 33)
@@ -306,7 +307,7 @@ Partial Class FrmPagos
         ' 
         ' FrmPagos
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
         ClientSize = New Size(1008, 729)

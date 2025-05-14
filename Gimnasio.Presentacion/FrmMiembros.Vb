@@ -93,7 +93,6 @@ Public Class FrmMiembros
         tbNombre.Clear()
         tbDni.Clear()
         tbApellido.Clear()
-        cbGenero.SelectedIndex = 0
         tbTelefono.Clear()
         tbEmail.Clear()
     End Sub

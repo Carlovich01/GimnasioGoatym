@@ -81,6 +81,7 @@ Partial Class FrmMiembros
         ' 
         ' cbOpcionBuscar
         ' 
+        cbOpcionBuscar.DropDownStyle = ComboBoxStyle.DropDownList
         cbOpcionBuscar.Font = New Font("Segoe UI", 12F)
         cbOpcionBuscar.FormattingEnabled = True
         cbOpcionBuscar.Items.AddRange(New Object() {"Buscar por nombre", "Buscar por DNI"})
@@ -219,6 +220,7 @@ Partial Class FrmMiembros
         ' 
         ' cbGenero
         ' 
+        cbGenero.DropDownStyle = ComboBoxStyle.DropDownList
         cbGenero.Font = New Font("Segoe UI", 12F)
         cbGenero.FormattingEnabled = True
         cbGenero.Items.AddRange(New Object() {"Masculino", "Femenino", "Otro", "Prefiero no decir"})

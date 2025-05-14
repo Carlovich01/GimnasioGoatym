@@ -45,7 +45,7 @@ Public Class NAsistencia
         Try
             Dim resultado As String = "Fallido_Otro"
             Dim idMembresiaValida As UInteger? = Nothing
-            Dim nMiembros As New DMiembros()
+            Dim nMiembros As New NMiembros()
             Dim miembroTabla As DataTable = nMiembros.ObtenerPorDni(dni)
             If miembroTabla.Rows.Count = 0 Then
                 resultado = "Fallido_DNI_NoEncontrado"

@@ -174,11 +174,15 @@ Public Class FrmMembresias
                 If dgvMiembro.SelectedRows.Count > 0 Then
                     Dim selectedRow = dgvMiembro.SelectedRows(0)
                     membresia.IdMiembro = CInt(selectedRow.Cells("id_miembro").Value)
+                Else
+                    Throw New Exception("El Listado de Miembros esta vacio")
                 End If
                 If dgvPlan.SelectedRows.Count > 0 Then
                     Dim selectedRow = dgvPlan.SelectedRows(0)
                     membresia.IdPlan = CInt(selectedRow.Cells("id_plan").Value)
                     precio = Convert.ToDecimal(selectedRow.Cells("precio").Value)
+                Else
+                    Throw New Exception("El Listado de Planes esta vacio")
                 End If
                 nMembresias.Insertar(membresia)
                 MsgBox("Membresía insertada correctamente.", MsgBoxStyle.Information, "Éxito")
@@ -197,6 +201,8 @@ Public Class FrmMembresias
                 If dgvPlan.SelectedRows.Count > 0 Then
                     Dim selectedRow = dgvPlan.SelectedRows(0)
                     membresia.IdPlan = CInt(selectedRow.Cells("id_plan").Value)
+                Else
+                    Throw New Exception("El Listado de Planes esta vacio")
                 End If
                 nMembresias.Actualizar(membresia)
                 MsgBox("Membresía actualizada correctamente.", MsgBoxStyle.Information, "Éxito")

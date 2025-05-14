@@ -30,6 +30,13 @@ Public Class NUsuarios
         If Obj.NombreCompleto.Length > 150 Then
             Throw New Exception("El nombre no puede tener más de 150 caracteres.")
         End If
+
+        For Each c As Char In Obj.NombreCompleto
+            If Char.IsDigit(c) Then
+                Throw New Exception("El nombre no puede contener números.")
+            End If
+        Next
+
         If String.IsNullOrWhiteSpace(Obj.Email) Then
             Obj.Email = Nothing
         ElseIf Obj.Email.Length > 100 Then

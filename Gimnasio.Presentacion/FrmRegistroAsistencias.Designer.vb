@@ -44,6 +44,7 @@ Partial Class FrmRegistroAsistencias
         ' 
         ' cbOpcionBuscar
         ' 
+        cbOpcionBuscar.DropDownStyle = ComboBoxStyle.DropDownList
         cbOpcionBuscar.Font = New Font("Segoe UI", 12F)
         cbOpcionBuscar.FormattingEnabled = True
         cbOpcionBuscar.Items.AddRange(New Object() {"Buscar por DNI", "Buscar por fecha"})

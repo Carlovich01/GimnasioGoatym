@@ -39,20 +39,48 @@ Public Class NMiembros
             Throw New Exception("El DNI no puede tener más de 15 caracteres.")
         End If
 
+        For Each c As Char In Obj.Dni
+            If Not Char.IsDigit(c) Then
+                Throw New Exception("El DNI solo puede contener números.")
+            End If
+        Next
+
         If Obj.Nombre.Length > 100 Then
             Throw New Exception("El nombre no puede tener más de 100 caracteres.")
         End If
+
+        For Each c As Char In Obj.Nombre
+            If Char.IsDigit(c) Then
+                Throw New Exception("El nombre no puede contener números.")
+            End If
+        Next
+
         If Obj.Apellido.Length > 100 Then
             Throw New Exception("El apellido no puede tener más de 100 caracteres.")
         End If
+
+        For Each c As Char In Obj.Apellido
+            If Char.IsDigit(c) Then
+                Throw New Exception("El apellido no puede contener números.")
+            End If
+        Next
+
         If String.IsNullOrWhiteSpace(Obj.Genero) Then
             Obj.Genero = Nothing
         End If
+
         If String.IsNullOrWhiteSpace(Obj.Telefono) Then
             Obj.Telefono = Nothing
         ElseIf Obj.Telefono.Length > 30 Then
             Throw New Exception("El teléfono no puede tener más de 30 caracteres.")
         End If
+
+        For Each c As Char In Obj.Telefono
+            If Char.IsLetter(c) Then
+                Throw New Exception("El teléfono no puede contener letras.")
+            End If
+        Next
+
         If String.IsNullOrWhiteSpace(Obj.Email) Then
             Obj.Email = Nothing
         ElseIf Obj.Email.Length > 100 Then
