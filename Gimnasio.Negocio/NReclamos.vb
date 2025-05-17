@@ -1,7 +1,7 @@
 ﻿Imports System.Data
 Imports Gimnasio.Datos
 Imports Gimnasio.Entidades
-Imports LogDeErrores
+Imports Gimnasio.Errores
 
 ''' <summary>
 ''' Lógica de negocio para la gestión de reclamos en el sistema de gimnasio.
@@ -34,7 +34,7 @@ Public Class NReclamos
             dvDescripcion = dReclamos.Listar()
             Return dvDescripcion
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -49,7 +49,7 @@ Public Class NReclamos
             ValidarCampos(Obj)
             dReclamos.Insertar(Obj)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Sub
@@ -64,7 +64,7 @@ Public Class NReclamos
             ValidarCampos(Obj)
             dReclamos.Actualizar(Obj)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Sub
@@ -78,7 +78,7 @@ Public Class NReclamos
         Try
             dReclamos.Eliminar(id)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Sub
@@ -92,7 +92,7 @@ Public Class NReclamos
         Try
             dReclamos.ActualizarElEstadoAResuelto(id)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Sub
@@ -106,7 +106,7 @@ Public Class NReclamos
         Try
             dReclamos.ActualizarElEstadoAPendiente(id)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Sub
@@ -122,7 +122,7 @@ Public Class NReclamos
             Dim dvEstado As DataTable = dReclamos.ListarPorEstado(estado)
             Return dvEstado
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -136,7 +136,7 @@ Public Class NReclamos
         Try
             dReclamos.ActualizarRespuesta(Obj)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Sub

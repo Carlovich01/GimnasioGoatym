@@ -1,6 +1,6 @@
 ﻿Imports Gimnasio.Entidades
 Imports Gimnasio.Datos
-Imports LogDeErrores
+Imports Gimnasio.Errores
 Imports System.Data
 
 ''' <summary>
@@ -22,7 +22,7 @@ Public Class NAsistencia
         Try
             Return dAsistencias.Listar()
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -77,7 +77,7 @@ Public Class NAsistencia
 
             Return resultado
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -96,7 +96,7 @@ Public Class NAsistencia
             Dim dt As DataTable = dAsistencias.ListarPorDNI(dni)
             Return dt
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -114,7 +114,7 @@ Public Class NAsistencia
             dvPagos = dAsistencias.ListarPorFecha(fechaInicio, fechaFin)
             Return dvPagos
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -128,7 +128,7 @@ Public Class NAsistencia
         Try
             dAsistencias.Eliminar(id)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Sub

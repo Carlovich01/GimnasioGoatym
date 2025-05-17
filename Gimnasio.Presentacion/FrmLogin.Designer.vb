@@ -88,6 +88,7 @@ Partial Class FrmLogin
         ' btIniciarSesion
         ' 
         btIniciarSesion.BackColor = Color.FromArgb(CByte(123), CByte(179), CByte(75))
+        btIniciarSesion.Cursor = Cursors.Hand
         btIniciarSesion.FlatStyle = FlatStyle.Flat
         btIniciarSesion.Font = New Font("Segoe UI", 16F)
         btIniciarSesion.Location = New Point(260, 432)
@@ -99,6 +100,7 @@ Partial Class FrmLogin
         ' 
         ' pbMostrarContraseña
         ' 
+        pbMostrarContraseña.Cursor = Cursors.Hand
         pbMostrarContraseña.Image = My.Resources.Resources.ojo_cerrado
         pbMostrarContraseña.Location = New Point(618, 362)
         pbMostrarContraseña.Name = "pbMostrarContraseña"

@@ -32,8 +32,6 @@ Partial Class FrmPrincipal
         ToolStripSeparator2 = New ToolStripSeparator()
         btnPagos = New ToolStripButton()
         ToolStripSeparator4 = New ToolStripSeparator()
-        btnAsistencia = New ToolStripButton()
-        ToolStripSeparator9 = New ToolStripSeparator()
         btRegistroAsistencias = New ToolStripButton()
         ToolStripSeparator6 = New ToolStripSeparator()
         btnReclamos = New ToolStripButton()
@@ -41,10 +39,9 @@ Partial Class FrmPrincipal
         btnUsuarios = New ToolStripButton()
         ToolStripSeparator5 = New ToolStripSeparator()
         btnUsuarioLogueado = New ToolStripDropDownButton()
-        CerrarSesiónToolStripMenuItem = New ToolStripMenuItem()
+        miCerrarSesión = New ToolStripMenuItem()
         ToolStripSeparator7 = New ToolStripSeparator()
         PanelDeFormularios = New Panel()
-        lblBienvenido = New Label()
         PictureBox1 = New PictureBox()
         ToolStrip1.SuspendLayout()
         PanelDeFormularios.SuspendLayout()
@@ -54,7 +51,7 @@ Partial Class FrmPrincipal
         ' ToolStrip1
         ' 
         ToolStrip1.BackColor = Color.FromArgb(CByte(123), CByte(179), CByte(75))
-        ToolStrip1.Items.AddRange(New ToolStripItem() {btnPlanes, ToolStripSeparator3, btnMiembros, ToolStripSeparator1, btnMembresias, ToolStripSeparator2, btnPagos, ToolStripSeparator4, btnAsistencia, ToolStripSeparator9, btRegistroAsistencias, ToolStripSeparator6, btnReclamos, ToolStripSeparator8, btnUsuarios, ToolStripSeparator5, btnUsuarioLogueado, ToolStripSeparator7})
+        ToolStrip1.Items.AddRange(New ToolStripItem() {btnPlanes, ToolStripSeparator3, btnMiembros, ToolStripSeparator1, btnMembresias, ToolStripSeparator2, btnPagos, ToolStripSeparator4, btRegistroAsistencias, ToolStripSeparator6, btnReclamos, ToolStripSeparator8, btnUsuarios, ToolStripSeparator5, btnUsuarioLogueado, ToolStripSeparator7})
         ToolStrip1.Location = New Point(0, 0)
         ToolStrip1.Name = "ToolStrip1"
         ToolStrip1.Size = New Size(1008, 28)
@@ -121,21 +118,6 @@ Partial Class FrmPrincipal
         ToolStripSeparator4.Name = "ToolStripSeparator4"
         ToolStripSeparator4.Size = New Size(6, 28)
         ' 
-        ' btnAsistencia
-        ' 
-        btnAsistencia.DisplayStyle = ToolStripItemDisplayStyle.Text
-        btnAsistencia.Font = New Font("Segoe UI", 12F)
-        btnAsistencia.Image = CType(resources.GetObject("btnAsistencia.Image"), Image)
-        btnAsistencia.ImageTransparentColor = Color.Magenta
-        btnAsistencia.Name = "btnAsistencia"
-        btnAsistencia.Size = New Size(83, 25)
-        btnAsistencia.Text = "Asistencia"
-        ' 
-        ' ToolStripSeparator9
-        ' 
-        ToolStripSeparator9.Name = "ToolStripSeparator9"
-        ToolStripSeparator9.Size = New Size(6, 28)
-        ' 
         ' btRegistroAsistencias
         ' 
         btRegistroAsistencias.DisplayStyle = ToolStripItemDisplayStyle.Text
@@ -184,7 +166,7 @@ Partial Class FrmPrincipal
         ' btnUsuarioLogueado
         ' 
         btnUsuarioLogueado.DisplayStyle = ToolStripItemDisplayStyle.Text
-        btnUsuarioLogueado.DropDownItems.AddRange(New ToolStripItem() {CerrarSesiónToolStripMenuItem})
+        btnUsuarioLogueado.DropDownItems.AddRange(New ToolStripItem() {miCerrarSesión})
         btnUsuarioLogueado.Font = New Font("Segoe UI", 12F)
         btnUsuarioLogueado.Image = CType(resources.GetObject("btnUsuarioLogueado.Image"), Image)
         btnUsuarioLogueado.ImageTransparentColor = Color.Magenta
@@ -192,11 +174,11 @@ Partial Class FrmPrincipal
         btnUsuarioLogueado.Size = New Size(77, 25)
         btnUsuarioLogueado.Text = "Usuario"
         ' 
-        ' CerrarSesiónToolStripMenuItem
+        ' miCerrarSesión
         ' 
-        CerrarSesiónToolStripMenuItem.Name = "CerrarSesiónToolStripMenuItem"
-        CerrarSesiónToolStripMenuItem.Size = New Size(174, 26)
-        CerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión"
+        miCerrarSesión.Name = "miCerrarSesión"
+        miCerrarSesión.Size = New Size(180, 26)
+        miCerrarSesión.Text = "Cerrar Sesión"
         ' 
         ' ToolStripSeparator7
         ' 
@@ -206,7 +188,6 @@ Partial Class FrmPrincipal
         ' PanelDeFormularios
         ' 
         PanelDeFormularios.BackColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
-        PanelDeFormularios.Controls.Add(lblBienvenido)
         PanelDeFormularios.Controls.Add(PictureBox1)
         PanelDeFormularios.Dock = DockStyle.Fill
         PanelDeFormularios.Location = New Point(0, 28)
@@ -214,23 +195,11 @@ Partial Class FrmPrincipal
         PanelDeFormularios.Size = New Size(1008, 701)
         PanelDeFormularios.TabIndex = 1
         ' 
-        ' lblBienvenido
-        ' 
-        lblBienvenido.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
-        lblBienvenido.AutoSize = True
-        lblBienvenido.Font = New Font("Segoe UI", 20F)
-        lblBienvenido.ForeColor = Color.White
-        lblBienvenido.Location = New Point(216, 579)
-        lblBienvenido.Name = "lblBienvenido"
-        lblBienvenido.Size = New Size(147, 37)
-        lblBienvenido.TabIndex = 1
-        lblBienvenido.Text = "Bienvenida"
-        ' 
         ' PictureBox1
         ' 
         PictureBox1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(135, 70)
+        PictureBox1.Location = New Point(140, 109)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(755, 472)
         PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
@@ -251,7 +220,6 @@ Partial Class FrmPrincipal
         ToolStrip1.ResumeLayout(False)
         ToolStrip1.PerformLayout()
         PanelDeFormularios.ResumeLayout(False)
-        PanelDeFormularios.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
@@ -267,17 +235,14 @@ Partial Class FrmPrincipal
     Friend WithEvents btnMiembros As ToolStripButton
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
     Friend WithEvents btnPagos As ToolStripButton
-    Friend WithEvents btnAsistencia As ToolStripButton
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
     Friend WithEvents btnReclamos As ToolStripButton
     Friend WithEvents ToolStripSeparator6 As ToolStripSeparator
     Friend WithEvents ToolStripSeparator8 As ToolStripSeparator
     Friend WithEvents btRegistroAsistencias As ToolStripButton
-    Friend WithEvents ToolStripSeparator9 As ToolStripSeparator
     Friend WithEvents btnUsuarios As ToolStripButton
     Friend WithEvents ToolStripSeparator5 As ToolStripSeparator
-    Friend WithEvents lblBienvenido As Label
     Friend WithEvents btnUsuarioLogueado As ToolStripDropDownButton
-    Friend WithEvents CerrarSesiónToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents miCerrarSesión As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator7 As ToolStripSeparator
 End Class

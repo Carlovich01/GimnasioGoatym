@@ -1,6 +1,6 @@
 ﻿Imports Gimnasio.Entidades
 Imports System.Data
-Imports LogDeErrores
+Imports Gimnasio.Errores
 
 ''' <summary>
 ''' Clase de acceso a datos para la gestión de miembros en el sistema de gimnasio.
@@ -19,7 +19,7 @@ Public Class DMiembros
             Dim query As String = "SELECT * FROM miembros ORDER BY ultima_modificacion DESC"
             Return ExecuteQuery(query, Nothing)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function
@@ -44,10 +44,10 @@ Public Class DMiembros
             ExecuteNonQuery(query, parameters)
         Catch ex As Exception
             If ex.Message.Contains("Duplicate entry") Then
-                Logger.LogError("Capa Datos", ex)
+                ManejarErrores.Log("Capa Datos", ex)
                 Throw New Exception("El DNI ya está registrado.")
             Else
-                Logger.LogError("Capa Datos", ex)
+                ManejarErrores.Log("Capa Datos", ex)
                 Throw
             End If
         End Try
@@ -71,7 +71,7 @@ Public Class DMiembros
         }
             ExecuteNonQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Sub
@@ -90,10 +90,10 @@ Public Class DMiembros
             ExecuteNonQuery(query, parameters)
         Catch ex As Exception
             If ex.Message.Contains("a foreign key constraint fails") Then
-                Logger.LogError("Capa Datos", ex)
+                ManejarErrores.Log("Capa Datos", ex)
                 Throw New Exception("No se puede eliminar el miembro porque tiene una membresía asociada.")
             Else
-                Logger.LogError("Capa Datos", ex)
+                ManejarErrores.Log("Capa Datos", ex)
                 Throw
             End If
         End Try
@@ -113,7 +113,7 @@ Public Class DMiembros
         }
             Return ExecuteQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function
@@ -131,7 +131,7 @@ Public Class DMiembros
         }
             Return ExecuteQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function
@@ -149,7 +149,7 @@ Public Class DMiembros
         }
             Return ExecuteQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function

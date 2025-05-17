@@ -1,7 +1,6 @@
 ﻿Imports System.Data
 Imports MySql.Data.MySqlClient
-Imports LogDeErrores
-
+Imports Gimnasio.Errores
 ''' <summary>
 ''' Clase base para la gestión de la conexión y operaciones con la base de datos MySQL.
 ''' Proporciona métodos genéricos para ejecutar consultas y comandos SQL.
@@ -37,7 +36,7 @@ Public Class ConexionBase
                 End Using
             End Using
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -62,7 +61,7 @@ Public Class ConexionBase
                 End Using
             End Using
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw New Exception(ex.Message)
         End Try
     End Sub

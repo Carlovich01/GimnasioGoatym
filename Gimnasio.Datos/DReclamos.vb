@@ -1,6 +1,6 @@
 ﻿Imports System.Data
 Imports Gimnasio.Entidades
-Imports LogDeErrores
+Imports Gimnasio.Errores
 
 ''' <summary>
 ''' Clase de acceso a datos para la gestión de reclamos en el sistema de gimnasio.
@@ -19,7 +19,7 @@ Public Class DReclamos
             Dim query As String = "SELECT * FROM vista_reclamos"
             Return ExecuteQuery(query, Nothing)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function
@@ -39,7 +39,7 @@ Public Class DReclamos
         }
             ExecuteNonQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Sub
@@ -59,7 +59,7 @@ Public Class DReclamos
         }
             ExecuteNonQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Sub
@@ -76,7 +76,7 @@ Public Class DReclamos
         }
             ExecuteNonQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Sub
@@ -93,7 +93,7 @@ Public Class DReclamos
         }
             ExecuteNonQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Sub
@@ -110,7 +110,7 @@ Public Class DReclamos
         }
             ExecuteNonQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Sub
@@ -129,7 +129,7 @@ Public Class DReclamos
         }
             ExecuteNonQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Sub
@@ -147,7 +147,7 @@ Public Class DReclamos
         }
             Return ExecuteQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function

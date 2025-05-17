@@ -1,7 +1,7 @@
 ﻿Imports System.Data
 Imports Gimnasio.Datos
 Imports Gimnasio.Entidades
-Imports LogDeErrores
+Imports Gimnasio.Errores
 Imports System.Security.Cryptography
 Imports System.Text
 
@@ -58,7 +58,7 @@ Public Class NUsuarios
                 Return Convert.ToBase64String(hash)
             End Using
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -74,7 +74,7 @@ Public Class NUsuarios
             dvUsuarios = dUsuarios.Listar()
             Return dvUsuarios
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -94,7 +94,7 @@ Public Class NUsuarios
             Obj.PasswordHash = GenerarHash(Obj.PasswordHash)
             dUsuarios.Insertar(Obj)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Sub
@@ -111,7 +111,7 @@ Public Class NUsuarios
             Obj.PasswordHash = GenerarHash(Obj.PasswordHash)
             dUsuarios.Actualizar(Obj)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Sub
@@ -125,7 +125,7 @@ Public Class NUsuarios
         Try
             dUsuarios.Eliminar(id)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Sub
@@ -144,7 +144,7 @@ Public Class NUsuarios
             Dim dvUsuarios As DataTable = dUsuarios.ListarPorNombre(nombre)
             Return dvUsuarios
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -170,7 +170,7 @@ Public Class NUsuarios
             End If
             Return Nothing
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function

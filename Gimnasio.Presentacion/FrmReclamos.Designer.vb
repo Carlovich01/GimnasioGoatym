@@ -40,6 +40,7 @@ Partial Class FrmReclamos
         tbGuardarRespuesta = New Button()
         TbRespuesta = New TextBox()
         panelDatosIngreso = New Panel()
+        tbID = New TextBox()
         lblDatosIngreso = New Label()
         Label3 = New Label()
         tbDNI = New TextBox()
@@ -86,6 +87,7 @@ Partial Class FrmReclamos
         ' btnEliminar
         ' 
         btnEliminar.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        btnEliminar.Cursor = Cursors.Hand
         btnEliminar.Font = New Font("Segoe UI", 12F)
         btnEliminar.Location = New Point(236, 689)
         btnEliminar.Name = "btnEliminar"
@@ -96,10 +98,11 @@ Partial Class FrmReclamos
         ' 
         ' cbOpcionBuscar
         ' 
+        cbOpcionBuscar.Cursor = Cursors.Hand
         cbOpcionBuscar.DropDownStyle = ComboBoxStyle.DropDownList
         cbOpcionBuscar.Font = New Font("Segoe UI", 12F)
         cbOpcionBuscar.FormattingEnabled = True
-        cbOpcionBuscar.Items.AddRange(New Object() {"pendiente", "resuelto"})
+        cbOpcionBuscar.Items.AddRange(New Object() {"todos", "pendiente", "resuelto"})
         cbOpcionBuscar.Location = New Point(110, 12)
         cbOpcionBuscar.Name = "cbOpcionBuscar"
         cbOpcionBuscar.Size = New Size(253, 29)
@@ -121,6 +124,7 @@ Partial Class FrmReclamos
         ' btnActualizar
         ' 
         btnActualizar.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        btnActualizar.Cursor = Cursors.Hand
         btnActualizar.Font = New Font("Segoe UI", 12F)
         btnActualizar.Location = New Point(127, 689)
         btnActualizar.Name = "btnActualizar"
@@ -132,6 +136,7 @@ Partial Class FrmReclamos
         ' btnCambiarEstado
         ' 
         btnCambiarEstado.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        btnCambiarEstado.Cursor = Cursors.Hand
         btnCambiarEstado.Font = New Font("Segoe UI", 12F)
         btnCambiarEstado.Location = New Point(351, 689)
         btnCambiarEstado.Name = "btnCambiarEstado"
@@ -177,6 +182,7 @@ Partial Class FrmReclamos
         ' btnInsertar
         ' 
         btnInsertar.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        btnInsertar.Cursor = Cursors.Hand
         btnInsertar.Font = New Font("Segoe UI", 12F)
         btnInsertar.Location = New Point(12, 689)
         btnInsertar.Name = "btnInsertar"
@@ -188,6 +194,7 @@ Partial Class FrmReclamos
         ' btnResponder
         ' 
         btnResponder.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        btnResponder.Cursor = Cursors.Hand
         btnResponder.Font = New Font("Segoe UI", 12F)
         btnResponder.Location = New Point(514, 689)
         btnResponder.Name = "btnResponder"
@@ -222,6 +229,7 @@ Partial Class FrmReclamos
         ' tbCancelarRespuesta
         ' 
         tbCancelarRespuesta.BackColor = Color.FromArgb(CByte(123), CByte(179), CByte(75))
+        tbCancelarRespuesta.Cursor = Cursors.Hand
         tbCancelarRespuesta.FlatAppearance.BorderColor = Color.FromArgb(CByte(123), CByte(179), CByte(75))
         tbCancelarRespuesta.FlatAppearance.BorderSize = 0
         tbCancelarRespuesta.FlatAppearance.MouseDownBackColor = Color.White
@@ -238,6 +246,7 @@ Partial Class FrmReclamos
         ' tbGuardarRespuesta
         ' 
         tbGuardarRespuesta.BackColor = Color.FromArgb(CByte(123), CByte(179), CByte(75))
+        tbGuardarRespuesta.Cursor = Cursors.Hand
         tbGuardarRespuesta.FlatAppearance.BorderColor = Color.FromArgb(CByte(123), CByte(179), CByte(75))
         tbGuardarRespuesta.FlatAppearance.MouseDownBackColor = Color.White
         tbGuardarRespuesta.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
@@ -261,6 +270,7 @@ Partial Class FrmReclamos
         ' 
         ' panelDatosIngreso
         ' 
+        panelDatosIngreso.Controls.Add(tbID)
         panelDatosIngreso.Controls.Add(lblDatosIngreso)
         panelDatosIngreso.Controls.Add(Label3)
         panelDatosIngreso.Controls.Add(tbDNI)
@@ -275,6 +285,15 @@ Partial Class FrmReclamos
         panelDatosIngreso.Size = New Size(616, 432)
         panelDatosIngreso.TabIndex = 55
         panelDatosIngreso.Visible = False
+        ' 
+        ' tbID
+        ' 
+        tbID.AccessibleRole = AccessibleRole.SplitButton
+        tbID.Location = New Point(460, 10)
+        tbID.Name = "tbID"
+        tbID.Size = New Size(100, 23)
+        tbID.TabIndex = 55
+        tbID.Visible = False
         ' 
         ' lblDatosIngreso
         ' 
@@ -309,6 +328,7 @@ Partial Class FrmReclamos
         ' 
         ' cbTipo
         ' 
+        cbTipo.Cursor = Cursors.Hand
         cbTipo.DropDownStyle = ComboBoxStyle.DropDownList
         cbTipo.FormattingEnabled = True
         cbTipo.Items.AddRange(New Object() {"sugerencia", "reclamo"})
@@ -320,6 +340,7 @@ Partial Class FrmReclamos
         ' btnCancelar
         ' 
         btnCancelar.BackColor = Color.FromArgb(CByte(123), CByte(179), CByte(75))
+        btnCancelar.Cursor = Cursors.Hand
         btnCancelar.FlatAppearance.BorderColor = Color.FromArgb(CByte(123), CByte(179), CByte(75))
         btnCancelar.FlatAppearance.BorderSize = 0
         btnCancelar.FlatAppearance.MouseDownBackColor = Color.White
@@ -336,6 +357,7 @@ Partial Class FrmReclamos
         ' btnGuardar
         ' 
         btnGuardar.BackColor = Color.FromArgb(CByte(123), CByte(179), CByte(75))
+        btnGuardar.Cursor = Cursors.Hand
         btnGuardar.FlatAppearance.BorderColor = Color.FromArgb(CByte(123), CByte(179), CByte(75))
         btnGuardar.FlatAppearance.MouseDownBackColor = Color.White
         btnGuardar.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
@@ -426,4 +448,5 @@ Partial Class FrmReclamos
     Friend WithEvents tbCancelarRespuesta As Button
     Friend WithEvents tbGuardarRespuesta As Button
     Friend WithEvents TbRespuesta As TextBox
+    Friend WithEvents tbID As TextBox
 End Class

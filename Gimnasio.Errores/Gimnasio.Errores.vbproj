@@ -1,9 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <RootNamespace>LogDeErrores</RootNamespace>
+    <RootNamespace>Gimnasio.Errores</RootNamespace>
     <TargetFramework>net9.0</TargetFramework>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
 </Project>

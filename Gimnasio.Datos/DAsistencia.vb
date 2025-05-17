@@ -1,6 +1,6 @@
 ﻿Imports System.Data
 Imports Gimnasio.Entidades
-Imports LogDeErrores
+Imports Gimnasio.Errores
 
 ''' <summary>
 ''' Clase de acceso a datos para la gestión de asistencias en el sistema de gimnasio.
@@ -19,7 +19,7 @@ Public Class DAsistencia
             Dim query As String = "SELECT * FROM vista_asistencia"
             Return ExecuteQuery(query, Nothing)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function
@@ -36,7 +36,7 @@ Public Class DAsistencia
         }
             ExecuteNonQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Sub
@@ -57,7 +57,7 @@ Public Class DAsistencia
         }
             ExecuteNonQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Sub
@@ -75,7 +75,7 @@ Public Class DAsistencia
         }
             Return ExecuteQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function
@@ -95,7 +95,7 @@ Public Class DAsistencia
         }
             Return ExecuteQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function

@@ -38,12 +38,16 @@ Partial Class FrmRegistroAsistencias
         Label1 = New Label()
         BtnBuscarFecha = New Button()
         btnEliminar = New Button()
+        btnInsertar = New Button()
+        pbReiniciar = New PictureBox()
         CType(dgvListado, ComponentModel.ISupportInitialize).BeginInit()
         PanelFecha.SuspendLayout()
+        CType(pbReiniciar, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' cbOpcionBuscar
         ' 
+        cbOpcionBuscar.Cursor = Cursors.Hand
         cbOpcionBuscar.DropDownStyle = ComboBoxStyle.DropDownList
         cbOpcionBuscar.Font = New Font("Segoe UI", 12F)
         cbOpcionBuscar.FormattingEnabled = True
@@ -125,6 +129,7 @@ Partial Class FrmRegistroAsistencias
         ' 
         ' btnBuscar
         ' 
+        btnBuscar.Cursor = Cursors.Hand
         btnBuscar.Font = New Font("Segoe UI", 12F)
         btnBuscar.Location = New Point(589, 13)
         btnBuscar.Name = "btnBuscar"
@@ -157,6 +162,7 @@ Partial Class FrmRegistroAsistencias
         ' 
         ' dtpFechaInicio
         ' 
+        dtpFechaInicio.Cursor = Cursors.Hand
         dtpFechaInicio.Font = New Font("Segoe UI", 12F)
         dtpFechaInicio.Location = New Point(75, 13)
         dtpFechaInicio.Name = "dtpFechaInicio"
@@ -165,6 +171,7 @@ Partial Class FrmRegistroAsistencias
         ' 
         ' dtpFechaFin
         ' 
+        dtpFechaFin.Cursor = Cursors.Hand
         dtpFechaFin.Font = New Font("Segoe UI", 12F)
         dtpFechaFin.Location = New Point(368, 13)
         dtpFechaFin.Name = "dtpFechaFin"
@@ -211,13 +218,38 @@ Partial Class FrmRegistroAsistencias
         ' btnEliminar
         ' 
         btnEliminar.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        btnEliminar.Cursor = Cursors.Hand
         btnEliminar.Font = New Font("Segoe UI", 12F)
-        btnEliminar.Location = New Point(11, 684)
+        btnEliminar.Location = New Point(139, 686)
         btnEliminar.Name = "btnEliminar"
         btnEliminar.Size = New Size(80, 33)
         btnEliminar.TabIndex = 35
         btnEliminar.Text = "Eliminar"
         btnEliminar.UseVisualStyleBackColor = True
+        ' 
+        ' btnInsertar
+        ' 
+        btnInsertar.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        btnInsertar.Cursor = Cursors.Hand
+        btnInsertar.Font = New Font("Segoe UI", 12F)
+        btnInsertar.Location = New Point(11, 687)
+        btnInsertar.Name = "btnInsertar"
+        btnInsertar.Size = New Size(87, 30)
+        btnInsertar.TabIndex = 36
+        btnInsertar.Text = "Insertar"
+        btnInsertar.UseVisualStyleBackColor = True
+        ' 
+        ' pbReiniciar
+        ' 
+        pbReiniciar.BackColor = Color.FromArgb(CByte(123), CByte(179), CByte(75))
+        pbReiniciar.Cursor = Cursors.Hand
+        pbReiniciar.Image = My.Resources.Resources.reiniciar
+        pbReiniciar.Location = New Point(962, 15)
+        pbReiniciar.Name = "pbReiniciar"
+        pbReiniciar.Size = New Size(34, 30)
+        pbReiniciar.SizeMode = PictureBoxSizeMode.Zoom
+        pbReiniciar.TabIndex = 37
+        pbReiniciar.TabStop = False
         ' 
         ' FrmRegistroAsistencias
         ' 
@@ -225,6 +257,8 @@ Partial Class FrmRegistroAsistencias
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
         ClientSize = New Size(1008, 729)
+        Controls.Add(pbReiniciar)
+        Controls.Add(btnInsertar)
         Controls.Add(btnEliminar)
         Controls.Add(PanelFecha)
         Controls.Add(cbOpcionBuscar)
@@ -236,6 +270,7 @@ Partial Class FrmRegistroAsistencias
         CType(dgvListado, ComponentModel.ISupportInitialize).EndInit()
         PanelFecha.ResumeLayout(False)
         PanelFecha.PerformLayout()
+        CType(pbReiniciar, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -253,4 +288,6 @@ Partial Class FrmRegistroAsistencias
     Friend WithEvents BtnBuscarFecha As Button
     Friend WithEvents btnBuscar As Button
     Friend WithEvents btnEliminar As Button
+    Friend WithEvents btnInsertar As Button
+    Friend WithEvents pbReiniciar As PictureBox
 End Class

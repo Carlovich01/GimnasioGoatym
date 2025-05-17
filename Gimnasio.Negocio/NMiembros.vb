@@ -1,7 +1,7 @@
 ﻿Imports System.Data
 Imports Gimnasio.Datos
 Imports Gimnasio.Entidades
-Imports LogDeErrores
+Imports Gimnasio.Errores
 
 ''' <summary>
 ''' Lógica de negocio para la gestión de miembros en el sistema de gimnasio.
@@ -24,7 +24,7 @@ Public Class NMiembros
             dvMiembros = dMiembros.Listar()
             Return dvMiembros
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -103,7 +103,7 @@ Public Class NMiembros
             ValidarCampos(Obj)
             dMiembros.Insertar(Obj)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Sub
@@ -118,7 +118,7 @@ Public Class NMiembros
             ValidarCampos(Obj)
             dMiembros.Actualizar(Obj)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Sub
@@ -132,7 +132,7 @@ Public Class NMiembros
         Try
             dMiembros.Eliminar(id)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Sub
@@ -151,7 +151,7 @@ Public Class NMiembros
             Dim dvMiembros As DataTable = dMiembros.ListarPorNombre(nombre)
             Return dvMiembros
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -170,7 +170,7 @@ Public Class NMiembros
             Dim dvMiembros As DataTable = dMiembros.ObtenerPorDni(dni)
             Return dvMiembros
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -189,7 +189,7 @@ Public Class NMiembros
             Dim dvMiembros As DataTable = dMiembros.ListarPorDni(dni)
             Return dvMiembros
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function

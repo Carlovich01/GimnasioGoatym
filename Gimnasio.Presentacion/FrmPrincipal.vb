@@ -1,15 +1,13 @@
 ﻿Imports Gimnasio.Negocio
 Imports Gimnasio.Entidades
-Imports LogDeErrores
+Imports Gimnasio.Errores
 
 ''' <summary>
-''' Formulario principal de la aplicación del gimnasio.
-''' Gestiona la navegación entre los diferentes módulos y controla el acceso según el rol del usuario.
+''' Formulario principal de la aplicación del gimnasio. Gestiona la navegación entre los diferentes módulos y controla el acceso según el rol del usuario.
+''' Utiliza la clase <see cref="Usuarios"/> para identificar al usuario logueado y su rol. Llama a formularios secundarios como <see cref="FrmPlanes"/>,
+''' <see cref="FrmMiembros"/>, <see cref="FrmMembresias"/>, <see cref="FrmPagos"/>, <see cref="FrmRegistroAsistencias"/>, <see cref="FrmReclamos"/> y 
+''' <see cref="FrmUsuarios"/>.
 ''' </summary>
-''' <remarks>
-''' Utiliza la clase <see cref="Usuarios"/> para identificar al usuario logueado y su rol.
-''' Llama a formularios secundarios como <see cref="FrmPlanes"/>, <see cref="FrmMiembros"/>, <see cref="FrmMembresias"/>, <see cref="FrmPagos"/>, <see cref="FrmAsistencias"/>, <see cref="FrmRegistroAsistencias"/>, <see cref="FrmReclamos"/> y <see cref="FrmUsuarios"/>.
-''' </remarks>
 Public Class FrmPrincipal
     ''' <summary>
     ''' Usuario actualmente logueado en la aplicación.
@@ -18,14 +16,17 @@ Public Class FrmPrincipal
 
     ''' <summary>
     ''' Constructor del formulario principal.
-    ''' Inicializa los componentes y configura la interfaz según el rol del usuario.
+    ''' - Inicializa los componentes visuales del formulario.
+    ''' - Asigna el usuario actualmente logueado recibido como parámetro.
+    ''' - Muestra el nombre completo del usuario en el botón btnUsuarioLogueado.
+    ''' - Si el usuario tiene el rol de recepcionista IdRol = 2:
+    '''     - Oculta y deshabilita el apartado de usuarios.
     ''' </summary>
     ''' <param name="usuario">Instancia de <see cref="Usuarios"/> que representa al usuario logueado.</param>
     Public Sub New(usuario As Usuarios)
         InitializeComponent()
         usuarioActual = usuario
         btnUsuarioLogueado.Text = usuarioActual.NombreCompleto
-        lblBienvenido.Text = "¡Bienvenido, " & usuarioActual.NombreCompleto & "! Tu rol es " & If(usuarioActual.IdRol = 1, "Administrador", "Recepcionista") & "."
         If usuarioActual.IdRol = 2 Then
             btnUsuarios.Visible = False
             btnUsuarios.Enabled = False
@@ -42,32 +43,36 @@ Public Class FrmPrincipal
     End Function
 
     ''' <summary>
-    ''' Evento que se ejecuta al cargar el formulario principal.
+    ''' Evento que se ejecuta al cargar el formulario principal. Muestra un mensaje de bienvenida al usuario con su nombre y rol.
     ''' Actualiza el estado de las membresías utilizando <see cref="NMembresias.ActualizaAEstadoInactiva"/>.
     ''' </summary>
-    ''' <param name="sender">Objeto que genera el evento.</param>
-    ''' <param name="e">Argumentos del evento.</param>
     Private Sub frmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
+            MsgBox("¡Bienvenido, " & usuarioActual.NombreCompleto & "! Tu rol es " & If(usuarioActual.IdRol = 1, "Administrador", "Recepcionista") & ".", MsgBoxStyle.Information, "Exito")
             Dim nMembresias As New NMembresias()
             nMembresias.ActualizaAEstadoInactiva()
         Catch ex As Exception
-            Logger.LogError("Capa Presentacion ", ex)
-            MsgBox("Error al actualizar los estados de las membresías: " & ex.Message, MsgBoxStyle.Critical, "Error")
+            ManejarErrores.Mostrar("Error al cargar el formulario principal", ex)
         End Try
     End Sub
 
     ''' <summary>
-    ''' Muestra un formulario secundario dentro del panel principal.
-    ''' Elimina cualquier formulario previamente cargado en el panel.
+    ''' Muestra un formulario secundario dentro del panel principal de la aplicación.
+    ''' - Si ya existe un formulario cargado en el panel y no es una instancia de <see cref="FrmRegistroAsistencias"/>, 
+    ''' lo elimina y libera sus recursos para evitar fugas de memoria.
+    ''' - Limpia el panel de cualquier control previo.
+    ''' - Configura el formulario recibido como parámetro para que no sea de nivel superior, sin bordes y ajustado al tamaño del panel principal.
+    ''' - Agrega el formulario al panel y lo muestra.
+    ''' - Permite mantener la instancia de <see cref="FrmRegistroAsistencias"/> viva entre cambios de formularios, evitando su destrucción.
     ''' </summary>
-    ''' <param name="formulario">Instancia de <see cref="Form"/> a mostrar.</param>
+    ''' <param name="formulario">Instancia de <see cref="Form"/> a mostrar en el panel principal.</param>
     Public Sub MostrarFormulario(formulario As Form)
         Try
             If PanelDeFormularios.Controls.Count > 0 AndAlso TypeOf PanelDeFormularios.Controls(0) Is Form Then
-                PanelDeFormularios.Controls(0).Dispose()
+                If Not TypeOf PanelDeFormularios.Controls(0) Is FrmRegistroAsistencias Then
+                    PanelDeFormularios.Controls(0).Dispose()
+                End If
             End If
-
             PanelDeFormularios.Controls.Clear()
             formulario.TopLevel = False
             formulario.FormBorderStyle = FormBorderStyle.None
@@ -75,8 +80,7 @@ Public Class FrmPrincipal
             PanelDeFormularios.Controls.Add(formulario)
             formulario.Show()
         Catch ex As Exception
-            Logger.LogError("Capa Presentacion ", ex)
-            MsgBox("Error al mostrar formulario: " & ex.Message, MsgBoxStyle.Critical, "Error")
+            ManejarErrores.Mostrar("Error al mostrar formulario", ex)
         End Try
     End Sub
 
@@ -88,8 +92,7 @@ Public Class FrmPrincipal
             Dim frmPlanes = New FrmPlanes(usuarioActual)
             MostrarFormulario(frmPlanes)
         Catch ex As Exception
-            Logger.LogError("Capa Presentacion ", ex)
-            MsgBox("Error al abrir el formulario de planes: " & ex.Message, MsgBoxStyle.Critical, "Error")
+            ManejarErrores.Mostrar("Error al abrir el formulario de planes", ex)
         End Try
     End Sub
 
@@ -101,8 +104,7 @@ Public Class FrmPrincipal
             Dim frmMiembros = New FrmMiembros(Me)
             MostrarFormulario(frmMiembros)
         Catch ex As Exception
-            Logger.LogError("Capa Presentacion ", ex)
-            MsgBox("Error al abrir el formulario de miembros: " & ex.Message, MsgBoxStyle.Critical, "Error")
+            ManejarErrores.Mostrar("Error al abrir el formulario de miembros", ex)
         End Try
     End Sub
 
@@ -114,8 +116,7 @@ Public Class FrmPrincipal
             Dim frmMembresias = New FrmMembresias(usuarioActual)
             MostrarFormulario(frmMembresias)
         Catch ex As Exception
-            Logger.LogError("Capa Presentacion ", ex)
-            MsgBox("Error al abrir el formulario de membresías: " & ex.Message, MsgBoxStyle.Critical, "Error")
+            ManejarErrores.Mostrar("Error al abrir el formulario de membresías", ex)
         End Try
     End Sub
 
@@ -127,21 +128,7 @@ Public Class FrmPrincipal
             Dim frmPagos = New FrmPagos(usuarioActual)
             MostrarFormulario(frmPagos)
         Catch ex As Exception
-            Logger.LogError("Capa Presentacion ", ex)
-            MsgBox("Error al abrir el formulario de pagos: " & ex.Message, MsgBoxStyle.Critical, "Error")
-        End Try
-    End Sub
-
-    ''' <summary>
-    ''' Evento que abre el formulario de asistencias <see cref="FrmAsistencias"/>.
-    ''' </summary>
-    Private Sub btnAsistencia_Click(sender As Object, e As EventArgs) Handles btnAsistencia.Click
-        Try
-            Dim frmAsistencia = New FrmAsistencias()
-            MostrarFormulario(frmAsistencia)
-        Catch ex As Exception
-            Logger.LogError("Capa Presentacion ", ex)
-            MsgBox("Error al abrir el formulario de asistencia: " & ex.Message, MsgBoxStyle.Critical, "Error")
+            ManejarErrores.Mostrar("Error al abrir el formulario de pagos", ex)
         End Try
     End Sub
 
@@ -153,8 +140,7 @@ Public Class FrmPrincipal
             Dim frmRegistrosAsistencias = New FrmRegistroAsistencias(usuarioActual)
             MostrarFormulario(frmRegistrosAsistencias)
         Catch ex As Exception
-            Logger.LogError("Capa Presentacion ", ex)
-            MsgBox("Error al abrir el formulario de Asistencia: " & ex.Message, MsgBoxStyle.Critical, "Error")
+            ManejarErrores.Mostrar("Error al abrir el formulario de registro de asistencias", ex)
         End Try
     End Sub
 
@@ -166,8 +152,7 @@ Public Class FrmPrincipal
             Dim frmReclamos = New FrmReclamos(usuarioActual)
             MostrarFormulario(frmReclamos)
         Catch ex As Exception
-            Logger.LogError("Capa Presentacion ", ex)
-            MsgBox("Error al abrir el formulario de reclamos: " & ex.Message, MsgBoxStyle.Critical, "Error")
+            ManejarErrores.Mostrar("Error al abrir el formulario de reclamos", ex)
         End Try
     End Sub
 
@@ -180,16 +165,20 @@ Public Class FrmPrincipal
             Dim frmUsuarios = New FrmUsuarios()
             MostrarFormulario(frmUsuarios)
         Catch ex As Exception
-            Logger.LogError("Capa Presentacion ", ex)
-            MsgBox("Error al abrir el formulario de Usuarios: " & ex.Message, MsgBoxStyle.Critical, "Error")
+            ManejarErrores.Mostrar("Error al abrir el formulario de usuarios", ex)
         End Try
     End Sub
 
     ''' <summary>
-    ''' Evento que gestiona el cierre de sesión del usuario.
-    ''' Oculta el formulario principal, muestra el formulario de login <see cref="FrmLogin"/> y limpia los campos.
+    ''' - Se ejecuta al hacer clic en el elemento de menú "Cerrar Sesión".
+    ''' - Solicita confirmación al usuario mediante un cuadro de diálogo.
+    ''' - Si el usuario confirma la acción:
+    '''     - Oculta el formulario principal.
+    '''     - Muestra el formulario de login.
+    '''     - Restablece los campos del formulario de login llamando a <see cref="FrmLogin.Formato()"/>.
+    '''     - Libera los recursos del formulario principal.
     ''' </summary>
-    Private Sub CerrarSesiónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarSesiónToolStripMenuItem.Click
+    Private Sub miCerrarSesion_Click(sender As Object, e As EventArgs) Handles miCerrarSesión.Click
         Try
             Dim resultado = MessageBox.Show("¿Está seguro de que desea cerrar sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If resultado = DialogResult.Yes Then
@@ -199,22 +188,7 @@ Public Class FrmPrincipal
                 Me.Dispose()
             End If
         Catch ex As Exception
-            Logger.LogError("Capa Presentacion ", ex)
-            MsgBox("Error al cerrar sesión: " & ex.Message, MsgBoxStyle.Critical, "Error")
-        End Try
-    End Sub
-
-    ''' <summary>
-    ''' Evento que se ejecuta al cerrar el formulario principal.
-    ''' Libera los recursos del formulario principal y del formulario de login.
-    ''' </summary>
-    Private Sub frmPrincipal_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        Try
-            Me.Dispose()
-            FrmLogin.Dispose()
-        Catch ex As Exception
-            Logger.LogError("Capa Presentacion ", ex)
-            MsgBox("Error al cerrar la aplicación: " & ex.Message, MsgBoxStyle.Critical, "Error")
+            ManejarErrores.Mostrar("Error al cerrar sesión", ex)
         End Try
     End Sub
 End Class

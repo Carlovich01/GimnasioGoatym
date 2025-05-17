@@ -1,6 +1,6 @@
 ﻿Imports System.Data
 Imports Gimnasio.Entidades
-Imports LogDeErrores
+Imports Gimnasio.Errores
 
 ''' <summary>
 ''' Clase de acceso a datos para la gestión de planes de membresía.
@@ -19,7 +19,7 @@ Public Class DPlanes
             Dim query As String = "SELECT * FROM planes_membresia ORDER BY ultima_modificacion DESC"
             Return ExecuteQuery(query, Nothing)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function
@@ -42,10 +42,10 @@ Public Class DPlanes
             ExecuteNonQuery(query, parameters)
         Catch ex As Exception
             If ex.Message.Contains("Duplicate entry") AndAlso ex.Message.Contains("nombre_plan") Then
-                Logger.LogError("Capa Datos", ex)
+                ManejarErrores.Log("Capa Datos", ex)
                 Throw New Exception("El nombre del plan" & Obj.NombrePlan & "ya existe. Por favor, elija otro nombre.")
             End If
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Sub
@@ -66,7 +66,7 @@ Public Class DPlanes
         }
             ExecuteNonQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Sub
@@ -85,10 +85,10 @@ Public Class DPlanes
             ExecuteNonQuery(query, parameters)
         Catch ex As Exception
             If ex.Message.Contains("a foreign key constraint fails") Then
-                Logger.LogError("Capa Datos", ex)
+                ManejarErrores.Log("Capa Datos", ex)
                 Throw New Exception("No se puede eliminar el plan porque tiene una membresía asociada.")
             Else
-                Logger.LogError("Capa Datos", ex)
+                ManejarErrores.Log("Capa Datos", ex)
                 Throw
             End If
         End Try
@@ -107,7 +107,7 @@ Public Class DPlanes
         }
             Return ExecuteQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function
@@ -125,7 +125,7 @@ Public Class DPlanes
         }
             Return ExecuteQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function
@@ -143,7 +143,7 @@ Public Class DPlanes
         }
             Return ExecuteQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function

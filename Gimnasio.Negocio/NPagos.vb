@@ -1,7 +1,7 @@
 ﻿Imports Gimnasio.Datos
 Imports Gimnasio.Entidades
 Imports System.Data
-Imports LogDeErrores
+Imports Gimnasio.Errores
 
 ''' <summary>
 ''' Lógica de negocio para la gestión de pagos en el sistema de gimnasio.
@@ -46,7 +46,7 @@ Public Class NPagos
             dvPagos = dPagos.Listar()
             Return dvPagos
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -76,10 +76,25 @@ Public Class NPagos
             dMembresias.ActualizarEstadoYFechas(membresia)
 
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Sub
+
+    ''' <summary>
+    ''' Actualiza un pago existente en el sistema.
+    ''' </summary>
+    ''' <param name="pago">Instancia de <see cref="Pagos"/> con los datos actualizados.</param>
+    Public Sub Actualizar(pago As Pagos)
+        Try
+            ValidarCampos(pago)
+            dPagos.Actualizar(pago)
+        Catch ex As Exception
+            ManejarErrores.Log("Capa Negocio", ex)
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
+
 
     ''' <summary>
     ''' Elimina un pago del sistema según su identificador.
@@ -90,7 +105,7 @@ Public Class NPagos
         Try
             dPagos.Eliminar(id)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Sub
@@ -108,7 +123,7 @@ Public Class NPagos
             dvPagos = dPagos.ListarPorFecha(fechaInicio, fechaFin)
             Return dvPagos
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -128,7 +143,7 @@ Public Class NPagos
             dvPagos = dPagos.ListarPorDni(dni)
             Return dvPagos
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -148,7 +163,7 @@ Public Class NPagos
             dvPagos = dPagos.ListarPorNombrePlan(nombre)
             Return dvPagos
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -165,7 +180,7 @@ Public Class NPagos
             dvPagos = dPagos.ListarPorMetodoPago(metodo)
             Return dvPagos
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -184,7 +199,7 @@ Public Class NPagos
             End If
             Return dPagos.ListarPorMontos(montoMin, montoMax)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function

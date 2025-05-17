@@ -1,6 +1,6 @@
 ﻿Imports System.Data
 Imports Gimnasio.Entidades
-Imports LogDeErrores
+Imports Gimnasio.Errores
 
 ''' <summary>
 ''' Clase de acceso a datos para la gestión de membresías en el sistema de gimnasio.
@@ -19,7 +19,7 @@ Public Class DMembresias
             Dim query As String = "SELECT * FROM vista_membresias"
             Return ExecuteQuery(query, Nothing)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function
@@ -40,7 +40,7 @@ Public Class DMembresias
         }
             ExecuteNonQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Sub
@@ -61,7 +61,7 @@ Public Class DMembresias
         }
             ExecuteNonQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Sub
@@ -80,10 +80,10 @@ Public Class DMembresias
             ExecuteNonQuery(query, parameters)
         Catch ex As Exception
             If ex.Message.Contains("a foreign key constraint fails") Then
-                Logger.LogError("Capa Datos", ex)
+                ManejarErrores.Log("Capa Datos", ex)
                 Throw New Exception("No se puede eliminar la membresia porque tiene un pago asociado.")
             Else
-                Logger.LogError("Capa Datos", ex)
+                ManejarErrores.Log("Capa Datos", ex)
                 Throw
             End If
         End Try
@@ -104,7 +104,7 @@ Public Class DMembresias
             Dim resultado = ExecuteQuery(query, parameters)
             Return If(resultado.Rows.Count > 0, Convert.ToUInt32(resultado.Rows(0)("id_membresia")), 0)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function
@@ -127,7 +127,7 @@ Public Class DMembresias
         }
             ExecuteNonQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Sub
@@ -143,7 +143,7 @@ Public Class DMembresias
             WHERE estado_membresia = 'Activa' AND fecha_fin < CURDATE()"
             ExecuteNonQuery(query, Nothing)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Sub
@@ -166,7 +166,7 @@ Public Class DMembresias
             Dim resultado = ExecuteQuery(query, parameters)
             Return If(resultado.Rows.Count > 0, Convert.ToUInt32(resultado.Rows(0)("duracion_dias")), 0)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function
@@ -184,7 +184,7 @@ Public Class DMembresias
         }
             Return ExecuteQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function
@@ -202,7 +202,7 @@ Public Class DMembresias
         }
             Return ExecuteQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function
@@ -220,7 +220,7 @@ Public Class DMembresias
         }
             Return ExecuteQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function
@@ -238,7 +238,7 @@ Public Class DMembresias
         }
             Return ExecuteQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function
@@ -278,7 +278,7 @@ Public Class DMembresias
         }
             Return ExecuteQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function

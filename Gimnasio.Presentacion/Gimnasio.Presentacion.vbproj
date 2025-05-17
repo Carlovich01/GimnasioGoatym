@@ -17,8 +17,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Gimnasio.Entidades\Gimnasio.Entidades.vbproj" />
+    <ProjectReference Include="..\Gimnasio.Errores\Gimnasio.Errores.vbproj" />
     <ProjectReference Include="..\Gimnasio.Negocio\Gimnasio.Negocio.vbproj" />
-    <ProjectReference Include="..\LogDeErrores\LogDeErrores.vbproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,10 +1,12 @@
 ﻿Imports Gimnasio.Negocio
-Imports LogDeErrores
+Imports Gimnasio.Errores
 
 ''' <summary>
 ''' Formulario para el registro de asistencias de miembros mediante el ingreso de DNI.
 ''' Permite registrar el ingreso, mostrar el estado de las membresías y los días restantes.
 ''' Utiliza la clase <see cref="NAsistencia"/> para la lógica de negocio de asistencias y <see cref="NMembresias"/> para la consulta de membresías.
+''' El manejo de errores se realiza a través de <see cref="Gimnasio.Errores.ManejarErrores.Mostrar(String, Exception)"/>
+''' que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario. 
 ''' </summary>
 Public Class FrmAsistencias
     ''' <summary>
@@ -13,25 +15,44 @@ Public Class FrmAsistencias
     Private nAsistencias As New NAsistencia()
 
     ''' <summary>
-    ''' Evento que se ejecuta al cargar el formulario.
-    ''' Inicializa la visibilidad del <see cref="DataGridView"/> de resultados.
+    ''' Referencia al formulario <see cref="FrmRegistroAsistencias"/> desde el formulario de asistencias.
+    ''' </summary>
+    Private frmRegistro As FrmRegistroAsistencias
+
+    ''' <summary>
+    ''' Constructor del formulario <see cref="FrmAsistencias"/>.
+    ''' - Inicializa los componentes visuales del formulario llamando a <see cref="InitializeComponent"/>.
+    ''' - Recibe una instancia de <see cref="FrmRegistroAsistencias"/> como parámetro y la asigna al campo privado <see cref="frmRegistro"/>.
+    ''' </summary>
+    ''' <param name="frmRegistro">Instancia de <see cref="FrmRegistroAsistencias"/> que permite la interacción entre formularios.</param>
+    Public Sub New(frmRegistro As FrmRegistroAsistencias)
+        InitializeComponent()
+        Me.frmRegistro = frmRegistro
+    End Sub
+
+    ''' <summary>
+    ''' Evento que se ejecuta al cargar el formulario. Oculta el DataGriedView.
     ''' </summary>
     Private Sub frmAsistencias_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             dgvListado.Visible = False
         Catch ex As Exception
-            Logger.LogError("Capa Presentacion ", ex)
-            MsgBox("Error al cargar el formulario: " & ex.Message, MsgBoxStyle.Critical, "Error")
+            ManejarErrores.Mostrar("Error al cargar el formulario", ex)
         End Try
     End Sub
 
     ''' <summary>
     ''' Evento que se ejecuta al presionar una tecla en el campo de texto del DNI.
-    ''' Si se presiona Enter, intenta registrar la asistencia mediante <see cref="NAsistencia.RegistrarIngresoPorDNI"/>.
-    ''' Muestra el estado de las membresías y los días restantes utilizando <see cref="NMembresias.ObtenerPorDni"/>.
+    ''' - Si la tecla presionada es Enter, intenta registrar la asistencia del miembro mediante <see cref="NAsistencia.RegistrarIngresoPorDNI"/>.
+    ''' - Si el resultado es "Exitoso" o "Fallido_Membresia_Inactiva":
+    '''     - Llama a <see cref="FrmRegistroAsistencias.ActualizarDgv"/> para actualizar el listado general de asistencias.
+    '''     - Muestra el DataGridView con el estado de las membresías del miembro, calculando y mostrando los días restantes de cada plan.
+    '''     - Muestra un mensaje de bienvenida o advertencia según el resultado.
+    ''' - Si el resultado es "Fallido_DNI_NoEncontrado", informa que el DNI no fue encontrado y solicita reingreso.
+    ''' - Si el resultado es "Fallido_No_Hay_Membresia", informa que no posee membresías activas y sugiere inscribirse a un plan.
+    ''' - En cualquier otro caso, lanza una excepción indicando un error desconocido.
+    ''' - Limpia el campo de texto del DNI tras cada intento.
     ''' </summary>
-    ''' <param name="sender">Objeto que genera el evento.</param>
-    ''' <param name="e">Argumentos de la tecla presionada.</param>
     Private Sub tbDNI_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbDNI.KeyPress
         Try
             dgvListado.Visible = False
@@ -40,18 +61,14 @@ Public Class FrmAsistencias
                 Dim resultado As String = nAsistencias.RegistrarIngresoPorDNI(dni)
                 Select Case resultado
                     Case "Exitoso", "Fallido_Membresia_Inactiva"
+                        frmRegistro.ActualizarDgv()
                         dgvListado.Visible = True
-
                         Dim nMembresias As New NMembresias()
                         Dim membresias As DataTable = nMembresias.ObtenerPorDni(dni)
-
                         Dim nombreMiembro As String = membresias.Rows(0)("nombre_miembro").ToString()
-
                         labelResultado.Text = If(resultado = "Exitoso",
                                              $"¡Ingreso Exitoso. Bienvenido {nombreMiembro}! El estado de sus planes actualmente es:",
                                              $"Ingreso Erróneo. Posee membresía/s vencidas: {nombreMiembro}. El estado de sus planes actualmente es:")
-
-                        ' Calcula los días restantes para cada membresía
                         If Not membresias.Columns.Contains("dias_restantes") Then
                             membresias.Columns.Add("dias_restantes", GetType(UInteger))
                         End If
@@ -60,9 +77,7 @@ Public Class FrmAsistencias
                             Dim diasRestantes As Integer = (fechaFin - DateTime.Now).Days
                             row("dias_restantes") = If(diasRestantes > 0, diasRestantes, 0)
                         Next
-
                         dgvListado.DataSource = membresias
-
                         dgvListado.DefaultCellStyle.ForeColor = Color.Black
                         dgvListado.DefaultCellStyle.BackColor = Color.White
                         dgvListado.Columns(0).Visible = False
@@ -80,7 +95,6 @@ Public Class FrmAsistencias
                         dgvListado.Columns(12).Visible = False
                         dgvListado.Columns(13).Visible = False
                         dgvListado.Columns(14).HeaderText = "DIAS RESTANTES"
-
                         tbDNI.Text = ""
 
                     Case "Fallido_DNI_NoEncontrado"
@@ -90,12 +104,11 @@ Public Class FrmAsistencias
                         labelResultado.Text = "No posee membresías. Inscríbase a algún plan."
                         tbDNI.Text = ""
                     Case Else
-                        MessageBox.Show("Error desconocido. Intente nuevamente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        Throw New Exception("Error desconocido al registrar asistencia.")
                 End Select
             End If
         Catch ex As Exception
-            Logger.LogError("Capa Presentacion ", ex)
-            MsgBox("Error al registrar asistencia:" & ex.Message, MsgBoxStyle.Critical, "Error")
+            ManejarErrores.Mostrar("Error al registrar asistencia", ex)
         End Try
     End Sub
 End Class

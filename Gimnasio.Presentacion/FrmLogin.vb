@@ -1,6 +1,6 @@
 ﻿Imports Gimnasio.Entidades
 Imports Gimnasio.Negocio
-Imports LogDeErrores
+Imports Gimnasio.Errores
 
 ''' <summary>
 ''' Formulario de inicio de sesión para el sistema de gimnasio.
@@ -8,72 +8,69 @@ Imports LogDeErrores
 ''' </summary>
 Public Class FrmLogin
     ''' <summary>
-    ''' Evento que se ejecuta al cargar el formulario.
-    ''' Inicializa el formato de los controles y gestiona errores de carga.
+    ''' Evento que se ejecuta al cargar el formulario. Inicializa el formato de los controles
     ''' </summary>
-    ''' <param name="sender">Objeto que genera el evento.</param>
-    ''' <param name="e">Argumentos del evento.</param>
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             Formato()
         Catch ex As Exception
-            ' Registra el error utilizando Logger.LogError en un archivo de texto y muestra un mensaje al usuario.
-            Logger.LogError("Capa Presentacion ", ex)
-            MsgBox("Error al cargar el formulario de inicio de sesión: " & ex.Message, MsgBoxStyle.Critical, "Error")
+            ManejarErrores.Mostrar("Error al cargar el formulario de inicio de sesión", ex)
         End Try
     End Sub
 
     ''' <summary>
-    ''' Establece el formato inicial de los controles del formulario.
-    ''' Limpia los campos de usuario y contraseña y oculta la contraseña.
+    ''' Establece el formato inicial de los controles del formulario. Limpia los campos de usuario y contraseña y oculta la contraseña.
     ''' </summary>
     Public Sub Formato()
-        tbContraseña.UseSystemPasswordChar = True
-        tbUsuario.Text = "admin"
-        tbContraseña.Text = "1234"
+        Try
+            tbUsuario.Text = "admin"
+            tbContraseña.Text = "1234"
+            tbContraseña.UseSystemPasswordChar = True
+        Catch ex As Exception
+            ManejarErrores.Mostrar("Error al establecer el formato del formulario de inicio de sesión", ex)
+        End Try
     End Sub
 
     ''' <summary>
-    ''' Evento que se ejecuta al hacer clic en el botón de iniciar sesión.
-    ''' Valida las credenciales del usuario utilizando <see cref="NUsuarios.ValidarCredenciales"/>.
-    ''' Si las credenciales son correctas, muestra el formulario principal <see cref="FrmPrincipal"/>.
+    ''' Evento que se ejecuta al hacer clic en el botón "Iniciar Sesión" en el formulario de login.
+    ''' - Obtiene el nombre de usuario y la contraseña ingresados en los campos.
+    ''' - Valida que ambos campos no estén vacíos; si alguno está vacío, lanza una excepción y muestra un mensaje de error.
+    ''' - Instancia la capa de negocio <see cref="NUsuarios"/> y llama a <see cref="NUsuarios.ValidarCredenciales"/> para verificar las credenciales.
+    '''     - Si las credenciales son correctas (el método devuelve un objeto <see cref="Usuarios"/> distinto de Nothing):
+    '''         - Oculta el formulario de login.
+    '''         - Crea y muestra el formulario principal <see cref="FrmPrincipal"/>, pasando el usuario autenticado como parámetro.
+    '''     - Si las credenciales son incorrectas, lanza una excepción y muestra un mensaje de error.
     ''' </summary>
-    ''' <param name="sender">Objeto que genera el evento.</param>
-    ''' <param name="e">Argumentos del evento.</param>
     Private Sub btIniciarSesion_Click(sender As Object, e As EventArgs) Handles btIniciarSesion.Click
         Try
             Dim username As String = tbUsuario.Text
             Dim password As String = tbContraseña.Text
 
             If String.IsNullOrWhiteSpace(username) OrElse String.IsNullOrWhiteSpace(password) Then
-                MsgBox("Por favor, ingrese su usuario y contraseña.", MsgBoxStyle.Exclamation, "Aviso")
-                Return
+                Throw New Exception("Usuario o contraseña vacíos")
             End If
 
-            ' Instancia la capa de negocio NUsuarios y valida las credenciales.
             Dim nUsuarios As New NUsuarios()
             Dim usuarioActual As Usuarios
             usuarioActual = nUsuarios.ValidarCredenciales(username, password)
             If usuarioActual IsNot Nothing Then
-                ' Si las credenciales son válidas, oculta el formulario de login y muestra FrmPrincipal
                 Me.Hide()
                 Dim frmPrincipal As New FrmPrincipal(usuarioActual)
                 frmPrincipal.Show()
             Else
-                MsgBox("Usuario o contraseña incorrectos", MsgBoxStyle.Critical, "Error")
+                Throw New Exception("Usuario o contraseña incorrectos")
             End If
         Catch ex As Exception
-            Logger.LogError("Capa Presentacion ", ex)
-            MsgBox("Error al iniciar sesión: " & ex.Message, MsgBoxStyle.Critical, "Error")
+            ManejarErrores.Mostrar("Error al iniciar sesión", ex)
         End Try
     End Sub
 
     ''' <summary>
-    ''' Evento que se ejecuta al hacer clic en el icono para mostrar/ocultar la contraseña.
-    ''' Alterna la visibilidad del texto de la contraseña y cambia el icono correspondiente.
+    ''' Evento que se ejecuta al hacer clic en el icono para mostrar u ocultar la contraseña en el formulario de login.
+    ''' - Verifica el estado actual del campo de contraseña:
+    '''     - Si la contraseña está oculta, la muestra y cambia el icono a "ojo abierto".
+    '''     - Si la contraseña está visible, la oculta y cambia el icono a "ojo cerrado".
     ''' </summary>
-    ''' <param name="sender">Objeto que genera el evento.</param>
-    ''' <param name="e">Argumentos del evento.</param>
     Private Sub pbMostrarContraseña_Click(sender As Object, e As EventArgs) Handles pbMostrarContraseña.Click
         Try
             If tbContraseña.UseSystemPasswordChar Then
@@ -84,8 +81,7 @@ Public Class FrmLogin
                 pbMostrarContraseña.Image = My.Resources.ojo_cerrado
             End If
         Catch ex As Exception
-            Logger.LogError("Capa Presentacion ", ex)
-            MsgBox("Error al mostrar contraseña:" & ex.Message, MsgBoxStyle.Critical, "Error")
+            ManejarErrores.Mostrar("Error al mostrar/ocultar la contraseña", ex)
         End Try
     End Sub
 End Class

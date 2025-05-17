@@ -25,6 +25,7 @@ Partial Class FrmMiembros
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         panelListado = New Panel()
+        pbReiniciar = New PictureBox()
         btnEliminar = New Button()
         cbOpcionBuscar = New ComboBox()
         lblTotal = New Label()
@@ -33,6 +34,7 @@ Partial Class FrmMiembros
         tbBuscar = New TextBox()
         btnInsertar = New Button()
         panelDatosIngreso = New Panel()
+        tbID = New TextBox()
         lblDatosIngreso = New Label()
         tbTelefono = New TextBox()
         tbEmail = New TextBox()
@@ -49,12 +51,14 @@ Partial Class FrmMiembros
         Label6 = New Label()
         Label1 = New Label()
         panelListado.SuspendLayout()
+        CType(pbReiniciar, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvListado, ComponentModel.ISupportInitialize).BeginInit()
         panelDatosIngreso.SuspendLayout()
         SuspendLayout()
         ' 
         ' panelListado
         ' 
+        panelListado.Controls.Add(pbReiniciar)
         panelListado.Controls.Add(btnEliminar)
         panelListado.Controls.Add(cbOpcionBuscar)
         panelListado.Controls.Add(lblTotal)
@@ -68,9 +72,22 @@ Partial Class FrmMiembros
         panelListado.Size = New Size(1008, 729)
         panelListado.TabIndex = 0
         ' 
+        ' pbReiniciar
+        ' 
+        pbReiniciar.BackColor = Color.FromArgb(CByte(123), CByte(179), CByte(75))
+        pbReiniciar.Cursor = Cursors.Hand
+        pbReiniciar.Image = My.Resources.Resources.reiniciar
+        pbReiniciar.Location = New Point(962, 12)
+        pbReiniciar.Name = "pbReiniciar"
+        pbReiniciar.Size = New Size(34, 30)
+        pbReiniciar.SizeMode = PictureBoxSizeMode.Zoom
+        pbReiniciar.TabIndex = 33
+        pbReiniciar.TabStop = False
+        ' 
         ' btnEliminar
         ' 
         btnEliminar.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        btnEliminar.Cursor = Cursors.Hand
         btnEliminar.Font = New Font("Segoe UI", 12F)
         btnEliminar.Location = New Point(225, 687)
         btnEliminar.Name = "btnEliminar"
@@ -81,13 +98,14 @@ Partial Class FrmMiembros
         ' 
         ' cbOpcionBuscar
         ' 
+        cbOpcionBuscar.Cursor = Cursors.Hand
         cbOpcionBuscar.DropDownStyle = ComboBoxStyle.DropDownList
         cbOpcionBuscar.Font = New Font("Segoe UI", 12F)
         cbOpcionBuscar.FormattingEnabled = True
         cbOpcionBuscar.Items.AddRange(New Object() {"Buscar por nombre", "Buscar por DNI"})
-        cbOpcionBuscar.Location = New Point(811, 13)
+        cbOpcionBuscar.Location = New Point(723, 13)
         cbOpcionBuscar.Name = "cbOpcionBuscar"
-        cbOpcionBuscar.Size = New Size(186, 29)
+        cbOpcionBuscar.Size = New Size(222, 29)
         cbOpcionBuscar.TabIndex = 30
         ' 
         ' lblTotal
@@ -106,6 +124,7 @@ Partial Class FrmMiembros
         ' btnActualizar
         ' 
         btnActualizar.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        btnActualizar.Cursor = Cursors.Hand
         btnActualizar.Font = New Font("Segoe UI", 12F)
         btnActualizar.Location = New Point(118, 687)
         btnActualizar.Name = "btnActualizar"
@@ -153,12 +172,13 @@ Partial Class FrmMiembros
         tbBuscar.Font = New Font("Segoe UI", 12F)
         tbBuscar.Location = New Point(11, 13)
         tbBuscar.Name = "tbBuscar"
-        tbBuscar.Size = New Size(785, 29)
+        tbBuscar.Size = New Size(687, 29)
         tbBuscar.TabIndex = 26
         ' 
         ' btnInsertar
         ' 
         btnInsertar.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        btnInsertar.Cursor = Cursors.Hand
         btnInsertar.Font = New Font("Segoe UI", 12F)
         btnInsertar.Location = New Point(11, 686)
         btnInsertar.Name = "btnInsertar"
@@ -169,6 +189,7 @@ Partial Class FrmMiembros
         ' 
         ' panelDatosIngreso
         ' 
+        panelDatosIngreso.Controls.Add(tbID)
         panelDatosIngreso.Controls.Add(lblDatosIngreso)
         panelDatosIngreso.Controls.Add(tbTelefono)
         panelDatosIngreso.Controls.Add(tbEmail)
@@ -189,6 +210,15 @@ Partial Class FrmMiembros
         panelDatosIngreso.Size = New Size(635, 546)
         panelDatosIngreso.TabIndex = 32
         panelDatosIngreso.Visible = False
+        ' 
+        ' tbID
+        ' 
+        tbID.AccessibleRole = AccessibleRole.SplitButton
+        tbID.Location = New Point(475, 19)
+        tbID.Name = "tbID"
+        tbID.Size = New Size(100, 23)
+        tbID.TabIndex = 55
+        tbID.Visible = False
         ' 
         ' lblDatosIngreso
         ' 
@@ -220,6 +250,7 @@ Partial Class FrmMiembros
         ' 
         ' cbGenero
         ' 
+        cbGenero.Cursor = Cursors.Hand
         cbGenero.DropDownStyle = ComboBoxStyle.DropDownList
         cbGenero.Font = New Font("Segoe UI", 12F)
         cbGenero.FormattingEnabled = True
@@ -365,6 +396,7 @@ Partial Class FrmMiembros
         Text = "FrmMiembros"
         panelListado.ResumeLayout(False)
         panelListado.PerformLayout()
+        CType(pbReiniciar, ComponentModel.ISupportInitialize).EndInit()
         CType(dgvListado, ComponentModel.ISupportInitialize).EndInit()
         panelDatosIngreso.ResumeLayout(False)
         panelDatosIngreso.PerformLayout()
@@ -395,4 +427,6 @@ Partial Class FrmMiembros
     Friend WithEvents Label6 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents lblDatosIngreso As Label
+    Friend WithEvents pbReiniciar As PictureBox
+    Friend WithEvents tbID As TextBox
 End Class

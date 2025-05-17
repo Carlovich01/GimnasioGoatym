@@ -1,6 +1,6 @@
 ﻿Imports System.Data
 Imports Gimnasio.Entidades
-Imports LogDeErrores
+Imports Gimnasio.Errores
 
 ''' <summary>
 ''' Clase de acceso a datos para la gestión de pagos en el sistema de gimnasio.
@@ -19,7 +19,7 @@ Public Class DPagos
             Dim query As String = "SELECT * FROM vista_pagos"
             Return ExecuteQuery(query, Nothing)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function
@@ -42,7 +42,28 @@ Public Class DPagos
         }
             ExecuteNonQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
+            Throw
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' Actualiza un pago existente en la base de datos.
+    ''' </summary>
+    ''' <param name="pago">Instancia de <see cref="Pagos"/> con los datos actualizados.</param>
+    Public Sub Actualizar(pago As Pagos)
+        Try
+            Dim query As String = "UPDATE pagos SET monto_pagado = @mont, metodo_pago = @met, numero_comprobante = @num, notas = @notas WHERE id_pago = @id"
+            Dim parameters As New Dictionary(Of String, Object) From {
+            {"@mont", pago.MontoPagado},
+            {"@met", pago.MetodoPago},
+            {"@num", If(pago.NumeroComprobante = Nothing, DBNull.Value, pago.NumeroComprobante)},
+            {"@notas", If(pago.Notas = Nothing, DBNull.Value, pago.Notas)},
+            {"@id", pago.IdPago}
+        }
+            ExecuteNonQuery(query, parameters)
+        Catch ex As Exception
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Sub
@@ -59,7 +80,7 @@ Public Class DPagos
         }
             ExecuteNonQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Sub
@@ -79,7 +100,7 @@ Public Class DPagos
         }
             Return ExecuteQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function
@@ -97,7 +118,7 @@ Public Class DPagos
         }
             Return ExecuteQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function
@@ -115,7 +136,7 @@ Public Class DPagos
         }
             Return ExecuteQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function
@@ -133,7 +154,7 @@ Public Class DPagos
         }
             Return ExecuteQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function
@@ -156,7 +177,7 @@ Public Class DPagos
         }
             Return ExecuteQuery(query, parameters)
         Catch ex As Exception
-            Logger.LogError("Capa Datos", ex)
+            ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try
     End Function

@@ -9,7 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Gimnasio.Datos\Gimnasio.Datos.vbproj" />
     <ProjectReference Include="..\Gimnasio.Entidades\Gimnasio.Entidades.vbproj" />
-    <ProjectReference Include="..\LogDeErrores\LogDeErrores.vbproj" />
+    <ProjectReference Include="..\Gimnasio.Errores\Gimnasio.Errores.vbproj" />
   </ItemGroup>
 
 </Project>

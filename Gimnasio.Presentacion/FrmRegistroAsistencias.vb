@@ -1,11 +1,10 @@
 ﻿Imports Gimnasio.Negocio
 Imports Gimnasio.Entidades
-Imports LogDeErrores
+Imports Gimnasio.Errores
 
 ''' <summary>
 ''' Formulario para la gestión y consulta de asistencias de los miembros en el sistema del gimnasio.
-''' Permite listar, buscar por DNI o fecha, y eliminar registros de asistencia.
-''' Utiliza la clase <see cref="NAsistencia"/> para la lógica de negocio.
+''' Permite listar, buscar por DNI o fecha, y eliminar registros de asistencia. Utiliza la clase <see cref="NAsistencia"/> para la lógica de negocio.
 ''' </summary>
 Public Class FrmRegistroAsistencias
     ''' <summary>
@@ -14,8 +13,7 @@ Public Class FrmRegistroAsistencias
     Private nAsistencias As New NAsistencia()
 
     ''' <summary>
-    ''' Constructor del formulario de asistencias.
-    ''' Configura la interfaz según el rol del usuario.
+    ''' Constructor del formulario de asistencias. Si el usuario es recepcionista, oculta el boton de eliminar.
     ''' </summary>
     ''' <param name="usuario">Instancia de <see cref="Usuarios"/> que representa al usuario logueado.</param>
     Sub New(usuario As Usuarios)
@@ -27,13 +25,16 @@ Public Class FrmRegistroAsistencias
     End Sub
 
     ''' <summary>
-    ''' Evento que se ejecuta al cargar el formulario.
-    ''' Inicializa el listado de asistencias y configura las columnas del <see cref="DataGridView"/>.
+    ''' Evento que se ejecuta al cargar el formulario de registro de asistencias.
+    ''' - Inicializa el listado de asistencias en el DataGridView llamando a <see cref="ActualizarDgv"/>.
+    ''' - Configura la visibilidad y los encabezados de las columnas del DataGridView 
+    '''   para mostrar solo la información relevante y con títulos descriptivos.
+    ''' - Establece la opción predeterminada del ComboBox de búsqueda en la segunda opción (índice 1).
+    ''' - Configura los controles DateTimePicker para fecha de inicio y fin con un formato personalizado vacío
     ''' </summary>
     Private Sub frmRegistroAsistencias_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            ActualizarDataGridView()
-            dgvListado.Sort(dgvListado.Columns("fecha_ingreso"), System.ComponentModel.ListSortDirection.Descending)
+            ActualizarDgv()
             dgvListado.Columns(0).Visible = False
             dgvListado.Columns(1).Visible = False
             dgvListado.Columns(2).Visible = False
@@ -46,34 +47,70 @@ Public Class FrmRegistroAsistencias
             dgvListado.Columns(6).HeaderText = "FECHA INGRESO"
             dgvListado.Columns(7).HeaderText = "RESULTADO"
             cbOpcionBuscar.SelectedIndex = 1
-
+            dtpFechaInicio.Format = DateTimePickerFormat.Custom
+            dtpFechaInicio.CustomFormat = " "
+            dtpFechaFin.Format = DateTimePickerFormat.Custom
+            dtpFechaFin.CustomFormat = " "
         Catch ex As Exception
-            Logger.LogError("Capa Presentacion ", ex)
-            MsgBox("Error al cargar la pestaña de membresias: " & ex.Message, MsgBoxStyle.Critical, "Error")
+            ManejarErrores.Mostrar("Error al cargar el formulario de asistencias", ex)
         End Try
     End Sub
 
     ''' <summary>
-    ''' Actualiza el <see cref="DataGridView"/> con la lista de asistencias obtenida desde <see cref="NAsistencia.Listar"/>.
+    ''' Actualiza el DataGridView con la lista de asistencias obtenida desde la capa de negocio mediante <see cref="NAsistencia.Listar"/>.
+    ''' - Obtiene todos los registros de asistencias y los asigna como origen de datos del DataGridView.
+    ''' - Actualiza la etiqueta lblTotal mostrando la cantidad total de asistencias listadas.
     ''' </summary>
-    Public Sub ActualizarDataGridView()
+    Public Sub ActualizarDgv()
         Try
             Dim dvAsistencias As DataTable = nAsistencias.Listar()
             dgvListado.DataSource = dvAsistencias
             lblTotal.Text = "Total Asistencias: " & dgvListado.Rows.Count.ToString()
         Catch ex As Exception
-            Logger.LogError("Capa Presentacion ", ex)
-            MsgBox("Error al cargar las asistencias: " & ex.Message, MsgBoxStyle.Critical, "Error")
+            ManejarErrores.Mostrar("Error al cargar las asistencias", ex)
         End Try
     End Sub
 
     ''' <summary>
-    ''' Evento que se ejecuta al cambiar la opción de búsqueda.
-    ''' Permite buscar asistencias por DNI o por rango de fechas utilizando los métodos de <see cref="NAsistencia"/>.
+    ''' Actualiza el DataGridView con una lista específica de asistencias proporcionada como parámetro.
+    ''' - Asigna el DataTable recibido como origen de datos del DataGridView.
+    ''' - Actualiza la etiqueta lblTotal mostrando la cantidad total de asistencias listadas en el DataGridView.
     ''' </summary>
-    Private Sub cbOpcionBuscar_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbOpcionBuscar.SelectedIndexChanged
+    Public Sub ActualizarDgv(Listado As DataTable)
         Try
-            ActualizarDataGridView()
+            dgvListado.DataSource = Listado
+            lblTotal.Text = "Total Asistencias: " & dgvListado.Rows.Count.ToString()
+        Catch ex As Exception
+            ManejarErrores.Mostrar("Error al cargar las asistencias", ex)
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Insertar" en el formulario de registro de asistencias.
+    ''' - Crea una nueva instancia del formulario <see cref="FrmAsistencias"/>, 
+    ''' pasando como parámetro la instancia actual de <see cref="FrmRegistroAsistencias"/> para permitir la comunicación entre formularios.
+    ''' - Muestra el formulario de registro de asistencias para permitir el ingreso de una nueva asistencia mediante el DNI del miembro.
+    ''' </summary>
+    Private Sub btnInsertar_Click(sender As Object, e As EventArgs) Handles btnInsertar.Click
+        Try
+            Dim frm As New FrmAsistencias(Me)
+            frm.Show()
+        Catch ex As Exception
+            ManejarErrores.Mostrar("Error al abrir el formulario de registro de asistencias", ex)
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' Evento que se ejecuta al cambiar la opción seleccionada en el ComboBox de búsqueda de asistencias.
+    ''' - Actualiza el DataGridView mostrando todas las asistencias mediante <see cref="ActualizarDgv"/>.
+    ''' - Utiliza una estructura Select Case para determinar el tipo de búsqueda:
+    '''   - Opción 0: habilita el campo de texto para buscar por DNI y oculta el panel de búsqueda por fecha.
+    '''   - Opción 1: oculta y deshabilita el campo de texto de búsqueda y muestra el panel para búsqueda por rango de fechas.
+    ''' - Permite alternar entre búsqueda por DNI o por fechas según la selección del usuario.
+    ''' </summary>
+    Private Sub cb_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbOpcionBuscar.SelectedIndexChanged
+        Try
+            ActualizarDgv()
             Select Case cbOpcionBuscar.SelectedIndex
                 Case 0
                     tbBuscar.Visible = True
@@ -83,66 +120,77 @@ Public Class FrmRegistroAsistencias
                     tbBuscar.Visible = False
                     tbBuscar.Enabled = False
                     PanelFecha.Visible = True
-
             End Select
         Catch ex As Exception
-            Logger.LogError("Capa Presentacion ", ex)
-            MsgBox("Error al buscar asistencias: " & ex.Message, MsgBoxStyle.Critical, "Error")
+            ManejarErrores.Mostrar("Error al cambiar la opción de búsqueda", ex)
         End Try
     End Sub
 
     ''' <summary>
-    ''' Evento que se ejecuta al cambiar el texto en el campo de búsqueda.
-    ''' Permite buscar asistencias por DNI utilizando <see cref="NAsistencia.ListarPorDNI"/>.
+    ''' Evento que se ejecuta al cambiar el texto en el campo de búsqueda de asistencias.
+    ''' - Si la opción seleccionada en el ComboBox es la de búsqueda por DNI (índice 0), filtra las asistencias 
+    ''' utilizando <see cref="NAsistencia.ListarPorDNI"/> con el texto ingresado.
+    ''' - Actualiza el DataGridView con los resultados de la búsqueda llamando a <see cref="ActualizarDgv"/>.
     ''' </summary>
     Private Sub tbBuscar_TextChanged(sender As Object, e As EventArgs) Handles tbBuscar.TextChanged
         Try
             If cbOpcionBuscar.SelectedIndex = 0 Then
-                Dim dvAsistencias As DataTable = nAsistencias.ListarPorDNI(tbBuscar.Text)
-                dgvListado.DataSource = dvAsistencias
-                lblTotal.Text = "Total Asistencias: " & dgvListado.Rows.Count.ToString()
-                If dgvListado.Rows.Count = 0 And Not String.IsNullOrEmpty(tbBuscar.Text) Then
-                    MsgBox("No se encontró ningún miembro con ese criterio.", MsgBoxStyle.Information, "Sin resultados")
-                    tbBuscar.Clear()
-                    ActualizarDataGridView()
-                End If
+                ActualizarDgv(nAsistencias.ListarPorDNI(tbBuscar.Text))
             End If
         Catch ex As Exception
-            Logger.LogError("Capa Presentacion ", ex)
-            MsgBox("Error al buscar asistencias: " & ex.Message, MsgBoxStyle.Critical, "Error")
+            ManejarErrores.Mostrar("Error al buscar asistencias", ex)
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' Evento que se ejecuta al cambiar el valor del DateTimePicker para la fecha de inicio. Cambia el formato a corto para mostrar solo la fecha.
+    ''' </summary>
+    Private Sub dtpFechaInicio_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaInicio.ValueChanged
+        Try
+            dtpFechaInicio.Format = DateTimePickerFormat.Short
+        Catch ex As Exception
+            ManejarErrores.Mostrar("Error al cambiar la fecha de inicio", ex)
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' Evento que se ejecuta al cambiar el valor del DateTimePicker para la fecha de fin. Cambia el formato a corto para mostrar solo la fecha.
+    ''' </summary>
+    Private Sub dtpFechaFin_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaFin.ValueChanged
+        Try
+            dtpFechaFin.Format = DateTimePickerFormat.Short
+        Catch ex As Exception
+            ManejarErrores.Mostrar("Error al cambiar la fecha de fin", ex)
         End Try
     End Sub
 
     ''' <summary>
     ''' Evento que se ejecuta al hacer clic en el botón para buscar asistencias por fecha.
-    ''' Filtra las asistencias utilizando <see cref="NAsistencia.ListarPorFecha"/>.
+    ''' - Obtiene las fechas seleccionadas en los controles DateTimePicker para inicio y fin.
+    ''' - Valida que la fecha de inicio no sea mayor que la fecha de fin; si lo es, lanza una excepción.
+    ''' - Llama a <see cref="NAsistencia.ListarPorFecha"/> para obtener las asistencias dentro del rango de fechas especificado.
+    ''' - Actualiza el DataGridView con los resultados llamando a <see cref="ActualizarDgv()"/>.
     ''' </summary>
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
         Try
             Dim fechaInicio = dtpFechaInicio.Value.Date
             Dim fechaFin = dtpFechaFin.Value.Date.AddDays(1).AddTicks(-1)
             If fechaInicio > fechaFin Then
-                MsgBox("La fecha de inicio no puede ser mayor que la fecha de fin.", MsgBoxStyle.Exclamation, "Error")
-                Return
+                Throw New Exception("La fecha de inicio no puede ser mayor que la fecha de fin.")
             End If
-            Dim dvAsistencias = nAsistencias.ListarPorFecha(fechaInicio, fechaFin)
-            dgvListado.DataSource = dvAsistencias
-            lblTotal.Text = "Total Asistencias: " & dgvListado.Rows.Count.ToString
-            If dgvListado.Rows.Count = 0 Then
-                MsgBox("No se encontraron ingresos en el rango de fechas seleccionado.", MsgBoxStyle.Information, "Sin resultados")
-                ActualizarDataGridView()
-                dtpFechaInicio.Value = DateTime.Now
-                dtpFechaFin.Value = DateTime.Now
-            End If
+            ActualizarDgv(nAsistencias.ListarPorFecha(fechaInicio, fechaFin))
         Catch ex As Exception
-            Logger.LogError("Capa Presentacion ", ex)
-            MsgBox("Error al buscar asistencias por fecha: " & ex.Message, MsgBoxStyle.Critical, "Error")
+            ManejarErrores.Mostrar("Error al buscar asistencias por fecha", ex)
         End Try
     End Sub
 
     ''' <summary>
     ''' Evento que se ejecuta al hacer clic en el botón "Eliminar".
-    ''' Elimina la asistencia seleccionada utilizando <see cref="NAsistencia.Eliminar"/>.
+    ''' - Verifica si hay una fila seleccionada en el DataGridView de asistencias.
+    ''' - Si hay selección, obtiene el ID de la asistencia seleccionada y solicita confirmación al usuario mediante un cuadro de diálogo.
+    ''' - Si el usuario confirma, utiliza <see cref="NAsistencia.Eliminar"/> para eliminar el registro de asistencia de la base de datos.
+    ''' - Actualiza el listado de asistencias en el DataGridView mediante <see cref="ActualizarDgv"/> y muestra un mensaje de éxito.
+    ''' - Si no hay selección, lanza una excepción indicando que no se ha seleccionado ninguna asistencia para eliminar.
     ''' </summary>
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Try
@@ -152,15 +200,41 @@ Public Class FrmRegistroAsistencias
                 Dim confirmacion As DialogResult = MessageBox.Show("¿Está seguro de que desea eliminar este asistencia", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 If confirmacion = DialogResult.Yes Then
                     nAsistencias.Eliminar(idMiembro)
-                    ActualizarDataGridView()
+                    ActualizarDgv()
                     MsgBox("asistencia eliminado exitosamente.", MsgBoxStyle.Information, "Exito")
                 End If
             Else
-                MsgBox("Seleccione un asistencia para eliminar.", MsgBoxStyle.Exclamation, "Aviso")
+                Throw New Exception("No se ha seleccionado ninguna asistencia para eliminar.")
             End If
         Catch ex As Exception
-            Logger.LogError("Capa Presentacion ", ex)
-            MsgBox("Error al eliminar el asistencia: " & ex.Message, MsgBoxStyle.Critical, "Error")
+            ManejarErrores.Mostrar("Error al eliminar la asistencia", ex)
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Reiniciar".
+    ''' - Si la opción seleccionada en el ComboBox es búsqueda por DNI (índice 0), 
+    ''' limpia el campo de búsqueda y actualiza el DataGridView mostrando todas las asistencias.
+    ''' - Si la opción seleccionada es búsqueda por fecha (índice 1), restablece los DateTimePicker de fecha de inicio y fin a la fecha actual, 
+    ''' limpia sus formatos y actualiza el DataGridView mostrando todas las asistencias.
+    ''' </summary>
+    Private Sub pbReiniciar_Click(sender As Object, e As EventArgs) Handles pbReiniciar.Click
+        Try
+            Select Case cbOpcionBuscar.SelectedIndex
+                Case 0
+                    tbBuscar.Clear()
+                    ActualizarDgv()
+                Case 1
+                    dtpFechaInicio.Value = Date.Now
+                    dtpFechaFin.Value = Date.Now
+                    dtpFechaInicio.Format = DateTimePickerFormat.Custom
+                    dtpFechaInicio.CustomFormat = " "
+                    dtpFechaFin.Format = DateTimePickerFormat.Custom
+                    dtpFechaFin.CustomFormat = " "
+                    ActualizarDgv()
+            End Select
+        Catch ex As Exception
+            ManejarErrores.Mostrar("Error al reiniciar el listado. ", ex)
         End Try
     End Sub
 End Class

@@ -11,7 +11,7 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Gimnasio.Datos", "Gimnasio.
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Gimnasio.Entidades", "Gimnasio.Entidades\Gimnasio.Entidades.vbproj", "{0C589EAC-57CE-4EAF-AFA9-BC9442204261}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "LogDeErrores", "LogDeErrores\LogDeErrores.vbproj", "{62EC1AA5-1B61-45CB-97BC-264D3E637CF2}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Gimnasio.Errores", "Gimnasio.Errores\Gimnasio.Errores.vbproj", "{27BA623A-E9E8-4020-B569-9FF5D3FA189D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{0C589EAC-57CE-4EAF-AFA9-BC9442204261}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C589EAC-57CE-4EAF-AFA9-BC9442204261}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C589EAC-57CE-4EAF-AFA9-BC9442204261}.Release|Any CPU.Build.0 = Release|Any CPU
-		{62EC1AA5-1B61-45CB-97BC-264D3E637CF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{62EC1AA5-1B61-45CB-97BC-264D3E637CF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{62EC1AA5-1B61-45CB-97BC-264D3E637CF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{62EC1AA5-1B61-45CB-97BC-264D3E637CF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27BA623A-E9E8-4020-B569-9FF5D3FA189D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27BA623A-E9E8-4020-B569-9FF5D3FA189D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27BA623A-E9E8-4020-B569-9FF5D3FA189D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27BA623A-E9E8-4020-B569-9FF5D3FA189D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

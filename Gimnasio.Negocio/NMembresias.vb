@@ -1,7 +1,7 @@
 ﻿Imports Gimnasio.Entidades
 Imports Gimnasio.Datos
 Imports System.Data
-Imports LogDeErrores
+Imports Gimnasio.Errores
 
 ''' <summary>
 ''' Lógica de negocio para la gestión de membresías en el sistema de gimnasio.
@@ -24,7 +24,7 @@ Public Class NMembresias
             ActualizaAEstadoInactiva()
             Return dMembresias.Listar()
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -38,13 +38,13 @@ Public Class NMembresias
     Public Sub Insertar(membresia As Membresias)
         Try
             If dMembresias.VerificarExistenciaDeMiembroYPlan(membresia) Then
-                Throw New Exception("El usuario ya tiene una membresía activa o pendiente de pago para este plan.")
+                Throw New Exception("El usuario ya tiene una membresía  para este plan.")
             End If
             membresia.FechaInicio = DateTime.Now
             membresia.FechaFin = DateTime.Now
             dMembresias.Insertar(membresia)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Sub
@@ -56,9 +56,12 @@ Public Class NMembresias
     ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Sub Actualizar(membresia As Membresias)
         Try
+            If dMembresias.VerificarExistenciaDeMiembroYPlan(membresia) Then
+                Throw New Exception("El usuario ya tiene una membresía para este plan.")
+            End If
             dMembresias.Actualizar(membresia)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Sub
@@ -72,7 +75,7 @@ Public Class NMembresias
         Try
             dMembresias.Eliminar(id)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Sub
@@ -88,7 +91,7 @@ Public Class NMembresias
             Dim idMembresia As UInteger = dMembresias.ObtenerIdMembresia(membresia)
             Return idMembresia
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -103,7 +106,7 @@ Public Class NMembresias
         Try
             Return dMembresias.ObtenerPorDni(dni)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -119,7 +122,7 @@ Public Class NMembresias
             Dim dvMembresias As DataTable = dMembresias.ListarPorDni(dni)
             Return dvMembresias
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -135,7 +138,7 @@ Public Class NMembresias
             Dim dvMembresias As DataTable = dMembresias.ListarPorNombrePlan(nombre)
             Return dvMembresias
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -151,7 +154,7 @@ Public Class NMembresias
             Dim dvMembresias As DataTable = dMembresias.ListarPorEstado(estado)
             Return dvMembresias
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -164,7 +167,7 @@ Public Class NMembresias
         Try
             dMembresias.ActualizarAEstadoInactiva()
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Sub
@@ -179,7 +182,7 @@ Public Class NMembresias
         Try
             Return dMembresias.ObtenerMembresiaMasReciente(idMiembro)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function

@@ -1,7 +1,7 @@
 ﻿Imports System.Data
 Imports Gimnasio.Datos
 Imports Gimnasio.Entidades
-Imports LogDeErrores
+Imports Gimnasio.Errores
 
 ''' <summary>
 ''' Lógica de negocio para la gestión de planes en el sistema de gimnasio.
@@ -41,7 +41,7 @@ Public Class NPlanes
         Try
             Return dPlanes.Listar()
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -61,7 +61,7 @@ Public Class NPlanes
             ValidarCampos(Obj)
             dPlanes.Insertar(Obj)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Sub
@@ -76,7 +76,7 @@ Public Class NPlanes
             ValidarCampos(Obj)
             dPlanes.Actualizar(Obj)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Sub
@@ -90,7 +90,7 @@ Public Class NPlanes
         Try
             dPlanes.Eliminar(id)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Sub
@@ -108,7 +108,7 @@ Public Class NPlanes
             End If
             Return dPlanes.ListarPorNombre(nombre)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -126,7 +126,7 @@ Public Class NPlanes
             End If
             Return dPlanes.ListarPorDuracion(duracion)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function
@@ -144,7 +144,7 @@ Public Class NPlanes
             End If
             Return dPlanes.ListarPorPrecio(precio)
         Catch ex As Exception
-            Logger.LogError("Capa Negocio", ex)
+            ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
         End Try
     End Function

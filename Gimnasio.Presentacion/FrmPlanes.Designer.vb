@@ -25,6 +25,7 @@ Partial Class FrmPlanes
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         panelListado = New Panel()
+        pbReiniciar = New PictureBox()
         cbOpcionBuscar = New ComboBox()
         lblTotal = New Label()
         btnActualizar = New Button()
@@ -33,6 +34,7 @@ Partial Class FrmPlanes
         tbBuscar = New TextBox()
         btnInsertar = New Button()
         panelDatosIngreso = New Panel()
+        tbID = New TextBox()
         lblDatosIngreso = New Label()
         btnCancelar = New Button()
         btnGuardar = New Button()
@@ -45,12 +47,14 @@ Partial Class FrmPlanes
         tbNombre = New TextBox()
         lblNombre = New Label()
         panelListado.SuspendLayout()
+        CType(pbReiniciar, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvListado, ComponentModel.ISupportInitialize).BeginInit()
         panelDatosIngreso.SuspendLayout()
         SuspendLayout()
         ' 
         ' panelListado
         ' 
+        panelListado.Controls.Add(pbReiniciar)
         panelListado.Controls.Add(cbOpcionBuscar)
         panelListado.Controls.Add(lblTotal)
         panelListado.Controls.Add(btnActualizar)
@@ -64,13 +68,26 @@ Partial Class FrmPlanes
         panelListado.Size = New Size(1008, 729)
         panelListado.TabIndex = 0
         ' 
+        ' pbReiniciar
+        ' 
+        pbReiniciar.BackColor = Color.FromArgb(CByte(123), CByte(179), CByte(75))
+        pbReiniciar.Cursor = Cursors.Hand
+        pbReiniciar.Image = My.Resources.Resources.reiniciar
+        pbReiniciar.Location = New Point(962, 12)
+        pbReiniciar.Name = "pbReiniciar"
+        pbReiniciar.Size = New Size(34, 30)
+        pbReiniciar.SizeMode = PictureBoxSizeMode.Zoom
+        pbReiniciar.TabIndex = 32
+        pbReiniciar.TabStop = False
+        ' 
         ' cbOpcionBuscar
         ' 
+        cbOpcionBuscar.Cursor = Cursors.Hand
         cbOpcionBuscar.DropDownStyle = ComboBoxStyle.DropDownList
         cbOpcionBuscar.Font = New Font("Segoe UI", 12F)
         cbOpcionBuscar.FormattingEnabled = True
         cbOpcionBuscar.Items.AddRange(New Object() {"Buscar por nombre", "Buscar por duracion (Presione Enter)", "Buscar por precio (Presione Enter)"})
-        cbOpcionBuscar.Location = New Point(687, 13)
+        cbOpcionBuscar.Location = New Point(631, 13)
         cbOpcionBuscar.Name = "cbOpcionBuscar"
         cbOpcionBuscar.Size = New Size(310, 29)
         cbOpcionBuscar.TabIndex = 31
@@ -91,6 +108,7 @@ Partial Class FrmPlanes
         ' btnActualizar
         ' 
         btnActualizar.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        btnActualizar.Cursor = Cursors.Hand
         btnActualizar.Font = New Font("Segoe UI", 12F)
         btnActualizar.Location = New Point(118, 687)
         btnActualizar.Name = "btnActualizar"
@@ -102,6 +120,7 @@ Partial Class FrmPlanes
         ' btnEliminar
         ' 
         btnEliminar.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        btnEliminar.Cursor = Cursors.Hand
         btnEliminar.Font = New Font("Segoe UI", 12F)
         btnEliminar.Location = New Point(227, 687)
         btnEliminar.Name = "btnEliminar"
@@ -149,12 +168,13 @@ Partial Class FrmPlanes
         tbBuscar.Font = New Font("Segoe UI", 12F)
         tbBuscar.Location = New Point(11, 13)
         tbBuscar.Name = "tbBuscar"
-        tbBuscar.Size = New Size(653, 29)
+        tbBuscar.Size = New Size(598, 29)
         tbBuscar.TabIndex = 26
         ' 
         ' btnInsertar
         ' 
         btnInsertar.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        btnInsertar.Cursor = Cursors.Hand
         btnInsertar.Font = New Font("Segoe UI", 12F)
         btnInsertar.Location = New Point(11, 686)
         btnInsertar.Name = "btnInsertar"
@@ -165,6 +185,7 @@ Partial Class FrmPlanes
         ' 
         ' panelDatosIngreso
         ' 
+        panelDatosIngreso.Controls.Add(tbID)
         panelDatosIngreso.Controls.Add(lblDatosIngreso)
         panelDatosIngreso.Controls.Add(btnCancelar)
         panelDatosIngreso.Controls.Add(btnGuardar)
@@ -183,6 +204,15 @@ Partial Class FrmPlanes
         panelDatosIngreso.TabIndex = 32
         panelDatosIngreso.Visible = False
         ' 
+        ' tbID
+        ' 
+        tbID.AccessibleRole = AccessibleRole.SplitButton
+        tbID.Location = New Point(434, 18)
+        tbID.Name = "tbID"
+        tbID.Size = New Size(100, 23)
+        tbID.TabIndex = 37
+        tbID.Visible = False
+        ' 
         ' lblDatosIngreso
         ' 
         lblDatosIngreso.AutoSize = True
@@ -197,6 +227,7 @@ Partial Class FrmPlanes
         ' btnCancelar
         ' 
         btnCancelar.BackColor = Color.FromArgb(CByte(123), CByte(179), CByte(75))
+        btnCancelar.Cursor = Cursors.Hand
         btnCancelar.FlatAppearance.BorderColor = Color.FromArgb(CByte(123), CByte(179), CByte(75))
         btnCancelar.FlatAppearance.BorderSize = 0
         btnCancelar.FlatAppearance.MouseDownBackColor = Color.White
@@ -213,6 +244,7 @@ Partial Class FrmPlanes
         ' btnGuardar
         ' 
         btnGuardar.BackColor = Color.FromArgb(CByte(123), CByte(179), CByte(75))
+        btnGuardar.Cursor = Cursors.Hand
         btnGuardar.FlatAppearance.BorderColor = Color.FromArgb(CByte(123), CByte(179), CByte(75))
         btnGuardar.FlatAppearance.MouseDownBackColor = Color.White
         btnGuardar.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
@@ -229,7 +261,7 @@ Partial Class FrmPlanes
         ' 
         tbDescripcion.Cursor = Cursors.IBeam
         tbDescripcion.Font = New Font("Segoe UI", 12F)
-        tbDescripcion.Location = New Point(117, 101)
+        tbDescripcion.Location = New Point(117, 131)
         tbDescripcion.Multiline = True
         tbDescripcion.Name = "tbDescripcion"
         tbDescripcion.Size = New Size(418, 111)
@@ -240,7 +272,7 @@ Partial Class FrmPlanes
         lblDescripcion.AutoSize = True
         lblDescripcion.Font = New Font("Segoe UI", 12F)
         lblDescripcion.ForeColor = Color.White
-        lblDescripcion.Location = New Point(17, 99)
+        lblDescripcion.Location = New Point(16, 131)
         lblDescripcion.Name = "lblDescripcion"
         lblDescripcion.Size = New Size(94, 21)
         lblDescripcion.TabIndex = 26
@@ -288,7 +320,7 @@ Partial Class FrmPlanes
         ' 
         tbNombre.Cursor = Cursors.IBeam
         tbNombre.Font = New Font("Segoe UI", 12F)
-        tbNombre.Location = New Point(117, 57)
+        tbNombre.Location = New Point(116, 71)
         tbNombre.Name = "tbNombre"
         tbNombre.Size = New Size(418, 29)
         tbNombre.TabIndex = 30
@@ -298,7 +330,7 @@ Partial Class FrmPlanes
         lblNombre.AutoSize = True
         lblNombre.Font = New Font("Segoe UI", 12F)
         lblNombre.ForeColor = Color.White
-        lblNombre.Location = New Point(22, 55)
+        lblNombre.Location = New Point(22, 74)
         lblNombre.Name = "lblNombre"
         lblNombre.Size = New Size(88, 21)
         lblNombre.TabIndex = 29
@@ -316,6 +348,7 @@ Partial Class FrmPlanes
         Text = "FrmPlanes"
         panelListado.ResumeLayout(False)
         panelListado.PerformLayout()
+        CType(pbReiniciar, ComponentModel.ISupportInitialize).EndInit()
         CType(dgvListado, ComponentModel.ISupportInitialize).EndInit()
         panelDatosIngreso.ResumeLayout(False)
         panelDatosIngreso.PerformLayout()
@@ -342,4 +375,6 @@ Partial Class FrmPlanes
     Friend WithEvents tbNombre As TextBox
     Friend WithEvents lblNombre As Label
     Friend WithEvents lblDatosIngreso As Label
+    Friend WithEvents pbReiniciar As PictureBox
+    Friend WithEvents tbID As TextBox
 End Class
