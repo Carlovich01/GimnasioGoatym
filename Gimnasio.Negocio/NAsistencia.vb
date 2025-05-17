@@ -8,7 +8,7 @@ Imports System.Data
 ''' Interactúa con la capa de datos <see cref="DAsistencia"/> y la entidad <see cref="Asistencia"/>.
 ''' Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.  
 ''' Si ocurre una excepción, se registra el error utilizando <see cref="ManejarErrores.Log"/> en un log.txt
-''' Posteriormente, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message) para que pueda ser gestionada en la interfaz de usuario.
+''' Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).
 ''' </summary>
 Public Class NAsistencia
     ''' <summary>
@@ -36,7 +36,7 @@ Public Class NAsistencia
     '''    - Si no tiene membresía, retorna "Fallido_No_Hay_Membresia".
     '''    - Si la membresía está inactiva, retorna "Fallido_Membresia_Inactiva".
     '''    - Si la membresía está activa, registra la asistencia y retorna "Exitoso".
-    ''' 3. En todos los casos, registra el intento de asistencia en la base de datos mediante <see cref="DAsistencia.RegistrarAsistencia"/>.
+    ''' 3. En todos los casos, registra el intento de asistencia en la base de datos mediante <see cref="DAsistencia.RegistrarAsistencia(Asistencia)"/>.
     ''' 4. Si ocurre una excepción, la registra en el log y la propaga.
     ''' </summary>
     ''' <param name="dni">DNI del miembro a registrar el ingreso.</param>
@@ -88,7 +88,7 @@ Public Class NAsistencia
     End Function
 
     ''' <summary>
-    ''' Busca asistencias por DNI del miembro utilizando la capa de datos <see cref="DAsistencia.ListarPorDNI"/>.
+    ''' Busca asistencias por DNI del miembro utilizando la capa de datos <see cref="DAsistencia.ListarPorDNI(String)"/>.
     ''' </summary>
     ''' <param name="dni">DNI del miembro a buscar.</param>
     ''' <returns>DataTable con los resultados de la búsqueda.</returns>
@@ -106,7 +106,7 @@ Public Class NAsistencia
     End Function
 
     ''' <summary>
-    ''' Busca asistencias por rango de fechas utilizando la capa de datos <see cref="DAsistencia.ListarPorFecha"/>.
+    ''' Busca asistencias por rango de fechas utilizando la capa de datos <see cref="DAsistencia.ListarPorFecha(Date, Date)"/>.
     ''' </summary>
     ''' <param name="fechaInicio">Fecha de inicio del rango.</param>
     ''' <param name="fechaFin">Fecha de fin del rango.</param>
@@ -121,7 +121,7 @@ Public Class NAsistencia
     End Function
 
     ''' <summary>
-    ''' Elimina un registro de asistencia del sistema según su identificador utilizando la capa de datos <see cref="DAsistencia.Eliminar"/>.
+    ''' Elimina un registro de asistencia del sistema según su identificador utilizando la capa de datos <see cref="DAsistencia.Eliminar(UInteger)"/>.
     ''' </summary>
     ''' <param name="id">Identificador único de la asistencia a eliminar.</param>
     Public Sub Eliminar(id As UInteger)

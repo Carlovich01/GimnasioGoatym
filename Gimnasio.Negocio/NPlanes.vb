@@ -8,7 +8,7 @@ Imports Gimnasio.Errores
 ''' Interactúa con la capa de datos <see cref="DPlanes"/> y la entidad <see cref="Planes"/>.
 ''' Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.  
 ''' Si ocurre una excepción, se registra el error utilizando <see cref="ManejarErrores.Log"/> en un log.txt
-''' Posteriormente, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message) para que pueda ser gestionada en la interfaz de usuario.
+''' Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message) para que pueda ser gestionada en la interfaz de usuario.
 ''' </summary>
 Public Class NPlanes
     ''' <summary>
@@ -35,10 +35,9 @@ Public Class NPlanes
     End Sub
 
     ''' <summary>
-    ''' Obtiene la lista de todos los planes registrados.
+    ''' Obtiene la lista de todos los planes registrados con <see cref="dPlanes.Listar()"/>.
     ''' </summary>
     ''' <returns>DataTable con los datos de los planes.</returns>
-    ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Function Listar() As DataTable
         Try
             Return dPlanes.Listar()
@@ -49,11 +48,12 @@ Public Class NPlanes
     End Function
 
     ''' <summary>
-    ''' Inserta un nuevo plan en el sistema.
-    ''' Valida que no exista un plan con el mismo nombre y que los campos sean correctos.
+    ''' 1. Verifica que no exista ya un plan con el mismo nombre utilizando <see cref="DPlanes.ListarPorNombre(String)"/>.
+    '''    - Si existe, lanza una excepción indicando que el plan ya está registrado.
+    ''' 2. Valida los campos de la entidad <see cref="Planes"/> con <see cref="ValidarCampos(Planes)"/>:
+    ''' 3. Inserta el plan en la base de datos mediante <see cref="DPlanes.Insertar(Planes)"/>.
     ''' </summary>
     ''' <param name="Obj">Instancia de <see cref="Planes"/> a insertar.</param>
-    ''' <exception cref="Exception">Se lanza si el plan ya existe o si hay errores de validación.</exception>
     Public Sub Insertar(Obj As Planes)
         Try
             Dim existePlan As DataTable = dPlanes.ListarPorNombre(Obj.NombrePlan)
@@ -69,10 +69,10 @@ Public Class NPlanes
     End Sub
 
     ''' <summary>
-    ''' Actualiza los datos de un plan existente.
+    ''' 1. Valida los campos de la entidad <see cref="Planes"/> con <see cref="ValidarCampos(Planes)"/>:
+    ''' 2. Actualiza el plan en la base de datos mediante <see cref="DPlanes.Actualizar(Planes)"/>.
     ''' </summary>
     ''' <param name="Obj">Instancia de <see cref="Planes"/> con los datos actualizados.</param>
-    ''' <exception cref="Exception">Se lanza si hay errores de validación o de la capa de datos.</exception>
     Public Sub Actualizar(Obj As Planes)
         Try
             ValidarCampos(Obj)
@@ -84,10 +84,9 @@ Public Class NPlanes
     End Sub
 
     ''' <summary>
-    ''' Elimina un plan del sistema según su identificador.
+    ''' Elimina un plan según su id con <see cref="dPlanes.Eliminar(UInteger)"/>.
     ''' </summary>
     ''' <param name="id">Identificador único del plan a eliminar.</param>
-    ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Sub Eliminar(id As UInteger)
         Try
             dPlanes.Eliminar(id)
@@ -98,11 +97,10 @@ Public Class NPlanes
     End Sub
 
     ''' <summary>
-    ''' Busca planes por nombre utilizando la capa de datos <see cref="DPlanes.ListarPorNombre"/>.
+    ''' Realiza una validación y busca planes por nombre utilizando la capa de datos <see cref="DPlanes.ListarPorNombre(String)"/>.
     ''' </summary>
     ''' <param name="nombre">Nombre o parte del nombre del plan a buscar.</param>
     ''' <returns>DataTable con los resultados de la búsqueda.</returns>
-    ''' <exception cref="Exception">Se lanza si el nombre excede el límite permitido o por errores de la capa de datos.</exception>
     Public Function ListarPorNombre(nombre As String) As DataTable
         Try
             If nombre.Length > 100 Then
@@ -116,11 +114,10 @@ Public Class NPlanes
     End Function
 
     ''' <summary>
-    ''' Busca planes por duración utilizando la capa de datos <see cref="DPlanes.ListarPorDuracion"/>.
+    ''' Realiza una validación y busca planes por duración utilizando la capa de datos <see cref="DPlanes.ListarPorDuracion(UInteger)"/>.
     ''' </summary>
     ''' <param name="duracion">Duración en días del plan.</param>
     ''' <returns>DataTable con los resultados de la búsqueda.</returns>
-    ''' <exception cref="Exception">Se lanza si la duración es menor o igual a cero o por errores de la capa de datos.</exception>
     Public Function ListarPorDuracion(duracion As UInteger) As DataTable
         Try
             If duracion <= 0 Then
@@ -134,11 +131,10 @@ Public Class NPlanes
     End Function
 
     ''' <summary>
-    ''' Busca planes por precio utilizando la capa de datos <see cref="DPlanes.ListarPorPrecio"/>.
+    ''' Realiza una validación y busca planes por precio utilizando la capa de datos <see cref="DPlanes.ListarPorPrecio(Decimal)"/>.
     ''' </summary>
     ''' <param name="precio">Precio del plan.</param>
     ''' <returns>DataTable con los resultados de la búsqueda.</returns>
-    ''' <exception cref="Exception">Se lanza si el precio es negativo o mayor al límite permitido, o por errores de la capa de datos.</exception>
     Public Function ListarPorPrecio(precio As Decimal) As DataTable
         Try
             If precio < 0 OrElse precio > 9999999999 Then

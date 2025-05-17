@@ -6,6 +6,9 @@ Imports Gimnasio.Errores
 ''' <summary>
 ''' Lógica de negocio para la gestión de reclamos en el sistema de gimnasio.
 ''' Interactúa con la capa de datos <see cref="DReclamos"/> y la entidad <see cref="Reclamos"/>.
+''' Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.  
+''' Si ocurre una excepción, se registra el error utilizando <see cref="ManejarErrores.Log"/> en un log.txt
+''' Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message) para que pueda ser gestionada en la interfaz de usuario.
 ''' </summary>
 Public Class NReclamos
     ''' <summary>
@@ -24,15 +27,12 @@ Public Class NReclamos
     End Sub
 
     ''' <summary>
-    ''' Obtiene la lista de todos los reclamos registrados.
+    ''' Obtiene la lista de todos los reclamos registrados con <see cref="DReclamos.Listar()"/>.
     ''' </summary>
     ''' <returns>DataTable con los datos de los reclamos.</returns>
-    ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Function Listar() As DataTable
         Try
-            Dim dvDescripcion As DataTable
-            dvDescripcion = dReclamos.Listar()
-            Return dvDescripcion
+            Return dReclamos.Listar()
         Catch ex As Exception
             ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
@@ -40,10 +40,9 @@ Public Class NReclamos
     End Function
 
     ''' <summary>
-    ''' Inserta un nuevo reclamo en el sistema.
+    ''' Valida los campos e inserta un nuevo reclamo en el sistema con <see cref="DReclamos.Insertar(Reclamos)"/>.
     ''' </summary>
     ''' <param name="Obj">Instancia de <see cref="Reclamos"/> a insertar.</param>
-    ''' <exception cref="Exception">Se lanza si hay errores de validación o de la capa de datos.</exception>
     Public Sub Insertar(Obj As Reclamos)
         Try
             ValidarCampos(Obj)
@@ -55,10 +54,9 @@ Public Class NReclamos
     End Sub
 
     ''' <summary>
-    ''' Actualiza los datos de un reclamo existente.
+    ''' Valida los campos y actualiza los datos de un reclamo existente con <see cref="DReclamos.Actualizar(Reclamos)"/>
     ''' </summary>
     ''' <param name="Obj">Instancia de <see cref="Reclamos"/> con los datos actualizados.</param>
-    ''' <exception cref="Exception">Se lanza si hay errores de validación o de la capa de datos.</exception>
     Public Sub Actualizar(Obj As Reclamos)
         Try
             ValidarCampos(Obj)
@@ -70,10 +68,9 @@ Public Class NReclamos
     End Sub
 
     ''' <summary>
-    ''' Elimina un reclamo del sistema según su identificador.
+    ''' Elimina un reclamo del sistema según su id con <see cref="dReclamos.Eliminar(UInteger)"/>
     ''' </summary>
     ''' <param name="id">Identificador único del reclamo a eliminar.</param>
-    ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Sub Eliminar(id As UInteger)
         Try
             dReclamos.Eliminar(id)
@@ -84,10 +81,9 @@ Public Class NReclamos
     End Sub
 
     ''' <summary>
-    ''' Cambia el estado de un reclamo a "resuelto" utilizando <see cref="DReclamos.ActualizarElEstadoAResuelto"/>.
+    ''' Cambia el estado de un reclamo a "resuelto" utilizando <see cref="DReclamos.ActualizarElEstadoAResuelto(UInteger)"/>.
     ''' </summary>
     ''' <param name="id">Identificador único del reclamo.</param>
-    ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Sub ActualizarElEstadoAResuelto(id As UInteger)
         Try
             dReclamos.ActualizarElEstadoAResuelto(id)
@@ -98,10 +94,9 @@ Public Class NReclamos
     End Sub
 
     ''' <summary>
-    ''' Cambia el estado de un reclamo a "pendiente" utilizando <see cref="DReclamos.ActualizarElEstadoAPendiente"/>.
+    ''' Cambia el estado de un reclamo a "pendiente" utilizando <see cref="DReclamos.ActualizarElEstadoAPendiente(UInteger)"/>.
     ''' </summary>
     ''' <param name="id">Identificador único del reclamo.</param>
-    ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Sub ActualizarElEstadoAPendiente(id As UInteger)
         Try
             dReclamos.ActualizarElEstadoAPendiente(id)
@@ -112,15 +107,13 @@ Public Class NReclamos
     End Sub
 
     ''' <summary>
-    ''' Busca reclamos por estado utilizando la capa de datos <see cref="DReclamos.ListarPorEstado"/>.
+    ''' Busca reclamos por estado utilizando la capa de datos <see cref="DReclamos.ListarPorEstado(String)"/>.
     ''' </summary>
-    ''' <param name="estado">Estado del reclamo (por ejemplo: "pendiente", "resuelto").</param>
+    ''' <param name="estado">Estado del reclamo ("pendiente", "resuelto").</param>
     ''' <returns>DataTable con los resultados de la búsqueda.</returns>
-    ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Function ListarPorEstado(estado As String) As DataTable
         Try
-            Dim dvEstado As DataTable = dReclamos.ListarPorEstado(estado)
-            Return dvEstado
+            Return dReclamos.ListarPorEstado(estado)
         Catch ex As Exception
             ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
@@ -128,10 +121,9 @@ Public Class NReclamos
     End Function
 
     ''' <summary>
-    ''' Actualiza la respuesta de un reclamo utilizando <see cref="DReclamos.ActualizarRespuesta"/>.
+    ''' Actualiza la respuesta de un reclamo utilizando <see cref="DReclamos.ActualizarRespuesta(Reclamos)"/>.
     ''' </summary>
     ''' <param name="Obj">Instancia de <see cref="Reclamos"/> con la respuesta actualizada.</param>
-    ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Sub ActualizarRespuesta(Obj As Reclamos)
         Try
             dReclamos.ActualizarRespuesta(Obj)

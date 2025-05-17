@@ -2,6 +2,7 @@
 '''<summary>
 ''' Clase utilitaria para el registro de errores en el sistema.
 ''' Permite guardar mensajes de error y excepciones en un archivo de log ubicado en la carpeta Logs.
+''' Ademas permite mostrar mensajes de error al usuario mediante cuadros de diálogo.
 ''' </summary>
 Public Class ManejarErrores
     ''' <summary>
@@ -10,21 +11,27 @@ Public Class ManejarErrores
     Private Shared ReadOnly logFilePath As String = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Logs\log.txt")
 
     ''' <summary>
-    ''' Registra un error en el archivo de log.
-    ''' Incluye la fecha y hora, un mensaje personalizado, el mensaje de la excepción y el stack trace.
-    ''' Si el directorio de logs no existe, lo crea automáticamente.
+    ''' 1. Verifica si el directorio de logs existe; si no, lo crea automáticamente.
+    ''' 2. Abre (o crea) el archivo log.txt en modo adjuntar dentro de la carpeta Logs de la aplicación.
+    ''' 3. Escribe una entrada de error que incluye:
+    '''    - Fecha y hora del registro.
+    '''    - Mensaje personalizado que describe el contexto del error.
+    '''    - Mensaje de la excepción capturada.
+    '''    - Stack trace de la excepción.
+    ''' 4. Separa cada registro con una línea divisoria.
+    ''' 5. Si ocurre una excepción de E/S durante el proceso de log, la omite silenciosamente para evitar errores adicionales.
+    ''' Este método es estático y puede ser llamado desde cualquier parte del sistema para registrar errores técnicos o de negocio.
     ''' </summary>
     ''' <param name="message">Mensaje personalizado que describe el contexto del error.</param>
     ''' <param name="ex">Excepción capturada que contiene detalles del error.</param>
+
     Public Shared Sub Log(message As String, ex As Exception)
         Try
-            ' Crear el directorio Logs si no existe
             Dim logDirectory As String = Path.GetDirectoryName(logFilePath)
             If Not Directory.Exists(logDirectory) Then
                 Directory.CreateDirectory(logDirectory)
             End If
 
-            ' Escribir el error en el archivo de log
             Using writer As New StreamWriter(logFilePath, True)
                 writer.WriteLine($"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] ERROR: {message}")
                 writer.WriteLine($"Detalles: {ex.Message}")
@@ -32,20 +39,23 @@ Public Class ManejarErrores
                 writer.WriteLine(New String("-"c, 50))
             End Using
         Catch ioEx As IOException
-            ' Si ocurre un error al escribir el log, no hacemos nada para evitar un bucle infinito
         End Try
     End Sub
 
     ''' <summary>
-    ''' - Registra la excepción recibida en el log.txt utilizando <see cref="LogError"/> con el mensaje "Capa Presentación".
-    ''' - Muestra un mensaje de error al usuario mediante un cuadro de diálogo, con un mensaje personalizado  y el mensaje de la excepción.
-    ''' Este método asegura que todos los errores sean registrados y notificados al usuario. Se utiliza en los bloques Try-Catch.
+    ''' 1. Registra la excepción recibida en el archivo log.txt utilizando <see cref="Log"/> con el mensaje "Capa Presentación".
+    ''' 2. Muestra un cuadro de diálogo al usuario con un mensaje personalizado y el mensaje de la excepción, usando MsgBox en modo crítico.
+    ''' 3. Si ocurre una excepción de E/S durante el proceso, la omite silenciosamente para evitar errores adicionales.
+    ''' Este método asegura que todos los errores sean registrados y notificados al usuario de forma clara.
     ''' </summary>
     ''' <param name="mensajeUsuario">Mensaje personalizado que se mostrará al usuario.</param>
     ''' <param name="ex">Excepción capturada que será registrada y cuyo mensaje se mostrará al usuario.</param>
-    Public Shared Sub Mostrar(mensajeUsuario As String, ex As Exception)
-        Log("Capa Presentación", ex)
-        MsgBox(mensajeUsuario & vbCrLf & ex.Message, MsgBoxStyle.Critical, "Error")
-    End Sub
 
+    Public Shared Sub Mostrar(mensajeUsuario As String, ex As Exception)
+        Try
+            Log("Capa Presentación", ex)
+            MsgBox(mensajeUsuario & vbCrLf & ex.Message, MsgBoxStyle.Critical, "Error")
+        Catch ioEx As IOException
+        End Try
+    End Sub
 End Class

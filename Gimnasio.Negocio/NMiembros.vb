@@ -6,6 +6,9 @@ Imports Gimnasio.Errores
 ''' <summary>
 ''' Lógica de negocio para la gestión de miembros en el sistema de gimnasio.
 ''' Interactúa con la capa de datos <see cref="DMiembros"/> y la entidad <see cref="Miembros"/>.
+''' Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.  
+''' Si ocurre una excepción, se registra el error utilizando <see cref="ManejarErrores.Log"/> en un log.txt
+''' Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).
 ''' </summary>
 Public Class NMiembros
     ''' <summary>
@@ -14,15 +17,12 @@ Public Class NMiembros
     Private dMiembros As New DMiembros()
 
     ''' <summary>
-    ''' Obtiene la lista de todos los miembros registrados.
+    ''' Obtiene la lista de todos los miembros registrados con <see cref="DMiembros.Listar()"/>.
     ''' </summary>
     ''' <returns>DataTable con los datos de los miembros.</returns>
-    ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Function Listar() As DataTable
-        Dim dvMiembros As DataTable
         Try
-            dvMiembros = dMiembros.Listar()
-            Return dvMiembros
+            Return dMiembros.Listar()
         Catch ex As Exception
             ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
@@ -33,7 +33,6 @@ Public Class NMiembros
     ''' Valida los campos de la entidad <see cref="Miembros"/> antes de realizar operaciones de inserción o actualización.
     ''' </summary>
     ''' <param name="Obj">Instancia de <see cref="Miembros"/> a validar.</param>
-    ''' <exception cref="Exception">Se lanza si algún campo no cumple con las reglas de negocio.</exception>
     Private Sub ValidarCampos(Obj As Miembros)
         If Obj.Dni.Length > 15 Then
             Throw New Exception("El DNI no puede tener más de 15 caracteres.")
@@ -89,11 +88,11 @@ Public Class NMiembros
     End Sub
 
     ''' <summary>
-    ''' Inserta un nuevo miembro en el sistema.
-    ''' Valida que no exista un miembro con el mismo DNI y que los campos sean correctos.
+    ''' Obtiene un miembro por su ID con <see cref="DMiembros.ObtenerPorDni(String)"/>.
+    ''' Valida que no exista un miembro con el mismo DNI y que los campos sean correctos con <see cref="ValidarCampos(Miembros)"/>.
+    ''' Por ultimo, inserta el miembro en la base de datos con <see cref="DMiembros.Insertar(Miembros)"/>.
     ''' </summary>
     ''' <param name="Obj">Instancia de <see cref="Miembros"/> a insertar.</param>
-    ''' <exception cref="Exception">Se lanza si el DNI ya existe o si hay errores de validación.</exception>
     Public Sub Insertar(Obj As Miembros)
         Try
             Dim existeDni As DataTable = dMiembros.ObtenerPorDni(Obj.Dni)
@@ -109,10 +108,10 @@ Public Class NMiembros
     End Sub
 
     ''' <summary>
-    ''' Actualiza los datos de un miembro existente.
+    ''' Valida que los campos sean correctos con <see cref="ValidarCampos(Miembros)"/>.
+    ''' Actualiza los datos de un miembro existente en la base de datos con <see cref="DMiembros.Insertar(Miembros)"/>.
     ''' </summary>
     ''' <param name="Obj">Instancia de <see cref="Miembros"/> con los datos actualizados.</param>
-    ''' <exception cref="Exception">Se lanza si hay errores de validación o de la capa de datos.</exception>
     Public Sub Actualizar(Obj As Miembros)
         Try
             ValidarCampos(Obj)
@@ -124,10 +123,9 @@ Public Class NMiembros
     End Sub
 
     ''' <summary>
-    ''' Elimina un miembro del sistema según su identificador.
+    ''' Elimina un miembro del sistema según su id con <see cref="DMiembros.Eliminar(UInteger)"/>.
     ''' </summary>
     ''' <param name="id">Identificador único del miembro a eliminar.</param>
-    ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Sub Eliminar(id As UInteger)
         Try
             dMiembros.Eliminar(id)
@@ -138,18 +136,16 @@ Public Class NMiembros
     End Sub
 
     ''' <summary>
-    ''' Busca miembros por nombre utilizando la capa de datos <see cref="DMiembros.ListarPorNombre"/>.
+    ''' Realiza una validación y busca miembros por nombre utilizando la capa de datos <see cref="DMiembros.ListarPorNombre(String)"/>.
     ''' </summary>
     ''' <param name="nombre">Nombre o parte del nombre del miembro a buscar.</param>
     ''' <returns>DataTable con los resultados de la búsqueda.</returns>
-    ''' <exception cref="Exception">Se lanza si el nombre excede el límite permitido o por errores de la capa de datos.</exception>
     Public Function ListarPorNombre(nombre As String) As DataTable
         Try
             If nombre.Length > 100 Then
                 Throw New Exception("El nombre no puede tener más de 100 caracteres.")
             End If
-            Dim dvMiembros As DataTable = dMiembros.ListarPorNombre(nombre)
-            Return dvMiembros
+            Return dMiembros.ListarPorNombre(nombre)
         Catch ex As Exception
             ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
@@ -157,18 +153,16 @@ Public Class NMiembros
     End Function
 
     ''' <summary>
-    ''' Obtiene un miembro por su DNI utilizando la capa de datos <see cref="DMiembros.ObtenerPorDni"/>.
+    ''' Realiza una validación y obtiene un miembro por su DNI utilizando la capa de datos <see cref="DMiembros.ObtenerPorDni(String)"/>.
     ''' </summary>
     ''' <param name="dni">DNI del miembro a buscar.</param>
     ''' <returns>DataTable con los datos del miembro encontrado.</returns>
-    ''' <exception cref="Exception">Se lanza si el DNI excede el límite permitido o por errores de la capa de datos.</exception>
     Public Function ObtenerPorDni(dni As String) As DataTable
         Try
             If dni.Length > 15 Then
                 Throw New Exception("El DNI no puede tener más de 15 caracteres.")
             End If
-            Dim dvMiembros As DataTable = dMiembros.ObtenerPorDni(dni)
-            Return dvMiembros
+            Return dMiembros.ObtenerPorDni(dni)
         Catch ex As Exception
             ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
@@ -176,18 +170,16 @@ Public Class NMiembros
     End Function
 
     ''' <summary>
-    ''' Busca miembros por DNI utilizando la capa de datos <see cref="DMiembros.ListarPorDni"/>.
+    ''' Realiza una validación y busca miembros por DNI utilizando la capa de datos <see cref="DMiembros.ListarPorDni(String)"/>.
     ''' </summary>
     ''' <param name="dni">DNI o parte del DNI del miembro a buscar.</param>
     ''' <returns>DataTable con los resultados de la búsqueda.</returns>
-    ''' <exception cref="Exception">Se lanza si el DNI excede el límite permitido o por errores de la capa de datos.</exception>
     Public Function ListarPorDni(dni As String) As DataTable
         Try
             If dni.Length > 15 Then
                 Throw New Exception("El DNI no puede tener más de 15 caracteres.")
             End If
-            Dim dvMiembros As DataTable = dMiembros.ListarPorDni(dni)
-            Return dvMiembros
+            Return dMiembros.ListarPorDni(dni)
         Catch ex As Exception
             ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)

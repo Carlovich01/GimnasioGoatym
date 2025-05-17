@@ -6,6 +6,9 @@ Imports Gimnasio.Errores
 ''' <summary>
 ''' Lógica de negocio para la gestión de pagos en el sistema de gimnasio.
 ''' Interactúa con la capa de datos <see cref="DPagos"/> y la entidad <see cref="Pagos"/>.
+''' Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.  
+''' Si ocurre una excepción, se registra el error utilizando <see cref="ManejarErrores.Log"/> en un log.txt
+''' Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).
 ''' </summary>
 Public Class NPagos
     ''' <summary>
@@ -17,7 +20,6 @@ Public Class NPagos
     ''' Valida los campos de la entidad <see cref="Pagos"/> antes de realizar operaciones de inserción.
     ''' </summary>
     ''' <param name="Obj">Instancia de <see cref="Pagos"/> a validar.</param>
-    ''' <exception cref="Exception">Se lanza si algún campo no cumple con las reglas de negocio.</exception>
     Private Sub ValidarCampos(Obj As Pagos)
         If Obj.MontoPagado > 9999999999 Then
             Throw New Exception("El monto no puede exceder los 10 dígitos.")
@@ -36,15 +38,12 @@ Public Class NPagos
     End Sub
 
     ''' <summary>
-    ''' Obtiene la lista de todos los pagos registrados.
+    ''' Obtiene la lista de todos los pagos registrados con <see cref="DPagos.Listar()"/>.
     ''' </summary>
     ''' <returns>DataTable con los datos de los pagos.</returns>
-    ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Function Listar() As DataTable
         Try
-            Dim dvPagos As DataTable
-            dvPagos = dPagos.Listar()
-            Return dvPagos
+            Return dPagos.Listar()
         Catch ex As Exception
             ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
@@ -52,17 +51,20 @@ Public Class NPagos
     End Function
 
     ''' <summary>
-    ''' Inserta un nuevo pago en el sistema.
-    ''' Valida los campos y actualiza el estado y fechas de la membresía asociada.
+    ''' 1. Valida los campos de la entidad <see cref="Pagos"/> recibida como parámetro.
+    ''' 2. Inserta el pago en la base de datos utilizando <see cref="DPagos.Insertar(Pagos)"/>.
+    ''' 3. Actualiza la membresía asociada al pago:
+    '''    - Obtiene la duración de la membresía con <see cref="DMembresias.ObtenerDuracionPorMembresia"/>.
+    '''    - Establece la fecha de inicio como la fecha actual y la fecha de fin sumando la duración.
+    '''    - Cambia el estado de la membresía a "Activa".
+    '''    - Actualiza estos datos en la base de datos mediante <see cref="DMembresias.ActualizarEstadoYFechas"/>.
     ''' </summary>
     ''' <param name="pago">Instancia de <see cref="Pagos"/> a insertar.</param>
-    ''' <exception cref="Exception">Se lanza si hay errores de validación o de la capa de datos.</exception>
     Public Sub Insertar(pago As Pagos)
         Try
             ValidarCampos(pago)
             dPagos.Insertar(pago)
 
-            ' Actualiza la membresía asociada al pago
             Dim dMembresia As New DMembresias()
             Dim duracionDias As UInteger = dMembresia.ObtenerDuracionPorMembresia(pago.IdMembresia)
 
@@ -95,12 +97,10 @@ Public Class NPagos
         End Try
     End Sub
 
-
     ''' <summary>
-    ''' Elimina un pago del sistema según su identificador.
+    ''' Elimina un pago del sistema según su id con <see cref="DPagos.Eliminar(UInteger)"/>.
     ''' </summary>
     ''' <param name="id">Identificador único del pago a eliminar.</param>
-    ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Sub Eliminar(id As UInteger)
         Try
             dPagos.Eliminar(id)
@@ -111,17 +111,14 @@ Public Class NPagos
     End Sub
 
     ''' <summary>
-    ''' Busca pagos por rango de fechas utilizando la capa de datos <see cref="DPagos.ListarPorFecha"/>.
+    ''' Busca pagos por rango de fechas utilizando la capa de datos <see cref="DPagos.ListarPorFecha(Date, Date)"/>.
     ''' </summary>
     ''' <param name="fechaInicio">Fecha de inicio del rango.</param>
     ''' <param name="fechaFin">Fecha de fin del rango.</param>
     ''' <returns>DataTable con los resultados de la búsqueda.</returns>
-    ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Function ListarPorFecha(fechaInicio As DateTime, fechaFin As DateTime) As DataTable
         Try
-            Dim dvPagos As DataTable
-            dvPagos = dPagos.ListarPorFecha(fechaInicio, fechaFin)
-            Return dvPagos
+            Return dPagos.ListarPorFecha(fechaInicio, fechaFin)
         Catch ex As Exception
             ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
@@ -129,19 +126,16 @@ Public Class NPagos
     End Function
 
     ''' <summary>
-    ''' Busca pagos por DNI del miembro utilizando la capa de datos <see cref="DPagos.ListarPorDni"/>.
+    ''' Realiza una validación y busca pagos por DNI del miembro utilizando la capa de datos <see cref="DPagos.ListarPorDni(String)"/>.
     ''' </summary>
     ''' <param name="dni">DNI o parte del DNI del miembro a buscar.</param>
     ''' <returns>DataTable con los resultados de la búsqueda.</returns>
-    ''' <exception cref="Exception">Se lanza si el DNI excede el límite permitido o por errores de la capa de datos.</exception>
     Public Function ListarPorDni(dni As String) As DataTable
         Try
             If dni.Length > 15 Then
                 Throw New Exception("El DNI no puede tener más de 15 caracteres.")
             End If
-            Dim dvPagos As DataTable
-            dvPagos = dPagos.ListarPorDni(dni)
-            Return dvPagos
+            Return dPagos.ListarPorDni(dni)
         Catch ex As Exception
             ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
@@ -149,19 +143,16 @@ Public Class NPagos
     End Function
 
     ''' <summary>
-    ''' Busca pagos por nombre de plan utilizando la capa de datos <see cref="DPagos.ListarPorNombrePlan"/>.
+    ''' Realiza una validación y Busca pagos por nombre de plan utilizando la capa de datos <see cref="DPagos.ListarPorNombrePlan(String)"/>.
     ''' </summary>
     ''' <param name="nombre">Nombre o parte del nombre del plan a buscar.</param>
     ''' <returns>DataTable con los resultados de la búsqueda.</returns>
-    ''' <exception cref="Exception">Se lanza si el nombre excede el límite permitido o por errores de la capa de datos.</exception>
     Public Function ListarPorNombrePlan(nombre As String) As DataTable
         Try
             If nombre.Length > 100 Then
                 Throw New Exception("El nombre no puede tener más de 100 caracteres.")
             End If
-            Dim dvPagos As DataTable
-            dvPagos = dPagos.ListarPorNombrePlan(nombre)
-            Return dvPagos
+            Return dPagos.ListarPorNombrePlan(nombre)
         Catch ex As Exception
             ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
@@ -169,16 +160,13 @@ Public Class NPagos
     End Function
 
     ''' <summary>
-    ''' Busca pagos por método de pago utilizando la capa de datos <see cref="DPagos.ListarPorMetodoPago"/>.
+    ''' Busca pagos por método de pago utilizando la capa de datos <see cref="DPagos.ListarPorMetodoPago(String)"/>.
     ''' </summary>
     ''' <param name="metodo">Método de pago a buscar.</param>
     ''' <returns>DataTable con los resultados de la búsqueda.</returns>
-    ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Function ListarPorMetodoPago(metodo As String) As DataTable
         Try
-            Dim dvPagos As DataTable
-            dvPagos = dPagos.ListarPorMetodoPago(metodo)
-            Return dvPagos
+            Return dPagos.ListarPorMetodoPago(metodo)
         Catch ex As Exception
             ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
@@ -186,12 +174,11 @@ Public Class NPagos
     End Function
 
     ''' <summary>
-    ''' Busca pagos por rango de montos utilizando la capa de datos <see cref="DPagos.ListarPorMontos"/>.
+    ''' Realiza una validación y Busca pagos por rango de montos utilizando la capa de datos <see cref="DPagos.ListarPorMontos(Decimal, Decimal)"/>.
     ''' </summary>
     ''' <param name="montoMin">Monto mínimo.</param>
     ''' <param name="montoMax">Monto máximo.</param>
     ''' <returns>DataTable con los resultados de la búsqueda.</returns>
-    ''' <exception cref="Exception">Se lanza si los montos son negativos o por errores de la capa de datos.</exception>
     Public Function ListarPorMontos(montoMin As Decimal, montoMax As Decimal) As DataTable
         Try
             If montoMin < 0 Or montoMax < 0 Then
@@ -203,5 +190,4 @@ Public Class NPagos
             Throw New Exception(ex.Message)
         End Try
     End Function
-
 End Class
