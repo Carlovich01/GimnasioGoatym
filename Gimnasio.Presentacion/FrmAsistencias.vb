@@ -5,6 +5,7 @@ Imports Gimnasio.Errores
 ''' Formulario para el registro de asistencias de miembros mediante el ingreso de DNI.
 ''' Permite registrar el ingreso, mostrar el estado de las membresías y los días restantes.
 ''' Utiliza la clase <see cref="NAsistencia"/> para la lógica de negocio de asistencias y <see cref="NMembresias"/> para la consulta de membresías.
+''' Todas las operaciones de esta capa están envueltas en bloques Try...Catch. 
 ''' El manejo de errores se realiza a través de <see cref="Gimnasio.Errores.ManejarErrores.Mostrar(String, Exception)"/>
 ''' que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario. 
 ''' </summary>

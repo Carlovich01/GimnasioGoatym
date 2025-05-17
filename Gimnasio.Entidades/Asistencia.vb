@@ -16,7 +16,7 @@ Public Class Asistencia
     ''' </summary>
     Private _fechaHoraCheckin As DateTime
     ''' <summary>
-    ''' Resultado del intento de asistencia (por ejemplo: "Permitido", "Denegado", "Fuera de horario").
+    ''' Resultado del intento de asistencia ('Exitoso', 'Fallido_DNI_NoEncontrado', 'Fallido_Membresia_Inactiva', 'Fallido_No_Hay_Membresia', 'Fallido_Otro')
     ''' </summary>
     Private _resultado As String
     ''' <summary>

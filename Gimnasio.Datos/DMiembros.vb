@@ -13,7 +13,7 @@ Public Class DMiembros
     ''' <summary>
     ''' Obtiene todos los miembros de la base de datos ordenados por la última modificación.
     ''' </summary>
-    ''' <returns><see cref="DataTable"/> con los datos de los miembros.</returns>
+    ''' <returns>DataTable con los datos de los miembros.</returns>
     Public Function Listar() As DataTable
         Try
             Dim query As String = "SELECT * FROM miembros ORDER BY ultima_modificacion DESC"
@@ -103,7 +103,7 @@ Public Class DMiembros
     ''' Busca miembros por nombre o apellido utilizando la cláusula LIKE.
     ''' </summary>
     ''' <param name="nombre">Nombre o parte del nombre/apellido del miembro a buscar.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     Public Function ListarPorNombre(nombre As String) As DataTable
         Try
             Dim query As String = "SELECT * FROM miembros WHERE nombre LIKE @nombre OR apellido LIKE @apellido ORDER BY ultima_modificacion DESC"
@@ -122,7 +122,7 @@ Public Class DMiembros
     ''' Obtiene un miembro por su DNI exacto.
     ''' </summary>
     ''' <param name="dni">DNI del miembro a buscar.</param>
-    ''' <returns><see cref="DataTable"/> con los datos del miembro encontrado.</returns>
+    ''' <returns>DataTable con los datos del miembro encontrado.</returns>
     Public Function ObtenerPorDni(dni As String) As DataTable
         Try
             Dim query As String = "SELECT * FROM miembros WHERE dni = @dni"
@@ -140,7 +140,7 @@ Public Class DMiembros
     ''' Busca miembros por coincidencia parcial de DNI utilizando la cláusula LIKE.
     ''' </summary>
     ''' <param name="dni">DNI o parte del DNI del miembro a buscar.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     Public Function ListarPorDni(dni As String) As DataTable
         Try
             Dim query As String = "SELECT * FROM miembros WHERE dni LIKE @dni ORDER BY ultima_modificacion DESC"

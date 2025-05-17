@@ -8,7 +8,7 @@ Public Class Reclamos
     ''' </summary>
     Private _idReclamos As UInteger
     ''' <summary>
-    ''' Tipo de reclamo (por ejemplo: sugerencia, queja, consulta).
+    ''' Tipo de reclamo ('sugerencia', 'reclamo').
     ''' </summary>
     Private _tipo As String
     ''' <summary>
@@ -20,7 +20,7 @@ Public Class Reclamos
     ''' </summary>
     Private _fechaEnvio As DateTime
     ''' <summary>
-    ''' Estado actual del reclamo (por ejemplo: pendiente, resuelto).
+    ''' Estado actual del reclamo (pendiente, resuelto).
     ''' </summary>
     Private _estado As String
     ''' <summary>

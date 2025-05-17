@@ -13,7 +13,7 @@ Public Class DAsistencia
     ''' <summary>
     ''' Obtiene todos los registros de asistencia desde la vista <c>vista_asistencia</c>.
     ''' </summary>
-    ''' <returns><see cref="DataTable"/> con los datos de las asistencias.</returns>
+    ''' <returns>DataTable con los datos de las asistencias.</returns>
     Public Function Listar() As DataTable
         Try
             Dim query As String = "SELECT * FROM vista_asistencia"
@@ -66,7 +66,7 @@ Public Class DAsistencia
     ''' Busca asistencias por coincidencia parcial de DNI utilizando la vista <c>vista_asistencia</c>.
     ''' </summary>
     ''' <param name="dni">DNI o parte del DNI del miembro a buscar.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     Public Function ListarPorDNI(dni As String) As DataTable
         Try
             Dim query As String = "SELECT * FROM vista_asistencia WHERE dni_miembro LIKE @dni"
@@ -85,7 +85,7 @@ Public Class DAsistencia
     ''' </summary>
     ''' <param name="fechaInicio">Fecha de inicio del rango.</param>
     ''' <param name="fechaFin">Fecha de fin del rango.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     Public Function ListarPorFecha(fechaInicio As DateTime, fechaFin As DateTime) As DataTable
         Try
             Dim query As String = "SELECT * FROM vista_asistencia WHERE fecha_ingreso BETWEEN @fechaInicio AND @fechaFin"

@@ -24,7 +24,7 @@ Public Class Membresias
     ''' </summary>
     Private _fechaFin As Date
     ''' <summary>
-    ''' Estado actual de la membresía (por ejemplo: activa, inactiva, vencida).
+    ''' Estado actual de la membresía (activa, inactiva).
     ''' </summary>
     Private _estadoMembresia As String
     ''' <summary>

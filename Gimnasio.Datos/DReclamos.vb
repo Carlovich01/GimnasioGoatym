@@ -13,7 +13,7 @@ Public Class DReclamos
     ''' <summary>
     ''' Obtiene todos los reclamos desde la vista <c>vista_reclamos</c>.
     ''' </summary>
-    ''' <returns><see cref="DataTable"/> con los datos de los reclamos.</returns>
+    ''' <returns>DataTable con los datos de los reclamos.</returns>
     Public Function Listar() As DataTable
         Try
             Dim query As String = "SELECT * FROM vista_reclamos"
@@ -138,7 +138,7 @@ Public Class DReclamos
     ''' Busca reclamos por estado utilizando la vista <c>vista_reclamos</c>.
     ''' </summary>
     ''' <param name="Estado">Estado del reclamo (por ejemplo: "pendiente", "resuelto").</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     Public Function ListarPorEstado(Estado As String) As DataTable
         Try
             Dim query As String = "SELECT * FROM vista_reclamos WHERE estado = @estado"

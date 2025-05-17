@@ -13,7 +13,7 @@ Public Class DUsuarios
     ''' <summary>
     ''' Obtiene todos los usuarios del sistema, incluyendo información de roles.
     ''' </summary>
-    ''' <returns><see cref="DataTable"/> con los datos de los usuarios.</returns>
+    ''' <returns>DataTable con los datos de los usuarios.</returns>
     Public Function Listar() As DataTable
         Try
             Dim query As String = "
@@ -98,7 +98,7 @@ Public Class DUsuarios
     ''' Busca usuarios por coincidencia parcial de nombre completo.
     ''' </summary>
     ''' <param name="nombre">Nombre o parte del nombre del usuario a buscar.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     Public Function ListarPorNombre(nombre As String) As DataTable
         Try
             Dim query As String = "

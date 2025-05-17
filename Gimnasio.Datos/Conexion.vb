@@ -16,7 +16,7 @@ Public Class ConexionBase
     ''' </summary>
     ''' <param name="query">Consulta SQL a ejecutar.</param>
     ''' <param name="parameters">Diccionario de parámetros para la consulta (puede ser <c>Nothing</c>).</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la consulta.</returns>
+    ''' <returns>DataTable con los resultados de la consulta.</returns>
     ''' <exception cref="Exception">Propaga cualquier error ocurrido durante la ejecución.</exception>
     Public Function ExecuteQuery(query As String, parameters As Dictionary(Of String, Object)) As DataTable
         Try

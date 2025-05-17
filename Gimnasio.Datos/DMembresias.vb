@@ -13,7 +13,7 @@ Public Class DMembresias
     ''' <summary>
     ''' Obtiene todas las membresías desde la vista <c>vista_membresias</c>.
     ''' </summary>
-    ''' <returns><see cref="DataTable"/> con los datos de las membresías.</returns>
+    ''' <returns>DataTable con los datos de las membresías.</returns>
     Public Function Listar() As DataTable
         Try
             Dim query As String = "SELECT * FROM vista_membresias"
@@ -175,7 +175,7 @@ Public Class DMembresias
     ''' Obtiene una membresía por el DNI exacto del miembro.
     ''' </summary>
     ''' <param name="dni">DNI del miembro.</param>
-    ''' <returns><see cref="DataTable"/> con los datos de la membresía encontrada.</returns>
+    ''' <returns>DataTable con los datos de la membresía encontrada.</returns>
     Public Function ObtenerPorDni(dni As String) As DataTable
         Try
             Dim query As String = "SELECT * FROM vista_membresias WHERE dni_miembro=@dni"
@@ -193,7 +193,7 @@ Public Class DMembresias
     ''' Busca membresías por coincidencia parcial de DNI utilizando la cláusula LIKE.
     ''' </summary>
     ''' <param name="dni">DNI o parte del DNI del miembro a buscar.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     Public Function ListarPorDni(dni As String) As DataTable
         Try
             Dim query As String = "SELECT * FROM vista_membresias WHERE dni_miembro LIKE @dni"
@@ -211,7 +211,7 @@ Public Class DMembresias
     ''' Busca membresías por nombre de plan utilizando la cláusula LIKE.
     ''' </summary>
     ''' <param name="nombrePlan">Nombre o parte del nombre del plan a buscar.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     Public Function ListarPorNombrePlan(nombrePlan As String) As DataTable
         Try
             Dim query As String = "SELECT * FROM vista_membresias WHERE nombre_plan LIKE @nombrePlan"
@@ -229,7 +229,7 @@ Public Class DMembresias
     ''' Busca membresías por estado (por ejemplo: "Activa", "Inactiva").
     ''' </summary>
     ''' <param name="estado">Estado de la membresía.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     Public Function ListarPorEstado(estado As String) As DataTable
         Try
             Dim query As String = "SELECT * FROM vista_membresias WHERE estado_membresia = @estado"
@@ -269,7 +269,7 @@ Public Class DMembresias
     ''' Obtiene la membresía más reciente de un miembro específico.
     ''' </summary>
     ''' <param name="idMiembro">Identificador único del miembro.</param>
-    ''' <returns><see cref="DataTable"/> con los datos de la membresía más reciente.</returns>
+    ''' <returns>DataTable con los datos de la membresía más reciente.</returns>
     Public Function ObtenerMembresiaMasReciente(idMiembro As UInteger) As DataTable
         Try
             Dim query As String = "SELECT * FROM membresias_miembro WHERE id_miembro = @idMiembro ORDER BY fecha_fin DESC LIMIT 1"

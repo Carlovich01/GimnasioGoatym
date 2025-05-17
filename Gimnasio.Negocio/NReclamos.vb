@@ -26,7 +26,7 @@ Public Class NReclamos
     ''' <summary>
     ''' Obtiene la lista de todos los reclamos registrados.
     ''' </summary>
-    ''' <returns><see cref="DataTable"/> con los datos de los reclamos.</returns>
+    ''' <returns>DataTable con los datos de los reclamos.</returns>
     ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Function Listar() As DataTable
         Try
@@ -115,7 +115,7 @@ Public Class NReclamos
     ''' Busca reclamos por estado utilizando la capa de datos <see cref="DReclamos.ListarPorEstado"/>.
     ''' </summary>
     ''' <param name="estado">Estado del reclamo (por ejemplo: "pendiente", "resuelto").</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Function ListarPorEstado(estado As String) As DataTable
         Try

@@ -16,7 +16,7 @@ Public Class NMiembros
     ''' <summary>
     ''' Obtiene la lista de todos los miembros registrados.
     ''' </summary>
-    ''' <returns><see cref="DataTable"/> con los datos de los miembros.</returns>
+    ''' <returns>DataTable con los datos de los miembros.</returns>
     ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Function Listar() As DataTable
         Dim dvMiembros As DataTable
@@ -141,7 +141,7 @@ Public Class NMiembros
     ''' Busca miembros por nombre utilizando la capa de datos <see cref="DMiembros.ListarPorNombre"/>.
     ''' </summary>
     ''' <param name="nombre">Nombre o parte del nombre del miembro a buscar.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     ''' <exception cref="Exception">Se lanza si el nombre excede el límite permitido o por errores de la capa de datos.</exception>
     Public Function ListarPorNombre(nombre As String) As DataTable
         Try
@@ -160,7 +160,7 @@ Public Class NMiembros
     ''' Obtiene un miembro por su DNI utilizando la capa de datos <see cref="DMiembros.ObtenerPorDni"/>.
     ''' </summary>
     ''' <param name="dni">DNI del miembro a buscar.</param>
-    ''' <returns><see cref="DataTable"/> con los datos del miembro encontrado.</returns>
+    ''' <returns>DataTable con los datos del miembro encontrado.</returns>
     ''' <exception cref="Exception">Se lanza si el DNI excede el límite permitido o por errores de la capa de datos.</exception>
     Public Function ObtenerPorDni(dni As String) As DataTable
         Try
@@ -179,7 +179,7 @@ Public Class NMiembros
     ''' Busca miembros por DNI utilizando la capa de datos <see cref="DMiembros.ListarPorDni"/>.
     ''' </summary>
     ''' <param name="dni">DNI o parte del DNI del miembro a buscar.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     ''' <exception cref="Exception">Se lanza si el DNI excede el límite permitido o por errores de la capa de datos.</exception>
     Public Function ListarPorDni(dni As String) As DataTable
         Try

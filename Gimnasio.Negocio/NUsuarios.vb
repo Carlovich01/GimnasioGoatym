@@ -66,7 +66,7 @@ Public Class NUsuarios
     ''' <summary>
     ''' Obtiene la lista de todos los usuarios registrados.
     ''' </summary>
-    ''' <returns><see cref="DataTable"/> con los datos de los usuarios.</returns>
+    ''' <returns>DataTable con los datos de los usuarios.</returns>
     ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Function Listar() As DataTable
         Try
@@ -134,7 +134,7 @@ Public Class NUsuarios
     ''' Busca usuarios por nombre utilizando la capa de datos <see cref="DUsuarios.ListarPorNombre"/>.
     ''' </summary>
     ''' <param name="nombre">Nombre o parte del nombre del usuario a buscar.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     ''' <exception cref="Exception">Se lanza si el nombre excede el límite permitido o por errores de la capa de datos.</exception>
     Public Function ListarPorNombre(nombre As String) As DataTable
         Try

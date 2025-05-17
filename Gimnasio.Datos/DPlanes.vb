@@ -13,7 +13,7 @@ Public Class DPlanes
     ''' <summary>
     ''' Obtiene todos los planes de la base de datos ordenados por la última modificación.
     ''' </summary>
-    ''' <returns><see cref="DataTable"/> con los datos de los planes.</returns>
+    ''' <returns>DataTable con los datos de los planes.</returns>
     Public Function Listar() As DataTable
         Try
             Dim query As String = "SELECT * FROM planes_membresia ORDER BY ultima_modificacion DESC"
@@ -98,7 +98,7 @@ Public Class DPlanes
     ''' Busca planes por nombre utilizando la cláusula LIKE.
     ''' </summary>
     ''' <param name="nombre">Nombre o parte del nombre del plan a buscar.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     Public Function ListarPorNombre(nombre As String) As DataTable
         Try
             Dim query As String = "SELECT * FROM planes_membresia WHERE nombre_plan LIKE @nombre ORDER BY ultima_modificacion DESC"
@@ -116,7 +116,7 @@ Public Class DPlanes
     ''' Busca planes por duración exacta en días.
     ''' </summary>
     ''' <param name="duracion">Duración en días del plan.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     Public Function ListarPorDuracion(duracion As UInteger) As DataTable
         Try
             Dim query As String = "SELECT * FROM planes_membresia WHERE duracion_dias = @duracion ORDER BY ultima_modificacion DESC"
@@ -134,7 +134,7 @@ Public Class DPlanes
     ''' Busca planes por precio exacto.
     ''' </summary>
     ''' <param name="precio">Precio del plan.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     Public Function ListarPorPrecio(precio As Decimal) As DataTable
         Try
             Dim query As String = "SELECT * FROM planes_membresia WHERE precio = @precio ORDER BY ultima_modificacion DESC"

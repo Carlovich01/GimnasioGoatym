@@ -17,7 +17,7 @@ Public Class NMembresias
     ''' Obtiene la lista de todas las membresías registradas.
     ''' Antes de listar, actualiza el estado de las membresías vencidas a inactivas mediante <see cref="ActualizaAEstadoInactiva"/>.
     ''' </summary>
-    ''' <returns><see cref="DataTable"/> con los datos de las membresías.</returns>
+    ''' <returns>DataTable con los datos de las membresías.</returns>
     ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Function Listar() As DataTable
         Try
@@ -100,7 +100,7 @@ Public Class NMembresias
     ''' Obtiene una membresía por el DNI del miembro.
     ''' </summary>
     ''' <param name="dni">DNI del miembro.</param>
-    ''' <returns><see cref="DataTable"/> con los datos de la membresía encontrada.</returns>
+    ''' <returns>DataTable con los datos de la membresía encontrada.</returns>
     ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Function ObtenerPorDni(dni As String) As DataTable
         Try
@@ -115,7 +115,7 @@ Public Class NMembresias
     ''' Busca membresías por DNI del miembro utilizando la capa de datos <see cref="DMembresias.ListarPorDni"/>.
     ''' </summary>
     ''' <param name="dni">DNI o parte del DNI del miembro a buscar.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Function ListarPorDni(dni As String) As DataTable
         Try
@@ -131,7 +131,7 @@ Public Class NMembresias
     ''' Busca membresías por nombre de plan utilizando la capa de datos <see cref="DMembresias.ListarPorNombrePlan"/>.
     ''' </summary>
     ''' <param name="nombre">Nombre o parte del nombre del plan a buscar.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Function ListarPorNombrePlan(nombre As String) As DataTable
         Try
@@ -147,7 +147,7 @@ Public Class NMembresias
     ''' Busca membresías por estado utilizando la capa de datos <see cref="DMembresias.ListarPorEstado"/>.
     ''' </summary>
     ''' <param name="estado">Estado de la membresía (por ejemplo: "Activa", "Inactiva").</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Function ListarPorEstado(estado As String) As DataTable
         Try
@@ -176,7 +176,7 @@ Public Class NMembresias
     ''' Obtiene la membresía más reciente de un miembro específico.
     ''' </summary>
     ''' <param name="idMiembro">Identificador único del miembro.</param>
-    ''' <returns><see cref="DataTable"/> con los datos de la membresía más reciente.</returns>
+    ''' <returns>DataTable con los datos de la membresía más reciente.</returns>
     ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Function ObtenerMembresiaMasReciente(idMiembro As UInteger) As DataTable
         Try

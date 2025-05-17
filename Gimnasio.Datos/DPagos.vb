@@ -13,7 +13,7 @@ Public Class DPagos
     ''' <summary>
     ''' Obtiene todos los pagos desde la vista <c>vista_pagos</c>.
     ''' </summary>
-    ''' <returns><see cref="DataTable"/> con los datos de los pagos.</returns>
+    ''' <returns>DataTable con los datos de los pagos.</returns>
     Public Function Listar() As DataTable
         Try
             Dim query As String = "SELECT * FROM vista_pagos"
@@ -90,7 +90,7 @@ Public Class DPagos
     ''' </summary>
     ''' <param name="fechaInicio">Fecha de inicio del rango.</param>
     ''' <param name="fechaFin">Fecha de fin del rango.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     Public Function ListarPorFecha(fechaInicio As DateTime, fechaFin As DateTime) As DataTable
         Try
             Dim query As String = "SELECT * FROM vista_pagos WHERE fecha_pago BETWEEN @fechaInicio AND @fechaFin"
@@ -109,7 +109,7 @@ Public Class DPagos
     ''' Busca pagos por coincidencia parcial de DNI utilizando la vista <c>vista_pagos</c>.
     ''' </summary>
     ''' <param name="dni">DNI o parte del DNI del miembro a buscar.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     Public Function ListarPorDni(dni As String) As DataTable
         Try
             Dim query As String = "SELECT * FROM vista_pagos WHERE dni_miembro LIKE @dni"
@@ -127,7 +127,7 @@ Public Class DPagos
     ''' Busca pagos por coincidencia parcial de nombre de plan utilizando la vista <c>vista_pagos</c>.
     ''' </summary>
     ''' <param name="nombre">Nombre o parte del nombre del plan a buscar.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     Public Function ListarPorNombrePlan(nombre As String) As DataTable
         Try
             Dim query As String = "SELECT * FROM vista_pagos WHERE nombre_plan LIKE @nombre"
@@ -145,7 +145,7 @@ Public Class DPagos
     ''' Busca pagos por método de pago utilizando la vista <c>vista_pagos</c>.
     ''' </summary>
     ''' <param name="metodoPago">Método de pago a buscar.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     Public Function ListarPorMetodoPago(metodoPago As String) As DataTable
         Try
             Dim query As String = "SELECT * FROM vista_pagos WHERE metodo = @metodoPago"
@@ -164,7 +164,7 @@ Public Class DPagos
     ''' </summary>
     ''' <param name="montoMin">Monto mínimo.</param>
     ''' <param name="montoMax">Monto máximo.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     Public Function ListarPorMontos(montoMin As Decimal, montoMax As Decimal) As DataTable
         Try
             Dim query As String = "

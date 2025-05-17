@@ -20,7 +20,7 @@ Public Class Miembros
     ''' </summary>
     Private _apellido As String
     ''' <summary>
-    ''' Género del miembro.
+    ''' Género del miembro ('Masculino', 'Femenino', 'Otro', 'Prefiero no decir')
     ''' </summary>
     Private _genero As String
     ''' <summary>

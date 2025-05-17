@@ -6,6 +6,9 @@ Imports Gimnasio.Errores
 ''' <summary>
 ''' Lógica de negocio para la gestión de planes en el sistema de gimnasio.
 ''' Interactúa con la capa de datos <see cref="DPlanes"/> y la entidad <see cref="Planes"/>.
+''' Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.  
+''' Si ocurre una excepción, se registra el error utilizando <see cref="ManejarErrores.Log"/> en un log.txt
+''' Posteriormente, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message) para que pueda ser gestionada en la interfaz de usuario.
 ''' </summary>
 Public Class NPlanes
     ''' <summary>
@@ -17,7 +20,6 @@ Public Class NPlanes
     ''' Valida los campos de la entidad <see cref="Planes"/> antes de realizar operaciones de inserción o actualización.
     ''' </summary>
     ''' <param name="Obj">Instancia de <see cref="Planes"/> a validar.</param>
-    ''' <exception cref="Exception">Se lanza si algún campo no cumple con las reglas de negocio.</exception>
     Private Sub ValidarCampos(Obj As Planes)
         If Obj.NombrePlan.Length > 100 Then
             Throw New Exception("El nombre del plan no puede exceder los 100 caracteres.")
@@ -35,7 +37,7 @@ Public Class NPlanes
     ''' <summary>
     ''' Obtiene la lista de todos los planes registrados.
     ''' </summary>
-    ''' <returns><see cref="DataTable"/> con los datos de los planes.</returns>
+    ''' <returns>DataTable con los datos de los planes.</returns>
     ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Function Listar() As DataTable
         Try
@@ -99,7 +101,7 @@ Public Class NPlanes
     ''' Busca planes por nombre utilizando la capa de datos <see cref="DPlanes.ListarPorNombre"/>.
     ''' </summary>
     ''' <param name="nombre">Nombre o parte del nombre del plan a buscar.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     ''' <exception cref="Exception">Se lanza si el nombre excede el límite permitido o por errores de la capa de datos.</exception>
     Public Function ListarPorNombre(nombre As String) As DataTable
         Try
@@ -117,7 +119,7 @@ Public Class NPlanes
     ''' Busca planes por duración utilizando la capa de datos <see cref="DPlanes.ListarPorDuracion"/>.
     ''' </summary>
     ''' <param name="duracion">Duración en días del plan.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     ''' <exception cref="Exception">Se lanza si la duración es menor o igual a cero o por errores de la capa de datos.</exception>
     Public Function ListarPorDuracion(duracion As UInteger) As DataTable
         Try
@@ -135,7 +137,7 @@ Public Class NPlanes
     ''' Busca planes por precio utilizando la capa de datos <see cref="DPlanes.ListarPorPrecio"/>.
     ''' </summary>
     ''' <param name="precio">Precio del plan.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     ''' <exception cref="Exception">Se lanza si el precio es negativo o mayor al límite permitido, o por errores de la capa de datos.</exception>
     Public Function ListarPorPrecio(precio As Decimal) As DataTable
         Try

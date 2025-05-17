@@ -5,6 +5,9 @@ Imports Gimnasio.Errores
 ''' <summary>
 ''' Formulario para la gestión y consulta de asistencias de los miembros en el sistema del gimnasio.
 ''' Permite listar, buscar por DNI o fecha, y eliminar registros de asistencia. Utiliza la clase <see cref="NAsistencia"/> para la lógica de negocio.
+''' Todas las operaciones de esta capa están envueltas en bloques Try...Catch. 
+''' El manejo de errores se realiza a través de <see cref="Gimnasio.Errores.ManejarErrores.Mostrar(String, Exception)"/>
+''' que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.
 ''' </summary>
 Public Class FrmRegistroAsistencias
     ''' <summary>

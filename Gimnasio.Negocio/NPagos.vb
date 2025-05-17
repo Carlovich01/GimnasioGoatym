@@ -38,7 +38,7 @@ Public Class NPagos
     ''' <summary>
     ''' Obtiene la lista de todos los pagos registrados.
     ''' </summary>
-    ''' <returns><see cref="DataTable"/> con los datos de los pagos.</returns>
+    ''' <returns>DataTable con los datos de los pagos.</returns>
     ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Function Listar() As DataTable
         Try
@@ -115,7 +115,7 @@ Public Class NPagos
     ''' </summary>
     ''' <param name="fechaInicio">Fecha de inicio del rango.</param>
     ''' <param name="fechaFin">Fecha de fin del rango.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Function ListarPorFecha(fechaInicio As DateTime, fechaFin As DateTime) As DataTable
         Try
@@ -132,7 +132,7 @@ Public Class NPagos
     ''' Busca pagos por DNI del miembro utilizando la capa de datos <see cref="DPagos.ListarPorDni"/>.
     ''' </summary>
     ''' <param name="dni">DNI o parte del DNI del miembro a buscar.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     ''' <exception cref="Exception">Se lanza si el DNI excede el límite permitido o por errores de la capa de datos.</exception>
     Public Function ListarPorDni(dni As String) As DataTable
         Try
@@ -152,7 +152,7 @@ Public Class NPagos
     ''' Busca pagos por nombre de plan utilizando la capa de datos <see cref="DPagos.ListarPorNombrePlan"/>.
     ''' </summary>
     ''' <param name="nombre">Nombre o parte del nombre del plan a buscar.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     ''' <exception cref="Exception">Se lanza si el nombre excede el límite permitido o por errores de la capa de datos.</exception>
     Public Function ListarPorNombrePlan(nombre As String) As DataTable
         Try
@@ -172,7 +172,7 @@ Public Class NPagos
     ''' Busca pagos por método de pago utilizando la capa de datos <see cref="DPagos.ListarPorMetodoPago"/>.
     ''' </summary>
     ''' <param name="metodo">Método de pago a buscar.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Function ListarPorMetodoPago(metodo As String) As DataTable
         Try
@@ -190,7 +190,7 @@ Public Class NPagos
     ''' </summary>
     ''' <param name="montoMin">Monto mínimo.</param>
     ''' <param name="montoMax">Monto máximo.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     ''' <exception cref="Exception">Se lanza si los montos son negativos o por errores de la capa de datos.</exception>
     Public Function ListarPorMontos(montoMin As Decimal, montoMax As Decimal) As DataTable
         Try

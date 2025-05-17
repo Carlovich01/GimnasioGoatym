@@ -24,7 +24,7 @@ Public Class Pagos
     ''' </summary>
     Private _montoPagado As Decimal
     ''' <summary>
-    ''' Método de pago utilizado (por ejemplo: efectivo, tarjeta, transferencia).
+    ''' Método de pago utilizado ('Efectivo', 'Tarjeta Débito', 'Tarjeta Crédito', 'Transferencia Bancaria', 'Mercado Pago', 'Otro').
     ''' </summary>
     Private _metodoPago As String
     ''' <summary>

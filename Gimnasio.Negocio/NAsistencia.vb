@@ -6,6 +6,9 @@ Imports System.Data
 ''' <summary>
 ''' Lógica de negocio para la gestión de asistencias en el sistema de gimnasio.
 ''' Interactúa con la capa de datos <see cref="DAsistencia"/> y la entidad <see cref="Asistencia"/>.
+''' Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.  
+''' Si ocurre una excepción, se registra el error utilizando <see cref="ManejarErrores.Log"/> en un log.txt
+''' Posteriormente, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message) para que pueda ser gestionada en la interfaz de usuario.
 ''' </summary>
 Public Class NAsistencia
     ''' <summary>
@@ -16,8 +19,7 @@ Public Class NAsistencia
     ''' <summary>
     ''' Obtiene la lista de todas las asistencias registradas.
     ''' </summary>
-    ''' <returns><see cref="DataTable"/> con los datos de las asistencias.</returns>
-    ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
+    ''' <returns>DataTable con los datos de las asistencias.</returns>
     Public Function Listar() As DataTable
         Try
             Return dAsistencias.Listar()
@@ -28,11 +30,16 @@ Public Class NAsistencia
     End Function
 
     ''' <summary>
-    ''' Registra el ingreso de un miembro por su DNI.
-    ''' Valida la existencia del miembro y el estado de su membresía más reciente.
-    ''' Registra la asistencia mediante <see cref="DAsistencia.RegistrarAsistencia"/>.
+    ''' 1. Busca el miembro por su DNI usando <see cref="NMiembros.ObtenerPorDni(String)"/>.
+    '''    - Si no existe, retorna "Fallido_DNI_NoEncontrado".
+    ''' 2. Si el miembro existe, obtiene su membresía más reciente con <see cref="NMembresias.ObtenerMembresiaMasReciente(UInteger)"/>.
+    '''    - Si no tiene membresía, retorna "Fallido_No_Hay_Membresia".
+    '''    - Si la membresía está inactiva, retorna "Fallido_Membresia_Inactiva".
+    '''    - Si la membresía está activa, registra la asistencia y retorna "Exitoso".
+    ''' 3. En todos los casos, registra el intento de asistencia en la base de datos mediante <see cref="DAsistencia.RegistrarAsistencia"/>.
+    ''' 4. Si ocurre una excepción, la registra en el log y la propaga.
     ''' </summary>
-    ''' <param name="dni">DNI del miembro.</param>
+    ''' <param name="dni">DNI del miembro a registrar el ingreso.</param>
     ''' <returns>
     ''' "Exitoso" si la membresía está activa,
     ''' "Fallido_Membresia_Inactiva" si la membresía está inactiva,
@@ -40,7 +47,6 @@ Public Class NAsistencia
     ''' "Fallido_No_Hay_Membresia" si no tiene membresía,
     ''' "Fallido_Otro" para otros casos.
     ''' </returns>
-    ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Function RegistrarIngresoPorDNI(dni As String) As String
         Try
             Dim resultado As String = "Fallido_Otro"
@@ -65,13 +71,12 @@ Public Class NAsistencia
                             resultado = "Fallido_Membresia_Inactiva"
                     End Select
                 End If
+                Dim asistencia As New Asistencia()
 
-                Dim asistencia As New Asistencia() With {
-                    .IdMiembro = idMiembro,
-                    .FechaHoraCheckin = DateTime.Now,
-                    .Resultado = resultado,
-                    .IdMembresiaValida = idMembresiaValida
-                }
+                asistencia.IdMiembro = idMiembro
+                asistencia.FechaHoraCheckin = DateTime.Now
+                asistencia.Resultado = resultado
+                asistencia.IdMembresiaValida = idMembresiaValida
                 dAsistencias.RegistrarAsistencia(asistencia)
             End If
 
@@ -85,9 +90,8 @@ Public Class NAsistencia
     ''' <summary>
     ''' Busca asistencias por DNI del miembro utilizando la capa de datos <see cref="DAsistencia.ListarPorDNI"/>.
     ''' </summary>
-    ''' <param name="dni">DNI o parte del DNI del miembro a buscar.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
-    ''' <exception cref="Exception">Se lanza si el DNI excede el límite permitido o por errores de la capa de datos.</exception>
+    ''' <param name="dni">DNI del miembro a buscar.</param>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     Public Function ListarPorDNI(dni As String) As DataTable
         Try
             If dni.Length > 15 Then
@@ -106,13 +110,10 @@ Public Class NAsistencia
     ''' </summary>
     ''' <param name="fechaInicio">Fecha de inicio del rango.</param>
     ''' <param name="fechaFin">Fecha de fin del rango.</param>
-    ''' <returns><see cref="DataTable"/> con los resultados de la búsqueda.</returns>
-    ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
+    ''' <returns>DataTable con los resultados de la búsqueda.</returns>
     Public Function ListarPorFecha(fechaInicio As DateTime, fechaFin As DateTime) As DataTable
         Try
-            Dim dvPagos As DataTable
-            dvPagos = dAsistencias.ListarPorFecha(fechaInicio, fechaFin)
-            Return dvPagos
+            Return dAsistencias.ListarPorFecha(fechaInicio, fechaFin)
         Catch ex As Exception
             ManejarErrores.Log("Capa Negocio", ex)
             Throw New Exception(ex.Message)
@@ -120,10 +121,9 @@ Public Class NAsistencia
     End Function
 
     ''' <summary>
-    ''' Elimina un registro de asistencia del sistema según su identificador.
+    ''' Elimina un registro de asistencia del sistema según su identificador utilizando la capa de datos <see cref="DAsistencia.Eliminar"/>.
     ''' </summary>
     ''' <param name="id">Identificador único de la asistencia a eliminar.</param>
-    ''' <exception cref="Exception">Propaga excepciones de la capa de datos.</exception>
     Public Sub Eliminar(id As UInteger)
         Try
             dAsistencias.Eliminar(id)
