@@ -28,7 +28,7 @@ CREATE TABLE `asistencia` (
   `id_asistencia` bigint unsigned NOT NULL AUTO_INCREMENT COMMENT 'Usar BIGINT si se esperan muchos check-ins',
   `id_miembro` int unsigned DEFAULT NULL COMMENT 'Miembro que realizó el check-in',
   `fecha_hora_checkin` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Fecha y hora exactas del intento de ingreso',
-  `resultado` enum('Exitoso','Fallido_DNI_NoEncontrado','Fallido_Membresia_Inactiva','Fallido_No_Hay_Membresia','Fallido_Otro') NOT NULL COMMENT 'Resultado de la validación del check-in',
+  `resultado` enum('Exitoso','Fallido_DNI_NoEncontrado','Fallido_Membresia_Inactiva','Fallido_No_Hay_Membresia') NOT NULL COMMENT 'Resultado de la validación del check-in',
   `id_membresia_valida` int unsigned DEFAULT NULL COMMENT 'Opcional: ID de la membresía que permitió el acceso exitoso',
   PRIMARY KEY (`id_asistencia`),
   KEY `fk_asistencia_membresia_valida` (`id_membresia_valida`),
@@ -37,7 +37,7 @@ CREATE TABLE `asistencia` (
   KEY `idx_asistencia_resultado` (`resultado`),
   CONSTRAINT `fk_asistencia_membresia_valida` FOREIGN KEY (`id_membresia_valida`) REFERENCES `membresias_miembro` (`id_membresia`) ON DELETE SET NULL ON UPDATE CASCADE,
   CONSTRAINT `fk_asistencia_miembro` FOREIGN KEY (`id_miembro`) REFERENCES `miembros` (`id_miembro`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Log de ingresos (check-ins) de los miembros';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Log de ingresos (check-ins) de los miembros';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,7 +46,6 @@ CREATE TABLE `asistencia` (
 
 LOCK TABLES `asistencia` WRITE;
 /*!40000 ALTER TABLE `asistencia` DISABLE KEYS */;
-INSERT INTO `asistencia` VALUES (12,15,'2025-05-11 18:49:50','Exitoso',NULL);
 /*!40000 ALTER TABLE `asistencia` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -73,7 +72,7 @@ CREATE TABLE `membresias_miembro` (
   KEY `idx_membresia_estado` (`estado_membresia`),
   CONSTRAINT `fk_membresia_miembro` FOREIGN KEY (`id_miembro`) REFERENCES `miembros` (`id_miembro`) ON DELETE RESTRICT ON UPDATE CASCADE,
   CONSTRAINT `fk_membresia_plan` FOREIGN KEY (`id_plan`) REFERENCES `planes_membresia` (`id_plan`) ON DELETE RESTRICT ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Instancias de suscripción de los miembros a planes';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Instancias de suscripción de los miembros a planes';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -82,7 +81,6 @@ CREATE TABLE `membresias_miembro` (
 
 LOCK TABLES `membresias_miembro` WRITE;
 /*!40000 ALTER TABLE `membresias_miembro` DISABLE KEYS */;
-INSERT INTO `membresias_miembro` VALUES (20,19,10,'2025-05-11','2025-05-11','Inactiva','2025-05-11 19:18:41','2025-05-11 20:58:14'),(21,20,9,'2025-05-11','2025-05-26','Activa','2025-05-11 19:31:53','2025-05-11 19:58:39'),(22,20,10,'2025-05-11','2025-05-11','Inactiva','2025-05-11 19:41:53','2025-05-11 19:41:53'),(23,17,10,'2025-05-11','2025-05-11','Inactiva','2025-05-11 19:58:49','2025-05-11 19:58:49'),(24,22,9,'2025-05-11','2025-05-11','Inactiva','2025-05-11 20:02:46','2025-05-11 20:02:46'),(25,21,9,'2025-05-11','2025-05-26','Activa','2025-05-11 20:03:44','2025-05-11 20:03:48'),(27,15,9,'2025-05-11','2025-05-11','Inactiva','2025-05-11 20:54:02','2025-05-11 20:54:02');
 /*!40000 ALTER TABLE `membresias_miembro` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -107,7 +105,7 @@ CREATE TABLE `miembros` (
   UNIQUE KEY `dni` (`dni`),
   KEY `idx_miembro_dni` (`dni`),
   KEY `idx_miembro_apellido` (`apellido`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Clientes del gimnasio';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Clientes del gimnasio';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -116,7 +114,6 @@ CREATE TABLE `miembros` (
 
 LOCK TABLES `miembros` WRITE;
 /*!40000 ALTER TABLE `miembros` DISABLE KEYS */;
-INSERT INTO `miembros` VALUES (15,'454699222','carlossss','diaz','Prefiero no decir','37342312','car@yahoo.com','2025-05-11 18:42:56','2025-05-11 20:39:09'),(16,'32313','ram','gia','Masculino','3133223','xd@gmail.com','2025-05-11 18:43:50','2025-05-11 18:43:50'),(17,'123','chismu','x','Masculino',NULL,NULL,'2025-05-11 19:16:38','2025-05-11 19:16:38'),(18,'12345','nose','nose','Masculino',NULL,NULL,'2025-05-11 19:17:50','2025-05-11 19:17:50'),(19,'2222','xd','das','Masculino',NULL,NULL,'2025-05-11 19:18:21','2025-05-11 19:18:21'),(20,'777','Vegeta','nose','Masculino',NULL,NULL,'2025-05-11 19:31:35','2025-05-11 19:31:35'),(21,'000','juan','xd','Masculino',NULL,NULL,'2025-05-11 20:02:04','2025-05-11 20:02:04'),(22,'999','Pepe','Pepe','Masculino',NULL,NULL,'2025-05-11 20:02:36','2025-05-11 20:02:36'),(23,'nose','Dr ','House','Masculino',NULL,NULL,'2025-05-11 20:04:35','2025-05-11 20:04:35');
 /*!40000 ALTER TABLE `miembros` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -142,7 +139,7 @@ CREATE TABLE `pagos` (
   KEY `idx_pago_fecha` (`fecha_pago`),
   CONSTRAINT `fk_pago_membresia` FOREIGN KEY (`id_membresia`) REFERENCES `membresias_miembro` (`id_membresia`) ON DELETE SET NULL ON UPDATE CASCADE,
   CONSTRAINT `fk_pago_usuario` FOREIGN KEY (`id_usuario_registro`) REFERENCES `usuarios_sistema` (`id_usuario`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Registro de transacciones económicas de los miembros';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Registro de transacciones económicas de los miembros';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -151,7 +148,6 @@ CREATE TABLE `pagos` (
 
 LOCK TABLES `pagos` WRITE;
 /*!40000 ALTER TABLE `pagos` DISABLE KEYS */;
-INSERT INTO `pagos` VALUES (10,NULL,1,'2025-05-11 18:46:53',14000.00,'Mercado Pago',NULL,NULL),(11,NULL,1,'2025-05-11 18:48:11',1000.00,'Efectivo',NULL,NULL),(13,21,1,'2025-05-11 19:58:39',14000.00,'Efectivo',NULL,NULL),(15,25,1,'2025-05-11 20:03:48',14000.00,'Efectivo',NULL,NULL),(16,NULL,1,'2025-05-11 20:04:47',1000.00,'Efectivo',NULL,NULL);
 /*!40000 ALTER TABLE `pagos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -172,7 +168,7 @@ CREATE TABLE `planes_membresia` (
   `ultima_modificacion` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_plan`),
   UNIQUE KEY `nombre_plan` (`nombre_plan`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Tipos de suscripciones ofrecidas';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Tipos de suscripciones ofrecidas';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -181,7 +177,6 @@ CREATE TABLE `planes_membresia` (
 
 LOCK TABLES `planes_membresia` WRITE;
 /*!40000 ALTER TABLE `planes_membresia` DISABLE KEYS */;
-INSERT INTO `planes_membresia` VALUES (9,'Futb','x',15,14000.00,'2025-05-11 18:41:43','2025-05-11 18:42:17'),(10,'xd','aaa',10,1000.00,'2025-05-11 18:42:33','2025-05-11 18:42:33');
 /*!40000 ALTER TABLE `planes_membresia` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -204,7 +199,7 @@ CREATE TABLE `reclamos` (
   PRIMARY KEY (`id_reclamos`),
   KEY `fk_reclamos_miembros1_idx` (`id_miembro`),
   CONSTRAINT `fk_reclamos_miembros1` FOREIGN KEY (`id_miembro`) REFERENCES `miembros` (`id_miembro`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -213,7 +208,6 @@ CREATE TABLE `reclamos` (
 
 LOCK TABLES `reclamos` WRITE;
 /*!40000 ALTER TABLE `reclamos` DISABLE KEYS */;
-INSERT INTO `reclamos` VALUES (4,'sugerencia','xd','2025-05-11 16:33:29','resuelto','xddddddd','2025-05-11 16:38:40',NULL),(5,'sugerencia','xdddd','2025-05-11 16:33:53','pendiente','aaaaa','2025-05-11 17:06:20',NULL),(7,'sugerencia','adadsasddsdsa','2025-05-11 18:50:49','resuelto','ta bien xd','2025-05-11 18:51:39',15);
 /*!40000 ALTER TABLE `reclamos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -253,10 +247,10 @@ DROP TABLE IF EXISTS `usuarios_sistema`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usuarios_sistema` (
   `id_usuario` int unsigned NOT NULL AUTO_INCREMENT,
-  `username` varchar(50) NOT NULL COMMENT 'Nombre de usuario para login',
-  `password_hash` varchar(255) NOT NULL COMMENT 'Contraseña hasheada (NUNCA guardar texto plano)',
-  `nombre_completo` varchar(150) NOT NULL COMMENT 'Nombre y apellido del empleado',
-  `email` varchar(100) DEFAULT NULL COMMENT 'Email del empleado (opcional, pero útil)',
+  `username` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_as_cs NOT NULL COMMENT 'Nombre de usuario para login',
+  `password_hash` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_as_cs NOT NULL COMMENT 'Contraseña hasheada (NUNCA guardar texto plano)',
+  `nombre_completo` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'Nombre y apellido del empleado',
+  `email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT 'Email del empleado (opcional, pero útil)',
   `id_rol` int unsigned NOT NULL COMMENT 'Rol del usuario en el sistema',
   `fecha_creacion` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `ultima_modificacion` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -264,7 +258,7 @@ CREATE TABLE `usuarios_sistema` (
   UNIQUE KEY `username` (`username`),
   KEY `idx_usuario_rol` (`id_rol`),
   CONSTRAINT `fk_usuario_rol` FOREIGN KEY (`id_rol`) REFERENCES `roles` (`id_rol`) ON DELETE RESTRICT ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Usuarios que operan el sistema (staff)';
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_as_cs COMMENT='Usuarios que operan el sistema (staff)';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -273,7 +267,7 @@ CREATE TABLE `usuarios_sistema` (
 
 LOCK TABLES `usuarios_sistema` WRITE;
 /*!40000 ALTER TABLE `usuarios_sistema` DISABLE KEYS */;
-INSERT INTO `usuarios_sistema` VALUES (1,'admin','A6xnQhbz4Vx2HuGl4lXwZ5U2I8iziLRFnhP5eNfIRvQ=','Carlos Diaz',NULL,1,'2025-05-07 01:56:09','2025-05-07 01:56:09'),(3,'Ramiro','A6xnQhbz4Vx2HuGl4lXwZ5U2I8iziLRFnhP5eNfIRvQ=','Ramiro Gianello','ramiro@gmail.com',2,'2025-05-08 11:29:43','2025-05-11 18:32:23');
+INSERT INTO `usuarios_sistema` VALUES (1,'admin','A6xnQhbz4Vx2HuGl4lXwZ5U2I8iziLRFnhP5eNfIRvQ=','Carlos Diaz',NULL,1,'2025-05-07 01:56:09','2025-05-07 01:56:09'),(3,'recep','A6xnQhbz4Vx2HuGl4lXwZ5U2I8iziLRFnhP5eNfIRvQ=','Ramiro Gianello','ramiro@gmail.com',2,'2025-05-08 11:29:43','2025-05-11 22:19:20');
 /*!40000 ALTER TABLE `usuarios_sistema` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -293,7 +287,8 @@ SET @saved_cs_client     = @@character_set_client;
  1 AS `nombre_miembro`,
  1 AS `apellido_miembro`,
  1 AS `fecha_ingreso`,
- 1 AS `resultado`*/;
+ 1 AS `resultado`,
+ 1 AS `nombre_plan_membresia`*/;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -340,6 +335,7 @@ SET @saved_cs_client     = @@character_set_client;
  1 AS `monto`,
  1 AS `metodo`,
  1 AS `comprobante`,
+ 1 AS `notas`,
  1 AS `fecha_pago`,
  1 AS `nombre_usuario`*/;
 SET character_set_client = @saved_cs_client;
@@ -384,7 +380,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `vista_asistencia` AS select `a`.`id_asistencia` AS `id_asistencia`,`a`.`id_miembro` AS `id_miembro`,`a`.`id_membresia_valida` AS `id_membresia`,`m`.`dni` AS `dni_miembro`,`m`.`nombre` AS `nombre_miembro`,`m`.`apellido` AS `apellido_miembro`,`a`.`fecha_hora_checkin` AS `fecha_ingreso`,`a`.`resultado` AS `resultado` from ((`asistencia` `a` join `miembros` `m` on((`a`.`id_miembro` = `m`.`id_miembro`))) left join `membresias_miembro` `mm` on((`a`.`id_membresia_valida` = `mm`.`id_membresia`))) order by `a`.`fecha_hora_checkin` desc */;
+/*!50001 VIEW `vista_asistencia` AS select `a`.`id_asistencia` AS `id_asistencia`,`a`.`id_miembro` AS `id_miembro`,`a`.`id_membresia_valida` AS `id_membresia`,`m`.`dni` AS `dni_miembro`,`m`.`nombre` AS `nombre_miembro`,`m`.`apellido` AS `apellido_miembro`,`a`.`fecha_hora_checkin` AS `fecha_ingreso`,`a`.`resultado` AS `resultado`,`pm`.`nombre_plan` AS `nombre_plan_membresia` from (((`asistencia` `a` left join `miembros` `m` on((`a`.`id_miembro` = `m`.`id_miembro`))) left join `membresias_miembro` `mm` on((`a`.`id_membresia_valida` = `mm`.`id_membresia`))) left join `planes_membresia` `pm` on((`mm`.`id_plan` = `pm`.`id_plan`))) order by `a`.`fecha_hora_checkin` desc */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -420,7 +416,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `vista_pagos` AS select `p`.`id_pago` AS `id_pago`,`p`.`id_membresia` AS `id_membresia`,`p`.`id_usuario_registro` AS `id_usuario_registro`,`m`.`apellido` AS `apellido_miembro`,`m`.`nombre` AS `nombre_miembro`,`m`.`dni` AS `dni_miembro`,`pm`.`nombre_plan` AS `nombre_plan`,`p`.`monto_pagado` AS `monto`,`p`.`metodo_pago` AS `metodo`,`p`.`numero_comprobante` AS `comprobante`,`p`.`fecha_pago` AS `fecha_pago`,`us`.`nombre_completo` AS `nombre_usuario` from ((((`pagos` `p` left join `membresias_miembro` `mm` on((`p`.`id_membresia` = `mm`.`id_membresia`))) left join `miembros` `m` on((`mm`.`id_miembro` = `m`.`id_miembro`))) left join `planes_membresia` `pm` on((`mm`.`id_plan` = `pm`.`id_plan`))) left join `usuarios_sistema` `us` on((`p`.`id_usuario_registro` = `us`.`id_usuario`))) order by `p`.`fecha_pago` desc */;
+/*!50001 VIEW `vista_pagos` AS select `p`.`id_pago` AS `id_pago`,`p`.`id_membresia` AS `id_membresia`,`p`.`id_usuario_registro` AS `id_usuario_registro`,`m`.`apellido` AS `apellido_miembro`,`m`.`nombre` AS `nombre_miembro`,`m`.`dni` AS `dni_miembro`,`pm`.`nombre_plan` AS `nombre_plan`,`p`.`monto_pagado` AS `monto`,`p`.`metodo_pago` AS `metodo`,`p`.`numero_comprobante` AS `comprobante`,`p`.`notas` AS `notas`,`p`.`fecha_pago` AS `fecha_pago`,`us`.`nombre_completo` AS `nombre_usuario` from ((((`pagos` `p` left join `membresias_miembro` `mm` on((`p`.`id_membresia` = `mm`.`id_membresia`))) left join `miembros` `m` on((`mm`.`id_miembro` = `m`.`id_miembro`))) left join `planes_membresia` `pm` on((`mm`.`id_plan` = `pm`.`id_plan`))) left join `usuarios_sistema` `us` on((`p`.`id_usuario_registro` = `us`.`id_usuario`))) order by `p`.`fecha_pago` desc */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -452,4 +448,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-11 18:21:26
+-- Dump completed on 2025-05-17 17:11:48

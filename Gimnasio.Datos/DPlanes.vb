@@ -6,12 +6,14 @@ Imports Gimnasio.Errores
 ''' Clase de acceso a datos para la gestión de planes de membresía.
 ''' Hereda de <see cref="ConexionBase"/> y utiliza la entidad <see cref="Planes"/>.
 ''' Proporciona métodos CRUD y de búsqueda para la tabla <c>planes_membresia</c>.
+''' 
+''' Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo
 ''' </summary>
 Public Class DPlanes
     Inherits ConexionBase
 
     ''' <summary>
-    ''' Obtiene todos los planes de la base de datos ordenados por la última modificación.
+    ''' Ejecuta una consulta SQL (SELECT) que obtiene todos los planes de la base de datos ordenados por la última modificación.
     ''' </summary>
     ''' <returns>DataTable con los datos de los planes.</returns>
     Public Function Listar() As DataTable
@@ -25,8 +27,9 @@ Public Class DPlanes
     End Function
 
     ''' <summary>
-    ''' Inserta un nuevo plan en la base de datos.
-    ''' Utiliza los datos de la entidad <see cref="Planes"/>.
+    ''' Utiliza los datos proporcionados en la instancia de Planes recibida para ejecutar una sentencia SQL(INSERT), la cual inserta el nuevo plan. 
+    ''' Los valores nulos se almacenan como NULL en la base de datos.
+    ''' Se lanza una excepción si el nombre del plan ya existe.
     ''' </summary>
     ''' <param name="Obj">Instancia de <see cref="Planes"/> a insertar.</param>
     ''' <exception cref="Exception">Se lanza si el nombre del plan ya existe o por errores de la base de datos.</exception>
@@ -51,7 +54,9 @@ Public Class DPlanes
     End Sub
 
     ''' <summary>
-    ''' Actualiza los datos de un plan existente en la base de datos.
+    ''' Recibe una instancia de Planes y ejecuta una sentencia SQL (UPDATE) que actualiza los campos de un registro de plan existente que 
+    ''' corresponde al id de la instancia.
+    ''' Los valores nulos se almacenan como NULL en la base de datos.
     ''' </summary>
     ''' <param name="Obj">Instancia de <see cref="Planes"/> con los datos actualizados.</param>
     Public Sub Actualizar(Obj As Planes)
@@ -72,7 +77,8 @@ Public Class DPlanes
     End Sub
 
     ''' <summary>
-    ''' Elimina un plan de la base de datos según su identificador.
+    ''' Recibe el id del plan a eliminar y ejecuta una sentencia SQL (DELETE) que elimina el registro de plan correspondiente.
+    ''' Si el plan tiene membresías asociadas y existe una restricción de clave foránea, captura la excepción y lanza un mensaje específico.
     ''' </summary>
     ''' <param name="id">Identificador único del plan a eliminar.</param>
     ''' <exception cref="Exception">Se lanza si el plan tiene membresías asociadas o por errores de la base de datos.</exception>
@@ -95,7 +101,8 @@ Public Class DPlanes
     End Sub
 
     ''' <summary>
-    ''' Busca planes por nombre utilizando la cláusula LIKE.
+    ''' Recibe el nombre o parte del nombre del plan a buscar y ejecuta una sentencia SQL (SELECT) que busca coincidencias 
+    ''' en la base de datos. Utiliza la cláusula LIKE para permitir coincidencias parciales.
     ''' </summary>
     ''' <param name="nombre">Nombre o parte del nombre del plan a buscar.</param>
     ''' <returns>DataTable con los resultados de la búsqueda.</returns>
@@ -113,7 +120,8 @@ Public Class DPlanes
     End Function
 
     ''' <summary>
-    ''' Busca planes por duración exacta en días.
+    ''' Recibe la duración en días del plan a buscar y ejecuta una sentencia SQL (SELECT) que busca coincidencias 
+    ''' en la base de datos. Utiliza la cláusula WHERE para filtrar por duración exacta.
     ''' </summary>
     ''' <param name="duracion">Duración en días del plan.</param>
     ''' <returns>DataTable con los resultados de la búsqueda.</returns>
@@ -131,7 +139,8 @@ Public Class DPlanes
     End Function
 
     ''' <summary>
-    ''' Busca planes por precio exacto.
+    ''' Recibe el precio del plan a buscar y ejecuta una sentencia SQL (SELECT) que busca coincidencias 
+    ''' en la base de datos. Utiliza la cláusula WHERE para filtrar por precio exacto.
     ''' </summary>
     ''' <param name="precio">Precio del plan.</param>
     ''' <returns>DataTable con los resultados de la búsqueda.</returns>

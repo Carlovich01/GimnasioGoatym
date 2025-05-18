@@ -5,13 +5,15 @@ Imports Gimnasio.Errores
 ''' <summary>
 ''' Clase de acceso a datos para la gestión de miembros en el sistema de gimnasio.
 ''' Hereda de <see cref="ConexionBase"/> y utiliza la entidad <see cref="Miembros"/>.
-''' Proporciona métodos CRUD y de búsqueda para la tabla <c>miembros</c>.
+''' Proporciona métodos CRUD y de búsqueda para la tabla miembros.
+''' 
+''' Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo
 ''' </summary>
 Public Class DMiembros
     Inherits ConexionBase
 
     ''' <summary>
-    ''' Obtiene todos los miembros de la base de datos ordenados por la última modificación.
+    ''' Ejecuta una consulta SQL (SELECT) que obtiene todos los miembros ordenados por la fecha de última modificación
     ''' </summary>
     ''' <returns>DataTable con los datos de los miembros.</returns>
     Public Function Listar() As DataTable
@@ -25,11 +27,11 @@ Public Class DMiembros
     End Function
 
     ''' <summary>
-    ''' Inserta un nuevo miembro en la base de datos.
-    ''' Utiliza los datos de la entidad <see cref="Miembros"/>.
+    ''' Utiliza los datos proporcionados en la instancia de Miembros para ejecutar una sentencia SQL(INSERT) 
+    ''' para insertar un nuevo miembro. Los valores nulos se almacenan como NULL en la base de datos.
+    ''' Si el DNI esta duplicado, lanza una excepción.
     ''' </summary>
     ''' <param name="Obj">Instancia de <see cref="Miembros"/> a insertar.</param>
-    ''' <exception cref="Exception">Se lanza si el DNI ya está registrado o por errores de la base de datos.</exception>
     Public Sub Insertar(Obj As Miembros)
         Try
             Dim query As String = "INSERT INTO miembros (dni, nombre, apellido, genero, telefono, email) VALUES (@dni, @nom, @ape, @gen, @tel, @ema)"
@@ -54,7 +56,8 @@ Public Class DMiembros
     End Sub
 
     ''' <summary>
-    ''' Actualiza los datos de un miembro existente en la base de datos.
+    ''' Recibe una instancia de Miembros y ejecuta una sentencia SQL (UPDATE) que actualiza los campos de un registro de miembro existente que 
+    ''' corresponde al id de la instancia. 
     ''' </summary>
     ''' <param name="Obj">Instancia de <see cref="Miembros"/> con los datos actualizados.</param>
     Public Sub Actualizar(Obj As Miembros)
@@ -77,10 +80,10 @@ Public Class DMiembros
     End Sub
 
     ''' <summary>
-    ''' Elimina un miembro de la base de datos según su identificador.
+    ''' Recibe el id del miembro a eliminar y ejecuta una sentencia SQL (DELETE) que elimina el registro de miembro correspondiente.
+    ''' Si el miembro tiene membresías asociadas y existe una restricción de clave foránea, captura la excepción y lanza un mensaje específico.
     ''' </summary>
     ''' <param name="id">Identificador único del miembro a eliminar.</param>
-    ''' <exception cref="Exception">Se lanza si el miembro tiene membresías asociadas o por errores de la base de datos.</exception>
     Public Sub Eliminar(id As UInteger)
         Try
             Dim query As String = "DELETE FROM miembros WHERE id_miembro = @id"
@@ -100,7 +103,9 @@ Public Class DMiembros
     End Sub
 
     ''' <summary>
-    ''' Busca miembros por nombre o apellido utilizando la cláusula LIKE.
+    ''' Recibe el nombre o parte del nombre/apellido del miembro a buscar y ejecuta una sentencia SQL (SELECT) que busca coincidencias 
+    ''' en la base de datos. Utiliza la cláusula LIKE para permitir coincidencias parciales. 
+    ''' Los resultados se ordenan por la fecha de última modificación.
     ''' </summary>
     ''' <param name="nombre">Nombre o parte del nombre/apellido del miembro a buscar.</param>
     ''' <returns>DataTable con los resultados de la búsqueda.</returns>
@@ -119,7 +124,7 @@ Public Class DMiembros
     End Function
 
     ''' <summary>
-    ''' Obtiene un miembro por su DNI exacto.
+    ''' Recibe el Dni del miembro a buscar y ejecuta una sentencia SQL (SELECT) que busca coincidencias exactas en la base de datos.
     ''' </summary>
     ''' <param name="dni">DNI del miembro a buscar.</param>
     ''' <returns>DataTable con los datos del miembro encontrado.</returns>
@@ -137,7 +142,9 @@ Public Class DMiembros
     End Function
 
     ''' <summary>
-    ''' Busca miembros por coincidencia parcial de DNI utilizando la cláusula LIKE.
+    ''' Recibe el Dni o parte del Dni del miembro a buscar y ejecuta una sentencia SQL (SELECT) que busca coincidencias en la base de datos.
+    ''' Utiliza la cláusula LIKE para permitir coincidencias parciales. 
+    ''' Los resultados se ordenan por la fecha de última modificación.
     ''' </summary>
     ''' <param name="dni">DNI o parte del DNI del miembro a buscar.</param>
     ''' <returns>DataTable con los resultados de la búsqueda.</returns>

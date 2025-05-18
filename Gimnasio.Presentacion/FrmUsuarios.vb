@@ -169,7 +169,7 @@ Public Class FrmUsuarios
                 nUsuarios.Insertar(Usuario)
                 MsgBox("Usuario guardado exitosamente.", MsgBoxStyle.Information, "Exito")
             Else
-                Usuario.IdUsuario = Usuario.IdUsuario
+                Usuario.IdUsuario = CUInt(tbID.Text)
                 nUsuarios.Actualizar(Usuario)
                 MsgBox("Usuario actualizado exitosamente.", MsgBoxStyle.Information, "Exito")
             End If

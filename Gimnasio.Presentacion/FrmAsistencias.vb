@@ -37,6 +37,7 @@ Public Class FrmAsistencias
     Private Sub frmAsistencias_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             dgvListado.Visible = False
+            labelResultado.Text = ""
         Catch ex As Exception
             ManejarErrores.Mostrar("Error al cargar el formulario", ex)
         End Try
@@ -45,8 +46,8 @@ Public Class FrmAsistencias
     ''' <summary>
     ''' Evento que se ejecuta al presionar una tecla en el campo de texto del DNI.
     ''' - Si la tecla presionada es Enter, intenta registrar la asistencia del miembro mediante <see cref="NAsistencia.RegistrarIngresoPorDNI"/>.
+    ''' - Llama a <see cref="FrmRegistroAsistencias.ActualizarDgv"/> para actualizar el listado general de asistencias.
     ''' - Si el resultado es "Exitoso" o "Fallido_Membresia_Inactiva":
-    '''     - Llama a <see cref="FrmRegistroAsistencias.ActualizarDgv"/> para actualizar el listado general de asistencias.
     '''     - Muestra el DataGridView con el estado de las membresías del miembro, calculando y mostrando los días restantes de cada plan.
     '''     - Muestra un mensaje de bienvenida o advertencia según el resultado.
     ''' - Si el resultado es "Fallido_DNI_NoEncontrado", informa que el DNI no fue encontrado y solicita reingreso.
@@ -60,9 +61,9 @@ Public Class FrmAsistencias
             If e.KeyChar = ChrW(Keys.Enter) Then
                 Dim dni As String = tbDNI.Text.Trim()
                 Dim resultado As String = nAsistencias.RegistrarIngresoPorDNI(dni)
+                frmRegistro.ActualizarDgv()
                 Select Case resultado
                     Case "Exitoso", "Fallido_Membresia_Inactiva"
-                        frmRegistro.ActualizarDgv()
                         dgvListado.Visible = True
                         Dim nMembresias As New NMembresias()
                         Dim membresias As DataTable = nMembresias.ObtenerPorDni(dni)

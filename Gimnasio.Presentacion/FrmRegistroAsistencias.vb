@@ -49,6 +49,7 @@ Public Class FrmRegistroAsistencias
             dgvListado.Columns(5).HeaderText = "APELLIDO MIEMBRO"
             dgvListado.Columns(6).HeaderText = "FECHA INGRESO"
             dgvListado.Columns(7).HeaderText = "RESULTADO"
+            dgvListado.Columns(8).HeaderText = "PLAN AL DIA"
             cbOpcionBuscar.SelectedIndex = 1
             dtpFechaInicio.Format = DateTimePickerFormat.Custom
             dtpFechaInicio.CustomFormat = " "

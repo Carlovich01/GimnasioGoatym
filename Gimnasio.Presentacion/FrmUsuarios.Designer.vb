@@ -254,6 +254,7 @@ Partial Class FrmUsuarios
         ' cbRol
         ' 
         cbRol.Cursor = Cursors.Hand
+        cbRol.DropDownStyle = ComboBoxStyle.DropDownList
         cbRol.Font = New Font("Segoe UI", 12F)
         cbRol.FormattingEnabled = True
         cbRol.Items.AddRange(New Object() {"Administrador", "Recepcionista"})

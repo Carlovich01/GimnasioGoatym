@@ -194,4 +194,14 @@ Public Class FrmPrincipal
             ManejarErrores.Mostrar("Error al cerrar sesión", ex)
         End Try
     End Sub
+
+    Private Sub frmPrincipal_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
+        Try
+            Me.Dispose()
+            FrmLogin.Dispose()
+        Catch ex As Exception
+            ManejarErrores.Mostrar("Error al liberar recursos al cerrar la aplicación", ex)
+        End Try
+    End Sub
+
 End Class

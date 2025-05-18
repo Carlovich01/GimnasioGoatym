@@ -1,169 +1,173 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="Gimnasio.Presentacion.FrmLogin">
-    <Position X="0.5" Y="13" Width="4.25" />
+    <Position X="22.25" Y="2.75" Width="4.25" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAACAACQAAgACABABCAQCAAAAAAEIAAAAAIAA=</HashCode>
+      <HashCode>AAACAAAAACAACQAAgACABABCIQCAAAAAAEIAAAAAAAA=</HashCode>
       <FileName>FrmLogin.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Gimnasio.Presentacion.FrmPrincipal">
-    <Position X="5.25" Y="13" Width="5" />
+    <Position X="13.75" Y="0.5" Width="5" />
     <TypeIdentifier>
-      <HashCode>gQEAAAAAIGyAEBACAASCAQACKSAgBBQAAEEAAgAoEH4=</HashCode>
+      <HashCode>gRAAAAQAICiAEBACABSCAAACIwAgBBQAAEEAAAAoAH4=</HashCode>
       <FileName>FrmPrincipal.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Gimnasio.Datos.ConexionBase">
-    <Position X="8" Y="0.5" Width="1.5" />
+    <Position X="19.5" Y="42" Width="5" />
     <TypeIdentifier />
   </Class>
   <Class Name="Gimnasio.Presentacion.FrmAsistencias">
-    <Position X="11.25" Y="13" Width="4" />
+    <Position X="36.25" Y="13.5" Width="4" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAECAAAAAAAACAAAACAAAiAAABAAAAAEIAAAA=</HashCode>
+      <HashCode>AACAAAAAEKAAAAAAAACAAAACAQAiAAABAAAAAEAAAAA=</HashCode>
       <FileName>FrmAsistencias.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Gimnasio.Presentacion.FrmMembresias">
-    <Position X="15.75" Y="13" Width="5.75" />
+    <Position X="16" Y="13.5" Width="5.75" />
     <TypeIdentifier>
-      <HashCode>BCRBCAAAEKClCOAQABSQAB3iCCBAMBQJCxACKIEAFRA=</HashCode>
+      <HashCode>hCRLAAQADKCsCOgQADTQCB3iSCBAMBQJCxADaIAAFRA=</HashCode>
       <FileName>FrmMembresias.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Gimnasio.Presentacion.FrmMiembros">
-    <Position X="23" Y="13" Width="4" />
+    <Position X="10.25" Y="13.75" Width="4" />
     <TypeIdentifier>
-      <HashCode>BKSBCAAEECAkCKAAAACEAAFiCCBAQAYBgBAAAJAAkRA=</HashCode>
+      <HashCode>hKSDCAAAECEkCKAAACCEAAFiCCBAQAYBgBABAJAAkRA=</HashCode>
       <FileName>FrmMiembros.Vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Gimnasio.Presentacion.FrmPagos">
-    <Position X="28.75" Y="13" Width="5" />
+    <Position X="24" Y="13.5" Width="5" />
     <TypeIdentifier>
-      <HashCode>AQAECCAgkCAAAAACAACIFAgiCCAAQAABABAAAAAIARU=</HashCode>
+      <HashCode>iCwGAGAhmKCMACgSADCIEDwiSCQAQAABAhADQAEIERE=</HashCode>
       <FileName>FrmPagos.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Gimnasio.Presentacion.FrmPlanes">
-    <Position X="35" Y="13" Width="4" />
+    <Position X="3" Y="13.75" Width="4" />
     <TypeIdentifier>
-      <HashCode>BSQACAEAACCkCKAAAACAQAHqCCBEAAQBQJgAAIAAkRA=</HashCode>
+      <HashCode>hSQCAAEAACGkCKAAACCAAAHqCCBEAAQBQJgBAIAAkRA=</HashCode>
       <FileName>FrmPlanes.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Gimnasio.Presentacion.FrmReclamos">
-    <Position X="41.5" Y="13" Width="5" />
+    <Position X="41.25" Y="13.5" Width="5" />
     <TypeIdentifier>
-      <HashCode>BCDACAACEGAlCKAAACCAEAHGIIBhAARBIBAQAIGAERA=</HashCode>
+      <HashCode>pCTCAAACEGEnCKAAACCAAAHGCIBhAARBIBAQAIAAERA=</HashCode>
       <FileName>FrmReclamos.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Gimnasio.Presentacion.FrmRegistroAsistencias">
-    <Position X="47.75" Y="13" Width="5.5" />
+    <Position X="30" Y="13.5" Width="5.5" />
     <TypeIdentifier>
-      <HashCode>AQAACAAgECACAAACAACIAAAiCCAAgIABABAAAEAIARA=</HashCode>
+      <HashCode>iAACAAAgECAmAAACACCICAAiCCAAAIABABABAEAIARA=</HashCode>
       <FileName>FrmRegistroAsistencias.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Gimnasio.Datos.DAsistencia">
-    <Position X="0.5" Y="2.75" Width="4.75" />
+    <Position X="27.25" Y="36.75" Width="4.75" />
     <TypeIdentifier />
   </Class>
   <Class Name="Gimnasio.Datos.DMembresias">
-    <Position X="6.5" Y="2.75" Width="5.25" />
+    <Position X="14.5" Y="36.25" Width="5.25" />
     <TypeIdentifier />
   </Class>
   <Class Name="Gimnasio.Datos.DMiembros">
-    <Position X="13.25" Y="3" Width="3.5" />
+    <Position X="9.5" Y="36.25" Width="3.5" />
     <TypeIdentifier />
   </Class>
   <Class Name="Gimnasio.Datos.DPagos">
-    <Position X="17.5" Y="3.25" Width="5" />
+    <Position X="20.75" Y="36.75" Width="5" />
     <InheritanceLine Type="Gimnasio.Datos.ConexionBase" FixedToPoint="true">
       <Path>
-        <Point X="8.75" Y="1.988" />
-        <Point X="8.75" Y="2.375" />
-        <Point X="19.643" Y="2.375" />
-        <Point X="19.643" Y="3.25" />
+        <Point X="22.937" Y="42" />
+        <Point X="22.937" Y="41.625" />
+        <Point X="22.208" Y="41.625" Type="JumpStart" />
+        <Point X="22.042" Y="41.625" Type="JumpEnd" />
+        <Point X="20.438" Y="41.625" />
+        <Point X="20.438" Y="36.375" />
+        <Point X="22.893" Y="36.375" />
+        <Point X="22.893" Y="36.75" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier />
   </Class>
   <Class Name="Gimnasio.Datos.DPlanes">
-    <Position X="23" Y="3.25" Width="3.75" />
+    <Position X="4.5" Y="36.25" Width="3.75" />
     <TypeIdentifier />
   </Class>
   <Class Name="Gimnasio.Datos.DReclamos">
-    <Position X="27" Y="3" Width="3.25" />
+    <Position X="33.25" Y="36.75" Width="3.25" />
     <TypeIdentifier />
   </Class>
   <Class Name="Gimnasio.Datos.DUsuarios">
-    <Position X="30.5" Y="2.75" Width="3.75" />
+    <Position X="37.5" Y="37" Width="3.75" />
     <TypeIdentifier />
   </Class>
   <Class Name="Gimnasio.Negocio.NAsistencia">
-    <Position X="0.5" Y="7.5" Width="4.5" />
+    <Position X="33.5" Y="30.75" Width="4.5" />
     <TypeIdentifier />
   </Class>
   <Class Name="Gimnasio.Negocio.NMembresias">
-    <Position X="5.75" Y="7.5" Width="4.5" />
+    <Position X="17" Y="30.5" Width="4.5" />
     <TypeIdentifier />
   </Class>
   <Class Name="Gimnasio.Negocio.NMiembros">
-    <Position X="11.5" Y="7.5" Width="3.5" />
+    <Position X="11" Y="31.5" Width="3.5" />
     <TypeIdentifier />
   </Class>
   <Class Name="Gimnasio.Negocio.NPagos">
-    <Position X="16.5" Y="7.5" Width="5.25" />
+    <Position X="23" Y="30.25" Width="5.25" />
     <TypeIdentifier />
   </Class>
   <Class Name="Gimnasio.Negocio.NPlanes">
-    <Position X="22.75" Y="7.5" Width="4.5" />
+    <Position X="4.5" Y="30.25" Width="4.5" />
     <TypeIdentifier />
   </Class>
   <Class Name="Gimnasio.Negocio.NReclamos">
-    <Position X="28.75" Y="7.5" Width="3.75" />
+    <Position X="40.25" Y="30.5" Width="3.75" />
     <TypeIdentifier />
   </Class>
   <Class Name="Gimnasio.Negocio.NUsuarios">
-    <Position X="33.5" Y="7.5" Width="5" />
+    <Position X="48" Y="30.5" Width="5" />
     <TypeIdentifier />
   </Class>
   <Class Name="Gimnasio.Presentacion.FrmUsuarios">
-    <Position X="55" Y="13.25" Width="4.75" />
+    <Position X="47.75" Y="13.25" Width="4.75" />
     <TypeIdentifier>
-      <HashCode>BSSCCAAAECAkCKAAAACEBAFiCCBAgBQBABAAAIAAETA=</HashCode>
+      <HashCode>hSSCAAQAECEkCKAAACCEBAFiCCBAABQBABABAIAAETA=</HashCode>
       <FileName>FrmUsuarios.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Gimnasio.Entidades.Asistencia">
-    <Position X="1.25" Y="27.75" Width="3.25" />
+    <Position X="55.25" Y="27.75" Width="3.25" />
     <TypeIdentifier />
   </Class>
   <Class Name="Gimnasio.Entidades.Membresias">
-    <Position X="6" Y="27.5" Width="3.75" />
+    <Position X="55" Y="19" Width="3.75" />
     <TypeIdentifier />
   </Class>
   <Class Name="Gimnasio.Entidades.Miembros">
-    <Position X="11" Y="27.5" Width="2.75" />
+    <Position X="55.5" Y="15" Width="2.75" />
     <TypeIdentifier />
   </Class>
   <Class Name="Gimnasio.Entidades.Pagos">
-    <Position X="14.5" Y="27.5" Width="3.25" />
+    <Position X="55" Y="23.75" Width="3.25" />
     <TypeIdentifier />
   </Class>
   <Class Name="Gimnasio.Entidades.Planes">
-    <Position X="18.5" Y="27.75" Width="3.25" />
+    <Position X="55" Y="11" Width="3.25" />
     <TypeIdentifier />
   </Class>
   <Class Name="Gimnasio.Entidades.Reclamos">
-    <Position X="22.5" Y="28" Width="2.5" />
+    <Position X="55.75" Y="31.25" Width="2.5" />
     <TypeIdentifier />
   </Class>
   <Class Name="Gimnasio.Entidades.Usuarios">
-    <Position X="26.75" Y="28" Width="2.5" />
+    <Position X="55.75" Y="34.75" Width="2.5" />
     <TypeIdentifier />
   </Class>
   <Font Name="Segoe UI" Size="9" />

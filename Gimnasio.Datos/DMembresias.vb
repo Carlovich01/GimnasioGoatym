@@ -5,13 +5,41 @@ Imports Gimnasio.Errores
 ''' <summary>
 ''' Clase de acceso a datos para la gestión de membresías en el sistema de gimnasio.
 ''' Hereda de <see cref="ConexionBase"/> y utiliza la entidad <see cref="Membresias"/>.
-''' Proporciona métodos CRUD y de búsqueda para la tabla <c>membresias_miembro</c> y la vista <c>vista_membresias</c>.
+''' Proporciona métodos CRUD y de búsqueda para la tabla membresias_miembro y la vista vista_membresias.
+''' 
+''' La vista_membresias es una vista SQL que consolida información relevante de las membresías,
+''' uniendo datos de las tablas membresias_miembro, miembros y planes_membresia.
+''' <code>
+''' VIEW `vista_membresias` AS
+'''    SELECT 
+'''        `mm`.`id_membresia` AS `id_membresia`,
+'''        `mm`.`id_miembro` AS `id_miembro`,
+'''        `mm`.`id_plan` AS `id_plan`,
+'''        `m`.`dni` AS `dni_miembro`,
+'''        `m`.`apellido` AS `apellido_miembro`,
+'''        `m`.`nombre` AS `nombre_miembro`,
+'''        `p`.`nombre_plan` AS `nombre_plan`,
+'''        `p`.`precio` AS `precio_plan`,
+'''        `p`.`duracion_dias` AS `duracion_dias_plan`,
+'''        `mm`.`fecha_inicio` AS `fecha_inicio`,
+'''        `mm`.`fecha_fin` AS `fecha_fin`,
+'''        `mm`.`estado_membresia` AS `estado_membresia`,
+'''        `mm`.`fecha_registro` AS `fecha_registro`,
+'''        `mm`.`ultima_modificacion` AS `ultima_modificacion`
+'''    FROM
+'''        ((`membresias_miembro` `mm`
+'''        JOIN `miembros` `m` ON ((`mm`.`id_miembro` = `m`.`id_miembro`)))
+'''        JOIN `planes_membresia` `p` ON ((`mm`.`id_plan` = `p`.`id_plan`)))
+'''    ORDER BY `mm`.`ultima_modificacion` DESC
+''' </code>
+''' 
+''' Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo
 ''' </summary>
 Public Class DMembresias
     Inherits ConexionBase
 
     ''' <summary>
-    ''' Obtiene todas las membresías desde la vista <c>vista_membresias</c>.
+    ''' Realiza una consulta SQL (SELECT) que obtiene todas las membresías de la vista vista_membresias.
     ''' </summary>
     ''' <returns>DataTable con los datos de las membresías.</returns>
     Public Function Listar() As DataTable
@@ -25,8 +53,7 @@ Public Class DMembresias
     End Function
 
     ''' <summary>
-    ''' Inserta una nueva membresía en la base de datos.
-    ''' Utiliza los datos de la entidad <see cref="Membresias"/>.
+    ''' Recibe una instancia de Membresia y ejecuta una sentencia SQL (INSERT) que inserta un nuevo registro de membresia con los datos proporcionados.
     ''' </summary>
     ''' <param name="membresia">Instancia de <see cref="Membresias"/> a insertar.</param>
     Public Sub Insertar(membresia As Membresias)
@@ -46,7 +73,8 @@ Public Class DMembresias
     End Sub
 
     ''' <summary>
-    ''' Actualiza los datos de una membresía existente en la base de datos.
+    ''' Recibe una instancia de Membresia y ejecuta una sentencia SQL (UPDATE) que actualiza el plan de un registro de membresia existente que 
+    ''' corresponde al id de la instancia. 
     ''' </summary>
     ''' <param name="membresia">Instancia de <see cref="Membresias"/> con los datos actualizados.</param>
     Public Sub Actualizar(membresia As Membresias)
@@ -67,10 +95,9 @@ Public Class DMembresias
     End Sub
 
     ''' <summary>
-    ''' Elimina una membresía de la base de datos según su identificador.
+    ''' Recibe el id de la membresia a eliminar y ejecuta una sentencia SQL (DELETE) que elimina el registro de membresia correspondiente.
     ''' </summary>
-    ''' <param name="id">Identificador único de la membresía a eliminar.</param>
-    ''' <exception cref="Exception">Se lanza si la membresía tiene pagos asociados o por errores de la base de datos.</exception>
+    ''' <param name="id">Id único de la membresía a eliminar.</param>
     Public Sub Eliminar(id As UInteger)
         Try
             Dim query As String = "DELETE FROM membresias_miembro WHERE id_membresia = @id"
@@ -79,18 +106,14 @@ Public Class DMembresias
         }
             ExecuteNonQuery(query, parameters)
         Catch ex As Exception
-            If ex.Message.Contains("a foreign key constraint fails") Then
-                ManejarErrores.Log("Capa Datos", ex)
-                Throw New Exception("No se puede eliminar la membresia porque tiene un pago asociado.")
-            Else
-                ManejarErrores.Log("Capa Datos", ex)
-                Throw
-            End If
+            ManejarErrores.Log("Capa Datos", ex)
+            Throw
         End Try
     End Sub
 
     ''' <summary>
-    ''' Obtiene el identificador de una membresía específica según el miembro y el plan.
+    ''' Recibe una instancia de Membresia y ejecuta una sentencia SQL (SELECT) que obtiene el id de la membresia correspondiente a la instancia.
+    ''' Luego lo convierte a entero. 
     ''' </summary>
     ''' <param name="membresia">Instancia de <see cref="Membresias"/> para la cual se busca el ID.</param>
     ''' <returns>Identificador único de la membresía.</returns>
@@ -110,7 +133,8 @@ Public Class DMembresias
     End Function
 
     ''' <summary>
-    ''' Actualiza el estado y las fechas de una membresía.
+    ''' Recibe una instancia de Membresia y ejecuta una sentencia SQL (UPDATE) que actualiza las fechas de un registro de membresia existente que 
+    ''' corresponde al id de la instancia.
     ''' </summary>
     ''' <param name="membresia">Instancia de <see cref="Membresias"/> con los datos a actualizar.</param>
     Public Sub ActualizarEstadoYFechas(membresia As Membresias)
@@ -133,7 +157,8 @@ Public Class DMembresias
     End Sub
 
     ''' <summary>
-    ''' Actualiza el estado de las membresías vencidas a "Inactiva".
+    ''' Ejecuta una sentencia SQL (UPDATE) que actualiza el estado de un registro de membresia existente a inactiva si la fecha de vencimiento
+    ''' es menor que la fecha actual.
     ''' </summary>
     Public Sub ActualizarAEstadoInactiva()
         Try
@@ -149,22 +174,22 @@ Public Class DMembresias
     End Sub
 
     ''' <summary>
-    ''' Obtiene la duración (en días) del plan asociado a una membresía.
+    ''' Recibe un id de membresia y ejecuta una sentencia SQL (SELECT) que obtiene la duración del plan de la membresía correspondiente.
+    ''' Luego, la convierte a entero.
     ''' </summary>
     ''' <param name="idMembresia">Identificador único de la membresía.</param>
     ''' <returns>Duración en días del plan.</returns>
     Public Function ObtenerDuracionPorMembresia(idMembresia As UInteger) As UInteger
         Try
             Dim query As String = "
-            SELECT p.duracion_dias
-            FROM membresias_miembro mm
-            INNER JOIN planes_membresia p ON mm.id_plan = p.id_plan
-            WHERE mm.id_membresia = @idMembresia"
+            SELECT duracion_dias_plan
+            FROM vista_membresias
+            WHERE id_membresia = @idMembresia"
             Dim parameters As New Dictionary(Of String, Object) From {
             {"@idMembresia", idMembresia}
         }
             Dim resultado = ExecuteQuery(query, parameters)
-            Return If(resultado.Rows.Count > 0, Convert.ToUInt32(resultado.Rows(0)("duracion_dias")), 0)
+            Return If(resultado.Rows.Count > 0, Convert.ToUInt32(resultado.Rows(0)("duracion_dias_plan")), 0)
         Catch ex As Exception
             ManejarErrores.Log("Capa Datos", ex)
             Throw
@@ -172,7 +197,7 @@ Public Class DMembresias
     End Function
 
     ''' <summary>
-    ''' Obtiene una membresía por el DNI exacto del miembro.
+    ''' Recibe un dni de miembro y ejecuta una sentencia SQL (SELECT) que obtiene los registros de la membresías correspondientes al miembro.
     ''' </summary>
     ''' <param name="dni">DNI del miembro.</param>
     ''' <returns>DataTable con los datos de la membresía encontrada.</returns>
@@ -190,7 +215,8 @@ Public Class DMembresias
     End Function
 
     ''' <summary>
-    ''' Busca membresías por coincidencia parcial de DNI utilizando la cláusula LIKE.
+    ''' Recibe un dni de miembro y ejecuta una sentencia SQL (SELECT) que obtiene los registros de la membresías correspondientes al miembro.
+    ''' Permite buscar por parte del DNI utilizando la cláusula LIKE.
     ''' </summary>
     ''' <param name="dni">DNI o parte del DNI del miembro a buscar.</param>
     ''' <returns>DataTable con los resultados de la búsqueda.</returns>
@@ -208,7 +234,8 @@ Public Class DMembresias
     End Function
 
     ''' <summary>
-    ''' Busca membresías por nombre de plan utilizando la cláusula LIKE.
+    ''' Recibe el nombre de un plan y ejecuta una sentencia SQL (SELECT) que obtiene los registros de membresías que tienen ese plan.
+    ''' Permite buscar por parte del nombre utilizando la cláusula LIKE.
     ''' </summary>
     ''' <param name="nombrePlan">Nombre o parte del nombre del plan a buscar.</param>
     ''' <returns>DataTable con los resultados de la búsqueda.</returns>
@@ -226,7 +253,7 @@ Public Class DMembresias
     End Function
 
     ''' <summary>
-    ''' Busca membresías por estado (por ejemplo: "Activa", "Inactiva").
+    ''' Recibe el estado(Activa, Inactiva) y ejecuta una sentencia SQL (SELECT) que obtiene los registros de membresías que tienen ese estado.
     ''' </summary>
     ''' <param name="estado">Estado de la membresía.</param>
     ''' <returns>DataTable con los resultados de la búsqueda.</returns>
@@ -244,10 +271,11 @@ Public Class DMembresias
     End Function
 
     ''' <summary>
-    ''' Verifica si ya existe una membresía para un miembro y plan determinados.
+    ''' Recibe una instancia de membresia y ejecuta una sentencia SQL (SELECT COUNT *) que cuenta la cantidad total de registros de membresia
+    ''' con el mismo id_miembro y id_plan. Si el resultado es mayor a 0, significa que ya existe una membresía activa con ese plan para ese miembro.  
     ''' </summary>
     ''' <param name="membresia">Instancia de <see cref="Membresias"/> a verificar.</param>
-    ''' <returns><c>True</c> si existe, <c>False</c> en caso contrario.</returns>
+    ''' <returns>True si existe, False en caso contrario.</returns>
     Public Function VerificarExistenciaDeMiembroYPlan(membresia As Membresias) As Boolean
         Dim verificarQuery As String = "
             SELECT COUNT(*) 
@@ -266,7 +294,8 @@ Public Class DMembresias
     End Function
 
     ''' <summary>
-    ''' Obtiene la membresía más reciente de un miembro específico.
+    ''' Recibe un id de Miembro y ejecuta una sentencia SQL (SELECT) que obtiene la membresía más reciente del miembro.
+    ''' La consulta ordena por fecha de fin en orden descendente y limita el resultado a 1.
     ''' </summary>
     ''' <param name="idMiembro">Identificador único del miembro.</param>
     ''' <returns>DataTable con los datos de la membresía más reciente.</returns>

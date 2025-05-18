@@ -199,7 +199,7 @@ Public Class FrmPagos
     ''' <summary>
     ''' Evento que se ejecuta al cambiar el valor del DateTimePicker para la fecha de inicio. Le da un formato corto a la fecha para que sea visible.
     ''' </summary>
-    Private Sub dtpFechaInicio_ValueChanged(sender As Object, e As EventArgs)
+    Private Sub dtpFechaInicio_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaInicio.ValueChanged
         Try
             dtpFechaInicio.Format = DateTimePickerFormat.Short
         Catch ex As Exception
@@ -210,7 +210,7 @@ Public Class FrmPagos
     ''' <summary>
     ''' Evento que se ejecuta al cambiar el valor del DateTimePicker para la fecha de fin. Le da un formato corto a la fecha para que sea visible.
     ''' </summary>
-    Private Sub dtpFechaFin_ValueChanged(sender As Object, e As EventArgs)
+    Private Sub dtpFechaFin_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaFin.ValueChanged
         Try
             dtpFechaFin.Format = DateTimePickerFormat.Short
         Catch ex As Exception
@@ -226,7 +226,7 @@ Public Class FrmPagos
     ''' - Si las fechas son válidas, utiliza el método <see cref="NPagos.ListarPorFecha"/> para filtrar los pagos dentro del rango especificado.
     ''' - Actualiza el DataGridView con los resultados filtrados mediante <see cref="ActualizarDgv"/>.
     ''' </summary>
-    Private Sub btnBuscarFecha_Click(sender As Object, e As EventArgs)
+    Private Sub btnBuscarFecha_Click(sender As Object, e As EventArgs) Handles BtnBuscarFecha.Click
         Try
             Dim fechaInicio = dtpFechaInicio.Value.Date
             Dim fechaFin = dtpFechaFin.Value.Date.AddDays(1).AddTicks(-1)
@@ -251,7 +251,7 @@ Public Class FrmPagos
     '''   con <see cref="nPagos.ListarPorMetodoPago"/>
     ''' </summary>
 
-    Private Sub cbOpcionBuscar_SelectedIndexChanged(sender As Object, e As EventArgs)
+    Private Sub cb_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbOpcionBuscar.SelectedIndexChanged
         Try
             tbBuscar.Clear()
             tbMontoInicial.Clear()
@@ -308,7 +308,7 @@ Public Class FrmPagos
     ''' - Si la opción seleccionada es 1 (DNI), invoca <see cref="NPagos.ListarPorDni"/> pasando el texto ingresado y actualiza el listado.
     ''' - Si la opción seleccionada es 2 (Nombre plan), invoca <see cref="NPagos.ListarPorNombrePlan"/> con el texto ingresado y actualiza el listado.
     ''' </summary>
-    Private Sub tbBuscar_TextChanged(sender As Object, e As EventArgs)
+    Private Sub tbBuscar_TextChanged(sender As Object, e As EventArgs) Handles tbBuscar.TextChanged
         Try
             Select Case cbOpcionBuscar.SelectedIndex
                 Case 1
@@ -330,7 +330,7 @@ Public Class FrmPagos
     ''' - Si todas las validaciones son correctas, invoca <see cref="NPagos.ListarPorMontos"/> pasando los valores convertidos a decimal
     '''   y actualiza el DataGridView con los resultados filtrados.
     ''' </summary>
-    Private Sub btnBuscarMonto_Click(sender As Object, e As EventArgs)
+    Private Sub btnBuscarMonto_Click(sender As Object, e As EventArgs) Handles btnBuscarMonto.Click
         Try
             If String.IsNullOrWhiteSpace(tbMontoInicial.Text) Or String.IsNullOrWhiteSpace(tbMontoFinal.Text) Then
                 Throw New Exception("Los montos no pueden estar vacíos.")
@@ -360,7 +360,7 @@ Public Class FrmPagos
     ''' - Muestra un mensaje de éxito si la eliminación se realiza correctamente.
     ''' - Si no hay ninguna fila seleccionada, lanza una excepción.
     ''' </summary>
-    Private Sub btnEliminar_Click(sender As Object, e As EventArgs)
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Try
             If dgvListado.SelectedRows.Count > 0 Then
                 Dim selectedRow = dgvListado.SelectedRows(0)
@@ -388,7 +388,7 @@ Public Class FrmPagos
     '''     - Opciones 4 a 10 (por método de pago): actualiza el listado completo de pagos y restablece la opción seleccionada 
     '''       en el ComboBox a la opción predeterminada (0).
     ''' </summary>
-    Private Sub pbReiniciar_Click(sender As Object, e As EventArgs)
+    Private Sub pbReiniciar_Click(sender As Object, e As EventArgs) Handles pbReiniciar.Click
         Try
             Select Case cbOpcionBuscar.SelectedIndex
                 Case 0
@@ -422,4 +422,5 @@ Public Class FrmPagos
             ManejarErrores.Mostrar("Error al cancelar la edición del pago.", ex)
         End Try
     End Sub
+
 End Class

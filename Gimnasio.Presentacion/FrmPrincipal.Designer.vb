@@ -165,13 +165,12 @@ Partial Class FrmPrincipal
         ' 
         ' btnUsuarioLogueado
         ' 
-        btnUsuarioLogueado.DisplayStyle = ToolStripItemDisplayStyle.Text
         btnUsuarioLogueado.DropDownItems.AddRange(New ToolStripItem() {miCerrarSesión})
         btnUsuarioLogueado.Font = New Font("Segoe UI", 12F)
         btnUsuarioLogueado.Image = CType(resources.GetObject("btnUsuarioLogueado.Image"), Image)
         btnUsuarioLogueado.ImageTransparentColor = Color.Magenta
         btnUsuarioLogueado.Name = "btnUsuarioLogueado"
-        btnUsuarioLogueado.Size = New Size(77, 25)
+        btnUsuarioLogueado.Size = New Size(93, 25)
         btnUsuarioLogueado.Text = "Usuario"
         ' 
         ' miCerrarSesión

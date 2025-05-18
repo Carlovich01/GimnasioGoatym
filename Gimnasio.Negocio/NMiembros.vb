@@ -70,15 +70,16 @@ Public Class NMiembros
 
         If String.IsNullOrWhiteSpace(Obj.Telefono) Then
             Obj.Telefono = Nothing
-        ElseIf Obj.Telefono.Length > 30 Then
-            Throw New Exception("El teléfono no puede tener más de 30 caracteres.")
-        End If
-
-        For Each c As Char In Obj.Telefono
-            If Char.IsLetter(c) Then
-                Throw New Exception("El teléfono no puede contener letras.")
+        Else
+            If Obj.Telefono.Length > 30 Then
+                Throw New Exception("El teléfono no puede tener más de 30 caracteres.")
             End If
-        Next
+            For Each c As Char In Obj.Telefono
+                If Char.IsLetter(c) Then
+                    Throw New Exception("El teléfono no puede contener letras.")
+                End If
+            Next
+        End If
 
         If String.IsNullOrWhiteSpace(Obj.Email) Then
             Obj.Email = Nothing

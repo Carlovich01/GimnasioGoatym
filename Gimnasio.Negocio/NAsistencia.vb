@@ -30,14 +30,15 @@ Public Class NAsistencia
     End Function
 
     ''' <summary>
-    ''' 1. Busca el miembro por su DNI usando <see cref="NMiembros.ObtenerPorDni(String)"/>.
-    '''    - Si no existe, retorna "Fallido_DNI_NoEncontrado".
+    ''' Registra el ingreso de un miembro al gimnasio utilizando su DNI. Proceso:
+    ''' 1. Busca el miembro por su DNI mediante <see cref="NMiembros.ObtenerPorDni(String)"/>.
+    '''    - Si no existe, registra la asistencia como "Fallido_DNI_NoEncontrado" y retorna ese resultado.
     ''' 2. Si el miembro existe, obtiene su membresía más reciente con <see cref="NMembresias.ObtenerMembresiaMasReciente(UInteger)"/>.
-    '''    - Si no tiene membresía, retorna "Fallido_No_Hay_Membresia".
-    '''    - Si la membresía está inactiva, retorna "Fallido_Membresia_Inactiva".
-    '''    - Si la membresía está activa, registra la asistencia y retorna "Exitoso".
-    ''' 3. En todos los casos, registra el intento de asistencia en la base de datos mediante <see cref="DAsistencia.RegistrarAsistencia(Asistencia)"/>.
-    ''' 4. Si ocurre una excepción, la registra en el log y la propaga.
+    '''    - Si no tiene membresía, registra la asistencia como "Fallido_No_Hay_Membresia" y retorna ese resultado.
+    '''    - Si la membresía está inactiva, registra la asistencia como "Fallido_Membresia_Inactiva" y retorna ese resultado.
+    '''    - Si la membresía está activa, registra la asistencia como "Exitoso" y retorna ese resultado.
+    ''' 3. En todos los casos, se crea un registro de asistencia en la base de datos mediante <see cref="DAsistencia.RegistrarAsistencia(Asistencia)"/>,
+    '''    incluyendo el resultado, la fecha y hora del intento, el id del miembro (si corresponde) y el id de la membresía válida (si corresponde).
     ''' </summary>
     ''' <param name="dni">DNI del miembro a registrar el ingreso.</param>
     ''' <returns>
@@ -50,33 +51,37 @@ Public Class NAsistencia
     Public Function RegistrarIngresoPorDNI(dni As String) As String
         Try
             Dim resultado As String = "Fallido_Otro"
-            Dim idMembresiaValida As UInteger? = Nothing
             Dim nMiembros As New NMiembros()
             Dim miembroTabla As DataTable = nMiembros.ObtenerPorDni(dni)
+            Dim asistencia As New Asistencia()
             If miembroTabla.Rows.Count = 0 Then
                 resultado = "Fallido_DNI_NoEncontrado"
+                Asistencia.IdMiembro = Nothing
+                Asistencia.FechaHoraCheckin = DateTime.Now
+                Asistencia.Resultado = resultado
+                asistencia.IdMembresiaValida = Nothing
+                dAsistencias.RegistrarAsistencia(Asistencia)
             Else
                 Dim idMiembro As UInteger = miembroTabla.Rows(0)("id_miembro")
                 Dim nMembresias As New NMembresias()
                 Dim membresiaTabla As DataTable = nMembresias.ObtenerMembresiaMasReciente(idMiembro)
                 If membresiaTabla.Rows.Count = 0 Then
                     resultado = "Fallido_No_Hay_Membresia"
+                    asistencia.IdMembresiaValida = Nothing
                 Else
                     Dim estadoMembresia As String = membresiaTabla.Rows(0)("estado_membresia").ToString()
                     Select Case estadoMembresia
                         Case "Activa"
                             resultado = "Exitoso"
-                            idMembresiaValida = membresiaTabla.Rows(0)("id_membresia")
+                            asistencia.IdMembresiaValida = membresiaTabla.Rows(0)("id_membresia")
                         Case "Inactiva"
                             resultado = "Fallido_Membresia_Inactiva"
+                            asistencia.IdMembresiaValida = Nothing
                     End Select
                 End If
-                Dim asistencia As New Asistencia()
-
                 asistencia.IdMiembro = idMiembro
                 asistencia.FechaHoraCheckin = DateTime.Now
                 asistencia.Resultado = resultado
-                asistencia.IdMembresiaValida = idMembresiaValida
                 dAsistencias.RegistrarAsistencia(asistencia)
             End If
 

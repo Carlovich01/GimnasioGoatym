@@ -173,6 +173,7 @@ Public Class FrmReclamos
                 tbID.Text = selectedRow.Cells("id_reclamos").Value.ToString
                 cbTipo.Text = selectedRow.Cells("tipo").Value.ToString
                 tbDescripcion.Text = selectedRow.Cells("descripcion").Value.ToString
+                tbDNI.Text = selectedRow.Cells("dni_miembro").Value.ToString
                 lblDatosIngreso.Text = "Actualizar Reclamo"
             Else
                 Throw New Exception("No se ha seleccionado un reclamo para actualizar.")
@@ -228,9 +229,11 @@ Public Class FrmReclamos
                 If tmiembro.Rows.Count > 0 Then
                     reclamo.IdMiembro = CUInt(tmiembro.Rows(0)("id_miembro"))
                 Else
-                    reclamo.IdMiembro = Nothing
-                    MsgBox("El DNI no ha sido encontrado.", MsgBoxStyle.Exclamation, "Aviso")
+                    Throw New Exception("El DNI no ha sido encontrado")
                 End If
+            End If
+            If tbDNI.Text.ToString Is "" Then
+                reclamo.IdMiembro = Nothing
             End If
             If esNuevo Then
 
