@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace Gimnasio.Datos | Goatym </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace Gimnasio.Datos | Goatym ">
+      
+      
+      <link rel="icon" href="../images/logo.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Goatym">
+            Goatym
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gimnasio.Datos">
+
+  <h1 id="Gimnasio_Datos" data-uid="Gimnasio.Datos" class="text-break">Namespace Gimnasio.Datos</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gimnasio.Datos.ConexionBase.html">ConexionBase</a></dt>
+      <dd><p>Clase base para la gestión de la conexión y operaciones con la base de datos MySQL.
+Proporciona métodos genéricos para ejecutar consultas y comandos SQL.</p>
+<p>Beneficios de utilizar <a class="xref" href="Gimnasio.Datos.ConexionBase.html#Gimnasio_Datos_ConexionBase_ExecuteQuery_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__">ExecuteQuery(string, Dictionary&lt;string, object&gt;)</a> y <a class="xref" href="Gimnasio.Datos.ConexionBase.html#Gimnasio_Datos_ConexionBase_ExecuteNonQuery_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__">ExecuteNonQuery(string, Dictionary&lt;string, object&gt;)</a>:</p>
+<ul>
+<li>Centralizan y simplifican el acceso a datos, evitando duplicación de código.</li>
+<li>Permiten el uso de parámetros, ayudando a prevenir inyecciones SQL.</li>
+<li>Manejan automáticamente la apertura y cierre de conexiones.</li>
+<li>Facilitan el mantenimiento y la escalabilidad del acceso a la base de datos.</li>
+</ul>
+<p>Todas las operaciones de acceso a datos están envueltas en bloques Try...Catch.</p>
+<ul>
+<li>Si ocurre una excepción durante la ejecución de una consulta o comando SQL, el error se registra en el archivo de log
+mediante <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_">Log(string, Exception)</a>.</li>
+<li>Tras registrar el error, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).</li>
+</ul>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gimnasio.Datos.DAsistencia.html">DAsistencia</a></dt>
+      <dd><p>Clase de acceso a datos para la gestión de asistencias.
+Hereda de <a class="xref" href="Gimnasio.Datos.ConexionBase.html">ConexionBase</a> y utiliza la entidad <a class="xref" href="Gimnasio.Entidades.Asistencia.html">Asistencia</a>.
+Proporciona métodos CRUD y de búsqueda para la tabla asistencia y la vista vista_asistencia.</p>
+<p>La vista consolida la información relevante de los registros de asistencias,
+permitiendo consultar en una sola consulta datos de la asistencia, el miembro, la membresía y el plan asociado.
+Realiza LEFT JOIN entre la asistencia y las demás tablas, permitiendo obtener la información de asistencia
+incluso si los datos de miembro, membresía o plan no están presentes.</p>
+<pre><code class="lang-csharp">VIEW `vista_asistencia` AS
+   SELECT 
+       `a`.`id_asistencia` AS `id_asistencia`,
+       `a`.`id_miembro` AS `id_miembro`,
+       `a`.`id_membresia_valida` AS `id_membresia`,
+       `m`.`dni` AS `dni_miembro`,
+       `m`.`nombre` AS `nombre_miembro`,
+       `m`.`apellido` AS `apellido_miembro`,
+      `a`.`fecha_hora_checkin` AS `fecha_ingreso`,
+       `a`.`resultado` AS `resultado`,
+      `pm`.`nombre_plan` AS `nombre_plan_membresia`
+   FROM
+      (((`asistencia` `a`
+      LEFT JOIN `miembros` `m` ON ((`a`.`id_miembro` = `m`.`id_miembro`)))
+      LEFT JOIN `membresias_miembro` `mm` ON ((`a`.`id_membresia_valida` = `mm`.`id_membresia`)))
+      LEFT JOIN `planes_membresia` `pm` ON ((`mm`.`id_plan` = `pm`.`id_plan`)))
+   ORDER BY `a`.`fecha_hora_checkin` DESC</code></pre>
+<p>Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gimnasio.Datos.DMembresias.html">DMembresias</a></dt>
+      <dd><p>Clase de acceso a datos para la gestión de membresías en el sistema de gimnasio.
+Hereda de <a class="xref" href="Gimnasio.Datos.ConexionBase.html">ConexionBase</a> y utiliza la entidad <a class="xref" href="Gimnasio.Entidades.Membresias.html">Membresias</a>.
+Proporciona métodos CRUD y de búsqueda para la tabla membresias_miembro y la vista vista_membresias.</p>
+<p>La vista_membresias es una vista SQL que consolida información relevante de las membresías,
+uniendo datos de las tablas membresias_miembro, miembros y planes_membresia.</p>
+<pre><code class="lang-csharp">VIEW `vista_membresias` AS
+   SELECT 
+       `mm`.`id_membresia` AS `id_membresia`,
+       `mm`.`id_miembro` AS `id_miembro`,
+       `mm`.`id_plan` AS `id_plan`,
+       `m`.`dni` AS `dni_miembro`,
+       `m`.`apellido` AS `apellido_miembro`,
+       `m`.`nombre` AS `nombre_miembro`,
+       `p`.`nombre_plan` AS `nombre_plan`,
+       `p`.`precio` AS `precio_plan`,
+       `p`.`duracion_dias` AS `duracion_dias_plan`,
+       `mm`.`fecha_inicio` AS `fecha_inicio`,
+       `mm`.`fecha_fin` AS `fecha_fin`,
+       `mm`.`estado_membresia` AS `estado_membresia`,
+       `mm`.`fecha_registro` AS `fecha_registro`,
+       `mm`.`ultima_modificacion` AS `ultima_modificacion`
+   FROM
+       ((`membresias_miembro` `mm`
+       JOIN `miembros` `m` ON ((`mm`.`id_miembro` = `m`.`id_miembro`)))
+       JOIN `planes_membresia` `p` ON ((`mm`.`id_plan` = `p`.`id_plan`)))
+   ORDER BY `mm`.`ultima_modificacion` DESC</code></pre>
+<p>Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gimnasio.Datos.DMiembros.html">DMiembros</a></dt>
+      <dd><p>Clase de acceso a datos para la gestión de miembros en el sistema de gimnasio.
+Hereda de <a class="xref" href="Gimnasio.Datos.ConexionBase.html">ConexionBase</a> y utiliza la entidad <a class="xref" href="Gimnasio.Entidades.Miembros.html">Miembros</a>.
+Proporciona métodos CRUD y de búsqueda para la tabla miembros.</p>
+<p>Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gimnasio.Datos.DPagos.html">DPagos</a></dt>
+      <dd><p>Clase de acceso a datos para la gestión de pagos en el sistema de gimnasio.
+Hereda de <a class="xref" href="Gimnasio.Datos.ConexionBase.html">ConexionBase</a> y utiliza la entidad <a class="xref" href="Gimnasio.Entidades.Pagos.html">Pagos</a>.
+Proporciona métodos CRUD y de búsqueda para la tabla pagos y la vista vista_pagos.</p>
+<p>La vista consolida la información relevante de los registros de pagos,
+Permite consultar en una sola consulta los datos del pago, el miembro, el plan, el usuario que registró el pago.
+Realiza LEFT JOIN entre pagos y las demás tablas, permitiendo obtener la información de pagos
+incluso si los datos de miembro, membresía, plan o usuario no están presentes.</p>
+<pre><code class="lang-csharp">VIEW `vista_pagos` AS
+   SELECT 
+       `p`.`id_pago` AS `id_pago`,
+       `p`.`id_membresia` AS `id_membresia`,
+       `p`.`id_usuario_registro` AS `id_usuario_registro`,
+       `m`.`apellido` AS `apellido_miembro`,
+       `m`.`nombre` AS `nombre_miembro`,
+       `m`.`dni` AS `dni_miembro`,
+       `pm`.`nombre_plan` AS `nombre_plan`,
+       `p`.`monto_pagado` AS `monto`,
+       `p`.`metodo_pago` AS `metodo`,
+       `p`.`numero_comprobante` AS `comprobante`,
+       `p`.`notas` AS `notas`,
+       `p`.`fecha_pago` AS `fecha_pago`,
+       `us`.`nombre_completo` AS `nombre_usuario`
+   FROM
+       ((((`pagos` `p`
+       LEFT JOIN `membresias_miembro` `mm` ON ((`p`.`id_membresia` = `mm`.`id_membresia`)))
+       LEFT JOIN `miembros` `m` ON ((`mm`.`id_miembro` = `m`.`id_miembro`)))
+       LEFT JOIN `planes_membresia` `pm` ON ((`mm`.`id_plan` = `pm`.`id_plan`)))
+       LEFT JOIN `usuarios_sistema` `us` ON ((`p`.`id_usuario_registro` = `us`.`id_usuario`)))
+   ORDER BY `p`.`fecha_pago` DESC</code></pre>
+<p>Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gimnasio.Datos.DPlanes.html">DPlanes</a></dt>
+      <dd><p>Clase de acceso a datos para la gestión de planes de membresía.
+Hereda de <a class="xref" href="Gimnasio.Datos.ConexionBase.html">ConexionBase</a> y utiliza la entidad <a class="xref" href="Gimnasio.Entidades.Planes.html">Planes</a>.
+Proporciona métodos CRUD y de búsqueda para la tabla <code>planes_membresia</code>.</p>
+<p>Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gimnasio.Datos.DReclamos.html">DReclamos</a></dt>
+      <dd><p>Clase de acceso a datos para la gestión de reclamos en el sistema de gimnasio.
+Hereda de <a class="xref" href="Gimnasio.Datos.ConexionBase.html">ConexionBase</a> y utiliza la entidad <a class="xref" href="Gimnasio.Entidades.Reclamos.html">Reclamos</a>.
+Proporciona métodos CRUD y de búsqueda para la tabla reclamos y la vista vista_reclamos.</p>
+<p>La vista consolida la información relevante de los reclamos, permitiendo consultar en una sola consulta datos del reclamo
+y el miembro que lo realizo.
+Realiza LEFT JOIN entre la reclamos y miembros, permitiendo obtener la información de reclamo incluso si los datos de miembro no están presentes.</p>
+<pre><code class="lang-csharp">VIEW `vista_reclamos` As
+SELECT
+       `r`.`id_reclamos` AS `id_reclamos`,
+       `r`.`tipo` AS `tipo`,
+       `r`.`descripcion` AS `descripcion`,
+       `r`.`fecha_envio` AS `fecha_envio`,
+       `r`.`estado` AS `estado`,
+       `r`.`respuesta` AS `respuesta`,
+       `r`.`fecha_respuesta` AS `fecha_respuesta`,
+       `m`.`dni` AS `dni_miembro`
+FROM
+       (`reclamos` `r`
+       LEFT JOIN `miembros` `m` On ((`r`.`id_miembro` = `m`.`id_miembro`)))
+   ORDER BY `r`.`fecha_envio` DESC</code></pre>
+<p>Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Gimnasio.Datos.DUsuarios.html">DUsuarios</a></dt>
+      <dd><p>Clase de acceso a datos para la gestión de usuarios en el sistema de gimnasio.
+Hereda de <a class="xref" href="Gimnasio.Datos.ConexionBase.html">ConexionBase</a> y utiliza la entidad <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a>.
+Proporciona métodos CRUD y de búsqueda para la tabla usuarios_sistema y la vista_usuarios.</p>
+<p>La vista consolida la información relevante de los registros de usuarios,
+permitiendo consultar en una sola consulta datos de los usuarios y sus roles.
+Realiza JOIN entre la tabla de usuarios y la tabla de roles, permitiendo obtener la información de usuario junto con su rol asociado.</p>
+<pre><code class="lang-csharp">VIEW `vista_usuarios` AS
+   SELECT 
+       `u`.`id_usuario` AS `id_usuario`,
+       `u`.`username` AS `username`,
+       `u`.`password_hash` AS `password_hash`,
+       `u`.`nombre_completo` AS `nombre_completo`,
+       `u`.`email` AS `email`,
+       `r`.`nombre_rol` AS `nombre_rol`,
+       `u`.`fecha_creacion` AS `fecha_creacion`,
+       `u`.`ultima_modificacion` AS `ultima_modificacion`
+   FROM
+       (`usuarios_sistema` `u`
+       JOIN `roles` `r` ON ((`u`.`id_rol` = `r`.`id_rol`)))
+   ORDER BY `u`.`ultima_modificacion` DESC</code></pre>
+<p>Los diccionarios se utilizan para asociar los parámetros de la consulta con los parámetros del método.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Desarrollado por Progoat
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

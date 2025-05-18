@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class NUsuarios | Goatym </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class NUsuarios | Goatym ">
+      
+      <meta name="description" content="L&#243;gica de negocio para la gesti&#243;n de usuarios en el sistema de gimnasio. Interact&#250;a con la capa de datos  y la entidad . Todas las operaciones de la capa de negocio est&#225;n envueltas en bloques Try...Catch. Si ocurre una excepci&#243;n, se registra el error utilizando  en un log.txt Luego, la excepci&#243;n se propaga nuevamente mediante Throw New Exception(ex.Message) para que pueda ser gestionada en la interfaz de usuario.">
+      <link rel="icon" href="../images/logo.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Carlovich01/gimnasio3/new/main/apiSpec/new?filename=Gimnasio_Negocio_NUsuarios.md&amp;value=---%0Auid%3A%20Gimnasio.Negocio.NUsuarios%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Goatym">
+            Goatym
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gimnasio.Negocio.NUsuarios">
+
+
+
+  <h1 id="Gimnasio_Negocio_NUsuarios" data-uid="Gimnasio.Negocio.NUsuarios" class="text-break">
+Class NUsuarios  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NUsuarios.vb/#L15"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gimnasio.html">Gimnasio</a>.<a class="xref" href="Gimnasio.Negocio.html">Negocio</a></dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Lógica de negocio para la gestión de usuarios en el sistema de gimnasio.
+Interactúa con la capa de datos <a class="xref" href="Gimnasio.Negocio.NUsuarios.html#Gimnasio_Negocio_NUsuarios_dUsuarios">dUsuarios</a> y la entidad <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a>.
+Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.<br>
+Si ocurre una excepción, se registra el error utilizando <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_">Log(string, Exception)</a> en un log.txt
+Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message) para que pueda ser gestionada en la interfaz de usuario.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class NUsuarios</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NUsuarios</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Gimnasio_Negocio_NUsuarios_dUsuarios" data-uid="Gimnasio.Negocio.NUsuarios.dUsuarios">
+  dUsuarios
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NUsuarios.vb/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Instancia de la capa de datos para usuarios.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private DUsuarios dUsuarios</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gimnasio.Datos.DUsuarios.html">DUsuarios</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gimnasio_Negocio_NUsuarios_Actualizar_" data-uid="Gimnasio.Negocio.NUsuarios.Actualizar*"></a>
+
+  <h3 id="Gimnasio_Negocio_NUsuarios_Actualizar_Gimnasio_Entidades_Usuarios_" data-uid="Gimnasio.Negocio.NUsuarios.Actualizar(Gimnasio.Entidades.Usuarios)">
+  Actualizar(Usuarios)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NUsuarios.vb/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><ol>
+<li>Valida los campos de la entidad <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a> recibida como parámetro mediante <a class="xref" href="Gimnasio.Negocio.NUsuarios.html#Gimnasio_Negocio_NUsuarios_ValidarCampos_Gimnasio_Entidades_Usuarios_">ValidarCampos(Usuarios)</a>:</li>
+<li>Genera el hash SHA256 de la nueva contraseña antes de almacenarla, utilizando el método privado <a class="xref" href="Gimnasio.Negocio.NUsuarios.html#Gimnasio_Negocio_NUsuarios_GenerarHash_System_String_">GenerarHash(string)</a>.</li>
+<li>Actualiza el usuario en la base de datos mediante <a class="xref" href="Gimnasio.Datos.DUsuarios.html#Gimnasio_Datos_DUsuarios_Actualizar_Gimnasio_Entidades_Usuarios_">Actualizar(Usuarios)</a>.</li>
+</ol>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Actualizar(Usuarios Obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Obj</code> <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a> con los datos actualizados.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NUsuarios_Eliminar_" data-uid="Gimnasio.Negocio.NUsuarios.Eliminar*"></a>
+
+  <h3 id="Gimnasio_Negocio_NUsuarios_Eliminar_System_UInt32_" data-uid="Gimnasio.Negocio.NUsuarios.Eliminar(System.UInt32)">
+  Eliminar(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NUsuarios.vb/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Elimina un usuario del sistema según su id con <a class="xref" href="Gimnasio.Datos.DUsuarios.html#Gimnasio_Datos_DUsuarios_Eliminar_System_UInt32_">Eliminar(uint)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Eliminar(uint id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Identificador único del usuario a eliminar.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NUsuarios_GenerarHash_" data-uid="Gimnasio.Negocio.NUsuarios.GenerarHash*"></a>
+
+  <h3 id="Gimnasio_Negocio_NUsuarios_GenerarHash_System_String_" data-uid="Gimnasio.Negocio.NUsuarios.GenerarHash(System.String)">
+  GenerarHash(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NUsuarios.vb/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Genera un hash SHA256 para la contraseña proporcionada (utiliza System.Security.Cryptography)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private string GenerarHash(string password)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>password</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Contraseña en texto plano.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Hash de la contraseña en formato Base64.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NUsuarios_Insertar_" data-uid="Gimnasio.Negocio.NUsuarios.Insertar*"></a>
+
+  <h3 id="Gimnasio_Negocio_NUsuarios_Insertar_Gimnasio_Entidades_Usuarios_" data-uid="Gimnasio.Negocio.NUsuarios.Insertar(Gimnasio.Entidades.Usuarios)">
+  Insertar(Usuarios)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NUsuarios.vb/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><ol>
+<li>Verifica si el nombre de usuario ya está registrado utilizando <a class="xref" href="Gimnasio.Datos.DUsuarios.html#Gimnasio_Datos_DUsuarios_ObtenerPorUsername_System_String_">ObtenerPorUsername(string)</a>.
+<ul>
+<li>Si el usuario existe, lanza una excepción indicando que el username ya está registrado.</li>
+</ul>
+</li>
+<li>Valida los campos de la entidad <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a> con <a class="xref" href="Gimnasio.Negocio.NUsuarios.html#Gimnasio_Negocio_NUsuarios_ValidarCampos_Gimnasio_Entidades_Usuarios_">ValidarCampos(Usuarios)</a></li>
+<li>Genera el hash SHA256 de la contraseña antes de almacenarla, utilizando el método privado <a class="xref" href="Gimnasio.Negocio.NUsuarios.html#Gimnasio_Negocio_NUsuarios_GenerarHash_System_String_">GenerarHash(string)</a>.</li>
+<li>Inserta el usuario en la base de datos mediante <a class="xref" href="Gimnasio.Datos.DUsuarios.html#Gimnasio_Datos_DUsuarios_Insertar_Gimnasio_Entidades_Usuarios_">Insertar(Usuarios)</a>.</li>
+</ol>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Insertar(Usuarios Obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Obj</code> <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a> a insertar.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NUsuarios_Listar_" data-uid="Gimnasio.Negocio.NUsuarios.Listar*"></a>
+
+  <h3 id="Gimnasio_Negocio_NUsuarios_Listar" data-uid="Gimnasio.Negocio.NUsuarios.Listar">
+  Listar()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NUsuarios.vb/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Obtiene la lista de todos los usuarios registrado con <a class="xref" href="Gimnasio.Datos.DUsuarios.html#Gimnasio_Datos_DUsuarios_Listar">Listar()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable Listar()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los datos de los usuarios.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NUsuarios_ListarPorNombre_" data-uid="Gimnasio.Negocio.NUsuarios.ListarPorNombre*"></a>
+
+  <h3 id="Gimnasio_Negocio_NUsuarios_ListarPorNombre_System_String_" data-uid="Gimnasio.Negocio.NUsuarios.ListarPorNombre(System.String)">
+  ListarPorNombre(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NUsuarios.vb/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Realiza una validación y busca usuarios por nombre utilizando la capa de datos <a class="xref" href="Gimnasio.Datos.DUsuarios.html#Gimnasio_Datos_DUsuarios_ListarPorNombre_System_String_">ListarPorNombre(string)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable ListarPorNombre(string nombre)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>nombre</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Nombre o parte del nombre del usuario a buscar.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los resultados de la búsqueda.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NUsuarios_ValidarCampos_" data-uid="Gimnasio.Negocio.NUsuarios.ValidarCampos*"></a>
+
+  <h3 id="Gimnasio_Negocio_NUsuarios_ValidarCampos_Gimnasio_Entidades_Usuarios_" data-uid="Gimnasio.Negocio.NUsuarios.ValidarCampos(Gimnasio.Entidades.Usuarios)">
+  ValidarCampos(Usuarios)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NUsuarios.vb/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Valida los campos de la entidad <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a> antes de realizar operaciones de inserción o actualización.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void ValidarCampos(Usuarios Obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Obj</code> <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a> a validar.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NUsuarios_ValidarCredenciales_" data-uid="Gimnasio.Negocio.NUsuarios.ValidarCredenciales*"></a>
+
+  <h3 id="Gimnasio_Negocio_NUsuarios_ValidarCredenciales_System_String_System_String_" data-uid="Gimnasio.Negocio.NUsuarios.ValidarCredenciales(System.String,System.String)">
+  ValidarCredenciales(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NUsuarios.vb/#L162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><ol>
+<li>Busca el usuario por su nombre de usuario utilizando <a class="xref" href="Gimnasio.Datos.DUsuarios.html#Gimnasio_Datos_DUsuarios_ObtenerPorUsername_System_String_">ObtenerPorUsername(string)</a>.
+<ul>
+<li>Si no existe, retorna Nothing.</li>
+</ul>
+</li>
+<li>Si el usuario existe, genera el hash SHA256 de la contraseña ingresada mediante <a class="xref" href="Gimnasio.Negocio.NUsuarios.html#Gimnasio_Negocio_NUsuarios_GenerarHash_System_String_">GenerarHash(string)</a>.</li>
+<li>Compara el hash generado con el hash almacenado en la base de datos.
+<ul>
+<li>Si coinciden, retorna la instancia de <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a> correspondiente.</li>
+<li>Si no coinciden, retorna Nothing.</li>
+</ul>
+</li>
+</ol>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Usuarios ValidarCredenciales(string username, string password)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>username</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Nombre de usuario.</p>
+</dd>
+    <dt><code>password</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Contraseña en texto plano.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a> si las credenciales son válidas, Nothing en caso contrario.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NUsuarios.vb/#L15" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Desarrollado por Progoat
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

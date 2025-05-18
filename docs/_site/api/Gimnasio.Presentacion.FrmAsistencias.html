@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class FrmAsistencias | Goatym </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class FrmAsistencias | Goatym ">
+      
+      <meta name="description" content="Formulario para el registro de asistencias de miembros mediante el ingreso de DNI. Permite registrar el ingreso, mostrar el estado de las membres&#237;as y los d&#237;as restantes. Utiliza la clase  para la l&#243;gica de negocio de asistencias y  para la consulta de membres&#237;as. Todas las operaciones de esta capa est&#225;n envueltas en bloques Try...Catch. El manejo de errores se realiza a trav&#233;s de  que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.">
+      <link rel="icon" href="../images/logo.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Carlovich01/gimnasio3/new/main/apiSpec/new?filename=Gimnasio_Presentacion_FrmAsistencias.md&amp;value=---%0Auid%3A%20Gimnasio.Presentacion.FrmAsistencias%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Goatym">
+            Goatym
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gimnasio.Presentacion.FrmAsistencias">
+
+
+
+  <h1 id="Gimnasio_Presentacion_FrmAsistencias" data-uid="Gimnasio.Presentacion.FrmAsistencias" class="text-break">
+Class FrmAsistencias  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.vb/#L12"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gimnasio.html">Gimnasio</a>.<a class="xref" href="Gimnasio.Presentacion.html">Presentacion</a></dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Formulario para el registro de asistencias de miembros mediante el ingreso de DNI.
+Permite registrar el ingreso, mostrar el estado de las membresías y los días restantes.
+Utiliza la clase <a class="xref" href="Gimnasio.Negocio.NAsistencia.html">NAsistencia</a> para la lógica de negocio de asistencias y <a class="xref" href="Gimnasio.Negocio.NMembresias.html">NMembresias</a> para la consulta de membresías.
+Todas las operaciones de esta capa están envueltas en bloques Try...Catch.
+El manejo de errores se realiza a través de <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Mostrar_System_String_System_Exception_">Mostrar(string, Exception)</a>
+que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DesignerGenerated]
+public class FrmAsistencias : Form, IOleControl.Interface, IOleObject.Interface, IOleInPlaceObject.Interface, IOleInPlaceActiveObject.Interface, IOleWindow.Interface, IViewObject2.Interface, IViewObject.Interface, IPersistStreamInit.Interface, IPersistPropertyBag.Interface, IPersistStorage.Interface, IPersist.Interface, IQuickActivate.Interface, ISupportOleDropSource, IDropTarget, ISynchronizeInvoke, IWin32Window, IBindableComponent, IKeyboardToolTip, IHandle&lt;HWND&gt;, IArrangedElement, IComponent, IDisposable, IContainerControl</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject">MarshalByRefObject</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.component">Component</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.scrollablecontrol">ScrollableControl</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.containercontrol">ContainerControl</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form">Form</a></div>
+      <div><span class="xref">FrmAsistencias</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Gimnasio_Presentacion_FrmAsistencias__ctor_" data-uid="Gimnasio.Presentacion.FrmAsistencias.#ctor*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmAsistencias__ctor_Gimnasio_Presentacion_FrmRegistroAsistencias_" data-uid="Gimnasio.Presentacion.FrmAsistencias.#ctor(Gimnasio.Presentacion.FrmRegistroAsistencias)">
+  FrmAsistencias(FrmRegistroAsistencias)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.vb/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructor del formulario <a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html">FrmAsistencias</a>.</p>
+<ul>
+<li>Inicializa los componentes visuales del formulario llamando a <a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html#Gimnasio_Presentacion_FrmAsistencias_InitializeComponent">InitializeComponent()</a>.</li>
+<li>Recibe una instancia de <a class="xref" href="Gimnasio.Presentacion.FrmRegistroAsistencias.html">FrmRegistroAsistencias</a> como parámetro y la asigna al campo privado <a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html#Gimnasio_Presentacion_FrmAsistencias_frmRegistro">frmRegistro</a>.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FrmAsistencias(FrmRegistroAsistencias frmRegistro)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>frmRegistro</code> <a class="xref" href="Gimnasio.Presentacion.FrmRegistroAsistencias.html">FrmRegistroAsistencias</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Presentacion.FrmRegistroAsistencias.html">FrmRegistroAsistencias</a> que permite la interacción entre formularios.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Gimnasio_Presentacion_FrmAsistencias_components" data-uid="Gimnasio.Presentacion.FrmAsistencias.components">
+  components
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.Designer.vb/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private IContainer components</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icontainer">IContainer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gimnasio_Presentacion_FrmAsistencias_frmRegistro" data-uid="Gimnasio.Presentacion.FrmAsistencias.frmRegistro">
+  frmRegistro
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.vb/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Referencia al formulario <a class="xref" href="Gimnasio.Presentacion.FrmRegistroAsistencias.html">FrmRegistroAsistencias</a> desde el formulario de asistencias.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private FrmRegistroAsistencias frmRegistro</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gimnasio.Presentacion.FrmRegistroAsistencias.html">FrmRegistroAsistencias</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gimnasio_Presentacion_FrmAsistencias_nAsistencias" data-uid="Gimnasio.Presentacion.FrmAsistencias.nAsistencias">
+  nAsistencias
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.vb/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Instancia de la capa de negocio para asistencias.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private NAsistencia nAsistencias</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gimnasio.Negocio.NAsistencia.html">NAsistencia</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Gimnasio_Presentacion_FrmAsistencias_Label2_" data-uid="Gimnasio.Presentacion.FrmAsistencias.Label2*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmAsistencias_Label2" data-uid="Gimnasio.Presentacion.FrmAsistencias.Label2">
+  Label2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.Designer.vb/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label Label2 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmAsistencias_dgvListado_" data-uid="Gimnasio.Presentacion.FrmAsistencias.dgvListado*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmAsistencias_dgvListado" data-uid="Gimnasio.Presentacion.FrmAsistencias.dgvListado">
+  dgvListado
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.Designer.vb/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual DataGridView dgvListado { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.datagridview">DataGridView</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmAsistencias_labelResultado_" data-uid="Gimnasio.Presentacion.FrmAsistencias.labelResultado*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmAsistencias_labelResultado" data-uid="Gimnasio.Presentacion.FrmAsistencias.labelResultado">
+  labelResultado
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.Designer.vb/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label labelResultado { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmAsistencias_tbDNI_" data-uid="Gimnasio.Presentacion.FrmAsistencias.tbDNI*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmAsistencias_tbDNI" data-uid="Gimnasio.Presentacion.FrmAsistencias.tbDNI">
+  tbDNI
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.Designer.vb/#L124"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual TextBox tbDNI { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gimnasio_Presentacion_FrmAsistencias_Dispose_" data-uid="Gimnasio.Presentacion.FrmAsistencias.Dispose*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmAsistencias_Dispose_System_Boolean_" data-uid="Gimnasio.Presentacion.FrmAsistencias.Dispose(System.Boolean)">
+  Dispose(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.Designer.vb/#L6"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Disposes of the resources (other than memory) used by the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form">Form</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to release both managed and unmanaged resources; <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> to release only unmanaged resources.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmAsistencias_InitializeComponent_" data-uid="Gimnasio.Presentacion.FrmAsistencias.InitializeComponent*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmAsistencias_InitializeComponent" data-uid="Gimnasio.Presentacion.FrmAsistencias.InitializeComponent">
+  InitializeComponent()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.Designer.vb/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void InitializeComponent()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmAsistencias_frmAsistencias_Load_" data-uid="Gimnasio.Presentacion.FrmAsistencias.frmAsistencias_Load*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmAsistencias_frmAsistencias_Load_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmAsistencias.frmAsistencias_Load(System.Object,System.EventArgs)">
+  frmAsistencias_Load(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.vb/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al cargar el formulario. Oculta el DataGriedView.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void frmAsistencias_Load(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmAsistencias_tbDNI_KeyPress_" data-uid="Gimnasio.Presentacion.FrmAsistencias.tbDNI_KeyPress*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmAsistencias_tbDNI_KeyPress_System_Object_System_Windows_Forms_KeyPressEventArgs_" data-uid="Gimnasio.Presentacion.FrmAsistencias.tbDNI_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+  tbDNI_KeyPress(object, KeyPressEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.vb/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al presionar una tecla en el campo de texto del DNI.</p>
+<ul>
+<li>Si la tecla presionada es Enter, intenta registrar la asistencia del miembro mediante <a class="xref" href="Gimnasio.Negocio.NAsistencia.html#Gimnasio_Negocio_NAsistencia_RegistrarIngresoPorDNI_System_String_">RegistrarIngresoPorDNI(string)</a>.</li>
+<li>Llama a <a class="xref" href="Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_ActualizarDgv">ActualizarDgv()</a> para actualizar el listado general de asistencias.</li>
+<li>Si el resultado es &quot;Exitoso&quot; o &quot;Fallido_Membresia_Inactiva&quot;:
+<ul>
+<li>Muestra el DataGridView con el estado de las membresías del miembro, calculando y mostrando los días restantes de cada plan.</li>
+<li>Muestra un mensaje de bienvenida o advertencia según el resultado.</li>
+</ul>
+</li>
+<li>Si el resultado es &quot;Fallido_DNI_NoEncontrado&quot;, informa que el DNI no fue encontrado y solicita reingreso.</li>
+<li>Si el resultado es &quot;Fallido_No_Hay_Membresia&quot;, informa que no posee membresías activas y sugiere inscribirse a un plan.</li>
+<li>En cualquier otro caso, lanza una excepción indicando un error desconocido.</li>
+<li>Limpia el campo de texto del DNI tras cada intento.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void tbDNI_KeyPress(object sender, KeyPressEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.keypresseventargs">KeyPressEventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.vb/#L12" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Desarrollado por Progoat
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

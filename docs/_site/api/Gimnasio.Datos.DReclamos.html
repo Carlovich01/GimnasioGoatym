@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DReclamos | Goatym </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DReclamos | Goatym ">
+      
+      <meta name="description" content="Clase de acceso a datos para la gesti&#243;n de reclamos en el sistema de gimnasio. Hereda de  y utiliza la entidad . Proporciona m&#233;todos CRUD y de b&#250;squeda para la tabla reclamos y la vista vista_reclamos. La vista consolida la informaci&#243;n relevante de los reclamos, permitiendo consultar en una sola consulta datos del reclamo y el miembro que lo realizo. Realiza LEFT JOIN entre la reclamos y miembros, permitiendo obtener la informaci&#243;n de reclamo incluso si los datos de miembro no est&#225;n presentes. VIEW `vista_reclamos` As SELECT        `r`.`id_reclamos` AS `id_reclamos`,        `r`.`tipo` AS `tipo`,        `r`.`descripcion` AS `descripcion`,        `r`.`fecha_envio` AS `fecha_envio`,        `r`.`estado` AS `estado`,        `r`.`respuesta` AS `respuesta`,        `r`.`fecha_respuesta` AS `fecha_respuesta`,        `m`.`dni` AS `dni_miembro` FROM        (`reclamos` `r`        LEFT JOIN `miembros` `m` On ((`r`.`id_miembro` = `m`.`id_miembro`)))    ORDER BY `r`.`fecha_envio` DESC Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo">
+      <link rel="icon" href="../images/logo.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Carlovich01/gimnasio3/new/main/apiSpec/new?filename=Gimnasio_Datos_DReclamos.md&amp;value=---%0Auid%3A%20Gimnasio.Datos.DReclamos%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Goatym">
+            Goatym
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gimnasio.Datos.DReclamos">
+
+
+
+  <h1 id="Gimnasio_Datos_DReclamos" data-uid="Gimnasio.Datos.DReclamos" class="text-break">
+Class DReclamos  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DReclamos.vb/#L33"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gimnasio.html">Gimnasio</a>.<a class="xref" href="Gimnasio.Datos.html">Datos</a></dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Clase de acceso a datos para la gestión de reclamos en el sistema de gimnasio.
+Hereda de <a class="xref" href="Gimnasio.Datos.ConexionBase.html">ConexionBase</a> y utiliza la entidad <a class="xref" href="Gimnasio.Entidades.Reclamos.html">Reclamos</a>.
+Proporciona métodos CRUD y de búsqueda para la tabla reclamos y la vista vista_reclamos.</p>
+<p>La vista consolida la información relevante de los reclamos, permitiendo consultar en una sola consulta datos del reclamo
+y el miembro que lo realizo.
+Realiza LEFT JOIN entre la reclamos y miembros, permitiendo obtener la información de reclamo incluso si los datos de miembro no están presentes.</p>
+<pre><code class="lang-csharp">VIEW `vista_reclamos` As
+SELECT
+       `r`.`id_reclamos` AS `id_reclamos`,
+       `r`.`tipo` AS `tipo`,
+       `r`.`descripcion` AS `descripcion`,
+       `r`.`fecha_envio` AS `fecha_envio`,
+       `r`.`estado` AS `estado`,
+       `r`.`respuesta` AS `respuesta`,
+       `r`.`fecha_respuesta` AS `fecha_respuesta`,
+       `m`.`dni` AS `dni_miembro`
+FROM
+       (`reclamos` `r`
+       LEFT JOIN `miembros` `m` On ((`r`.`id_miembro` = `m`.`id_miembro`)))
+   ORDER BY `r`.`fecha_envio` DESC</code></pre>
+<p>Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DReclamos : ConexionBase</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Gimnasio.Datos.ConexionBase.html">ConexionBase</a></div>
+      <div><span class="xref">DReclamos</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gimnasio_Datos_DReclamos_Actualizar_" data-uid="Gimnasio.Datos.DReclamos.Actualizar*"></a>
+
+  <h3 id="Gimnasio_Datos_DReclamos_Actualizar_Gimnasio_Entidades_Reclamos_" data-uid="Gimnasio.Datos.DReclamos.Actualizar(Gimnasio.Entidades.Reclamos)">
+  Actualizar(Reclamos)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DReclamos.vb/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Recibe una instancia de Reclamos y ejecuta una sentencia SQL (UPDATE) que actualiza los datos de un registro de reclamo existente que
+corresponde al id de la instancia.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Actualizar(Reclamos Obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Obj</code> <a class="xref" href="Gimnasio.Entidades.Reclamos.html">Reclamos</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Entidades.Reclamos.html">Reclamos</a> con los datos actualizados.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Datos_DReclamos_ActualizarElEstadoAPendiente_" data-uid="Gimnasio.Datos.DReclamos.ActualizarElEstadoAPendiente*"></a>
+
+  <h3 id="Gimnasio_Datos_DReclamos_ActualizarElEstadoAPendiente_System_UInt32_" data-uid="Gimnasio.Datos.DReclamos.ActualizarElEstadoAPendiente(System.UInt32)">
+  ActualizarElEstadoAPendiente(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DReclamos.vb/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Recibe un id de reclamo y ejecuta una sentencia SQL (UPDATE) que actualiza el estado a pendiente de un registro de reclamo  que
+corresponde al id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ActualizarElEstadoAPendiente(uint id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Identificador único del reclamo.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Datos_DReclamos_ActualizarElEstadoAResuelto_" data-uid="Gimnasio.Datos.DReclamos.ActualizarElEstadoAResuelto*"></a>
+
+  <h3 id="Gimnasio_Datos_DReclamos_ActualizarElEstadoAResuelto_System_UInt32_" data-uid="Gimnasio.Datos.DReclamos.ActualizarElEstadoAResuelto(System.UInt32)">
+  ActualizarElEstadoAResuelto(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DReclamos.vb/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Recibe un id de reclamo y ejecuta una sentencia SQL (UPDATE) que actualiza el estado a resuelto de un registro de reclamo  que
+corresponde al id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ActualizarElEstadoAResuelto(uint id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Identificador único del reclamo.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Datos_DReclamos_ActualizarRespuesta_" data-uid="Gimnasio.Datos.DReclamos.ActualizarRespuesta*"></a>
+
+  <h3 id="Gimnasio_Datos_DReclamos_ActualizarRespuesta_Gimnasio_Entidades_Reclamos_" data-uid="Gimnasio.Datos.DReclamos.ActualizarRespuesta(Gimnasio.Entidades.Reclamos)">
+  ActualizarRespuesta(Reclamos)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DReclamos.vb/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Recibe una instancia de Reclamos y ejecuta una sentencia SQL (UPDATE) que actualiza el campo de respuesta de un registro de reclamo existente
+que corresponde al id de la instancia.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ActualizarRespuesta(Reclamos Obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Obj</code> <a class="xref" href="Gimnasio.Entidades.Reclamos.html">Reclamos</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Entidades.Reclamos.html">Reclamos</a> con la respuesta actualizada.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Datos_DReclamos_Eliminar_" data-uid="Gimnasio.Datos.DReclamos.Eliminar*"></a>
+
+  <h3 id="Gimnasio_Datos_DReclamos_Eliminar_System_UInt32_" data-uid="Gimnasio.Datos.DReclamos.Eliminar(System.UInt32)">
+  Eliminar(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DReclamos.vb/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Recibe el id del reclamo a eliminar y ejecuta una sentencia SQL (DELETE) que elimina el registro de reclamo correspondiente.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Eliminar(uint id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Identificador único del reclamo a eliminar.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Datos_DReclamos_Insertar_" data-uid="Gimnasio.Datos.DReclamos.Insertar*"></a>
+
+  <h3 id="Gimnasio_Datos_DReclamos_Insertar_Gimnasio_Entidades_Reclamos_" data-uid="Gimnasio.Datos.DReclamos.Insertar(Gimnasio.Entidades.Reclamos)">
+  Insertar(Reclamos)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DReclamos.vb/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Recibe una instancia de Reclamos y ejecuta una sentencia SQL (INSERT) que inserta un nuevo registro de reclamos con los datos proporcionados.
+Si id de miembro es nulo, se insertará NULL en la base de datos
+Utiliza los datos de la entidad <a class="xref" href="Gimnasio.Entidades.Reclamos.html">Reclamos</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Insertar(Reclamos Obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Obj</code> <a class="xref" href="Gimnasio.Entidades.Reclamos.html">Reclamos</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Entidades.Reclamos.html">Reclamos</a> a insertar.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Datos_DReclamos_Listar_" data-uid="Gimnasio.Datos.DReclamos.Listar*"></a>
+
+  <h3 id="Gimnasio_Datos_DReclamos_Listar" data-uid="Gimnasio.Datos.DReclamos.Listar">
+  Listar()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DReclamos.vb/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Realiza una consulta SQL (SELECT) que obtiene todos los registros de la vista_reclamos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable Listar()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los datos de los reclamos.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Datos_DReclamos_ListarPorEstado_" data-uid="Gimnasio.Datos.DReclamos.ListarPorEstado*"></a>
+
+  <h3 id="Gimnasio_Datos_DReclamos_ListarPorEstado_System_String_" data-uid="Gimnasio.Datos.DReclamos.ListarPorEstado(System.String)">
+  ListarPorEstado(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DReclamos.vb/#L170"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Recibe el estado y ejecuta una sentencia SQL (SELECT) que obtiene los registros de reclamos que tienen ese estado.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable ListarPorEstado(string Estado)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Estado</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Estado del reclamo (&quot;pendiente&quot;, &quot;resuelto&quot;).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los resultados de la búsqueda.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DReclamos.vb/#L33" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Desarrollado por Progoat
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,851 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gimnasio.Entidades.Planes
+  commentId: T:Gimnasio.Entidades.Planes
+  id: Planes
+  parent: Gimnasio.Entidades
+  children:
+  - Gimnasio.Entidades.Planes.Descripcion
+  - Gimnasio.Entidades.Planes.DuracionDias
+  - Gimnasio.Entidades.Planes.FechaCreacion
+  - Gimnasio.Entidades.Planes.IdPlan
+  - Gimnasio.Entidades.Planes.NombrePlan
+  - Gimnasio.Entidades.Planes.Precio
+  - Gimnasio.Entidades.Planes.UltimaModificacion
+  - Gimnasio.Entidades.Planes._Descripcion
+  - Gimnasio.Entidades.Planes._DuracionDias
+  - Gimnasio.Entidades.Planes._FechaCreacion
+  - Gimnasio.Entidades.Planes._IdPlan
+  - Gimnasio.Entidades.Planes._NombrePlan
+  - Gimnasio.Entidades.Planes._Precio
+  - Gimnasio.Entidades.Planes._UltimaModificacion
+  langs:
+  - csharp
+  - vb
+  name: Planes
+  nameWithType: Planes
+  fullName: Gimnasio.Entidades.Planes
+  type: Class
+  source:
+    remote:
+      path: Gimnasio.Entidades/Planes.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Planes
+    path: ../Gimnasio.Entidades/Planes.vb
+    startLine: 4
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: >-
+    Representa un plan de membresía dentro del sistema del gimnasio.
+
+    Contiene información relevante como nombre, descripción, duración, precio y fechas de creación y modificación.
+  example: []
+  syntax:
+    content: public class Planes
+    content.vb: Public Class Planes
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.Finalize
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Gimnasio.Entidades.Planes._IdPlan
+  commentId: F:Gimnasio.Entidades.Planes._IdPlan
+  id: _IdPlan
+  parent: Gimnasio.Entidades.Planes
+  langs:
+  - csharp
+  - vb
+  name: _IdPlan
+  nameWithType: Planes._IdPlan
+  fullName: Gimnasio.Entidades.Planes._IdPlan
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Entidades/Planes.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: _IdPlan
+    path: ../Gimnasio.Entidades/Planes.vb
+    startLine: 8
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Identificador único del plan.
+  example: []
+  syntax:
+    content: private uint _IdPlan
+    return:
+      type: System.UInt32
+    content.vb: Private _IdPlan As UInteger
+- uid: Gimnasio.Entidades.Planes._NombrePlan
+  commentId: F:Gimnasio.Entidades.Planes._NombrePlan
+  id: _NombrePlan
+  parent: Gimnasio.Entidades.Planes
+  langs:
+  - csharp
+  - vb
+  name: _NombrePlan
+  nameWithType: Planes._NombrePlan
+  fullName: Gimnasio.Entidades.Planes._NombrePlan
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Entidades/Planes.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: _NombrePlan
+    path: ../Gimnasio.Entidades/Planes.vb
+    startLine: 12
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Nombre del plan.
+  example: []
+  syntax:
+    content: private string _NombrePlan
+    return:
+      type: System.String
+    content.vb: Private _NombrePlan As String
+- uid: Gimnasio.Entidades.Planes._Descripcion
+  commentId: F:Gimnasio.Entidades.Planes._Descripcion
+  id: _Descripcion
+  parent: Gimnasio.Entidades.Planes
+  langs:
+  - csharp
+  - vb
+  name: _Descripcion
+  nameWithType: Planes._Descripcion
+  fullName: Gimnasio.Entidades.Planes._Descripcion
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Entidades/Planes.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: _Descripcion
+    path: ../Gimnasio.Entidades/Planes.vb
+    startLine: 16
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Descripción del plan.
+  example: []
+  syntax:
+    content: private string _Descripcion
+    return:
+      type: System.String
+    content.vb: Private _Descripcion As String
+- uid: Gimnasio.Entidades.Planes._DuracionDias
+  commentId: F:Gimnasio.Entidades.Planes._DuracionDias
+  id: _DuracionDias
+  parent: Gimnasio.Entidades.Planes
+  langs:
+  - csharp
+  - vb
+  name: _DuracionDias
+  nameWithType: Planes._DuracionDias
+  fullName: Gimnasio.Entidades.Planes._DuracionDias
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Entidades/Planes.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: _DuracionDias
+    path: ../Gimnasio.Entidades/Planes.vb
+    startLine: 20
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Duración del plan en días.
+  example: []
+  syntax:
+    content: private uint _DuracionDias
+    return:
+      type: System.UInt32
+    content.vb: Private _DuracionDias As UInteger
+- uid: Gimnasio.Entidades.Planes._Precio
+  commentId: F:Gimnasio.Entidades.Planes._Precio
+  id: _Precio
+  parent: Gimnasio.Entidades.Planes
+  langs:
+  - csharp
+  - vb
+  name: _Precio
+  nameWithType: Planes._Precio
+  fullName: Gimnasio.Entidades.Planes._Precio
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Entidades/Planes.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: _Precio
+    path: ../Gimnasio.Entidades/Planes.vb
+    startLine: 24
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Precio del plan.
+  example: []
+  syntax:
+    content: private decimal _Precio
+    return:
+      type: System.Decimal
+    content.vb: Private _Precio As Decimal
+- uid: Gimnasio.Entidades.Planes._FechaCreacion
+  commentId: F:Gimnasio.Entidades.Planes._FechaCreacion
+  id: _FechaCreacion
+  parent: Gimnasio.Entidades.Planes
+  langs:
+  - csharp
+  - vb
+  name: _FechaCreacion
+  nameWithType: Planes._FechaCreacion
+  fullName: Gimnasio.Entidades.Planes._FechaCreacion
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Entidades/Planes.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: _FechaCreacion
+    path: ../Gimnasio.Entidades/Planes.vb
+    startLine: 28
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Fecha de creación del plan.
+  example: []
+  syntax:
+    content: private DateTime _FechaCreacion
+    return:
+      type: System.DateTime
+    content.vb: Private _FechaCreacion As Date
+- uid: Gimnasio.Entidades.Planes._UltimaModificacion
+  commentId: F:Gimnasio.Entidades.Planes._UltimaModificacion
+  id: _UltimaModificacion
+  parent: Gimnasio.Entidades.Planes
+  langs:
+  - csharp
+  - vb
+  name: _UltimaModificacion
+  nameWithType: Planes._UltimaModificacion
+  fullName: Gimnasio.Entidades.Planes._UltimaModificacion
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Entidades/Planes.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: _UltimaModificacion
+    path: ../Gimnasio.Entidades/Planes.vb
+    startLine: 32
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Fecha de la última modificación del plan.
+  example: []
+  syntax:
+    content: private DateTime _UltimaModificacion
+    return:
+      type: System.DateTime
+    content.vb: Private _UltimaModificacion As Date
+- uid: Gimnasio.Entidades.Planes.IdPlan
+  commentId: P:Gimnasio.Entidades.Planes.IdPlan
+  id: IdPlan
+  parent: Gimnasio.Entidades.Planes
+  langs:
+  - csharp
+  - vb
+  name: IdPlan
+  nameWithType: Planes.IdPlan
+  fullName: Gimnasio.Entidades.Planes.IdPlan
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Entidades/Planes.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: IdPlan
+    path: ../Gimnasio.Entidades/Planes.vb
+    startLine: 37
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Obtiene o establece el identificador único del plan.
+  example: []
+  syntax:
+    content: public uint IdPlan { get; set; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public Property IdPlan As UInteger
+  overload: Gimnasio.Entidades.Planes.IdPlan*
+- uid: Gimnasio.Entidades.Planes.NombrePlan
+  commentId: P:Gimnasio.Entidades.Planes.NombrePlan
+  id: NombrePlan
+  parent: Gimnasio.Entidades.Planes
+  langs:
+  - csharp
+  - vb
+  name: NombrePlan
+  nameWithType: Planes.NombrePlan
+  fullName: Gimnasio.Entidades.Planes.NombrePlan
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Entidades/Planes.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: NombrePlan
+    path: ../Gimnasio.Entidades/Planes.vb
+    startLine: 49
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Obtiene o establece el nombre del plan.
+  example: []
+  syntax:
+    content: public string NombrePlan { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property NombrePlan As String
+  overload: Gimnasio.Entidades.Planes.NombrePlan*
+- uid: Gimnasio.Entidades.Planes.Descripcion
+  commentId: P:Gimnasio.Entidades.Planes.Descripcion
+  id: Descripcion
+  parent: Gimnasio.Entidades.Planes
+  langs:
+  - csharp
+  - vb
+  name: Descripcion
+  nameWithType: Planes.Descripcion
+  fullName: Gimnasio.Entidades.Planes.Descripcion
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Entidades/Planes.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Descripcion
+    path: ../Gimnasio.Entidades/Planes.vb
+    startLine: 61
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Obtiene o establece la descripción del plan.
+  example: []
+  syntax:
+    content: public string Descripcion { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Descripcion As String
+  overload: Gimnasio.Entidades.Planes.Descripcion*
+- uid: Gimnasio.Entidades.Planes.DuracionDias
+  commentId: P:Gimnasio.Entidades.Planes.DuracionDias
+  id: DuracionDias
+  parent: Gimnasio.Entidades.Planes
+  langs:
+  - csharp
+  - vb
+  name: DuracionDias
+  nameWithType: Planes.DuracionDias
+  fullName: Gimnasio.Entidades.Planes.DuracionDias
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Entidades/Planes.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: DuracionDias
+    path: ../Gimnasio.Entidades/Planes.vb
+    startLine: 73
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Obtiene o establece la duración del plan en días.
+  example: []
+  syntax:
+    content: public uint DuracionDias { get; set; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public Property DuracionDias As UInteger
+  overload: Gimnasio.Entidades.Planes.DuracionDias*
+- uid: Gimnasio.Entidades.Planes.Precio
+  commentId: P:Gimnasio.Entidades.Planes.Precio
+  id: Precio
+  parent: Gimnasio.Entidades.Planes
+  langs:
+  - csharp
+  - vb
+  name: Precio
+  nameWithType: Planes.Precio
+  fullName: Gimnasio.Entidades.Planes.Precio
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Entidades/Planes.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Precio
+    path: ../Gimnasio.Entidades/Planes.vb
+    startLine: 85
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Obtiene o establece el precio del plan.
+  example: []
+  syntax:
+    content: public decimal Precio { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public Property Precio As Decimal
+  overload: Gimnasio.Entidades.Planes.Precio*
+- uid: Gimnasio.Entidades.Planes.FechaCreacion
+  commentId: P:Gimnasio.Entidades.Planes.FechaCreacion
+  id: FechaCreacion
+  parent: Gimnasio.Entidades.Planes
+  langs:
+  - csharp
+  - vb
+  name: FechaCreacion
+  nameWithType: Planes.FechaCreacion
+  fullName: Gimnasio.Entidades.Planes.FechaCreacion
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Entidades/Planes.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: FechaCreacion
+    path: ../Gimnasio.Entidades/Planes.vb
+    startLine: 97
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Obtiene o establece la fecha de creación del plan.
+  example: []
+  syntax:
+    content: public DateTime FechaCreacion { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property FechaCreacion As Date
+  overload: Gimnasio.Entidades.Planes.FechaCreacion*
+- uid: Gimnasio.Entidades.Planes.UltimaModificacion
+  commentId: P:Gimnasio.Entidades.Planes.UltimaModificacion
+  id: UltimaModificacion
+  parent: Gimnasio.Entidades.Planes
+  langs:
+  - csharp
+  - vb
+  name: UltimaModificacion
+  nameWithType: Planes.UltimaModificacion
+  fullName: Gimnasio.Entidades.Planes.UltimaModificacion
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Entidades/Planes.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: UltimaModificacion
+    path: ../Gimnasio.Entidades/Planes.vb
+    startLine: 109
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Obtiene o establece la fecha de la última modificación del plan.
+  example: []
+  syntax:
+    content: public DateTime UltimaModificacion { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property UltimaModificacion As Date
+  overload: Gimnasio.Entidades.Planes.UltimaModificacion*
+references:
+- uid: Gimnasio.Entidades
+  commentId: N:Gimnasio.Entidades
+  isExternal: true
+  href: Gimnasio.html
+  name: Gimnasio.Entidades
+  nameWithType: Gimnasio.Entidades
+  fullName: Gimnasio.Entidades
+  spec.csharp:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Entidades
+    name: Entidades
+    href: Gimnasio.Entidades.html
+  spec.vb:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Entidades
+    name: Entidades
+    href: Gimnasio.Entidades.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Finalize
+  commentId: M:System.Object.Finalize
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.finalize
+  name: Finalize()
+  nameWithType: object.Finalize()
+  fullName: object.Finalize()
+  nameWithType.vb: Object.Finalize()
+  fullName.vb: Object.Finalize()
+  spec.csharp:
+  - uid: System.Object.Finalize
+    name: Finalize
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.finalize
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.Finalize
+    name: Finalize
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.finalize
+  - name: (
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: Gimnasio.Entidades.Planes.IdPlan*
+  commentId: Overload:Gimnasio.Entidades.Planes.IdPlan
+  href: Gimnasio.Entidades.Planes.html#Gimnasio_Entidades_Planes_IdPlan
+  name: IdPlan
+  nameWithType: Planes.IdPlan
+  fullName: Gimnasio.Entidades.Planes.IdPlan
+- uid: Gimnasio.Entidades.Planes.NombrePlan*
+  commentId: Overload:Gimnasio.Entidades.Planes.NombrePlan
+  href: Gimnasio.Entidades.Planes.html#Gimnasio_Entidades_Planes_NombrePlan
+  name: NombrePlan
+  nameWithType: Planes.NombrePlan
+  fullName: Gimnasio.Entidades.Planes.NombrePlan
+- uid: Gimnasio.Entidades.Planes.Descripcion*
+  commentId: Overload:Gimnasio.Entidades.Planes.Descripcion
+  href: Gimnasio.Entidades.Planes.html#Gimnasio_Entidades_Planes_Descripcion
+  name: Descripcion
+  nameWithType: Planes.Descripcion
+  fullName: Gimnasio.Entidades.Planes.Descripcion
+- uid: Gimnasio.Entidades.Planes.DuracionDias*
+  commentId: Overload:Gimnasio.Entidades.Planes.DuracionDias
+  href: Gimnasio.Entidades.Planes.html#Gimnasio_Entidades_Planes_DuracionDias
+  name: DuracionDias
+  nameWithType: Planes.DuracionDias
+  fullName: Gimnasio.Entidades.Planes.DuracionDias
+- uid: Gimnasio.Entidades.Planes.Precio*
+  commentId: Overload:Gimnasio.Entidades.Planes.Precio
+  href: Gimnasio.Entidades.Planes.html#Gimnasio_Entidades_Planes_Precio
+  name: Precio
+  nameWithType: Planes.Precio
+  fullName: Gimnasio.Entidades.Planes.Precio
+- uid: Gimnasio.Entidades.Planes.FechaCreacion*
+  commentId: Overload:Gimnasio.Entidades.Planes.FechaCreacion
+  href: Gimnasio.Entidades.Planes.html#Gimnasio_Entidades_Planes_FechaCreacion
+  name: FechaCreacion
+  nameWithType: Planes.FechaCreacion
+  fullName: Gimnasio.Entidades.Planes.FechaCreacion
+- uid: Gimnasio.Entidades.Planes.UltimaModificacion*
+  commentId: Overload:Gimnasio.Entidades.Planes.UltimaModificacion
+  href: Gimnasio.Entidades.Planes.html#Gimnasio_Entidades_Planes_UltimaModificacion
+  name: UltimaModificacion
+  nameWithType: Planes.UltimaModificacion
+  fullName: Gimnasio.Entidades.Planes.UltimaModificacion

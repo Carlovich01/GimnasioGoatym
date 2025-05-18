@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class FrmPlanes | Goatym </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class FrmPlanes | Goatym ">
+      
+      <meta name="description" content="Formulario para la gesti&#243;n de planes en el sistema de gimnasio. Permite listar, buscar, insertar, actualizar y eliminar planes. Utiliza la clase  para la l&#243;gica de negocio y la clase  como entidad. El acceso a las operaciones de mantenimiento depende del rol del usuario (). Todas las operaciones de esta capa est&#225;n envueltas en bloques Try...Catch. El manejo de errores se realiza a trav&#233;s de  que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.">
+      <link rel="icon" href="../images/logo.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Carlovich01/gimnasio3/new/main/apiSpec/new?filename=Gimnasio_Presentacion_FrmPlanes.md&amp;value=---%0Auid%3A%20Gimnasio.Presentacion.FrmPlanes%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Goatym">
+            Goatym
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gimnasio.Presentacion.FrmPlanes">
+
+
+
+  <h1 id="Gimnasio_Presentacion_FrmPlanes" data-uid="Gimnasio.Presentacion.FrmPlanes" class="text-break">
+Class FrmPlanes  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gimnasio.html">Gimnasio</a>.<a class="xref" href="Gimnasio.Presentacion.html">Presentacion</a></dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Formulario para la gestión de planes en el sistema de gimnasio. Permite listar, buscar, insertar, actualizar y eliminar planes.
+Utiliza la clase <a class="xref" href="Gimnasio.Negocio.NPlanes.html">NPlanes</a> para la lógica de negocio y la clase <a class="xref" href="Gimnasio.Entidades.Planes.html">Planes</a> como entidad.
+El acceso a las operaciones de mantenimiento depende del rol del usuario (<a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a>).
+Todas las operaciones de esta capa están envueltas en bloques Try...Catch.
+El manejo de errores se realiza a través de <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Mostrar_System_String_System_Exception_">Mostrar(string, Exception)</a>
+que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DesignerGenerated]
+public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOleInPlaceObject.Interface, IOleInPlaceActiveObject.Interface, IOleWindow.Interface, IViewObject2.Interface, IViewObject.Interface, IPersistStreamInit.Interface, IPersistPropertyBag.Interface, IPersistStorage.Interface, IPersist.Interface, IQuickActivate.Interface, ISupportOleDropSource, IDropTarget, ISynchronizeInvoke, IWin32Window, IBindableComponent, IKeyboardToolTip, IHandle&lt;HWND&gt;, IArrangedElement, IComponent, IDisposable, IContainerControl</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject">MarshalByRefObject</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.component">Component</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.scrollablecontrol">ScrollableControl</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.containercontrol">ContainerControl</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form">Form</a></div>
+      <div><span class="xref">FrmPlanes</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes__ctor_" data-uid="Gimnasio.Presentacion.FrmPlanes.#ctor*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes__ctor_Gimnasio_Entidades_Usuarios_" data-uid="Gimnasio.Presentacion.FrmPlanes.#ctor(Gimnasio.Entidades.Usuarios)">
+  FrmPlanes(Usuarios)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructor del formulario.</p>
+<ul>
+<li>Inicializa los componentes visuales.</li>
+<li>Si el usuario tiene el rol de Recepcionista (IdRol = 2), deshabilita y oculta los botones de insertar, actualizar y eliminar.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FrmPlanes(Usuarios usuario)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>usuario</code> <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a> que representa al usuario logueado.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_components" data-uid="Gimnasio.Presentacion.FrmPlanes.components">
+  components
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.Designer.vb/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private IContainer components</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icontainer">IContainer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_esNuevo" data-uid="Gimnasio.Presentacion.FrmPlanes.esNuevo">
+  esNuevo
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indica si la operación actual es de inserción (True) o actualización (False).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private bool esNuevo</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_nPlanes" data-uid="Gimnasio.Presentacion.FrmPlanes.nPlanes">
+  nPlanes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Instancia de la capa de negocio para planes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private readonly NPlanes nPlanes</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gimnasio.Negocio.NPlanes.html">NPlanes</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_btnActualizar_" data-uid="Gimnasio.Presentacion.FrmPlanes.btnActualizar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_btnActualizar" data-uid="Gimnasio.Presentacion.FrmPlanes.btnActualizar">
+  btnActualizar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.Designer.vb/#L362"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button btnActualizar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_btnCancelar_" data-uid="Gimnasio.Presentacion.FrmPlanes.btnCancelar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_btnCancelar" data-uid="Gimnasio.Presentacion.FrmPlanes.btnCancelar">
+  btnCancelar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.Designer.vb/#L367"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button btnCancelar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_btnEliminar_" data-uid="Gimnasio.Presentacion.FrmPlanes.btnEliminar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_btnEliminar" data-uid="Gimnasio.Presentacion.FrmPlanes.btnEliminar">
+  btnEliminar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.Designer.vb/#L363"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button btnEliminar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_btnGuardar_" data-uid="Gimnasio.Presentacion.FrmPlanes.btnGuardar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_btnGuardar" data-uid="Gimnasio.Presentacion.FrmPlanes.btnGuardar">
+  btnGuardar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.Designer.vb/#L368"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button btnGuardar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_btnInsertar_" data-uid="Gimnasio.Presentacion.FrmPlanes.btnInsertar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_btnInsertar" data-uid="Gimnasio.Presentacion.FrmPlanes.btnInsertar">
+  btnInsertar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.Designer.vb/#L366"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button btnInsertar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_cbOpcionBuscar_" data-uid="Gimnasio.Presentacion.FrmPlanes.cbOpcionBuscar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_cbOpcionBuscar" data-uid="Gimnasio.Presentacion.FrmPlanes.cbOpcionBuscar">
+  cbOpcionBuscar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.Designer.vb/#L360"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual ComboBox cbOpcionBuscar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.combobox">ComboBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_dgvListado_" data-uid="Gimnasio.Presentacion.FrmPlanes.dgvListado*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_dgvListado" data-uid="Gimnasio.Presentacion.FrmPlanes.dgvListado">
+  dgvListado
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.Designer.vb/#L364"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual DataGridView dgvListado { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.datagridview">DataGridView</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_lblDatosIngreso_" data-uid="Gimnasio.Presentacion.FrmPlanes.lblDatosIngreso*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_lblDatosIngreso" data-uid="Gimnasio.Presentacion.FrmPlanes.lblDatosIngreso">
+  lblDatosIngreso
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.Designer.vb/#L377"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblDatosIngreso { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_lblDescripcion_" data-uid="Gimnasio.Presentacion.FrmPlanes.lblDescripcion*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_lblDescripcion" data-uid="Gimnasio.Presentacion.FrmPlanes.lblDescripcion">
+  lblDescripcion
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.Designer.vb/#L370"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblDescripcion { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_lblDuracion_" data-uid="Gimnasio.Presentacion.FrmPlanes.lblDuracion*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_lblDuracion" data-uid="Gimnasio.Presentacion.FrmPlanes.lblDuracion">
+  lblDuracion
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.Designer.vb/#L372"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblDuracion { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_lblNombre_" data-uid="Gimnasio.Presentacion.FrmPlanes.lblNombre*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_lblNombre" data-uid="Gimnasio.Presentacion.FrmPlanes.lblNombre">
+  lblNombre
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.Designer.vb/#L376"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblNombre { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_lblPrecio_" data-uid="Gimnasio.Presentacion.FrmPlanes.lblPrecio*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_lblPrecio" data-uid="Gimnasio.Presentacion.FrmPlanes.lblPrecio">
+  lblPrecio
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.Designer.vb/#L374"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblPrecio { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_lblTotal_" data-uid="Gimnasio.Presentacion.FrmPlanes.lblTotal*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_lblTotal" data-uid="Gimnasio.Presentacion.FrmPlanes.lblTotal">
+  lblTotal
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.Designer.vb/#L361"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblTotal { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_panelDatosIngreso_" data-uid="Gimnasio.Presentacion.FrmPlanes.panelDatosIngreso*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_panelDatosIngreso" data-uid="Gimnasio.Presentacion.FrmPlanes.panelDatosIngreso">
+  panelDatosIngreso
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.Designer.vb/#L359"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Panel panelDatosIngreso { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.panel">Panel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_panelListado_" data-uid="Gimnasio.Presentacion.FrmPlanes.panelListado*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_panelListado" data-uid="Gimnasio.Presentacion.FrmPlanes.panelListado">
+  panelListado
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.Designer.vb/#L358"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Panel panelListado { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.panel">Panel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_pbReiniciar_" data-uid="Gimnasio.Presentacion.FrmPlanes.pbReiniciar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_pbReiniciar" data-uid="Gimnasio.Presentacion.FrmPlanes.pbReiniciar">
+  pbReiniciar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.Designer.vb/#L378"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual PictureBox pbReiniciar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.picturebox">PictureBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_tbBuscar_" data-uid="Gimnasio.Presentacion.FrmPlanes.tbBuscar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_tbBuscar" data-uid="Gimnasio.Presentacion.FrmPlanes.tbBuscar">
+  tbBuscar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.Designer.vb/#L365"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual TextBox tbBuscar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_tbDescripcion_" data-uid="Gimnasio.Presentacion.FrmPlanes.tbDescripcion*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_tbDescripcion" data-uid="Gimnasio.Presentacion.FrmPlanes.tbDescripcion">
+  tbDescripcion
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.Designer.vb/#L369"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual TextBox tbDescripcion { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_tbDuracion_" data-uid="Gimnasio.Presentacion.FrmPlanes.tbDuracion*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_tbDuracion" data-uid="Gimnasio.Presentacion.FrmPlanes.tbDuracion">
+  tbDuracion
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.Designer.vb/#L373"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual TextBox tbDuracion { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_tbID_" data-uid="Gimnasio.Presentacion.FrmPlanes.tbID*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_tbID" data-uid="Gimnasio.Presentacion.FrmPlanes.tbID">
+  tbID
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.Designer.vb/#L379"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual TextBox tbID { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_tbNombre_" data-uid="Gimnasio.Presentacion.FrmPlanes.tbNombre*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_tbNombre" data-uid="Gimnasio.Presentacion.FrmPlanes.tbNombre">
+  tbNombre
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.Designer.vb/#L375"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual TextBox tbNombre { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_tbPrecio_" data-uid="Gimnasio.Presentacion.FrmPlanes.tbPrecio*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_tbPrecio" data-uid="Gimnasio.Presentacion.FrmPlanes.tbPrecio">
+  tbPrecio
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.Designer.vb/#L371"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual TextBox tbPrecio { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_ActualizarDgv_" data-uid="Gimnasio.Presentacion.FrmPlanes.ActualizarDgv*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_ActualizarDgv" data-uid="Gimnasio.Presentacion.FrmPlanes.ActualizarDgv">
+  ActualizarDgv()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actualiza el DataGridView con la lista de planes completa obtenida de la capa de negocio con <a class="xref" href="Gimnasio.Negocio.NPlanes.html#Gimnasio_Negocio_NPlanes_Listar">Listar()</a>.
+También actualiza la etiqueta que muestra el total de planes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ActualizarDgv()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_ActualizarDgv_" data-uid="Gimnasio.Presentacion.FrmPlanes.ActualizarDgv*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_ActualizarDgv_System_Data_DataTable_" data-uid="Gimnasio.Presentacion.FrmPlanes.ActualizarDgv(System.Data.DataTable)">
+  ActualizarDgv(DataTable)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actualiza el DataGridView con un DataTable específico de planes, por ejemplo, tras una búsqueda o filtrado.
+También actualiza la etiqueta con el total de miembros.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ActualizarDgv(DataTable listado)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>listado</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>es un DataTable que contiene la lista de planes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_Dispose_" data-uid="Gimnasio.Presentacion.FrmPlanes.Dispose*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_Dispose_System_Boolean_" data-uid="Gimnasio.Presentacion.FrmPlanes.Dispose(System.Boolean)">
+  Dispose(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.Designer.vb/#L6"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Disposes of the resources (other than memory) used by the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form">Form</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to release both managed and unmanaged resources; <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> to release only unmanaged resources.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_HabilitarIngreso_" data-uid="Gimnasio.Presentacion.FrmPlanes.HabilitarIngreso*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_HabilitarIngreso" data-uid="Gimnasio.Presentacion.FrmPlanes.HabilitarIngreso">
+  HabilitarIngreso()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><ul>
+<li>Hace visible el panel de ingreso de datos y lo ajusta para ocupar todo el espacio disponible.</li>
+<li>Deshabilita el panel de listado de planes para evitar la interacción con el listado mientras se está ingresando o editando un plan.</li>
+<li>Limpia los campos de entrada para asegurar que no queden datos residuales de operaciones anteriores.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HabilitarIngreso()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_HabilitarListado_" data-uid="Gimnasio.Presentacion.FrmPlanes.HabilitarListado*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_HabilitarListado" data-uid="Gimnasio.Presentacion.FrmPlanes.HabilitarListado">
+  HabilitarListado()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Habilita la vista de listado de planes y oculta el panel de ingreso de datos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HabilitarListado()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_InitializeComponent_" data-uid="Gimnasio.Presentacion.FrmPlanes.InitializeComponent*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_InitializeComponent" data-uid="Gimnasio.Presentacion.FrmPlanes.InitializeComponent">
+  InitializeComponent()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.Designer.vb/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void InitializeComponent()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_btnActualizar_Click_" data-uid="Gimnasio.Presentacion.FrmPlanes.btnActualizar_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_btnActualizar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPlanes.btnActualizar_Click(System.Object,System.EventArgs)">
+  btnActualizar_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en &quot;Actualizar&quot;.</p>
+<ul>
+<li>Verifica si hay una fila seleccionada en el DataGridView.
+<ul>
+<li>Si hay una selección:
+<ul>
+<li>Cambia el modo a edición estableciendo esNuevo en False.</li>
+<li>Llama a <a class="xref" href="Gimnasio.Presentacion.FrmPlanes.html#Gimnasio_Presentacion_FrmPlanes_HabilitarIngreso">HabilitarIngreso()</a> para mostrar el panel de ingreso.</li>
+<li>Carga los datos del plan seleccionado en los campos de entrada</li>
+<li>Cambia el texto del label a &quot;Actualizar Plan&quot; para indicar el contexto de edición.</li>
+</ul>
+</li>
+<li>Si no hay selección, lanza una excepción indicando que no se ha seleccionado ningún plan.</li>
+</ul>
+</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnActualizar_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_btnCancelar_Click_" data-uid="Gimnasio.Presentacion.FrmPlanes.btnCancelar_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_btnCancelar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPlanes.btnCancelar_Click(System.Object,System.EventArgs)">
+  btnCancelar_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L220"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Cancelar&quot;. Vuelve a la vista de listado de planes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnCancelar_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_btnEliminar_Click_" data-uid="Gimnasio.Presentacion.FrmPlanes.btnEliminar_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_btnEliminar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPlanes.btnEliminar_Click(System.Object,System.EventArgs)">
+  btnEliminar_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L237"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en &quot;Eliminar&quot;.</p>
+<ul>
+<li>Verifica si hay una fila seleccionada en el DataGridView. Si hay una selección:
+<ul>
+<li>Obtiene el id_plan de la fila seleccionada.</li>
+<li>Solicita confirmación al usuario mediante un cuadro de diálogo.</li>
+<li>Si el usuario confirma, invoca <a class="xref" href="Gimnasio.Negocio.NPlanes.html#Gimnasio_Negocio_NPlanes_Eliminar_System_UInt32_">Eliminar(uint)</a> para eliminar el plan.</li>
+<li>Actualiza el listado de planes llamando a <a class="xref" href="Gimnasio.Presentacion.FrmPlanes.html#Gimnasio_Presentacion_FrmPlanes_ActualizarDgv">ActualizarDgv()</a> y muestra un mensaje de éxito.</li>
+</ul>
+</li>
+<li>Si no hay selección, lanza una excepción indicando que no se ha seleccionado ningún plan.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnEliminar_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_btnGuardar_Click_" data-uid="Gimnasio.Presentacion.FrmPlanes.btnGuardar_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_btnGuardar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPlanes.btnGuardar_Click(System.Object,System.EventArgs)">
+  btnGuardar_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L183"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en &quot;Guardar&quot;.</p>
+<ul>
+<li>Valida que los campos obligatorios (Nombre, Duracion, Precio) no estén vacíos. Verifica que la duración y el precio sea un valor numérico y positivo.</li>
+<li>Si hay algún error en la validación, lanza una excepción con un mensaje descriptivo.</li>
+<li>Si las validaciones son correctas:
+<ul>
+<li>Crea una instancia de <a class="xref" href="Gimnasio.Entidades.Planes.html">Planes</a> y carga los datos desde los campos de entrada.</li>
+<li>Si esNuevo es True, utiliza <a class="xref" href="Gimnasio.Negocio.NPlanes.html#Gimnasio_Negocio_NPlanes_Insertar_Gimnasio_Entidades_Planes_">Insertar(Planes)</a> para agregar el plan y muestra un mensaje de éxito.</li>
+<li>Si esNuevo es False, utiliza <a class="xref" href="Gimnasio.Negocio.NPlanes.html#Gimnasio_Negocio_NPlanes_Actualizar_Gimnasio_Entidades_Planes_">Actualizar(Planes)</a> para modificar el plan existente y muestra un mensaje de éxito.</li>
+<li>Actualiza el listado de planes llamando a <a class="xref" href="Gimnasio.Presentacion.FrmPlanes.html#Gimnasio_Presentacion_FrmPlanes_ActualizarDgv">ActualizarDgv()</a> y vuelve a la vista de listado con <a class="xref" href="Gimnasio.Presentacion.FrmPlanes.html#Gimnasio_Presentacion_FrmPlanes_HabilitarListado">HabilitarListado()</a>.</li>
+</ul>
+</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnGuardar_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_btnInsertar_Click_" data-uid="Gimnasio.Presentacion.FrmPlanes.btnInsertar_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_btnInsertar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPlanes.btnInsertar_Click(System.Object,System.EventArgs)">
+  btnInsertar_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Insertar&quot;.</p>
+<ul>
+<li>Habilita el panel de ingreso con <a class="xref" href="Gimnasio.Presentacion.FrmPlanes.html#Gimnasio_Presentacion_FrmPlanes_HabilitarIngreso">HabilitarIngreso()</a>.</li>
+<li>Establece la variable esNuevo en True para indicar que la operación es de alta.</li>
+<li>Cambia el texto del label  a &quot;Agregar Plan&quot; para informar al usuario el contexto de la operación.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnInsertar_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_cb_SelectedIndexChanged_" data-uid="Gimnasio.Presentacion.FrmPlanes.cb_SelectedIndexChanged*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_cb_SelectedIndexChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPlanes.cb_SelectedIndexChanged(System.Object,System.EventArgs)">
+  cb_SelectedIndexChanged(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L276"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al cambiar la opción seleccionada en el ComboBox de búsqueda. Se encarga de:</p>
+<ul>
+<li>Limpiar el campo de búsqueda</li>
+<li>Actualiza el DataGridView con el listado completo de planes llamando a <a class="xref" href="Gimnasio.Presentacion.FrmPlanes.html#Gimnasio_Presentacion_FrmPlanes_ActualizarDgv">ActualizarDgv()</a>.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void cb_SelectedIndexChanged(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_frmPlanes_Load_" data-uid="Gimnasio.Presentacion.FrmPlanes.frmPlanes_Load*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_frmPlanes_Load_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPlanes.frmPlanes_Load(System.Object,System.EventArgs)">
+  frmPlanes_Load(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al cargar el formulario. Actualiza el listado de planes con <a class="xref" href="Gimnasio.Presentacion.FrmPlanes.html#Gimnasio_Presentacion_FrmPlanes_ActualizarDgv">ActualizarDgv()</a>
+configura las columnas del DataGridView y establece una opción de busqueda del ComboBox.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void frmPlanes_Load(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_pbReiniciar_Click_" data-uid="Gimnasio.Presentacion.FrmPlanes.pbReiniciar_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_pbReiniciar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPlanes.pbReiniciar_Click(System.Object,System.EventArgs)">
+  pbReiniciar_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L320"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Reiniciar&quot;. Actualiza el listado de planes y limpia el campo de busqueda.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void pbReiniciar_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_tbBuscar_KeyDown_" data-uid="Gimnasio.Presentacion.FrmPlanes.tbBuscar_KeyDown*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_tbBuscar_KeyDown_System_Object_System_Windows_Forms_KeyEventArgs_" data-uid="Gimnasio.Presentacion.FrmPlanes.tbBuscar_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+  tbBuscar_KeyDown(object, KeyEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L296"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al presionar una tecla en el campo de búsqueda.</p>
+<ul>
+<li>Si se presiona la tecla Enter y la opción seleccionada es 1 (búsqueda por duración):
+<ul>
+<li>Valida que el texto ingresado sea numérico y positivo.</li>
+<li>Si la validación es correcta, invoca <a class="xref" href="Gimnasio.Negocio.NPlanes.html#Gimnasio_Negocio_NPlanes_ListarPorDuracion_System_UInt32_">ListarPorDuracion(uint)</a> y actualiza el DataGridView con los resultados.</li>
+<li>Si la validación falla, lanza una excepción con un mensaje descriptivo.</li>
+</ul>
+</li>
+<li>Si se presiona la tecla Enter y la opción seleccionada es 2 (búsqueda por precio):
+<ul>
+<li>Valida que el texto ingresado sea numérico y positivo.</li>
+<li>Si la validación es correcta, invoca <a class="xref" href="Gimnasio.Negocio.NPlanes.html#Gimnasio_Negocio_NPlanes_ListarPorPrecio_System_Decimal_">ListarPorPrecio(decimal)</a> y actualiza el DataGridView con los resultados.</li>
+<li>Si la validación falla, lanza una excepción con un mensaje descriptivo.</li>
+</ul>
+</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void tbBuscar_KeyDown(object sender, KeyEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.keyeventargs">KeyEventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPlanes_tbBuscar_TextChanged_" data-uid="Gimnasio.Presentacion.FrmPlanes.tbBuscar_TextChanged*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPlanes_tbBuscar_TextChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPlanes.tbBuscar_TextChanged(System.Object,System.EventArgs)">
+  tbBuscar_TextChanged(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L261"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al modificar el texto del campo de búsqueda.</p>
+<ul>
+<li>Si la opción seleccionada en el ComboBox es 0 (búsqueda por nombre), invoca <a class="xref" href="Gimnasio.Negocio.NPlanes.html#Gimnasio_Negocio_NPlanes_ListarPorNombre_System_String_">ListarPorNombre(string)</a>
+pasando el texto ingresado y actualiza el listado de planes llamando a <a class="xref" href="Gimnasio.Presentacion.FrmPlanes.html#Gimnasio_Presentacion_FrmPlanes_ActualizarDgv_System_Data_DataTable_">ActualizarDgv(DataTable)</a>.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void tbBuscar_TextChanged(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L14" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Desarrollado por Progoat
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

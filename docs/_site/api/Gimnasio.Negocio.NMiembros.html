@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class NMiembros | Goatym </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class NMiembros | Goatym ">
+      
+      <meta name="description" content="L&#243;gica de negocio para la gesti&#243;n de miembros en el sistema de gimnasio. Interact&#250;a con la capa de datos  y la entidad . Todas las operaciones de la capa de negocio est&#225;n envueltas en bloques Try...Catch. Si ocurre una excepci&#243;n, se registra el error utilizando  en un log.txt Luego, la excepci&#243;n se propaga nuevamente mediante Throw New Exception(ex.Message).">
+      <link rel="icon" href="../images/logo.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Carlovich01/gimnasio3/new/main/apiSpec/new?filename=Gimnasio_Negocio_NMiembros.md&amp;value=---%0Auid%3A%20Gimnasio.Negocio.NMiembros%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Goatym">
+            Goatym
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gimnasio.Negocio.NMiembros">
+
+
+
+  <h1 id="Gimnasio_Negocio_NMiembros" data-uid="Gimnasio.Negocio.NMiembros" class="text-break">
+Class NMiembros  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L13"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gimnasio.html">Gimnasio</a>.<a class="xref" href="Gimnasio.Negocio.html">Negocio</a></dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Lógica de negocio para la gestión de miembros en el sistema de gimnasio.
+Interactúa con la capa de datos <a class="xref" href="Gimnasio.Negocio.NMiembros.html#Gimnasio_Negocio_NMiembros_dMiembros">dMiembros</a> y la entidad <a class="xref" href="Gimnasio.Entidades.Miembros.html">Miembros</a>.
+Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.<br>
+Si ocurre una excepción, se registra el error utilizando <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_">Log(string, Exception)</a> en un log.txt
+Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class NMiembros</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NMiembros</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Gimnasio_Negocio_NMiembros_dMiembros" data-uid="Gimnasio.Negocio.NMiembros.dMiembros">
+  dMiembros
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Instancia de la capa de datos para miembros.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private DMiembros dMiembros</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gimnasio.Datos.DMiembros.html">DMiembros</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gimnasio_Negocio_NMiembros_Actualizar_" data-uid="Gimnasio.Negocio.NMiembros.Actualizar*"></a>
+
+  <h3 id="Gimnasio_Negocio_NMiembros_Actualizar_Gimnasio_Entidades_Miembros_" data-uid="Gimnasio.Negocio.NMiembros.Actualizar(Gimnasio.Entidades.Miembros)">
+  Actualizar(Miembros)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Valida que los campos sean correctos con <a class="xref" href="Gimnasio.Negocio.NMiembros.html#Gimnasio_Negocio_NMiembros_ValidarCampos_Gimnasio_Entidades_Miembros_">ValidarCampos(Miembros)</a>.
+Actualiza los datos de un miembro existente en la base de datos con <a class="xref" href="Gimnasio.Datos.DMiembros.html#Gimnasio_Datos_DMiembros_Insertar_Gimnasio_Entidades_Miembros_">Insertar(Miembros)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Actualizar(Miembros Obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Obj</code> <a class="xref" href="Gimnasio.Entidades.Miembros.html">Miembros</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Entidades.Miembros.html">Miembros</a> con los datos actualizados.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NMiembros_Eliminar_" data-uid="Gimnasio.Negocio.NMiembros.Eliminar*"></a>
+
+  <h3 id="Gimnasio_Negocio_NMiembros_Eliminar_System_UInt32_" data-uid="Gimnasio.Negocio.NMiembros.Eliminar(System.UInt32)">
+  Eliminar(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Elimina un miembro del sistema según su id con <a class="xref" href="Gimnasio.Datos.DMiembros.html#Gimnasio_Datos_DMiembros_Eliminar_System_UInt32_">Eliminar(uint)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Eliminar(uint id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Identificador único del miembro a eliminar.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NMiembros_Insertar_" data-uid="Gimnasio.Negocio.NMiembros.Insertar*"></a>
+
+  <h3 id="Gimnasio_Negocio_NMiembros_Insertar_Gimnasio_Entidades_Miembros_" data-uid="Gimnasio.Negocio.NMiembros.Insertar(Gimnasio.Entidades.Miembros)">
+  Insertar(Miembros)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Obtiene un miembro por su ID con <a class="xref" href="Gimnasio.Datos.DMiembros.html#Gimnasio_Datos_DMiembros_ObtenerPorDni_System_String_">ObtenerPorDni(string)</a>.
+Valida que no exista un miembro con el mismo DNI y que los campos sean correctos con <a class="xref" href="Gimnasio.Negocio.NMiembros.html#Gimnasio_Negocio_NMiembros_ValidarCampos_Gimnasio_Entidades_Miembros_">ValidarCampos(Miembros)</a>.
+Por ultimo, inserta el miembro en la base de datos con <a class="xref" href="Gimnasio.Datos.DMiembros.html#Gimnasio_Datos_DMiembros_Insertar_Gimnasio_Entidades_Miembros_">Insertar(Miembros)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Insertar(Miembros Obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Obj</code> <a class="xref" href="Gimnasio.Entidades.Miembros.html">Miembros</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Entidades.Miembros.html">Miembros</a> a insertar.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NMiembros_Listar_" data-uid="Gimnasio.Negocio.NMiembros.Listar*"></a>
+
+  <h3 id="Gimnasio_Negocio_NMiembros_Listar" data-uid="Gimnasio.Negocio.NMiembros.Listar">
+  Listar()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Obtiene la lista de todos los miembros registrados con <a class="xref" href="Gimnasio.Datos.DMiembros.html#Gimnasio_Datos_DMiembros_Listar">Listar()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable Listar()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los datos de los miembros.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NMiembros_ListarPorDni_" data-uid="Gimnasio.Negocio.NMiembros.ListarPorDni*"></a>
+
+  <h3 id="Gimnasio_Negocio_NMiembros_ListarPorDni_System_String_" data-uid="Gimnasio.Negocio.NMiembros.ListarPorDni(System.String)">
+  ListarPorDni(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L178"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Realiza una validación y busca miembros por DNI utilizando la capa de datos <a class="xref" href="Gimnasio.Datos.DMiembros.html#Gimnasio_Datos_DMiembros_ListarPorDni_System_String_">ListarPorDni(string)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable ListarPorDni(string dni)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dni</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>DNI o parte del DNI del miembro a buscar.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los resultados de la búsqueda.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NMiembros_ListarPorNombre_" data-uid="Gimnasio.Negocio.NMiembros.ListarPorNombre*"></a>
+
+  <h3 id="Gimnasio_Negocio_NMiembros_ListarPorNombre_System_String_" data-uid="Gimnasio.Negocio.NMiembros.ListarPorNombre(System.String)">
+  ListarPorNombre(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Realiza una validación y busca miembros por nombre utilizando la capa de datos <a class="xref" href="Gimnasio.Datos.DMiembros.html#Gimnasio_Datos_DMiembros_ListarPorNombre_System_String_">ListarPorNombre(string)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable ListarPorNombre(string nombre)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>nombre</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Nombre o parte del nombre del miembro a buscar.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los resultados de la búsqueda.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NMiembros_ObtenerPorDni_" data-uid="Gimnasio.Negocio.NMiembros.ObtenerPorDni*"></a>
+
+  <h3 id="Gimnasio_Negocio_NMiembros_ObtenerPorDni_System_String_" data-uid="Gimnasio.Negocio.NMiembros.ObtenerPorDni(System.String)">
+  ObtenerPorDni(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Realiza una validación y obtiene un miembro por su DNI utilizando la capa de datos <a class="xref" href="Gimnasio.Datos.DMiembros.html#Gimnasio_Datos_DMiembros_ObtenerPorDni_System_String_">ObtenerPorDni(string)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable ObtenerPorDni(string dni)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dni</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>DNI del miembro a buscar.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los datos del miembro encontrado.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NMiembros_ValidarCampos_" data-uid="Gimnasio.Negocio.NMiembros.ValidarCampos*"></a>
+
+  <h3 id="Gimnasio_Negocio_NMiembros_ValidarCampos_Gimnasio_Entidades_Miembros_" data-uid="Gimnasio.Negocio.NMiembros.ValidarCampos(Gimnasio.Entidades.Miembros)">
+  ValidarCampos(Miembros)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Valida los campos de la entidad <a class="xref" href="Gimnasio.Entidades.Miembros.html">Miembros</a> antes de realizar operaciones de inserción o actualización.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void ValidarCampos(Miembros Obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Obj</code> <a class="xref" href="Gimnasio.Entidades.Miembros.html">Miembros</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Entidades.Miembros.html">Miembros</a> a validar.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L13" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Desarrollado por Progoat
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

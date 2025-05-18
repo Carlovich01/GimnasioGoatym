@@ -210,7 +210,7 @@ Public Class FrmReclamos
     ''' - Valida que los campos obligatorios de tipo y descripción estén completos; si no, lanza una excepción.
     ''' - Crea una instancia de <see cref="Reclamos"/> y asigna los valores de los controles del formulario.
     ''' - Si se ingresó un DNI, busca el miembro correspondiente usando <see cref="NMiembros.ObtenerPorDni"/> y asigna su ID al reclamo; 
-    ''' - Si no se encuentra, muestra un mensaje y deja el ID en Nothing.
+    ''' - Si no se encuentra, lanza una excepción. Y si no se ingreso un DNI asigna Nothing al IdMiembro
     ''' - Si la operación es de inserción, utiliza <see cref="NReclamos.Insertar"/> para agregar el reclamo y muestra un mensaje de éxito.
     ''' - Si la operación es de actualización, asigna el ID del reclamo y utiliza <see cref="NReclamos.Actualizar"/>, mostrando un mensaje de éxito.
     ''' - Actualiza el listado de reclamos mediante <see cref="ActualizarDgv"/> y vuelve a la vista de listado con <see cref="HabilitarListado"/>.

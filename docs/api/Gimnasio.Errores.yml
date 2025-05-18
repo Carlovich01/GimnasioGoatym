@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gimnasio.Errores
+  commentId: N:Gimnasio.Errores
+  id: Gimnasio.Errores
+  children:
+  - Gimnasio.Errores.ManejarErrores
+  langs:
+  - csharp
+  - vb
+  name: Gimnasio.Errores
+  nameWithType: Gimnasio.Errores
+  fullName: Gimnasio.Errores
+  type: Namespace
+  assemblies:
+  - Gimnasio.Errores
+references:
+- uid: Gimnasio.Errores.ManejarErrores
+  commentId: T:Gimnasio.Errores.ManejarErrores
+  href: Gimnasio.Errores.ManejarErrores.html
+  name: ManejarErrores
+  nameWithType: ManejarErrores
+  fullName: Gimnasio.Errores.ManejarErrores

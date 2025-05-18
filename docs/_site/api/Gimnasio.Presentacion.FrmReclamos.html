@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class FrmReclamos | Goatym </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class FrmReclamos | Goatym ">
+      
+      <meta name="description" content="Formulario para la gesti&#243;n de reclamos en el sistema del gimnasio. Permite listar, buscar, agregar, actualizar, responder, cambiar estado y eliminar reclamos. Utiliza la clase  para la l&#243;gica de negocio y la clase  como entidad. Todas las operaciones de esta capa est&#225;n envueltas en bloques Try...Catch. El manejo de errores se realiza a trav&#233;s de  que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.">
+      <link rel="icon" href="../images/logo.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Carlovich01/gimnasio3/new/main/apiSpec/new?filename=Gimnasio_Presentacion_FrmReclamos.md&amp;value=---%0Auid%3A%20Gimnasio.Presentacion.FrmReclamos%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Goatym">
+            Goatym
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gimnasio.Presentacion.FrmReclamos">
+
+
+
+  <h1 id="Gimnasio_Presentacion_FrmReclamos" data-uid="Gimnasio.Presentacion.FrmReclamos" class="text-break">
+Class FrmReclamos  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L13"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gimnasio.html">Gimnasio</a>.<a class="xref" href="Gimnasio.Presentacion.html">Presentacion</a></dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Formulario para la gestión de reclamos en el sistema del gimnasio.
+Permite listar, buscar, agregar, actualizar, responder, cambiar estado y eliminar reclamos.
+Utiliza la clase <a class="xref" href="Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_nReclamos">nReclamos</a> para la lógica de negocio y la clase <a class="xref" href="Gimnasio.Entidades.Reclamos.html">Reclamos</a> como entidad.
+Todas las operaciones de esta capa están envueltas en bloques Try...Catch.
+El manejo de errores se realiza a través de <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Mostrar_System_String_System_Exception_">Mostrar(string, Exception)</a>
+que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DesignerGenerated]
+public class FrmReclamos : Form, IOleControl.Interface, IOleObject.Interface, IOleInPlaceObject.Interface, IOleInPlaceActiveObject.Interface, IOleWindow.Interface, IViewObject2.Interface, IViewObject.Interface, IPersistStreamInit.Interface, IPersistPropertyBag.Interface, IPersistStorage.Interface, IPersist.Interface, IQuickActivate.Interface, ISupportOleDropSource, IDropTarget, ISynchronizeInvoke, IWin32Window, IBindableComponent, IKeyboardToolTip, IHandle&lt;HWND&gt;, IArrangedElement, IComponent, IDisposable, IContainerControl</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject">MarshalByRefObject</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.component">Component</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.scrollablecontrol">ScrollableControl</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.containercontrol">ContainerControl</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form">Form</a></div>
+      <div><span class="xref">FrmReclamos</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos__ctor_" data-uid="Gimnasio.Presentacion.FrmReclamos.#ctor*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos__ctor_Gimnasio_Entidades_Usuarios_" data-uid="Gimnasio.Presentacion.FrmReclamos.#ctor(Gimnasio.Entidades.Usuarios)">
+  FrmReclamos(Usuarios)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructor del formulario de reclamos. Inicializa los componentes del formulario.
+Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, cambiar estado y responder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FrmReclamos(Usuarios usuario)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>usuario</code> <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a> que representa al usuario logueado.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_components" data-uid="Gimnasio.Presentacion.FrmReclamos.components">
+  components
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private IContainer components</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icontainer">IContainer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_esNuevo" data-uid="Gimnasio.Presentacion.FrmReclamos.esNuevo">
+  esNuevo
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indica si la operación actual es de inserción (<code>True</code>) o actualización (<code>False</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private bool esNuevo</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_nReclamos" data-uid="Gimnasio.Presentacion.FrmReclamos.nReclamos">
+  nReclamos
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Instancia de la capa de negocio para reclamos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private NReclamos nReclamos</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gimnasio.Negocio.NReclamos.html">NReclamos</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_Label1_" data-uid="Gimnasio.Presentacion.FrmReclamos.Label1*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_Label1" data-uid="Gimnasio.Presentacion.FrmReclamos.Label1">
+  Label1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L428"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label Label1 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_Label2_" data-uid="Gimnasio.Presentacion.FrmReclamos.Label2*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_Label2" data-uid="Gimnasio.Presentacion.FrmReclamos.Label2">
+  Label2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L443"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label Label2 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_Label3_" data-uid="Gimnasio.Presentacion.FrmReclamos.Label3*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_Label3" data-uid="Gimnasio.Presentacion.FrmReclamos.Label3">
+  Label3
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L437"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label Label3 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_Label4_" data-uid="Gimnasio.Presentacion.FrmReclamos.Label4*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_Label4" data-uid="Gimnasio.Presentacion.FrmReclamos.Label4">
+  Label4
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L444"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label Label4 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_Label5_" data-uid="Gimnasio.Presentacion.FrmReclamos.Label5*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_Label5" data-uid="Gimnasio.Presentacion.FrmReclamos.Label5">
+  Label5
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L447"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label Label5 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_TbRespuesta_" data-uid="Gimnasio.Presentacion.FrmReclamos.TbRespuesta*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_TbRespuesta" data-uid="Gimnasio.Presentacion.FrmReclamos.TbRespuesta">
+  TbRespuesta
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L450"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual TextBox TbRespuesta { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_btnActualizar_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnActualizar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_btnActualizar" data-uid="Gimnasio.Presentacion.FrmReclamos.btnActualizar">
+  btnActualizar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L432"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button btnActualizar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_btnCambiarEstado_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnCambiarEstado*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_btnCambiarEstado" data-uid="Gimnasio.Presentacion.FrmReclamos.btnCambiarEstado">
+  btnCambiarEstado
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L433"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button btnCambiarEstado { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_btnCancelar_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnCancelar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_btnCancelar" data-uid="Gimnasio.Presentacion.FrmReclamos.btnCancelar">
+  btnCancelar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L440"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button btnCancelar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_btnEliminar_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnEliminar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_btnEliminar" data-uid="Gimnasio.Presentacion.FrmReclamos.btnEliminar">
+  btnEliminar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L429"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button btnEliminar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_btnGuardar_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnGuardar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_btnGuardar" data-uid="Gimnasio.Presentacion.FrmReclamos.btnGuardar">
+  btnGuardar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L441"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button btnGuardar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_btnInsertar_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnInsertar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_btnInsertar" data-uid="Gimnasio.Presentacion.FrmReclamos.btnInsertar">
+  btnInsertar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L435"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button btnInsertar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_btnResponder_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnResponder*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_btnResponder" data-uid="Gimnasio.Presentacion.FrmReclamos.btnResponder">
+  btnResponder
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L436"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button btnResponder { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_cbOpcionBuscar_" data-uid="Gimnasio.Presentacion.FrmReclamos.cbOpcionBuscar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_cbOpcionBuscar" data-uid="Gimnasio.Presentacion.FrmReclamos.cbOpcionBuscar">
+  cbOpcionBuscar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L430"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual ComboBox cbOpcionBuscar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.combobox">ComboBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_cbTipo_" data-uid="Gimnasio.Presentacion.FrmReclamos.cbTipo*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_cbTipo" data-uid="Gimnasio.Presentacion.FrmReclamos.cbTipo">
+  cbTipo
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L439"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual ComboBox cbTipo { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.combobox">ComboBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_dgvListado_" data-uid="Gimnasio.Presentacion.FrmReclamos.dgvListado*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_dgvListado" data-uid="Gimnasio.Presentacion.FrmReclamos.dgvListado">
+  dgvListado
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L434"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual DataGridView dgvListado { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.datagridview">DataGridView</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_lblDatosIngreso_" data-uid="Gimnasio.Presentacion.FrmReclamos.lblDatosIngreso*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_lblDatosIngreso" data-uid="Gimnasio.Presentacion.FrmReclamos.lblDatosIngreso">
+  lblDatosIngreso
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L445"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblDatosIngreso { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_lblTotal_" data-uid="Gimnasio.Presentacion.FrmReclamos.lblTotal*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_lblTotal" data-uid="Gimnasio.Presentacion.FrmReclamos.lblTotal">
+  lblTotal
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L431"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblTotal { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_panelDatosIngreso_" data-uid="Gimnasio.Presentacion.FrmReclamos.panelDatosIngreso*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_panelDatosIngreso" data-uid="Gimnasio.Presentacion.FrmReclamos.panelDatosIngreso">
+  panelDatosIngreso
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L427"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Panel panelDatosIngreso { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.panel">Panel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_panelListado_" data-uid="Gimnasio.Presentacion.FrmReclamos.panelListado*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_panelListado" data-uid="Gimnasio.Presentacion.FrmReclamos.panelListado">
+  panelListado
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L426"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Panel panelListado { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.panel">Panel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_panelRespuestaIngreso_" data-uid="Gimnasio.Presentacion.FrmReclamos.panelRespuestaIngreso*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_panelRespuestaIngreso" data-uid="Gimnasio.Presentacion.FrmReclamos.panelRespuestaIngreso">
+  panelRespuestaIngreso
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L446"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Panel panelRespuestaIngreso { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.panel">Panel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_tbCancelarRespuesta_" data-uid="Gimnasio.Presentacion.FrmReclamos.tbCancelarRespuesta*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_tbCancelarRespuesta" data-uid="Gimnasio.Presentacion.FrmReclamos.tbCancelarRespuesta">
+  tbCancelarRespuesta
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L448"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button tbCancelarRespuesta { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_tbDNI_" data-uid="Gimnasio.Presentacion.FrmReclamos.tbDNI*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_tbDNI" data-uid="Gimnasio.Presentacion.FrmReclamos.tbDNI">
+  tbDNI
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L438"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual TextBox tbDNI { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_tbDescripcion_" data-uid="Gimnasio.Presentacion.FrmReclamos.tbDescripcion*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_tbDescripcion" data-uid="Gimnasio.Presentacion.FrmReclamos.tbDescripcion">
+  tbDescripcion
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L442"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual TextBox tbDescripcion { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_tbGuardarRespuesta_" data-uid="Gimnasio.Presentacion.FrmReclamos.tbGuardarRespuesta*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_tbGuardarRespuesta" data-uid="Gimnasio.Presentacion.FrmReclamos.tbGuardarRespuesta">
+  tbGuardarRespuesta
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L449"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button tbGuardarRespuesta { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_tbID_" data-uid="Gimnasio.Presentacion.FrmReclamos.tbID*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_tbID" data-uid="Gimnasio.Presentacion.FrmReclamos.tbID">
+  tbID
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L451"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual TextBox tbID { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_ActualizarDgv_" data-uid="Gimnasio.Presentacion.FrmReclamos.ActualizarDgv*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_ActualizarDgv" data-uid="Gimnasio.Presentacion.FrmReclamos.ActualizarDgv">
+  ActualizarDgv()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actualiza el DataGridView con la lista de reclamos obtenida desde la capa de negocio mediante <a class="xref" href="Gimnasio.Negocio.NReclamos.html#Gimnasio_Negocio_NReclamos_Listar">Listar()</a>.</p>
+<ul>
+<li>Obtiene todos los reclamos registrados en el sistema y los asigna como origen de datos del DataGridView.</li>
+<li>Actualiza la etiqueta lblTotal mostrando la cantidad total de reclamos listados.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ActualizarDgv()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_ActualizarDgv_" data-uid="Gimnasio.Presentacion.FrmReclamos.ActualizarDgv*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_ActualizarDgv_System_Data_DataTable_" data-uid="Gimnasio.Presentacion.FrmReclamos.ActualizarDgv(System.Data.DataTable)">
+  ActualizarDgv(DataTable)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actualiza el DataGridView con una lista específica de reclamos proporcionada como parámetro.</p>
+<ul>
+<li>Asigna el DataTable recibido Listado como origen de datos del DataGridView.</li>
+<li>Actualiza la etiqueta lblTotal mostrando la cantidad total de reclamos listados en el DataGridView.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ActualizarDgv(DataTable Listado)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Listado</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable que contiene la lista de reclamos a mostrar en el DataGridView.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_Dispose_" data-uid="Gimnasio.Presentacion.FrmReclamos.Dispose*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_Dispose_System_Boolean_" data-uid="Gimnasio.Presentacion.FrmReclamos.Dispose(System.Boolean)">
+  Dispose(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L6"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Disposes of the resources (other than memory) used by the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form">Form</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to release both managed and unmanaged resources; <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> to release only unmanaged resources.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_HabilitarIngreso_" data-uid="Gimnasio.Presentacion.FrmReclamos.HabilitarIngreso*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_HabilitarIngreso" data-uid="Gimnasio.Presentacion.FrmReclamos.HabilitarIngreso">
+  HabilitarIngreso()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Muestra el panel de datos de ingreso y lo ajusta para ocupar todo el espacio disponible.
+Deshabilita el panel de listado para evitar la interacción mientras se realiza el ingreso o edición.
+Selecciona la primera opción del ComboBox de tipo de reclamo.
+Limpia los campos de descripción, DNI y respuesta para asegurar que no contengan datos previos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HabilitarIngreso()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_HabilitarListado_" data-uid="Gimnasio.Presentacion.FrmReclamos.HabilitarListado*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_HabilitarListado" data-uid="Gimnasio.Presentacion.FrmReclamos.HabilitarListado">
+  HabilitarListado()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Habilita la vista de listado de reclamos y oculta los paneles de ingreso y respuesta.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HabilitarListado()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_HabilitarRespuesta_" data-uid="Gimnasio.Presentacion.FrmReclamos.HabilitarRespuesta*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_HabilitarRespuesta" data-uid="Gimnasio.Presentacion.FrmReclamos.HabilitarRespuesta">
+  HabilitarRespuesta()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Muestra el panel de respuesta y lo ajusta para ocupar todo el espacio disponible en el formulario.
+Deshabilita el panel de listado para evitar la interacción con la lista de reclamos mientras se ingresa la respuesta.
+Limpia el campo de texto de respuesta para asegurar que no contenga datos previos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HabilitarRespuesta()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_InitializeComponent_" data-uid="Gimnasio.Presentacion.FrmReclamos.InitializeComponent*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_InitializeComponent" data-uid="Gimnasio.Presentacion.FrmReclamos.InitializeComponent">
+  InitializeComponent()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void InitializeComponent()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_btnActualizar_Click_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnActualizar_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_btnActualizar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnActualizar_Click(System.Object,System.EventArgs)">
+  btnActualizar_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Actualizar&quot;.</p>
+<ul>
+<li>Verifica si hay una fila seleccionada en el DataGridView de reclamos.</li>
+<li>Si hay selección, habilita el panel de ingreso mediante <a class="xref" href="Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_HabilitarIngreso">HabilitarIngreso()</a> para editar el reclamo.</li>
+<li>Establece la variable esNuevo en False para indicar que la operación es una actualización.</li>
+<li>Carga en los controles de ingreso los datos del reclamo seleccionado (ID, tipo y descripción).</li>
+<li>Cambia el texto de la etiqueta lblDatosIngreso a &quot;Actualizar Reclamo&quot; para informar al usuario.</li>
+<li>Si no hay selección, lanza una excepción.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnActualizar_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_btnCambiarEstado_Click_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnCambiarEstado_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_btnCambiarEstado_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnCambiarEstado_Click(System.Object,System.EventArgs)">
+  btnCambiarEstado_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L353"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Cambiar Estado&quot;.</p>
+<ul>
+<li>Verifica si hay una fila seleccionada en el DataGridView de reclamos.</li>
+<li>Si hay selección, obtiene el ID y el estado actual del reclamo seleccionado.</li>
+<li>Si el estado es &quot;pendiente&quot;, utiliza <a class="xref" href="Gimnasio.Negocio.NReclamos.html#Gimnasio_Negocio_NReclamos_ActualizarElEstadoAResuelto_System_UInt32_">ActualizarElEstadoAResuelto(uint)</a> para cambiarlo a &quot;resuelto&quot; y muestra un mensaje de confirmación.</li>
+<li>Si el estado es &quot;resuelto&quot;, utiliza <a class="xref" href="Gimnasio.Negocio.NReclamos.html#Gimnasio_Negocio_NReclamos_ActualizarElEstadoAPendiente_System_UInt32_">ActualizarElEstadoAPendiente(uint)</a> para cambiarlo a &quot;pendiente&quot; y muestra un mensaje de confirmación.</li>
+<li>Actualiza el listado de reclamos en el DataGridView mediante <a class="xref" href="Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_ActualizarDgv">ActualizarDgv()</a>.</li>
+<li>Si no hay selección, lanza una excepción.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnCambiarEstado_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_btnCancelar_Click_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnCancelar_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_btnCancelar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnCancelar_Click(System.Object,System.EventArgs)">
+  btnCancelar_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L284"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Cancelar&quot;. Vuelve a la vista de listado de reclamos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnCancelar_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_btnEliminar_Click_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnEliminar_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_btnEliminar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnEliminar_Click(System.Object,System.EventArgs)">
+  btnEliminar_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L300"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Eliminar&quot;.</p>
+<ul>
+<li>Verifica si hay una fila seleccionada en el DataGridView de reclamos.</li>
+<li>Si hay selección, obtiene el ID del reclamo seleccionado y solicita confirmación al usuario mediante un cuadro de diálogo.</li>
+<li>Si el usuario confirma, utiliza <a class="xref" href="Gimnasio.Negocio.NReclamos.html#Gimnasio_Negocio_NReclamos_Eliminar_System_UInt32_">Eliminar(uint)</a> para eliminar el reclamo de la base de datos.</li>
+<li>Actualiza el listado de reclamos en el DataGridView mediante <a class="xref" href="Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_ActualizarDgv">ActualizarDgv()</a> y muestra un mensaje de éxito.</li>
+<li>Si no hay selección, lanza una excepción.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnEliminar_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_btnGuardar_Click_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnGuardar_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_btnGuardar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnGuardar_Click(System.Object,System.EventArgs)">
+  btnGuardar_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L218"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Guardar&quot;.</p>
+<ul>
+<li>Valida que los campos obligatorios de tipo y descripción estén completos; si no, lanza una excepción.</li>
+<li>Crea una instancia de <a class="xref" href="Gimnasio.Entidades.Reclamos.html">Reclamos</a> y asigna los valores de los controles del formulario.</li>
+<li>Si se ingresó un DNI, busca el miembro correspondiente usando <a class="xref" href="Gimnasio.Negocio.NMiembros.html#Gimnasio_Negocio_NMiembros_ObtenerPorDni_System_String_">ObtenerPorDni(string)</a> y asigna su ID al reclamo;</li>
+<li>Si no se encuentra, lanza una excepción. Y si no se ingreso un DNI asigna Nothing al IdMiembro</li>
+<li>Si la operación es de inserción, utiliza <a class="xref" href="Gimnasio.Negocio.NReclamos.html#Gimnasio_Negocio_NReclamos_Insertar_Gimnasio_Entidades_Reclamos_">Insertar(Reclamos)</a> para agregar el reclamo y muestra un mensaje de éxito.</li>
+<li>Si la operación es de actualización, asigna el ID del reclamo y utiliza <a class="xref" href="Gimnasio.Negocio.NReclamos.html#Gimnasio_Negocio_NReclamos_Actualizar_Gimnasio_Entidades_Reclamos_">Actualizar(Reclamos)</a>, mostrando un mensaje de éxito.</li>
+<li>Actualiza el listado de reclamos mediante <a class="xref" href="Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_ActualizarDgv">ActualizarDgv()</a> y vuelve a la vista de listado con <a class="xref" href="Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_HabilitarListado">HabilitarListado()</a>.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnGuardar_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_btnInsertar_Click_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnInsertar_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_btnInsertar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnInsertar_Click(System.Object,System.EventArgs)">
+  btnInsertar_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L148"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Insertar&quot;.</p>
+<ul>
+<li>Habilita el panel de ingreso para permitir la carga de un nuevo reclamo mediante <a class="xref" href="Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_HabilitarIngreso">HabilitarIngreso()</a>.</li>
+<li>Cambia el texto de la etiqueta lblDatosIngreso a &quot;Nuevo reclamo&quot; para indicar la acción al usuario.</li>
+<li>Establece la variable esNuevo en True para señalar que la siguiente operación será una inserción.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnInsertar_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_btnResponder_Click_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnResponder_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_btnResponder_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnResponder_Click(System.Object,System.EventArgs)">
+  btnResponder_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L193"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Responder&quot;.</p>
+<ul>
+<li>Verifica si hay una fila seleccionada en el DataGridView de reclamos.</li>
+<li>Si hay selección, habilita el panel de respuesta mediante <a class="xref" href="Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_HabilitarRespuesta">HabilitarRespuesta()</a> para permitir ingresar o modificar la respuesta.</li>
+<li>Carga en los controles de respuesta el ID y la respuesta actual del reclamo seleccionado.</li>
+<li>Si no hay selección, lanza una excepción</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnResponder_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_cb_SelectedIndexChanged_" data-uid="Gimnasio.Presentacion.FrmReclamos.cb_SelectedIndexChanged*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_cb_SelectedIndexChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmReclamos.cb_SelectedIndexChanged(System.Object,System.EventArgs)">
+  cb_SelectedIndexChanged(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L329"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al cambiar la opción seleccionada en el ComboBox de búsqueda de reclamos.</p>
+<ul>
+<li>Filtra el listado de reclamos mostrado en el DataGridView según el estado seleccionado en el ComboBox (todos, pendiente o resuelto).</li>
+<li>Utiliza una estructura Select Case para determinar el filtro:
+<ul>
+<li>Opción 0: muestra todos los reclamos llamando a <a class="xref" href="Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_ActualizarDgv">ActualizarDgv()</a>.</li>
+<li>Opción 1: muestra solo los reclamos pendientes llamando a <a class="xref" href="Gimnasio.Negocio.NReclamos.html#Gimnasio_Negocio_NReclamos_ListarPorEstado_System_String_">ListarPorEstado(string)</a> con el parámetro &quot;pendiente&quot;.</li>
+<li>Opción 2: muestra solo los reclamos resueltos llamando a <a class="xref" href="Gimnasio.Negocio.NReclamos.html#Gimnasio_Negocio_NReclamos_ListarPorEstado_System_String_">ListarPorEstado(string)</a> con el parámetro &quot;resuelto&quot;.</li>
+</ul>
+</li>
+<li>Actualiza el DataGridView con el resultado correspondiente.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void cb_SelectedIndexChanged(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_frmReclamos_Load_" data-uid="Gimnasio.Presentacion.FrmReclamos.frmReclamos_Load*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_frmReclamos_Load_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmReclamos.frmReclamos_Load(System.Object,System.EventArgs)">
+  frmReclamos_Load(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al cargar el formulario.
+Inicializa el listado de reclamos, configura las columnas del DataGridView y selecciona la 1° opción del ComboBox.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void frmReclamos_Load(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_tbCancelarRespuesta_Click_" data-uid="Gimnasio.Presentacion.FrmReclamos.tbCancelarRespuesta_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_tbCancelarRespuesta_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmReclamos.tbCancelarRespuesta_Click(System.Object,System.EventArgs)">
+  tbCancelarRespuesta_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L379"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Cancelar Respuesta&quot;. Vuelve a la vista de listado de reclamos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void tbCancelarRespuesta_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_tbGuardarRespuesta_Click_" data-uid="Gimnasio.Presentacion.FrmReclamos.tbGuardarRespuesta_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_tbGuardarRespuesta_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmReclamos.tbGuardarRespuesta_Click(System.Object,System.EventArgs)">
+  tbGuardarRespuesta_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L263"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Guardar Respuesta&quot;.</p>
+<ul>
+<li>Valida que el campo de respuesta no esté vacío; si no lanza una excepción</li>
+<li>Crea una instancia de <a class="xref" href="Gimnasio.Entidades.Reclamos.html">Reclamos</a> y asigna la respuesta y el ID del reclamo seleccionado.</li>
+<li>Utiliza <a class="xref" href="Gimnasio.Negocio.NReclamos.html#Gimnasio_Negocio_NReclamos_ActualizarRespuesta_Gimnasio_Entidades_Reclamos_">ActualizarRespuesta(Reclamos)</a> para actualizar la respuesta del reclamo en la base de datos.</li>
+<li>Muestra un mensaje de éxito al usuario.</li>
+<li>Actualiza el listado de reclamos mediante <a class="xref" href="Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_ActualizarDgv">ActualizarDgv()</a> y vuelve a la vista de listado con <a class="xref" href="Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_HabilitarListado">HabilitarListado()</a>.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void tbGuardarRespuesta_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L13" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Desarrollado por Progoat
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

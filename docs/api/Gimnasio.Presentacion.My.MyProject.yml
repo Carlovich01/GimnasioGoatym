@@ -1,0 +1,680 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gimnasio.Presentacion.My.MyProject
+  commentId: T:Gimnasio.Presentacion.My.MyProject
+  id: MyProject
+  parent: Gimnasio.Presentacion.My
+  children:
+  - Gimnasio.Presentacion.My.MyProject.Application
+  - Gimnasio.Presentacion.My.MyProject.Computer
+  - Gimnasio.Presentacion.My.MyProject.Forms
+  - Gimnasio.Presentacion.My.MyProject.User
+  - Gimnasio.Presentacion.My.MyProject.WebServices
+  - Gimnasio.Presentacion.My.MyProject.m_AppObjectProvider
+  - Gimnasio.Presentacion.My.MyProject.m_ComputerObjectProvider
+  - Gimnasio.Presentacion.My.MyProject.m_MyFormsObjectProvider
+  - Gimnasio.Presentacion.My.MyProject.m_MyWebServicesObjectProvider
+  - Gimnasio.Presentacion.My.MyProject.m_UserObjectProvider
+  langs:
+  - csharp
+  - vb
+  name: MyProject
+  nameWithType: MyProject
+  fullName: Gimnasio.Presentacion.My.MyProject
+  type: Class
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My
+  syntax:
+    content: >-
+      [HideModuleName]
+
+      internal class MyProject
+    content.vb: >-
+      <HideModuleName>
+
+      Friend Module MyProject
+  attributes:
+  - type: Microsoft.VisualBasic.HideModuleNameAttribute
+    ctor: Microsoft.VisualBasic.HideModuleNameAttribute.#ctor
+    arguments: []
+- uid: Gimnasio.Presentacion.My.MyProject.Computer
+  commentId: P:Gimnasio.Presentacion.My.MyProject.Computer
+  id: Computer
+  parent: Gimnasio.Presentacion.My.MyProject
+  langs:
+  - csharp
+  - vb
+  name: Computer
+  nameWithType: MyProject.Computer
+  fullName: Gimnasio.Presentacion.My.MyProject.Computer
+  type: Property
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My
+  syntax:
+    content: internal static MyComputer Computer { get; }
+    parameters: []
+    return:
+      type: Gimnasio.Presentacion.My.MyComputer
+    content.vb: Friend ReadOnly Property Computer As MyComputer
+  overload: Gimnasio.Presentacion.My.MyProject.Computer*
+- uid: Gimnasio.Presentacion.My.MyProject.m_ComputerObjectProvider
+  commentId: F:Gimnasio.Presentacion.My.MyProject.m_ComputerObjectProvider
+  id: m_ComputerObjectProvider
+  parent: Gimnasio.Presentacion.My.MyProject
+  langs:
+  - csharp
+  - vb
+  name: m_ComputerObjectProvider
+  nameWithType: MyProject.m_ComputerObjectProvider
+  fullName: Gimnasio.Presentacion.My.MyProject.m_ComputerObjectProvider
+  type: Field
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My
+  syntax:
+    content: private static readonly MyProject.ThreadSafeObjectProvider<MyComputer> m_ComputerObjectProvider
+    return:
+      type: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider{Gimnasio.Presentacion.My.MyComputer}
+    content.vb: Private ReadOnly m_ComputerObjectProvider As MyProject.ThreadSafeObjectProvider(Of MyComputer)
+- uid: Gimnasio.Presentacion.My.MyProject.Application
+  commentId: P:Gimnasio.Presentacion.My.MyProject.Application
+  id: Application
+  parent: Gimnasio.Presentacion.My.MyProject
+  langs:
+  - csharp
+  - vb
+  name: Application
+  nameWithType: MyProject.Application
+  fullName: Gimnasio.Presentacion.My.MyProject.Application
+  type: Property
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My
+  syntax:
+    content: internal static MyApplication Application { get; }
+    parameters: []
+    return:
+      type: Gimnasio.Presentacion.My.MyApplication
+    content.vb: Friend ReadOnly Property Application As MyApplication
+  overload: Gimnasio.Presentacion.My.MyProject.Application*
+- uid: Gimnasio.Presentacion.My.MyProject.m_AppObjectProvider
+  commentId: F:Gimnasio.Presentacion.My.MyProject.m_AppObjectProvider
+  id: m_AppObjectProvider
+  parent: Gimnasio.Presentacion.My.MyProject
+  langs:
+  - csharp
+  - vb
+  name: m_AppObjectProvider
+  nameWithType: MyProject.m_AppObjectProvider
+  fullName: Gimnasio.Presentacion.My.MyProject.m_AppObjectProvider
+  type: Field
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My
+  syntax:
+    content: private static readonly MyProject.ThreadSafeObjectProvider<MyApplication> m_AppObjectProvider
+    return:
+      type: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider{Gimnasio.Presentacion.My.MyApplication}
+    content.vb: Private ReadOnly m_AppObjectProvider As MyProject.ThreadSafeObjectProvider(Of MyApplication)
+- uid: Gimnasio.Presentacion.My.MyProject.User
+  commentId: P:Gimnasio.Presentacion.My.MyProject.User
+  id: User
+  parent: Gimnasio.Presentacion.My.MyProject
+  langs:
+  - csharp
+  - vb
+  name: User
+  nameWithType: MyProject.User
+  fullName: Gimnasio.Presentacion.My.MyProject.User
+  type: Property
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My
+  syntax:
+    content: internal static User User { get; }
+    parameters: []
+    return:
+      type: Microsoft.VisualBasic.ApplicationServices.User
+    content.vb: Friend ReadOnly Property User As User
+  overload: Gimnasio.Presentacion.My.MyProject.User*
+- uid: Gimnasio.Presentacion.My.MyProject.m_UserObjectProvider
+  commentId: F:Gimnasio.Presentacion.My.MyProject.m_UserObjectProvider
+  id: m_UserObjectProvider
+  parent: Gimnasio.Presentacion.My.MyProject
+  langs:
+  - csharp
+  - vb
+  name: m_UserObjectProvider
+  nameWithType: MyProject.m_UserObjectProvider
+  fullName: Gimnasio.Presentacion.My.MyProject.m_UserObjectProvider
+  type: Field
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My
+  syntax:
+    content: private static readonly MyProject.ThreadSafeObjectProvider<User> m_UserObjectProvider
+    return:
+      type: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider{Microsoft.VisualBasic.ApplicationServices.User}
+    content.vb: Private ReadOnly m_UserObjectProvider As MyProject.ThreadSafeObjectProvider(Of User)
+- uid: Gimnasio.Presentacion.My.MyProject.Forms
+  commentId: P:Gimnasio.Presentacion.My.MyProject.Forms
+  id: Forms
+  parent: Gimnasio.Presentacion.My.MyProject
+  langs:
+  - csharp
+  - vb
+  name: Forms
+  nameWithType: MyProject.Forms
+  fullName: Gimnasio.Presentacion.My.MyProject.Forms
+  type: Property
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My
+  syntax:
+    content: internal static MyProject.MyForms Forms { get; }
+    parameters: []
+    return:
+      type: Gimnasio.Presentacion.My.MyProject.MyForms
+    content.vb: Friend ReadOnly Property Forms As MyProject.MyForms
+  overload: Gimnasio.Presentacion.My.MyProject.Forms*
+- uid: Gimnasio.Presentacion.My.MyProject.m_MyFormsObjectProvider
+  commentId: F:Gimnasio.Presentacion.My.MyProject.m_MyFormsObjectProvider
+  id: m_MyFormsObjectProvider
+  parent: Gimnasio.Presentacion.My.MyProject
+  langs:
+  - csharp
+  - vb
+  name: m_MyFormsObjectProvider
+  nameWithType: MyProject.m_MyFormsObjectProvider
+  fullName: Gimnasio.Presentacion.My.MyProject.m_MyFormsObjectProvider
+  type: Field
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My
+  syntax:
+    content: private static MyProject.ThreadSafeObjectProvider<MyProject.MyForms> m_MyFormsObjectProvider
+    return:
+      type: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider{Gimnasio.Presentacion.My.MyProject.MyForms}
+    content.vb: Private m_MyFormsObjectProvider As MyProject.ThreadSafeObjectProvider(Of MyProject.MyForms)
+- uid: Gimnasio.Presentacion.My.MyProject.WebServices
+  commentId: P:Gimnasio.Presentacion.My.MyProject.WebServices
+  id: WebServices
+  parent: Gimnasio.Presentacion.My.MyProject
+  langs:
+  - csharp
+  - vb
+  name: WebServices
+  nameWithType: MyProject.WebServices
+  fullName: Gimnasio.Presentacion.My.MyProject.WebServices
+  type: Property
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My
+  syntax:
+    content: internal static MyProject.MyWebServices WebServices { get; }
+    parameters: []
+    return:
+      type: Gimnasio.Presentacion.My.MyProject.MyWebServices
+    content.vb: Friend ReadOnly Property WebServices As MyProject.MyWebServices
+  overload: Gimnasio.Presentacion.My.MyProject.WebServices*
+- uid: Gimnasio.Presentacion.My.MyProject.m_MyWebServicesObjectProvider
+  commentId: F:Gimnasio.Presentacion.My.MyProject.m_MyWebServicesObjectProvider
+  id: m_MyWebServicesObjectProvider
+  parent: Gimnasio.Presentacion.My.MyProject
+  langs:
+  - csharp
+  - vb
+  name: m_MyWebServicesObjectProvider
+  nameWithType: MyProject.m_MyWebServicesObjectProvider
+  fullName: Gimnasio.Presentacion.My.MyProject.m_MyWebServicesObjectProvider
+  type: Field
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My
+  syntax:
+    content: private static readonly MyProject.ThreadSafeObjectProvider<MyProject.MyWebServices> m_MyWebServicesObjectProvider
+    return:
+      type: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider{Gimnasio.Presentacion.My.MyProject.MyWebServices}
+    content.vb: Private ReadOnly m_MyWebServicesObjectProvider As MyProject.ThreadSafeObjectProvider(Of MyProject.MyWebServices)
+references:
+- uid: Gimnasio.Presentacion.My
+  commentId: N:Gimnasio.Presentacion.My
+  isExternal: true
+  href: Gimnasio.html
+  name: Gimnasio.Presentacion.My
+  nameWithType: Gimnasio.Presentacion.My
+  fullName: Gimnasio.Presentacion.My
+  spec.csharp:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Presentacion
+    name: Presentacion
+    href: Gimnasio.Presentacion.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My
+    name: My
+    href: Gimnasio.Presentacion.My.html
+  spec.vb:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Presentacion
+    name: Presentacion
+    href: Gimnasio.Presentacion.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My
+    name: My
+    href: Gimnasio.Presentacion.My.html
+- uid: Gimnasio.Presentacion.My.MyProject.Computer*
+  commentId: Overload:Gimnasio.Presentacion.My.MyProject.Computer
+  isExternal: true
+  href: Gimnasio.Presentacion.My.MyProject.html#Gimnasio_Presentacion_My_MyProject_Computer
+  name: Computer
+  nameWithType: MyProject.Computer
+  fullName: Gimnasio.Presentacion.My.MyProject.Computer
+- uid: Gimnasio.Presentacion.My.MyComputer
+  commentId: T:Gimnasio.Presentacion.My.MyComputer
+  parent: Gimnasio.Presentacion.My
+  isExternal: true
+  name: MyComputer
+  nameWithType: MyComputer
+  fullName: Gimnasio.Presentacion.My.MyComputer
+- uid: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider{Gimnasio.Presentacion.My.MyComputer}
+  commentId: T:Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider{Gimnasio.Presentacion.My.MyComputer}
+  parent: Gimnasio.Presentacion.My
+  definition: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider`1
+  href: Gimnasio.Presentacion.My.MyProject.html
+  name: MyProject.ThreadSafeObjectProvider<MyComputer>
+  nameWithType: MyProject.ThreadSafeObjectProvider<MyComputer>
+  fullName: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider<Gimnasio.Presentacion.My.MyComputer>
+  nameWithType.vb: MyProject.ThreadSafeObjectProvider(Of MyComputer)
+  fullName.vb: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider(Of Gimnasio.Presentacion.My.MyComputer)
+  name.vb: MyProject.ThreadSafeObjectProvider(Of MyComputer)
+  spec.csharp:
+  - uid: Gimnasio.Presentacion.My.MyProject
+    name: MyProject
+    isExternal: true
+    href: Gimnasio.Presentacion.My.MyProject.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider`1
+    name: ThreadSafeObjectProvider
+    isExternal: true
+  - name: <
+  - uid: Gimnasio.Presentacion.My.MyComputer
+    name: MyComputer
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Gimnasio.Presentacion.My.MyProject
+    name: MyProject
+    isExternal: true
+    href: Gimnasio.Presentacion.My.MyProject.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider`1
+    name: ThreadSafeObjectProvider
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Gimnasio.Presentacion.My.MyComputer
+    name: MyComputer
+    isExternal: true
+  - name: )
+- uid: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider`1
+  commentId: T:Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider`1
+  isExternal: true
+  href: Gimnasio.Presentacion.My.MyProject.html
+  name: MyProject.ThreadSafeObjectProvider<T>
+  nameWithType: MyProject.ThreadSafeObjectProvider<T>
+  fullName: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider<T>
+  nameWithType.vb: MyProject.ThreadSafeObjectProvider(Of T)
+  fullName.vb: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider(Of T)
+  name.vb: MyProject.ThreadSafeObjectProvider(Of T)
+  spec.csharp:
+  - uid: Gimnasio.Presentacion.My.MyProject
+    name: MyProject
+    isExternal: true
+    href: Gimnasio.Presentacion.My.MyProject.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider`1
+    name: ThreadSafeObjectProvider
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Gimnasio.Presentacion.My.MyProject
+    name: MyProject
+    isExternal: true
+    href: Gimnasio.Presentacion.My.MyProject.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider`1
+    name: ThreadSafeObjectProvider
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Gimnasio.Presentacion.My.MyProject.Application*
+  commentId: Overload:Gimnasio.Presentacion.My.MyProject.Application
+  isExternal: true
+  href: Gimnasio.Presentacion.My.MyProject.html#Gimnasio_Presentacion_My_MyProject_Application
+  name: Application
+  nameWithType: MyProject.Application
+  fullName: Gimnasio.Presentacion.My.MyProject.Application
+- uid: Gimnasio.Presentacion.My.MyApplication
+  commentId: T:Gimnasio.Presentacion.My.MyApplication
+  parent: Gimnasio.Presentacion.My
+  name: MyApplication
+  nameWithType: MyApplication
+  fullName: Gimnasio.Presentacion.My.MyApplication
+- uid: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider{Gimnasio.Presentacion.My.MyApplication}
+  commentId: T:Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider{Gimnasio.Presentacion.My.MyApplication}
+  parent: Gimnasio.Presentacion.My
+  definition: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider`1
+  href: Gimnasio.Presentacion.My.MyProject.html
+  name: MyProject.ThreadSafeObjectProvider<MyApplication>
+  nameWithType: MyProject.ThreadSafeObjectProvider<MyApplication>
+  fullName: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider<Gimnasio.Presentacion.My.MyApplication>
+  nameWithType.vb: MyProject.ThreadSafeObjectProvider(Of MyApplication)
+  fullName.vb: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider(Of Gimnasio.Presentacion.My.MyApplication)
+  name.vb: MyProject.ThreadSafeObjectProvider(Of MyApplication)
+  spec.csharp:
+  - uid: Gimnasio.Presentacion.My.MyProject
+    name: MyProject
+    isExternal: true
+    href: Gimnasio.Presentacion.My.MyProject.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider`1
+    name: ThreadSafeObjectProvider
+    isExternal: true
+  - name: <
+  - uid: Gimnasio.Presentacion.My.MyApplication
+    name: MyApplication
+  - name: '>'
+  spec.vb:
+  - uid: Gimnasio.Presentacion.My.MyProject
+    name: MyProject
+    isExternal: true
+    href: Gimnasio.Presentacion.My.MyProject.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider`1
+    name: ThreadSafeObjectProvider
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Gimnasio.Presentacion.My.MyApplication
+    name: MyApplication
+  - name: )
+- uid: Gimnasio.Presentacion.My.MyProject.User*
+  commentId: Overload:Gimnasio.Presentacion.My.MyProject.User
+  isExternal: true
+  href: Gimnasio.Presentacion.My.MyProject.html#Gimnasio_Presentacion_My_MyProject_User
+  name: User
+  nameWithType: MyProject.User
+  fullName: Gimnasio.Presentacion.My.MyProject.User
+- uid: Microsoft.VisualBasic.ApplicationServices.User
+  commentId: T:Microsoft.VisualBasic.ApplicationServices.User
+  parent: Microsoft.VisualBasic.ApplicationServices
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.visualbasic.applicationservices.user
+  name: User
+  nameWithType: User
+  fullName: Microsoft.VisualBasic.ApplicationServices.User
+- uid: Microsoft.VisualBasic.ApplicationServices
+  commentId: N:Microsoft.VisualBasic.ApplicationServices
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.VisualBasic.ApplicationServices
+  nameWithType: Microsoft.VisualBasic.ApplicationServices
+  fullName: Microsoft.VisualBasic.ApplicationServices
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.VisualBasic
+    name: VisualBasic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.visualbasic
+  - name: .
+  - uid: Microsoft.VisualBasic.ApplicationServices
+    name: ApplicationServices
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.visualbasic.applicationservices
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.VisualBasic
+    name: VisualBasic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.visualbasic
+  - name: .
+  - uid: Microsoft.VisualBasic.ApplicationServices
+    name: ApplicationServices
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.visualbasic.applicationservices
+- uid: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider{Microsoft.VisualBasic.ApplicationServices.User}
+  commentId: T:Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider{Microsoft.VisualBasic.ApplicationServices.User}
+  parent: Gimnasio.Presentacion.My
+  definition: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider`1
+  href: Gimnasio.Presentacion.My.MyProject.html
+  name: MyProject.ThreadSafeObjectProvider<User>
+  nameWithType: MyProject.ThreadSafeObjectProvider<User>
+  fullName: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider<Microsoft.VisualBasic.ApplicationServices.User>
+  nameWithType.vb: MyProject.ThreadSafeObjectProvider(Of User)
+  fullName.vb: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider(Of Microsoft.VisualBasic.ApplicationServices.User)
+  name.vb: MyProject.ThreadSafeObjectProvider(Of User)
+  spec.csharp:
+  - uid: Gimnasio.Presentacion.My.MyProject
+    name: MyProject
+    isExternal: true
+    href: Gimnasio.Presentacion.My.MyProject.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider`1
+    name: ThreadSafeObjectProvider
+    isExternal: true
+  - name: <
+  - uid: Microsoft.VisualBasic.ApplicationServices.User
+    name: User
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.visualbasic.applicationservices.user
+  - name: '>'
+  spec.vb:
+  - uid: Gimnasio.Presentacion.My.MyProject
+    name: MyProject
+    isExternal: true
+    href: Gimnasio.Presentacion.My.MyProject.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider`1
+    name: ThreadSafeObjectProvider
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.VisualBasic.ApplicationServices.User
+    name: User
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.visualbasic.applicationservices.user
+  - name: )
+- uid: Gimnasio.Presentacion.My.MyProject.Forms*
+  commentId: Overload:Gimnasio.Presentacion.My.MyProject.Forms
+  isExternal: true
+  href: Gimnasio.Presentacion.My.MyProject.html#Gimnasio_Presentacion_My_MyProject_Forms
+  name: Forms
+  nameWithType: MyProject.Forms
+  fullName: Gimnasio.Presentacion.My.MyProject.Forms
+- uid: Gimnasio.Presentacion.My.MyProject.MyForms
+  commentId: T:Gimnasio.Presentacion.My.MyProject.MyForms
+  parent: Gimnasio.Presentacion.My
+  isExternal: true
+  href: Gimnasio.Presentacion.My.MyProject.html
+  name: MyProject.MyForms
+  nameWithType: MyProject.MyForms
+  fullName: Gimnasio.Presentacion.My.MyProject.MyForms
+  spec.csharp:
+  - uid: Gimnasio.Presentacion.My.MyProject
+    name: MyProject
+    isExternal: true
+    href: Gimnasio.Presentacion.My.MyProject.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My.MyProject.MyForms
+    name: MyForms
+    isExternal: true
+  spec.vb:
+  - uid: Gimnasio.Presentacion.My.MyProject
+    name: MyProject
+    isExternal: true
+    href: Gimnasio.Presentacion.My.MyProject.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My.MyProject.MyForms
+    name: MyForms
+    isExternal: true
+- uid: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider{Gimnasio.Presentacion.My.MyProject.MyForms}
+  commentId: T:Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider{Gimnasio.Presentacion.My.MyProject.MyForms}
+  parent: Gimnasio.Presentacion.My
+  definition: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider`1
+  href: Gimnasio.Presentacion.My.MyProject.html
+  name: MyProject.ThreadSafeObjectProvider<MyProject.MyForms>
+  nameWithType: MyProject.ThreadSafeObjectProvider<MyProject.MyForms>
+  fullName: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider<Gimnasio.Presentacion.My.MyProject.MyForms>
+  nameWithType.vb: MyProject.ThreadSafeObjectProvider(Of MyProject.MyForms)
+  fullName.vb: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider(Of Gimnasio.Presentacion.My.MyProject.MyForms)
+  name.vb: MyProject.ThreadSafeObjectProvider(Of MyProject.MyForms)
+  spec.csharp:
+  - uid: Gimnasio.Presentacion.My.MyProject
+    name: MyProject
+    isExternal: true
+    href: Gimnasio.Presentacion.My.MyProject.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider`1
+    name: ThreadSafeObjectProvider
+    isExternal: true
+  - name: <
+  - uid: Gimnasio.Presentacion.My.MyProject
+    name: MyProject
+    isExternal: true
+    href: Gimnasio.Presentacion.My.MyProject.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My.MyProject.MyForms
+    name: MyForms
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Gimnasio.Presentacion.My.MyProject
+    name: MyProject
+    isExternal: true
+    href: Gimnasio.Presentacion.My.MyProject.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider`1
+    name: ThreadSafeObjectProvider
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Gimnasio.Presentacion.My.MyProject
+    name: MyProject
+    isExternal: true
+    href: Gimnasio.Presentacion.My.MyProject.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My.MyProject.MyForms
+    name: MyForms
+    isExternal: true
+  - name: )
+- uid: Gimnasio.Presentacion.My.MyProject.WebServices*
+  commentId: Overload:Gimnasio.Presentacion.My.MyProject.WebServices
+  isExternal: true
+  href: Gimnasio.Presentacion.My.MyProject.html#Gimnasio_Presentacion_My_MyProject_WebServices
+  name: WebServices
+  nameWithType: MyProject.WebServices
+  fullName: Gimnasio.Presentacion.My.MyProject.WebServices
+- uid: Gimnasio.Presentacion.My.MyProject.MyWebServices
+  commentId: T:Gimnasio.Presentacion.My.MyProject.MyWebServices
+  parent: Gimnasio.Presentacion.My
+  isExternal: true
+  href: Gimnasio.Presentacion.My.MyProject.html
+  name: MyProject.MyWebServices
+  nameWithType: MyProject.MyWebServices
+  fullName: Gimnasio.Presentacion.My.MyProject.MyWebServices
+  spec.csharp:
+  - uid: Gimnasio.Presentacion.My.MyProject
+    name: MyProject
+    isExternal: true
+    href: Gimnasio.Presentacion.My.MyProject.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My.MyProject.MyWebServices
+    name: MyWebServices
+    isExternal: true
+  spec.vb:
+  - uid: Gimnasio.Presentacion.My.MyProject
+    name: MyProject
+    isExternal: true
+    href: Gimnasio.Presentacion.My.MyProject.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My.MyProject.MyWebServices
+    name: MyWebServices
+    isExternal: true
+- uid: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider{Gimnasio.Presentacion.My.MyProject.MyWebServices}
+  commentId: T:Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider{Gimnasio.Presentacion.My.MyProject.MyWebServices}
+  parent: Gimnasio.Presentacion.My
+  definition: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider`1
+  href: Gimnasio.Presentacion.My.MyProject.html
+  name: MyProject.ThreadSafeObjectProvider<MyProject.MyWebServices>
+  nameWithType: MyProject.ThreadSafeObjectProvider<MyProject.MyWebServices>
+  fullName: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider<Gimnasio.Presentacion.My.MyProject.MyWebServices>
+  nameWithType.vb: MyProject.ThreadSafeObjectProvider(Of MyProject.MyWebServices)
+  fullName.vb: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider(Of Gimnasio.Presentacion.My.MyProject.MyWebServices)
+  name.vb: MyProject.ThreadSafeObjectProvider(Of MyProject.MyWebServices)
+  spec.csharp:
+  - uid: Gimnasio.Presentacion.My.MyProject
+    name: MyProject
+    isExternal: true
+    href: Gimnasio.Presentacion.My.MyProject.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider`1
+    name: ThreadSafeObjectProvider
+    isExternal: true
+  - name: <
+  - uid: Gimnasio.Presentacion.My.MyProject
+    name: MyProject
+    isExternal: true
+    href: Gimnasio.Presentacion.My.MyProject.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My.MyProject.MyWebServices
+    name: MyWebServices
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Gimnasio.Presentacion.My.MyProject
+    name: MyProject
+    isExternal: true
+    href: Gimnasio.Presentacion.My.MyProject.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My.MyProject.ThreadSafeObjectProvider`1
+    name: ThreadSafeObjectProvider
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Gimnasio.Presentacion.My.MyProject
+    name: MyProject
+    isExternal: true
+    href: Gimnasio.Presentacion.My.MyProject.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My.MyProject.MyWebServices
+    name: MyWebServices
+    isExternal: true
+  - name: )

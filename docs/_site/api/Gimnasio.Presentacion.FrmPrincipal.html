@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class FrmPrincipal | Goatym </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class FrmPrincipal | Goatym ">
+      
+      <meta name="description" content="Formulario principal de la aplicaci&#243;n del gimnasio. Gestiona la navegaci&#243;n entre los diferentes m&#243;dulos y controla el acceso seg&#250;n el rol del usuario. Utiliza la clase  para identificar al usuario logueado y su rol. Llama a formularios secundarios como , , , , ,  y . Todas las operaciones de esta capa est&#225;n envueltas en bloques Try...Catch. El manejo de errores se realiza a trav&#233;s de  que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.">
+      <link rel="icon" href="../images/logo.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Carlovich01/gimnasio3/new/main/apiSpec/new?filename=Gimnasio_Presentacion_FrmPrincipal.md&amp;value=---%0Auid%3A%20Gimnasio.Presentacion.FrmPrincipal%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Goatym">
+            Goatym
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gimnasio.Presentacion.FrmPrincipal">
+
+
+
+  <h1 id="Gimnasio_Presentacion_FrmPrincipal" data-uid="Gimnasio.Presentacion.FrmPrincipal" class="text-break">
+Class FrmPrincipal  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gimnasio.html">Gimnasio</a>.<a class="xref" href="Gimnasio.Presentacion.html">Presentacion</a></dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Formulario principal de la aplicación del gimnasio. Gestiona la navegación entre los diferentes módulos y controla el acceso según el rol del usuario.
+Utiliza la clase <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a> para identificar al usuario logueado y su rol. Llama a formularios secundarios como <a class="xref" href="Gimnasio.Presentacion.FrmPlanes.html">FrmPlanes</a>,
+<a class="xref" href="Gimnasio.Presentacion.FrmMiembros.html">FrmMiembros</a>, <a class="xref" href="Gimnasio.Presentacion.FrmMembresias.html">FrmMembresias</a>, <a class="xref" href="Gimnasio.Presentacion.FrmPagos.html">FrmPagos</a>, <a class="xref" href="Gimnasio.Presentacion.FrmRegistroAsistencias.html">FrmRegistroAsistencias</a>, <a class="xref" href="Gimnasio.Presentacion.FrmReclamos.html">FrmReclamos</a> y
+<a class="xref" href="Gimnasio.Presentacion.FrmUsuarios.html">FrmUsuarios</a>.
+Todas las operaciones de esta capa están envueltas en bloques Try...Catch.
+El manejo de errores se realiza a través de <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Mostrar_System_String_System_Exception_">Mostrar(string, Exception)</a>
+que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DesignerGenerated]
+public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, IOleInPlaceObject.Interface, IOleInPlaceActiveObject.Interface, IOleWindow.Interface, IViewObject2.Interface, IViewObject.Interface, IPersistStreamInit.Interface, IPersistPropertyBag.Interface, IPersistStorage.Interface, IPersist.Interface, IQuickActivate.Interface, ISupportOleDropSource, IDropTarget, ISynchronizeInvoke, IWin32Window, IBindableComponent, IKeyboardToolTip, IHandle&lt;HWND&gt;, IArrangedElement, IComponent, IDisposable, IContainerControl</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject">MarshalByRefObject</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.component">Component</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.scrollablecontrol">ScrollableControl</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.containercontrol">ContainerControl</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form">Form</a></div>
+      <div><span class="xref">FrmPrincipal</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal__ctor_" data-uid="Gimnasio.Presentacion.FrmPrincipal.#ctor*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal__ctor_Gimnasio_Entidades_Usuarios_" data-uid="Gimnasio.Presentacion.FrmPrincipal.#ctor(Gimnasio.Entidades.Usuarios)">
+  FrmPrincipal(Usuarios)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructor del formulario principal.</p>
+<ul>
+<li>Inicializa los componentes visuales del formulario.</li>
+<li>Asigna el usuario actualmente logueado recibido como parámetro.</li>
+<li>Muestra el nombre completo del usuario en el botón btnUsuarioLogueado.</li>
+<li>Si el usuario tiene el rol de recepcionista IdRol = 2:
+<ul>
+<li>Oculta y deshabilita el apartado de usuarios.</li>
+</ul>
+</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FrmPrincipal(Usuarios usuario)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>usuario</code> <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a> que representa al usuario logueado.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_components" data-uid="Gimnasio.Presentacion.FrmPrincipal.components">
+  components
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private IContainer components</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icontainer">IContainer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_usuarioActual" data-uid="Gimnasio.Presentacion.FrmPrincipal.usuarioActual">
+  usuarioActual
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Usuario actualmente logueado en la aplicación.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private Usuarios usuarioActual</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_PanelDeFormularios_" data-uid="Gimnasio.Presentacion.FrmPrincipal.PanelDeFormularios*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_PanelDeFormularios" data-uid="Gimnasio.Presentacion.FrmPrincipal.PanelDeFormularios">
+  PanelDeFormularios
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L228"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Panel PanelDeFormularios { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.panel">Panel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_PictureBox1_" data-uid="Gimnasio.Presentacion.FrmPrincipal.PictureBox1*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_PictureBox1" data-uid="Gimnasio.Presentacion.FrmPrincipal.PictureBox1">
+  PictureBox1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L229"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual PictureBox PictureBox1 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.picturebox">PictureBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_ToolStrip1_" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStrip1*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_ToolStrip1" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStrip1">
+  ToolStrip1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L227"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual ToolStrip ToolStrip1 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstrip">ToolStrip</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_ToolStripSeparator1_" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator1*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_ToolStripSeparator1" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator1">
+  ToolStripSeparator1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L231"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual ToolStripSeparator ToolStripSeparator1 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripseparator">ToolStripSeparator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_ToolStripSeparator2_" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator2*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_ToolStripSeparator2" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator2">
+  ToolStripSeparator2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L233"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual ToolStripSeparator ToolStripSeparator2 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripseparator">ToolStripSeparator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_ToolStripSeparator3_" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator3*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_ToolStripSeparator3" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator3">
+  ToolStripSeparator3
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L235"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual ToolStripSeparator ToolStripSeparator3 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripseparator">ToolStripSeparator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_ToolStripSeparator4_" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator4*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_ToolStripSeparator4" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator4">
+  ToolStripSeparator4
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L237"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual ToolStripSeparator ToolStripSeparator4 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripseparator">ToolStripSeparator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_ToolStripSeparator5_" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator5*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_ToolStripSeparator5" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator5">
+  ToolStripSeparator5
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L243"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual ToolStripSeparator ToolStripSeparator5 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripseparator">ToolStripSeparator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_ToolStripSeparator6_" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator6*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_ToolStripSeparator6" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator6">
+  ToolStripSeparator6
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L239"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual ToolStripSeparator ToolStripSeparator6 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripseparator">ToolStripSeparator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_ToolStripSeparator7_" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator7*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_ToolStripSeparator7" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator7">
+  ToolStripSeparator7
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L246"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual ToolStripSeparator ToolStripSeparator7 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripseparator">ToolStripSeparator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_ToolStripSeparator8_" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator8*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_ToolStripSeparator8" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator8">
+  ToolStripSeparator8
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L240"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual ToolStripSeparator ToolStripSeparator8 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripseparator">ToolStripSeparator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_btRegistroAsistencias_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btRegistroAsistencias*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_btRegistroAsistencias" data-uid="Gimnasio.Presentacion.FrmPrincipal.btRegistroAsistencias">
+  btRegistroAsistencias
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L241"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual ToolStripButton btRegistroAsistencias { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripbutton">ToolStripButton</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_btnMembresias_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnMembresias*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnMembresias" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnMembresias">
+  btnMembresias
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L232"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual ToolStripButton btnMembresias { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripbutton">ToolStripButton</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_btnMiembros_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnMiembros*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnMiembros" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnMiembros">
+  btnMiembros
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L234"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual ToolStripButton btnMiembros { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripbutton">ToolStripButton</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_btnPagos_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnPagos*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnPagos" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnPagos">
+  btnPagos
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L236"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual ToolStripButton btnPagos { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripbutton">ToolStripButton</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_btnPlanes_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnPlanes*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnPlanes" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnPlanes">
+  btnPlanes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L230"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual ToolStripButton btnPlanes { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripbutton">ToolStripButton</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_btnReclamos_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnReclamos*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnReclamos" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnReclamos">
+  btnReclamos
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L238"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual ToolStripButton btnReclamos { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripbutton">ToolStripButton</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_btnUsuarioLogueado_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnUsuarioLogueado*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnUsuarioLogueado" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnUsuarioLogueado">
+  btnUsuarioLogueado
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L244"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual ToolStripDropDownButton btnUsuarioLogueado { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripdropdownbutton">ToolStripDropDownButton</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_btnUsuarios_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnUsuarios*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnUsuarios" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnUsuarios">
+  btnUsuarios
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L242"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual ToolStripButton btnUsuarios { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripbutton">ToolStripButton</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_miCerrarSesi_n_" data-uid="Gimnasio.Presentacion.FrmPrincipal.miCerrarSesi&#243;n*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_miCerrarSesi_n" data-uid="Gimnasio.Presentacion.FrmPrincipal.miCerrarSesi&#243;n">
+  miCerrarSesi&#243;n
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L245"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual ToolStripMenuItem miCerrarSesi&#243;n { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripmenuitem">ToolStripMenuItem</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_Dispose_" data-uid="Gimnasio.Presentacion.FrmPrincipal.Dispose*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_Dispose_System_Boolean_" data-uid="Gimnasio.Presentacion.FrmPrincipal.Dispose(System.Boolean)">
+  Dispose(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L6"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Disposes of the resources (other than memory) used by the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form">Form</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to release both managed and unmanaged resources; <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> to release only unmanaged resources.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_InitializeComponent_" data-uid="Gimnasio.Presentacion.FrmPrincipal.InitializeComponent*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_InitializeComponent" data-uid="Gimnasio.Presentacion.FrmPrincipal.InitializeComponent">
+  InitializeComponent()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void InitializeComponent()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_MostrarFormulario_" data-uid="Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_MostrarFormulario_System_Windows_Forms_Form_" data-uid="Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario(System.Windows.Forms.Form)">
+  MostrarFormulario(Form)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Muestra un formulario secundario dentro del panel principal de la aplicación.</p>
+<ul>
+<li>Si ya existe un formulario cargado en el panel y no es una instancia de <a class="xref" href="Gimnasio.Presentacion.FrmRegistroAsistencias.html">FrmRegistroAsistencias</a>,
+lo elimina y libera sus recursos para evitar fugas de memoria.</li>
+<li>Limpia el panel de cualquier control previo.</li>
+<li>Configura el formulario recibido como parámetro para que no sea de nivel superior, sin bordes y ajustado al tamaño del panel principal.</li>
+<li>Agrega el formulario al panel y lo muestra.</li>
+<li>Permite mantener la instancia de <a class="xref" href="Gimnasio.Presentacion.FrmRegistroAsistencias.html">FrmRegistroAsistencias</a> viva entre cambios de formularios, evitando su destrucción.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void MostrarFormulario(Form formulario)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>formulario</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form">Form</a></dt>
+    <dd><p>Instancia de <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form">Form</a> a mostrar en el panel principal.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_btRegistroAsistencias_Click_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btRegistroAsistencias_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_btRegistroAsistencias_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btRegistroAsistencias_Click(System.Object,System.EventArgs)">
+  btRegistroAsistencias_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que abre el formulario de registro de asistencias <a class="xref" href="Gimnasio.Presentacion.FrmRegistroAsistencias.html">FrmRegistroAsistencias</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btRegistroAsistencias_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_btnMembresias_Click_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnMembresias_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnMembresias_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnMembresias_Click(System.Object,System.EventArgs)">
+  btnMembresias_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que abre el formulario de membresías <a class="xref" href="Gimnasio.Presentacion.FrmMembresias.html">FrmMembresias</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnMembresias_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_btnMiembros_Click_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnMiembros_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnMiembros_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnMiembros_Click(System.Object,System.EventArgs)">
+  btnMiembros_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que abre el formulario de miembros <a class="xref" href="Gimnasio.Presentacion.FrmMiembros.html">FrmMiembros</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnMiembros_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_btnPagos_Click_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnPagos_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnPagos_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnPagos_Click(System.Object,System.EventArgs)">
+  btnPagos_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que abre el formulario de pagos <a class="xref" href="Gimnasio.Presentacion.FrmPagos.html">FrmPagos</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnPagos_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_btnPlanes_Click_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnPlanes_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnPlanes_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnPlanes_Click(System.Object,System.EventArgs)">
+  btnPlanes_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que abre el formulario de planes <a class="xref" href="Gimnasio.Presentacion.FrmPlanes.html">FrmPlanes</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnPlanes_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_btnReclamos_Click_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnReclamos_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnReclamos_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnReclamos_Click(System.Object,System.EventArgs)">
+  btnReclamos_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L153"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que abre el formulario de reclamos <a class="xref" href="Gimnasio.Presentacion.FrmReclamos.html">FrmReclamos</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnReclamos_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_btnUsuarios_Click_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnUsuarios_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnUsuarios_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnUsuarios_Click(System.Object,System.EventArgs)">
+  btnUsuarios_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L166"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que abre el formulario de usuarios <a class="xref" href="Gimnasio.Presentacion.FrmUsuarios.html">FrmUsuarios</a>.
+Solo visible para usuarios con rol de administrador.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnUsuarios_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_frmPrincipal_FormClosed_" data-uid="Gimnasio.Presentacion.FrmPrincipal.frmPrincipal_FormClosed*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_frmPrincipal_FormClosed_System_Object_System_Windows_Forms_FormClosedEventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.frmPrincipal_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)">
+  frmPrincipal_FormClosed(object, FormClosedEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L198"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void frmPrincipal_FormClosed(object sender, FormClosedEventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.formclosedeventargs">FormClosedEventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_frmPrincipal_Load_" data-uid="Gimnasio.Presentacion.FrmPrincipal.frmPrincipal_Load*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_frmPrincipal_Load_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.frmPrincipal_Load(System.Object,System.EventArgs)">
+  frmPrincipal_Load(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al cargar el formulario principal. Muestra un mensaje de bienvenida al usuario con su nombre y rol.
+Actualiza el estado de las membresías utilizando <a class="xref" href="Gimnasio.Negocio.NMembresias.html#Gimnasio_Negocio_NMembresias_ActualizaAEstadoInactiva">ActualizaAEstadoInactiva()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void frmPrincipal_Load(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_miCerrarSesion_Click_" data-uid="Gimnasio.Presentacion.FrmPrincipal.miCerrarSesion_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_miCerrarSesion_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.miCerrarSesion_Click(System.Object,System.EventArgs)">
+  miCerrarSesion_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L184"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><ul>
+<li>Se ejecuta al hacer clic en el elemento de menú &quot;Cerrar Sesión&quot;.</li>
+<li>Solicita confirmación al usuario mediante un cuadro de diálogo.</li>
+<li>Si el usuario confirma la acción:
+<ul>
+<li>Oculta el formulario principal.</li>
+<li>Muestra el formulario de login.</li>
+<li>Restablece los campos del formulario de login llamando a <a class="xref" href="Gimnasio.Presentacion.FrmLogin.html#Gimnasio_Presentacion_FrmLogin_Formato">Formato()</a>.</li>
+<li>Libera los recursos del formulario principal.</li>
+</ul>
+</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void miCerrarSesion_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_obtenerUsuarioActual_" data-uid="Gimnasio.Presentacion.FrmPrincipal.obtenerUsuarioActual*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_obtenerUsuarioActual" data-uid="Gimnasio.Presentacion.FrmPrincipal.obtenerUsuarioActual">
+  obtenerUsuarioActual()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Devuelve el usuario actualmente logueado.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Usuarios obtenerUsuarioActual()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a> correspondiente al usuario actual.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L14" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Desarrollado por Progoat
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

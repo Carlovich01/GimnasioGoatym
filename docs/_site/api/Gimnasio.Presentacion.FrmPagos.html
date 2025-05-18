@@ -1,0 +1,2140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class FrmPagos | Goatym </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class FrmPagos | Goatym ">
+      
+      <meta name="description" content="Formulario para la gesti&#243;n y consulta de pagos en el sistema del gimnasio. Permite listar, buscar, actualizar y eliminar pagos. Utiliza la clase  para la l&#243;gica de negocio y la clase  como entidad. Todas las operaciones de esta capa est&#225;n envueltas en bloques Try...Catch. El manejo de errores se realiza a trav&#233;s de  que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.">
+      <link rel="icon" href="../images/logo.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Carlovich01/gimnasio3/new/main/apiSpec/new?filename=Gimnasio_Presentacion_FrmPagos.md&amp;value=---%0Auid%3A%20Gimnasio.Presentacion.FrmPagos%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Goatym">
+            Goatym
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gimnasio.Presentacion.FrmPagos">
+
+
+
+  <h1 id="Gimnasio_Presentacion_FrmPagos" data-uid="Gimnasio.Presentacion.FrmPagos" class="text-break">
+Class FrmPagos  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.vb/#L12"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gimnasio.html">Gimnasio</a>.<a class="xref" href="Gimnasio.Presentacion.html">Presentacion</a></dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Formulario para la gestión y consulta de pagos en el sistema del gimnasio. Permite listar, buscar, actualizar y eliminar pagos.
+Utiliza la clase <a class="xref" href="Gimnasio.Negocio.NPagos.html">NPagos</a> para la lógica de negocio y la clase <a class="xref" href="Gimnasio.Entidades.Pagos.html">Pagos</a> como entidad.
+Todas las operaciones de esta capa están envueltas en bloques Try...Catch.
+El manejo de errores se realiza a través de <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Mostrar_System_String_System_Exception_">Mostrar(string, Exception)</a>
+que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DesignerGenerated]
+public class FrmPagos : Form, IOleControl.Interface, IOleObject.Interface, IOleInPlaceObject.Interface, IOleInPlaceActiveObject.Interface, IOleWindow.Interface, IViewObject2.Interface, IViewObject.Interface, IPersistStreamInit.Interface, IPersistPropertyBag.Interface, IPersistStorage.Interface, IPersist.Interface, IQuickActivate.Interface, ISupportOleDropSource, IDropTarget, ISynchronizeInvoke, IWin32Window, IBindableComponent, IKeyboardToolTip, IHandle&lt;HWND&gt;, IArrangedElement, IComponent, IDisposable, IContainerControl</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject">MarshalByRefObject</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.component">Component</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.scrollablecontrol">ScrollableControl</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.containercontrol">ContainerControl</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form">Form</a></div>
+      <div><span class="xref">FrmPagos</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos__ctor_" data-uid="Gimnasio.Presentacion.FrmPagos.#ctor*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos__ctor_Gimnasio_Entidades_Usuarios_" data-uid="Gimnasio.Presentacion.FrmPagos.#ctor(Gimnasio.Entidades.Usuarios)">
+  FrmPagos(Usuarios)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.vb/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructor del formulario de pagos. Si es recepcionista oculta el boton de Actualizar y Eliminar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FrmPagos(Usuarios usuario)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>usuario</code> <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a> que representa al usuario logueado.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_components" data-uid="Gimnasio.Presentacion.FrmPagos.components">
+  components
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private IContainer components</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icontainer">IContainer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_nPagos" data-uid="Gimnasio.Presentacion.FrmPagos.nPagos">
+  nPagos
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.vb/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Instancia de la capa de negocio para pagos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private NPagos nPagos</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gimnasio.Negocio.NPagos.html">NPagos</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_BtnBuscarFecha_" data-uid="Gimnasio.Presentacion.FrmPagos.BtnBuscarFecha*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_BtnBuscarFecha" data-uid="Gimnasio.Presentacion.FrmPagos.BtnBuscarFecha">
+  BtnBuscarFecha
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L582"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button BtnBuscarFecha { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_Button1_" data-uid="Gimnasio.Presentacion.FrmPagos.Button1*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_Button1" data-uid="Gimnasio.Presentacion.FrmPagos.Button1">
+  Button1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L591"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button Button1 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_Button2_" data-uid="Gimnasio.Presentacion.FrmPagos.Button2*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_Button2" data-uid="Gimnasio.Presentacion.FrmPagos.Button2">
+  Button2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L606"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button Button2 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_Button3_" data-uid="Gimnasio.Presentacion.FrmPagos.Button3*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_Button3" data-uid="Gimnasio.Presentacion.FrmPagos.Button3">
+  Button3
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L607"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button Button3 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_Label4_" data-uid="Gimnasio.Presentacion.FrmPagos.Label4*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_Label4" data-uid="Gimnasio.Presentacion.FrmPagos.Label4">
+  Label4
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L589"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label Label4 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_Label5_" data-uid="Gimnasio.Presentacion.FrmPagos.Label5*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_Label5" data-uid="Gimnasio.Presentacion.FrmPagos.Label5">
+  Label5
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L590"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label Label5 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_PanelFecha_" data-uid="Gimnasio.Presentacion.FrmPagos.PanelFecha*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_PanelFecha" data-uid="Gimnasio.Presentacion.FrmPagos.PanelFecha">
+  PanelFecha
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L579"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Panel PanelFecha { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.panel">Panel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_PanelMonto_" data-uid="Gimnasio.Presentacion.FrmPagos.PanelMonto*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_PanelMonto" data-uid="Gimnasio.Presentacion.FrmPagos.PanelMonto">
+  PanelMonto
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L583"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Panel PanelMonto { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.panel">Panel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_btnActualizar_" data-uid="Gimnasio.Presentacion.FrmPagos.btnActualizar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_btnActualizar" data-uid="Gimnasio.Presentacion.FrmPagos.btnActualizar">
+  btnActualizar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L578"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button btnActualizar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_btnBuscarMonto_" data-uid="Gimnasio.Presentacion.FrmPagos.btnBuscarMonto*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_btnBuscarMonto" data-uid="Gimnasio.Presentacion.FrmPagos.btnBuscarMonto">
+  btnBuscarMonto
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L584"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button btnBuscarMonto { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_btnCancelarPago_" data-uid="Gimnasio.Presentacion.FrmPagos.btnCancelarPago*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_btnCancelarPago" data-uid="Gimnasio.Presentacion.FrmPagos.btnCancelarPago">
+  btnCancelarPago
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L604"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button btnCancelarPago { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_btnEliminar_" data-uid="Gimnasio.Presentacion.FrmPagos.btnEliminar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_btnEliminar" data-uid="Gimnasio.Presentacion.FrmPagos.btnEliminar">
+  btnEliminar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L593"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button btnEliminar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_btnGuardarPago_" data-uid="Gimnasio.Presentacion.FrmPagos.btnGuardarPago*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_btnGuardarPago" data-uid="Gimnasio.Presentacion.FrmPagos.btnGuardarPago">
+  btnGuardarPago
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L605"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button btnGuardarPago { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_cbMetodo_" data-uid="Gimnasio.Presentacion.FrmPagos.cbMetodo*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_cbMetodo" data-uid="Gimnasio.Presentacion.FrmPagos.cbMetodo">
+  cbMetodo
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L608"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual ComboBox cbMetodo { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.combobox">ComboBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_cbOpcionBuscar_" data-uid="Gimnasio.Presentacion.FrmPagos.cbOpcionBuscar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_cbOpcionBuscar" data-uid="Gimnasio.Presentacion.FrmPagos.cbOpcionBuscar">
+  cbOpcionBuscar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L594"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual ComboBox cbOpcionBuscar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.combobox">ComboBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_dgvListado_" data-uid="Gimnasio.Presentacion.FrmPagos.dgvListado*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_dgvListado" data-uid="Gimnasio.Presentacion.FrmPagos.dgvListado">
+  dgvListado
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L597"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual DataGridView dgvListado { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.datagridview">DataGridView</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_dtpFechaFin_" data-uid="Gimnasio.Presentacion.FrmPagos.dtpFechaFin*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_dtpFechaFin" data-uid="Gimnasio.Presentacion.FrmPagos.dtpFechaFin">
+  dtpFechaFin
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L581"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual DateTimePicker dtpFechaFin { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.datetimepicker">DateTimePicker</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_dtpFechaInicio_" data-uid="Gimnasio.Presentacion.FrmPagos.dtpFechaInicio*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_dtpFechaInicio" data-uid="Gimnasio.Presentacion.FrmPagos.dtpFechaInicio">
+  dtpFechaInicio
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L580"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual DateTimePicker dtpFechaInicio { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.datetimepicker">DateTimePicker</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_lbIngresosTotales_" data-uid="Gimnasio.Presentacion.FrmPagos.lbIngresosTotales*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_lbIngresosTotales" data-uid="Gimnasio.Presentacion.FrmPagos.lbIngresosTotales">
+  lbIngresosTotales
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L595"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lbIngresosTotales { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_lblComprobante_" data-uid="Gimnasio.Presentacion.FrmPagos.lblComprobante*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_lblComprobante" data-uid="Gimnasio.Presentacion.FrmPagos.lblComprobante">
+  lblComprobante
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L576"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblComprobante { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_lblDesde_" data-uid="Gimnasio.Presentacion.FrmPagos.lblDesde*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_lblDesde" data-uid="Gimnasio.Presentacion.FrmPagos.lblDesde">
+  lblDesde
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L586"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblDesde { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_lblFin_" data-uid="Gimnasio.Presentacion.FrmPagos.lblFin*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_lblFin" data-uid="Gimnasio.Presentacion.FrmPagos.lblFin">
+  lblFin
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L599"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblFin { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_lblHasta_" data-uid="Gimnasio.Presentacion.FrmPagos.lblHasta*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_lblHasta" data-uid="Gimnasio.Presentacion.FrmPagos.lblHasta">
+  lblHasta
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L585"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblHasta { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_lblInicio_" data-uid="Gimnasio.Presentacion.FrmPagos.lblInicio*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_lblInicio" data-uid="Gimnasio.Presentacion.FrmPagos.lblInicio">
+  lblInicio
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L600"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblInicio { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_lblMetodo_" data-uid="Gimnasio.Presentacion.FrmPagos.lblMetodo*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_lblMetodo" data-uid="Gimnasio.Presentacion.FrmPagos.lblMetodo">
+  lblMetodo
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L613"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblMetodo { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_lblMonto_" data-uid="Gimnasio.Presentacion.FrmPagos.lblMonto*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_lblMonto" data-uid="Gimnasio.Presentacion.FrmPagos.lblMonto">
+  lblMonto
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L614"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblMonto { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_lblNotas_" data-uid="Gimnasio.Presentacion.FrmPagos.lblNotas*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_lblNotas" data-uid="Gimnasio.Presentacion.FrmPagos.lblNotas">
+  lblNotas
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L612"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblNotas { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_lblPagoIngreso_" data-uid="Gimnasio.Presentacion.FrmPagos.lblPagoIngreso*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_lblPagoIngreso" data-uid="Gimnasio.Presentacion.FrmPagos.lblPagoIngreso">
+  lblPagoIngreso
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L603"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblPagoIngreso { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_lblTotal_" data-uid="Gimnasio.Presentacion.FrmPagos.lblTotal*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_lblTotal" data-uid="Gimnasio.Presentacion.FrmPagos.lblTotal">
+  lblTotal
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L596"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblTotal { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_panelEdicionPago_" data-uid="Gimnasio.Presentacion.FrmPagos.panelEdicionPago*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_panelEdicionPago" data-uid="Gimnasio.Presentacion.FrmPagos.panelEdicionPago">
+  panelEdicionPago
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L601"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Panel panelEdicionPago { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.panel">Panel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_panelListado_" data-uid="Gimnasio.Presentacion.FrmPagos.panelListado*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_panelListado" data-uid="Gimnasio.Presentacion.FrmPagos.panelListado">
+  panelListado
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L577"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Panel panelListado { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.panel">Panel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_pbReiniciar_" data-uid="Gimnasio.Presentacion.FrmPagos.pbReiniciar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_pbReiniciar" data-uid="Gimnasio.Presentacion.FrmPagos.pbReiniciar">
+  pbReiniciar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L592"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual PictureBox pbReiniciar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.picturebox">PictureBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_tbBuscar_" data-uid="Gimnasio.Presentacion.FrmPagos.tbBuscar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_tbBuscar" data-uid="Gimnasio.Presentacion.FrmPagos.tbBuscar">
+  tbBuscar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L598"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual TextBox tbBuscar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_tbComprobante_" data-uid="Gimnasio.Presentacion.FrmPagos.tbComprobante*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_tbComprobante" data-uid="Gimnasio.Presentacion.FrmPagos.tbComprobante">
+  tbComprobante
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L610"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual TextBox tbComprobante { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_tbIDpago_" data-uid="Gimnasio.Presentacion.FrmPagos.tbIDpago*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_tbIDpago" data-uid="Gimnasio.Presentacion.FrmPagos.tbIDpago">
+  tbIDpago
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L602"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual TextBox tbIDpago { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_tbMonto_" data-uid="Gimnasio.Presentacion.FrmPagos.tbMonto*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_tbMonto" data-uid="Gimnasio.Presentacion.FrmPagos.tbMonto">
+  tbMonto
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L611"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual TextBox tbMonto { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_tbMontoFinal_" data-uid="Gimnasio.Presentacion.FrmPagos.tbMontoFinal*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_tbMontoFinal" data-uid="Gimnasio.Presentacion.FrmPagos.tbMontoFinal">
+  tbMontoFinal
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L587"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual TextBox tbMontoFinal { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_tbMontoInicial_" data-uid="Gimnasio.Presentacion.FrmPagos.tbMontoInicial*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_tbMontoInicial" data-uid="Gimnasio.Presentacion.FrmPagos.tbMontoInicial">
+  tbMontoInicial
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L588"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual TextBox tbMontoInicial { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_tbNotas_" data-uid="Gimnasio.Presentacion.FrmPagos.tbNotas*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_tbNotas" data-uid="Gimnasio.Presentacion.FrmPagos.tbNotas">
+  tbNotas
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L609"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual TextBox tbNotas { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_ActualizarDgv_" data-uid="Gimnasio.Presentacion.FrmPagos.ActualizarDgv*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_ActualizarDgv" data-uid="Gimnasio.Presentacion.FrmPagos.ActualizarDgv">
+  ActualizarDgv()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.vb/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actualiza el DataGridView con la lista completa de pagos obtenida desde la capa de negocio mediante <a class="xref" href="Gimnasio.Negocio.NPagos.html#Gimnasio_Negocio_NPagos_Listar">Listar()</a>.
+Actualiza la etiqueta lblTotal con la cantidad de pagos listados
+y calcula el total de ingresos sumando los valores de la columna &quot;monto&quot; de cada fila, mostrando el resultado en lbIngresosTotales.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ActualizarDgv()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_ActualizarDgv_" data-uid="Gimnasio.Presentacion.FrmPagos.ActualizarDgv*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_ActualizarDgv_System_Data_DataTable_" data-uid="Gimnasio.Presentacion.FrmPagos.ActualizarDgv(System.Data.DataTable)">
+  ActualizarDgv(DataTable)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.vb/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actualiza el DataGridView con una lista específica de pagos proporcionada en el parámetro listado.
+Actualiza la etiqueta lblTotal con la cantidad de pagos listados
+y calcula el total de ingresos sumando los valores de la columna &quot;monto&quot; de cada fila, mostrando el resultado en lbIngresosTotales.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ActualizarDgv(DataTable listado)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>listado</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable que contiene la lista de pagos a mostrar en el DataGridView.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_Dispose_" data-uid="Gimnasio.Presentacion.FrmPagos.Dispose*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_Dispose_System_Boolean_" data-uid="Gimnasio.Presentacion.FrmPagos.Dispose(System.Boolean)">
+  Dispose(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L6"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Disposes of the resources (other than memory) used by the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form">Form</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to release both managed and unmanaged resources; <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> to release only unmanaged resources.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_HabilitarEdicionPago_" data-uid="Gimnasio.Presentacion.FrmPagos.HabilitarEdicionPago*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_HabilitarEdicionPago" data-uid="Gimnasio.Presentacion.FrmPagos.HabilitarEdicionPago">
+  HabilitarEdicionPago()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.vb/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><ul>
+<li>Hace visible el panel de edición de pagos y lo ajusta para ocupar todo el espacio disponible del formulario.</li>
+<li>Deshabilita el panel de listado de pagos para evitar la interacción con el listado mientras se edita un pago.</li>
+<li>Limpia los campos de monto, comprobante y notas.</li>
+<li>Establece el método de pago predeterminado seleccionando el primer elemento del ComboBox.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HabilitarEdicionPago()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_HabilitarListado_" data-uid="Gimnasio.Presentacion.FrmPagos.HabilitarListado*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_HabilitarListado" data-uid="Gimnasio.Presentacion.FrmPagos.HabilitarListado">
+  HabilitarListado()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.vb/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Habilita el panel de listado de pagos. Oculta el panel de edición de pagos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HabilitarListado()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_InitializeComponent_" data-uid="Gimnasio.Presentacion.FrmPagos.InitializeComponent*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_InitializeComponent" data-uid="Gimnasio.Presentacion.FrmPagos.InitializeComponent">
+  InitializeComponent()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.Designer.vb/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void InitializeComponent()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_btnActualizar_Click_" data-uid="Gimnasio.Presentacion.FrmPagos.btnActualizar_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_btnActualizar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPagos.btnActualizar_Click(System.Object,System.EventArgs)">
+  btnActualizar_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.vb/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Actualizar&quot; en el formulario de pagos.</p>
+<ul>
+<li>Verifica si hay una fila seleccionada en el DataGridView.
+<ul>
+<li>Si hay una selección:
+<ul>
+<li>Llama a <a class="xref" href="Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_HabilitarEdicionPago">HabilitarEdicionPago()</a> para mostrar el panel de edición.</li>
+<li>Carga en los campos de edición los datos del pago seleccionado.</li>
+</ul>
+</li>
+<li>Si no hay ninguna fila seleccionada, lanza una excepción informando que no se ha seleccionado ningún pago.</li>
+</ul>
+</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnActualizar_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_btnBuscarFecha_Click_" data-uid="Gimnasio.Presentacion.FrmPagos.btnBuscarFecha_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_btnBuscarFecha_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPagos.btnBuscarFecha_Click(System.Object,System.EventArgs)">
+  btnBuscarFecha_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.vb/#L229"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón para buscar pagos por fecha en el formulario de pagos.</p>
+<ul>
+<li>Obtiene las fechas seleccionadas en los controles dtpFechaInicio y dtpFechaFin.</li>
+<li>Ajusta la fecha de fin para incluir todo el día seleccionado (agregando un día y restando un tick).</li>
+<li>Valida que la fecha de inicio no sea mayor que la fecha de fin; si lo es, lanza una excepción.</li>
+<li>Si las fechas son válidas, utiliza el método <a class="xref" href="Gimnasio.Negocio.NPagos.html#Gimnasio_Negocio_NPagos_ListarPorFecha_System_DateTime_System_DateTime_">ListarPorFecha(DateTime, DateTime)</a> para filtrar los pagos dentro del rango especificado.</li>
+<li>Actualiza el DataGridView con los resultados filtrados mediante <a class="xref" href="Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_ActualizarDgv">ActualizarDgv()</a>.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnBuscarFecha_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_btnBuscarMonto_Click_" data-uid="Gimnasio.Presentacion.FrmPagos.btnBuscarMonto_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_btnBuscarMonto_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPagos.btnBuscarMonto_Click(System.Object,System.EventArgs)">
+  btnBuscarMonto_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.vb/#L333"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón para buscar pagos por monto (btnBuscarMonto).
+Permite filtrar los pagos mostrados en el DataGridView según un rango de montos especificado por el usuario.</p>
+<ul>
+<li>Valida que ambos campos de monto (tbMontoInicial y tbMontoFinal) no estén vacíos. Verifica tambien que sean numéricos positivos.</li>
+<li>Comprueba que el monto inicial no sea mayor que el monto final.</li>
+<li>Si todas las validaciones son correctas, invoca <a class="xref" href="Gimnasio.Negocio.NPagos.html#Gimnasio_Negocio_NPagos_ListarPorMontos_System_Decimal_System_Decimal_">ListarPorMontos(decimal, decimal)</a> pasando los valores convertidos a decimal
+y actualiza el DataGridView con los resultados filtrados.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnBuscarMonto_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_btnCancelarPago_Click_" data-uid="Gimnasio.Presentacion.FrmPagos.btnCancelarPago_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_btnCancelarPago_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPagos.btnCancelarPago_Click(System.Object,System.EventArgs)">
+  btnCancelarPago_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.vb/#L418"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnCancelarPago_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_btnEliminar_Click_" data-uid="Gimnasio.Presentacion.FrmPagos.btnEliminar_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_btnEliminar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPagos.btnEliminar_Click(System.Object,System.EventArgs)">
+  btnEliminar_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.vb/#L363"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Eliminar&quot; (btnEliminar).</p>
+<ul>
+<li>Verifica si hay una fila seleccionada en el DataGridView.</li>
+<li>Si hay una selección, obtiene el identificador del pago (&quot;id_pago&quot;) de la fila seleccionada.</li>
+<li>Solicita confirmación al usuario mediante un cuadro de diálogo antes de proceder con la eliminación.</li>
+<li>Si el usuario confirma, invoca <a class="xref" href="Gimnasio.Negocio.NPagos.html#Gimnasio_Negocio_NPagos_Eliminar_System_UInt32_">Eliminar(uint)</a> para eliminar el pago y actualiza el listado de pago.</li>
+<li>Muestra un mensaje de éxito si la eliminación se realiza correctamente.</li>
+<li>Si no hay ninguna fila seleccionada, lanza una excepción.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnEliminar_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_btnGuardarPago_Click_" data-uid="Gimnasio.Presentacion.FrmPagos.btnGuardarPago_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_btnGuardarPago_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPagos.btnGuardarPago_Click(System.Object,System.EventArgs)">
+  btnGuardarPago_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.vb/#L175"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Guardar&quot; en el formulario de edición de pagos.</p>
+<ul>
+<li>Valida que el campo monto no este vacio y que sea un numero valido, sino lanza una excepción.</li>
+<li>Si las validaciones son correctas, crea un nuevo objeto Pagos con los datos ingresados y lo actualiza en la base de datos.</li>
+<li>Muestra un mensaje de éxito y actualiza el listado de pagos.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnGuardarPago_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_cb_SelectedIndexChanged_" data-uid="Gimnasio.Presentacion.FrmPagos.cb_SelectedIndexChanged*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_cb_SelectedIndexChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPagos.cb_SelectedIndexChanged(System.Object,System.EventArgs)">
+  cb_SelectedIndexChanged(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.vb/#L254"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al cambiar la opción seleccionada en el ComboBox de búsqueda (cbOpcionBuscar).</p>
+<ul>
+<li>Limpia los campos de búsqueda y restablece los controles de fecha y monto a sus valores iniciales.</li>
+<li>Actualiza el DataGridView con la lista completa de pagos.</li>
+<li>Según la opción elegida:
+<ul>
+<li>Opción 0 (por fecha): muestra el panel de fechas y oculta los demás campos de búsqueda.</li>
+<li>Opción 1 (por DNI) y 2 (por nombre de plan): habilita el campo de texto para búsqueda y oculta los paneles de fecha y monto.</li>
+<li>Opción 3 (por monto): muestra el panel de montos y oculta los demás campos.</li>
+<li>Opciones 4 a 10 (por método de pago): oculta todos los campos de búsqueda y filtra automáticamente los pagos por el método seleccionado
+con <a class="xref" href="Gimnasio.Negocio.NPagos.html#Gimnasio_Negocio_NPagos_ListarPorMetodoPago_System_String_">ListarPorMetodoPago(string)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void cb_SelectedIndexChanged(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_dtpFechaFin_ValueChanged_" data-uid="Gimnasio.Presentacion.FrmPagos.dtpFechaFin_ValueChanged*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_dtpFechaFin_ValueChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPagos.dtpFechaFin_ValueChanged(System.Object,System.EventArgs)">
+  dtpFechaFin_ValueChanged(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.vb/#L213"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al cambiar el valor del DateTimePicker para la fecha de fin. Le da un formato corto a la fecha para que sea visible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void dtpFechaFin_ValueChanged(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_dtpFechaInicio_ValueChanged_" data-uid="Gimnasio.Presentacion.FrmPagos.dtpFechaInicio_ValueChanged*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_dtpFechaInicio_ValueChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPagos.dtpFechaInicio_ValueChanged(System.Object,System.EventArgs)">
+  dtpFechaInicio_ValueChanged(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.vb/#L202"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al cambiar el valor del DateTimePicker para la fecha de inicio. Le da un formato corto a la fecha para que sea visible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void dtpFechaInicio_ValueChanged(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_frmPagos_Load_" data-uid="Gimnasio.Presentacion.FrmPagos.frmPagos_Load*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_frmPagos_Load_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPagos.frmPagos_Load(System.Object,System.EventArgs)">
+  frmPagos_Load(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.vb/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al cargar el formulario FrmPagos.
+Inicializa el listado de pagos, configura la visibilidad y los encabezados de las columnas del DataGridView dgvListado,
+y establece la opción predeterminada del ComboBox de búsqueda.
+También inicializa los controles de selección de fecha dtpFechaInicio y dtpFechaFin con un formato personalizado vacío.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void frmPagos_Load(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_pbReiniciar_Click_" data-uid="Gimnasio.Presentacion.FrmPagos.pbReiniciar_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_pbReiniciar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPagos.pbReiniciar_Click(System.Object,System.EventArgs)">
+  pbReiniciar_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.vb/#L391"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Reiniciar&quot; (pbReiniciar) en el formulario de pagos.</p>
+<ul>
+<li>Restablece los campos de búsqueda y filtros según la opción seleccionada en el ComboBox:
+<ul>
+<li>Opción 0 (por fecha): reinicia los controles de fecha al valor actual y les aplica un formato vacío y actualiza el listado completo de pagos.</li>
+<li>Opción 1 o 2 (por DNI o por nombre de plan): limpia el campo de búsqueda y actualiza el listado completo de pagos.</li>
+<li>Opción 3 (por monto): limpia los campos de monto inicial y final y actualiza el listado completo de pagos.</li>
+<li>Opciones 4 a 10 (por método de pago): actualiza el listado completo de pagos y restablece la opción seleccionada
+en el ComboBox a la opción predeterminada (0).</li>
+</ul>
+</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void pbReiniciar_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPagos_tbBuscar_TextChanged_" data-uid="Gimnasio.Presentacion.FrmPagos.tbBuscar_TextChanged*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_tbBuscar_TextChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPagos.tbBuscar_TextChanged(System.Object,System.EventArgs)">
+  tbBuscar_TextChanged(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.vb/#L311"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al modificar el texto en el campo de búsqueda (tbBuscar).
+Su función es filtrar dinámicamente los pagos mostrados en el DataGridView según el criterio seleccionado en el ComboBox de búsqueda.</p>
+<ul>
+<li>Si la opción seleccionada es 1 (DNI), invoca <a class="xref" href="Gimnasio.Negocio.NPagos.html#Gimnasio_Negocio_NPagos_ListarPorDni_System_String_">ListarPorDni(string)</a> pasando el texto ingresado y actualiza el listado.</li>
+<li>Si la opción seleccionada es 2 (Nombre plan), invoca <a class="xref" href="Gimnasio.Negocio.NPagos.html#Gimnasio_Negocio_NPagos_ListarPorNombrePlan_System_String_">ListarPorNombrePlan(string)</a> con el texto ingresado y actualiza el listado.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void tbBuscar_TextChanged(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPagos.vb/#L12" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Desarrollado por Progoat
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,535 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gimnasio.Errores.ManejarErrores
+  commentId: T:Gimnasio.Errores.ManejarErrores
+  id: ManejarErrores
+  parent: Gimnasio.Errores
+  children:
+  - Gimnasio.Errores.ManejarErrores.Log(System.String,System.Exception)
+  - Gimnasio.Errores.ManejarErrores.Mostrar(System.String,System.Exception)
+  - Gimnasio.Errores.ManejarErrores.logFilePath
+  langs:
+  - csharp
+  - vb
+  name: ManejarErrores
+  nameWithType: ManejarErrores
+  fullName: Gimnasio.Errores.ManejarErrores
+  type: Class
+  source:
+    remote:
+      path: Gimnasio.Errores/ManejarErrores.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: ManejarErrores
+    path: ../Gimnasio.Errores/ManejarErrores.vb
+    startLine: 6
+  assemblies:
+  - Gimnasio.Errores
+  namespace: Gimnasio.Errores
+  summary: >-
+    Clase utilitaria para el registro de errores en el sistema.
+
+    Permite guardar mensajes de error y excepciones en un archivo de log ubicado en la carpeta Logs.
+
+    Ademas permite mostrar mensajes de error al usuario mediante cuadros de diálogo.
+  example: []
+  syntax:
+    content: public class ManejarErrores
+    content.vb: Public Class ManejarErrores
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.Finalize
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Gimnasio.Errores.ManejarErrores.logFilePath
+  commentId: F:Gimnasio.Errores.ManejarErrores.logFilePath
+  id: logFilePath
+  parent: Gimnasio.Errores.ManejarErrores
+  langs:
+  - csharp
+  - vb
+  name: logFilePath
+  nameWithType: ManejarErrores.logFilePath
+  fullName: Gimnasio.Errores.ManejarErrores.logFilePath
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Errores/ManejarErrores.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: logFilePath
+    path: ../Gimnasio.Errores/ManejarErrores.vb
+    startLine: 10
+  assemblies:
+  - Gimnasio.Errores
+  namespace: Gimnasio.Errores
+  summary: Ruta completa del archivo de log donde se almacenan los errores.
+  example: []
+  syntax:
+    content: private static readonly string logFilePath
+    return:
+      type: System.String
+    content.vb: Private Shared ReadOnly logFilePath As String
+- uid: Gimnasio.Errores.ManejarErrores.Log(System.String,System.Exception)
+  commentId: M:Gimnasio.Errores.ManejarErrores.Log(System.String,System.Exception)
+  id: Log(System.String,System.Exception)
+  parent: Gimnasio.Errores.ManejarErrores
+  langs:
+  - csharp
+  - vb
+  name: Log(string, Exception)
+  nameWithType: ManejarErrores.Log(string, Exception)
+  fullName: Gimnasio.Errores.ManejarErrores.Log(string, System.Exception)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Errores/ManejarErrores.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Log
+    path: ../Gimnasio.Errores/ManejarErrores.vb
+    startLine: 27
+  assemblies:
+  - Gimnasio.Errores
+  namespace: Gimnasio.Errores
+  summary: >-
+    1. Verifica si el directorio de logs existe; si no, lo crea automáticamente.
+
+    2. Abre (o crea) el archivo log.txt en modo adjuntar dentro de la carpeta Logs de la aplicación.
+
+    3. Escribe una entrada de error que incluye:
+       - Fecha y hora del registro.
+       - Mensaje personalizado que describe el contexto del error.
+       - Mensaje de la excepción capturada.
+       - Stack trace de la excepción.
+    4. Separa cada registro con una línea divisoria.
+
+    5. Si ocurre una excepción de E/S durante el proceso de log, la omite silenciosamente para evitar errores adicionales.
+
+    Este método es estático y puede ser llamado desde cualquier parte del sistema para registrar errores técnicos o de negocio.
+  example: []
+  syntax:
+    content: public static void Log(string message, Exception ex)
+    parameters:
+    - id: message
+      type: System.String
+      description: Mensaje personalizado que describe el contexto del error.
+    - id: ex
+      type: System.Exception
+      description: Excepción capturada que contiene detalles del error.
+    content.vb: Public Shared Sub Log(message As String, ex As Exception)
+  overload: Gimnasio.Errores.ManejarErrores.Log*
+  nameWithType.vb: ManejarErrores.Log(String, Exception)
+  fullName.vb: Gimnasio.Errores.ManejarErrores.Log(String, System.Exception)
+  name.vb: Log(String, Exception)
+- uid: Gimnasio.Errores.ManejarErrores.Mostrar(System.String,System.Exception)
+  commentId: M:Gimnasio.Errores.ManejarErrores.Mostrar(System.String,System.Exception)
+  id: Mostrar(System.String,System.Exception)
+  parent: Gimnasio.Errores.ManejarErrores
+  langs:
+  - csharp
+  - vb
+  name: Mostrar(string, Exception)
+  nameWithType: ManejarErrores.Mostrar(string, Exception)
+  fullName: Gimnasio.Errores.ManejarErrores.Mostrar(string, System.Exception)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Errores/ManejarErrores.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Mostrar
+    path: ../Gimnasio.Errores/ManejarErrores.vb
+    startLine: 53
+  assemblies:
+  - Gimnasio.Errores
+  namespace: Gimnasio.Errores
+  summary: >-
+    1. Registra la excepción recibida en el archivo log.txt utilizando <xref href="Gimnasio.Errores.ManejarErrores.Log(System.String%2cSystem.Exception)" data-throw-if-not-resolved="false"></xref> con el mensaje "Capa Presentación".
+
+    2. Muestra un cuadro de diálogo al usuario con un mensaje personalizado y el mensaje de la excepción, usando MsgBox en modo crítico.
+
+    3. Si ocurre una excepción de E/S durante el proceso, la omite silenciosamente para evitar errores adicionales.
+
+    Este método asegura que todos los errores sean registrados y notificados al usuario de forma clara.
+  example: []
+  syntax:
+    content: public static void Mostrar(string mensajeUsuario, Exception ex)
+    parameters:
+    - id: mensajeUsuario
+      type: System.String
+      description: Mensaje personalizado que se mostrará al usuario.
+    - id: ex
+      type: System.Exception
+      description: Excepción capturada que será registrada y cuyo mensaje se mostrará al usuario.
+    content.vb: Public Shared Sub Mostrar(mensajeUsuario As String, ex As Exception)
+  overload: Gimnasio.Errores.ManejarErrores.Mostrar*
+  nameWithType.vb: ManejarErrores.Mostrar(String, Exception)
+  fullName.vb: Gimnasio.Errores.ManejarErrores.Mostrar(String, System.Exception)
+  name.vb: Mostrar(String, Exception)
+references:
+- uid: Gimnasio.Errores
+  commentId: N:Gimnasio.Errores
+  isExternal: true
+  href: Gimnasio.html
+  name: Gimnasio.Errores
+  nameWithType: Gimnasio.Errores
+  fullName: Gimnasio.Errores
+  spec.csharp:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Errores
+    name: Errores
+    href: Gimnasio.Errores.html
+  spec.vb:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Errores
+    name: Errores
+    href: Gimnasio.Errores.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Finalize
+  commentId: M:System.Object.Finalize
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.finalize
+  name: Finalize()
+  nameWithType: object.Finalize()
+  fullName: object.Finalize()
+  nameWithType.vb: Object.Finalize()
+  fullName.vb: Object.Finalize()
+  spec.csharp:
+  - uid: System.Object.Finalize
+    name: Finalize
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.finalize
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.Finalize
+    name: Finalize
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.finalize
+  - name: (
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Gimnasio.Errores.ManejarErrores.Log*
+  commentId: Overload:Gimnasio.Errores.ManejarErrores.Log
+  href: Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_
+  name: Log
+  nameWithType: ManejarErrores.Log
+  fullName: Gimnasio.Errores.ManejarErrores.Log
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: Gimnasio.Errores.ManejarErrores.Log(System.String,System.Exception)
+  commentId: M:Gimnasio.Errores.ManejarErrores.Log(System.String,System.Exception)
+  isExternal: true
+  href: Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_
+  name: Log(string, Exception)
+  nameWithType: ManejarErrores.Log(string, Exception)
+  fullName: Gimnasio.Errores.ManejarErrores.Log(string, System.Exception)
+  nameWithType.vb: ManejarErrores.Log(String, Exception)
+  fullName.vb: Gimnasio.Errores.ManejarErrores.Log(String, System.Exception)
+  name.vb: Log(String, Exception)
+  spec.csharp:
+  - uid: Gimnasio.Errores.ManejarErrores.Log(System.String,System.Exception)
+    name: Log
+    href: Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Errores.ManejarErrores.Log(System.String,System.Exception)
+    name: Log
+    href: Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+- uid: Gimnasio.Errores.ManejarErrores.Mostrar*
+  commentId: Overload:Gimnasio.Errores.ManejarErrores.Mostrar
+  href: Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Mostrar_System_String_System_Exception_
+  name: Mostrar
+  nameWithType: ManejarErrores.Mostrar
+  fullName: Gimnasio.Errores.ManejarErrores.Mostrar

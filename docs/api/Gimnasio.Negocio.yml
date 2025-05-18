@@ -1,0 +1,97 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gimnasio.Negocio
+  commentId: N:Gimnasio.Negocio
+  id: Gimnasio.Negocio
+  children:
+  - Gimnasio.Negocio.NAsistencia
+  - Gimnasio.Negocio.NMembresias
+  - Gimnasio.Negocio.NMiembros
+  - Gimnasio.Negocio.NPagos
+  - Gimnasio.Negocio.NPlanes
+  - Gimnasio.Negocio.NReclamos
+  - Gimnasio.Negocio.NUsuarios
+  langs:
+  - csharp
+  - vb
+  name: Gimnasio.Negocio
+  nameWithType: Gimnasio.Negocio
+  fullName: Gimnasio.Negocio
+  type: Namespace
+  assemblies:
+  - Gimnasio.Negocio
+references:
+- uid: Gimnasio.Negocio.NAsistencia
+  commentId: T:Gimnasio.Negocio.NAsistencia
+  parent: Gimnasio.Negocio
+  href: Gimnasio.Negocio.NAsistencia.html
+  name: NAsistencia
+  nameWithType: NAsistencia
+  fullName: Gimnasio.Negocio.NAsistencia
+- uid: Gimnasio.Negocio.NMembresias
+  commentId: T:Gimnasio.Negocio.NMembresias
+  parent: Gimnasio.Negocio
+  href: Gimnasio.Negocio.NMembresias.html
+  name: NMembresias
+  nameWithType: NMembresias
+  fullName: Gimnasio.Negocio.NMembresias
+- uid: Gimnasio.Negocio.NMiembros
+  commentId: T:Gimnasio.Negocio.NMiembros
+  parent: Gimnasio.Negocio
+  href: Gimnasio.Negocio.NMiembros.html
+  name: NMiembros
+  nameWithType: NMiembros
+  fullName: Gimnasio.Negocio.NMiembros
+- uid: Gimnasio.Negocio.NPagos
+  commentId: T:Gimnasio.Negocio.NPagos
+  parent: Gimnasio.Negocio
+  href: Gimnasio.Negocio.NPagos.html
+  name: NPagos
+  nameWithType: NPagos
+  fullName: Gimnasio.Negocio.NPagos
+- uid: Gimnasio.Negocio.NPlanes
+  commentId: T:Gimnasio.Negocio.NPlanes
+  parent: Gimnasio.Negocio
+  href: Gimnasio.Negocio.NPlanes.html
+  name: NPlanes
+  nameWithType: NPlanes
+  fullName: Gimnasio.Negocio.NPlanes
+- uid: Gimnasio.Negocio.NReclamos
+  commentId: T:Gimnasio.Negocio.NReclamos
+  parent: Gimnasio.Negocio
+  href: Gimnasio.Negocio.NReclamos.html
+  name: NReclamos
+  nameWithType: NReclamos
+  fullName: Gimnasio.Negocio.NReclamos
+- uid: Gimnasio.Negocio.NUsuarios
+  commentId: T:Gimnasio.Negocio.NUsuarios
+  parent: Gimnasio.Negocio
+  href: Gimnasio.Negocio.NUsuarios.html
+  name: NUsuarios
+  nameWithType: NUsuarios
+  fullName: Gimnasio.Negocio.NUsuarios
+- uid: Gimnasio.Negocio
+  commentId: N:Gimnasio.Negocio
+  isExternal: true
+  href: Gimnasio.html
+  name: Gimnasio.Negocio
+  nameWithType: Gimnasio.Negocio
+  fullName: Gimnasio.Negocio
+  spec.csharp:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Negocio
+    name: Negocio
+    href: Gimnasio.Negocio.html
+  spec.vb:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Negocio
+    name: Negocio
+    href: Gimnasio.Negocio.html

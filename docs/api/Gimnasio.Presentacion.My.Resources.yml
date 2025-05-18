@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gimnasio.Presentacion.My.Resources
+  commentId: N:Gimnasio.Presentacion.My.Resources
+  id: Gimnasio.Presentacion.My.Resources
+  children:
+  - Gimnasio.Presentacion.My.Resources.Resources
+  langs:
+  - csharp
+  - vb
+  name: Gimnasio.Presentacion.My.Resources
+  nameWithType: Gimnasio.Presentacion.My.Resources
+  fullName: Gimnasio.Presentacion.My.Resources
+  type: Namespace
+  assemblies:
+  - Gimnasio.Presentacion
+references:
+- uid: Gimnasio.Presentacion.My.Resources.Resources
+  commentId: T:Gimnasio.Presentacion.My.Resources.Resources
+  href: Gimnasio.Presentacion.My.Resources.Resources.html
+  name: Resources
+  nameWithType: Resources
+  fullName: Gimnasio.Presentacion.My.Resources.Resources

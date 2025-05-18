@@ -1,0 +1,1291 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gimnasio.Negocio.NPagos
+  commentId: T:Gimnasio.Negocio.NPagos
+  id: NPagos
+  parent: Gimnasio.Negocio
+  children:
+  - Gimnasio.Negocio.NPagos.Actualizar(Gimnasio.Entidades.Pagos)
+  - Gimnasio.Negocio.NPagos.Eliminar(System.UInt32)
+  - Gimnasio.Negocio.NPagos.Insertar(Gimnasio.Entidades.Pagos)
+  - Gimnasio.Negocio.NPagos.Listar
+  - Gimnasio.Negocio.NPagos.ListarPorDni(System.String)
+  - Gimnasio.Negocio.NPagos.ListarPorFecha(System.DateTime,System.DateTime)
+  - Gimnasio.Negocio.NPagos.ListarPorMetodoPago(System.String)
+  - Gimnasio.Negocio.NPagos.ListarPorMontos(System.Decimal,System.Decimal)
+  - Gimnasio.Negocio.NPagos.ListarPorNombrePlan(System.String)
+  - Gimnasio.Negocio.NPagos.ValidarCampos(Gimnasio.Entidades.Pagos)
+  - Gimnasio.Negocio.NPagos.dPagos
+  langs:
+  - csharp
+  - vb
+  name: NPagos
+  nameWithType: NPagos
+  fullName: Gimnasio.Negocio.NPagos
+  type: Class
+  source:
+    remote:
+      path: Gimnasio.Negocio/NPagos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: NPagos
+    path: ../Gimnasio.Negocio/NPagos.vb
+    startLine: 12
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: >-
+    Lógica de negocio para la gestión de pagos en el sistema de gimnasio.
+
+    Interactúa con la capa de datos <xref href="Gimnasio.Negocio.NPagos.dPagos" data-throw-if-not-resolved="false"></xref> y la entidad <xref href="Gimnasio.Entidades.Pagos" data-throw-if-not-resolved="false"></xref>.
+
+    Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.  
+
+    Si ocurre una excepción, se registra el error utilizando <xref href="Gimnasio.Errores.ManejarErrores.Log(System.String%2cSystem.Exception)" data-throw-if-not-resolved="false"></xref> en un log.txt
+
+    Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).
+  example: []
+  syntax:
+    content: public class NPagos
+    content.vb: Public Class NPagos
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.Finalize
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Gimnasio.Negocio.NPagos.dPagos
+  commentId: F:Gimnasio.Negocio.NPagos.dPagos
+  id: dPagos
+  parent: Gimnasio.Negocio.NPagos
+  langs:
+  - csharp
+  - vb
+  name: dPagos
+  nameWithType: NPagos.dPagos
+  fullName: Gimnasio.Negocio.NPagos.dPagos
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Negocio/NPagos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: dPagos
+    path: ../Gimnasio.Negocio/NPagos.vb
+    startLine: 16
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: Instancia de la capa de datos para pagos.
+  example: []
+  syntax:
+    content: private DPagos dPagos
+    return:
+      type: Gimnasio.Datos.DPagos
+    content.vb: Private dPagos As DPagos
+- uid: Gimnasio.Negocio.NPagos.ValidarCampos(Gimnasio.Entidades.Pagos)
+  commentId: M:Gimnasio.Negocio.NPagos.ValidarCampos(Gimnasio.Entidades.Pagos)
+  id: ValidarCampos(Gimnasio.Entidades.Pagos)
+  parent: Gimnasio.Negocio.NPagos
+  langs:
+  - csharp
+  - vb
+  name: ValidarCampos(Pagos)
+  nameWithType: NPagos.ValidarCampos(Pagos)
+  fullName: Gimnasio.Negocio.NPagos.ValidarCampos(Gimnasio.Entidades.Pagos)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NPagos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: ValidarCampos
+    path: ../Gimnasio.Negocio/NPagos.vb
+    startLine: 22
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: Valida los campos de la entidad <xref href="Gimnasio.Entidades.Pagos" data-throw-if-not-resolved="false"></xref> antes de realizar operaciones de inserción.
+  example: []
+  syntax:
+    content: private void ValidarCampos(Pagos Obj)
+    parameters:
+    - id: Obj
+      type: Gimnasio.Entidades.Pagos
+      description: Instancia de <xref href="Gimnasio.Entidades.Pagos" data-throw-if-not-resolved="false"></xref> a validar.
+    content.vb: Private Sub ValidarCampos(Obj As Pagos)
+  overload: Gimnasio.Negocio.NPagos.ValidarCampos*
+- uid: Gimnasio.Negocio.NPagos.Listar
+  commentId: M:Gimnasio.Negocio.NPagos.Listar
+  id: Listar
+  parent: Gimnasio.Negocio.NPagos
+  langs:
+  - csharp
+  - vb
+  name: Listar()
+  nameWithType: NPagos.Listar()
+  fullName: Gimnasio.Negocio.NPagos.Listar()
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NPagos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Listar
+    path: ../Gimnasio.Negocio/NPagos.vb
+    startLine: 43
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: Obtiene la lista de todos los pagos registrados con <xref href="Gimnasio.Datos.DPagos.Listar" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public DataTable Listar()
+    return:
+      type: System.Data.DataTable
+      description: DataTable con los datos de los pagos.
+    content.vb: Public Function Listar() As DataTable
+  overload: Gimnasio.Negocio.NPagos.Listar*
+- uid: Gimnasio.Negocio.NPagos.Insertar(Gimnasio.Entidades.Pagos)
+  commentId: M:Gimnasio.Negocio.NPagos.Insertar(Gimnasio.Entidades.Pagos)
+  id: Insertar(Gimnasio.Entidades.Pagos)
+  parent: Gimnasio.Negocio.NPagos
+  langs:
+  - csharp
+  - vb
+  name: Insertar(Pagos)
+  nameWithType: NPagos.Insertar(Pagos)
+  fullName: Gimnasio.Negocio.NPagos.Insertar(Gimnasio.Entidades.Pagos)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NPagos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Insertar
+    path: ../Gimnasio.Negocio/NPagos.vb
+    startLine: 62
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: >-
+    1. Valida los campos de la entidad <xref href="Gimnasio.Entidades.Pagos" data-throw-if-not-resolved="false"></xref> recibida como parámetro.
+
+    2. Inserta el pago en la base de datos utilizando <xref href="Gimnasio.Datos.DPagos.Insertar(Gimnasio.Entidades.Pagos)" data-throw-if-not-resolved="false"></xref>.
+
+    3. Actualiza la membresía asociada al pago:
+       - Obtiene la duración de la membresía con <xref href="Gimnasio.Datos.DMembresias.ObtenerDuracionPorMembresia(System.UInt32)" data-throw-if-not-resolved="false"></xref>.
+       - Establece la fecha de inicio como la fecha actual y la fecha de fin sumando la duración.
+       - Cambia el estado de la membresía a "Activa".
+       - Actualiza estos datos en la base de datos mediante <xref href="Gimnasio.Datos.DMembresias.ActualizarEstadoYFechas(Gimnasio.Entidades.Membresias)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void Insertar(Pagos pago)
+    parameters:
+    - id: pago
+      type: Gimnasio.Entidades.Pagos
+      description: Instancia de <xref href="Gimnasio.Entidades.Pagos" data-throw-if-not-resolved="false"></xref> a insertar.
+    content.vb: Public Sub Insertar(pago As Pagos)
+  overload: Gimnasio.Negocio.NPagos.Insertar*
+- uid: Gimnasio.Negocio.NPagos.Actualizar(Gimnasio.Entidades.Pagos)
+  commentId: M:Gimnasio.Negocio.NPagos.Actualizar(Gimnasio.Entidades.Pagos)
+  id: Actualizar(Gimnasio.Entidades.Pagos)
+  parent: Gimnasio.Negocio.NPagos
+  langs:
+  - csharp
+  - vb
+  name: Actualizar(Pagos)
+  nameWithType: NPagos.Actualizar(Pagos)
+  fullName: Gimnasio.Negocio.NPagos.Actualizar(Gimnasio.Entidades.Pagos)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NPagos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Actualizar
+    path: ../Gimnasio.Negocio/NPagos.vb
+    startLine: 89
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: Actualiza un pago existente en el sistema.
+  example: []
+  syntax:
+    content: public void Actualizar(Pagos pago)
+    parameters:
+    - id: pago
+      type: Gimnasio.Entidades.Pagos
+      description: Instancia de <xref href="Gimnasio.Entidades.Pagos" data-throw-if-not-resolved="false"></xref> con los datos actualizados.
+    content.vb: Public Sub Actualizar(pago As Pagos)
+  overload: Gimnasio.Negocio.NPagos.Actualizar*
+- uid: Gimnasio.Negocio.NPagos.Eliminar(System.UInt32)
+  commentId: M:Gimnasio.Negocio.NPagos.Eliminar(System.UInt32)
+  id: Eliminar(System.UInt32)
+  parent: Gimnasio.Negocio.NPagos
+  langs:
+  - csharp
+  - vb
+  name: Eliminar(uint)
+  nameWithType: NPagos.Eliminar(uint)
+  fullName: Gimnasio.Negocio.NPagos.Eliminar(uint)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NPagos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Eliminar
+    path: ../Gimnasio.Negocio/NPagos.vb
+    startLine: 103
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: Elimina un pago del sistema según su id con <xref href="Gimnasio.Datos.DPagos.Eliminar(System.UInt32)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void Eliminar(uint id)
+    parameters:
+    - id: id
+      type: System.UInt32
+      description: Identificador único del pago a eliminar.
+    content.vb: Public Sub Eliminar(id As UInteger)
+  overload: Gimnasio.Negocio.NPagos.Eliminar*
+  nameWithType.vb: NPagos.Eliminar(UInteger)
+  fullName.vb: Gimnasio.Negocio.NPagos.Eliminar(UInteger)
+  name.vb: Eliminar(UInteger)
+- uid: Gimnasio.Negocio.NPagos.ListarPorFecha(System.DateTime,System.DateTime)
+  commentId: M:Gimnasio.Negocio.NPagos.ListarPorFecha(System.DateTime,System.DateTime)
+  id: ListarPorFecha(System.DateTime,System.DateTime)
+  parent: Gimnasio.Negocio.NPagos
+  langs:
+  - csharp
+  - vb
+  name: ListarPorFecha(DateTime, DateTime)
+  nameWithType: NPagos.ListarPorFecha(DateTime, DateTime)
+  fullName: Gimnasio.Negocio.NPagos.ListarPorFecha(System.DateTime, System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NPagos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: ListarPorFecha
+    path: ../Gimnasio.Negocio/NPagos.vb
+    startLine: 118
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: Busca pagos por rango de fechas utilizando la capa de datos <xref href="Gimnasio.Datos.DPagos.ListarPorFecha(System.DateTime%2cSystem.DateTime)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public DataTable ListarPorFecha(DateTime fechaInicio, DateTime fechaFin)
+    parameters:
+    - id: fechaInicio
+      type: System.DateTime
+      description: Fecha de inicio del rango.
+    - id: fechaFin
+      type: System.DateTime
+      description: Fecha de fin del rango.
+    return:
+      type: System.Data.DataTable
+      description: DataTable con los resultados de la búsqueda.
+    content.vb: Public Function ListarPorFecha(fechaInicio As Date, fechaFin As Date) As DataTable
+  overload: Gimnasio.Negocio.NPagos.ListarPorFecha*
+  nameWithType.vb: NPagos.ListarPorFecha(Date, Date)
+  fullName.vb: Gimnasio.Negocio.NPagos.ListarPorFecha(Date, Date)
+  name.vb: ListarPorFecha(Date, Date)
+- uid: Gimnasio.Negocio.NPagos.ListarPorDni(System.String)
+  commentId: M:Gimnasio.Negocio.NPagos.ListarPorDni(System.String)
+  id: ListarPorDni(System.String)
+  parent: Gimnasio.Negocio.NPagos
+  langs:
+  - csharp
+  - vb
+  name: ListarPorDni(string)
+  nameWithType: NPagos.ListarPorDni(string)
+  fullName: Gimnasio.Negocio.NPagos.ListarPorDni(string)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NPagos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: ListarPorDni
+    path: ../Gimnasio.Negocio/NPagos.vb
+    startLine: 132
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: Realiza una validación y busca pagos por DNI del miembro utilizando la capa de datos <xref href="Gimnasio.Datos.DPagos.ListarPorDni(System.String)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public DataTable ListarPorDni(string dni)
+    parameters:
+    - id: dni
+      type: System.String
+      description: DNI o parte del DNI del miembro a buscar.
+    return:
+      type: System.Data.DataTable
+      description: DataTable con los resultados de la búsqueda.
+    content.vb: Public Function ListarPorDni(dni As String) As DataTable
+  overload: Gimnasio.Negocio.NPagos.ListarPorDni*
+  nameWithType.vb: NPagos.ListarPorDni(String)
+  fullName.vb: Gimnasio.Negocio.NPagos.ListarPorDni(String)
+  name.vb: ListarPorDni(String)
+- uid: Gimnasio.Negocio.NPagos.ListarPorNombrePlan(System.String)
+  commentId: M:Gimnasio.Negocio.NPagos.ListarPorNombrePlan(System.String)
+  id: ListarPorNombrePlan(System.String)
+  parent: Gimnasio.Negocio.NPagos
+  langs:
+  - csharp
+  - vb
+  name: ListarPorNombrePlan(string)
+  nameWithType: NPagos.ListarPorNombrePlan(string)
+  fullName: Gimnasio.Negocio.NPagos.ListarPorNombrePlan(string)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NPagos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: ListarPorNombrePlan
+    path: ../Gimnasio.Negocio/NPagos.vb
+    startLine: 149
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: Realiza una validación y Busca pagos por nombre de plan utilizando la capa de datos <xref href="Gimnasio.Datos.DPagos.ListarPorNombrePlan(System.String)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public DataTable ListarPorNombrePlan(string nombre)
+    parameters:
+    - id: nombre
+      type: System.String
+      description: Nombre o parte del nombre del plan a buscar.
+    return:
+      type: System.Data.DataTable
+      description: DataTable con los resultados de la búsqueda.
+    content.vb: Public Function ListarPorNombrePlan(nombre As String) As DataTable
+  overload: Gimnasio.Negocio.NPagos.ListarPorNombrePlan*
+  nameWithType.vb: NPagos.ListarPorNombrePlan(String)
+  fullName.vb: Gimnasio.Negocio.NPagos.ListarPorNombrePlan(String)
+  name.vb: ListarPorNombrePlan(String)
+- uid: Gimnasio.Negocio.NPagos.ListarPorMetodoPago(System.String)
+  commentId: M:Gimnasio.Negocio.NPagos.ListarPorMetodoPago(System.String)
+  id: ListarPorMetodoPago(System.String)
+  parent: Gimnasio.Negocio.NPagos
+  langs:
+  - csharp
+  - vb
+  name: ListarPorMetodoPago(string)
+  nameWithType: NPagos.ListarPorMetodoPago(string)
+  fullName: Gimnasio.Negocio.NPagos.ListarPorMetodoPago(string)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NPagos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: ListarPorMetodoPago
+    path: ../Gimnasio.Negocio/NPagos.vb
+    startLine: 166
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: Busca pagos por método de pago utilizando la capa de datos <xref href="Gimnasio.Datos.DPagos.ListarPorMetodoPago(System.String)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public DataTable ListarPorMetodoPago(string metodo)
+    parameters:
+    - id: metodo
+      type: System.String
+      description: Método de pago a buscar.
+    return:
+      type: System.Data.DataTable
+      description: DataTable con los resultados de la búsqueda.
+    content.vb: Public Function ListarPorMetodoPago(metodo As String) As DataTable
+  overload: Gimnasio.Negocio.NPagos.ListarPorMetodoPago*
+  nameWithType.vb: NPagos.ListarPorMetodoPago(String)
+  fullName.vb: Gimnasio.Negocio.NPagos.ListarPorMetodoPago(String)
+  name.vb: ListarPorMetodoPago(String)
+- uid: Gimnasio.Negocio.NPagos.ListarPorMontos(System.Decimal,System.Decimal)
+  commentId: M:Gimnasio.Negocio.NPagos.ListarPorMontos(System.Decimal,System.Decimal)
+  id: ListarPorMontos(System.Decimal,System.Decimal)
+  parent: Gimnasio.Negocio.NPagos
+  langs:
+  - csharp
+  - vb
+  name: ListarPorMontos(decimal, decimal)
+  nameWithType: NPagos.ListarPorMontos(decimal, decimal)
+  fullName: Gimnasio.Negocio.NPagos.ListarPorMontos(decimal, decimal)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NPagos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: ListarPorMontos
+    path: ../Gimnasio.Negocio/NPagos.vb
+    startLine: 181
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: Realiza una validación y Busca pagos por rango de montos utilizando la capa de datos <xref href="Gimnasio.Datos.DPagos.ListarPorMontos(System.Decimal%2cSystem.Decimal)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public DataTable ListarPorMontos(decimal montoMin, decimal montoMax)
+    parameters:
+    - id: montoMin
+      type: System.Decimal
+      description: Monto mínimo.
+    - id: montoMax
+      type: System.Decimal
+      description: Monto máximo.
+    return:
+      type: System.Data.DataTable
+      description: DataTable con los resultados de la búsqueda.
+    content.vb: Public Function ListarPorMontos(montoMin As Decimal, montoMax As Decimal) As DataTable
+  overload: Gimnasio.Negocio.NPagos.ListarPorMontos*
+  nameWithType.vb: NPagos.ListarPorMontos(Decimal, Decimal)
+  fullName.vb: Gimnasio.Negocio.NPagos.ListarPorMontos(Decimal, Decimal)
+  name.vb: ListarPorMontos(Decimal, Decimal)
+references:
+- uid: Gimnasio.Negocio.NPagos.dPagos
+  commentId: F:Gimnasio.Negocio.NPagos.dPagos
+  href: Gimnasio.Negocio.NPagos.html#Gimnasio_Negocio_NPagos_dPagos
+  name: dPagos
+  nameWithType: NPagos.dPagos
+  fullName: Gimnasio.Negocio.NPagos.dPagos
+- uid: Gimnasio.Entidades.Pagos
+  commentId: T:Gimnasio.Entidades.Pagos
+  parent: Gimnasio.Entidades
+  href: Gimnasio.Entidades.Pagos.html
+  name: Pagos
+  nameWithType: Pagos
+  fullName: Gimnasio.Entidades.Pagos
+- uid: Gimnasio.Errores.ManejarErrores.Log(System.String,System.Exception)
+  commentId: M:Gimnasio.Errores.ManejarErrores.Log(System.String,System.Exception)
+  isExternal: true
+  href: Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_
+  name: Log(string, Exception)
+  nameWithType: ManejarErrores.Log(string, Exception)
+  fullName: Gimnasio.Errores.ManejarErrores.Log(string, System.Exception)
+  nameWithType.vb: ManejarErrores.Log(String, Exception)
+  fullName.vb: Gimnasio.Errores.ManejarErrores.Log(String, System.Exception)
+  name.vb: Log(String, Exception)
+  spec.csharp:
+  - uid: Gimnasio.Errores.ManejarErrores.Log(System.String,System.Exception)
+    name: Log
+    href: Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Errores.ManejarErrores.Log(System.String,System.Exception)
+    name: Log
+    href: Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+- uid: Gimnasio.Negocio
+  commentId: N:Gimnasio.Negocio
+  isExternal: true
+  href: Gimnasio.html
+  name: Gimnasio.Negocio
+  nameWithType: Gimnasio.Negocio
+  fullName: Gimnasio.Negocio
+  spec.csharp:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Negocio
+    name: Negocio
+    href: Gimnasio.Negocio.html
+  spec.vb:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Negocio
+    name: Negocio
+    href: Gimnasio.Negocio.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Finalize
+  commentId: M:System.Object.Finalize
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.finalize
+  name: Finalize()
+  nameWithType: object.Finalize()
+  fullName: object.Finalize()
+  nameWithType.vb: Object.Finalize()
+  fullName.vb: Object.Finalize()
+  spec.csharp:
+  - uid: System.Object.Finalize
+    name: Finalize
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.finalize
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.Finalize
+    name: Finalize
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.finalize
+  - name: (
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Gimnasio.Entidades
+  commentId: N:Gimnasio.Entidades
+  isExternal: true
+  href: Gimnasio.html
+  name: Gimnasio.Entidades
+  nameWithType: Gimnasio.Entidades
+  fullName: Gimnasio.Entidades
+  spec.csharp:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Entidades
+    name: Entidades
+    href: Gimnasio.Entidades.html
+  spec.vb:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Entidades
+    name: Entidades
+    href: Gimnasio.Entidades.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Gimnasio.Datos.DPagos
+  commentId: T:Gimnasio.Datos.DPagos
+  parent: Gimnasio.Datos
+  href: Gimnasio.Datos.DPagos.html
+  name: DPagos
+  nameWithType: DPagos
+  fullName: Gimnasio.Datos.DPagos
+- uid: Gimnasio.Datos
+  commentId: N:Gimnasio.Datos
+  isExternal: true
+  href: Gimnasio.html
+  name: Gimnasio.Datos
+  nameWithType: Gimnasio.Datos
+  fullName: Gimnasio.Datos
+  spec.csharp:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Datos
+    name: Datos
+    href: Gimnasio.Datos.html
+  spec.vb:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Datos
+    name: Datos
+    href: Gimnasio.Datos.html
+- uid: Gimnasio.Negocio.NPagos.ValidarCampos*
+  commentId: Overload:Gimnasio.Negocio.NPagos.ValidarCampos
+  href: Gimnasio.Negocio.NPagos.html#Gimnasio_Negocio_NPagos_ValidarCampos_Gimnasio_Entidades_Pagos_
+  name: ValidarCampos
+  nameWithType: NPagos.ValidarCampos
+  fullName: Gimnasio.Negocio.NPagos.ValidarCampos
+- uid: Gimnasio.Datos.DPagos.Listar
+  commentId: M:Gimnasio.Datos.DPagos.Listar
+  href: Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_Listar
+  name: Listar()
+  nameWithType: DPagos.Listar()
+  fullName: Gimnasio.Datos.DPagos.Listar()
+  spec.csharp:
+  - uid: Gimnasio.Datos.DPagos.Listar
+    name: Listar
+    href: Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_Listar
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DPagos.Listar
+    name: Listar
+    href: Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_Listar
+  - name: (
+  - name: )
+- uid: Gimnasio.Negocio.NPagos.Listar*
+  commentId: Overload:Gimnasio.Negocio.NPagos.Listar
+  href: Gimnasio.Negocio.NPagos.html#Gimnasio_Negocio_NPagos_Listar
+  name: Listar
+  nameWithType: NPagos.Listar
+  fullName: Gimnasio.Negocio.NPagos.Listar
+- uid: System.Data.DataTable
+  commentId: T:System.Data.DataTable
+  parent: System.Data
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.data.datatable
+  name: DataTable
+  nameWithType: DataTable
+  fullName: System.Data.DataTable
+- uid: System.Data
+  commentId: N:System.Data
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Data
+  nameWithType: System.Data
+  fullName: System.Data
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Data
+    name: Data
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.data
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Data
+    name: Data
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.data
+- uid: Gimnasio.Datos.DPagos.Insertar(Gimnasio.Entidades.Pagos)
+  commentId: M:Gimnasio.Datos.DPagos.Insertar(Gimnasio.Entidades.Pagos)
+  href: Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_Insertar_Gimnasio_Entidades_Pagos_
+  name: Insertar(Pagos)
+  nameWithType: DPagos.Insertar(Pagos)
+  fullName: Gimnasio.Datos.DPagos.Insertar(Gimnasio.Entidades.Pagos)
+  spec.csharp:
+  - uid: Gimnasio.Datos.DPagos.Insertar(Gimnasio.Entidades.Pagos)
+    name: Insertar
+    href: Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_Insertar_Gimnasio_Entidades_Pagos_
+  - name: (
+  - uid: Gimnasio.Entidades.Pagos
+    name: Pagos
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DPagos.Insertar(Gimnasio.Entidades.Pagos)
+    name: Insertar
+    href: Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_Insertar_Gimnasio_Entidades_Pagos_
+  - name: (
+  - uid: Gimnasio.Entidades.Pagos
+    name: Pagos
+  - name: )
+- uid: Gimnasio.Datos.DMembresias.ObtenerDuracionPorMembresia(System.UInt32)
+  commentId: M:Gimnasio.Datos.DMembresias.ObtenerDuracionPorMembresia(System.UInt32)
+  isExternal: true
+  href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ObtenerDuracionPorMembresia_System_UInt32_
+  name: ObtenerDuracionPorMembresia(uint)
+  nameWithType: DMembresias.ObtenerDuracionPorMembresia(uint)
+  fullName: Gimnasio.Datos.DMembresias.ObtenerDuracionPorMembresia(uint)
+  nameWithType.vb: DMembresias.ObtenerDuracionPorMembresia(UInteger)
+  fullName.vb: Gimnasio.Datos.DMembresias.ObtenerDuracionPorMembresia(UInteger)
+  name.vb: ObtenerDuracionPorMembresia(UInteger)
+  spec.csharp:
+  - uid: Gimnasio.Datos.DMembresias.ObtenerDuracionPorMembresia(System.UInt32)
+    name: ObtenerDuracionPorMembresia
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ObtenerDuracionPorMembresia_System_UInt32_
+  - name: (
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DMembresias.ObtenerDuracionPorMembresia(System.UInt32)
+    name: ObtenerDuracionPorMembresia
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ObtenerDuracionPorMembresia_System_UInt32_
+  - name: (
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+- uid: Gimnasio.Datos.DMembresias.ActualizarEstadoYFechas(Gimnasio.Entidades.Membresias)
+  commentId: M:Gimnasio.Datos.DMembresias.ActualizarEstadoYFechas(Gimnasio.Entidades.Membresias)
+  href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ActualizarEstadoYFechas_Gimnasio_Entidades_Membresias_
+  name: ActualizarEstadoYFechas(Membresias)
+  nameWithType: DMembresias.ActualizarEstadoYFechas(Membresias)
+  fullName: Gimnasio.Datos.DMembresias.ActualizarEstadoYFechas(Gimnasio.Entidades.Membresias)
+  spec.csharp:
+  - uid: Gimnasio.Datos.DMembresias.ActualizarEstadoYFechas(Gimnasio.Entidades.Membresias)
+    name: ActualizarEstadoYFechas
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ActualizarEstadoYFechas_Gimnasio_Entidades_Membresias_
+  - name: (
+  - uid: Gimnasio.Entidades.Membresias
+    name: Membresias
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DMembresias.ActualizarEstadoYFechas(Gimnasio.Entidades.Membresias)
+    name: ActualizarEstadoYFechas
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ActualizarEstadoYFechas_Gimnasio_Entidades_Membresias_
+  - name: (
+  - uid: Gimnasio.Entidades.Membresias
+    name: Membresias
+  - name: )
+- uid: Gimnasio.Negocio.NPagos.Insertar*
+  commentId: Overload:Gimnasio.Negocio.NPagos.Insertar
+  href: Gimnasio.Negocio.NPagos.html#Gimnasio_Negocio_NPagos_Insertar_Gimnasio_Entidades_Pagos_
+  name: Insertar
+  nameWithType: NPagos.Insertar
+  fullName: Gimnasio.Negocio.NPagos.Insertar
+- uid: Gimnasio.Negocio.NPagos.Actualizar*
+  commentId: Overload:Gimnasio.Negocio.NPagos.Actualizar
+  href: Gimnasio.Negocio.NPagos.html#Gimnasio_Negocio_NPagos_Actualizar_Gimnasio_Entidades_Pagos_
+  name: Actualizar
+  nameWithType: NPagos.Actualizar
+  fullName: Gimnasio.Negocio.NPagos.Actualizar
+- uid: Gimnasio.Datos.DPagos.Eliminar(System.UInt32)
+  commentId: M:Gimnasio.Datos.DPagos.Eliminar(System.UInt32)
+  isExternal: true
+  href: Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_Eliminar_System_UInt32_
+  name: Eliminar(uint)
+  nameWithType: DPagos.Eliminar(uint)
+  fullName: Gimnasio.Datos.DPagos.Eliminar(uint)
+  nameWithType.vb: DPagos.Eliminar(UInteger)
+  fullName.vb: Gimnasio.Datos.DPagos.Eliminar(UInteger)
+  name.vb: Eliminar(UInteger)
+  spec.csharp:
+  - uid: Gimnasio.Datos.DPagos.Eliminar(System.UInt32)
+    name: Eliminar
+    href: Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_Eliminar_System_UInt32_
+  - name: (
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DPagos.Eliminar(System.UInt32)
+    name: Eliminar
+    href: Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_Eliminar_System_UInt32_
+  - name: (
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+- uid: Gimnasio.Negocio.NPagos.Eliminar*
+  commentId: Overload:Gimnasio.Negocio.NPagos.Eliminar
+  href: Gimnasio.Negocio.NPagos.html#Gimnasio_Negocio_NPagos_Eliminar_System_UInt32_
+  name: Eliminar
+  nameWithType: NPagos.Eliminar
+  fullName: Gimnasio.Negocio.NPagos.Eliminar
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: Gimnasio.Datos.DPagos.ListarPorFecha(System.DateTime,System.DateTime)
+  commentId: M:Gimnasio.Datos.DPagos.ListarPorFecha(System.DateTime,System.DateTime)
+  isExternal: true
+  href: Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_ListarPorFecha_System_DateTime_System_DateTime_
+  name: ListarPorFecha(DateTime, DateTime)
+  nameWithType: DPagos.ListarPorFecha(DateTime, DateTime)
+  fullName: Gimnasio.Datos.DPagos.ListarPorFecha(System.DateTime, System.DateTime)
+  nameWithType.vb: DPagos.ListarPorFecha(Date, Date)
+  fullName.vb: Gimnasio.Datos.DPagos.ListarPorFecha(Date, Date)
+  name.vb: ListarPorFecha(Date, Date)
+  spec.csharp:
+  - uid: Gimnasio.Datos.DPagos.ListarPorFecha(System.DateTime,System.DateTime)
+    name: ListarPorFecha
+    href: Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_ListarPorFecha_System_DateTime_System_DateTime_
+  - name: (
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: ','
+  - name: " "
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DPagos.ListarPorFecha(System.DateTime,System.DateTime)
+    name: ListarPorFecha
+    href: Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_ListarPorFecha_System_DateTime_System_DateTime_
+  - name: (
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: ','
+  - name: " "
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: )
+- uid: Gimnasio.Negocio.NPagos.ListarPorFecha*
+  commentId: Overload:Gimnasio.Negocio.NPagos.ListarPorFecha
+  href: Gimnasio.Negocio.NPagos.html#Gimnasio_Negocio_NPagos_ListarPorFecha_System_DateTime_System_DateTime_
+  name: ListarPorFecha
+  nameWithType: NPagos.ListarPorFecha
+  fullName: Gimnasio.Negocio.NPagos.ListarPorFecha
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: Gimnasio.Datos.DPagos.ListarPorDni(System.String)
+  commentId: M:Gimnasio.Datos.DPagos.ListarPorDni(System.String)
+  isExternal: true
+  href: Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_ListarPorDni_System_String_
+  name: ListarPorDni(string)
+  nameWithType: DPagos.ListarPorDni(string)
+  fullName: Gimnasio.Datos.DPagos.ListarPorDni(string)
+  nameWithType.vb: DPagos.ListarPorDni(String)
+  fullName.vb: Gimnasio.Datos.DPagos.ListarPorDni(String)
+  name.vb: ListarPorDni(String)
+  spec.csharp:
+  - uid: Gimnasio.Datos.DPagos.ListarPorDni(System.String)
+    name: ListarPorDni
+    href: Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_ListarPorDni_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DPagos.ListarPorDni(System.String)
+    name: ListarPorDni
+    href: Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_ListarPorDni_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Gimnasio.Negocio.NPagos.ListarPorDni*
+  commentId: Overload:Gimnasio.Negocio.NPagos.ListarPorDni
+  href: Gimnasio.Negocio.NPagos.html#Gimnasio_Negocio_NPagos_ListarPorDni_System_String_
+  name: ListarPorDni
+  nameWithType: NPagos.ListarPorDni
+  fullName: Gimnasio.Negocio.NPagos.ListarPorDni
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Gimnasio.Datos.DPagos.ListarPorNombrePlan(System.String)
+  commentId: M:Gimnasio.Datos.DPagos.ListarPorNombrePlan(System.String)
+  isExternal: true
+  href: Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_ListarPorNombrePlan_System_String_
+  name: ListarPorNombrePlan(string)
+  nameWithType: DPagos.ListarPorNombrePlan(string)
+  fullName: Gimnasio.Datos.DPagos.ListarPorNombrePlan(string)
+  nameWithType.vb: DPagos.ListarPorNombrePlan(String)
+  fullName.vb: Gimnasio.Datos.DPagos.ListarPorNombrePlan(String)
+  name.vb: ListarPorNombrePlan(String)
+  spec.csharp:
+  - uid: Gimnasio.Datos.DPagos.ListarPorNombrePlan(System.String)
+    name: ListarPorNombrePlan
+    href: Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_ListarPorNombrePlan_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DPagos.ListarPorNombrePlan(System.String)
+    name: ListarPorNombrePlan
+    href: Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_ListarPorNombrePlan_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Gimnasio.Negocio.NPagos.ListarPorNombrePlan*
+  commentId: Overload:Gimnasio.Negocio.NPagos.ListarPorNombrePlan
+  href: Gimnasio.Negocio.NPagos.html#Gimnasio_Negocio_NPagos_ListarPorNombrePlan_System_String_
+  name: ListarPorNombrePlan
+  nameWithType: NPagos.ListarPorNombrePlan
+  fullName: Gimnasio.Negocio.NPagos.ListarPorNombrePlan
+- uid: Gimnasio.Datos.DPagos.ListarPorMetodoPago(System.String)
+  commentId: M:Gimnasio.Datos.DPagos.ListarPorMetodoPago(System.String)
+  isExternal: true
+  href: Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_ListarPorMetodoPago_System_String_
+  name: ListarPorMetodoPago(string)
+  nameWithType: DPagos.ListarPorMetodoPago(string)
+  fullName: Gimnasio.Datos.DPagos.ListarPorMetodoPago(string)
+  nameWithType.vb: DPagos.ListarPorMetodoPago(String)
+  fullName.vb: Gimnasio.Datos.DPagos.ListarPorMetodoPago(String)
+  name.vb: ListarPorMetodoPago(String)
+  spec.csharp:
+  - uid: Gimnasio.Datos.DPagos.ListarPorMetodoPago(System.String)
+    name: ListarPorMetodoPago
+    href: Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_ListarPorMetodoPago_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DPagos.ListarPorMetodoPago(System.String)
+    name: ListarPorMetodoPago
+    href: Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_ListarPorMetodoPago_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Gimnasio.Negocio.NPagos.ListarPorMetodoPago*
+  commentId: Overload:Gimnasio.Negocio.NPagos.ListarPorMetodoPago
+  href: Gimnasio.Negocio.NPagos.html#Gimnasio_Negocio_NPagos_ListarPorMetodoPago_System_String_
+  name: ListarPorMetodoPago
+  nameWithType: NPagos.ListarPorMetodoPago
+  fullName: Gimnasio.Negocio.NPagos.ListarPorMetodoPago
+- uid: Gimnasio.Datos.DPagos.ListarPorMontos(System.Decimal,System.Decimal)
+  commentId: M:Gimnasio.Datos.DPagos.ListarPorMontos(System.Decimal,System.Decimal)
+  isExternal: true
+  href: Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_ListarPorMontos_System_Decimal_System_Decimal_
+  name: ListarPorMontos(decimal, decimal)
+  nameWithType: DPagos.ListarPorMontos(decimal, decimal)
+  fullName: Gimnasio.Datos.DPagos.ListarPorMontos(decimal, decimal)
+  nameWithType.vb: DPagos.ListarPorMontos(Decimal, Decimal)
+  fullName.vb: Gimnasio.Datos.DPagos.ListarPorMontos(Decimal, Decimal)
+  name.vb: ListarPorMontos(Decimal, Decimal)
+  spec.csharp:
+  - uid: Gimnasio.Datos.DPagos.ListarPorMontos(System.Decimal,System.Decimal)
+    name: ListarPorMontos
+    href: Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_ListarPorMontos_System_Decimal_System_Decimal_
+  - name: (
+  - uid: System.Decimal
+    name: decimal
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.decimal
+  - name: ','
+  - name: " "
+  - uid: System.Decimal
+    name: decimal
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.decimal
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DPagos.ListarPorMontos(System.Decimal,System.Decimal)
+    name: ListarPorMontos
+    href: Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_ListarPorMontos_System_Decimal_System_Decimal_
+  - name: (
+  - uid: System.Decimal
+    name: Decimal
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.decimal
+  - name: ','
+  - name: " "
+  - uid: System.Decimal
+    name: Decimal
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.decimal
+  - name: )
+- uid: Gimnasio.Negocio.NPagos.ListarPorMontos*
+  commentId: Overload:Gimnasio.Negocio.NPagos.ListarPorMontos
+  href: Gimnasio.Negocio.NPagos.html#Gimnasio_Negocio_NPagos_ListarPorMontos_System_Decimal_System_Decimal_
+  name: ListarPorMontos
+  nameWithType: NPagos.ListarPorMontos
+  fullName: Gimnasio.Negocio.NPagos.ListarPorMontos
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal

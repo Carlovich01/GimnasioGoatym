@@ -1,0 +1,97 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gimnasio.Entidades
+  commentId: N:Gimnasio.Entidades
+  id: Gimnasio.Entidades
+  children:
+  - Gimnasio.Entidades.Asistencia
+  - Gimnasio.Entidades.Membresias
+  - Gimnasio.Entidades.Miembros
+  - Gimnasio.Entidades.Pagos
+  - Gimnasio.Entidades.Planes
+  - Gimnasio.Entidades.Reclamos
+  - Gimnasio.Entidades.Usuarios
+  langs:
+  - csharp
+  - vb
+  name: Gimnasio.Entidades
+  nameWithType: Gimnasio.Entidades
+  fullName: Gimnasio.Entidades
+  type: Namespace
+  assemblies:
+  - Gimnasio.Entidades
+references:
+- uid: Gimnasio.Entidades.Asistencia
+  commentId: T:Gimnasio.Entidades.Asistencia
+  parent: Gimnasio.Entidades
+  href: Gimnasio.Entidades.Asistencia.html
+  name: Asistencia
+  nameWithType: Asistencia
+  fullName: Gimnasio.Entidades.Asistencia
+- uid: Gimnasio.Entidades.Membresias
+  commentId: T:Gimnasio.Entidades.Membresias
+  parent: Gimnasio.Entidades
+  href: Gimnasio.Entidades.Membresias.html
+  name: Membresias
+  nameWithType: Membresias
+  fullName: Gimnasio.Entidades.Membresias
+- uid: Gimnasio.Entidades.Miembros
+  commentId: T:Gimnasio.Entidades.Miembros
+  parent: Gimnasio.Entidades
+  href: Gimnasio.Entidades.Miembros.html
+  name: Miembros
+  nameWithType: Miembros
+  fullName: Gimnasio.Entidades.Miembros
+- uid: Gimnasio.Entidades.Pagos
+  commentId: T:Gimnasio.Entidades.Pagos
+  parent: Gimnasio.Entidades
+  href: Gimnasio.Entidades.Pagos.html
+  name: Pagos
+  nameWithType: Pagos
+  fullName: Gimnasio.Entidades.Pagos
+- uid: Gimnasio.Entidades.Planes
+  commentId: T:Gimnasio.Entidades.Planes
+  parent: Gimnasio.Entidades
+  href: Gimnasio.Entidades.Planes.html
+  name: Planes
+  nameWithType: Planes
+  fullName: Gimnasio.Entidades.Planes
+- uid: Gimnasio.Entidades.Reclamos
+  commentId: T:Gimnasio.Entidades.Reclamos
+  parent: Gimnasio.Entidades
+  href: Gimnasio.Entidades.Reclamos.html
+  name: Reclamos
+  nameWithType: Reclamos
+  fullName: Gimnasio.Entidades.Reclamos
+- uid: Gimnasio.Entidades.Usuarios
+  commentId: T:Gimnasio.Entidades.Usuarios
+  parent: Gimnasio.Entidades
+  href: Gimnasio.Entidades.Usuarios.html
+  name: Usuarios
+  nameWithType: Usuarios
+  fullName: Gimnasio.Entidades.Usuarios
+- uid: Gimnasio.Entidades
+  commentId: N:Gimnasio.Entidades
+  isExternal: true
+  href: Gimnasio.html
+  name: Gimnasio.Entidades
+  nameWithType: Gimnasio.Entidades
+  fullName: Gimnasio.Entidades
+  spec.csharp:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Entidades
+    name: Entidades
+    href: Gimnasio.Entidades.html
+  spec.vb:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Entidades
+    name: Entidades
+    href: Gimnasio.Entidades.html

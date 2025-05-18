@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class FrmRegistroAsistencias | Goatym </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class FrmRegistroAsistencias | Goatym ">
+      
+      <meta name="description" content="Formulario para la gesti&#243;n y consulta de asistencias de los miembros en el sistema del gimnasio. Permite listar, buscar por DNI o fecha, y eliminar registros de asistencia. Utiliza la clase  para la l&#243;gica de negocio. Todas las operaciones de esta capa est&#225;n envueltas en bloques Try...Catch. El manejo de errores se realiza a trav&#233;s de  que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.">
+      <link rel="icon" href="../images/logo.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Carlovich01/gimnasio3/new/main/apiSpec/new?filename=Gimnasio_Presentacion_FrmRegistroAsistencias.md&amp;value=---%0Auid%3A%20Gimnasio.Presentacion.FrmRegistroAsistencias%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Goatym">
+            Goatym
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias">
+
+
+
+  <h1 id="Gimnasio_Presentacion_FrmRegistroAsistencias" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias" class="text-break">
+Class FrmRegistroAsistencias  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L12"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gimnasio.html">Gimnasio</a>.<a class="xref" href="Gimnasio.Presentacion.html">Presentacion</a></dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Formulario para la gestión y consulta de asistencias de los miembros en el sistema del gimnasio.
+Permite listar, buscar por DNI o fecha, y eliminar registros de asistencia. Utiliza la clase <a class="xref" href="Gimnasio.Negocio.NAsistencia.html">NAsistencia</a> para la lógica de negocio.
+Todas las operaciones de esta capa están envueltas en bloques Try...Catch.
+El manejo de errores se realiza a través de <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Mostrar_System_String_System_Exception_">Mostrar(string, Exception)</a>
+que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DesignerGenerated]
+public class FrmRegistroAsistencias : Form, IOleControl.Interface, IOleObject.Interface, IOleInPlaceObject.Interface, IOleInPlaceActiveObject.Interface, IOleWindow.Interface, IViewObject2.Interface, IViewObject.Interface, IPersistStreamInit.Interface, IPersistPropertyBag.Interface, IPersistStorage.Interface, IPersist.Interface, IQuickActivate.Interface, ISupportOleDropSource, IDropTarget, ISynchronizeInvoke, IWin32Window, IBindableComponent, IKeyboardToolTip, IHandle&lt;HWND&gt;, IArrangedElement, IComponent, IDisposable, IContainerControl</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.marshalbyrefobject">MarshalByRefObject</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.component">Component</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.scrollablecontrol">ScrollableControl</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.containercontrol">ContainerControl</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form">Form</a></div>
+      <div><span class="xref">FrmRegistroAsistencias</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias__ctor_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.#ctor*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias__ctor_Gimnasio_Entidades_Usuarios_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.#ctor(Gimnasio.Entidades.Usuarios)">
+  FrmRegistroAsistencias(Usuarios)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructor del formulario de asistencias. Si el usuario es recepcionista, oculta el boton de eliminar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FrmRegistroAsistencias(Usuarios usuario)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>usuario</code> <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a> que representa al usuario logueado.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_components" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.components">
+  components
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private IContainer components</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icontainer">IContainer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_nAsistencias" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.nAsistencias">
+  nAsistencias
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Instancia de la capa de negocio para asistencias.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private NAsistencia nAsistencias</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gimnasio.Negocio.NAsistencia.html">NAsistencia</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_BtnBuscarFecha_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.BtnBuscarFecha*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_BtnBuscarFecha" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.BtnBuscarFecha">
+  BtnBuscarFecha
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb/#L288"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button BtnBuscarFecha { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_Label1_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.Label1*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_Label1" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.Label1">
+  Label1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb/#L287"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label Label1 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_Label2_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.Label2*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_Label2" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.Label2">
+  Label2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb/#L286"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label Label2 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_Label3_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.Label3*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_Label3" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.Label3">
+  Label3
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb/#L283"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label Label3 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_Label4_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.Label4*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_Label4" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.Label4">
+  Label4
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb/#L282"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label Label4 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_PanelFecha_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.PanelFecha*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_PanelFecha" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.PanelFecha">
+  PanelFecha
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb/#L281"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Panel PanelFecha { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.panel">Panel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_btnBuscar_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.btnBuscar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_btnBuscar" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.btnBuscar">
+  btnBuscar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb/#L289"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button btnBuscar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_btnEliminar_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.btnEliminar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_btnEliminar" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.btnEliminar">
+  btnEliminar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb/#L290"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button btnEliminar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_btnInsertar_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.btnInsertar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_btnInsertar" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.btnInsertar">
+  btnInsertar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb/#L291"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Button btnInsertar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_cbOpcionBuscar_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.cbOpcionBuscar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_cbOpcionBuscar" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.cbOpcionBuscar">
+  cbOpcionBuscar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb/#L277"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual ComboBox cbOpcionBuscar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.combobox">ComboBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_dgvListado_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.dgvListado*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_dgvListado" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.dgvListado">
+  dgvListado
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb/#L279"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual DataGridView dgvListado { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.datagridview">DataGridView</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_dtpFechaFin_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.dtpFechaFin*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_dtpFechaFin" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.dtpFechaFin">
+  dtpFechaFin
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb/#L285"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual DateTimePicker dtpFechaFin { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.datetimepicker">DateTimePicker</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_dtpFechaInicio_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.dtpFechaInicio*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_dtpFechaInicio" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.dtpFechaInicio">
+  dtpFechaInicio
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb/#L284"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual DateTimePicker dtpFechaInicio { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.datetimepicker">DateTimePicker</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_lblTotal_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.lblTotal*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_lblTotal" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.lblTotal">
+  lblTotal
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb/#L278"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblTotal { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_pbReiniciar_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.pbReiniciar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_pbReiniciar" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.pbReiniciar">
+  pbReiniciar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb/#L292"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual PictureBox pbReiniciar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.picturebox">PictureBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_tbBuscar_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.tbBuscar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_tbBuscar" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.tbBuscar">
+  tbBuscar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb/#L280"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual TextBox tbBuscar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_ActualizarDgv_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.ActualizarDgv*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_ActualizarDgv" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.ActualizarDgv">
+  ActualizarDgv()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actualiza el DataGridView con la lista de asistencias obtenida desde la capa de negocio mediante <a class="xref" href="Gimnasio.Negocio.NAsistencia.html#Gimnasio_Negocio_NAsistencia_Listar">Listar()</a>.</p>
+<ul>
+<li>Obtiene todos los registros de asistencias y los asigna como origen de datos del DataGridView.</li>
+<li>Actualiza la etiqueta lblTotal mostrando la cantidad total de asistencias listadas.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ActualizarDgv()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_ActualizarDgv_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.ActualizarDgv*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_ActualizarDgv_System_Data_DataTable_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.ActualizarDgv(System.Data.DataTable)">
+  ActualizarDgv(DataTable)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actualiza el DataGridView con una lista específica de asistencias proporcionada como parámetro.</p>
+<ul>
+<li>Asigna el DataTable recibido como origen de datos del DataGridView.</li>
+<li>Actualiza la etiqueta lblTotal mostrando la cantidad total de asistencias listadas en el DataGridView.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ActualizarDgv(DataTable Listado)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Listado</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_Dispose_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.Dispose*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_Dispose_System_Boolean_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.Dispose(System.Boolean)">
+  Dispose(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb/#L6"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Disposes of the resources (other than memory) used by the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form">Form</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to release both managed and unmanaged resources; <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> to release only unmanaged resources.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_InitializeComponent_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.InitializeComponent*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_InitializeComponent" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.InitializeComponent">
+  InitializeComponent()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void InitializeComponent()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_btnBuscar_Click_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.btnBuscar_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_btnBuscar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.btnBuscar_Click(System.Object,System.EventArgs)">
+  btnBuscar_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L178"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón para buscar asistencias por fecha.</p>
+<ul>
+<li>Obtiene las fechas seleccionadas en los controles DateTimePicker para inicio y fin.</li>
+<li>Valida que la fecha de inicio no sea mayor que la fecha de fin; si lo es, lanza una excepción.</li>
+<li>Llama a <a class="xref" href="Gimnasio.Negocio.NAsistencia.html#Gimnasio_Negocio_NAsistencia_ListarPorFecha_System_DateTime_System_DateTime_">ListarPorFecha(DateTime, DateTime)</a> para obtener las asistencias dentro del rango de fechas especificado.</li>
+<li>Actualiza el DataGridView con los resultados llamando a <a class="xref" href="Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_ActualizarDgv">ActualizarDgv()</a>.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnBuscar_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_btnEliminar_Click_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.btnEliminar_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_btnEliminar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.btnEliminar_Click(System.Object,System.EventArgs)">
+  btnEliminar_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Eliminar&quot;.</p>
+<ul>
+<li>Verifica si hay una fila seleccionada en el DataGridView de asistencias.</li>
+<li>Si hay selección, obtiene el ID de la asistencia seleccionada y solicita confirmación al usuario mediante un cuadro de diálogo.</li>
+<li>Si el usuario confirma, utiliza <a class="xref" href="Gimnasio.Negocio.NAsistencia.html#Gimnasio_Negocio_NAsistencia_Eliminar_System_UInt32_">Eliminar(uint)</a> para eliminar el registro de asistencia de la base de datos.</li>
+<li>Actualiza el listado de asistencias en el DataGridView mediante <a class="xref" href="Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_ActualizarDgv">ActualizarDgv()</a> y muestra un mensaje de éxito.</li>
+<li>Si no hay selección, lanza una excepción indicando que no se ha seleccionado ninguna asistencia para eliminar.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnEliminar_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_btnInsertar_Click_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.btnInsertar_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_btnInsertar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.btnInsertar_Click(System.Object,System.EventArgs)">
+  btnInsertar_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Insertar&quot; en el formulario de registro de asistencias.</p>
+<ul>
+<li>Crea una nueva instancia del formulario <a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html">FrmAsistencias</a>,
+pasando como parámetro la instancia actual de <a class="xref" href="Gimnasio.Presentacion.FrmRegistroAsistencias.html">FrmRegistroAsistencias</a> para permitir la comunicación entre formularios.</li>
+<li>Muestra el formulario de registro de asistencias para permitir el ingreso de una nueva asistencia mediante el DNI del miembro.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void btnInsertar_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_cb_SelectedIndexChanged_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.cb_SelectedIndexChanged*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_cb_SelectedIndexChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.cb_SelectedIndexChanged(System.Object,System.EventArgs)">
+  cb_SelectedIndexChanged(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al cambiar la opción seleccionada en el ComboBox de búsqueda de asistencias.</p>
+<ul>
+<li>Actualiza el DataGridView mostrando todas las asistencias mediante <a class="xref" href="Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_ActualizarDgv">ActualizarDgv()</a>.</li>
+<li>Utiliza una estructura Select Case para determinar el tipo de búsqueda:
+<ul>
+<li>Opción 0: habilita el campo de texto para buscar por DNI y oculta el panel de búsqueda por fecha.</li>
+<li>Opción 1: oculta y deshabilita el campo de texto de búsqueda y muestra el panel para búsqueda por rango de fechas.</li>
+</ul>
+</li>
+<li>Permite alternar entre búsqueda por DNI o por fechas según la selección del usuario.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void cb_SelectedIndexChanged(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_dtpFechaFin_ValueChanged_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.dtpFechaFin_ValueChanged*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_dtpFechaFin_ValueChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.dtpFechaFin_ValueChanged(System.Object,System.EventArgs)">
+  dtpFechaFin_ValueChanged(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L163"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al cambiar el valor del DateTimePicker para la fecha de fin. Cambia el formato a corto para mostrar solo la fecha.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void dtpFechaFin_ValueChanged(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_dtpFechaInicio_ValueChanged_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.dtpFechaInicio_ValueChanged*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_dtpFechaInicio_ValueChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.dtpFechaInicio_ValueChanged(System.Object,System.EventArgs)">
+  dtpFechaInicio_ValueChanged(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al cambiar el valor del DateTimePicker para la fecha de inicio. Cambia el formato a corto para mostrar solo la fecha.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void dtpFechaInicio_ValueChanged(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_frmRegistroAsistencias_Load_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.frmRegistroAsistencias_Load*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_frmRegistroAsistencias_Load_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.frmRegistroAsistencias_Load(System.Object,System.EventArgs)">
+  frmRegistroAsistencias_Load(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al cargar el formulario de registro de asistencias.</p>
+<ul>
+<li>Inicializa el listado de asistencias en el DataGridView llamando a <a class="xref" href="Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_ActualizarDgv">ActualizarDgv()</a>.</li>
+<li>Configura la visibilidad y los encabezados de las columnas del DataGridView
+para mostrar solo la información relevante y con títulos descriptivos.</li>
+<li>Establece la opción predeterminada del ComboBox de búsqueda en la segunda opción (índice 1).</li>
+<li>Configura los controles DateTimePicker para fecha de inicio y fin con un formato personalizado vacío</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void frmRegistroAsistencias_Load(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_pbReiniciar_Click_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.pbReiniciar_Click*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_pbReiniciar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.pbReiniciar_Click(System.Object,System.EventArgs)">
+  pbReiniciar_Click(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L225"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Reiniciar&quot;.</p>
+<ul>
+<li>Si la opción seleccionada en el ComboBox es búsqueda por DNI (índice 0),
+limpia el campo de búsqueda y actualiza el DataGridView mostrando todas las asistencias.</li>
+<li>Si la opción seleccionada es búsqueda por fecha (índice 1), restablece los DateTimePicker de fecha de inicio y fin a la fecha actual,
+limpia sus formatos y actualiza el DataGridView mostrando todas las asistencias.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void pbReiniciar_Click(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_tbBuscar_TextChanged_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.tbBuscar_TextChanged*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_tbBuscar_TextChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.tbBuscar_TextChanged(System.Object,System.EventArgs)">
+  tbBuscar_TextChanged(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al cambiar el texto en el campo de búsqueda de asistencias.</p>
+<ul>
+<li>Si la opción seleccionada en el ComboBox es la de búsqueda por DNI (índice 0), filtra las asistencias
+utilizando <a class="xref" href="Gimnasio.Negocio.NAsistencia.html#Gimnasio_Negocio_NAsistencia_ListarPorDNI_System_String_">ListarPorDNI(string)</a> con el texto ingresado.</li>
+<li>Actualiza el DataGridView con los resultados de la búsqueda llamando a <a class="xref" href="Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_ActualizarDgv">ActualizarDgv()</a>.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void tbBuscar_TextChanged(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L12" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Desarrollado por Progoat
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

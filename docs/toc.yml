@@ -1,0 +1,12 @@
+- name: Introducción
+  href: index.md
+- name: Manual de Usuario
+  href: manual_de_usuario.md
+- name: Base de datos
+  href: base_de_datos.md
+- name: Modelo de Clases
+  href: modelo_de_clases.md
+- name: Arquitectura
+  href: api/toc.yml
+- name: Video
+  href: video.md    

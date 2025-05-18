@@ -1,0 +1,895 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gimnasio.Datos.DMiembros
+  commentId: T:Gimnasio.Datos.DMiembros
+  id: DMiembros
+  parent: Gimnasio.Datos
+  children:
+  - Gimnasio.Datos.DMiembros.Actualizar(Gimnasio.Entidades.Miembros)
+  - Gimnasio.Datos.DMiembros.Eliminar(System.UInt32)
+  - Gimnasio.Datos.DMiembros.Insertar(Gimnasio.Entidades.Miembros)
+  - Gimnasio.Datos.DMiembros.Listar
+  - Gimnasio.Datos.DMiembros.ListarPorDni(System.String)
+  - Gimnasio.Datos.DMiembros.ListarPorNombre(System.String)
+  - Gimnasio.Datos.DMiembros.ObtenerPorDni(System.String)
+  langs:
+  - csharp
+  - vb
+  name: DMiembros
+  nameWithType: DMiembros
+  fullName: Gimnasio.Datos.DMiembros
+  type: Class
+  source:
+    remote:
+      path: Gimnasio.Datos/DMiembros.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: DMiembros
+    path: ../Gimnasio.Datos/DMiembros.vb
+    startLine: 11
+  assemblies:
+  - Gimnasio.Datos
+  namespace: Gimnasio.Datos
+  summary: >-
+    Clase de acceso a datos para la gestión de miembros en el sistema de gimnasio.
+
+    Hereda de <xref href="Gimnasio.Datos.ConexionBase" data-throw-if-not-resolved="false"></xref> y utiliza la entidad <xref href="Gimnasio.Entidades.Miembros" data-throw-if-not-resolved="false"></xref>.
+
+    Proporciona métodos CRUD y de búsqueda para la tabla miembros.
+
+
+    Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo
+  example: []
+  syntax:
+    content: 'public class DMiembros : ConexionBase'
+    content.vb: Public Class DMiembros Inherits ConexionBase
+  inheritance:
+  - System.Object
+  - Gimnasio.Datos.ConexionBase
+  inheritedMembers:
+  - Gimnasio.Datos.ConexionBase.connectionString
+  - Gimnasio.Datos.ConexionBase.ExecuteQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  - Gimnasio.Datos.ConexionBase.ExecuteNonQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.Finalize
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Gimnasio.Datos.DMiembros.Listar
+  commentId: M:Gimnasio.Datos.DMiembros.Listar
+  id: Listar
+  parent: Gimnasio.Datos.DMiembros
+  langs:
+  - csharp
+  - vb
+  name: Listar()
+  nameWithType: DMiembros.Listar()
+  fullName: Gimnasio.Datos.DMiembros.Listar()
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Datos/DMiembros.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Listar
+    path: ../Gimnasio.Datos/DMiembros.vb
+    startLine: 18
+  assemblies:
+  - Gimnasio.Datos
+  namespace: Gimnasio.Datos
+  summary: Ejecuta una consulta SQL (SELECT) que obtiene todos los miembros ordenados por la fecha de última modificación
+  example: []
+  syntax:
+    content: public DataTable Listar()
+    return:
+      type: System.Data.DataTable
+      description: DataTable con los datos de los miembros.
+    content.vb: Public Function Listar() As DataTable
+  overload: Gimnasio.Datos.DMiembros.Listar*
+- uid: Gimnasio.Datos.DMiembros.Insertar(Gimnasio.Entidades.Miembros)
+  commentId: M:Gimnasio.Datos.DMiembros.Insertar(Gimnasio.Entidades.Miembros)
+  id: Insertar(Gimnasio.Entidades.Miembros)
+  parent: Gimnasio.Datos.DMiembros
+  langs:
+  - csharp
+  - vb
+  name: Insertar(Miembros)
+  nameWithType: DMiembros.Insertar(Miembros)
+  fullName: Gimnasio.Datos.DMiembros.Insertar(Gimnasio.Entidades.Miembros)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Datos/DMiembros.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Insertar
+    path: ../Gimnasio.Datos/DMiembros.vb
+    startLine: 34
+  assemblies:
+  - Gimnasio.Datos
+  namespace: Gimnasio.Datos
+  summary: >-
+    Utiliza los datos proporcionados en la instancia de Miembros para ejecutar una sentencia SQL(INSERT) 
+
+    para insertar un nuevo miembro. Los valores nulos se almacenan como NULL en la base de datos.
+
+    Si el DNI esta duplicado, lanza una excepción.
+  example: []
+  syntax:
+    content: public void Insertar(Miembros Obj)
+    parameters:
+    - id: Obj
+      type: Gimnasio.Entidades.Miembros
+      description: Instancia de <xref href="Gimnasio.Entidades.Miembros" data-throw-if-not-resolved="false"></xref> a insertar.
+    content.vb: Public Sub Insertar(Obj As Miembros)
+  overload: Gimnasio.Datos.DMiembros.Insertar*
+- uid: Gimnasio.Datos.DMiembros.Actualizar(Gimnasio.Entidades.Miembros)
+  commentId: M:Gimnasio.Datos.DMiembros.Actualizar(Gimnasio.Entidades.Miembros)
+  id: Actualizar(Gimnasio.Entidades.Miembros)
+  parent: Gimnasio.Datos.DMiembros
+  langs:
+  - csharp
+  - vb
+  name: Actualizar(Miembros)
+  nameWithType: DMiembros.Actualizar(Miembros)
+  fullName: Gimnasio.Datos.DMiembros.Actualizar(Gimnasio.Entidades.Miembros)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Datos/DMiembros.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Actualizar
+    path: ../Gimnasio.Datos/DMiembros.vb
+    startLine: 62
+  assemblies:
+  - Gimnasio.Datos
+  namespace: Gimnasio.Datos
+  summary: >-
+    Recibe una instancia de Miembros y ejecuta una sentencia SQL (UPDATE) que actualiza los campos de un registro de miembro existente que 
+
+    corresponde al id de la instancia.
+  example: []
+  syntax:
+    content: public void Actualizar(Miembros Obj)
+    parameters:
+    - id: Obj
+      type: Gimnasio.Entidades.Miembros
+      description: Instancia de <xref href="Gimnasio.Entidades.Miembros" data-throw-if-not-resolved="false"></xref> con los datos actualizados.
+    content.vb: Public Sub Actualizar(Obj As Miembros)
+  overload: Gimnasio.Datos.DMiembros.Actualizar*
+- uid: Gimnasio.Datos.DMiembros.Eliminar(System.UInt32)
+  commentId: M:Gimnasio.Datos.DMiembros.Eliminar(System.UInt32)
+  id: Eliminar(System.UInt32)
+  parent: Gimnasio.Datos.DMiembros
+  langs:
+  - csharp
+  - vb
+  name: Eliminar(uint)
+  nameWithType: DMiembros.Eliminar(uint)
+  fullName: Gimnasio.Datos.DMiembros.Eliminar(uint)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Datos/DMiembros.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Eliminar
+    path: ../Gimnasio.Datos/DMiembros.vb
+    startLine: 86
+  assemblies:
+  - Gimnasio.Datos
+  namespace: Gimnasio.Datos
+  summary: >-
+    Recibe el id del miembro a eliminar y ejecuta una sentencia SQL (DELETE) que elimina el registro de miembro correspondiente.
+
+    Si el miembro tiene membresías asociadas y existe una restricción de clave foránea, captura la excepción y lanza un mensaje específico.
+  example: []
+  syntax:
+    content: public void Eliminar(uint id)
+    parameters:
+    - id: id
+      type: System.UInt32
+      description: Identificador único del miembro a eliminar.
+    content.vb: Public Sub Eliminar(id As UInteger)
+  overload: Gimnasio.Datos.DMiembros.Eliminar*
+  nameWithType.vb: DMiembros.Eliminar(UInteger)
+  fullName.vb: Gimnasio.Datos.DMiembros.Eliminar(UInteger)
+  name.vb: Eliminar(UInteger)
+- uid: Gimnasio.Datos.DMiembros.ListarPorNombre(System.String)
+  commentId: M:Gimnasio.Datos.DMiembros.ListarPorNombre(System.String)
+  id: ListarPorNombre(System.String)
+  parent: Gimnasio.Datos.DMiembros
+  langs:
+  - csharp
+  - vb
+  name: ListarPorNombre(string)
+  nameWithType: DMiembros.ListarPorNombre(string)
+  fullName: Gimnasio.Datos.DMiembros.ListarPorNombre(string)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Datos/DMiembros.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: ListarPorNombre
+    path: ../Gimnasio.Datos/DMiembros.vb
+    startLine: 111
+  assemblies:
+  - Gimnasio.Datos
+  namespace: Gimnasio.Datos
+  summary: >-
+    Recibe el nombre o parte del nombre/apellido del miembro a buscar y ejecuta una sentencia SQL (SELECT) que busca coincidencias 
+
+    en la base de datos. Utiliza la cláusula LIKE para permitir coincidencias parciales. 
+
+    Los resultados se ordenan por la fecha de última modificación.
+  example: []
+  syntax:
+    content: public DataTable ListarPorNombre(string nombre)
+    parameters:
+    - id: nombre
+      type: System.String
+      description: Nombre o parte del nombre/apellido del miembro a buscar.
+    return:
+      type: System.Data.DataTable
+      description: DataTable con los resultados de la búsqueda.
+    content.vb: Public Function ListarPorNombre(nombre As String) As DataTable
+  overload: Gimnasio.Datos.DMiembros.ListarPorNombre*
+  nameWithType.vb: DMiembros.ListarPorNombre(String)
+  fullName.vb: Gimnasio.Datos.DMiembros.ListarPorNombre(String)
+  name.vb: ListarPorNombre(String)
+- uid: Gimnasio.Datos.DMiembros.ObtenerPorDni(System.String)
+  commentId: M:Gimnasio.Datos.DMiembros.ObtenerPorDni(System.String)
+  id: ObtenerPorDni(System.String)
+  parent: Gimnasio.Datos.DMiembros
+  langs:
+  - csharp
+  - vb
+  name: ObtenerPorDni(string)
+  nameWithType: DMiembros.ObtenerPorDni(string)
+  fullName: Gimnasio.Datos.DMiembros.ObtenerPorDni(string)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Datos/DMiembros.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: ObtenerPorDni
+    path: ../Gimnasio.Datos/DMiembros.vb
+    startLine: 130
+  assemblies:
+  - Gimnasio.Datos
+  namespace: Gimnasio.Datos
+  summary: Recibe el Dni del miembro a buscar y ejecuta una sentencia SQL (SELECT) que busca coincidencias exactas en la base de datos.
+  example: []
+  syntax:
+    content: public DataTable ObtenerPorDni(string dni)
+    parameters:
+    - id: dni
+      type: System.String
+      description: DNI del miembro a buscar.
+    return:
+      type: System.Data.DataTable
+      description: DataTable con los datos del miembro encontrado.
+    content.vb: Public Function ObtenerPorDni(dni As String) As DataTable
+  overload: Gimnasio.Datos.DMiembros.ObtenerPorDni*
+  nameWithType.vb: DMiembros.ObtenerPorDni(String)
+  fullName.vb: Gimnasio.Datos.DMiembros.ObtenerPorDni(String)
+  name.vb: ObtenerPorDni(String)
+- uid: Gimnasio.Datos.DMiembros.ListarPorDni(System.String)
+  commentId: M:Gimnasio.Datos.DMiembros.ListarPorDni(System.String)
+  id: ListarPorDni(System.String)
+  parent: Gimnasio.Datos.DMiembros
+  langs:
+  - csharp
+  - vb
+  name: ListarPorDni(string)
+  nameWithType: DMiembros.ListarPorDni(string)
+  fullName: Gimnasio.Datos.DMiembros.ListarPorDni(string)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Datos/DMiembros.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: ListarPorDni
+    path: ../Gimnasio.Datos/DMiembros.vb
+    startLine: 150
+  assemblies:
+  - Gimnasio.Datos
+  namespace: Gimnasio.Datos
+  summary: >-
+    Recibe el Dni o parte del Dni del miembro a buscar y ejecuta una sentencia SQL (SELECT) que busca coincidencias en la base de datos.
+
+    Utiliza la cláusula LIKE para permitir coincidencias parciales. 
+
+    Los resultados se ordenan por la fecha de última modificación.
+  example: []
+  syntax:
+    content: public DataTable ListarPorDni(string dni)
+    parameters:
+    - id: dni
+      type: System.String
+      description: DNI o parte del DNI del miembro a buscar.
+    return:
+      type: System.Data.DataTable
+      description: DataTable con los resultados de la búsqueda.
+    content.vb: Public Function ListarPorDni(dni As String) As DataTable
+  overload: Gimnasio.Datos.DMiembros.ListarPorDni*
+  nameWithType.vb: DMiembros.ListarPorDni(String)
+  fullName.vb: Gimnasio.Datos.DMiembros.ListarPorDni(String)
+  name.vb: ListarPorDni(String)
+references:
+- uid: Gimnasio.Datos.ConexionBase
+  commentId: T:Gimnasio.Datos.ConexionBase
+  parent: Gimnasio.Datos
+  href: Gimnasio.Datos.ConexionBase.html
+  name: ConexionBase
+  nameWithType: ConexionBase
+  fullName: Gimnasio.Datos.ConexionBase
+- uid: Gimnasio.Entidades.Miembros
+  commentId: T:Gimnasio.Entidades.Miembros
+  parent: Gimnasio.Entidades
+  href: Gimnasio.Entidades.Miembros.html
+  name: Miembros
+  nameWithType: Miembros
+  fullName: Gimnasio.Entidades.Miembros
+- uid: Gimnasio.Datos
+  commentId: N:Gimnasio.Datos
+  isExternal: true
+  href: Gimnasio.html
+  name: Gimnasio.Datos
+  nameWithType: Gimnasio.Datos
+  fullName: Gimnasio.Datos
+  spec.csharp:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Datos
+    name: Datos
+    href: Gimnasio.Datos.html
+  spec.vb:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Datos
+    name: Datos
+    href: Gimnasio.Datos.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Gimnasio.Datos.ConexionBase.connectionString
+  commentId: F:Gimnasio.Datos.ConexionBase.connectionString
+  parent: Gimnasio.Datos.ConexionBase
+  href: Gimnasio.Datos.ConexionBase.html#Gimnasio_Datos_ConexionBase_connectionString
+  name: connectionString
+  nameWithType: ConexionBase.connectionString
+  fullName: Gimnasio.Datos.ConexionBase.connectionString
+- uid: Gimnasio.Datos.ConexionBase.ExecuteQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:Gimnasio.Datos.ConexionBase.ExecuteQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: Gimnasio.Datos.ConexionBase
+  isExternal: true
+  href: Gimnasio.Datos.ConexionBase.html#Gimnasio_Datos_ConexionBase_ExecuteQuery_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__
+  name: ExecuteQuery(string, Dictionary<string, object>)
+  nameWithType: ConexionBase.ExecuteQuery(string, Dictionary<string, object>)
+  fullName: Gimnasio.Datos.ConexionBase.ExecuteQuery(string, System.Collections.Generic.Dictionary<string, object>)
+  nameWithType.vb: ConexionBase.ExecuteQuery(String, Dictionary(Of String, Object))
+  fullName.vb: Gimnasio.Datos.ConexionBase.ExecuteQuery(String, System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: ExecuteQuery(String, Dictionary(Of String, Object))
+  spec.csharp:
+  - uid: Gimnasio.Datos.ConexionBase.ExecuteQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: ExecuteQuery
+    href: Gimnasio.Datos.ConexionBase.html#Gimnasio_Datos_ConexionBase_ExecuteQuery_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.ConexionBase.ExecuteQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: ExecuteQuery
+    href: Gimnasio.Datos.ConexionBase.html#Gimnasio_Datos_ConexionBase_ExecuteQuery_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: Gimnasio.Datos.ConexionBase.ExecuteNonQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:Gimnasio.Datos.ConexionBase.ExecuteNonQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: Gimnasio.Datos.ConexionBase
+  isExternal: true
+  href: Gimnasio.Datos.ConexionBase.html#Gimnasio_Datos_ConexionBase_ExecuteNonQuery_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__
+  name: ExecuteNonQuery(string, Dictionary<string, object>)
+  nameWithType: ConexionBase.ExecuteNonQuery(string, Dictionary<string, object>)
+  fullName: Gimnasio.Datos.ConexionBase.ExecuteNonQuery(string, System.Collections.Generic.Dictionary<string, object>)
+  nameWithType.vb: ConexionBase.ExecuteNonQuery(String, Dictionary(Of String, Object))
+  fullName.vb: Gimnasio.Datos.ConexionBase.ExecuteNonQuery(String, System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: ExecuteNonQuery(String, Dictionary(Of String, Object))
+  spec.csharp:
+  - uid: Gimnasio.Datos.ConexionBase.ExecuteNonQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: ExecuteNonQuery
+    href: Gimnasio.Datos.ConexionBase.html#Gimnasio_Datos_ConexionBase_ExecuteNonQuery_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.ConexionBase.ExecuteNonQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: ExecuteNonQuery
+    href: Gimnasio.Datos.ConexionBase.html#Gimnasio_Datos_ConexionBase_ExecuteNonQuery_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Finalize
+  commentId: M:System.Object.Finalize
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.finalize
+  name: Finalize()
+  nameWithType: object.Finalize()
+  fullName: object.Finalize()
+  nameWithType.vb: Object.Finalize()
+  fullName.vb: Object.Finalize()
+  spec.csharp:
+  - uid: System.Object.Finalize
+    name: Finalize
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.finalize
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.Finalize
+    name: Finalize
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.finalize
+  - name: (
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Gimnasio.Entidades
+  commentId: N:Gimnasio.Entidades
+  isExternal: true
+  href: Gimnasio.html
+  name: Gimnasio.Entidades
+  nameWithType: Gimnasio.Entidades
+  fullName: Gimnasio.Entidades
+  spec.csharp:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Entidades
+    name: Entidades
+    href: Gimnasio.Entidades.html
+  spec.vb:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Entidades
+    name: Entidades
+    href: Gimnasio.Entidades.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Gimnasio.Datos.DMiembros.Listar*
+  commentId: Overload:Gimnasio.Datos.DMiembros.Listar
+  href: Gimnasio.Datos.DMiembros.html#Gimnasio_Datos_DMiembros_Listar
+  name: Listar
+  nameWithType: DMiembros.Listar
+  fullName: Gimnasio.Datos.DMiembros.Listar
+- uid: System.Data.DataTable
+  commentId: T:System.Data.DataTable
+  parent: System.Data
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.data.datatable
+  name: DataTable
+  nameWithType: DataTable
+  fullName: System.Data.DataTable
+- uid: System.Data
+  commentId: N:System.Data
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Data
+  nameWithType: System.Data
+  fullName: System.Data
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Data
+    name: Data
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.data
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Data
+    name: Data
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.data
+- uid: Gimnasio.Datos.DMiembros.Insertar*
+  commentId: Overload:Gimnasio.Datos.DMiembros.Insertar
+  href: Gimnasio.Datos.DMiembros.html#Gimnasio_Datos_DMiembros_Insertar_Gimnasio_Entidades_Miembros_
+  name: Insertar
+  nameWithType: DMiembros.Insertar
+  fullName: Gimnasio.Datos.DMiembros.Insertar
+- uid: Gimnasio.Datos.DMiembros.Actualizar*
+  commentId: Overload:Gimnasio.Datos.DMiembros.Actualizar
+  href: Gimnasio.Datos.DMiembros.html#Gimnasio_Datos_DMiembros_Actualizar_Gimnasio_Entidades_Miembros_
+  name: Actualizar
+  nameWithType: DMiembros.Actualizar
+  fullName: Gimnasio.Datos.DMiembros.Actualizar
+- uid: Gimnasio.Datos.DMiembros.Eliminar*
+  commentId: Overload:Gimnasio.Datos.DMiembros.Eliminar
+  href: Gimnasio.Datos.DMiembros.html#Gimnasio_Datos_DMiembros_Eliminar_System_UInt32_
+  name: Eliminar
+  nameWithType: DMiembros.Eliminar
+  fullName: Gimnasio.Datos.DMiembros.Eliminar
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: Gimnasio.Datos.DMiembros.ListarPorNombre*
+  commentId: Overload:Gimnasio.Datos.DMiembros.ListarPorNombre
+  href: Gimnasio.Datos.DMiembros.html#Gimnasio_Datos_DMiembros_ListarPorNombre_System_String_
+  name: ListarPorNombre
+  nameWithType: DMiembros.ListarPorNombre
+  fullName: Gimnasio.Datos.DMiembros.ListarPorNombre
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Gimnasio.Datos.DMiembros.ObtenerPorDni*
+  commentId: Overload:Gimnasio.Datos.DMiembros.ObtenerPorDni
+  href: Gimnasio.Datos.DMiembros.html#Gimnasio_Datos_DMiembros_ObtenerPorDni_System_String_
+  name: ObtenerPorDni
+  nameWithType: DMiembros.ObtenerPorDni
+  fullName: Gimnasio.Datos.DMiembros.ObtenerPorDni
+- uid: Gimnasio.Datos.DMiembros.ListarPorDni*
+  commentId: Overload:Gimnasio.Datos.DMiembros.ListarPorDni
+  href: Gimnasio.Datos.DMiembros.html#Gimnasio_Datos_DMiembros_ListarPorDni_System_String_
+  name: ListarPorDni
+  nameWithType: DMiembros.ListarPorDni
+  fullName: Gimnasio.Datos.DMiembros.ListarPorDni

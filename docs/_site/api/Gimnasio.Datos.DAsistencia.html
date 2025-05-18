@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DAsistencia | Goatym </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DAsistencia | Goatym ">
+      
+      <meta name="description" content="Clase de acceso a datos para la gesti&#243;n de asistencias. Hereda de  y utiliza la entidad . Proporciona m&#233;todos CRUD y de b&#250;squeda para la tabla asistencia y la vista vista_asistencia. La vista consolida la informaci&#243;n relevante de los registros de asistencias, permitiendo consultar en una sola consulta datos de la asistencia, el miembro, la membres&#237;a y el plan asociado. Realiza LEFT JOIN entre la asistencia y las dem&#225;s tablas, permitiendo obtener la informaci&#243;n de asistencia incluso si los datos de miembro, membres&#237;a o plan no est&#225;n presentes. VIEW `vista_asistencia` AS    SELECT         `a`.`id_asistencia` AS `id_asistencia`,        `a`.`id_miembro` AS `id_miembro`,        `a`.`id_membresia_valida` AS `id_membresia`,        `m`.`dni` AS `dni_miembro`,        `m`.`nombre` AS `nombre_miembro`,        `m`.`apellido` AS `apellido_miembro`,       `a`.`fecha_hora_checkin` AS `fecha_ingreso`,        `a`.`resultado` AS `resultado`,       `pm`.`nombre_plan` AS `nombre_plan_membresia`    FROM       (((`asistencia` `a`       LEFT JOIN `miembros` `m` ON ((`a`.`id_miembro` = `m`.`id_miembro`)))       LEFT JOIN `membresias_miembro` `mm` ON ((`a`.`id_membresia_valida` = `mm`.`id_membresia`)))       LEFT JOIN `planes_membresia` `pm` ON ((`mm`.`id_plan` = `pm`.`id_plan`)))    ORDER BY `a`.`fecha_hora_checkin` DESC Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo">
+      <link rel="icon" href="../images/logo.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Carlovich01/gimnasio3/new/main/apiSpec/new?filename=Gimnasio_Datos_DAsistencia.md&amp;value=---%0Auid%3A%20Gimnasio.Datos.DAsistencia%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Goatym">
+            Goatym
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gimnasio.Datos.DAsistencia">
+
+
+
+  <h1 id="Gimnasio_Datos_DAsistencia" data-uid="Gimnasio.Datos.DAsistencia" class="text-break">
+Class DAsistencia  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DAsistencia.vb/#L36"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gimnasio.html">Gimnasio</a>.<a class="xref" href="Gimnasio.Datos.html">Datos</a></dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Clase de acceso a datos para la gestión de asistencias.
+Hereda de <a class="xref" href="Gimnasio.Datos.ConexionBase.html">ConexionBase</a> y utiliza la entidad <a class="xref" href="Gimnasio.Entidades.Asistencia.html">Asistencia</a>.
+Proporciona métodos CRUD y de búsqueda para la tabla asistencia y la vista vista_asistencia.</p>
+<p>La vista consolida la información relevante de los registros de asistencias,
+permitiendo consultar en una sola consulta datos de la asistencia, el miembro, la membresía y el plan asociado.
+Realiza LEFT JOIN entre la asistencia y las demás tablas, permitiendo obtener la información de asistencia
+incluso si los datos de miembro, membresía o plan no están presentes.</p>
+<pre><code class="lang-csharp">VIEW `vista_asistencia` AS
+   SELECT 
+       `a`.`id_asistencia` AS `id_asistencia`,
+       `a`.`id_miembro` AS `id_miembro`,
+       `a`.`id_membresia_valida` AS `id_membresia`,
+       `m`.`dni` AS `dni_miembro`,
+       `m`.`nombre` AS `nombre_miembro`,
+       `m`.`apellido` AS `apellido_miembro`,
+      `a`.`fecha_hora_checkin` AS `fecha_ingreso`,
+       `a`.`resultado` AS `resultado`,
+      `pm`.`nombre_plan` AS `nombre_plan_membresia`
+   FROM
+      (((`asistencia` `a`
+      LEFT JOIN `miembros` `m` ON ((`a`.`id_miembro` = `m`.`id_miembro`)))
+      LEFT JOIN `membresias_miembro` `mm` ON ((`a`.`id_membresia_valida` = `mm`.`id_membresia`)))
+      LEFT JOIN `planes_membresia` `pm` ON ((`mm`.`id_plan` = `pm`.`id_plan`)))
+   ORDER BY `a`.`fecha_hora_checkin` DESC</code></pre>
+<p>Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DAsistencia : ConexionBase</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Gimnasio.Datos.ConexionBase.html">ConexionBase</a></div>
+      <div><span class="xref">DAsistencia</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gimnasio_Datos_DAsistencia_Eliminar_" data-uid="Gimnasio.Datos.DAsistencia.Eliminar*"></a>
+
+  <h3 id="Gimnasio_Datos_DAsistencia_Eliminar_System_UInt32_" data-uid="Gimnasio.Datos.DAsistencia.Eliminar(System.UInt32)">
+  Eliminar(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DAsistencia.vb/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Recibe el id de la asistencia a eliminar y ejecuta una sentencia SQL (DELETE) que elimina el registro de asistencia correspondiente.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Eliminar(uint id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Id único de la asistencia a eliminar.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Datos_DAsistencia_Listar_" data-uid="Gimnasio.Datos.DAsistencia.Listar*"></a>
+
+  <h3 id="Gimnasio_Datos_DAsistencia_Listar" data-uid="Gimnasio.Datos.DAsistencia.Listar">
+  Listar()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DAsistencia.vb/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Realiza una consulta SQL (SELECT) que obtiene todos los registros de la vista_asistencia.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable Listar()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los datos de las asistencias.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Datos_DAsistencia_ListarPorDNI_" data-uid="Gimnasio.Datos.DAsistencia.ListarPorDNI*"></a>
+
+  <h3 id="Gimnasio_Datos_DAsistencia_ListarPorDNI_System_String_" data-uid="Gimnasio.Datos.DAsistencia.ListarPorDNI(System.String)">
+  ListarPorDNI(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DAsistencia.vb/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Realiza una consulta SQL (SELECT) sobre la vista_asistencia para obtener los registros de asistencias
+cuyo DNI del miembro coincida parcial o totalmente con el valor proporcionado.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable ListarPorDNI(string dni)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dni</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>DNI o parte del DNI del miembro a buscar.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los resultados de la búsqueda.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Datos_DAsistencia_ListarPorFecha_" data-uid="Gimnasio.Datos.DAsistencia.ListarPorFecha*"></a>
+
+  <h3 id="Gimnasio_Datos_DAsistencia_ListarPorFecha_System_DateTime_System_DateTime_" data-uid="Gimnasio.Datos.DAsistencia.ListarPorFecha(System.DateTime,System.DateTime)">
+  ListarPorFecha(DateTime, DateTime)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DAsistencia.vb/#L118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Realiza una consulta SQL (SELECT) sobre la vista_asistencia para obtener los registros de asistencias cuya fecha de ingreso se encuentre
+dentro del rango proporcionado.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable ListarPorFecha(DateTime fechaInicio, DateTime fechaFin)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fechaInicio</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>Fecha de inicio del rango.</p>
+</dd>
+    <dt><code>fechaFin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>Fecha de fin del rango.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los resultados de la búsqueda.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Datos_DAsistencia_RegistrarAsistencia_" data-uid="Gimnasio.Datos.DAsistencia.RegistrarAsistencia*"></a>
+
+  <h3 id="Gimnasio_Datos_DAsistencia_RegistrarAsistencia_Gimnasio_Entidades_Asistencia_" data-uid="Gimnasio.Datos.DAsistencia.RegistrarAsistencia(Gimnasio.Entidades.Asistencia)">
+  RegistrarAsistencia(Asistencia)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DAsistencia.vb/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Recibe una instancia de Asistencia y ejecuta una sentencia SQL (INSERT) que inserta un nuevo registro de asistencia con los datos proporcionados.
+Si el id_miembro o id_membresia_valida son nulos, se insertará NULL en la base de datos</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegistrarAsistencia(Asistencia asistencia)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>asistencia</code> <a class="xref" href="Gimnasio.Entidades.Asistencia.html">Asistencia</a></dt>
+    <dd><p>Instancia de Asistencia con los datos a insertar.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DAsistencia.vb/#L36" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Desarrollado por Progoat
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

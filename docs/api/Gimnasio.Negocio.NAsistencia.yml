@@ -1,0 +1,953 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gimnasio.Negocio.NAsistencia
+  commentId: T:Gimnasio.Negocio.NAsistencia
+  id: NAsistencia
+  parent: Gimnasio.Negocio
+  children:
+  - Gimnasio.Negocio.NAsistencia.Eliminar(System.UInt32)
+  - Gimnasio.Negocio.NAsistencia.Listar
+  - Gimnasio.Negocio.NAsistencia.ListarPorDNI(System.String)
+  - Gimnasio.Negocio.NAsistencia.ListarPorFecha(System.DateTime,System.DateTime)
+  - Gimnasio.Negocio.NAsistencia.RegistrarIngresoPorDNI(System.String)
+  - Gimnasio.Negocio.NAsistencia.dAsistencias
+  langs:
+  - csharp
+  - vb
+  name: NAsistencia
+  nameWithType: NAsistencia
+  fullName: Gimnasio.Negocio.NAsistencia
+  type: Class
+  source:
+    remote:
+      path: Gimnasio.Negocio/NAsistencia.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: NAsistencia
+    path: ../Gimnasio.Negocio/NAsistencia.vb
+    startLine: 12
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: >-
+    Lógica de negocio para la gestión de asistencias en el sistema de gimnasio.
+
+    Interactúa con la capa de datos <xref href="Gimnasio.Datos.DAsistencia" data-throw-if-not-resolved="false"></xref> y la entidad <xref href="Gimnasio.Entidades.Asistencia" data-throw-if-not-resolved="false"></xref>.
+
+    Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.  
+
+    Si ocurre una excepción, se registra el error utilizando <xref href="Gimnasio.Errores.ManejarErrores.Log(System.String%2cSystem.Exception)" data-throw-if-not-resolved="false"></xref> en un log.txt
+
+    Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).
+  example: []
+  syntax:
+    content: public class NAsistencia
+    content.vb: Public Class NAsistencia
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.Finalize
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Gimnasio.Negocio.NAsistencia.dAsistencias
+  commentId: F:Gimnasio.Negocio.NAsistencia.dAsistencias
+  id: dAsistencias
+  parent: Gimnasio.Negocio.NAsistencia
+  langs:
+  - csharp
+  - vb
+  name: dAsistencias
+  nameWithType: NAsistencia.dAsistencias
+  fullName: Gimnasio.Negocio.NAsistencia.dAsistencias
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Negocio/NAsistencia.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: dAsistencias
+    path: ../Gimnasio.Negocio/NAsistencia.vb
+    startLine: 16
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: Instancia de la capa de datos para asistencias.
+  example: []
+  syntax:
+    content: private DAsistencia dAsistencias
+    return:
+      type: Gimnasio.Datos.DAsistencia
+    content.vb: Private dAsistencias As DAsistencia
+- uid: Gimnasio.Negocio.NAsistencia.Listar
+  commentId: M:Gimnasio.Negocio.NAsistencia.Listar
+  id: Listar
+  parent: Gimnasio.Negocio.NAsistencia
+  langs:
+  - csharp
+  - vb
+  name: Listar()
+  nameWithType: NAsistencia.Listar()
+  fullName: Gimnasio.Negocio.NAsistencia.Listar()
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NAsistencia.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Listar
+    path: ../Gimnasio.Negocio/NAsistencia.vb
+    startLine: 22
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: Obtiene la lista de todas las asistencias registradas.
+  example: []
+  syntax:
+    content: public DataTable Listar()
+    return:
+      type: System.Data.DataTable
+      description: DataTable con los datos de las asistencias.
+    content.vb: Public Function Listar() As DataTable
+  overload: Gimnasio.Negocio.NAsistencia.Listar*
+- uid: Gimnasio.Negocio.NAsistencia.RegistrarIngresoPorDNI(System.String)
+  commentId: M:Gimnasio.Negocio.NAsistencia.RegistrarIngresoPorDNI(System.String)
+  id: RegistrarIngresoPorDNI(System.String)
+  parent: Gimnasio.Negocio.NAsistencia
+  langs:
+  - csharp
+  - vb
+  name: RegistrarIngresoPorDNI(string)
+  nameWithType: NAsistencia.RegistrarIngresoPorDNI(string)
+  fullName: Gimnasio.Negocio.NAsistencia.RegistrarIngresoPorDNI(string)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NAsistencia.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: RegistrarIngresoPorDNI
+    path: ../Gimnasio.Negocio/NAsistencia.vb
+    startLine: 50
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: >-
+    Registra el ingreso de un miembro al gimnasio utilizando su DNI. Proceso:
+
+    1. Busca el miembro por su DNI mediante <xref href="Gimnasio.Negocio.NMiembros.ObtenerPorDni(System.String)" data-throw-if-not-resolved="false"></xref>.
+       - Si no existe, registra la asistencia como "Fallido_DNI_NoEncontrado" y retorna ese resultado.
+    2. Si el miembro existe, obtiene su membresía más reciente con <xref href="Gimnasio.Negocio.NMembresias.ObtenerMembresiaMasReciente(System.UInt32)" data-throw-if-not-resolved="false"></xref>.
+       - Si no tiene membresía, registra la asistencia como "Fallido_No_Hay_Membresia" y retorna ese resultado.
+       - Si la membresía está inactiva, registra la asistencia como "Fallido_Membresia_Inactiva" y retorna ese resultado.
+       - Si la membresía está activa, registra la asistencia como "Exitoso" y retorna ese resultado.
+    3. En todos los casos, se crea un registro de asistencia en la base de datos mediante <xref href="Gimnasio.Datos.DAsistencia.RegistrarAsistencia(Gimnasio.Entidades.Asistencia)" data-throw-if-not-resolved="false"></xref>,
+       incluyendo el resultado, la fecha y hora del intento, el id del miembro (si corresponde) y el id de la membresía válida (si corresponde).
+  example: []
+  syntax:
+    content: public string RegistrarIngresoPorDNI(string dni)
+    parameters:
+    - id: dni
+      type: System.String
+      description: DNI del miembro a registrar el ingreso.
+    return:
+      type: System.String
+      description: "\"Exitoso\" si la membresía está activa,\r\n\"Fallido_Membresia_Inactiva\" si la membresía está inactiva,\r\n\"Fallido_DNI_NoEncontrado\" si el DNI no existe,\r\n\"Fallido_No_Hay_Membresia\" si no tiene membresía,\r\n\"Fallido_Otro\" para otros casos."
+    content.vb: Public Function RegistrarIngresoPorDNI(dni As String) As String
+  overload: Gimnasio.Negocio.NAsistencia.RegistrarIngresoPorDNI*
+  nameWithType.vb: NAsistencia.RegistrarIngresoPorDNI(String)
+  fullName.vb: Gimnasio.Negocio.NAsistencia.RegistrarIngresoPorDNI(String)
+  name.vb: RegistrarIngresoPorDNI(String)
+- uid: Gimnasio.Negocio.NAsistencia.ListarPorDNI(System.String)
+  commentId: M:Gimnasio.Negocio.NAsistencia.ListarPorDNI(System.String)
+  id: ListarPorDNI(System.String)
+  parent: Gimnasio.Negocio.NAsistencia
+  langs:
+  - csharp
+  - vb
+  name: ListarPorDNI(string)
+  nameWithType: NAsistencia.ListarPorDNI(string)
+  fullName: Gimnasio.Negocio.NAsistencia.ListarPorDNI(string)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NAsistencia.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: ListarPorDNI
+    path: ../Gimnasio.Negocio/NAsistencia.vb
+    startLine: 99
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: Busca asistencias por DNI del miembro utilizando la capa de datos <xref href="Gimnasio.Datos.DAsistencia.ListarPorDNI(System.String)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public DataTable ListarPorDNI(string dni)
+    parameters:
+    - id: dni
+      type: System.String
+      description: DNI del miembro a buscar.
+    return:
+      type: System.Data.DataTable
+      description: DataTable con los resultados de la búsqueda.
+    content.vb: Public Function ListarPorDNI(dni As String) As DataTable
+  overload: Gimnasio.Negocio.NAsistencia.ListarPorDNI*
+  nameWithType.vb: NAsistencia.ListarPorDNI(String)
+  fullName.vb: Gimnasio.Negocio.NAsistencia.ListarPorDNI(String)
+  name.vb: ListarPorDNI(String)
+- uid: Gimnasio.Negocio.NAsistencia.ListarPorFecha(System.DateTime,System.DateTime)
+  commentId: M:Gimnasio.Negocio.NAsistencia.ListarPorFecha(System.DateTime,System.DateTime)
+  id: ListarPorFecha(System.DateTime,System.DateTime)
+  parent: Gimnasio.Negocio.NAsistencia
+  langs:
+  - csharp
+  - vb
+  name: ListarPorFecha(DateTime, DateTime)
+  nameWithType: NAsistencia.ListarPorFecha(DateTime, DateTime)
+  fullName: Gimnasio.Negocio.NAsistencia.ListarPorFecha(System.DateTime, System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NAsistencia.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: ListarPorFecha
+    path: ../Gimnasio.Negocio/NAsistencia.vb
+    startLine: 118
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: Busca asistencias por rango de fechas utilizando la capa de datos <xref href="Gimnasio.Datos.DAsistencia.ListarPorFecha(System.DateTime%2cSystem.DateTime)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public DataTable ListarPorFecha(DateTime fechaInicio, DateTime fechaFin)
+    parameters:
+    - id: fechaInicio
+      type: System.DateTime
+      description: Fecha de inicio del rango.
+    - id: fechaFin
+      type: System.DateTime
+      description: Fecha de fin del rango.
+    return:
+      type: System.Data.DataTable
+      description: DataTable con los resultados de la búsqueda.
+    content.vb: Public Function ListarPorFecha(fechaInicio As Date, fechaFin As Date) As DataTable
+  overload: Gimnasio.Negocio.NAsistencia.ListarPorFecha*
+  nameWithType.vb: NAsistencia.ListarPorFecha(Date, Date)
+  fullName.vb: Gimnasio.Negocio.NAsistencia.ListarPorFecha(Date, Date)
+  name.vb: ListarPorFecha(Date, Date)
+- uid: Gimnasio.Negocio.NAsistencia.Eliminar(System.UInt32)
+  commentId: M:Gimnasio.Negocio.NAsistencia.Eliminar(System.UInt32)
+  id: Eliminar(System.UInt32)
+  parent: Gimnasio.Negocio.NAsistencia
+  langs:
+  - csharp
+  - vb
+  name: Eliminar(uint)
+  nameWithType: NAsistencia.Eliminar(uint)
+  fullName: Gimnasio.Negocio.NAsistencia.Eliminar(uint)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NAsistencia.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Eliminar
+    path: ../Gimnasio.Negocio/NAsistencia.vb
+    startLine: 131
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: Elimina un registro de asistencia del sistema según su identificador utilizando la capa de datos <xref href="Gimnasio.Datos.DAsistencia.Eliminar(System.UInt32)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void Eliminar(uint id)
+    parameters:
+    - id: id
+      type: System.UInt32
+      description: Identificador único de la asistencia a eliminar.
+    content.vb: Public Sub Eliminar(id As UInteger)
+  overload: Gimnasio.Negocio.NAsistencia.Eliminar*
+  nameWithType.vb: NAsistencia.Eliminar(UInteger)
+  fullName.vb: Gimnasio.Negocio.NAsistencia.Eliminar(UInteger)
+  name.vb: Eliminar(UInteger)
+references:
+- uid: Gimnasio.Datos.DAsistencia
+  commentId: T:Gimnasio.Datos.DAsistencia
+  parent: Gimnasio.Datos
+  href: Gimnasio.Datos.DAsistencia.html
+  name: DAsistencia
+  nameWithType: DAsistencia
+  fullName: Gimnasio.Datos.DAsistencia
+- uid: Gimnasio.Entidades.Asistencia
+  commentId: T:Gimnasio.Entidades.Asistencia
+  parent: Gimnasio.Entidades
+  href: Gimnasio.Entidades.Asistencia.html
+  name: Asistencia
+  nameWithType: Asistencia
+  fullName: Gimnasio.Entidades.Asistencia
+- uid: Gimnasio.Errores.ManejarErrores.Log(System.String,System.Exception)
+  commentId: M:Gimnasio.Errores.ManejarErrores.Log(System.String,System.Exception)
+  isExternal: true
+  href: Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_
+  name: Log(string, Exception)
+  nameWithType: ManejarErrores.Log(string, Exception)
+  fullName: Gimnasio.Errores.ManejarErrores.Log(string, System.Exception)
+  nameWithType.vb: ManejarErrores.Log(String, Exception)
+  fullName.vb: Gimnasio.Errores.ManejarErrores.Log(String, System.Exception)
+  name.vb: Log(String, Exception)
+  spec.csharp:
+  - uid: Gimnasio.Errores.ManejarErrores.Log(System.String,System.Exception)
+    name: Log
+    href: Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Errores.ManejarErrores.Log(System.String,System.Exception)
+    name: Log
+    href: Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+- uid: Gimnasio.Negocio
+  commentId: N:Gimnasio.Negocio
+  isExternal: true
+  href: Gimnasio.html
+  name: Gimnasio.Negocio
+  nameWithType: Gimnasio.Negocio
+  fullName: Gimnasio.Negocio
+  spec.csharp:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Negocio
+    name: Negocio
+    href: Gimnasio.Negocio.html
+  spec.vb:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Negocio
+    name: Negocio
+    href: Gimnasio.Negocio.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Finalize
+  commentId: M:System.Object.Finalize
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.finalize
+  name: Finalize()
+  nameWithType: object.Finalize()
+  fullName: object.Finalize()
+  nameWithType.vb: Object.Finalize()
+  fullName.vb: Object.Finalize()
+  spec.csharp:
+  - uid: System.Object.Finalize
+    name: Finalize
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.finalize
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.Finalize
+    name: Finalize
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.finalize
+  - name: (
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Gimnasio.Datos
+  commentId: N:Gimnasio.Datos
+  isExternal: true
+  href: Gimnasio.html
+  name: Gimnasio.Datos
+  nameWithType: Gimnasio.Datos
+  fullName: Gimnasio.Datos
+  spec.csharp:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Datos
+    name: Datos
+    href: Gimnasio.Datos.html
+  spec.vb:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Datos
+    name: Datos
+    href: Gimnasio.Datos.html
+- uid: Gimnasio.Entidades
+  commentId: N:Gimnasio.Entidades
+  isExternal: true
+  href: Gimnasio.html
+  name: Gimnasio.Entidades
+  nameWithType: Gimnasio.Entidades
+  fullName: Gimnasio.Entidades
+  spec.csharp:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Entidades
+    name: Entidades
+    href: Gimnasio.Entidades.html
+  spec.vb:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Entidades
+    name: Entidades
+    href: Gimnasio.Entidades.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Gimnasio.Negocio.NAsistencia.Listar*
+  commentId: Overload:Gimnasio.Negocio.NAsistencia.Listar
+  href: Gimnasio.Negocio.NAsistencia.html#Gimnasio_Negocio_NAsistencia_Listar
+  name: Listar
+  nameWithType: NAsistencia.Listar
+  fullName: Gimnasio.Negocio.NAsistencia.Listar
+- uid: System.Data.DataTable
+  commentId: T:System.Data.DataTable
+  parent: System.Data
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.data.datatable
+  name: DataTable
+  nameWithType: DataTable
+  fullName: System.Data.DataTable
+- uid: System.Data
+  commentId: N:System.Data
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Data
+  nameWithType: System.Data
+  fullName: System.Data
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Data
+    name: Data
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.data
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Data
+    name: Data
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.data
+- uid: Gimnasio.Negocio.NMiembros.ObtenerPorDni(System.String)
+  commentId: M:Gimnasio.Negocio.NMiembros.ObtenerPorDni(System.String)
+  isExternal: true
+  href: Gimnasio.Negocio.NMiembros.html#Gimnasio_Negocio_NMiembros_ObtenerPorDni_System_String_
+  name: ObtenerPorDni(string)
+  nameWithType: NMiembros.ObtenerPorDni(string)
+  fullName: Gimnasio.Negocio.NMiembros.ObtenerPorDni(string)
+  nameWithType.vb: NMiembros.ObtenerPorDni(String)
+  fullName.vb: Gimnasio.Negocio.NMiembros.ObtenerPorDni(String)
+  name.vb: ObtenerPorDni(String)
+  spec.csharp:
+  - uid: Gimnasio.Negocio.NMiembros.ObtenerPorDni(System.String)
+    name: ObtenerPorDni
+    href: Gimnasio.Negocio.NMiembros.html#Gimnasio_Negocio_NMiembros_ObtenerPorDni_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Negocio.NMiembros.ObtenerPorDni(System.String)
+    name: ObtenerPorDni
+    href: Gimnasio.Negocio.NMiembros.html#Gimnasio_Negocio_NMiembros_ObtenerPorDni_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Gimnasio.Negocio.NMembresias.ObtenerMembresiaMasReciente(System.UInt32)
+  commentId: M:Gimnasio.Negocio.NMembresias.ObtenerMembresiaMasReciente(System.UInt32)
+  isExternal: true
+  href: Gimnasio.Negocio.NMembresias.html#Gimnasio_Negocio_NMembresias_ObtenerMembresiaMasReciente_System_UInt32_
+  name: ObtenerMembresiaMasReciente(uint)
+  nameWithType: NMembresias.ObtenerMembresiaMasReciente(uint)
+  fullName: Gimnasio.Negocio.NMembresias.ObtenerMembresiaMasReciente(uint)
+  nameWithType.vb: NMembresias.ObtenerMembresiaMasReciente(UInteger)
+  fullName.vb: Gimnasio.Negocio.NMembresias.ObtenerMembresiaMasReciente(UInteger)
+  name.vb: ObtenerMembresiaMasReciente(UInteger)
+  spec.csharp:
+  - uid: Gimnasio.Negocio.NMembresias.ObtenerMembresiaMasReciente(System.UInt32)
+    name: ObtenerMembresiaMasReciente
+    href: Gimnasio.Negocio.NMembresias.html#Gimnasio_Negocio_NMembresias_ObtenerMembresiaMasReciente_System_UInt32_
+  - name: (
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Negocio.NMembresias.ObtenerMembresiaMasReciente(System.UInt32)
+    name: ObtenerMembresiaMasReciente
+    href: Gimnasio.Negocio.NMembresias.html#Gimnasio_Negocio_NMembresias_ObtenerMembresiaMasReciente_System_UInt32_
+  - name: (
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+- uid: Gimnasio.Datos.DAsistencia.RegistrarAsistencia(Gimnasio.Entidades.Asistencia)
+  commentId: M:Gimnasio.Datos.DAsistencia.RegistrarAsistencia(Gimnasio.Entidades.Asistencia)
+  href: Gimnasio.Datos.DAsistencia.html#Gimnasio_Datos_DAsistencia_RegistrarAsistencia_Gimnasio_Entidades_Asistencia_
+  name: RegistrarAsistencia(Asistencia)
+  nameWithType: DAsistencia.RegistrarAsistencia(Asistencia)
+  fullName: Gimnasio.Datos.DAsistencia.RegistrarAsistencia(Gimnasio.Entidades.Asistencia)
+  spec.csharp:
+  - uid: Gimnasio.Datos.DAsistencia.RegistrarAsistencia(Gimnasio.Entidades.Asistencia)
+    name: RegistrarAsistencia
+    href: Gimnasio.Datos.DAsistencia.html#Gimnasio_Datos_DAsistencia_RegistrarAsistencia_Gimnasio_Entidades_Asistencia_
+  - name: (
+  - uid: Gimnasio.Entidades.Asistencia
+    name: Asistencia
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DAsistencia.RegistrarAsistencia(Gimnasio.Entidades.Asistencia)
+    name: RegistrarAsistencia
+    href: Gimnasio.Datos.DAsistencia.html#Gimnasio_Datos_DAsistencia_RegistrarAsistencia_Gimnasio_Entidades_Asistencia_
+  - name: (
+  - uid: Gimnasio.Entidades.Asistencia
+    name: Asistencia
+  - name: )
+- uid: Gimnasio.Negocio.NAsistencia.RegistrarIngresoPorDNI*
+  commentId: Overload:Gimnasio.Negocio.NAsistencia.RegistrarIngresoPorDNI
+  href: Gimnasio.Negocio.NAsistencia.html#Gimnasio_Negocio_NAsistencia_RegistrarIngresoPorDNI_System_String_
+  name: RegistrarIngresoPorDNI
+  nameWithType: NAsistencia.RegistrarIngresoPorDNI
+  fullName: Gimnasio.Negocio.NAsistencia.RegistrarIngresoPorDNI
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Gimnasio.Datos.DAsistencia.ListarPorDNI(System.String)
+  commentId: M:Gimnasio.Datos.DAsistencia.ListarPorDNI(System.String)
+  isExternal: true
+  href: Gimnasio.Datos.DAsistencia.html#Gimnasio_Datos_DAsistencia_ListarPorDNI_System_String_
+  name: ListarPorDNI(string)
+  nameWithType: DAsistencia.ListarPorDNI(string)
+  fullName: Gimnasio.Datos.DAsistencia.ListarPorDNI(string)
+  nameWithType.vb: DAsistencia.ListarPorDNI(String)
+  fullName.vb: Gimnasio.Datos.DAsistencia.ListarPorDNI(String)
+  name.vb: ListarPorDNI(String)
+  spec.csharp:
+  - uid: Gimnasio.Datos.DAsistencia.ListarPorDNI(System.String)
+    name: ListarPorDNI
+    href: Gimnasio.Datos.DAsistencia.html#Gimnasio_Datos_DAsistencia_ListarPorDNI_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DAsistencia.ListarPorDNI(System.String)
+    name: ListarPorDNI
+    href: Gimnasio.Datos.DAsistencia.html#Gimnasio_Datos_DAsistencia_ListarPorDNI_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Gimnasio.Negocio.NAsistencia.ListarPorDNI*
+  commentId: Overload:Gimnasio.Negocio.NAsistencia.ListarPorDNI
+  href: Gimnasio.Negocio.NAsistencia.html#Gimnasio_Negocio_NAsistencia_ListarPorDNI_System_String_
+  name: ListarPorDNI
+  nameWithType: NAsistencia.ListarPorDNI
+  fullName: Gimnasio.Negocio.NAsistencia.ListarPorDNI
+- uid: Gimnasio.Datos.DAsistencia.ListarPorFecha(System.DateTime,System.DateTime)
+  commentId: M:Gimnasio.Datos.DAsistencia.ListarPorFecha(System.DateTime,System.DateTime)
+  isExternal: true
+  href: Gimnasio.Datos.DAsistencia.html#Gimnasio_Datos_DAsistencia_ListarPorFecha_System_DateTime_System_DateTime_
+  name: ListarPorFecha(DateTime, DateTime)
+  nameWithType: DAsistencia.ListarPorFecha(DateTime, DateTime)
+  fullName: Gimnasio.Datos.DAsistencia.ListarPorFecha(System.DateTime, System.DateTime)
+  nameWithType.vb: DAsistencia.ListarPorFecha(Date, Date)
+  fullName.vb: Gimnasio.Datos.DAsistencia.ListarPorFecha(Date, Date)
+  name.vb: ListarPorFecha(Date, Date)
+  spec.csharp:
+  - uid: Gimnasio.Datos.DAsistencia.ListarPorFecha(System.DateTime,System.DateTime)
+    name: ListarPorFecha
+    href: Gimnasio.Datos.DAsistencia.html#Gimnasio_Datos_DAsistencia_ListarPorFecha_System_DateTime_System_DateTime_
+  - name: (
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: ','
+  - name: " "
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DAsistencia.ListarPorFecha(System.DateTime,System.DateTime)
+    name: ListarPorFecha
+    href: Gimnasio.Datos.DAsistencia.html#Gimnasio_Datos_DAsistencia_ListarPorFecha_System_DateTime_System_DateTime_
+  - name: (
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: ','
+  - name: " "
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: )
+- uid: Gimnasio.Negocio.NAsistencia.ListarPorFecha*
+  commentId: Overload:Gimnasio.Negocio.NAsistencia.ListarPorFecha
+  href: Gimnasio.Negocio.NAsistencia.html#Gimnasio_Negocio_NAsistencia_ListarPorFecha_System_DateTime_System_DateTime_
+  name: ListarPorFecha
+  nameWithType: NAsistencia.ListarPorFecha
+  fullName: Gimnasio.Negocio.NAsistencia.ListarPorFecha
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: Gimnasio.Datos.DAsistencia.Eliminar(System.UInt32)
+  commentId: M:Gimnasio.Datos.DAsistencia.Eliminar(System.UInt32)
+  isExternal: true
+  href: Gimnasio.Datos.DAsistencia.html#Gimnasio_Datos_DAsistencia_Eliminar_System_UInt32_
+  name: Eliminar(uint)
+  nameWithType: DAsistencia.Eliminar(uint)
+  fullName: Gimnasio.Datos.DAsistencia.Eliminar(uint)
+  nameWithType.vb: DAsistencia.Eliminar(UInteger)
+  fullName.vb: Gimnasio.Datos.DAsistencia.Eliminar(UInteger)
+  name.vb: Eliminar(UInteger)
+  spec.csharp:
+  - uid: Gimnasio.Datos.DAsistencia.Eliminar(System.UInt32)
+    name: Eliminar
+    href: Gimnasio.Datos.DAsistencia.html#Gimnasio_Datos_DAsistencia_Eliminar_System_UInt32_
+  - name: (
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DAsistencia.Eliminar(System.UInt32)
+    name: Eliminar
+    href: Gimnasio.Datos.DAsistencia.html#Gimnasio_Datos_DAsistencia_Eliminar_System_UInt32_
+  - name: (
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+- uid: Gimnasio.Negocio.NAsistencia.Eliminar*
+  commentId: Overload:Gimnasio.Negocio.NAsistencia.Eliminar
+  href: Gimnasio.Negocio.NAsistencia.html#Gimnasio_Negocio_NAsistencia_Eliminar_System_UInt32_
+  name: Eliminar
+  nameWithType: NAsistencia.Eliminar
+  fullName: Gimnasio.Negocio.NAsistencia.Eliminar
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>&#161;BIENVENIDOS A GOATYM!&#128170; | Goatym </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="&#161;BIENVENIDOS A GOATYM!&#128170; | Goatym ">
+      
+      
+      <link rel="icon" href="images/logo.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Carlovich01/gimnasio3/blob/main/docs/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="images/logo.svg" alt="Goatym">
+            Goatym
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="bienvenidos-a-goatym">¡BIENVENIDOS A GOATYM!💪</h1>
+
+<h2 id="equipo-de-desarrollo-progoat">EQUIPO DE DESARROLLO: PROGOAT</h2>
+<ul>
+<li>Casas Alan Fernando - EISI 1244</li>
+<li>Diaz Carlos Emanuel - EISI 1225</li>
+<li>Gianello Ramiro Valentín - EISI 1333</li>
+</ul>
+<h2 id="función-principal">Función Principal</h2>
+<p>Goatym es un sistema diseñado para gestión de miembros, planes de membresía, pagos, control de asistencia y seguimiento de reclamos para un gimnasio. Además, permite la creación de usuarios con dos roles principales: Administrador y Recepcionista.</p>
+<h2 id="funciones-detalladas-del-sistema">Funciones detalladas del sistema</h2>
+<p><img src="images/CasosDeUso.svg" alt="Casos de Uso"></p>
+<h3 id="gestión-de-planes">Gestión de Planes</h3>
+<table>
+<thead>
+<tr>
+<th>Función</th>
+<th>Roles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Visualizar un listado completo de los planes. Este listado incluye: nombre del plan, descripción, duración, precio, fecha de creación y fecha de última modificación. Los planes se ordenan por la fecha de última modificación (más reciente primero) y se muestra la cantidad total de registros.</td>
+<td>Administrador, Recepcionista</td>
+</tr>
+<tr>
+<td>Realizar búsquedas de planes por nombre, precio o duración.</td>
+<td>Administrador, Recepcionista</td>
+</tr>
+<tr>
+<td>Insertar nuevos planes en el sistema, ingresando atributos obligatorios (nombre, duración, precio) y opcionales (descripción).</td>
+<td>Administrador</td>
+</tr>
+<tr>
+<td>Actualizar los datos de planes existentes.</td>
+<td>Administrador</td>
+</tr>
+<tr>
+<td>Eliminar planes. Esta acción no se permitirá si el plan está asociado a alguna membresía activa.</td>
+<td>Administrador</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gestión-de-miembros">Gestión de miembros</h3>
+<table>
+<thead>
+<tr>
+<th>Función</th>
+<th>Roles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Visualizar un listado completo de los miembros. Este listado incluye: DNI, nombre, apellido, género, teléfono, email, fecha de registro y fecha de última modificación. Los miembros se ordenan por la fecha de última modificación (más reciente primero) y se muestra la cantidad total de registros.</td>
+<td>Administrador, Recepcionista</td>
+</tr>
+<tr>
+<td>Realizar búsquedas de miembros por nombre o DNI.</td>
+<td>Administrador, Recepcionista</td>
+</tr>
+<tr>
+<td>Insertar nuevos miembros en el sistema, ingresando datos obligatorios (DNI, nombre y apellido) y opcionales (género, teléfono, email). Posteriormente, es posible asignar y procesar el pago de una membresía para el miembro registrado. Estas operaciones pueden cancelarse en cualquier momento durante el proceso.</td>
+<td>Administrador, Recepcionista</td>
+</tr>
+<tr>
+<td>Modificar los datos de miembros existentes.</td>
+<td>Administrador, Recepcionista</td>
+</tr>
+<tr>
+<td>Eliminar miembros. Esta acción no se permitirá si el miembro tiene una membresía asignada.</td>
+<td>Administrador, Recepcionista</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gestión-de-membresías">Gestión de Membresías</h3>
+<table>
+<thead>
+<tr>
+<th>Funcion</th>
+<th>Roles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Visualizar un listado completo de las membresías. Este listado incluye: DNI, nombre y apellido del miembro; nombre, precio y duración del plan; fecha de inicio, fecha de fin y estado de la membresía; fecha de registro y fecha de última modificación de la membresía. Las membresías se ordenan por la fecha de última modificación (más reciente primero) y se muestra la cantidad total de registros.</td>
+<td>Administrador, Recepcionista</td>
+</tr>
+<tr>
+<td>Realizar búsquedas de membresías por DNI del miembro, tipo de plan, o estado (activas/inactivas).</td>
+<td>Administrador, Recepcionista</td>
+</tr>
+<tr>
+<td>Insertar nuevas membresias al sistema, seleccionando el miembro y plan.</td>
+<td>Administrador, Recepcionista</td>
+</tr>
+<tr>
+<td>Confirmar el pago de una membresía, seleccionando el método de pago (obligatorio) y añadiendo opcionalmente el número de comprobante y notas adicionales. Luego del pago, el sistema cambiara el estado de la membresía a activo y actualizara la fecha de vencimiento. Cuando esta llegue a su fin la membresía volverá a estar inactiva.</td>
+<td>Administrador, Recepcionista</td>
+</tr>
+<tr>
+<td>Actualizar la membresía de un miembro, permitiendo el cambio de plan.</td>
+<td>Administrador,<br>Recepcionista</td>
+</tr>
+<tr>
+<td>Eliminar la membresia de un miembro.</td>
+<td>Administrador</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gestión-de-pagos">Gestión de Pagos</h3>
+<table>
+<thead>
+<tr>
+<th>Función</th>
+<th>Roles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Visualizar un listado de todos los pagos registrados. Este listado detalla: nombre, apellido y DNI del miembro; nombre del plan, monto pagado, método de pago, número de comprobante, fecha de pago y usuario encargado del registro. Los pagos se ordenan por fecha de pago (más reciente primero) y se muestra la cantidad total de registros, así como el total de ingresos.</td>
+<td>Administrador, Recepcionista</td>
+</tr>
+<tr>
+<td>Realizar búsquedas de pagos utilizando filtros por rango de fechas (inicio y fin), DNI del miembro, plan, monto o método de pago.</td>
+<td>Administrador, Recepcionista</td>
+</tr>
+<tr>
+<td>Actualizar los datos de un pago existente.</td>
+<td>Administrador</td>
+</tr>
+<tr>
+<td>Eliminar registros de pagos</td>
+<td>Administrador</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gestión-de-asistencia">Gestión de Asistencia</h3>
+<table>
+<thead>
+<tr>
+<th>Función</th>
+<th>Roles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Registrar la asistencia mediante el ingreso del DNI del miembro. El sistema validará el DNI:<br>- Si el DNI no se encuentra, se informará.<br>- Si el DNI se encuentra pero la membresía está vencida, el ingreso será fallido y no se permitirá el acceso.<br>- Si el DNI se encuentra y la membresía está activa, el ingreso será exitoso y se permitirá el acceso. En los casos de DNI encontrado (ingreso fallido o exitoso), se mostrará un resumen del estado de las membresías del miembro, incluyendo: DNI, apellido, nombre, plan, duración, fecha de inicio, fecha de fin, estado y días restantes.</td>
+<td>Administrador, Recepcionista</td>
+</tr>
+<tr>
+<td>Visualizar el registro de asistencia, que es un listado de todos los intentos de ingreso (exitosos y fallidos). Este listado incluye: DNI, nombre y apellido del miembro, fecha y resultado del ingreso. Los registros se ordenan por fecha de ingreso (más reciente primero) y se muestra la cantidad total de ingresos.</td>
+<td>Administrador, Recepcionista</td>
+</tr>
+<tr>
+<td>Realizar búsquedas en el registro de asistencia por DNI del miembro o por rango de fechas.</td>
+<td>Administrador, Recepcionista</td>
+</tr>
+<tr>
+<td>Eliminar registro de asistencia</td>
+<td>Administrador</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gestión-de-reclamos">Gestión de Reclamos</h3>
+<table>
+<thead>
+<tr>
+<th>Función</th>
+<th>Roles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Visualizar un listado completo de los reclamos. Este listado incluye: tipo de reclamo, descripción, fecha de envío, estado (pendiente/resuelto), respuesta, fecha de respuesta y DNI del miembro (si aplica). Los reclamos se ordenan por fecha de envío (más reciente primero) y se muestra la cantidad total de reclamos.</td>
+<td>Administrador, Recepcionista</td>
+</tr>
+<tr>
+<td>Realizar búsquedas de reclamos filtrando por estado (por defecto &quot;pendiente&quot;, o &quot;resuelto&quot;)</td>
+<td>Administrador, Recepcionista</td>
+</tr>
+<tr>
+<td>Registrar un nuevo reclamo, ingresando tipo y descripción (obligatorios), y DNI del miembro (opcional).</td>
+<td>Administrador, Recepcionista</td>
+</tr>
+<tr>
+<td>Actualizar los datos de un reclamo existente.</td>
+<td>Administrador, Recepcionista</td>
+</tr>
+<tr>
+<td>Eliminar un reclamo</td>
+<td>Administrador</td>
+</tr>
+<tr>
+<td>Cambiar el estado de un reclamo (de pendiente a resuelto, o viceversa).</td>
+<td>Administrador</td>
+</tr>
+<tr>
+<td>Responder un reclamo, detallando la resolución del mismo en el sistema.</td>
+<td>Administrador</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gestión-de-usuarios-administradores-y-recepcionistas">Gestión de Usuarios (Administradores y Recepcionistas)</h3>
+<table>
+<thead>
+<tr>
+<th>Función</th>
+<th>Roles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Iniciar sesión en el sistema utilizando nombre de usuario y contraseña.<br>- Un inicio de sesión exitoso redirige a una pantalla de bienvenida.<br>- <strong>Rol Administrador:</strong> Acceso completo a todas las funcionalidades del sistema. Las pestañas visibles son: Planes, Miembros, Membresías, Pagos, Asistencia, Registro de Asistencias, Reclamos y Usuarios. También se muestra el nombre del usuario logueado con la opción de &quot;Cerrar Sesión&quot;.<br>- <strong>Rol Recepcionista:</strong> Acceso parcial a las funcionalidades, sin acceso a la pestaña &quot;Usuarios&quot;.</td>
+<td>Administrador, Recepcionista</td>
+</tr>
+<tr>
+<td>Cerrar la sesión actual del usuario en el sistema.</td>
+<td>Administrador, Recepcionista</td>
+</tr>
+<tr>
+<td>Visualizar un listado completo de los usuarios del sistema. Este listado incluye: nombre de usuario, hash de contraseña, nombre completo, email, rol (administrador o recepcionista), fecha de creación y fecha de última modificación. Los usuarios se ordenan por la fecha de última modificación (más reciente primero) y se muestra la cantidad total de usuarios.</td>
+<td>Administrador</td>
+</tr>
+<tr>
+<td>Realizar búsquedas de usuarios por nombre</td>
+<td>Administrador</td>
+</tr>
+<tr>
+<td>Insertar nuevos usuarios en el sistema, ingresando datos obligatorios (nombre de usuario, contraseña, nombre completo, rol) y opcionales (email)</td>
+<td>Administrador</td>
+</tr>
+<tr>
+<td>Modificar los datos de usuarios existentes, incluyendo la opción de cambiar la contraseña</td>
+<td>Administrador</td>
+</tr>
+<tr>
+<td>Eliminar usuarios del sistema.</td>
+<td>Administrador</td>
+</tr>
+</tbody>
+</table>
+<h2 id="alcance-y-límites">Alcance y límites</h2>
+<ol>
+<li>Es una aplicación de escritorio diseñada para la gestión simplificada de un gimnasio.</li>
+<li>El acceso de los miembros se registra mediante su DNI; el sistema no está diseñado para lectores de huellas digitales u otros métodos de identificación biométrica.</li>
+<li>El sistema está concebido para operar en un único puesto de check-in y para la gestión de una sola sucursal de gimnasio.</li>
+<li>El sistema registra únicamente los pagos correspondientes a membresías; no incluye una gestión financiera integral (ej. otros ingresos, egresos, contabilidad).</li>
+<li>Los roles definidos en el sistema son: Administrador, Recepcionista y Miembro. No se contemplan roles adicionales como entrenadores u otro personal.</li>
+<li>El sistema no incluye funcionalidades para la gestión de inventario, ni para procesos de compra o venta de productos.</li>
+<li>Las operaciones en los listados (ej. selección para edición o eliminación) se realizan de forma individual (registro por registro); no se admite selección múltiple.</li>
+<li>El sistema no cuenta con la funcionalidad de exportar listados a PDF u otros formatos de archivo.</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/docs/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Desarrollado por Progoat
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

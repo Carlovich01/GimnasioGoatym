@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ConexionBase | Goatym </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ConexionBase | Goatym ">
+      
+      <meta name="description" content="Clase base para la gesti&#243;n de la conexi&#243;n y operaciones con la base de datos MySQL. Proporciona m&#233;todos gen&#233;ricos para ejecutar consultas y comandos SQL. Beneficios de utilizar  y :  Centralizan y simplifican el acceso a datos, evitando duplicaci&#243;n de c&#243;digo. Permiten el uso de par&#225;metros, ayudando a prevenir inyecciones SQL. Manejan autom&#225;ticamente la apertura y cierre de conexiones. Facilitan el mantenimiento y la escalabilidad del acceso a la base de datos.  Todas las operaciones de acceso a datos est&#225;n envueltas en bloques Try...Catch.  Si ocurre una excepci&#243;n durante la ejecuci&#243;n de una consulta o comando SQL, el error se registra en el archivo de log mediante . Tras registrar el error, la excepci&#243;n se propaga nuevamente mediante Throw New Exception(ex.Message).">
+      <link rel="icon" href="../images/logo.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Carlovich01/gimnasio3/new/main/apiSpec/new?filename=Gimnasio_Datos_ConexionBase.md&amp;value=---%0Auid%3A%20Gimnasio.Datos.ConexionBase%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Goatym">
+            Goatym
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gimnasio.Datos.ConexionBase">
+
+
+
+  <h1 id="Gimnasio_Datos_ConexionBase" data-uid="Gimnasio.Datos.ConexionBase" class="text-break">
+Class ConexionBase  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/Conexion.vb/#L19"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gimnasio.html">Gimnasio</a>.<a class="xref" href="Gimnasio.Datos.html">Datos</a></dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Clase base para la gestión de la conexión y operaciones con la base de datos MySQL.
+Proporciona métodos genéricos para ejecutar consultas y comandos SQL.</p>
+<p>Beneficios de utilizar <a class="xref" href="Gimnasio.Datos.ConexionBase.html#Gimnasio_Datos_ConexionBase_ExecuteQuery_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__">ExecuteQuery(string, Dictionary&lt;string, object&gt;)</a> y <a class="xref" href="Gimnasio.Datos.ConexionBase.html#Gimnasio_Datos_ConexionBase_ExecuteNonQuery_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__">ExecuteNonQuery(string, Dictionary&lt;string, object&gt;)</a>:</p>
+<ul>
+<li>Centralizan y simplifican el acceso a datos, evitando duplicación de código.</li>
+<li>Permiten el uso de parámetros, ayudando a prevenir inyecciones SQL.</li>
+<li>Manejan automáticamente la apertura y cierre de conexiones.</li>
+<li>Facilitan el mantenimiento y la escalabilidad del acceso a la base de datos.</li>
+</ul>
+<p>Todas las operaciones de acceso a datos están envueltas en bloques Try...Catch.</p>
+<ul>
+<li>Si ocurre una excepción durante la ejecución de una consulta o comando SQL, el error se registra en el archivo de log
+mediante <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_">Log(string, Exception)</a>.</li>
+<li>Tras registrar el error, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).</li>
+</ul>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ConexionBase</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ConexionBase</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Gimnasio.Datos.DAsistencia.html">DAsistencia</a></div>
+      <div><a class="xref" href="Gimnasio.Datos.DMembresias.html">DMembresias</a></div>
+      <div><a class="xref" href="Gimnasio.Datos.DMiembros.html">DMiembros</a></div>
+      <div><a class="xref" href="Gimnasio.Datos.DPagos.html">DPagos</a></div>
+      <div><a class="xref" href="Gimnasio.Datos.DPlanes.html">DPlanes</a></div>
+      <div><a class="xref" href="Gimnasio.Datos.DReclamos.html">DReclamos</a></div>
+      <div><a class="xref" href="Gimnasio.Datos.DUsuarios.html">DUsuarios</a></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Gimnasio_Datos_ConexionBase_connectionString" data-uid="Gimnasio.Datos.ConexionBase.connectionString">
+  connectionString
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/Conexion.vb/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cadena de conexión a la base de datos MySQL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private string connectionString</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gimnasio_Datos_ConexionBase_ExecuteNonQuery_" data-uid="Gimnasio.Datos.ConexionBase.ExecuteNonQuery*"></a>
+
+  <h3 id="Gimnasio_Datos_ConexionBase_ExecuteNonQuery_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__" data-uid="Gimnasio.Datos.ConexionBase.ExecuteNonQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+  ExecuteNonQuery(string, Dictionary&lt;string, object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/Conexion.vb/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ejecuta un comando SQL sobre la base de datos MySQL que no retorna resultados (por ejemplo, INSERT, UPDATE o DELETE). Proceso:</p>
+<ol>
+<li>Abre una conexión a la base de datos utilizando la cadena de conexión definida.</li>
+<li>Crea un comando SQL con la instrucción proporcionada y agrega los parámetros especificados (si existen).</li>
+<li>Ejecuta el comando mediante MySqlCommand.ExecuteNonQuery para realizar la operación solicitada.</li>
+<li>No retorna ningún valor, ya que está orientado a operaciones que modifican datos pero no devuelven resultados.</li>
+</ol>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ExecuteNonQuery(string query, Dictionary&lt;string, object&gt; parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>query</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Comando SQL a ejecutar (INSERT, UPDATE, DELETE, etc.).</p>
+</dd>
+    <dt><code>parameters</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>Diccionario de parámetros para el comando (puede ser Nothing).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Datos_ConexionBase_ExecuteQuery_" data-uid="Gimnasio.Datos.ConexionBase.ExecuteQuery*"></a>
+
+  <h3 id="Gimnasio_Datos_ConexionBase_ExecuteQuery_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__" data-uid="Gimnasio.Datos.ConexionBase.ExecuteQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+  ExecuteQuery(string, Dictionary&lt;string, object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/Conexion.vb/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ejecuta una consulta SQL sobre la base de datos MySQL y retorna los resultados en un DataTable. Proceso:</p>
+<ol>
+<li>Abre una conexión a la base de datos utilizando la cadena de conexión definida.</li>
+<li>Crea un comando SQL con la consulta proporcionada y agrega los parámetros especificados (si existen).</li>
+<li>Utiliza un MySqlDataAdapter para ejecutar la consulta y llenar un DataTable con los resultados.</li>
+<li>Retorna el DataTable con los datos obtenidos.</li>
+</ol>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable ExecuteQuery(string query, Dictionary&lt;string, object&gt; parameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>query</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Consulta SQL a ejecutar.</p>
+</dd>
+    <dt><code>parameters</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>Diccionario de parámetros para la consulta (puede ser Nothing).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los resultados de la consulta.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/Conexion.vb/#L19" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Desarrollado por Progoat
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

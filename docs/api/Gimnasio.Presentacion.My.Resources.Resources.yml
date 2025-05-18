@@ -1,0 +1,550 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gimnasio.Presentacion.My.Resources.Resources
+  commentId: T:Gimnasio.Presentacion.My.Resources.Resources
+  id: Resources
+  parent: Gimnasio.Presentacion.My.Resources
+  children:
+  - Gimnasio.Presentacion.My.Resources.Resources.Culture
+  - Gimnasio.Presentacion.My.Resources.Resources.ResourceManager
+  - Gimnasio.Presentacion.My.Resources.Resources.casa
+  - Gimnasio.Presentacion.My.Resources.Resources.ojoContraseña
+  - Gimnasio.Presentacion.My.Resources.Resources.ojo_abierto
+  - Gimnasio.Presentacion.My.Resources.Resources.ojo_cerrado
+  - Gimnasio.Presentacion.My.Resources.Resources.reiniciar
+  - Gimnasio.Presentacion.My.Resources.Resources.resourceCulture
+  - Gimnasio.Presentacion.My.Resources.Resources.resourceMan
+  - Gimnasio.Presentacion.My.Resources.Resources.usuario
+  langs:
+  - csharp
+  - vb
+  name: Resources
+  nameWithType: Resources
+  fullName: Gimnasio.Presentacion.My.Resources.Resources
+  type: Class
+  source:
+    remote:
+      path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Resources
+    path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
+    startLine: 24
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My.Resources
+  summary: Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+  example: []
+  syntax:
+    content: >-
+      [HideModuleName]
+
+      internal class Resources
+    content.vb: >-
+      <HideModuleName>
+
+      Friend Module Resources
+  attributes:
+  - type: Microsoft.VisualBasic.HideModuleNameAttribute
+    ctor: Microsoft.VisualBasic.HideModuleNameAttribute.#ctor
+    arguments: []
+- uid: Gimnasio.Presentacion.My.Resources.Resources.resourceMan
+  commentId: F:Gimnasio.Presentacion.My.Resources.Resources.resourceMan
+  id: resourceMan
+  parent: Gimnasio.Presentacion.My.Resources.Resources
+  langs:
+  - csharp
+  - vb
+  name: resourceMan
+  nameWithType: Resources.resourceMan
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.resourceMan
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: resourceMan
+    path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
+    startLine: 30
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My.Resources
+  syntax:
+    content: private static ResourceManager resourceMan
+    return:
+      type: System.Resources.ResourceManager
+    content.vb: Private resourceMan As ResourceManager
+- uid: Gimnasio.Presentacion.My.Resources.Resources.resourceCulture
+  commentId: F:Gimnasio.Presentacion.My.Resources.Resources.resourceCulture
+  id: resourceCulture
+  parent: Gimnasio.Presentacion.My.Resources.Resources
+  langs:
+  - csharp
+  - vb
+  name: resourceCulture
+  nameWithType: Resources.resourceCulture
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.resourceCulture
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: resourceCulture
+    path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
+    startLine: 32
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My.Resources
+  syntax:
+    content: private static CultureInfo resourceCulture
+    return:
+      type: System.Globalization.CultureInfo
+    content.vb: Private resourceCulture As CultureInfo
+- uid: Gimnasio.Presentacion.My.Resources.Resources.ResourceManager
+  commentId: P:Gimnasio.Presentacion.My.Resources.Resources.ResourceManager
+  id: ResourceManager
+  parent: Gimnasio.Presentacion.My.Resources.Resources
+  langs:
+  - csharp
+  - vb
+  name: ResourceManager
+  nameWithType: Resources.ResourceManager
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.ResourceManager
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: ResourceManager
+    path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
+    startLine: 37
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My.Resources
+  summary: Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+  example: []
+  syntax:
+    content: internal static ResourceManager ResourceManager { get; }
+    parameters: []
+    return:
+      type: System.Resources.ResourceManager
+    content.vb: Friend ReadOnly Property ResourceManager As ResourceManager
+  overload: Gimnasio.Presentacion.My.Resources.Resources.ResourceManager*
+- uid: Gimnasio.Presentacion.My.Resources.Resources.Culture
+  commentId: P:Gimnasio.Presentacion.My.Resources.Resources.Culture
+  id: Culture
+  parent: Gimnasio.Presentacion.My.Resources.Resources
+  langs:
+  - csharp
+  - vb
+  name: Culture
+  nameWithType: Resources.Culture
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.Culture
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Culture
+    path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
+    startLine: 52
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My.Resources
+  summary: >-
+    Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+
+    búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+  example: []
+  syntax:
+    content: internal static CultureInfo Culture { get; set; }
+    parameters: []
+    return:
+      type: System.Globalization.CultureInfo
+    content.vb: Friend Property Culture As CultureInfo
+  overload: Gimnasio.Presentacion.My.Resources.Resources.Culture*
+- uid: Gimnasio.Presentacion.My.Resources.Resources.casa
+  commentId: P:Gimnasio.Presentacion.My.Resources.Resources.casa
+  id: casa
+  parent: Gimnasio.Presentacion.My.Resources.Resources
+  langs:
+  - csharp
+  - vb
+  name: casa
+  nameWithType: Resources.casa
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.casa
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: casa
+    path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
+    startLine: 65
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My.Resources
+  summary: Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  example: []
+  syntax:
+    content: internal static Bitmap casa { get; }
+    parameters: []
+    return:
+      type: System.Drawing.Bitmap
+    content.vb: Friend ReadOnly Property casa As Bitmap
+  overload: Gimnasio.Presentacion.My.Resources.Resources.casa*
+- uid: Gimnasio.Presentacion.My.Resources.Resources.ojo_abierto
+  commentId: P:Gimnasio.Presentacion.My.Resources.Resources.ojo_abierto
+  id: ojo_abierto
+  parent: Gimnasio.Presentacion.My.Resources.Resources
+  langs:
+  - csharp
+  - vb
+  name: ojo_abierto
+  nameWithType: Resources.ojo_abierto
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.ojo_abierto
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: ojo_abierto
+    path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
+    startLine: 75
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My.Resources
+  summary: Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  example: []
+  syntax:
+    content: internal static Bitmap ojo_abierto { get; }
+    parameters: []
+    return:
+      type: System.Drawing.Bitmap
+    content.vb: Friend ReadOnly Property ojo_abierto As Bitmap
+  overload: Gimnasio.Presentacion.My.Resources.Resources.ojo_abierto*
+- uid: Gimnasio.Presentacion.My.Resources.Resources.ojo_cerrado
+  commentId: P:Gimnasio.Presentacion.My.Resources.Resources.ojo_cerrado
+  id: ojo_cerrado
+  parent: Gimnasio.Presentacion.My.Resources.Resources
+  langs:
+  - csharp
+  - vb
+  name: ojo_cerrado
+  nameWithType: Resources.ojo_cerrado
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.ojo_cerrado
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: ojo_cerrado
+    path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
+    startLine: 85
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My.Resources
+  summary: Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  example: []
+  syntax:
+    content: internal static Bitmap ojo_cerrado { get; }
+    parameters: []
+    return:
+      type: System.Drawing.Bitmap
+    content.vb: Friend ReadOnly Property ojo_cerrado As Bitmap
+  overload: Gimnasio.Presentacion.My.Resources.Resources.ojo_cerrado*
+- uid: Gimnasio.Presentacion.My.Resources.Resources.ojoContraseña
+  commentId: P:Gimnasio.Presentacion.My.Resources.Resources.ojoContraseña
+  id: ojoContraseña
+  parent: Gimnasio.Presentacion.My.Resources.Resources
+  langs:
+  - csharp
+  - vb
+  name: ojoContraseña
+  nameWithType: Resources.ojoContraseña
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.ojoContraseña
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: ojoContraseña
+    path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
+    startLine: 95
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My.Resources
+  summary: Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  example: []
+  syntax:
+    content: internal static Bitmap ojoContraseña { get; }
+    parameters: []
+    return:
+      type: System.Drawing.Bitmap
+    content.vb: Friend ReadOnly Property ojoContraseña As Bitmap
+  overload: Gimnasio.Presentacion.My.Resources.Resources.ojoContraseña*
+- uid: Gimnasio.Presentacion.My.Resources.Resources.reiniciar
+  commentId: P:Gimnasio.Presentacion.My.Resources.Resources.reiniciar
+  id: reiniciar
+  parent: Gimnasio.Presentacion.My.Resources.Resources
+  langs:
+  - csharp
+  - vb
+  name: reiniciar
+  nameWithType: Resources.reiniciar
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.reiniciar
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: reiniciar
+    path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
+    startLine: 105
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My.Resources
+  summary: Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  example: []
+  syntax:
+    content: internal static Bitmap reiniciar { get; }
+    parameters: []
+    return:
+      type: System.Drawing.Bitmap
+    content.vb: Friend ReadOnly Property reiniciar As Bitmap
+  overload: Gimnasio.Presentacion.My.Resources.Resources.reiniciar*
+- uid: Gimnasio.Presentacion.My.Resources.Resources.usuario
+  commentId: P:Gimnasio.Presentacion.My.Resources.Resources.usuario
+  id: usuario
+  parent: Gimnasio.Presentacion.My.Resources.Resources
+  langs:
+  - csharp
+  - vb
+  name: usuario
+  nameWithType: Resources.usuario
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.usuario
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: usuario
+    path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
+    startLine: 115
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My.Resources
+  summary: Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  example: []
+  syntax:
+    content: internal static Bitmap usuario { get; }
+    parameters: []
+    return:
+      type: System.Drawing.Bitmap
+    content.vb: Friend ReadOnly Property usuario As Bitmap
+  overload: Gimnasio.Presentacion.My.Resources.Resources.usuario*
+references:
+- uid: Gimnasio.Presentacion.My.Resources
+  commentId: N:Gimnasio.Presentacion.My.Resources
+  isExternal: true
+  href: Gimnasio.html
+  name: Gimnasio.Presentacion.My.Resources
+  nameWithType: Gimnasio.Presentacion.My.Resources
+  fullName: Gimnasio.Presentacion.My.Resources
+  spec.csharp:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Presentacion
+    name: Presentacion
+    href: Gimnasio.Presentacion.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My
+    name: My
+    href: Gimnasio.Presentacion.My.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My.Resources
+    name: Resources
+    href: Gimnasio.Presentacion.My.Resources.html
+  spec.vb:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Presentacion
+    name: Presentacion
+    href: Gimnasio.Presentacion.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My
+    name: My
+    href: Gimnasio.Presentacion.My.html
+  - name: .
+  - uid: Gimnasio.Presentacion.My.Resources
+    name: Resources
+    href: Gimnasio.Presentacion.My.Resources.html
+- uid: System.Resources.ResourceManager
+  commentId: T:System.Resources.ResourceManager
+  parent: System.Resources
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.resources.resourcemanager
+  name: ResourceManager
+  nameWithType: ResourceManager
+  fullName: System.Resources.ResourceManager
+- uid: System.Resources
+  commentId: N:System.Resources
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Resources
+  nameWithType: System.Resources
+  fullName: System.Resources
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Resources
+    name: Resources
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.resources
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Resources
+    name: Resources
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.resources
+- uid: System.Globalization.CultureInfo
+  commentId: T:System.Globalization.CultureInfo
+  parent: System.Globalization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo
+  name: CultureInfo
+  nameWithType: CultureInfo
+  fullName: System.Globalization.CultureInfo
+- uid: System.Globalization
+  commentId: N:System.Globalization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Globalization
+  nameWithType: System.Globalization
+  fullName: System.Globalization
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Globalization
+    name: Globalization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.globalization
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Globalization
+    name: Globalization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.globalization
+- uid: Gimnasio.Presentacion.My.Resources.Resources.ResourceManager*
+  commentId: Overload:Gimnasio.Presentacion.My.Resources.Resources.ResourceManager
+  href: Gimnasio.Presentacion.My.Resources.Resources.html#Gimnasio_Presentacion_My_Resources_Resources_ResourceManager
+  name: ResourceManager
+  nameWithType: Resources.ResourceManager
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.ResourceManager
+- uid: Gimnasio.Presentacion.My.Resources.Resources.Culture*
+  commentId: Overload:Gimnasio.Presentacion.My.Resources.Resources.Culture
+  href: Gimnasio.Presentacion.My.Resources.Resources.html#Gimnasio_Presentacion_My_Resources_Resources_Culture
+  name: Culture
+  nameWithType: Resources.Culture
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.Culture
+- uid: Gimnasio.Presentacion.My.Resources.Resources.casa*
+  commentId: Overload:Gimnasio.Presentacion.My.Resources.Resources.casa
+  href: Gimnasio.Presentacion.My.Resources.Resources.html#Gimnasio_Presentacion_My_Resources_Resources_casa
+  name: casa
+  nameWithType: Resources.casa
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.casa
+- uid: System.Drawing.Bitmap
+  commentId: T:System.Drawing.Bitmap
+  parent: System.Drawing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.drawing.bitmap
+  name: Bitmap
+  nameWithType: Bitmap
+  fullName: System.Drawing.Bitmap
+- uid: System.Drawing
+  commentId: N:System.Drawing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Drawing
+  nameWithType: System.Drawing
+  fullName: System.Drawing
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Drawing
+    name: Drawing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Drawing
+    name: Drawing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing
+- uid: Gimnasio.Presentacion.My.Resources.Resources.ojo_abierto*
+  commentId: Overload:Gimnasio.Presentacion.My.Resources.Resources.ojo_abierto
+  href: Gimnasio.Presentacion.My.Resources.Resources.html#Gimnasio_Presentacion_My_Resources_Resources_ojo_abierto
+  name: ojo_abierto
+  nameWithType: Resources.ojo_abierto
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.ojo_abierto
+- uid: Gimnasio.Presentacion.My.Resources.Resources.ojo_cerrado*
+  commentId: Overload:Gimnasio.Presentacion.My.Resources.Resources.ojo_cerrado
+  href: Gimnasio.Presentacion.My.Resources.Resources.html#Gimnasio_Presentacion_My_Resources_Resources_ojo_cerrado
+  name: ojo_cerrado
+  nameWithType: Resources.ojo_cerrado
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.ojo_cerrado
+- uid: Gimnasio.Presentacion.My.Resources.Resources.ojoContraseña*
+  commentId: Overload:Gimnasio.Presentacion.My.Resources.Resources.ojoContraseña
+  href: Gimnasio.Presentacion.My.Resources.Resources.html#Gimnasio_Presentacion_My_Resources_Resources_ojoContraseña
+  name: ojoContraseña
+  nameWithType: Resources.ojoContraseña
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.ojoContraseña
+- uid: Gimnasio.Presentacion.My.Resources.Resources.reiniciar*
+  commentId: Overload:Gimnasio.Presentacion.My.Resources.Resources.reiniciar
+  href: Gimnasio.Presentacion.My.Resources.Resources.html#Gimnasio_Presentacion_My_Resources_Resources_reiniciar
+  name: reiniciar
+  nameWithType: Resources.reiniciar
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.reiniciar
+- uid: Gimnasio.Presentacion.My.Resources.Resources.usuario*
+  commentId: Overload:Gimnasio.Presentacion.My.Resources.Resources.usuario
+  href: Gimnasio.Presentacion.My.Resources.Resources.html#Gimnasio_Presentacion_My_Resources_Resources_usuario
+  name: usuario
+  nameWithType: Resources.usuario
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.usuario

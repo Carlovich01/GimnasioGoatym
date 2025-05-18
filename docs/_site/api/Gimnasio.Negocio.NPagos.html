@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class NPagos | Goatym </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class NPagos | Goatym ">
+      
+      <meta name="description" content="L&#243;gica de negocio para la gesti&#243;n de pagos en el sistema de gimnasio. Interact&#250;a con la capa de datos  y la entidad . Todas las operaciones de la capa de negocio est&#225;n envueltas en bloques Try...Catch. Si ocurre una excepci&#243;n, se registra el error utilizando  en un log.txt Luego, la excepci&#243;n se propaga nuevamente mediante Throw New Exception(ex.Message).">
+      <link rel="icon" href="../images/logo.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Carlovich01/gimnasio3/new/main/apiSpec/new?filename=Gimnasio_Negocio_NPagos.md&amp;value=---%0Auid%3A%20Gimnasio.Negocio.NPagos%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Goatym">
+            Goatym
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gimnasio.Negocio.NPagos">
+
+
+
+  <h1 id="Gimnasio_Negocio_NPagos" data-uid="Gimnasio.Negocio.NPagos" class="text-break">
+Class NPagos  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L13"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gimnasio.html">Gimnasio</a>.<a class="xref" href="Gimnasio.Negocio.html">Negocio</a></dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Lógica de negocio para la gestión de pagos en el sistema de gimnasio.
+Interactúa con la capa de datos <a class="xref" href="Gimnasio.Negocio.NPagos.html#Gimnasio_Negocio_NPagos_dPagos">dPagos</a> y la entidad <a class="xref" href="Gimnasio.Entidades.Pagos.html">Pagos</a>.
+Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.<br>
+Si ocurre una excepción, se registra el error utilizando <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_">Log(string, Exception)</a> en un log.txt
+Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class NPagos</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NPagos</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Gimnasio_Negocio_NPagos_dPagos" data-uid="Gimnasio.Negocio.NPagos.dPagos">
+  dPagos
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Instancia de la capa de datos para pagos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private DPagos dPagos</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gimnasio.Datos.DPagos.html">DPagos</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gimnasio_Negocio_NPagos_Actualizar_" data-uid="Gimnasio.Negocio.NPagos.Actualizar*"></a>
+
+  <h3 id="Gimnasio_Negocio_NPagos_Actualizar_Gimnasio_Entidades_Pagos_" data-uid="Gimnasio.Negocio.NPagos.Actualizar(Gimnasio.Entidades.Pagos)">
+  Actualizar(Pagos)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actualiza un pago existente en el sistema.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Actualizar(Pagos pago)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pago</code> <a class="xref" href="Gimnasio.Entidades.Pagos.html">Pagos</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Entidades.Pagos.html">Pagos</a> con los datos actualizados.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NPagos_Eliminar_" data-uid="Gimnasio.Negocio.NPagos.Eliminar*"></a>
+
+  <h3 id="Gimnasio_Negocio_NPagos_Eliminar_System_UInt32_" data-uid="Gimnasio.Negocio.NPagos.Eliminar(System.UInt32)">
+  Eliminar(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Elimina un pago del sistema según su id con <a class="xref" href="Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_Eliminar_System_UInt32_">Eliminar(uint)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Eliminar(uint id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Identificador único del pago a eliminar.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NPagos_Insertar_" data-uid="Gimnasio.Negocio.NPagos.Insertar*"></a>
+
+  <h3 id="Gimnasio_Negocio_NPagos_Insertar_Gimnasio_Entidades_Pagos_" data-uid="Gimnasio.Negocio.NPagos.Insertar(Gimnasio.Entidades.Pagos)">
+  Insertar(Pagos)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><ol>
+<li>Valida los campos de la entidad <a class="xref" href="Gimnasio.Entidades.Pagos.html">Pagos</a> recibida como parámetro.</li>
+<li>Inserta el pago en la base de datos utilizando <a class="xref" href="Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_Insertar_Gimnasio_Entidades_Pagos_">Insertar(Pagos)</a>.</li>
+<li>Actualiza la membresía asociada al pago:
+<ul>
+<li>Obtiene la duración de la membresía con <a class="xref" href="Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ObtenerDuracionPorMembresia_System_UInt32_">ObtenerDuracionPorMembresia(uint)</a>.</li>
+<li>Establece la fecha de inicio como la fecha actual y la fecha de fin sumando la duración.</li>
+<li>Cambia el estado de la membresía a &quot;Activa&quot;.</li>
+<li>Actualiza estos datos en la base de datos mediante <a class="xref" href="Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ActualizarEstadoYFechas_Gimnasio_Entidades_Membresias_">ActualizarEstadoYFechas(Membresias)</a>.</li>
+</ul>
+</li>
+</ol>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Insertar(Pagos pago)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pago</code> <a class="xref" href="Gimnasio.Entidades.Pagos.html">Pagos</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Entidades.Pagos.html">Pagos</a> a insertar.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NPagos_Listar_" data-uid="Gimnasio.Negocio.NPagos.Listar*"></a>
+
+  <h3 id="Gimnasio_Negocio_NPagos_Listar" data-uid="Gimnasio.Negocio.NPagos.Listar">
+  Listar()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Obtiene la lista de todos los pagos registrados con <a class="xref" href="Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_Listar">Listar()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable Listar()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los datos de los pagos.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NPagos_ListarPorDni_" data-uid="Gimnasio.Negocio.NPagos.ListarPorDni*"></a>
+
+  <h3 id="Gimnasio_Negocio_NPagos_ListarPorDni_System_String_" data-uid="Gimnasio.Negocio.NPagos.ListarPorDni(System.String)">
+  ListarPorDni(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Realiza una validación y busca pagos por DNI del miembro utilizando la capa de datos <a class="xref" href="Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_ListarPorDni_System_String_">ListarPorDni(string)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable ListarPorDni(string dni)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dni</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>DNI o parte del DNI del miembro a buscar.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los resultados de la búsqueda.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NPagos_ListarPorFecha_" data-uid="Gimnasio.Negocio.NPagos.ListarPorFecha*"></a>
+
+  <h3 id="Gimnasio_Negocio_NPagos_ListarPorFecha_System_DateTime_System_DateTime_" data-uid="Gimnasio.Negocio.NPagos.ListarPorFecha(System.DateTime,System.DateTime)">
+  ListarPorFecha(DateTime, DateTime)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Busca pagos por rango de fechas utilizando la capa de datos <a class="xref" href="Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_ListarPorFecha_System_DateTime_System_DateTime_">ListarPorFecha(DateTime, DateTime)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable ListarPorFecha(DateTime fechaInicio, DateTime fechaFin)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fechaInicio</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>Fecha de inicio del rango.</p>
+</dd>
+    <dt><code>fechaFin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>Fecha de fin del rango.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los resultados de la búsqueda.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NPagos_ListarPorMetodoPago_" data-uid="Gimnasio.Negocio.NPagos.ListarPorMetodoPago*"></a>
+
+  <h3 id="Gimnasio_Negocio_NPagos_ListarPorMetodoPago_System_String_" data-uid="Gimnasio.Negocio.NPagos.ListarPorMetodoPago(System.String)">
+  ListarPorMetodoPago(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Busca pagos por método de pago utilizando la capa de datos <a class="xref" href="Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_ListarPorMetodoPago_System_String_">ListarPorMetodoPago(string)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable ListarPorMetodoPago(string metodo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>metodo</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Método de pago a buscar.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los resultados de la búsqueda.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NPagos_ListarPorMontos_" data-uid="Gimnasio.Negocio.NPagos.ListarPorMontos*"></a>
+
+  <h3 id="Gimnasio_Negocio_NPagos_ListarPorMontos_System_Decimal_System_Decimal_" data-uid="Gimnasio.Negocio.NPagos.ListarPorMontos(System.Decimal,System.Decimal)">
+  ListarPorMontos(decimal, decimal)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Realiza una validación y Busca pagos por rango de montos utilizando la capa de datos <a class="xref" href="Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_ListarPorMontos_System_Decimal_System_Decimal_">ListarPorMontos(decimal, decimal)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable ListarPorMontos(decimal montoMin, decimal montoMax)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>montoMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
+    <dd><p>Monto mínimo.</p>
+</dd>
+    <dt><code>montoMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
+    <dd><p>Monto máximo.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los resultados de la búsqueda.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NPagos_ListarPorNombrePlan_" data-uid="Gimnasio.Negocio.NPagos.ListarPorNombrePlan*"></a>
+
+  <h3 id="Gimnasio_Negocio_NPagos_ListarPorNombrePlan_System_String_" data-uid="Gimnasio.Negocio.NPagos.ListarPorNombrePlan(System.String)">
+  ListarPorNombrePlan(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Realiza una validación y Busca pagos por nombre de plan utilizando la capa de datos <a class="xref" href="Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_ListarPorNombrePlan_System_String_">ListarPorNombrePlan(string)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable ListarPorNombrePlan(string nombre)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>nombre</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Nombre o parte del nombre del plan a buscar.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los resultados de la búsqueda.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NPagos_ValidarCampos_" data-uid="Gimnasio.Negocio.NPagos.ValidarCampos*"></a>
+
+  <h3 id="Gimnasio_Negocio_NPagos_ValidarCampos_Gimnasio_Entidades_Pagos_" data-uid="Gimnasio.Negocio.NPagos.ValidarCampos(Gimnasio.Entidades.Pagos)">
+  ValidarCampos(Pagos)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Valida los campos de la entidad <a class="xref" href="Gimnasio.Entidades.Pagos.html">Pagos</a> antes de realizar operaciones de inserción.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void ValidarCampos(Pagos Obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Obj</code> <a class="xref" href="Gimnasio.Entidades.Pagos.html">Pagos</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Entidades.Pagos.html">Pagos</a> a validar.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L13" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Desarrollado por Progoat
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

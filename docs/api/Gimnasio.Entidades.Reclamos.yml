@@ -1,0 +1,959 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gimnasio.Entidades.Reclamos
+  commentId: T:Gimnasio.Entidades.Reclamos
+  id: Reclamos
+  parent: Gimnasio.Entidades
+  children:
+  - Gimnasio.Entidades.Reclamos.Descripcion
+  - Gimnasio.Entidades.Reclamos.Estado
+  - Gimnasio.Entidades.Reclamos.FechaEnvio
+  - Gimnasio.Entidades.Reclamos.FechaRespuesta
+  - Gimnasio.Entidades.Reclamos.IdMiembro
+  - Gimnasio.Entidades.Reclamos.IdReclamos
+  - Gimnasio.Entidades.Reclamos.Respuesta
+  - Gimnasio.Entidades.Reclamos.Tipo
+  - Gimnasio.Entidades.Reclamos._descripcion
+  - Gimnasio.Entidades.Reclamos._estado
+  - Gimnasio.Entidades.Reclamos._fechaEnvio
+  - Gimnasio.Entidades.Reclamos._fechaRespuesta
+  - Gimnasio.Entidades.Reclamos._idMiembro
+  - Gimnasio.Entidades.Reclamos._idReclamos
+  - Gimnasio.Entidades.Reclamos._respuesta
+  - Gimnasio.Entidades.Reclamos._tipo
+  langs:
+  - csharp
+  - vb
+  name: Reclamos
+  nameWithType: Reclamos
+  fullName: Gimnasio.Entidades.Reclamos
+  type: Class
+  source:
+    remote:
+      path: Gimnasio.Entidades/Reclamos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Reclamos
+    path: ../Gimnasio.Entidades/Reclamos.vb
+    startLine: 4
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: >-
+    Representa un reclamo realizado por un miembro en el sistema del gimnasio.
+
+    Contiene información sobre el tipo, descripción, estado, respuesta y fechas asociadas al reclamo.
+  example: []
+  syntax:
+    content: public class Reclamos
+    content.vb: Public Class Reclamos
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.Finalize
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Gimnasio.Entidades.Reclamos._idReclamos
+  commentId: F:Gimnasio.Entidades.Reclamos._idReclamos
+  id: _idReclamos
+  parent: Gimnasio.Entidades.Reclamos
+  langs:
+  - csharp
+  - vb
+  name: _idReclamos
+  nameWithType: Reclamos._idReclamos
+  fullName: Gimnasio.Entidades.Reclamos._idReclamos
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Entidades/Reclamos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: _idReclamos
+    path: ../Gimnasio.Entidades/Reclamos.vb
+    startLine: 8
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Identificador único del reclamo.
+  example: []
+  syntax:
+    content: private uint _idReclamos
+    return:
+      type: System.UInt32
+    content.vb: Private _idReclamos As UInteger
+- uid: Gimnasio.Entidades.Reclamos._tipo
+  commentId: F:Gimnasio.Entidades.Reclamos._tipo
+  id: _tipo
+  parent: Gimnasio.Entidades.Reclamos
+  langs:
+  - csharp
+  - vb
+  name: _tipo
+  nameWithType: Reclamos._tipo
+  fullName: Gimnasio.Entidades.Reclamos._tipo
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Entidades/Reclamos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: _tipo
+    path: ../Gimnasio.Entidades/Reclamos.vb
+    startLine: 12
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Tipo de reclamo ('sugerencia', 'reclamo').
+  example: []
+  syntax:
+    content: private string _tipo
+    return:
+      type: System.String
+    content.vb: Private _tipo As String
+- uid: Gimnasio.Entidades.Reclamos._descripcion
+  commentId: F:Gimnasio.Entidades.Reclamos._descripcion
+  id: _descripcion
+  parent: Gimnasio.Entidades.Reclamos
+  langs:
+  - csharp
+  - vb
+  name: _descripcion
+  nameWithType: Reclamos._descripcion
+  fullName: Gimnasio.Entidades.Reclamos._descripcion
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Entidades/Reclamos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: _descripcion
+    path: ../Gimnasio.Entidades/Reclamos.vb
+    startLine: 16
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Descripción detallada del reclamo.
+  example: []
+  syntax:
+    content: private string _descripcion
+    return:
+      type: System.String
+    content.vb: Private _descripcion As String
+- uid: Gimnasio.Entidades.Reclamos._fechaEnvio
+  commentId: F:Gimnasio.Entidades.Reclamos._fechaEnvio
+  id: _fechaEnvio
+  parent: Gimnasio.Entidades.Reclamos
+  langs:
+  - csharp
+  - vb
+  name: _fechaEnvio
+  nameWithType: Reclamos._fechaEnvio
+  fullName: Gimnasio.Entidades.Reclamos._fechaEnvio
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Entidades/Reclamos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: _fechaEnvio
+    path: ../Gimnasio.Entidades/Reclamos.vb
+    startLine: 20
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Fecha en que se envió el reclamo.
+  example: []
+  syntax:
+    content: private DateTime _fechaEnvio
+    return:
+      type: System.DateTime
+    content.vb: Private _fechaEnvio As Date
+- uid: Gimnasio.Entidades.Reclamos._estado
+  commentId: F:Gimnasio.Entidades.Reclamos._estado
+  id: _estado
+  parent: Gimnasio.Entidades.Reclamos
+  langs:
+  - csharp
+  - vb
+  name: _estado
+  nameWithType: Reclamos._estado
+  fullName: Gimnasio.Entidades.Reclamos._estado
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Entidades/Reclamos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: _estado
+    path: ../Gimnasio.Entidades/Reclamos.vb
+    startLine: 24
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Estado actual del reclamo (pendiente, resuelto).
+  example: []
+  syntax:
+    content: private string _estado
+    return:
+      type: System.String
+    content.vb: Private _estado As String
+- uid: Gimnasio.Entidades.Reclamos._respuesta
+  commentId: F:Gimnasio.Entidades.Reclamos._respuesta
+  id: _respuesta
+  parent: Gimnasio.Entidades.Reclamos
+  langs:
+  - csharp
+  - vb
+  name: _respuesta
+  nameWithType: Reclamos._respuesta
+  fullName: Gimnasio.Entidades.Reclamos._respuesta
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Entidades/Reclamos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: _respuesta
+    path: ../Gimnasio.Entidades/Reclamos.vb
+    startLine: 28
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Respuesta dada al reclamo.
+  example: []
+  syntax:
+    content: private string _respuesta
+    return:
+      type: System.String
+    content.vb: Private _respuesta As String
+- uid: Gimnasio.Entidades.Reclamos._fechaRespuesta
+  commentId: F:Gimnasio.Entidades.Reclamos._fechaRespuesta
+  id: _fechaRespuesta
+  parent: Gimnasio.Entidades.Reclamos
+  langs:
+  - csharp
+  - vb
+  name: _fechaRespuesta
+  nameWithType: Reclamos._fechaRespuesta
+  fullName: Gimnasio.Entidades.Reclamos._fechaRespuesta
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Entidades/Reclamos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: _fechaRespuesta
+    path: ../Gimnasio.Entidades/Reclamos.vb
+    startLine: 32
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Fecha en que se respondió el reclamo.
+  example: []
+  syntax:
+    content: private DateTime _fechaRespuesta
+    return:
+      type: System.DateTime
+    content.vb: Private _fechaRespuesta As Date
+- uid: Gimnasio.Entidades.Reclamos._idMiembro
+  commentId: F:Gimnasio.Entidades.Reclamos._idMiembro
+  id: _idMiembro
+  parent: Gimnasio.Entidades.Reclamos
+  langs:
+  - csharp
+  - vb
+  name: _idMiembro
+  nameWithType: Reclamos._idMiembro
+  fullName: Gimnasio.Entidades.Reclamos._idMiembro
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Entidades/Reclamos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: _idMiembro
+    path: ../Gimnasio.Entidades/Reclamos.vb
+    startLine: 36
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Identificador del miembro que realizó el reclamo (puede ser nulo).
+  example: []
+  syntax:
+    content: private uint? _idMiembro
+    return:
+      type: System.Nullable{System.UInt32}
+    content.vb: Private _idMiembro As UInteger?
+- uid: Gimnasio.Entidades.Reclamos.IdReclamos
+  commentId: P:Gimnasio.Entidades.Reclamos.IdReclamos
+  id: IdReclamos
+  parent: Gimnasio.Entidades.Reclamos
+  langs:
+  - csharp
+  - vb
+  name: IdReclamos
+  nameWithType: Reclamos.IdReclamos
+  fullName: Gimnasio.Entidades.Reclamos.IdReclamos
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Entidades/Reclamos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: IdReclamos
+    path: ../Gimnasio.Entidades/Reclamos.vb
+    startLine: 41
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Obtiene o establece el identificador único del reclamo.
+  example: []
+  syntax:
+    content: public uint IdReclamos { get; set; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public Property IdReclamos As UInteger
+  overload: Gimnasio.Entidades.Reclamos.IdReclamos*
+- uid: Gimnasio.Entidades.Reclamos.Tipo
+  commentId: P:Gimnasio.Entidades.Reclamos.Tipo
+  id: Tipo
+  parent: Gimnasio.Entidades.Reclamos
+  langs:
+  - csharp
+  - vb
+  name: Tipo
+  nameWithType: Reclamos.Tipo
+  fullName: Gimnasio.Entidades.Reclamos.Tipo
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Entidades/Reclamos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Tipo
+    path: ../Gimnasio.Entidades/Reclamos.vb
+    startLine: 53
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Obtiene o establece el tipo de reclamo.
+  example: []
+  syntax:
+    content: public string Tipo { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Tipo As String
+  overload: Gimnasio.Entidades.Reclamos.Tipo*
+- uid: Gimnasio.Entidades.Reclamos.Descripcion
+  commentId: P:Gimnasio.Entidades.Reclamos.Descripcion
+  id: Descripcion
+  parent: Gimnasio.Entidades.Reclamos
+  langs:
+  - csharp
+  - vb
+  name: Descripcion
+  nameWithType: Reclamos.Descripcion
+  fullName: Gimnasio.Entidades.Reclamos.Descripcion
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Entidades/Reclamos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Descripcion
+    path: ../Gimnasio.Entidades/Reclamos.vb
+    startLine: 65
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Obtiene o establece la descripción del reclamo.
+  example: []
+  syntax:
+    content: public string Descripcion { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Descripcion As String
+  overload: Gimnasio.Entidades.Reclamos.Descripcion*
+- uid: Gimnasio.Entidades.Reclamos.FechaEnvio
+  commentId: P:Gimnasio.Entidades.Reclamos.FechaEnvio
+  id: FechaEnvio
+  parent: Gimnasio.Entidades.Reclamos
+  langs:
+  - csharp
+  - vb
+  name: FechaEnvio
+  nameWithType: Reclamos.FechaEnvio
+  fullName: Gimnasio.Entidades.Reclamos.FechaEnvio
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Entidades/Reclamos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: FechaEnvio
+    path: ../Gimnasio.Entidades/Reclamos.vb
+    startLine: 77
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Obtiene o establece la fecha de envío del reclamo.
+  example: []
+  syntax:
+    content: public DateTime FechaEnvio { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property FechaEnvio As Date
+  overload: Gimnasio.Entidades.Reclamos.FechaEnvio*
+- uid: Gimnasio.Entidades.Reclamos.Estado
+  commentId: P:Gimnasio.Entidades.Reclamos.Estado
+  id: Estado
+  parent: Gimnasio.Entidades.Reclamos
+  langs:
+  - csharp
+  - vb
+  name: Estado
+  nameWithType: Reclamos.Estado
+  fullName: Gimnasio.Entidades.Reclamos.Estado
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Entidades/Reclamos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Estado
+    path: ../Gimnasio.Entidades/Reclamos.vb
+    startLine: 89
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Obtiene o establece el estado actual del reclamo.
+  example: []
+  syntax:
+    content: public string Estado { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Estado As String
+  overload: Gimnasio.Entidades.Reclamos.Estado*
+- uid: Gimnasio.Entidades.Reclamos.Respuesta
+  commentId: P:Gimnasio.Entidades.Reclamos.Respuesta
+  id: Respuesta
+  parent: Gimnasio.Entidades.Reclamos
+  langs:
+  - csharp
+  - vb
+  name: Respuesta
+  nameWithType: Reclamos.Respuesta
+  fullName: Gimnasio.Entidades.Reclamos.Respuesta
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Entidades/Reclamos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Respuesta
+    path: ../Gimnasio.Entidades/Reclamos.vb
+    startLine: 101
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Obtiene o establece la respuesta dada al reclamo.
+  example: []
+  syntax:
+    content: public string Respuesta { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Respuesta As String
+  overload: Gimnasio.Entidades.Reclamos.Respuesta*
+- uid: Gimnasio.Entidades.Reclamos.FechaRespuesta
+  commentId: P:Gimnasio.Entidades.Reclamos.FechaRespuesta
+  id: FechaRespuesta
+  parent: Gimnasio.Entidades.Reclamos
+  langs:
+  - csharp
+  - vb
+  name: FechaRespuesta
+  nameWithType: Reclamos.FechaRespuesta
+  fullName: Gimnasio.Entidades.Reclamos.FechaRespuesta
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Entidades/Reclamos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: FechaRespuesta
+    path: ../Gimnasio.Entidades/Reclamos.vb
+    startLine: 113
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Obtiene o establece la fecha de respuesta del reclamo.
+  example: []
+  syntax:
+    content: public DateTime FechaRespuesta { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property FechaRespuesta As Date
+  overload: Gimnasio.Entidades.Reclamos.FechaRespuesta*
+- uid: Gimnasio.Entidades.Reclamos.IdMiembro
+  commentId: P:Gimnasio.Entidades.Reclamos.IdMiembro
+  id: IdMiembro
+  parent: Gimnasio.Entidades.Reclamos
+  langs:
+  - csharp
+  - vb
+  name: IdMiembro
+  nameWithType: Reclamos.IdMiembro
+  fullName: Gimnasio.Entidades.Reclamos.IdMiembro
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Entidades/Reclamos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: IdMiembro
+    path: ../Gimnasio.Entidades/Reclamos.vb
+    startLine: 125
+  assemblies:
+  - Gimnasio.Entidades
+  namespace: Gimnasio.Entidades
+  summary: Obtiene o establece el identificador del miembro que realizó el reclamo.
+  example: []
+  syntax:
+    content: public uint? IdMiembro { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.UInt32}
+    content.vb: Public Property IdMiembro As UInteger?
+  overload: Gimnasio.Entidades.Reclamos.IdMiembro*
+references:
+- uid: Gimnasio.Entidades
+  commentId: N:Gimnasio.Entidades
+  isExternal: true
+  href: Gimnasio.html
+  name: Gimnasio.Entidades
+  nameWithType: Gimnasio.Entidades
+  fullName: Gimnasio.Entidades
+  spec.csharp:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Entidades
+    name: Entidades
+    href: Gimnasio.Entidades.html
+  spec.vb:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Entidades
+    name: Entidades
+    href: Gimnasio.Entidades.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Finalize
+  commentId: M:System.Object.Finalize
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.finalize
+  name: Finalize()
+  nameWithType: object.Finalize()
+  fullName: object.Finalize()
+  nameWithType.vb: Object.Finalize()
+  fullName.vb: Object.Finalize()
+  spec.csharp:
+  - uid: System.Object.Finalize
+    name: Finalize
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.finalize
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.Finalize
+    name: Finalize
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.finalize
+  - name: (
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: System.Nullable{System.UInt32}
+  commentId: T:System.Nullable{System.UInt32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint?
+  nameWithType: uint?
+  fullName: uint?
+  nameWithType.vb: UInteger?
+  fullName.vb: UInteger?
+  name.vb: UInteger?
+  spec.csharp:
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: '?'
+  spec.vb:
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Gimnasio.Entidades.Reclamos.IdReclamos*
+  commentId: Overload:Gimnasio.Entidades.Reclamos.IdReclamos
+  href: Gimnasio.Entidades.Reclamos.html#Gimnasio_Entidades_Reclamos_IdReclamos
+  name: IdReclamos
+  nameWithType: Reclamos.IdReclamos
+  fullName: Gimnasio.Entidades.Reclamos.IdReclamos
+- uid: Gimnasio.Entidades.Reclamos.Tipo*
+  commentId: Overload:Gimnasio.Entidades.Reclamos.Tipo
+  href: Gimnasio.Entidades.Reclamos.html#Gimnasio_Entidades_Reclamos_Tipo
+  name: Tipo
+  nameWithType: Reclamos.Tipo
+  fullName: Gimnasio.Entidades.Reclamos.Tipo
+- uid: Gimnasio.Entidades.Reclamos.Descripcion*
+  commentId: Overload:Gimnasio.Entidades.Reclamos.Descripcion
+  href: Gimnasio.Entidades.Reclamos.html#Gimnasio_Entidades_Reclamos_Descripcion
+  name: Descripcion
+  nameWithType: Reclamos.Descripcion
+  fullName: Gimnasio.Entidades.Reclamos.Descripcion
+- uid: Gimnasio.Entidades.Reclamos.FechaEnvio*
+  commentId: Overload:Gimnasio.Entidades.Reclamos.FechaEnvio
+  href: Gimnasio.Entidades.Reclamos.html#Gimnasio_Entidades_Reclamos_FechaEnvio
+  name: FechaEnvio
+  nameWithType: Reclamos.FechaEnvio
+  fullName: Gimnasio.Entidades.Reclamos.FechaEnvio
+- uid: Gimnasio.Entidades.Reclamos.Estado*
+  commentId: Overload:Gimnasio.Entidades.Reclamos.Estado
+  href: Gimnasio.Entidades.Reclamos.html#Gimnasio_Entidades_Reclamos_Estado
+  name: Estado
+  nameWithType: Reclamos.Estado
+  fullName: Gimnasio.Entidades.Reclamos.Estado
+- uid: Gimnasio.Entidades.Reclamos.Respuesta*
+  commentId: Overload:Gimnasio.Entidades.Reclamos.Respuesta
+  href: Gimnasio.Entidades.Reclamos.html#Gimnasio_Entidades_Reclamos_Respuesta
+  name: Respuesta
+  nameWithType: Reclamos.Respuesta
+  fullName: Gimnasio.Entidades.Reclamos.Respuesta
+- uid: Gimnasio.Entidades.Reclamos.FechaRespuesta*
+  commentId: Overload:Gimnasio.Entidades.Reclamos.FechaRespuesta
+  href: Gimnasio.Entidades.Reclamos.html#Gimnasio_Entidades_Reclamos_FechaRespuesta
+  name: FechaRespuesta
+  nameWithType: Reclamos.FechaRespuesta
+  fullName: Gimnasio.Entidades.Reclamos.FechaRespuesta
+- uid: Gimnasio.Entidades.Reclamos.IdMiembro*
+  commentId: Overload:Gimnasio.Entidades.Reclamos.IdMiembro
+  href: Gimnasio.Entidades.Reclamos.html#Gimnasio_Entidades_Reclamos_IdMiembro
+  name: IdMiembro
+  nameWithType: Reclamos.IdMiembro
+  fullName: Gimnasio.Entidades.Reclamos.IdMiembro

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DPagos | Goatym </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DPagos | Goatym ">
+      
+      <meta name="description" content="Clase de acceso a datos para la gesti&#243;n de pagos en el sistema de gimnasio. Hereda de  y utiliza la entidad . Proporciona m&#233;todos CRUD y de b&#250;squeda para la tabla pagos y la vista vista_pagos. La vista consolida la informaci&#243;n relevante de los registros de pagos, Permite consultar en una sola consulta los datos del pago, el miembro, el plan, el usuario que registr&#243; el pago. Realiza LEFT JOIN entre pagos y las dem&#225;s tablas, permitiendo obtener la informaci&#243;n de pagos incluso si los datos de miembro, membres&#237;a, plan o usuario no est&#225;n presentes. VIEW `vista_pagos` AS    SELECT         `p`.`id_pago` AS `id_pago`,        `p`.`id_membresia` AS `id_membresia`,        `p`.`id_usuario_registro` AS `id_usuario_registro`,        `m`.`apellido` AS `apellido_miembro`,        `m`.`nombre` AS `nombre_miembro`,        `m`.`dni` AS `dni_miembro`,        `pm`.`nombre_plan` AS `nombre_plan`,        `p`.`monto_pagado` AS `monto`,        `p`.`metodo_pago` AS `metodo`,        `p`.`numero_comprobante` AS `comprobante`,        `p`.`notas` AS `notas`,        `p`.`fecha_pago` AS `fecha_pago`,        `us`.`nombre_completo` AS `nombre_usuario`    FROM        ((((`pagos` `p`        LEFT JOIN `membresias_miembro` `mm` ON ((`p`.`id_membresia` = `mm`.`id_membresia`)))        LEFT JOIN `miembros` `m` ON ((`mm`.`id_miembro` = `m`.`id_miembro`)))        LEFT JOIN `planes_membresia` `pm` ON ((`mm`.`id_plan` = `pm`.`id_plan`)))        LEFT JOIN `usuarios_sistema` `us` ON ((`p`.`id_usuario_registro` = `us`.`id_usuario`)))    ORDER BY `p`.`fecha_pago` DESC Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo">
+      <link rel="icon" href="../images/logo.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Carlovich01/gimnasio3/new/main/apiSpec/new?filename=Gimnasio_Datos_DPagos.md&amp;value=---%0Auid%3A%20Gimnasio.Datos.DPagos%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Goatym">
+            Goatym
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gimnasio.Datos.DPagos">
+
+
+
+  <h1 id="Gimnasio_Datos_DPagos" data-uid="Gimnasio.Datos.DPagos" class="text-break">
+Class DPagos  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DPagos.vb/#L41"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gimnasio.html">Gimnasio</a>.<a class="xref" href="Gimnasio.Datos.html">Datos</a></dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Clase de acceso a datos para la gestión de pagos en el sistema de gimnasio.
+Hereda de <a class="xref" href="Gimnasio.Datos.ConexionBase.html">ConexionBase</a> y utiliza la entidad <a class="xref" href="Gimnasio.Entidades.Pagos.html">Pagos</a>.
+Proporciona métodos CRUD y de búsqueda para la tabla pagos y la vista vista_pagos.</p>
+<p>La vista consolida la información relevante de los registros de pagos,
+Permite consultar en una sola consulta los datos del pago, el miembro, el plan, el usuario que registró el pago.
+Realiza LEFT JOIN entre pagos y las demás tablas, permitiendo obtener la información de pagos
+incluso si los datos de miembro, membresía, plan o usuario no están presentes.</p>
+<pre><code class="lang-csharp">VIEW `vista_pagos` AS
+   SELECT 
+       `p`.`id_pago` AS `id_pago`,
+       `p`.`id_membresia` AS `id_membresia`,
+       `p`.`id_usuario_registro` AS `id_usuario_registro`,
+       `m`.`apellido` AS `apellido_miembro`,
+       `m`.`nombre` AS `nombre_miembro`,
+       `m`.`dni` AS `dni_miembro`,
+       `pm`.`nombre_plan` AS `nombre_plan`,
+       `p`.`monto_pagado` AS `monto`,
+       `p`.`metodo_pago` AS `metodo`,
+       `p`.`numero_comprobante` AS `comprobante`,
+       `p`.`notas` AS `notas`,
+       `p`.`fecha_pago` AS `fecha_pago`,
+       `us`.`nombre_completo` AS `nombre_usuario`
+   FROM
+       ((((`pagos` `p`
+       LEFT JOIN `membresias_miembro` `mm` ON ((`p`.`id_membresia` = `mm`.`id_membresia`)))
+       LEFT JOIN `miembros` `m` ON ((`mm`.`id_miembro` = `m`.`id_miembro`)))
+       LEFT JOIN `planes_membresia` `pm` ON ((`mm`.`id_plan` = `pm`.`id_plan`)))
+       LEFT JOIN `usuarios_sistema` `us` ON ((`p`.`id_usuario_registro` = `us`.`id_usuario`)))
+   ORDER BY `p`.`fecha_pago` DESC</code></pre>
+<p>Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DPagos : ConexionBase</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Gimnasio.Datos.ConexionBase.html">ConexionBase</a></div>
+      <div><span class="xref">DPagos</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gimnasio_Datos_DPagos_Actualizar_" data-uid="Gimnasio.Datos.DPagos.Actualizar*"></a>
+
+  <h3 id="Gimnasio_Datos_DPagos_Actualizar_Gimnasio_Entidades_Pagos_" data-uid="Gimnasio.Datos.DPagos.Actualizar(Gimnasio.Entidades.Pagos)">
+  Actualizar(Pagos)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DPagos.vb/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Recibe una instancia de Pago y ejecuta una sentencia SQL (UPDATE) que actualiza los datos de un registro de pago existente que
+corresponde al id de la instancia.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Actualizar(Pagos pago)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pago</code> <a class="xref" href="Gimnasio.Entidades.Pagos.html">Pagos</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Entidades.Pagos.html">Pagos</a> con los datos actualizados.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Datos_DPagos_Eliminar_" data-uid="Gimnasio.Datos.DPagos.Eliminar*"></a>
+
+  <h3 id="Gimnasio_Datos_DPagos_Eliminar_System_UInt32_" data-uid="Gimnasio.Datos.DPagos.Eliminar(System.UInt32)">
+  Eliminar(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DPagos.vb/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Recibe el id del pago a eliminar y ejecuta una sentencia SQL (DELETE) que elimina el registro de pago correspondiente.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Eliminar(uint id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Identificador único del pago a eliminar.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Datos_DPagos_Insertar_" data-uid="Gimnasio.Datos.DPagos.Insertar*"></a>
+
+  <h3 id="Gimnasio_Datos_DPagos_Insertar_Gimnasio_Entidades_Pagos_" data-uid="Gimnasio.Datos.DPagos.Insertar(Gimnasio.Entidades.Pagos)">
+  Insertar(Pagos)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DPagos.vb/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Recibe una instancia de Pagos y ejecuta una sentencia SQL (INSERT) que inserta un nuevo registro de pago con los datos proporcionados.
+Si los datos son nulos, se insertará NULL en la base de datos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Insertar(Pagos pago)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pago</code> <a class="xref" href="Gimnasio.Entidades.Pagos.html">Pagos</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Entidades.Pagos.html">Pagos</a> a insertar.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Datos_DPagos_Listar_" data-uid="Gimnasio.Datos.DPagos.Listar*"></a>
+
+  <h3 id="Gimnasio_Datos_DPagos_Listar" data-uid="Gimnasio.Datos.DPagos.Listar">
+  Listar()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DPagos.vb/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Realizaa una consulta SQL(SELECT) que Obtiene todos los pagos desde la vista_pagos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable Listar()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los datos de los pagos.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Datos_DPagos_ListarPorDni_" data-uid="Gimnasio.Datos.DPagos.ListarPorDni*"></a>
+
+  <h3 id="Gimnasio_Datos_DPagos_ListarPorDni_System_String_" data-uid="Gimnasio.Datos.DPagos.ListarPorDni(System.String)">
+  ListarPorDni(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DPagos.vb/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Recibe un dni de miembro y ejecuta una sentencia SQL (SELECT) que obtiene los registros de pagos correspondientes al miembro.
+Permite buscar por parte del DNI utilizando la cláusula LIKE.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable ListarPorDni(string dni)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dni</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>DNI o parte del DNI del miembro a buscar.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los resultados de la búsqueda.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Datos_DPagos_ListarPorFecha_" data-uid="Gimnasio.Datos.DPagos.ListarPorFecha*"></a>
+
+  <h3 id="Gimnasio_Datos_DPagos_ListarPorFecha_System_DateTime_System_DateTime_" data-uid="Gimnasio.Datos.DPagos.ListarPorFecha(System.DateTime,System.DateTime)">
+  ListarPorFecha(DateTime, DateTime)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DPagos.vb/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Realiza una consulta SQL (SELECT) sobre la vista_pagos para obtener los registros cuya fecha de pago se encuentre
+dentro del rango proporcionado.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable ListarPorFecha(DateTime fechaInicio, DateTime fechaFin)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fechaInicio</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>Fecha de inicio del rango.</p>
+</dd>
+    <dt><code>fechaFin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>Fecha de fin del rango.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los resultados de la búsqueda.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Datos_DPagos_ListarPorMetodoPago_" data-uid="Gimnasio.Datos.DPagos.ListarPorMetodoPago*"></a>
+
+  <h3 id="Gimnasio_Datos_DPagos_ListarPorMetodoPago_System_String_" data-uid="Gimnasio.Datos.DPagos.ListarPorMetodoPago(System.String)">
+  ListarPorMetodoPago(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DPagos.vb/#L184"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Recibe el metodo de pago y ejecuta una sentencia SQL (SELECT) que obtiene los registros de pago que tienen ese metodo.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable ListarPorMetodoPago(string metodoPago)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>metodoPago</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Método de pago a buscar.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los resultados de la búsqueda.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Datos_DPagos_ListarPorMontos_" data-uid="Gimnasio.Datos.DPagos.ListarPorMontos*"></a>
+
+  <h3 id="Gimnasio_Datos_DPagos_ListarPorMontos_System_Decimal_System_Decimal_" data-uid="Gimnasio.Datos.DPagos.ListarPorMontos(System.Decimal,System.Decimal)">
+  ListarPorMontos(decimal, decimal)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DPagos.vb/#L204"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Realiza una consulta SQL (SELECT) sobre la vista_pagos para obtener los registros cuyo monto se encuentre
+dentro del rango proporcionado.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable ListarPorMontos(decimal montoMin, decimal montoMax)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>montoMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
+    <dd><p>Monto mínimo.</p>
+</dd>
+    <dt><code>montoMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
+    <dd><p>Monto máximo.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los resultados de la búsqueda.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Datos_DPagos_ListarPorNombrePlan_" data-uid="Gimnasio.Datos.DPagos.ListarPorNombrePlan*"></a>
+
+  <h3 id="Gimnasio_Datos_DPagos_ListarPorNombrePlan_System_String_" data-uid="Gimnasio.Datos.DPagos.ListarPorNombrePlan(System.String)">
+  ListarPorNombrePlan(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DPagos.vb/#L166"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Recibe el nombre de un plan y ejecuta una sentencia SQL (SELECT) que obtiene los registros de pagos correspondientes a ese plan.
+Permite buscar por parte del nombre utilizando la cláusula LIKE.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable ListarPorNombrePlan(string nombre)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>nombre</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Nombre o parte del nombre del plan a buscar.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los resultados de la búsqueda.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DPagos.vb/#L41" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Desarrollado por Progoat
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

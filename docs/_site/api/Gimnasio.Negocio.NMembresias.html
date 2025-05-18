@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class NMembresias | Goatym </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class NMembresias | Goatym ">
+      
+      <meta name="description" content="L&#243;gica de negocio para la gesti&#243;n de membres&#237;as en el sistema de gimnasio. Interact&#250;a con la capa de datos  y la entidad . Todas las operaciones de la capa de negocio est&#225;n envueltas en bloques Try...Catch. Si ocurre una excepci&#243;n, se registra el error utilizando  en un log.txt Luego, la excepci&#243;n se propaga nuevamente mediante Throw New Exception(ex.Message).">
+      <link rel="icon" href="../images/logo.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Carlovich01/gimnasio3/new/main/apiSpec/new?filename=Gimnasio_Negocio_NMembresias.md&amp;value=---%0Auid%3A%20Gimnasio.Negocio.NMembresias%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="Goatym">
+            Goatym
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Gimnasio.Negocio.NMembresias">
+
+
+
+  <h1 id="Gimnasio_Negocio_NMembresias" data-uid="Gimnasio.Negocio.NMembresias" class="text-break">
+Class NMembresias  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Gimnasio.html">Gimnasio</a>.<a class="xref" href="Gimnasio.Negocio.html">Negocio</a></dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Lógica de negocio para la gestión de membresías en el sistema de gimnasio.
+Interactúa con la capa de datos <a class="xref" href="Gimnasio.Negocio.NMembresias.html#Gimnasio_Negocio_NMembresias_dMembresias">dMembresias</a> y la entidad <a class="xref" href="Gimnasio.Entidades.Membresias.html">Membresias</a>.
+Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.<br>
+Si ocurre una excepción, se registra el error utilizando <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_">Log(string, Exception)</a> en un log.txt
+Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class NMembresias</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NMembresias</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Gimnasio_Negocio_NMembresias_dMembresias" data-uid="Gimnasio.Negocio.NMembresias.dMembresias">
+  dMembresias
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Instancia de la capa de datos para membresías.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private DMembresias dMembresias</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gimnasio.Datos.DMembresias.html">DMembresias</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Gimnasio_Negocio_NMembresias_ActualizaAEstadoInactiva_" data-uid="Gimnasio.Negocio.NMembresias.ActualizaAEstadoInactiva*"></a>
+
+  <h3 id="Gimnasio_Negocio_NMembresias_ActualizaAEstadoInactiva" data-uid="Gimnasio.Negocio.NMembresias.ActualizaAEstadoInactiva">
+  ActualizaAEstadoInactiva()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actualiza el estado de las membresías vencidas a &quot;Inactiva&quot; utilizando <a class="xref" href="Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ActualizarAEstadoInactiva">ActualizarAEstadoInactiva()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ActualizaAEstadoInactiva()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NMembresias_Actualizar_" data-uid="Gimnasio.Negocio.NMembresias.Actualizar*"></a>
+
+  <h3 id="Gimnasio_Negocio_NMembresias_Actualizar_Gimnasio_Entidades_Membresias_" data-uid="Gimnasio.Negocio.NMembresias.Actualizar(Gimnasio.Entidades.Membresias)">
+  Actualizar(Membresias)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actualiza los datos de una membresía existente. Valida que no exista con <a class="xref" href="Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_VerificarExistenciaDeMiembroYPlan_Gimnasio_Entidades_Membresias_">VerificarExistenciaDeMiembroYPlan(Membresias)</a>
+Si no existe, actualiza la membresía en la base de datos con <a class="xref" href="Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_Actualizar_Gimnasio_Entidades_Membresias_">Actualizar(Membresias)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Actualizar(Membresias membresia)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>membresia</code> <a class="xref" href="Gimnasio.Entidades.Membresias.html">Membresias</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Entidades.Membresias.html">Membresias</a> con los datos actualizados.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NMembresias_Eliminar_" data-uid="Gimnasio.Negocio.NMembresias.Eliminar*"></a>
+
+  <h3 id="Gimnasio_Negocio_NMembresias_Eliminar_System_UInt32_" data-uid="Gimnasio.Negocio.NMembresias.Eliminar(System.UInt32)">
+  Eliminar(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Elimina una membresía según su id con <a class="xref" href="Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_Eliminar_System_UInt32_">Eliminar(uint)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Eliminar(uint id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Identificador único de la membresía a eliminar.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NMembresias_Insertar_" data-uid="Gimnasio.Negocio.NMembresias.Insertar*"></a>
+
+  <h3 id="Gimnasio_Negocio_NMembresias_Insertar_Gimnasio_Entidades_Membresias_" data-uid="Gimnasio.Negocio.NMembresias.Insertar(Gimnasio.Entidades.Membresias)">
+  Insertar(Membresias)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inserta una nueva membresía en el sistema. Valida que no exista una membresía activa o pendiente de pago para el mismo miembro y plan
+con <a class="xref" href="Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_VerificarExistenciaDeMiembroYPlan_Gimnasio_Entidades_Membresias_">VerificarExistenciaDeMiembroYPlan(Membresias)</a>.
+Si no existe, establece la fecha de inicio y fin de la membresía y la inserta en la bd con <a class="xref" href="Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_Insertar_Gimnasio_Entidades_Membresias_">Insertar(Membresias)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Insertar(Membresias membresia)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>membresia</code> <a class="xref" href="Gimnasio.Entidades.Membresias.html">Membresias</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Entidades.Membresias.html">Membresias</a> a insertar.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NMembresias_Listar_" data-uid="Gimnasio.Negocio.NMembresias.Listar*"></a>
+
+  <h3 id="Gimnasio_Negocio_NMembresias_Listar" data-uid="Gimnasio.Negocio.NMembresias.Listar">
+  Listar()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Obtiene la lista de todas las membresías registradas con <a class="xref" href="Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_Listar">Listar()</a>.
+Antes de listar, actualiza el estado de las membresías vencidas a inactivas mediante <a class="xref" href="Gimnasio.Negocio.NMembresias.html#Gimnasio_Negocio_NMembresias_ActualizaAEstadoInactiva">ActualizaAEstadoInactiva()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable Listar()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los datos de las membresías.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NMembresias_ListarPorDni_" data-uid="Gimnasio.Negocio.NMembresias.ListarPorDni*"></a>
+
+  <h3 id="Gimnasio_Negocio_NMembresias_ListarPorDni_System_String_" data-uid="Gimnasio.Negocio.NMembresias.ListarPorDni(System.String)">
+  ListarPorDni(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Busca membresías por DNI del miembro con <a class="xref" href="Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ListarPorDni_System_String_">ListarPorDni(string)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable ListarPorDni(string dni)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dni</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>DNI o parte del DNI del miembro a buscar.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los resultados de la búsqueda.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NMembresias_ListarPorEstado_" data-uid="Gimnasio.Negocio.NMembresias.ListarPorEstado*"></a>
+
+  <h3 id="Gimnasio_Negocio_NMembresias_ListarPorEstado_System_String_" data-uid="Gimnasio.Negocio.NMembresias.ListarPorEstado(System.String)">
+  ListarPorEstado(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L159"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Busca membresías por estado con <a class="xref" href="Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ListarPorEstado_System_String_">ListarPorEstado(string)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable ListarPorEstado(string estado)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>estado</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Estado de la membresía (por ejemplo: &quot;Activa&quot;, &quot;Inactiva&quot;).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los resultados de la búsqueda.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NMembresias_ListarPorNombrePlan_" data-uid="Gimnasio.Negocio.NMembresias.ListarPorNombrePlan*"></a>
+
+  <h3 id="Gimnasio_Negocio_NMembresias_ListarPorNombrePlan_System_String_" data-uid="Gimnasio.Negocio.NMembresias.ListarPorNombrePlan(System.String)">
+  ListarPorNombrePlan(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L145"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Busca membresías por nombre de plan con <a class="xref" href="Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ListarPorNombrePlan_System_String_">ListarPorNombrePlan(string)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable ListarPorNombrePlan(string nombre)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>nombre</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Nombre o parte del nombre del plan a buscar.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los resultados de la búsqueda.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>Propaga excepciones de la capa de datos.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Gimnasio_Negocio_NMembresias_ObtenerIdMembresia_" data-uid="Gimnasio.Negocio.NMembresias.ObtenerIdMembresia*"></a>
+
+  <h3 id="Gimnasio_Negocio_NMembresias_ObtenerIdMembresia_Gimnasio_Entidades_Membresias_" data-uid="Gimnasio.Negocio.NMembresias.ObtenerIdMembresia(Gimnasio.Entidades.Membresias)">
+  ObtenerIdMembresia(Membresias)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Obtiene el id de una membresía específica con <a class="xref" href="Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ObtenerIdMembresia_Gimnasio_Entidades_Membresias_">ObtenerIdMembresia(Membresias)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint ObtenerIdMembresia(Membresias membresia)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>membresia</code> <a class="xref" href="Gimnasio.Entidades.Membresias.html">Membresias</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Entidades.Membresias.html">Membresias</a> para la cual se busca el ID.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Identificador único de la membresía.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NMembresias_ObtenerMembresiaMasReciente_" data-uid="Gimnasio.Negocio.NMembresias.ObtenerMembresiaMasReciente*"></a>
+
+  <h3 id="Gimnasio_Negocio_NMembresias_ObtenerMembresiaMasReciente_System_UInt32_" data-uid="Gimnasio.Negocio.NMembresias.ObtenerMembresiaMasReciente(System.UInt32)">
+  ObtenerMembresiaMasReciente(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Obtiene la membresía más reciente de un miembro con <a class="xref" href="Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ObtenerMembresiaMasReciente_System_UInt32_">ObtenerMembresiaMasReciente(uint)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable ObtenerMembresiaMasReciente(uint idMiembro)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>idMiembro</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Identificador único del miembro.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los datos de la membresía más reciente.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Negocio_NMembresias_ObtenerPorDni_" data-uid="Gimnasio.Negocio.NMembresias.ObtenerPorDni*"></a>
+
+  <h3 id="Gimnasio_Negocio_NMembresias_ObtenerPorDni_System_String_" data-uid="Gimnasio.Negocio.NMembresias.ObtenerPorDni(System.String)">
+  ObtenerPorDni(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Obtiene una membresía por el DNI del miembro con <a class="xref" href="Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ObtenerPorDni_System_String_">ObtenerPorDni(string)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataTable ObtenerPorDni(string dni)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dni</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>DNI del miembro.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></dt>
+    <dd><p>DataTable con los datos de la membresía encontrada.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L14" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Desarrollado por Progoat
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

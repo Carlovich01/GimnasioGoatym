@@ -1,0 +1,113 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gimnasio.Presentacion
+  commentId: N:Gimnasio.Presentacion
+  id: Gimnasio.Presentacion
+  children:
+  - Gimnasio.Presentacion.FrmAsistencias
+  - Gimnasio.Presentacion.FrmLogin
+  - Gimnasio.Presentacion.FrmMembresias
+  - Gimnasio.Presentacion.FrmMiembros
+  - Gimnasio.Presentacion.FrmPagos
+  - Gimnasio.Presentacion.FrmPlanes
+  - Gimnasio.Presentacion.FrmPrincipal
+  - Gimnasio.Presentacion.FrmReclamos
+  - Gimnasio.Presentacion.FrmRegistroAsistencias
+  - Gimnasio.Presentacion.FrmUsuarios
+  langs:
+  - csharp
+  - vb
+  name: Gimnasio.Presentacion
+  nameWithType: Gimnasio.Presentacion
+  fullName: Gimnasio.Presentacion
+  type: Namespace
+  assemblies:
+  - Gimnasio.Presentacion
+references:
+- uid: Gimnasio.Presentacion.FrmAsistencias
+  commentId: T:Gimnasio.Presentacion.FrmAsistencias
+  href: Gimnasio.Presentacion.FrmAsistencias.html
+  name: FrmAsistencias
+  nameWithType: FrmAsistencias
+  fullName: Gimnasio.Presentacion.FrmAsistencias
+- uid: Gimnasio.Presentacion.FrmLogin
+  commentId: T:Gimnasio.Presentacion.FrmLogin
+  href: Gimnasio.Presentacion.FrmLogin.html
+  name: FrmLogin
+  nameWithType: FrmLogin
+  fullName: Gimnasio.Presentacion.FrmLogin
+- uid: Gimnasio.Presentacion.FrmMembresias
+  commentId: T:Gimnasio.Presentacion.FrmMembresias
+  href: Gimnasio.Presentacion.FrmMembresias.html
+  name: FrmMembresias
+  nameWithType: FrmMembresias
+  fullName: Gimnasio.Presentacion.FrmMembresias
+- uid: Gimnasio.Presentacion.FrmMiembros
+  commentId: T:Gimnasio.Presentacion.FrmMiembros
+  href: Gimnasio.Presentacion.FrmMiembros.html
+  name: FrmMiembros
+  nameWithType: FrmMiembros
+  fullName: Gimnasio.Presentacion.FrmMiembros
+- uid: Gimnasio.Presentacion.FrmPagos
+  commentId: T:Gimnasio.Presentacion.FrmPagos
+  href: Gimnasio.Presentacion.FrmPagos.html
+  name: FrmPagos
+  nameWithType: FrmPagos
+  fullName: Gimnasio.Presentacion.FrmPagos
+- uid: Gimnasio.Presentacion.FrmPlanes
+  commentId: T:Gimnasio.Presentacion.FrmPlanes
+  href: Gimnasio.Presentacion.FrmPlanes.html
+  name: FrmPlanes
+  nameWithType: FrmPlanes
+  fullName: Gimnasio.Presentacion.FrmPlanes
+- uid: Gimnasio.Presentacion.FrmPrincipal
+  commentId: T:Gimnasio.Presentacion.FrmPrincipal
+  parent: Gimnasio.Presentacion
+  href: Gimnasio.Presentacion.FrmPrincipal.html
+  name: FrmPrincipal
+  nameWithType: FrmPrincipal
+  fullName: Gimnasio.Presentacion.FrmPrincipal
+- uid: Gimnasio.Presentacion.FrmReclamos
+  commentId: T:Gimnasio.Presentacion.FrmReclamos
+  href: Gimnasio.Presentacion.FrmReclamos.html
+  name: FrmReclamos
+  nameWithType: FrmReclamos
+  fullName: Gimnasio.Presentacion.FrmReclamos
+- uid: Gimnasio.Presentacion.FrmRegistroAsistencias
+  commentId: T:Gimnasio.Presentacion.FrmRegistroAsistencias
+  parent: Gimnasio.Presentacion
+  href: Gimnasio.Presentacion.FrmRegistroAsistencias.html
+  name: FrmRegistroAsistencias
+  nameWithType: FrmRegistroAsistencias
+  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias
+- uid: Gimnasio.Presentacion.FrmUsuarios
+  commentId: T:Gimnasio.Presentacion.FrmUsuarios
+  href: Gimnasio.Presentacion.FrmUsuarios.html
+  name: FrmUsuarios
+  nameWithType: FrmUsuarios
+  fullName: Gimnasio.Presentacion.FrmUsuarios
+- uid: Gimnasio.Presentacion
+  commentId: N:Gimnasio.Presentacion
+  isExternal: true
+  href: Gimnasio.html
+  name: Gimnasio.Presentacion
+  nameWithType: Gimnasio.Presentacion
+  fullName: Gimnasio.Presentacion
+  spec.csharp:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Presentacion
+    name: Presentacion
+    href: Gimnasio.Presentacion.html
+  spec.vb:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Presentacion
+    name: Presentacion
+    href: Gimnasio.Presentacion.html

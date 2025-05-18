@@ -1,0 +1,122 @@
+### YamlMime:TableOfContent
+items:
+- uid: Gimnasio.Datos
+  name: Gimnasio.Datos
+  type: Namespace
+  items:
+  - uid: Gimnasio.Datos.ConexionBase
+    name: ConexionBase
+    type: Class
+  - uid: Gimnasio.Datos.DAsistencia
+    name: DAsistencia
+    type: Class
+  - uid: Gimnasio.Datos.DMembresias
+    name: DMembresias
+    type: Class
+  - uid: Gimnasio.Datos.DMiembros
+    name: DMiembros
+    type: Class
+  - uid: Gimnasio.Datos.DPagos
+    name: DPagos
+    type: Class
+  - uid: Gimnasio.Datos.DPlanes
+    name: DPlanes
+    type: Class
+  - uid: Gimnasio.Datos.DReclamos
+    name: DReclamos
+    type: Class
+  - uid: Gimnasio.Datos.DUsuarios
+    name: DUsuarios
+    type: Class
+- uid: Gimnasio.Entidades
+  name: Gimnasio.Entidades
+  type: Namespace
+  items:
+  - uid: Gimnasio.Entidades.Asistencia
+    name: Asistencia
+    type: Class
+  - uid: Gimnasio.Entidades.Membresias
+    name: Membresias
+    type: Class
+  - uid: Gimnasio.Entidades.Miembros
+    name: Miembros
+    type: Class
+  - uid: Gimnasio.Entidades.Pagos
+    name: Pagos
+    type: Class
+  - uid: Gimnasio.Entidades.Planes
+    name: Planes
+    type: Class
+  - uid: Gimnasio.Entidades.Reclamos
+    name: Reclamos
+    type: Class
+  - uid: Gimnasio.Entidades.Usuarios
+    name: Usuarios
+    type: Class
+- uid: Gimnasio.Errores
+  name: Gimnasio.Errores
+  type: Namespace
+  items:
+  - uid: Gimnasio.Errores.ManejarErrores
+    name: ManejarErrores
+    type: Class
+- uid: Gimnasio.Negocio
+  name: Gimnasio.Negocio
+  type: Namespace
+  items:
+  - uid: Gimnasio.Negocio.NAsistencia
+    name: NAsistencia
+    type: Class
+  - uid: Gimnasio.Negocio.NMembresias
+    name: NMembresias
+    type: Class
+  - uid: Gimnasio.Negocio.NMiembros
+    name: NMiembros
+    type: Class
+  - uid: Gimnasio.Negocio.NPagos
+    name: NPagos
+    type: Class
+  - uid: Gimnasio.Negocio.NPlanes
+    name: NPlanes
+    type: Class
+  - uid: Gimnasio.Negocio.NReclamos
+    name: NReclamos
+    type: Class
+  - uid: Gimnasio.Negocio.NUsuarios
+    name: NUsuarios
+    type: Class
+- uid: Gimnasio.Presentacion
+  name: Gimnasio.Presentacion
+  type: Namespace
+  items:
+  - uid: Gimnasio.Presentacion.FrmAsistencias
+    name: FrmAsistencias
+    type: Class
+  - uid: Gimnasio.Presentacion.FrmLogin
+    name: FrmLogin
+    type: Class
+  - uid: Gimnasio.Presentacion.FrmMembresias
+    name: FrmMembresias
+    type: Class
+  - uid: Gimnasio.Presentacion.FrmMiembros
+    name: FrmMiembros
+    type: Class
+  - uid: Gimnasio.Presentacion.FrmPagos
+    name: FrmPagos
+    type: Class
+  - uid: Gimnasio.Presentacion.FrmPlanes
+    name: FrmPlanes
+    type: Class
+  - uid: Gimnasio.Presentacion.FrmPrincipal
+    name: FrmPrincipal
+    type: Class
+  - uid: Gimnasio.Presentacion.FrmReclamos
+    name: FrmReclamos
+    type: Class
+  - uid: Gimnasio.Presentacion.FrmRegistroAsistencias
+    name: FrmRegistroAsistencias
+    type: Class
+  - uid: Gimnasio.Presentacion.FrmUsuarios
+    name: FrmUsuarios
+    type: Class
+memberLayout: SamePage

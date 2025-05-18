@@ -1,0 +1,105 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gimnasio.Datos
+  commentId: N:Gimnasio.Datos
+  id: Gimnasio.Datos
+  children:
+  - Gimnasio.Datos.ConexionBase
+  - Gimnasio.Datos.DAsistencia
+  - Gimnasio.Datos.DMembresias
+  - Gimnasio.Datos.DMiembros
+  - Gimnasio.Datos.DPagos
+  - Gimnasio.Datos.DPlanes
+  - Gimnasio.Datos.DReclamos
+  - Gimnasio.Datos.DUsuarios
+  langs:
+  - csharp
+  - vb
+  name: Gimnasio.Datos
+  nameWithType: Gimnasio.Datos
+  fullName: Gimnasio.Datos
+  type: Namespace
+  assemblies:
+  - Gimnasio.Datos
+references:
+- uid: Gimnasio.Datos.ConexionBase
+  commentId: T:Gimnasio.Datos.ConexionBase
+  parent: Gimnasio.Datos
+  href: Gimnasio.Datos.ConexionBase.html
+  name: ConexionBase
+  nameWithType: ConexionBase
+  fullName: Gimnasio.Datos.ConexionBase
+- uid: Gimnasio.Datos.DAsistencia
+  commentId: T:Gimnasio.Datos.DAsistencia
+  parent: Gimnasio.Datos
+  href: Gimnasio.Datos.DAsistencia.html
+  name: DAsistencia
+  nameWithType: DAsistencia
+  fullName: Gimnasio.Datos.DAsistencia
+- uid: Gimnasio.Datos.DMembresias
+  commentId: T:Gimnasio.Datos.DMembresias
+  parent: Gimnasio.Datos
+  href: Gimnasio.Datos.DMembresias.html
+  name: DMembresias
+  nameWithType: DMembresias
+  fullName: Gimnasio.Datos.DMembresias
+- uid: Gimnasio.Datos.DMiembros
+  commentId: T:Gimnasio.Datos.DMiembros
+  parent: Gimnasio.Datos
+  href: Gimnasio.Datos.DMiembros.html
+  name: DMiembros
+  nameWithType: DMiembros
+  fullName: Gimnasio.Datos.DMiembros
+- uid: Gimnasio.Datos.DPagos
+  commentId: T:Gimnasio.Datos.DPagos
+  parent: Gimnasio.Datos
+  href: Gimnasio.Datos.DPagos.html
+  name: DPagos
+  nameWithType: DPagos
+  fullName: Gimnasio.Datos.DPagos
+- uid: Gimnasio.Datos.DPlanes
+  commentId: T:Gimnasio.Datos.DPlanes
+  parent: Gimnasio.Datos
+  href: Gimnasio.Datos.DPlanes.html
+  name: DPlanes
+  nameWithType: DPlanes
+  fullName: Gimnasio.Datos.DPlanes
+- uid: Gimnasio.Datos.DReclamos
+  commentId: T:Gimnasio.Datos.DReclamos
+  parent: Gimnasio.Datos
+  href: Gimnasio.Datos.DReclamos.html
+  name: DReclamos
+  nameWithType: DReclamos
+  fullName: Gimnasio.Datos.DReclamos
+- uid: Gimnasio.Datos.DUsuarios
+  commentId: T:Gimnasio.Datos.DUsuarios
+  parent: Gimnasio.Datos
+  href: Gimnasio.Datos.DUsuarios.html
+  name: DUsuarios
+  nameWithType: DUsuarios
+  fullName: Gimnasio.Datos.DUsuarios
+- uid: Gimnasio.Datos
+  commentId: N:Gimnasio.Datos
+  isExternal: true
+  href: Gimnasio.html
+  name: Gimnasio.Datos
+  nameWithType: Gimnasio.Datos
+  fullName: Gimnasio.Datos
+  spec.csharp:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Datos
+    name: Datos
+    href: Gimnasio.Datos.html
+  spec.vb:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Datos
+    name: Datos
+    href: Gimnasio.Datos.html

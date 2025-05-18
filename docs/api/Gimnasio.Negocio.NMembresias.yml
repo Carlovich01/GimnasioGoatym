@@ -1,0 +1,1341 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gimnasio.Negocio.NMembresias
+  commentId: T:Gimnasio.Negocio.NMembresias
+  id: NMembresias
+  parent: Gimnasio.Negocio
+  children:
+  - Gimnasio.Negocio.NMembresias.ActualizaAEstadoInactiva
+  - Gimnasio.Negocio.NMembresias.Actualizar(Gimnasio.Entidades.Membresias)
+  - Gimnasio.Negocio.NMembresias.Eliminar(System.UInt32)
+  - Gimnasio.Negocio.NMembresias.Insertar(Gimnasio.Entidades.Membresias)
+  - Gimnasio.Negocio.NMembresias.Listar
+  - Gimnasio.Negocio.NMembresias.ListarPorDni(System.String)
+  - Gimnasio.Negocio.NMembresias.ListarPorEstado(System.String)
+  - Gimnasio.Negocio.NMembresias.ListarPorNombrePlan(System.String)
+  - Gimnasio.Negocio.NMembresias.ObtenerIdMembresia(Gimnasio.Entidades.Membresias)
+  - Gimnasio.Negocio.NMembresias.ObtenerMembresiaMasReciente(System.UInt32)
+  - Gimnasio.Negocio.NMembresias.ObtenerPorDni(System.String)
+  - Gimnasio.Negocio.NMembresias.dMembresias
+  langs:
+  - csharp
+  - vb
+  name: NMembresias
+  nameWithType: NMembresias
+  fullName: Gimnasio.Negocio.NMembresias
+  type: Class
+  source:
+    remote:
+      path: Gimnasio.Negocio/NMembresias.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: NMembresias
+    path: ../Gimnasio.Negocio/NMembresias.vb
+    startLine: 13
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: >-
+    Lógica de negocio para la gestión de membresías en el sistema de gimnasio.
+
+    Interactúa con la capa de datos <xref href="Gimnasio.Negocio.NMembresias.dMembresias" data-throw-if-not-resolved="false"></xref> y la entidad <xref href="Gimnasio.Entidades.Membresias" data-throw-if-not-resolved="false"></xref>.
+
+    Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.  
+
+    Si ocurre una excepción, se registra el error utilizando <xref href="Gimnasio.Errores.ManejarErrores.Log(System.String%2cSystem.Exception)" data-throw-if-not-resolved="false"></xref> en un log.txt
+
+    Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).
+  example: []
+  syntax:
+    content: public class NMembresias
+    content.vb: Public Class NMembresias
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.Finalize
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Gimnasio.Negocio.NMembresias.dMembresias
+  commentId: F:Gimnasio.Negocio.NMembresias.dMembresias
+  id: dMembresias
+  parent: Gimnasio.Negocio.NMembresias
+  langs:
+  - csharp
+  - vb
+  name: dMembresias
+  nameWithType: NMembresias.dMembresias
+  fullName: Gimnasio.Negocio.NMembresias.dMembresias
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Negocio/NMembresias.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: dMembresias
+    path: ../Gimnasio.Negocio/NMembresias.vb
+    startLine: 17
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: Instancia de la capa de datos para membresías.
+  example: []
+  syntax:
+    content: private DMembresias dMembresias
+    return:
+      type: Gimnasio.Datos.DMembresias
+    content.vb: Private dMembresias As DMembresias
+- uid: Gimnasio.Negocio.NMembresias.ActualizaAEstadoInactiva
+  commentId: M:Gimnasio.Negocio.NMembresias.ActualizaAEstadoInactiva
+  id: ActualizaAEstadoInactiva
+  parent: Gimnasio.Negocio.NMembresias
+  langs:
+  - csharp
+  - vb
+  name: ActualizaAEstadoInactiva()
+  nameWithType: NMembresias.ActualizaAEstadoInactiva()
+  fullName: Gimnasio.Negocio.NMembresias.ActualizaAEstadoInactiva()
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NMembresias.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: ActualizaAEstadoInactiva
+    path: ../Gimnasio.Negocio/NMembresias.vb
+    startLine: 22
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: Actualiza el estado de las membresías vencidas a "Inactiva" utilizando <xref href="Gimnasio.Datos.DMembresias.ActualizarAEstadoInactiva" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void ActualizaAEstadoInactiva()
+    content.vb: Public Sub ActualizaAEstadoInactiva()
+  overload: Gimnasio.Negocio.NMembresias.ActualizaAEstadoInactiva*
+- uid: Gimnasio.Negocio.NMembresias.Listar
+  commentId: M:Gimnasio.Negocio.NMembresias.Listar
+  id: Listar
+  parent: Gimnasio.Negocio.NMembresias
+  langs:
+  - csharp
+  - vb
+  name: Listar()
+  nameWithType: NMembresias.Listar()
+  fullName: Gimnasio.Negocio.NMembresias.Listar()
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NMembresias.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Listar
+    path: ../Gimnasio.Negocio/NMembresias.vb
+    startLine: 36
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: >-
+    Obtiene la lista de todas las membresías registradas con <xref href="Gimnasio.Datos.DMembresias.Listar" data-throw-if-not-resolved="false"></xref>.
+
+    Antes de listar, actualiza el estado de las membresías vencidas a inactivas mediante <xref href="Gimnasio.Negocio.NMembresias.ActualizaAEstadoInactiva" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public DataTable Listar()
+    return:
+      type: System.Data.DataTable
+      description: DataTable con los datos de las membresías.
+    content.vb: Public Function Listar() As DataTable
+  overload: Gimnasio.Negocio.NMembresias.Listar*
+- uid: Gimnasio.Negocio.NMembresias.Insertar(Gimnasio.Entidades.Membresias)
+  commentId: M:Gimnasio.Negocio.NMembresias.Insertar(Gimnasio.Entidades.Membresias)
+  id: Insertar(Gimnasio.Entidades.Membresias)
+  parent: Gimnasio.Negocio.NMembresias
+  langs:
+  - csharp
+  - vb
+  name: Insertar(Membresias)
+  nameWithType: NMembresias.Insertar(Membresias)
+  fullName: Gimnasio.Negocio.NMembresias.Insertar(Gimnasio.Entidades.Membresias)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NMembresias.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Insertar
+    path: ../Gimnasio.Negocio/NMembresias.vb
+    startLine: 52
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: >-
+    Inserta una nueva membresía en el sistema. Valida que no exista una membresía activa o pendiente de pago para el mismo miembro y plan
+
+    con <xref href="Gimnasio.Datos.DMembresias.VerificarExistenciaDeMiembroYPlan(Gimnasio.Entidades.Membresias)" data-throw-if-not-resolved="false"></xref>.
+
+    Si no existe, establece la fecha de inicio y fin de la membresía y la inserta en la bd con <xref href="Gimnasio.Datos.DMembresias.Insertar(Gimnasio.Entidades.Membresias)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void Insertar(Membresias membresia)
+    parameters:
+    - id: membresia
+      type: Gimnasio.Entidades.Membresias
+      description: Instancia de <xref href="Gimnasio.Entidades.Membresias" data-throw-if-not-resolved="false"></xref> a insertar.
+    content.vb: Public Sub Insertar(membresia As Membresias)
+  overload: Gimnasio.Negocio.NMembresias.Insertar*
+- uid: Gimnasio.Negocio.NMembresias.Actualizar(Gimnasio.Entidades.Membresias)
+  commentId: M:Gimnasio.Negocio.NMembresias.Actualizar(Gimnasio.Entidades.Membresias)
+  id: Actualizar(Gimnasio.Entidades.Membresias)
+  parent: Gimnasio.Negocio.NMembresias
+  langs:
+  - csharp
+  - vb
+  name: Actualizar(Membresias)
+  nameWithType: NMembresias.Actualizar(Membresias)
+  fullName: Gimnasio.Negocio.NMembresias.Actualizar(Gimnasio.Entidades.Membresias)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NMembresias.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Actualizar
+    path: ../Gimnasio.Negocio/NMembresias.vb
+    startLine: 71
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: >-
+    Actualiza los datos de una membresía existente. Valida que no exista con <xref href="Gimnasio.Datos.DMembresias.VerificarExistenciaDeMiembroYPlan(Gimnasio.Entidades.Membresias)" data-throw-if-not-resolved="false"></xref>
+
+    Si no existe, actualiza la membresía en la base de datos con <xref href="Gimnasio.Datos.DMembresias.Actualizar(Gimnasio.Entidades.Membresias)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void Actualizar(Membresias membresia)
+    parameters:
+    - id: membresia
+      type: Gimnasio.Entidades.Membresias
+      description: Instancia de <xref href="Gimnasio.Entidades.Membresias" data-throw-if-not-resolved="false"></xref> con los datos actualizados.
+    content.vb: Public Sub Actualizar(membresia As Membresias)
+  overload: Gimnasio.Negocio.NMembresias.Actualizar*
+- uid: Gimnasio.Negocio.NMembresias.Eliminar(System.UInt32)
+  commentId: M:Gimnasio.Negocio.NMembresias.Eliminar(System.UInt32)
+  id: Eliminar(System.UInt32)
+  parent: Gimnasio.Negocio.NMembresias
+  langs:
+  - csharp
+  - vb
+  name: Eliminar(uint)
+  nameWithType: NMembresias.Eliminar(uint)
+  fullName: Gimnasio.Negocio.NMembresias.Eliminar(uint)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NMembresias.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: Eliminar
+    path: ../Gimnasio.Negocio/NMembresias.vb
+    startLine: 87
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: Elimina una membresía según su id con <xref href="Gimnasio.Datos.DMembresias.Eliminar(System.UInt32)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void Eliminar(uint id)
+    parameters:
+    - id: id
+      type: System.UInt32
+      description: Identificador único de la membresía a eliminar.
+    content.vb: Public Sub Eliminar(id As UInteger)
+  overload: Gimnasio.Negocio.NMembresias.Eliminar*
+  nameWithType.vb: NMembresias.Eliminar(UInteger)
+  fullName.vb: Gimnasio.Negocio.NMembresias.Eliminar(UInteger)
+  name.vb: Eliminar(UInteger)
+- uid: Gimnasio.Negocio.NMembresias.ObtenerIdMembresia(Gimnasio.Entidades.Membresias)
+  commentId: M:Gimnasio.Negocio.NMembresias.ObtenerIdMembresia(Gimnasio.Entidades.Membresias)
+  id: ObtenerIdMembresia(Gimnasio.Entidades.Membresias)
+  parent: Gimnasio.Negocio.NMembresias
+  langs:
+  - csharp
+  - vb
+  name: ObtenerIdMembresia(Membresias)
+  nameWithType: NMembresias.ObtenerIdMembresia(Membresias)
+  fullName: Gimnasio.Negocio.NMembresias.ObtenerIdMembresia(Gimnasio.Entidades.Membresias)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NMembresias.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: ObtenerIdMembresia
+    path: ../Gimnasio.Negocio/NMembresias.vb
+    startLine: 101
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: Obtiene el id de una membresía específica con <xref href="Gimnasio.Datos.DMembresias.ObtenerIdMembresia(Gimnasio.Entidades.Membresias)" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public uint ObtenerIdMembresia(Membresias membresia)
+    parameters:
+    - id: membresia
+      type: Gimnasio.Entidades.Membresias
+      description: Instancia de <xref href="Gimnasio.Entidades.Membresias" data-throw-if-not-resolved="false"></xref> para la cual se busca el ID.
+    return:
+      type: System.UInt32
+      description: Identificador único de la membresía.
+    content.vb: Public Function ObtenerIdMembresia(membresia As Membresias) As UInteger
+  overload: Gimnasio.Negocio.NMembresias.ObtenerIdMembresia*
+- uid: Gimnasio.Negocio.NMembresias.ObtenerPorDni(System.String)
+  commentId: M:Gimnasio.Negocio.NMembresias.ObtenerPorDni(System.String)
+  id: ObtenerPorDni(System.String)
+  parent: Gimnasio.Negocio.NMembresias
+  langs:
+  - csharp
+  - vb
+  name: ObtenerPorDni(string)
+  nameWithType: NMembresias.ObtenerPorDni(string)
+  fullName: Gimnasio.Negocio.NMembresias.ObtenerPorDni(string)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NMembresias.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: ObtenerPorDni
+    path: ../Gimnasio.Negocio/NMembresias.vb
+    startLine: 115
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: Obtiene una membresía por el DNI del miembro con <xref href="Gimnasio.Datos.DMembresias.ObtenerPorDni(System.String)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public DataTable ObtenerPorDni(string dni)
+    parameters:
+    - id: dni
+      type: System.String
+      description: DNI del miembro.
+    return:
+      type: System.Data.DataTable
+      description: DataTable con los datos de la membresía encontrada.
+    content.vb: Public Function ObtenerPorDni(dni As String) As DataTable
+  overload: Gimnasio.Negocio.NMembresias.ObtenerPorDni*
+  nameWithType.vb: NMembresias.ObtenerPorDni(String)
+  fullName.vb: Gimnasio.Negocio.NMembresias.ObtenerPorDni(String)
+  name.vb: ObtenerPorDni(String)
+- uid: Gimnasio.Negocio.NMembresias.ListarPorDni(System.String)
+  commentId: M:Gimnasio.Negocio.NMembresias.ListarPorDni(System.String)
+  id: ListarPorDni(System.String)
+  parent: Gimnasio.Negocio.NMembresias
+  langs:
+  - csharp
+  - vb
+  name: ListarPorDni(string)
+  nameWithType: NMembresias.ListarPorDni(string)
+  fullName: Gimnasio.Negocio.NMembresias.ListarPorDni(string)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NMembresias.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: ListarPorDni
+    path: ../Gimnasio.Negocio/NMembresias.vb
+    startLine: 129
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: Busca membresías por DNI del miembro con <xref href="Gimnasio.Datos.DMembresias.ListarPorDni(System.String)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public DataTable ListarPorDni(string dni)
+    parameters:
+    - id: dni
+      type: System.String
+      description: DNI o parte del DNI del miembro a buscar.
+    return:
+      type: System.Data.DataTable
+      description: DataTable con los resultados de la búsqueda.
+    content.vb: Public Function ListarPorDni(dni As String) As DataTable
+  overload: Gimnasio.Negocio.NMembresias.ListarPorDni*
+  nameWithType.vb: NMembresias.ListarPorDni(String)
+  fullName.vb: Gimnasio.Negocio.NMembresias.ListarPorDni(String)
+  name.vb: ListarPorDni(String)
+- uid: Gimnasio.Negocio.NMembresias.ListarPorNombrePlan(System.String)
+  commentId: M:Gimnasio.Negocio.NMembresias.ListarPorNombrePlan(System.String)
+  id: ListarPorNombrePlan(System.String)
+  parent: Gimnasio.Negocio.NMembresias
+  langs:
+  - csharp
+  - vb
+  name: ListarPorNombrePlan(string)
+  nameWithType: NMembresias.ListarPorNombrePlan(string)
+  fullName: Gimnasio.Negocio.NMembresias.ListarPorNombrePlan(string)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NMembresias.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: ListarPorNombrePlan
+    path: ../Gimnasio.Negocio/NMembresias.vb
+    startLine: 144
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: Busca membresías por nombre de plan con <xref href="Gimnasio.Datos.DMembresias.ListarPorNombrePlan(System.String)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public DataTable ListarPorNombrePlan(string nombre)
+    parameters:
+    - id: nombre
+      type: System.String
+      description: Nombre o parte del nombre del plan a buscar.
+    return:
+      type: System.Data.DataTable
+      description: DataTable con los resultados de la búsqueda.
+    content.vb: Public Function ListarPorNombrePlan(nombre As String) As DataTable
+  overload: Gimnasio.Negocio.NMembresias.ListarPorNombrePlan*
+  exceptions:
+  - type: System.Exception
+    commentId: T:System.Exception
+    description: Propaga excepciones de la capa de datos.
+  nameWithType.vb: NMembresias.ListarPorNombrePlan(String)
+  fullName.vb: Gimnasio.Negocio.NMembresias.ListarPorNombrePlan(String)
+  name.vb: ListarPorNombrePlan(String)
+- uid: Gimnasio.Negocio.NMembresias.ListarPorEstado(System.String)
+  commentId: M:Gimnasio.Negocio.NMembresias.ListarPorEstado(System.String)
+  id: ListarPorEstado(System.String)
+  parent: Gimnasio.Negocio.NMembresias
+  langs:
+  - csharp
+  - vb
+  name: ListarPorEstado(string)
+  nameWithType: NMembresias.ListarPorEstado(string)
+  fullName: Gimnasio.Negocio.NMembresias.ListarPorEstado(string)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NMembresias.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: ListarPorEstado
+    path: ../Gimnasio.Negocio/NMembresias.vb
+    startLine: 158
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: Busca membresías por estado con <xref href="Gimnasio.Datos.DMembresias.ListarPorEstado(System.String)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public DataTable ListarPorEstado(string estado)
+    parameters:
+    - id: estado
+      type: System.String
+      description: 'Estado de la membresía (por ejemplo: "Activa", "Inactiva").'
+    return:
+      type: System.Data.DataTable
+      description: DataTable con los resultados de la búsqueda.
+    content.vb: Public Function ListarPorEstado(estado As String) As DataTable
+  overload: Gimnasio.Negocio.NMembresias.ListarPorEstado*
+  nameWithType.vb: NMembresias.ListarPorEstado(String)
+  fullName.vb: Gimnasio.Negocio.NMembresias.ListarPorEstado(String)
+  name.vb: ListarPorEstado(String)
+- uid: Gimnasio.Negocio.NMembresias.ObtenerMembresiaMasReciente(System.UInt32)
+  commentId: M:Gimnasio.Negocio.NMembresias.ObtenerMembresiaMasReciente(System.UInt32)
+  id: ObtenerMembresiaMasReciente(System.UInt32)
+  parent: Gimnasio.Negocio.NMembresias
+  langs:
+  - csharp
+  - vb
+  name: ObtenerMembresiaMasReciente(uint)
+  nameWithType: NMembresias.ObtenerMembresiaMasReciente(uint)
+  fullName: Gimnasio.Negocio.NMembresias.ObtenerMembresiaMasReciente(uint)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Negocio/NMembresias.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: ObtenerMembresiaMasReciente
+    path: ../Gimnasio.Negocio/NMembresias.vb
+    startLine: 172
+  assemblies:
+  - Gimnasio.Negocio
+  namespace: Gimnasio.Negocio
+  summary: Obtiene la membresía más reciente de un miembro con <xref href="Gimnasio.Datos.DMembresias.ObtenerMembresiaMasReciente(System.UInt32)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public DataTable ObtenerMembresiaMasReciente(uint idMiembro)
+    parameters:
+    - id: idMiembro
+      type: System.UInt32
+      description: Identificador único del miembro.
+    return:
+      type: System.Data.DataTable
+      description: DataTable con los datos de la membresía más reciente.
+    content.vb: Public Function ObtenerMembresiaMasReciente(idMiembro As UInteger) As DataTable
+  overload: Gimnasio.Negocio.NMembresias.ObtenerMembresiaMasReciente*
+  nameWithType.vb: NMembresias.ObtenerMembresiaMasReciente(UInteger)
+  fullName.vb: Gimnasio.Negocio.NMembresias.ObtenerMembresiaMasReciente(UInteger)
+  name.vb: ObtenerMembresiaMasReciente(UInteger)
+references:
+- uid: Gimnasio.Negocio.NMembresias.dMembresias
+  commentId: F:Gimnasio.Negocio.NMembresias.dMembresias
+  href: Gimnasio.Negocio.NMembresias.html#Gimnasio_Negocio_NMembresias_dMembresias
+  name: dMembresias
+  nameWithType: NMembresias.dMembresias
+  fullName: Gimnasio.Negocio.NMembresias.dMembresias
+- uid: Gimnasio.Entidades.Membresias
+  commentId: T:Gimnasio.Entidades.Membresias
+  parent: Gimnasio.Entidades
+  href: Gimnasio.Entidades.Membresias.html
+  name: Membresias
+  nameWithType: Membresias
+  fullName: Gimnasio.Entidades.Membresias
+- uid: Gimnasio.Errores.ManejarErrores.Log(System.String,System.Exception)
+  commentId: M:Gimnasio.Errores.ManejarErrores.Log(System.String,System.Exception)
+  isExternal: true
+  href: Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_
+  name: Log(string, Exception)
+  nameWithType: ManejarErrores.Log(string, Exception)
+  fullName: Gimnasio.Errores.ManejarErrores.Log(string, System.Exception)
+  nameWithType.vb: ManejarErrores.Log(String, Exception)
+  fullName.vb: Gimnasio.Errores.ManejarErrores.Log(String, System.Exception)
+  name.vb: Log(String, Exception)
+  spec.csharp:
+  - uid: Gimnasio.Errores.ManejarErrores.Log(System.String,System.Exception)
+    name: Log
+    href: Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Errores.ManejarErrores.Log(System.String,System.Exception)
+    name: Log
+    href: Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+- uid: Gimnasio.Negocio
+  commentId: N:Gimnasio.Negocio
+  isExternal: true
+  href: Gimnasio.html
+  name: Gimnasio.Negocio
+  nameWithType: Gimnasio.Negocio
+  fullName: Gimnasio.Negocio
+  spec.csharp:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Negocio
+    name: Negocio
+    href: Gimnasio.Negocio.html
+  spec.vb:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Negocio
+    name: Negocio
+    href: Gimnasio.Negocio.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Finalize
+  commentId: M:System.Object.Finalize
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.finalize
+  name: Finalize()
+  nameWithType: object.Finalize()
+  fullName: object.Finalize()
+  nameWithType.vb: Object.Finalize()
+  fullName.vb: Object.Finalize()
+  spec.csharp:
+  - uid: System.Object.Finalize
+    name: Finalize
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.finalize
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.Finalize
+    name: Finalize
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.finalize
+  - name: (
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Gimnasio.Entidades
+  commentId: N:Gimnasio.Entidades
+  isExternal: true
+  href: Gimnasio.html
+  name: Gimnasio.Entidades
+  nameWithType: Gimnasio.Entidades
+  fullName: Gimnasio.Entidades
+  spec.csharp:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Entidades
+    name: Entidades
+    href: Gimnasio.Entidades.html
+  spec.vb:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Entidades
+    name: Entidades
+    href: Gimnasio.Entidades.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Gimnasio.Datos.DMembresias
+  commentId: T:Gimnasio.Datos.DMembresias
+  parent: Gimnasio.Datos
+  href: Gimnasio.Datos.DMembresias.html
+  name: DMembresias
+  nameWithType: DMembresias
+  fullName: Gimnasio.Datos.DMembresias
+- uid: Gimnasio.Datos
+  commentId: N:Gimnasio.Datos
+  isExternal: true
+  href: Gimnasio.html
+  name: Gimnasio.Datos
+  nameWithType: Gimnasio.Datos
+  fullName: Gimnasio.Datos
+  spec.csharp:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Datos
+    name: Datos
+    href: Gimnasio.Datos.html
+  spec.vb:
+  - uid: Gimnasio
+    name: Gimnasio
+    isExternal: true
+    href: Gimnasio.html
+  - name: .
+  - uid: Gimnasio.Datos
+    name: Datos
+    href: Gimnasio.Datos.html
+- uid: Gimnasio.Datos.DMembresias.ActualizarAEstadoInactiva
+  commentId: M:Gimnasio.Datos.DMembresias.ActualizarAEstadoInactiva
+  href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ActualizarAEstadoInactiva
+  name: ActualizarAEstadoInactiva()
+  nameWithType: DMembresias.ActualizarAEstadoInactiva()
+  fullName: Gimnasio.Datos.DMembresias.ActualizarAEstadoInactiva()
+  spec.csharp:
+  - uid: Gimnasio.Datos.DMembresias.ActualizarAEstadoInactiva
+    name: ActualizarAEstadoInactiva
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ActualizarAEstadoInactiva
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DMembresias.ActualizarAEstadoInactiva
+    name: ActualizarAEstadoInactiva
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ActualizarAEstadoInactiva
+  - name: (
+  - name: )
+- uid: Gimnasio.Negocio.NMembresias.ActualizaAEstadoInactiva*
+  commentId: Overload:Gimnasio.Negocio.NMembresias.ActualizaAEstadoInactiva
+  href: Gimnasio.Negocio.NMembresias.html#Gimnasio_Negocio_NMembresias_ActualizaAEstadoInactiva
+  name: ActualizaAEstadoInactiva
+  nameWithType: NMembresias.ActualizaAEstadoInactiva
+  fullName: Gimnasio.Negocio.NMembresias.ActualizaAEstadoInactiva
+- uid: Gimnasio.Datos.DMembresias.Listar
+  commentId: M:Gimnasio.Datos.DMembresias.Listar
+  href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_Listar
+  name: Listar()
+  nameWithType: DMembresias.Listar()
+  fullName: Gimnasio.Datos.DMembresias.Listar()
+  spec.csharp:
+  - uid: Gimnasio.Datos.DMembresias.Listar
+    name: Listar
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_Listar
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DMembresias.Listar
+    name: Listar
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_Listar
+  - name: (
+  - name: )
+- uid: Gimnasio.Negocio.NMembresias.ActualizaAEstadoInactiva
+  commentId: M:Gimnasio.Negocio.NMembresias.ActualizaAEstadoInactiva
+  href: Gimnasio.Negocio.NMembresias.html#Gimnasio_Negocio_NMembresias_ActualizaAEstadoInactiva
+  name: ActualizaAEstadoInactiva()
+  nameWithType: NMembresias.ActualizaAEstadoInactiva()
+  fullName: Gimnasio.Negocio.NMembresias.ActualizaAEstadoInactiva()
+  spec.csharp:
+  - uid: Gimnasio.Negocio.NMembresias.ActualizaAEstadoInactiva
+    name: ActualizaAEstadoInactiva
+    href: Gimnasio.Negocio.NMembresias.html#Gimnasio_Negocio_NMembresias_ActualizaAEstadoInactiva
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Negocio.NMembresias.ActualizaAEstadoInactiva
+    name: ActualizaAEstadoInactiva
+    href: Gimnasio.Negocio.NMembresias.html#Gimnasio_Negocio_NMembresias_ActualizaAEstadoInactiva
+  - name: (
+  - name: )
+- uid: Gimnasio.Negocio.NMembresias.Listar*
+  commentId: Overload:Gimnasio.Negocio.NMembresias.Listar
+  href: Gimnasio.Negocio.NMembresias.html#Gimnasio_Negocio_NMembresias_Listar
+  name: Listar
+  nameWithType: NMembresias.Listar
+  fullName: Gimnasio.Negocio.NMembresias.Listar
+- uid: System.Data.DataTable
+  commentId: T:System.Data.DataTable
+  parent: System.Data
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.data.datatable
+  name: DataTable
+  nameWithType: DataTable
+  fullName: System.Data.DataTable
+- uid: System.Data
+  commentId: N:System.Data
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Data
+  nameWithType: System.Data
+  fullName: System.Data
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Data
+    name: Data
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.data
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Data
+    name: Data
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.data
+- uid: Gimnasio.Datos.DMembresias.VerificarExistenciaDeMiembroYPlan(Gimnasio.Entidades.Membresias)
+  commentId: M:Gimnasio.Datos.DMembresias.VerificarExistenciaDeMiembroYPlan(Gimnasio.Entidades.Membresias)
+  href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_VerificarExistenciaDeMiembroYPlan_Gimnasio_Entidades_Membresias_
+  name: VerificarExistenciaDeMiembroYPlan(Membresias)
+  nameWithType: DMembresias.VerificarExistenciaDeMiembroYPlan(Membresias)
+  fullName: Gimnasio.Datos.DMembresias.VerificarExistenciaDeMiembroYPlan(Gimnasio.Entidades.Membresias)
+  spec.csharp:
+  - uid: Gimnasio.Datos.DMembresias.VerificarExistenciaDeMiembroYPlan(Gimnasio.Entidades.Membresias)
+    name: VerificarExistenciaDeMiembroYPlan
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_VerificarExistenciaDeMiembroYPlan_Gimnasio_Entidades_Membresias_
+  - name: (
+  - uid: Gimnasio.Entidades.Membresias
+    name: Membresias
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DMembresias.VerificarExistenciaDeMiembroYPlan(Gimnasio.Entidades.Membresias)
+    name: VerificarExistenciaDeMiembroYPlan
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_VerificarExistenciaDeMiembroYPlan_Gimnasio_Entidades_Membresias_
+  - name: (
+  - uid: Gimnasio.Entidades.Membresias
+    name: Membresias
+  - name: )
+- uid: Gimnasio.Datos.DMembresias.Insertar(Gimnasio.Entidades.Membresias)
+  commentId: M:Gimnasio.Datos.DMembresias.Insertar(Gimnasio.Entidades.Membresias)
+  href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_Insertar_Gimnasio_Entidades_Membresias_
+  name: Insertar(Membresias)
+  nameWithType: DMembresias.Insertar(Membresias)
+  fullName: Gimnasio.Datos.DMembresias.Insertar(Gimnasio.Entidades.Membresias)
+  spec.csharp:
+  - uid: Gimnasio.Datos.DMembresias.Insertar(Gimnasio.Entidades.Membresias)
+    name: Insertar
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_Insertar_Gimnasio_Entidades_Membresias_
+  - name: (
+  - uid: Gimnasio.Entidades.Membresias
+    name: Membresias
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DMembresias.Insertar(Gimnasio.Entidades.Membresias)
+    name: Insertar
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_Insertar_Gimnasio_Entidades_Membresias_
+  - name: (
+  - uid: Gimnasio.Entidades.Membresias
+    name: Membresias
+  - name: )
+- uid: Gimnasio.Negocio.NMembresias.Insertar*
+  commentId: Overload:Gimnasio.Negocio.NMembresias.Insertar
+  href: Gimnasio.Negocio.NMembresias.html#Gimnasio_Negocio_NMembresias_Insertar_Gimnasio_Entidades_Membresias_
+  name: Insertar
+  nameWithType: NMembresias.Insertar
+  fullName: Gimnasio.Negocio.NMembresias.Insertar
+- uid: Gimnasio.Datos.DMembresias.Actualizar(Gimnasio.Entidades.Membresias)
+  commentId: M:Gimnasio.Datos.DMembresias.Actualizar(Gimnasio.Entidades.Membresias)
+  href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_Actualizar_Gimnasio_Entidades_Membresias_
+  name: Actualizar(Membresias)
+  nameWithType: DMembresias.Actualizar(Membresias)
+  fullName: Gimnasio.Datos.DMembresias.Actualizar(Gimnasio.Entidades.Membresias)
+  spec.csharp:
+  - uid: Gimnasio.Datos.DMembresias.Actualizar(Gimnasio.Entidades.Membresias)
+    name: Actualizar
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_Actualizar_Gimnasio_Entidades_Membresias_
+  - name: (
+  - uid: Gimnasio.Entidades.Membresias
+    name: Membresias
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DMembresias.Actualizar(Gimnasio.Entidades.Membresias)
+    name: Actualizar
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_Actualizar_Gimnasio_Entidades_Membresias_
+  - name: (
+  - uid: Gimnasio.Entidades.Membresias
+    name: Membresias
+  - name: )
+- uid: Gimnasio.Negocio.NMembresias.Actualizar*
+  commentId: Overload:Gimnasio.Negocio.NMembresias.Actualizar
+  href: Gimnasio.Negocio.NMembresias.html#Gimnasio_Negocio_NMembresias_Actualizar_Gimnasio_Entidades_Membresias_
+  name: Actualizar
+  nameWithType: NMembresias.Actualizar
+  fullName: Gimnasio.Negocio.NMembresias.Actualizar
+- uid: Gimnasio.Datos.DMembresias.Eliminar(System.UInt32)
+  commentId: M:Gimnasio.Datos.DMembresias.Eliminar(System.UInt32)
+  isExternal: true
+  href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_Eliminar_System_UInt32_
+  name: Eliminar(uint)
+  nameWithType: DMembresias.Eliminar(uint)
+  fullName: Gimnasio.Datos.DMembresias.Eliminar(uint)
+  nameWithType.vb: DMembresias.Eliminar(UInteger)
+  fullName.vb: Gimnasio.Datos.DMembresias.Eliminar(UInteger)
+  name.vb: Eliminar(UInteger)
+  spec.csharp:
+  - uid: Gimnasio.Datos.DMembresias.Eliminar(System.UInt32)
+    name: Eliminar
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_Eliminar_System_UInt32_
+  - name: (
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DMembresias.Eliminar(System.UInt32)
+    name: Eliminar
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_Eliminar_System_UInt32_
+  - name: (
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+- uid: Gimnasio.Negocio.NMembresias.Eliminar*
+  commentId: Overload:Gimnasio.Negocio.NMembresias.Eliminar
+  href: Gimnasio.Negocio.NMembresias.html#Gimnasio_Negocio_NMembresias_Eliminar_System_UInt32_
+  name: Eliminar
+  nameWithType: NMembresias.Eliminar
+  fullName: Gimnasio.Negocio.NMembresias.Eliminar
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: Gimnasio.Datos.DMembresias.ObtenerIdMembresia(Gimnasio.Entidades.Membresias)
+  commentId: M:Gimnasio.Datos.DMembresias.ObtenerIdMembresia(Gimnasio.Entidades.Membresias)
+  href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ObtenerIdMembresia_Gimnasio_Entidades_Membresias_
+  name: ObtenerIdMembresia(Membresias)
+  nameWithType: DMembresias.ObtenerIdMembresia(Membresias)
+  fullName: Gimnasio.Datos.DMembresias.ObtenerIdMembresia(Gimnasio.Entidades.Membresias)
+  spec.csharp:
+  - uid: Gimnasio.Datos.DMembresias.ObtenerIdMembresia(Gimnasio.Entidades.Membresias)
+    name: ObtenerIdMembresia
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ObtenerIdMembresia_Gimnasio_Entidades_Membresias_
+  - name: (
+  - uid: Gimnasio.Entidades.Membresias
+    name: Membresias
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DMembresias.ObtenerIdMembresia(Gimnasio.Entidades.Membresias)
+    name: ObtenerIdMembresia
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ObtenerIdMembresia_Gimnasio_Entidades_Membresias_
+  - name: (
+  - uid: Gimnasio.Entidades.Membresias
+    name: Membresias
+  - name: )
+- uid: Gimnasio.Negocio.NMembresias.ObtenerIdMembresia*
+  commentId: Overload:Gimnasio.Negocio.NMembresias.ObtenerIdMembresia
+  href: Gimnasio.Negocio.NMembresias.html#Gimnasio_Negocio_NMembresias_ObtenerIdMembresia_Gimnasio_Entidades_Membresias_
+  name: ObtenerIdMembresia
+  nameWithType: NMembresias.ObtenerIdMembresia
+  fullName: Gimnasio.Negocio.NMembresias.ObtenerIdMembresia
+- uid: Gimnasio.Datos.DMembresias.ObtenerPorDni(System.String)
+  commentId: M:Gimnasio.Datos.DMembresias.ObtenerPorDni(System.String)
+  isExternal: true
+  href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ObtenerPorDni_System_String_
+  name: ObtenerPorDni(string)
+  nameWithType: DMembresias.ObtenerPorDni(string)
+  fullName: Gimnasio.Datos.DMembresias.ObtenerPorDni(string)
+  nameWithType.vb: DMembresias.ObtenerPorDni(String)
+  fullName.vb: Gimnasio.Datos.DMembresias.ObtenerPorDni(String)
+  name.vb: ObtenerPorDni(String)
+  spec.csharp:
+  - uid: Gimnasio.Datos.DMembresias.ObtenerPorDni(System.String)
+    name: ObtenerPorDni
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ObtenerPorDni_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DMembresias.ObtenerPorDni(System.String)
+    name: ObtenerPorDni
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ObtenerPorDni_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Gimnasio.Negocio.NMembresias.ObtenerPorDni*
+  commentId: Overload:Gimnasio.Negocio.NMembresias.ObtenerPorDni
+  href: Gimnasio.Negocio.NMembresias.html#Gimnasio_Negocio_NMembresias_ObtenerPorDni_System_String_
+  name: ObtenerPorDni
+  nameWithType: NMembresias.ObtenerPorDni
+  fullName: Gimnasio.Negocio.NMembresias.ObtenerPorDni
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Gimnasio.Datos.DMembresias.ListarPorDni(System.String)
+  commentId: M:Gimnasio.Datos.DMembresias.ListarPorDni(System.String)
+  isExternal: true
+  href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ListarPorDni_System_String_
+  name: ListarPorDni(string)
+  nameWithType: DMembresias.ListarPorDni(string)
+  fullName: Gimnasio.Datos.DMembresias.ListarPorDni(string)
+  nameWithType.vb: DMembresias.ListarPorDni(String)
+  fullName.vb: Gimnasio.Datos.DMembresias.ListarPorDni(String)
+  name.vb: ListarPorDni(String)
+  spec.csharp:
+  - uid: Gimnasio.Datos.DMembresias.ListarPorDni(System.String)
+    name: ListarPorDni
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ListarPorDni_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DMembresias.ListarPorDni(System.String)
+    name: ListarPorDni
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ListarPorDni_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Gimnasio.Negocio.NMembresias.ListarPorDni*
+  commentId: Overload:Gimnasio.Negocio.NMembresias.ListarPorDni
+  href: Gimnasio.Negocio.NMembresias.html#Gimnasio_Negocio_NMembresias_ListarPorDni_System_String_
+  name: ListarPorDni
+  nameWithType: NMembresias.ListarPorDni
+  fullName: Gimnasio.Negocio.NMembresias.ListarPorDni
+- uid: Gimnasio.Datos.DMembresias.ListarPorNombrePlan(System.String)
+  commentId: M:Gimnasio.Datos.DMembresias.ListarPorNombrePlan(System.String)
+  isExternal: true
+  href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ListarPorNombrePlan_System_String_
+  name: ListarPorNombrePlan(string)
+  nameWithType: DMembresias.ListarPorNombrePlan(string)
+  fullName: Gimnasio.Datos.DMembresias.ListarPorNombrePlan(string)
+  nameWithType.vb: DMembresias.ListarPorNombrePlan(String)
+  fullName.vb: Gimnasio.Datos.DMembresias.ListarPorNombrePlan(String)
+  name.vb: ListarPorNombrePlan(String)
+  spec.csharp:
+  - uid: Gimnasio.Datos.DMembresias.ListarPorNombrePlan(System.String)
+    name: ListarPorNombrePlan
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ListarPorNombrePlan_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DMembresias.ListarPorNombrePlan(System.String)
+    name: ListarPorNombrePlan
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ListarPorNombrePlan_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: Gimnasio.Negocio.NMembresias.ListarPorNombrePlan*
+  commentId: Overload:Gimnasio.Negocio.NMembresias.ListarPorNombrePlan
+  href: Gimnasio.Negocio.NMembresias.html#Gimnasio_Negocio_NMembresias_ListarPorNombrePlan_System_String_
+  name: ListarPorNombrePlan
+  nameWithType: NMembresias.ListarPorNombrePlan
+  fullName: Gimnasio.Negocio.NMembresias.ListarPorNombrePlan
+- uid: Gimnasio.Datos.DMembresias.ListarPorEstado(System.String)
+  commentId: M:Gimnasio.Datos.DMembresias.ListarPorEstado(System.String)
+  isExternal: true
+  href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ListarPorEstado_System_String_
+  name: ListarPorEstado(string)
+  nameWithType: DMembresias.ListarPorEstado(string)
+  fullName: Gimnasio.Datos.DMembresias.ListarPorEstado(string)
+  nameWithType.vb: DMembresias.ListarPorEstado(String)
+  fullName.vb: Gimnasio.Datos.DMembresias.ListarPorEstado(String)
+  name.vb: ListarPorEstado(String)
+  spec.csharp:
+  - uid: Gimnasio.Datos.DMembresias.ListarPorEstado(System.String)
+    name: ListarPorEstado
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ListarPorEstado_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DMembresias.ListarPorEstado(System.String)
+    name: ListarPorEstado
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ListarPorEstado_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Gimnasio.Negocio.NMembresias.ListarPorEstado*
+  commentId: Overload:Gimnasio.Negocio.NMembresias.ListarPorEstado
+  href: Gimnasio.Negocio.NMembresias.html#Gimnasio_Negocio_NMembresias_ListarPorEstado_System_String_
+  name: ListarPorEstado
+  nameWithType: NMembresias.ListarPorEstado
+  fullName: Gimnasio.Negocio.NMembresias.ListarPorEstado
+- uid: Gimnasio.Datos.DMembresias.ObtenerMembresiaMasReciente(System.UInt32)
+  commentId: M:Gimnasio.Datos.DMembresias.ObtenerMembresiaMasReciente(System.UInt32)
+  isExternal: true
+  href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ObtenerMembresiaMasReciente_System_UInt32_
+  name: ObtenerMembresiaMasReciente(uint)
+  nameWithType: DMembresias.ObtenerMembresiaMasReciente(uint)
+  fullName: Gimnasio.Datos.DMembresias.ObtenerMembresiaMasReciente(uint)
+  nameWithType.vb: DMembresias.ObtenerMembresiaMasReciente(UInteger)
+  fullName.vb: Gimnasio.Datos.DMembresias.ObtenerMembresiaMasReciente(UInteger)
+  name.vb: ObtenerMembresiaMasReciente(UInteger)
+  spec.csharp:
+  - uid: Gimnasio.Datos.DMembresias.ObtenerMembresiaMasReciente(System.UInt32)
+    name: ObtenerMembresiaMasReciente
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ObtenerMembresiaMasReciente_System_UInt32_
+  - name: (
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Datos.DMembresias.ObtenerMembresiaMasReciente(System.UInt32)
+    name: ObtenerMembresiaMasReciente
+    href: Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ObtenerMembresiaMasReciente_System_UInt32_
+  - name: (
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+- uid: Gimnasio.Negocio.NMembresias.ObtenerMembresiaMasReciente*
+  commentId: Overload:Gimnasio.Negocio.NMembresias.ObtenerMembresiaMasReciente
+  href: Gimnasio.Negocio.NMembresias.html#Gimnasio_Negocio_NMembresias_ObtenerMembresiaMasReciente_System_UInt32_
+  name: ObtenerMembresiaMasReciente
+  nameWithType: NMembresias.ObtenerMembresiaMasReciente
+  fullName: Gimnasio.Negocio.NMembresias.ObtenerMembresiaMasReciente

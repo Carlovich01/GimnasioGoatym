@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: LogDeErrores
+  commentId: N:LogDeErrores
+  id: LogDeErrores
+  children:
+  - LogDeErrores.Logger
+  langs:
+  - csharp
+  - vb
+  name: LogDeErrores
+  nameWithType: LogDeErrores
+  fullName: LogDeErrores
+  type: Namespace
+  assemblies:
+  - LogDeErrores
+references:
+- uid: LogDeErrores.Logger
+  commentId: T:LogDeErrores.Logger
+  href: LogDeErrores.Logger.html
+  name: Logger
+  nameWithType: Logger
+  fullName: LogDeErrores.Logger
