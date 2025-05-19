@@ -25,6 +25,12 @@ Public Class FrmPrincipal
     Private usuarioActual As Usuarios
 
     ''' <summary>
+    ''' Referencia al formulario de registro de asistencias <see cref="FrmRegistroAsistencias"/>.
+    ''' Se utiliza para mantener la instancia viva entre cambios de formularios.
+    ''' </summary>
+    Private frmRegistroAsistencias As FrmRegistroAsistencias
+
+    ''' <summary>
     ''' Constructor del formulario principal.
     ''' - Inicializa los componentes visuales del formulario.
     ''' - Guarda la referencia a la instancia del formulario de login.
@@ -149,8 +155,11 @@ Public Class FrmPrincipal
     ''' </summary>
     Private Sub btRegistroAsistencias_Click(sender As Object, e As EventArgs) Handles btRegistroAsistencias.Click
         Try
-            Dim frmRegistrosAsistencias = New FrmRegistroAsistencias(usuarioActual)
-            MostrarFormulario(frmRegistrosAsistencias)
+
+            If frmRegistroAsistencias Is Nothing Then
+                frmRegistroAsistencias = New FrmRegistroAsistencias(usuarioActual)
+            End If
+            MostrarFormulario(frmRegistroAsistencias)
         Catch ex As Exception
             ManejarErrores.Mostrar("Error al abrir el formulario de registro de asistencias", ex)
         End Try
