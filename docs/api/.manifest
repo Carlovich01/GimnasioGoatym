@@ -692,11 +692,22 @@
   "Gimnasio.Presentacion.My.Resources.Resources.Culture": "Gimnasio.Presentacion.My.Resources.Resources.yml",
   "Gimnasio.Presentacion.My.Resources.Resources.ResourceManager": "Gimnasio.Presentacion.My.Resources.Resources.yml",
   "Gimnasio.Presentacion.My.Resources.Resources.casa": "Gimnasio.Presentacion.My.Resources.Resources.yml",
+  "Gimnasio.Presentacion.My.Resources.Resources.iconoMembresia": "Gimnasio.Presentacion.My.Resources.Resources.yml",
+  "Gimnasio.Presentacion.My.Resources.Resources.iconoMiembro": "Gimnasio.Presentacion.My.Resources.Resources.yml",
+  "Gimnasio.Presentacion.My.Resources.Resources.iconoPago": "Gimnasio.Presentacion.My.Resources.Resources.yml",
+  "Gimnasio.Presentacion.My.Resources.Resources.iconoPlanes": "Gimnasio.Presentacion.My.Resources.Resources.yml",
+  "Gimnasio.Presentacion.My.Resources.Resources.iconoUsuarios": "Gimnasio.Presentacion.My.Resources.Resources.yml",
+  "Gimnasio.Presentacion.My.Resources.Resources.logoAsistencia": "Gimnasio.Presentacion.My.Resources.Resources.yml",
+  "Gimnasio.Presentacion.My.Resources.Resources.logoMembresia": "Gimnasio.Presentacion.My.Resources.Resources.yml",
+  "Gimnasio.Presentacion.My.Resources.Resources.logoReclamos": "Gimnasio.Presentacion.My.Resources.Resources.yml",
+  "Gimnasio.Presentacion.My.Resources.Resources.logoUsuariosSistema": "Gimnasio.Presentacion.My.Resources.Resources.yml",
   "Gimnasio.Presentacion.My.Resources.Resources.ojoContraseña": "Gimnasio.Presentacion.My.Resources.Resources.yml",
   "Gimnasio.Presentacion.My.Resources.Resources.ojo_abierto": "Gimnasio.Presentacion.My.Resources.Resources.yml",
   "Gimnasio.Presentacion.My.Resources.Resources.ojo_cerrado": "Gimnasio.Presentacion.My.Resources.Resources.yml",
   "Gimnasio.Presentacion.My.Resources.Resources.reiniciar": "Gimnasio.Presentacion.My.Resources.Resources.yml",
   "Gimnasio.Presentacion.My.Resources.Resources.resourceCulture": "Gimnasio.Presentacion.My.Resources.Resources.yml",
   "Gimnasio.Presentacion.My.Resources.Resources.resourceMan": "Gimnasio.Presentacion.My.Resources.Resources.yml",
-  "Gimnasio.Presentacion.My.Resources.Resources.usuario": "Gimnasio.Presentacion.My.Resources.Resources.yml"
+  "Gimnasio.Presentacion.My.Resources.Resources.usuario": "Gimnasio.Presentacion.My.Resources.Resources.yml",
+  "Gimnasio.Presentacion.My.Resources.Resources.usuario_icono": "Gimnasio.Presentacion.My.Resources.Resources.yml",
+  "Gimnasio.Presentacion.My.Resources.Resources.usuario_logo2": "Gimnasio.Presentacion.My.Resources.Resources.yml"
 }

@@ -8,6 +8,15 @@ items:
   - Gimnasio.Presentacion.My.Resources.Resources.Culture
   - Gimnasio.Presentacion.My.Resources.Resources.ResourceManager
   - Gimnasio.Presentacion.My.Resources.Resources.casa
+  - Gimnasio.Presentacion.My.Resources.Resources.iconoMembresia
+  - Gimnasio.Presentacion.My.Resources.Resources.iconoMiembro
+  - Gimnasio.Presentacion.My.Resources.Resources.iconoPago
+  - Gimnasio.Presentacion.My.Resources.Resources.iconoPlanes
+  - Gimnasio.Presentacion.My.Resources.Resources.iconoUsuarios
+  - Gimnasio.Presentacion.My.Resources.Resources.logoAsistencia
+  - Gimnasio.Presentacion.My.Resources.Resources.logoMembresia
+  - Gimnasio.Presentacion.My.Resources.Resources.logoReclamos
+  - Gimnasio.Presentacion.My.Resources.Resources.logoUsuariosSistema
   - Gimnasio.Presentacion.My.Resources.Resources.ojoContraseña
   - Gimnasio.Presentacion.My.Resources.Resources.ojo_abierto
   - Gimnasio.Presentacion.My.Resources.Resources.ojo_cerrado
@@ -15,6 +24,8 @@ items:
   - Gimnasio.Presentacion.My.Resources.Resources.resourceCulture
   - Gimnasio.Presentacion.My.Resources.Resources.resourceMan
   - Gimnasio.Presentacion.My.Resources.Resources.usuario
+  - Gimnasio.Presentacion.My.Resources.Resources.usuario_icono
+  - Gimnasio.Presentacion.My.Resources.Resources.usuario_logo2
   langs:
   - csharp
   - vb
@@ -198,6 +209,285 @@ items:
       type: System.Drawing.Bitmap
     content.vb: Friend ReadOnly Property casa As Bitmap
   overload: Gimnasio.Presentacion.My.Resources.Resources.casa*
+- uid: Gimnasio.Presentacion.My.Resources.Resources.iconoMembresia
+  commentId: P:Gimnasio.Presentacion.My.Resources.Resources.iconoMembresia
+  id: iconoMembresia
+  parent: Gimnasio.Presentacion.My.Resources.Resources
+  langs:
+  - csharp
+  - vb
+  name: iconoMembresia
+  nameWithType: Resources.iconoMembresia
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.iconoMembresia
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: iconoMembresia
+    path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
+    startLine: 75
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My.Resources
+  summary: Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  example: []
+  syntax:
+    content: internal static Bitmap iconoMembresia { get; }
+    parameters: []
+    return:
+      type: System.Drawing.Bitmap
+    content.vb: Friend ReadOnly Property iconoMembresia As Bitmap
+  overload: Gimnasio.Presentacion.My.Resources.Resources.iconoMembresia*
+- uid: Gimnasio.Presentacion.My.Resources.Resources.iconoMiembro
+  commentId: P:Gimnasio.Presentacion.My.Resources.Resources.iconoMiembro
+  id: iconoMiembro
+  parent: Gimnasio.Presentacion.My.Resources.Resources
+  langs:
+  - csharp
+  - vb
+  name: iconoMiembro
+  nameWithType: Resources.iconoMiembro
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.iconoMiembro
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: iconoMiembro
+    path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
+    startLine: 85
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My.Resources
+  summary: Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  example: []
+  syntax:
+    content: internal static Bitmap iconoMiembro { get; }
+    parameters: []
+    return:
+      type: System.Drawing.Bitmap
+    content.vb: Friend ReadOnly Property iconoMiembro As Bitmap
+  overload: Gimnasio.Presentacion.My.Resources.Resources.iconoMiembro*
+- uid: Gimnasio.Presentacion.My.Resources.Resources.iconoPago
+  commentId: P:Gimnasio.Presentacion.My.Resources.Resources.iconoPago
+  id: iconoPago
+  parent: Gimnasio.Presentacion.My.Resources.Resources
+  langs:
+  - csharp
+  - vb
+  name: iconoPago
+  nameWithType: Resources.iconoPago
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.iconoPago
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: iconoPago
+    path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
+    startLine: 95
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My.Resources
+  summary: Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  example: []
+  syntax:
+    content: internal static Bitmap iconoPago { get; }
+    parameters: []
+    return:
+      type: System.Drawing.Bitmap
+    content.vb: Friend ReadOnly Property iconoPago As Bitmap
+  overload: Gimnasio.Presentacion.My.Resources.Resources.iconoPago*
+- uid: Gimnasio.Presentacion.My.Resources.Resources.iconoPlanes
+  commentId: P:Gimnasio.Presentacion.My.Resources.Resources.iconoPlanes
+  id: iconoPlanes
+  parent: Gimnasio.Presentacion.My.Resources.Resources
+  langs:
+  - csharp
+  - vb
+  name: iconoPlanes
+  nameWithType: Resources.iconoPlanes
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.iconoPlanes
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: iconoPlanes
+    path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
+    startLine: 105
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My.Resources
+  summary: Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  example: []
+  syntax:
+    content: internal static Bitmap iconoPlanes { get; }
+    parameters: []
+    return:
+      type: System.Drawing.Bitmap
+    content.vb: Friend ReadOnly Property iconoPlanes As Bitmap
+  overload: Gimnasio.Presentacion.My.Resources.Resources.iconoPlanes*
+- uid: Gimnasio.Presentacion.My.Resources.Resources.iconoUsuarios
+  commentId: P:Gimnasio.Presentacion.My.Resources.Resources.iconoUsuarios
+  id: iconoUsuarios
+  parent: Gimnasio.Presentacion.My.Resources.Resources
+  langs:
+  - csharp
+  - vb
+  name: iconoUsuarios
+  nameWithType: Resources.iconoUsuarios
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.iconoUsuarios
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: iconoUsuarios
+    path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
+    startLine: 115
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My.Resources
+  summary: Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  example: []
+  syntax:
+    content: internal static Bitmap iconoUsuarios { get; }
+    parameters: []
+    return:
+      type: System.Drawing.Bitmap
+    content.vb: Friend ReadOnly Property iconoUsuarios As Bitmap
+  overload: Gimnasio.Presentacion.My.Resources.Resources.iconoUsuarios*
+- uid: Gimnasio.Presentacion.My.Resources.Resources.logoAsistencia
+  commentId: P:Gimnasio.Presentacion.My.Resources.Resources.logoAsistencia
+  id: logoAsistencia
+  parent: Gimnasio.Presentacion.My.Resources.Resources
+  langs:
+  - csharp
+  - vb
+  name: logoAsistencia
+  nameWithType: Resources.logoAsistencia
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.logoAsistencia
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: logoAsistencia
+    path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
+    startLine: 125
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My.Resources
+  summary: Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  example: []
+  syntax:
+    content: internal static Bitmap logoAsistencia { get; }
+    parameters: []
+    return:
+      type: System.Drawing.Bitmap
+    content.vb: Friend ReadOnly Property logoAsistencia As Bitmap
+  overload: Gimnasio.Presentacion.My.Resources.Resources.logoAsistencia*
+- uid: Gimnasio.Presentacion.My.Resources.Resources.logoMembresia
+  commentId: P:Gimnasio.Presentacion.My.Resources.Resources.logoMembresia
+  id: logoMembresia
+  parent: Gimnasio.Presentacion.My.Resources.Resources
+  langs:
+  - csharp
+  - vb
+  name: logoMembresia
+  nameWithType: Resources.logoMembresia
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.logoMembresia
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: logoMembresia
+    path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
+    startLine: 135
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My.Resources
+  summary: Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  example: []
+  syntax:
+    content: internal static Bitmap logoMembresia { get; }
+    parameters: []
+    return:
+      type: System.Drawing.Bitmap
+    content.vb: Friend ReadOnly Property logoMembresia As Bitmap
+  overload: Gimnasio.Presentacion.My.Resources.Resources.logoMembresia*
+- uid: Gimnasio.Presentacion.My.Resources.Resources.logoReclamos
+  commentId: P:Gimnasio.Presentacion.My.Resources.Resources.logoReclamos
+  id: logoReclamos
+  parent: Gimnasio.Presentacion.My.Resources.Resources
+  langs:
+  - csharp
+  - vb
+  name: logoReclamos
+  nameWithType: Resources.logoReclamos
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.logoReclamos
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: logoReclamos
+    path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
+    startLine: 145
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My.Resources
+  summary: Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  example: []
+  syntax:
+    content: internal static Bitmap logoReclamos { get; }
+    parameters: []
+    return:
+      type: System.Drawing.Bitmap
+    content.vb: Friend ReadOnly Property logoReclamos As Bitmap
+  overload: Gimnasio.Presentacion.My.Resources.Resources.logoReclamos*
+- uid: Gimnasio.Presentacion.My.Resources.Resources.logoUsuariosSistema
+  commentId: P:Gimnasio.Presentacion.My.Resources.Resources.logoUsuariosSistema
+  id: logoUsuariosSistema
+  parent: Gimnasio.Presentacion.My.Resources.Resources
+  langs:
+  - csharp
+  - vb
+  name: logoUsuariosSistema
+  nameWithType: Resources.logoUsuariosSistema
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.logoUsuariosSistema
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: logoUsuariosSistema
+    path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
+    startLine: 155
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My.Resources
+  summary: Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  example: []
+  syntax:
+    content: internal static Bitmap logoUsuariosSistema { get; }
+    parameters: []
+    return:
+      type: System.Drawing.Bitmap
+    content.vb: Friend ReadOnly Property logoUsuariosSistema As Bitmap
+  overload: Gimnasio.Presentacion.My.Resources.Resources.logoUsuariosSistema*
 - uid: Gimnasio.Presentacion.My.Resources.Resources.ojo_abierto
   commentId: P:Gimnasio.Presentacion.My.Resources.Resources.ojo_abierto
   id: ojo_abierto
@@ -216,7 +506,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ojo_abierto
     path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
-    startLine: 75
+    startLine: 165
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion.My.Resources
@@ -247,7 +537,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ojo_cerrado
     path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
-    startLine: 85
+    startLine: 175
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion.My.Resources
@@ -278,7 +568,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ojoContraseña
     path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
-    startLine: 95
+    startLine: 185
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion.My.Resources
@@ -309,7 +599,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: reiniciar
     path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
-    startLine: 105
+    startLine: 195
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion.My.Resources
@@ -340,7 +630,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: usuario
     path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
-    startLine: 115
+    startLine: 205
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion.My.Resources
@@ -353,6 +643,68 @@ items:
       type: System.Drawing.Bitmap
     content.vb: Friend ReadOnly Property usuario As Bitmap
   overload: Gimnasio.Presentacion.My.Resources.Resources.usuario*
+- uid: Gimnasio.Presentacion.My.Resources.Resources.usuario_icono
+  commentId: P:Gimnasio.Presentacion.My.Resources.Resources.usuario_icono
+  id: usuario_icono
+  parent: Gimnasio.Presentacion.My.Resources.Resources
+  langs:
+  - csharp
+  - vb
+  name: usuario_icono
+  nameWithType: Resources.usuario_icono
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.usuario_icono
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: usuario_icono
+    path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
+    startLine: 215
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My.Resources
+  summary: Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  example: []
+  syntax:
+    content: internal static Bitmap usuario_icono { get; }
+    parameters: []
+    return:
+      type: System.Drawing.Bitmap
+    content.vb: Friend ReadOnly Property usuario_icono As Bitmap
+  overload: Gimnasio.Presentacion.My.Resources.Resources.usuario_icono*
+- uid: Gimnasio.Presentacion.My.Resources.Resources.usuario_logo2
+  commentId: P:Gimnasio.Presentacion.My.Resources.Resources.usuario_logo2
+  id: usuario_logo2
+  parent: Gimnasio.Presentacion.My.Resources.Resources
+  langs:
+  - csharp
+  - vb
+  name: usuario_logo2
+  nameWithType: Resources.usuario_logo2
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.usuario_logo2
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: usuario_logo2
+    path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
+    startLine: 225
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion.My.Resources
+  summary: Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  example: []
+  syntax:
+    content: internal static Bitmap usuario_logo2 { get; }
+    parameters: []
+    return:
+      type: System.Drawing.Bitmap
+    content.vb: Friend ReadOnly Property usuario_logo2 As Bitmap
+  overload: Gimnasio.Presentacion.My.Resources.Resources.usuario_logo2*
 references:
 - uid: Gimnasio.Presentacion.My.Resources
   commentId: N:Gimnasio.Presentacion.My.Resources
@@ -518,6 +870,60 @@ references:
     name: Drawing
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.drawing
+- uid: Gimnasio.Presentacion.My.Resources.Resources.iconoMembresia*
+  commentId: Overload:Gimnasio.Presentacion.My.Resources.Resources.iconoMembresia
+  href: Gimnasio.Presentacion.My.Resources.Resources.html#Gimnasio_Presentacion_My_Resources_Resources_iconoMembresia
+  name: iconoMembresia
+  nameWithType: Resources.iconoMembresia
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.iconoMembresia
+- uid: Gimnasio.Presentacion.My.Resources.Resources.iconoMiembro*
+  commentId: Overload:Gimnasio.Presentacion.My.Resources.Resources.iconoMiembro
+  href: Gimnasio.Presentacion.My.Resources.Resources.html#Gimnasio_Presentacion_My_Resources_Resources_iconoMiembro
+  name: iconoMiembro
+  nameWithType: Resources.iconoMiembro
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.iconoMiembro
+- uid: Gimnasio.Presentacion.My.Resources.Resources.iconoPago*
+  commentId: Overload:Gimnasio.Presentacion.My.Resources.Resources.iconoPago
+  href: Gimnasio.Presentacion.My.Resources.Resources.html#Gimnasio_Presentacion_My_Resources_Resources_iconoPago
+  name: iconoPago
+  nameWithType: Resources.iconoPago
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.iconoPago
+- uid: Gimnasio.Presentacion.My.Resources.Resources.iconoPlanes*
+  commentId: Overload:Gimnasio.Presentacion.My.Resources.Resources.iconoPlanes
+  href: Gimnasio.Presentacion.My.Resources.Resources.html#Gimnasio_Presentacion_My_Resources_Resources_iconoPlanes
+  name: iconoPlanes
+  nameWithType: Resources.iconoPlanes
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.iconoPlanes
+- uid: Gimnasio.Presentacion.My.Resources.Resources.iconoUsuarios*
+  commentId: Overload:Gimnasio.Presentacion.My.Resources.Resources.iconoUsuarios
+  href: Gimnasio.Presentacion.My.Resources.Resources.html#Gimnasio_Presentacion_My_Resources_Resources_iconoUsuarios
+  name: iconoUsuarios
+  nameWithType: Resources.iconoUsuarios
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.iconoUsuarios
+- uid: Gimnasio.Presentacion.My.Resources.Resources.logoAsistencia*
+  commentId: Overload:Gimnasio.Presentacion.My.Resources.Resources.logoAsistencia
+  href: Gimnasio.Presentacion.My.Resources.Resources.html#Gimnasio_Presentacion_My_Resources_Resources_logoAsistencia
+  name: logoAsistencia
+  nameWithType: Resources.logoAsistencia
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.logoAsistencia
+- uid: Gimnasio.Presentacion.My.Resources.Resources.logoMembresia*
+  commentId: Overload:Gimnasio.Presentacion.My.Resources.Resources.logoMembresia
+  href: Gimnasio.Presentacion.My.Resources.Resources.html#Gimnasio_Presentacion_My_Resources_Resources_logoMembresia
+  name: logoMembresia
+  nameWithType: Resources.logoMembresia
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.logoMembresia
+- uid: Gimnasio.Presentacion.My.Resources.Resources.logoReclamos*
+  commentId: Overload:Gimnasio.Presentacion.My.Resources.Resources.logoReclamos
+  href: Gimnasio.Presentacion.My.Resources.Resources.html#Gimnasio_Presentacion_My_Resources_Resources_logoReclamos
+  name: logoReclamos
+  nameWithType: Resources.logoReclamos
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.logoReclamos
+- uid: Gimnasio.Presentacion.My.Resources.Resources.logoUsuariosSistema*
+  commentId: Overload:Gimnasio.Presentacion.My.Resources.Resources.logoUsuariosSistema
+  href: Gimnasio.Presentacion.My.Resources.Resources.html#Gimnasio_Presentacion_My_Resources_Resources_logoUsuariosSistema
+  name: logoUsuariosSistema
+  nameWithType: Resources.logoUsuariosSistema
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.logoUsuariosSistema
 - uid: Gimnasio.Presentacion.My.Resources.Resources.ojo_abierto*
   commentId: Overload:Gimnasio.Presentacion.My.Resources.Resources.ojo_abierto
   href: Gimnasio.Presentacion.My.Resources.Resources.html#Gimnasio_Presentacion_My_Resources_Resources_ojo_abierto
@@ -548,3 +954,15 @@ references:
   name: usuario
   nameWithType: Resources.usuario
   fullName: Gimnasio.Presentacion.My.Resources.Resources.usuario
+- uid: Gimnasio.Presentacion.My.Resources.Resources.usuario_icono*
+  commentId: Overload:Gimnasio.Presentacion.My.Resources.Resources.usuario_icono
+  href: Gimnasio.Presentacion.My.Resources.Resources.html#Gimnasio_Presentacion_My_Resources_Resources_usuario_icono
+  name: usuario_icono
+  nameWithType: Resources.usuario_icono
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.usuario_icono
+- uid: Gimnasio.Presentacion.My.Resources.Resources.usuario_logo2*
+  commentId: Overload:Gimnasio.Presentacion.My.Resources.Resources.usuario_logo2
+  href: Gimnasio.Presentacion.My.Resources.Resources.html#Gimnasio_Presentacion_My_Resources_Resources_usuario_logo2
+  name: usuario_logo2
+  nameWithType: Resources.usuario_logo2
+  fullName: Gimnasio.Presentacion.My.Resources.Resources.usuario_logo2
