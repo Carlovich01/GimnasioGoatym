@@ -6,9 +6,10 @@ Imports Gimnasio.Errores
 ''' Clase de acceso a datos para la gestión de planes de membresía.
 ''' Hereda de <see cref="ConexionBase"/> y utiliza la entidad <see cref="Planes"/>.
 ''' Proporciona métodos CRUD y de búsqueda para la tabla <c>planes_membresia</c>.
-''' 
-''' Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo
 ''' </summary>
+''' <remarks>
+''' Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo
+''' </remarks>
 Public Class DPlanes
     Inherits ConexionBase
 

@@ -22,8 +22,8 @@ Partial Class FrmUsuarios
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         panelListado = New Panel()
         pbReiniciar = New PictureBox()
         btnEliminar = New Button()
@@ -41,14 +41,14 @@ Partial Class FrmUsuarios
         cbRol = New ComboBox()
         btnCancelar = New Button()
         btnGuardar = New Button()
-        Label2 = New Label()
-        labelTelefono = New Label()
-        Label3 = New Label()
+        lblNombreCompleto = New Label()
+        labelRol = New Label()
+        lblEmail = New Label()
         tbNombreCompleto = New TextBox()
         tbNombreUsuario = New TextBox()
         tbContraseña = New TextBox()
-        Label6 = New Label()
-        Label1 = New Label()
+        lblNombreUsuario = New Label()
+        lblContraseña = New Label()
         panelListado.SuspendLayout()
         CType(pbReiniciar, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvListado, ComponentModel.ISupportInitialize).BeginInit()
@@ -141,28 +141,28 @@ Partial Class FrmUsuarios
         dgvListado.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         dgvListado.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvListado.BackgroundColor = Color.FromArgb(CByte(85), CByte(96), CByte(105))
-        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = SystemColors.Window
-        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        dgvListado.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = SystemColors.Window
+        DataGridViewCellStyle3.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle3.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
+        dgvListado.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         dgvListado.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvListado.GridColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
         dgvListado.Location = New Point(11, 57)
         dgvListado.MultiSelect = False
         dgvListado.Name = "dgvListado"
         dgvListado.ReadOnly = True
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = SystemColors.Window
-        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        dgvListado.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = SystemColors.Window
+        DataGridViewCellStyle4.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
+        dgvListado.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         dgvListado.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         dgvListado.Size = New Size(986, 618)
         dgvListado.TabIndex = 41
@@ -196,14 +196,14 @@ Partial Class FrmUsuarios
         panelDatosIngreso.Controls.Add(cbRol)
         panelDatosIngreso.Controls.Add(btnCancelar)
         panelDatosIngreso.Controls.Add(btnGuardar)
-        panelDatosIngreso.Controls.Add(Label2)
-        panelDatosIngreso.Controls.Add(labelTelefono)
-        panelDatosIngreso.Controls.Add(Label3)
+        panelDatosIngreso.Controls.Add(lblNombreCompleto)
+        panelDatosIngreso.Controls.Add(labelRol)
+        panelDatosIngreso.Controls.Add(lblEmail)
         panelDatosIngreso.Controls.Add(tbNombreCompleto)
         panelDatosIngreso.Controls.Add(tbNombreUsuario)
         panelDatosIngreso.Controls.Add(tbContraseña)
-        panelDatosIngreso.Controls.Add(Label6)
-        panelDatosIngreso.Controls.Add(Label1)
+        panelDatosIngreso.Controls.Add(lblNombreUsuario)
+        panelDatosIngreso.Controls.Add(lblContraseña)
         panelDatosIngreso.Location = New Point(225, 163)
         panelDatosIngreso.Name = "panelDatosIngreso"
         panelDatosIngreso.Size = New Size(700, 449)
@@ -296,38 +296,38 @@ Partial Class FrmUsuarios
         btnGuardar.Text = "Guardar"
         btnGuardar.UseVisualStyleBackColor = False
         ' 
-        ' Label2
+        ' lblNombreCompleto
         ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 12F)
-        Label2.ForeColor = Color.White
-        Label2.Location = New Point(25, 168)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(164, 21)
-        Label2.TabIndex = 55
-        Label2.Text = "Nombre Completo (*):"
+        lblNombreCompleto.AutoSize = True
+        lblNombreCompleto.Font = New Font("Segoe UI", 12F)
+        lblNombreCompleto.ForeColor = Color.White
+        lblNombreCompleto.Location = New Point(25, 168)
+        lblNombreCompleto.Name = "lblNombreCompleto"
+        lblNombreCompleto.Size = New Size(164, 21)
+        lblNombreCompleto.TabIndex = 55
+        lblNombreCompleto.Text = "Nombre Completo (*):"
         ' 
-        ' labelTelefono
+        ' labelRol
         ' 
-        labelTelefono.AutoSize = True
-        labelTelefono.Font = New Font("Segoe UI", 12F)
-        labelTelefono.ForeColor = Color.White
-        labelTelefono.Location = New Point(132, 283)
-        labelTelefono.Name = "labelTelefono"
-        labelTelefono.Size = New Size(53, 21)
-        labelTelefono.TabIndex = 56
-        labelTelefono.Text = "Rol(*):"
+        labelRol.AutoSize = True
+        labelRol.Font = New Font("Segoe UI", 12F)
+        labelRol.ForeColor = Color.White
+        labelRol.Location = New Point(132, 283)
+        labelRol.Name = "labelRol"
+        labelRol.Size = New Size(53, 21)
+        labelRol.TabIndex = 56
+        labelRol.Text = "Rol(*):"
         ' 
-        ' Label3
+        ' lblEmail
         ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 12F)
-        Label3.ForeColor = Color.White
-        Label3.Location = New Point(132, 222)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(51, 21)
-        Label3.TabIndex = 57
-        Label3.Text = "Email:"
+        lblEmail.AutoSize = True
+        lblEmail.Font = New Font("Segoe UI", 12F)
+        lblEmail.ForeColor = Color.White
+        lblEmail.Location = New Point(132, 222)
+        lblEmail.Name = "lblEmail"
+        lblEmail.Size = New Size(51, 21)
+        lblEmail.TabIndex = 57
+        lblEmail.Text = "Email:"
         ' 
         ' tbNombreCompleto
         ' 
@@ -357,27 +357,27 @@ Partial Class FrmUsuarios
         tbContraseña.TabIndex = 62
         tbContraseña.UseSystemPasswordChar = True
         ' 
-        ' Label6
+        ' lblNombreUsuario
         ' 
-        Label6.AutoSize = True
-        Label6.Font = New Font("Segoe UI", 12F)
-        Label6.ForeColor = Color.White
-        Label6.Location = New Point(21, 49)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(167, 21)
-        Label6.TabIndex = 58
-        Label6.Text = "Nombre de Usuario(*):"
+        lblNombreUsuario.AutoSize = True
+        lblNombreUsuario.Font = New Font("Segoe UI", 12F)
+        lblNombreUsuario.ForeColor = Color.White
+        lblNombreUsuario.Location = New Point(21, 49)
+        lblNombreUsuario.Name = "lblNombreUsuario"
+        lblNombreUsuario.Size = New Size(167, 21)
+        lblNombreUsuario.TabIndex = 58
+        lblNombreUsuario.Text = "Nombre de Usuario(*):"
         ' 
-        ' Label1
+        ' lblContraseña
         ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 12F)
-        Label1.ForeColor = Color.White
-        Label1.Location = New Point(79, 104)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(109, 21)
-        Label1.TabIndex = 59
-        Label1.Text = "Contraseña(*):"
+        lblContraseña.AutoSize = True
+        lblContraseña.Font = New Font("Segoe UI", 12F)
+        lblContraseña.ForeColor = Color.White
+        lblContraseña.Location = New Point(79, 104)
+        lblContraseña.Name = "lblContraseña"
+        lblContraseña.Size = New Size(109, 21)
+        lblContraseña.TabIndex = 59
+        lblContraseña.Text = "Contraseña(*):"
         ' 
         ' FrmUsuarios
         ' 
@@ -413,14 +413,14 @@ Partial Class FrmUsuarios
     Friend WithEvents cbRol As ComboBox
     Friend WithEvents btnCancelar As Button
     Friend WithEvents btnGuardar As Button
-    Friend WithEvents Label2 As Label
-    Friend WithEvents labelTelefono As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents lblNombreCompleto As Label
+    Friend WithEvents labelRol As Label
+    Friend WithEvents lblEmail As Label
     Friend WithEvents tbNombreCompleto As TextBox
     Friend WithEvents tbNombreUsuario As TextBox
     Friend WithEvents tbContraseña As TextBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblNombreUsuario As Label
+    Friend WithEvents lblContraseña As Label
     Friend WithEvents lblDatosIngreso As Label
     Friend WithEvents pbReiniciar As PictureBox
     Friend WithEvents tbID As TextBox

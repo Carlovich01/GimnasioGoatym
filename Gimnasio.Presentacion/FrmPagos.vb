@@ -5,10 +5,12 @@ Imports Gimnasio.Errores
 ''' <summary>
 ''' Formulario para la gestión y consulta de pagos en el sistema del gimnasio. Permite listar, buscar, actualizar y eliminar pagos.
 ''' Utiliza la clase <see cref="Gimnasio.Negocio.NPagos"/> para la lógica de negocio y la clase <see cref="Pagos"/> como entidad.
+''' </summary>
+''' <remarks>
 ''' Todas las operaciones de esta capa están envueltas en bloques Try...Catch. 
 ''' El manejo de errores se realiza a través de <see cref="Gimnasio.Errores.ManejarErrores.Mostrar(String, Exception)"/>
 ''' que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.
-''' </summary>
+''' </remarks>
 Public Class FrmPagos
     ''' <summary>
     ''' Instancia de la capa de negocio para pagos.

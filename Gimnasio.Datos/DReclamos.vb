@@ -6,7 +6,8 @@ Imports Gimnasio.Errores
 ''' Clase de acceso a datos para la gestión de reclamos en el sistema de gimnasio.
 ''' Hereda de <see cref="ConexionBase"/> y utiliza la entidad <see cref="Reclamos"/>.
 ''' Proporciona métodos CRUD y de búsqueda para la tabla reclamos y la vista vista_reclamos.
-'''
+'''</summary>
+'''<remarks>
 ''' La vista consolida la información relevante de los reclamos, permitiendo consultar en una sola consulta datos del reclamo 
 ''' y el miembro que lo realizo.
 ''' Realiza LEFT JOIN entre la reclamos y miembros, permitiendo obtener la información de reclamo incluso si los datos de miembro no están presentes.
@@ -28,8 +29,7 @@ Imports Gimnasio.Errores
 ''' </code>
 ''' 
 ''' Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo
-'''
-''' </summary>
+''' </remarks>
 Public Class DReclamos
     Inherits ConexionBase
 

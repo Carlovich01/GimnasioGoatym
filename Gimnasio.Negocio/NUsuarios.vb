@@ -8,10 +8,12 @@ Imports System.Text
 ''' <summary>
 ''' Lógica de negocio para la gestión de usuarios en el sistema de gimnasio.
 ''' Interactúa con la capa de datos <see cref="DUsuarios"/> y la entidad <see cref="Usuarios"/>.
+''' </summary>
+''' <remarks>
 ''' Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.  
 ''' Si ocurre una excepción, se registra el error utilizando <see cref="ManejarErrores.Log"/> en un log.txt
 ''' Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message) para que pueda ser gestionada en la interfaz de usuario.
-''' </summary>
+''' </remarks>
 Public Class NUsuarios
     ''' <summary>
     ''' Instancia de la capa de datos para usuarios.

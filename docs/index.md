@@ -1,4 +1,4 @@
-﻿# ¡BIENVENIDOS A GOATYM!💪
+﻿# GOATYM: SISTEMA DE GESTION DE GIMNASIO💪
 ## EQUIPO DE DESARROLLO: PROGOAT
 - Casas Alan Fernando - EISI 1244
 - Diaz Carlos Emanuel - EISI 1225
@@ -8,6 +8,7 @@ Goatym es un sistema diseñado para gestión de miembros, planes de membresía, 
 ## Funciones detalladas del sistema
 
 ![Casos de Uso](images/CasosDeUso.svg)
+Diagrama de Casos de Uso del sistema.
 
 ### Gestión de Planes
 

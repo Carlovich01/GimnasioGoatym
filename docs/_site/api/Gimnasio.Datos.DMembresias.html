@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class DMembresias | Goatym ">
       
-      <meta name="description" content="Clase de acceso a datos para la gesti&#243;n de membres&#237;as en el sistema de gimnasio. Hereda de  y utiliza la entidad . Proporciona m&#233;todos CRUD y de b&#250;squeda para la tabla membresias_miembro y la vista vista_membresias. La vista_membresias es una vista SQL que consolida informaci&#243;n relevante de las membres&#237;as, uniendo datos de las tablas membresias_miembro, miembros y planes_membresia. VIEW `vista_membresias` AS    SELECT         `mm`.`id_membresia` AS `id_membresia`,        `mm`.`id_miembro` AS `id_miembro`,        `mm`.`id_plan` AS `id_plan`,        `m`.`dni` AS `dni_miembro`,        `m`.`apellido` AS `apellido_miembro`,        `m`.`nombre` AS `nombre_miembro`,        `p`.`nombre_plan` AS `nombre_plan`,        `p`.`precio` AS `precio_plan`,        `p`.`duracion_dias` AS `duracion_dias_plan`,        `mm`.`fecha_inicio` AS `fecha_inicio`,        `mm`.`fecha_fin` AS `fecha_fin`,        `mm`.`estado_membresia` AS `estado_membresia`,        `mm`.`fecha_registro` AS `fecha_registro`,        `mm`.`ultima_modificacion` AS `ultima_modificacion`    FROM        ((`membresias_miembro` `mm`        JOIN `miembros` `m` ON ((`mm`.`id_miembro` = `m`.`id_miembro`)))        JOIN `planes_membresia` `p` ON ((`mm`.`id_plan` = `p`.`id_plan`)))    ORDER BY `mm`.`ultima_modificacion` DESC Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo">
+      <meta name="description" content="Clase de acceso a datos para la gesti&#243;n de membres&#237;as en el sistema de gimnasio. Hereda de  y utiliza la entidad . Proporciona m&#233;todos CRUD y de b&#250;squeda para la tabla membresias_miembro y la vista vista_membresias.">
       <link rel="icon" href="../images/logo.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Gimnasio_Datos_DMembresias" data-uid="Gimnasio.Datos.DMembresias" class="text-break">
-Class DMembresias  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L38"><i class="bi bi-code-slash"></i></a>
+Class DMembresias  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L39"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,7 +99,31 @@ Class DMembresias  <a class="header-action link-secondary" title="View source" h
   <div class="markdown summary"><p>Clase de acceso a datos para la gestión de membresías en el sistema de gimnasio.
 Hereda de <a class="xref" href="Gimnasio.Datos.ConexionBase.html">ConexionBase</a> y utiliza la entidad <a class="xref" href="Gimnasio.Entidades.Membresias.html">Membresias</a>.
 Proporciona métodos CRUD y de búsqueda para la tabla membresias_miembro y la vista vista_membresias.</p>
-<p>La vista_membresias es una vista SQL que consolida información relevante de las membresías,
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DMembresias : ConexionBase</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Gimnasio.Datos.ConexionBase.html">ConexionBase</a></div>
+      <div><span class="xref">DMembresias</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+  <h2 id="Gimnasio_Datos_DMembresias_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>La vista_membresias es una vista SQL que consolida información relevante de las membresías,
 uniendo datos de las tablas membresias_miembro, miembros y planes_membresia.</p>
 <pre><code class="lang-csharp">VIEW `vista_membresias` AS
    SELECT 
@@ -124,28 +148,6 @@ uniendo datos de las tablas membresias_miembro, miembros y planes_membresia.</p>
    ORDER BY `mm`.`ultima_modificacion` DESC</code></pre>
 <p>Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo</p>
 </div>
-  <div class="markdown conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DMembresias : ConexionBase</code></pre>
-  </div>
-
-
-
-
-  <dl class="typelist inheritance">
-    <dt>Inheritance</dt>
-    <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><a class="xref" href="Gimnasio.Datos.ConexionBase.html">ConexionBase</a></div>
-      <div><span class="xref">DMembresias</span></div>
-    </dd>
-  </dl>
-
-
-
-
-
 
 
   <h2 class="section" id="methods">Methods
@@ -156,7 +158,7 @@ uniendo datos de las tablas membresias_miembro, miembros y planes_membresia.</p>
 
   <h3 id="Gimnasio_Datos_DMembresias_Actualizar_Gimnasio_Entidades_Membresias_" data-uid="Gimnasio.Datos.DMembresias.Actualizar(Gimnasio.Entidades.Membresias)">
   Actualizar(Membresias)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L80"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Recibe una instancia de Membresia y ejecuta una sentencia SQL (UPDATE) que actualiza el plan de un registro de membresia existente que
@@ -190,7 +192,7 @@ corresponde al id de la instancia.</p>
 
   <h3 id="Gimnasio_Datos_DMembresias_ActualizarAEstadoInactiva" data-uid="Gimnasio.Datos.DMembresias.ActualizarAEstadoInactiva">
   ActualizarAEstadoInactiva()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L163"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L164"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Ejecuta una sentencia SQL (UPDATE) que actualiza el estado de un registro de membresia existente a inactiva si la fecha de vencimiento
@@ -218,7 +220,7 @@ es menor que la fecha actual.</p>
 
   <h3 id="Gimnasio_Datos_DMembresias_ActualizarEstadoYFechas_Gimnasio_Entidades_Membresias_" data-uid="Gimnasio.Datos.DMembresias.ActualizarEstadoYFechas(Gimnasio.Entidades.Membresias)">
   ActualizarEstadoYFechas(Membresias)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L140"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L141"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Recibe una instancia de Membresia y ejecuta una sentencia SQL (UPDATE) que actualiza las fechas de un registro de membresia existente que
@@ -252,7 +254,7 @@ corresponde al id de la instancia.</p>
 
   <h3 id="Gimnasio_Datos_DMembresias_Eliminar_System_UInt32_" data-uid="Gimnasio.Datos.DMembresias.Eliminar(System.UInt32)">
   Eliminar(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L101"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Recibe el id de la membresia a eliminar y ejecuta una sentencia SQL (DELETE) que elimina el registro de membresia correspondiente.</p>
@@ -285,7 +287,7 @@ corresponde al id de la instancia.</p>
 
   <h3 id="Gimnasio_Datos_DMembresias_Insertar_Gimnasio_Entidades_Membresias_" data-uid="Gimnasio.Datos.DMembresias.Insertar(Gimnasio.Entidades.Membresias)">
   Insertar(Membresias)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L59"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Recibe una instancia de Membresia y ejecuta una sentencia SQL (INSERT) que inserta un nuevo registro de membresia con los datos proporcionados.</p>
@@ -318,7 +320,7 @@ corresponde al id de la instancia.</p>
 
   <h3 id="Gimnasio_Datos_DMembresias_Listar" data-uid="Gimnasio.Datos.DMembresias.Listar">
   Listar()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L45"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Realiza una consulta SQL (SELECT) que obtiene todas las membresías de la vista vista_membresias.</p>
@@ -351,7 +353,7 @@ corresponde al id de la instancia.</p>
 
   <h3 id="Gimnasio_Datos_DMembresias_ListarPorDni_System_String_" data-uid="Gimnasio.Datos.DMembresias.ListarPorDni(System.String)">
   ListarPorDni(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L223"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L224"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Recibe un dni de miembro y ejecuta una sentencia SQL (SELECT) que obtiene los registros de la membresías correspondientes al miembro.
@@ -391,7 +393,7 @@ Permite buscar por parte del DNI utilizando la cláusula LIKE.</p>
 
   <h3 id="Gimnasio_Datos_DMembresias_ListarPorEstado_System_String_" data-uid="Gimnasio.Datos.DMembresias.ListarPorEstado(System.String)">
   ListarPorEstado(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L260"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L261"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Recibe el estado(Activa, Inactiva) y ejecuta una sentencia SQL (SELECT) que obtiene los registros de membresías que tienen ese estado.</p>
@@ -430,7 +432,7 @@ Permite buscar por parte del DNI utilizando la cláusula LIKE.</p>
 
   <h3 id="Gimnasio_Datos_DMembresias_ListarPorNombrePlan_System_String_" data-uid="Gimnasio.Datos.DMembresias.ListarPorNombrePlan(System.String)">
   ListarPorNombrePlan(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L242"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L243"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Recibe el nombre de un plan y ejecuta una sentencia SQL (SELECT) que obtiene los registros de membresías que tienen ese plan.
@@ -470,7 +472,7 @@ Permite buscar por parte del nombre utilizando la cláusula LIKE.</p>
 
   <h3 id="Gimnasio_Datos_DMembresias_ObtenerDuracionPorMembresia_System_UInt32_" data-uid="Gimnasio.Datos.DMembresias.ObtenerDuracionPorMembresia(System.UInt32)">
   ObtenerDuracionPorMembresia(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L182"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L183"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Recibe un id de membresia y ejecuta una sentencia SQL (SELECT) que obtiene la duración del plan de la membresía correspondiente.
@@ -510,7 +512,7 @@ Luego, la convierte a entero.</p>
 
   <h3 id="Gimnasio_Datos_DMembresias_ObtenerIdMembresia_Gimnasio_Entidades_Membresias_" data-uid="Gimnasio.Datos.DMembresias.ObtenerIdMembresia(Gimnasio.Entidades.Membresias)">
   ObtenerIdMembresia(Membresias)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L120"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L121"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Recibe una instancia de Membresia y ejecuta una sentencia SQL (SELECT) que obtiene el id de la membresia correspondiente a la instancia.
@@ -550,7 +552,7 @@ Luego lo convierte a entero.</p>
 
   <h3 id="Gimnasio_Datos_DMembresias_ObtenerMembresiaMasReciente_System_UInt32_" data-uid="Gimnasio.Datos.DMembresias.ObtenerMembresiaMasReciente(System.UInt32)">
   ObtenerMembresiaMasReciente(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L302"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L303"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Recibe un id de Miembro y ejecuta una sentencia SQL (SELECT) que obtiene la membresía más reciente del miembro.
@@ -590,7 +592,7 @@ La consulta ordena por fecha de fin en orden descendente y limita el resultado a
 
   <h3 id="Gimnasio_Datos_DMembresias_ObtenerPorDni_System_String_" data-uid="Gimnasio.Datos.DMembresias.ObtenerPorDni(System.String)">
   ObtenerPorDni(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L204"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L205"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Recibe un dni de miembro y ejecuta una sentencia SQL (SELECT) que obtiene los registros de la membresías correspondientes al miembro.</p>
@@ -629,7 +631,7 @@ La consulta ordena por fecha de fin en orden descendente y limita el resultado a
 
   <h3 id="Gimnasio_Datos_DMembresias_VerificarExistenciaDeMiembroYPlan_Gimnasio_Entidades_Membresias_" data-uid="Gimnasio.Datos.DMembresias.VerificarExistenciaDeMiembroYPlan(Gimnasio.Entidades.Membresias)">
   VerificarExistenciaDeMiembroYPlan(Membresias)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L279"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L280"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Recibe una instancia de membresia y ejecuta una sentencia SQL (SELECT COUNT *) que cuenta la cantidad total de registros de membresia
@@ -669,7 +671,7 @@ con el mismo id_miembro y id_plan. Si el resultado es mayor a 0, significa que y
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L38" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DMembresias.vb/#L39" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -26,7 +26,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: DPlanes
     path: ../Gimnasio.Datos/DPlanes.vb
-    startLine: 11
+    startLine: 12
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -36,9 +36,7 @@ items:
     Hereda de <xref href="Gimnasio.Datos.ConexionBase" data-throw-if-not-resolved="false"></xref> y utiliza la entidad <xref href="Gimnasio.Entidades.Planes" data-throw-if-not-resolved="false"></xref>.
 
     Proporciona métodos CRUD y de búsqueda para la tabla <code>planes_membresia</code>.
-
-
-    Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo
+  remarks: Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo
   example: []
   syntax:
     content: 'public class DPlanes : ConexionBase'
@@ -76,7 +74,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Listar
     path: ../Gimnasio.Datos/DPlanes.vb
-    startLine: 18
+    startLine: 19
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -107,7 +105,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Insertar
     path: ../Gimnasio.Datos/DPlanes.vb
-    startLine: 35
+    startLine: 36
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -148,7 +146,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Actualizar
     path: ../Gimnasio.Datos/DPlanes.vb
-    startLine: 61
+    startLine: 62
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -185,7 +183,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Eliminar
     path: ../Gimnasio.Datos/DPlanes.vb
-    startLine: 84
+    startLine: 85
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -227,7 +225,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorNombre
     path: ../Gimnasio.Datos/DPlanes.vb
-    startLine: 108
+    startLine: 109
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -268,7 +266,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorDuracion
     path: ../Gimnasio.Datos/DPlanes.vb
-    startLine: 127
+    startLine: 128
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -309,7 +307,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorPrecio
     path: ../Gimnasio.Datos/DPlanes.vb
-    startLine: 146
+    startLine: 147
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos

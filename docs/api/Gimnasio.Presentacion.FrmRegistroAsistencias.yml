@@ -11,10 +11,6 @@ items:
   - Gimnasio.Presentacion.FrmRegistroAsistencias.BtnBuscarFecha
   - Gimnasio.Presentacion.FrmRegistroAsistencias.Dispose(System.Boolean)
   - Gimnasio.Presentacion.FrmRegistroAsistencias.InitializeComponent
-  - Gimnasio.Presentacion.FrmRegistroAsistencias.Label1
-  - Gimnasio.Presentacion.FrmRegistroAsistencias.Label2
-  - Gimnasio.Presentacion.FrmRegistroAsistencias.Label3
-  - Gimnasio.Presentacion.FrmRegistroAsistencias.Label4
   - Gimnasio.Presentacion.FrmRegistroAsistencias.PanelFecha
   - Gimnasio.Presentacion.FrmRegistroAsistencias.btnBuscar
   - Gimnasio.Presentacion.FrmRegistroAsistencias.btnBuscar_Click(System.Object,System.EventArgs)
@@ -31,6 +27,8 @@ items:
   - Gimnasio.Presentacion.FrmRegistroAsistencias.dtpFechaInicio
   - Gimnasio.Presentacion.FrmRegistroAsistencias.dtpFechaInicio_ValueChanged(System.Object,System.EventArgs)
   - Gimnasio.Presentacion.FrmRegistroAsistencias.frmRegistroAsistencias_Load(System.Object,System.EventArgs)
+  - Gimnasio.Presentacion.FrmRegistroAsistencias.lblFin
+  - Gimnasio.Presentacion.FrmRegistroAsistencias.lblInicio
   - Gimnasio.Presentacion.FrmRegistroAsistencias.lblTotal
   - Gimnasio.Presentacion.FrmRegistroAsistencias.nAsistencias
   - Gimnasio.Presentacion.FrmRegistroAsistencias.pbReiniciar
@@ -51,7 +49,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: FrmRegistroAsistencias
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 11
+    startLine: 16
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -60,6 +58,12 @@ items:
 
     Permite listar, buscar por DNI o fecha, y eliminar registros de asistencia. Utiliza la clase <xref href="Gimnasio.Negocio.NAsistencia" data-throw-if-not-resolved="false"></xref> para la lógica de negocio.
 
+    Todas las operaciones de esta capa están envueltas en bloques Try...Catch. 
+
+    El manejo de errores se realiza a través de <xref href="Gimnasio.Errores.ManejarErrores.Mostrar(System.String%2cSystem.Exception)" data-throw-if-not-resolved="false"></xref>
+
+    que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.
+  remarks: >-
     Todas las operaciones de esta capa están envueltas en bloques Try...Catch. 
 
     El manejo de errores se realiza a través de <xref href="Gimnasio.Errores.ManejarErrores.Mostrar(System.String%2cSystem.Exception)" data-throw-if-not-resolved="false"></xref>
@@ -920,7 +924,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: cbOpcionBuscar
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb
-    startLine: 276
+    startLine: 246
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -949,7 +953,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: lblTotal
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb
-    startLine: 277
+    startLine: 247
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -978,7 +982,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: dgvListado
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb
-    startLine: 278
+    startLine: 248
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1007,7 +1011,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbBuscar
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb
-    startLine: 279
+    startLine: 249
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1036,7 +1040,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: PanelFecha
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb
-    startLine: 280
+    startLine: 250
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1047,64 +1051,64 @@ items:
       type: System.Windows.Forms.Panel
     content.vb: Friend Overridable Property PanelFecha As Panel
   overload: Gimnasio.Presentacion.FrmRegistroAsistencias.PanelFecha*
-- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Label4
-  commentId: P:Gimnasio.Presentacion.FrmRegistroAsistencias.Label4
-  id: Label4
+- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.lblFin
+  commentId: P:Gimnasio.Presentacion.FrmRegistroAsistencias.lblFin
+  id: lblFin
   parent: Gimnasio.Presentacion.FrmRegistroAsistencias
   langs:
   - csharp
   - vb
-  name: Label4
-  nameWithType: FrmRegistroAsistencias.Label4
-  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.Label4
+  name: lblFin
+  nameWithType: FrmRegistroAsistencias.lblFin
+  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.lblFin
   type: Property
   source:
     remote:
       path: Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb
       branch: main
       repo: https://github.com/Carlovich01/gimnasio3.git
-    id: Label4
+    id: lblFin
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb
-    startLine: 281
+    startLine: 251
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
   syntax:
-    content: internal virtual Label Label4 { get; set; }
+    content: internal virtual Label lblFin { get; set; }
     parameters: []
     return:
       type: System.Windows.Forms.Label
-    content.vb: Friend Overridable Property Label4 As Label
-  overload: Gimnasio.Presentacion.FrmRegistroAsistencias.Label4*
-- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Label3
-  commentId: P:Gimnasio.Presentacion.FrmRegistroAsistencias.Label3
-  id: Label3
+    content.vb: Friend Overridable Property lblFin As Label
+  overload: Gimnasio.Presentacion.FrmRegistroAsistencias.lblFin*
+- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.lblInicio
+  commentId: P:Gimnasio.Presentacion.FrmRegistroAsistencias.lblInicio
+  id: lblInicio
   parent: Gimnasio.Presentacion.FrmRegistroAsistencias
   langs:
   - csharp
   - vb
-  name: Label3
-  nameWithType: FrmRegistroAsistencias.Label3
-  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.Label3
+  name: lblInicio
+  nameWithType: FrmRegistroAsistencias.lblInicio
+  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.lblInicio
   type: Property
   source:
     remote:
       path: Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb
       branch: main
       repo: https://github.com/Carlovich01/gimnasio3.git
-    id: Label3
+    id: lblInicio
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb
-    startLine: 282
+    startLine: 252
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
   syntax:
-    content: internal virtual Label Label3 { get; set; }
+    content: internal virtual Label lblInicio { get; set; }
     parameters: []
     return:
       type: System.Windows.Forms.Label
-    content.vb: Friend Overridable Property Label3 As Label
-  overload: Gimnasio.Presentacion.FrmRegistroAsistencias.Label3*
+    content.vb: Friend Overridable Property lblInicio As Label
+  overload: Gimnasio.Presentacion.FrmRegistroAsistencias.lblInicio*
 - uid: Gimnasio.Presentacion.FrmRegistroAsistencias.dtpFechaInicio
   commentId: P:Gimnasio.Presentacion.FrmRegistroAsistencias.dtpFechaInicio
   id: dtpFechaInicio
@@ -1123,7 +1127,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: dtpFechaInicio
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb
-    startLine: 283
+    startLine: 253
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1152,7 +1156,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: dtpFechaFin
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb
-    startLine: 284
+    startLine: 254
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1163,64 +1167,6 @@ items:
       type: System.Windows.Forms.DateTimePicker
     content.vb: Friend Overridable Property dtpFechaFin As DateTimePicker
   overload: Gimnasio.Presentacion.FrmRegistroAsistencias.dtpFechaFin*
-- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Label2
-  commentId: P:Gimnasio.Presentacion.FrmRegistroAsistencias.Label2
-  id: Label2
-  parent: Gimnasio.Presentacion.FrmRegistroAsistencias
-  langs:
-  - csharp
-  - vb
-  name: Label2
-  nameWithType: FrmRegistroAsistencias.Label2
-  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.Label2
-  type: Property
-  source:
-    remote:
-      path: Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb
-      branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
-    id: Label2
-    path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb
-    startLine: 285
-  assemblies:
-  - Gimnasio.Presentacion
-  namespace: Gimnasio.Presentacion
-  syntax:
-    content: internal virtual Label Label2 { get; set; }
-    parameters: []
-    return:
-      type: System.Windows.Forms.Label
-    content.vb: Friend Overridable Property Label2 As Label
-  overload: Gimnasio.Presentacion.FrmRegistroAsistencias.Label2*
-- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Label1
-  commentId: P:Gimnasio.Presentacion.FrmRegistroAsistencias.Label1
-  id: Label1
-  parent: Gimnasio.Presentacion.FrmRegistroAsistencias
-  langs:
-  - csharp
-  - vb
-  name: Label1
-  nameWithType: FrmRegistroAsistencias.Label1
-  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.Label1
-  type: Property
-  source:
-    remote:
-      path: Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb
-      branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
-    id: Label1
-    path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb
-    startLine: 286
-  assemblies:
-  - Gimnasio.Presentacion
-  namespace: Gimnasio.Presentacion
-  syntax:
-    content: internal virtual Label Label1 { get; set; }
-    parameters: []
-    return:
-      type: System.Windows.Forms.Label
-    content.vb: Friend Overridable Property Label1 As Label
-  overload: Gimnasio.Presentacion.FrmRegistroAsistencias.Label1*
 - uid: Gimnasio.Presentacion.FrmRegistroAsistencias.BtnBuscarFecha
   commentId: P:Gimnasio.Presentacion.FrmRegistroAsistencias.BtnBuscarFecha
   id: BtnBuscarFecha
@@ -1239,7 +1185,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: BtnBuscarFecha
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb
-    startLine: 287
+    startLine: 255
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1268,7 +1214,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnBuscar
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb
-    startLine: 288
+    startLine: 256
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1297,7 +1243,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnEliminar
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb
-    startLine: 289
+    startLine: 257
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1326,7 +1272,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnInsertar
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb
-    startLine: 290
+    startLine: 258
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1355,7 +1301,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: pbReiniciar
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.Designer.vb
-    startLine: 291
+    startLine: 259
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1384,7 +1330,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: nAsistencias
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 15
+    startLine: 20
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1413,7 +1359,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: .ctor
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 21
+    startLine: 26
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1448,7 +1394,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: frmRegistroAsistencias_Load
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 37
+    startLine: 42
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1493,7 +1439,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ActualizarDgv
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 67
+    startLine: 72
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1526,7 +1472,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ActualizarDgv
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 82
+    startLine: 87
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1562,7 +1508,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnInsertar_Click
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 97
+    startLine: 102
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1605,7 +1551,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: cb_SelectedIndexChanged
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 114
+    startLine: 119
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1649,7 +1595,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbBuscar_TextChanged
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 138
+    startLine: 143
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1692,7 +1638,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: dtpFechaInicio_ValueChanged
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 151
+    startLine: 156
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1728,7 +1674,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: dtpFechaFin_ValueChanged
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 162
+    startLine: 167
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1764,7 +1710,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnBuscar_Click
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 177
+    startLine: 182
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1809,7 +1755,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnEliminar_Click
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 198
+    startLine: 203
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1856,7 +1802,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: pbReiniciar_Click
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 224
+    startLine: 229
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -19728,18 +19674,18 @@ references:
   name: Panel
   nameWithType: Panel
   fullName: System.Windows.Forms.Panel
-- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Label4*
-  commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.Label4
-  href: Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_Label4
-  name: Label4
-  nameWithType: FrmRegistroAsistencias.Label4
-  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.Label4
-- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Label3*
-  commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.Label3
-  href: Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_Label3
-  name: Label3
-  nameWithType: FrmRegistroAsistencias.Label3
-  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.Label3
+- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.lblFin*
+  commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.lblFin
+  href: Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_lblFin
+  name: lblFin
+  nameWithType: FrmRegistroAsistencias.lblFin
+  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.lblFin
+- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.lblInicio*
+  commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.lblInicio
+  href: Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_lblInicio
+  name: lblInicio
+  nameWithType: FrmRegistroAsistencias.lblInicio
+  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.lblInicio
 - uid: Gimnasio.Presentacion.FrmRegistroAsistencias.dtpFechaInicio*
   commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.dtpFechaInicio
   href: Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_dtpFechaInicio
@@ -19760,18 +19706,6 @@ references:
   name: dtpFechaFin
   nameWithType: FrmRegistroAsistencias.dtpFechaFin
   fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.dtpFechaFin
-- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Label2*
-  commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.Label2
-  href: Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_Label2
-  name: Label2
-  nameWithType: FrmRegistroAsistencias.Label2
-  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.Label2
-- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Label1*
-  commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.Label1
-  href: Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_Label1
-  name: Label1
-  nameWithType: FrmRegistroAsistencias.Label1
-  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.Label1
 - uid: Gimnasio.Presentacion.FrmRegistroAsistencias.BtnBuscarFecha*
   commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.BtnBuscarFecha
   href: Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_BtnBuscarFecha

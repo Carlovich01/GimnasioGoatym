@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class NMiembros | Goatym ">
       
-      <meta name="description" content="L&#243;gica de negocio para la gesti&#243;n de miembros en el sistema de gimnasio. Interact&#250;a con la capa de datos  y la entidad . Todas las operaciones de la capa de negocio est&#225;n envueltas en bloques Try...Catch. Si ocurre una excepci&#243;n, se registra el error utilizando  en un log.txt Luego, la excepci&#243;n se propaga nuevamente mediante Throw New Exception(ex.Message).">
+      <meta name="description" content="L&#243;gica de negocio para la gesti&#243;n de miembros en el sistema de gimnasio. Interact&#250;a con la capa de datos  y la entidad .">
       <link rel="icon" href="../images/logo.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Gimnasio_Negocio_NMiembros" data-uid="Gimnasio.Negocio.NMiembros" class="text-break">
-Class NMiembros  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L13"><i class="bi bi-code-slash"></i></a>
+Class NMiembros  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L15"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,10 +97,7 @@ Class NMiembros  <a class="header-action link-secondary" title="View source" hre
   </div>
 
   <div class="markdown summary"><p>Lógica de negocio para la gestión de miembros en el sistema de gimnasio.
-Interactúa con la capa de datos <a class="xref" href="Gimnasio.Negocio.NMiembros.html#Gimnasio_Negocio_NMiembros_dMiembros">dMiembros</a> y la entidad <a class="xref" href="Gimnasio.Entidades.Miembros.html">Miembros</a>.
-Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.<br>
-Si ocurre una excepción, se registra el error utilizando <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_">Log(string, Exception)</a> en un log.txt
-Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).</p>
+Interactúa con la capa de datos <a class="xref" href="Gimnasio.Negocio.NMiembros.html#Gimnasio_Negocio_NMiembros_dMiembros">dMiembros</a> y la entidad <a class="xref" href="Gimnasio.Entidades.Miembros.html">Miembros</a>.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -123,6 +120,11 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
 
 
+  <h2 id="Gimnasio_Negocio_NMiembros_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.<br>
+Si ocurre una excepción, se registra el error utilizando <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_">Log(string, Exception)</a> en un log.txt
+Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).</p>
+</div>
 
 
   <h2 class="section" id="fields">Fields
@@ -132,7 +134,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NMiembros_dMiembros" data-uid="Gimnasio.Negocio.NMiembros.dMiembros">
   dMiembros
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Instancia de la capa de datos para miembros.</p>
@@ -146,11 +148,6 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
 
 
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Gimnasio.Datos.DMiembros.html">DMiembros</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -168,7 +165,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NMiembros_Actualizar_Gimnasio_Entidades_Miembros_" data-uid="Gimnasio.Negocio.NMiembros.Actualizar(Gimnasio.Entidades.Miembros)">
   Actualizar(Miembros)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L116"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L118"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Valida que los campos sean correctos con <a class="xref" href="Gimnasio.Negocio.NMiembros.html#Gimnasio_Negocio_NMiembros_ValidarCampos_Gimnasio_Entidades_Miembros_">ValidarCampos(Miembros)</a>.
@@ -202,7 +199,7 @@ Actualiza los datos de un miembro existente en la base de datos con <a class="xr
 
   <h3 id="Gimnasio_Negocio_NMiembros_Eliminar_System_UInt32_" data-uid="Gimnasio.Negocio.NMiembros.Eliminar(System.UInt32)">
   Eliminar(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L130"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L132"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Elimina un miembro del sistema según su id con <a class="xref" href="Gimnasio.Datos.DMiembros.html#Gimnasio_Datos_DMiembros_Eliminar_System_UInt32_">Eliminar(uint)</a>.</p>
@@ -235,7 +232,7 @@ Actualiza los datos de un miembro existente en la base de datos con <a class="xr
 
   <h3 id="Gimnasio_Negocio_NMiembros_Insertar_Gimnasio_Entidades_Miembros_" data-uid="Gimnasio.Negocio.NMiembros.Insertar(Gimnasio.Entidades.Miembros)">
   Insertar(Miembros)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L97"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L99"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Obtiene un miembro por su ID con <a class="xref" href="Gimnasio.Datos.DMiembros.html#Gimnasio_Datos_DMiembros_ObtenerPorDni_System_String_">ObtenerPorDni(string)</a>.
@@ -270,7 +267,7 @@ Por ultimo, inserta el miembro en la base de datos con <a class="xref" href="Gim
 
   <h3 id="Gimnasio_Negocio_NMiembros_Listar" data-uid="Gimnasio.Negocio.NMiembros.Listar">
   Listar()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Obtiene la lista de todos los miembros registrados con <a class="xref" href="Gimnasio.Datos.DMiembros.html#Gimnasio_Datos_DMiembros_Listar">Listar()</a>.</p>
@@ -303,7 +300,7 @@ Por ultimo, inserta el miembro en la base de datos con <a class="xref" href="Gim
 
   <h3 id="Gimnasio_Negocio_NMiembros_ListarPorDni_System_String_" data-uid="Gimnasio.Negocio.NMiembros.ListarPorDni(System.String)">
   ListarPorDni(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L178"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L180"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Realiza una validación y busca miembros por DNI utilizando la capa de datos <a class="xref" href="Gimnasio.Datos.DMiembros.html#Gimnasio_Datos_DMiembros_ListarPorDni_System_String_">ListarPorDni(string)</a>.</p>
@@ -342,7 +339,7 @@ Por ultimo, inserta el miembro en la base de datos con <a class="xref" href="Gim
 
   <h3 id="Gimnasio_Negocio_NMiembros_ListarPorNombre_System_String_" data-uid="Gimnasio.Negocio.NMiembros.ListarPorNombre(System.String)">
   ListarPorNombre(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L144"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Realiza una validación y busca miembros por nombre utilizando la capa de datos <a class="xref" href="Gimnasio.Datos.DMiembros.html#Gimnasio_Datos_DMiembros_ListarPorNombre_System_String_">ListarPorNombre(string)</a>.</p>
@@ -381,7 +378,7 @@ Por ultimo, inserta el miembro en la base de datos con <a class="xref" href="Gim
 
   <h3 id="Gimnasio_Negocio_NMiembros_ObtenerPorDni_System_String_" data-uid="Gimnasio.Negocio.NMiembros.ObtenerPorDni(System.String)">
   ObtenerPorDni(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L161"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L163"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Realiza una validación y obtiene un miembro por su DNI utilizando la capa de datos <a class="xref" href="Gimnasio.Datos.DMiembros.html#Gimnasio_Datos_DMiembros_ObtenerPorDni_System_String_">ObtenerPorDni(string)</a>.</p>
@@ -420,7 +417,7 @@ Por ultimo, inserta el miembro en la base de datos con <a class="xref" href="Gim
 
   <h3 id="Gimnasio_Negocio_NMiembros_ValidarCampos_Gimnasio_Entidades_Miembros_" data-uid="Gimnasio.Negocio.NMiembros.ValidarCampos(Gimnasio.Entidades.Miembros)">
   ValidarCampos(Miembros)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Valida los campos de la entidad <a class="xref" href="Gimnasio.Entidades.Miembros.html">Miembros</a> antes de realizar operaciones de inserción o actualización.</p>
@@ -453,7 +450,7 @@ Por ultimo, inserta el miembro en la base de datos con <a class="xref" href="Gim
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L13" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMiembros.vb/#L15" class="edit-link">Edit this page</a>
         </div>
 
 

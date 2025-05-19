@@ -22,7 +22,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ConexionBase
     path: ../Gimnasio.Datos/Conexion.vb
-    startLine: 18
+    startLine: 19
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -30,8 +30,7 @@ items:
     Clase base para la gestión de la conexión y operaciones con la base de datos MySQL.
 
     Proporciona métodos genéricos para ejecutar consultas y comandos SQL.
-
-
+  remarks: >-
     Beneficios de utilizar <xref href="Gimnasio.Datos.ConexionBase.ExecuteQuery(System.String%2cSystem.Collections.Generic.Dictionary%7bSystem.String%2cSystem.Object%7d)" data-throw-if-not-resolved="false"></xref> y <xref href="Gimnasio.Datos.ConexionBase.ExecuteNonQuery(System.String%2cSystem.Collections.Generic.Dictionary%7bSystem.String%2cSystem.Object%7d)" data-throw-if-not-resolved="false"></xref>:
 
     - Centralizan y simplifican el acceso a datos, evitando duplicación de código.
@@ -91,7 +90,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: connectionString
     path: ../Gimnasio.Datos/Conexion.vb
-    startLine: 22
+    startLine: 23
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -120,7 +119,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ExecuteQuery
     path: ../Gimnasio.Datos/Conexion.vb
-    startLine: 34
+    startLine: 35
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -170,7 +169,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ExecuteNonQuery
     path: ../Gimnasio.Datos/Conexion.vb
-    startLine: 66
+    startLine: 67
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos

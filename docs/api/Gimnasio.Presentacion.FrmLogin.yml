@@ -8,13 +8,13 @@ items:
   - Gimnasio.Presentacion.FrmLogin.Dispose(System.Boolean)
   - Gimnasio.Presentacion.FrmLogin.Formato
   - Gimnasio.Presentacion.FrmLogin.InitializeComponent
-  - Gimnasio.Presentacion.FrmLogin.PictureBox1
-  - Gimnasio.Presentacion.FrmLogin.btIniciarSesion
-  - Gimnasio.Presentacion.FrmLogin.btIniciarSesion_Click(System.Object,System.EventArgs)
+  - Gimnasio.Presentacion.FrmLogin.btnIniciarSesion
+  - Gimnasio.Presentacion.FrmLogin.btnIniciarSesion_Click(System.Object,System.EventArgs)
   - Gimnasio.Presentacion.FrmLogin.components
   - Gimnasio.Presentacion.FrmLogin.frmLogin_Load(System.Object,System.EventArgs)
   - Gimnasio.Presentacion.FrmLogin.lblContraseña
   - Gimnasio.Presentacion.FrmLogin.lblUsuario
+  - Gimnasio.Presentacion.FrmLogin.pbLogo
   - Gimnasio.Presentacion.FrmLogin.pbMostrarContraseña
   - Gimnasio.Presentacion.FrmLogin.pbMostrarContraseña_Click(System.Object,System.EventArgs)
   - Gimnasio.Presentacion.FrmLogin.tbContraseña
@@ -33,13 +33,12 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: FrmLogin
     path: ../Gimnasio.Presentacion/FrmLogin.vb
-    startLine: 10
+    startLine: 12
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
-  summary: >-
-    Formulario de inicio de sesión para el sistema de gimnasio. Permite al usuario ingresar sus credenciales y acceder al sistema principal.
-
+  summary: Formulario de inicio de sesión para el sistema de gimnasio. Permite al usuario ingresar sus credenciales y acceder al sistema principal.
+  remarks: >-
     Todas las operaciones de esta capa están envueltas en bloques Try...Catch. 
 
     El manejo de errores se realiza a través de <xref href="Gimnasio.Errores.ManejarErrores.Mostrar(System.String%2cSystem.Exception)" data-throw-if-not-resolved="false"></xref>
@@ -882,35 +881,35 @@ items:
     content: private void InitializeComponent()
     content.vb: Private Sub InitializeComponent()
   overload: Gimnasio.Presentacion.FrmLogin.InitializeComponent*
-- uid: Gimnasio.Presentacion.FrmLogin.PictureBox1
-  commentId: P:Gimnasio.Presentacion.FrmLogin.PictureBox1
-  id: PictureBox1
+- uid: Gimnasio.Presentacion.FrmLogin.pbLogo
+  commentId: P:Gimnasio.Presentacion.FrmLogin.pbLogo
+  id: pbLogo
   parent: Gimnasio.Presentacion.FrmLogin
   langs:
   - csharp
   - vb
-  name: PictureBox1
-  nameWithType: FrmLogin.PictureBox1
-  fullName: Gimnasio.Presentacion.FrmLogin.PictureBox1
+  name: pbLogo
+  nameWithType: FrmLogin.pbLogo
+  fullName: Gimnasio.Presentacion.FrmLogin.pbLogo
   type: Property
   source:
     remote:
       path: Gimnasio.Presentacion/FrmLogin.Designer.vb
       branch: main
       repo: https://github.com/Carlovich01/gimnasio3.git
-    id: PictureBox1
+    id: pbLogo
     path: ../Gimnasio.Presentacion/FrmLogin.Designer.vb
     startLine: 132
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
   syntax:
-    content: internal virtual PictureBox PictureBox1 { get; set; }
+    content: internal virtual PictureBox pbLogo { get; set; }
     parameters: []
     return:
       type: System.Windows.Forms.PictureBox
-    content.vb: Friend Overridable Property PictureBox1 As PictureBox
-  overload: Gimnasio.Presentacion.FrmLogin.PictureBox1*
+    content.vb: Friend Overridable Property pbLogo As PictureBox
+  overload: Gimnasio.Presentacion.FrmLogin.pbLogo*
 - uid: Gimnasio.Presentacion.FrmLogin.tbUsuario
   commentId: P:Gimnasio.Presentacion.FrmLogin.tbUsuario
   id: tbUsuario
@@ -1027,35 +1026,35 @@ items:
       type: System.Windows.Forms.Label
     content.vb: Friend Overridable Property lblContraseña As Label
   overload: Gimnasio.Presentacion.FrmLogin.lblContraseña*
-- uid: Gimnasio.Presentacion.FrmLogin.btIniciarSesion
-  commentId: P:Gimnasio.Presentacion.FrmLogin.btIniciarSesion
-  id: btIniciarSesion
+- uid: Gimnasio.Presentacion.FrmLogin.btnIniciarSesion
+  commentId: P:Gimnasio.Presentacion.FrmLogin.btnIniciarSesion
+  id: btnIniciarSesion
   parent: Gimnasio.Presentacion.FrmLogin
   langs:
   - csharp
   - vb
-  name: btIniciarSesion
-  nameWithType: FrmLogin.btIniciarSesion
-  fullName: Gimnasio.Presentacion.FrmLogin.btIniciarSesion
+  name: btnIniciarSesion
+  nameWithType: FrmLogin.btnIniciarSesion
+  fullName: Gimnasio.Presentacion.FrmLogin.btnIniciarSesion
   type: Property
   source:
     remote:
       path: Gimnasio.Presentacion/FrmLogin.Designer.vb
       branch: main
       repo: https://github.com/Carlovich01/gimnasio3.git
-    id: btIniciarSesion
+    id: btnIniciarSesion
     path: ../Gimnasio.Presentacion/FrmLogin.Designer.vb
     startLine: 137
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
   syntax:
-    content: internal virtual Button btIniciarSesion { get; set; }
+    content: internal virtual Button btnIniciarSesion { get; set; }
     parameters: []
     return:
       type: System.Windows.Forms.Button
-    content.vb: Friend Overridable Property btIniciarSesion As Button
-  overload: Gimnasio.Presentacion.FrmLogin.btIniciarSesion*
+    content.vb: Friend Overridable Property btnIniciarSesion As Button
+  overload: Gimnasio.Presentacion.FrmLogin.btnIniciarSesion*
 - uid: Gimnasio.Presentacion.FrmLogin.pbMostrarContraseña
   commentId: P:Gimnasio.Presentacion.FrmLogin.pbMostrarContraseña
   id: pbMostrarContraseña
@@ -1103,7 +1102,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: frmLogin_Load
     path: ../Gimnasio.Presentacion/FrmLogin.vb
-    startLine: 14
+    startLine: 16
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1139,7 +1138,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Formato
     path: ../Gimnasio.Presentacion/FrmLogin.vb
-    startLine: 25
+    startLine: 27
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1149,25 +1148,25 @@ items:
     content: public void Formato()
     content.vb: Public Sub Formato()
   overload: Gimnasio.Presentacion.FrmLogin.Formato*
-- uid: Gimnasio.Presentacion.FrmLogin.btIniciarSesion_Click(System.Object,System.EventArgs)
-  commentId: M:Gimnasio.Presentacion.FrmLogin.btIniciarSesion_Click(System.Object,System.EventArgs)
-  id: btIniciarSesion_Click(System.Object,System.EventArgs)
+- uid: Gimnasio.Presentacion.FrmLogin.btnIniciarSesion_Click(System.Object,System.EventArgs)
+  commentId: M:Gimnasio.Presentacion.FrmLogin.btnIniciarSesion_Click(System.Object,System.EventArgs)
+  id: btnIniciarSesion_Click(System.Object,System.EventArgs)
   parent: Gimnasio.Presentacion.FrmLogin
   langs:
   - csharp
   - vb
-  name: btIniciarSesion_Click(object, EventArgs)
-  nameWithType: FrmLogin.btIniciarSesion_Click(object, EventArgs)
-  fullName: Gimnasio.Presentacion.FrmLogin.btIniciarSesion_Click(object, System.EventArgs)
+  name: btnIniciarSesion_Click(object, EventArgs)
+  nameWithType: FrmLogin.btnIniciarSesion_Click(object, EventArgs)
+  fullName: Gimnasio.Presentacion.FrmLogin.btnIniciarSesion_Click(object, System.EventArgs)
   type: Method
   source:
     remote:
       path: Gimnasio.Presentacion/FrmLogin.vb
       branch: main
       repo: https://github.com/Carlovich01/gimnasio3.git
-    id: btIniciarSesion_Click
+    id: btnIniciarSesion_Click
     path: ../Gimnasio.Presentacion/FrmLogin.vb
-    startLine: 45
+    startLine: 47
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1185,17 +1184,17 @@ items:
         - Si las credenciales son incorrectas, lanza una excepción y muestra un mensaje de error.
   example: []
   syntax:
-    content: private void btIniciarSesion_Click(object sender, EventArgs e)
+    content: private void btnIniciarSesion_Click(object sender, EventArgs e)
     parameters:
     - id: sender
       type: System.Object
     - id: e
       type: System.EventArgs
-    content.vb: Private Sub btIniciarSesion_Click(sender As Object, e As EventArgs)
-  overload: Gimnasio.Presentacion.FrmLogin.btIniciarSesion_Click*
-  nameWithType.vb: FrmLogin.btIniciarSesion_Click(Object, EventArgs)
-  fullName.vb: Gimnasio.Presentacion.FrmLogin.btIniciarSesion_Click(Object, System.EventArgs)
-  name.vb: btIniciarSesion_Click(Object, EventArgs)
+    content.vb: Private Sub btnIniciarSesion_Click(sender As Object, e As EventArgs)
+  overload: Gimnasio.Presentacion.FrmLogin.btnIniciarSesion_Click*
+  nameWithType.vb: FrmLogin.btnIniciarSesion_Click(Object, EventArgs)
+  fullName.vb: Gimnasio.Presentacion.FrmLogin.btnIniciarSesion_Click(Object, System.EventArgs)
+  name.vb: btnIniciarSesion_Click(Object, EventArgs)
 - uid: Gimnasio.Presentacion.FrmLogin.pbMostrarContraseña_Click(System.Object,System.EventArgs)
   commentId: M:Gimnasio.Presentacion.FrmLogin.pbMostrarContraseña_Click(System.Object,System.EventArgs)
   id: pbMostrarContraseña_Click(System.Object,System.EventArgs)
@@ -1214,7 +1213,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: pbMostrarContraseña_Click
     path: ../Gimnasio.Presentacion/FrmLogin.vb
-    startLine: 75
+    startLine: 77
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -18980,12 +18979,12 @@ references:
   name: InitializeComponent
   nameWithType: FrmLogin.InitializeComponent
   fullName: Gimnasio.Presentacion.FrmLogin.InitializeComponent
-- uid: Gimnasio.Presentacion.FrmLogin.PictureBox1*
-  commentId: Overload:Gimnasio.Presentacion.FrmLogin.PictureBox1
-  href: Gimnasio.Presentacion.FrmLogin.html#Gimnasio_Presentacion_FrmLogin_PictureBox1
-  name: PictureBox1
-  nameWithType: FrmLogin.PictureBox1
-  fullName: Gimnasio.Presentacion.FrmLogin.PictureBox1
+- uid: Gimnasio.Presentacion.FrmLogin.pbLogo*
+  commentId: Overload:Gimnasio.Presentacion.FrmLogin.pbLogo
+  href: Gimnasio.Presentacion.FrmLogin.html#Gimnasio_Presentacion_FrmLogin_pbLogo
+  name: pbLogo
+  nameWithType: FrmLogin.pbLogo
+  fullName: Gimnasio.Presentacion.FrmLogin.pbLogo
 - uid: System.Windows.Forms.PictureBox
   commentId: T:System.Windows.Forms.PictureBox
   parent: System.Windows.Forms
@@ -19034,12 +19033,12 @@ references:
   name: lblContraseña
   nameWithType: FrmLogin.lblContraseña
   fullName: Gimnasio.Presentacion.FrmLogin.lblContraseña
-- uid: Gimnasio.Presentacion.FrmLogin.btIniciarSesion*
-  commentId: Overload:Gimnasio.Presentacion.FrmLogin.btIniciarSesion
-  href: Gimnasio.Presentacion.FrmLogin.html#Gimnasio_Presentacion_FrmLogin_btIniciarSesion
-  name: btIniciarSesion
-  nameWithType: FrmLogin.btIniciarSesion
-  fullName: Gimnasio.Presentacion.FrmLogin.btIniciarSesion
+- uid: Gimnasio.Presentacion.FrmLogin.btnIniciarSesion*
+  commentId: Overload:Gimnasio.Presentacion.FrmLogin.btnIniciarSesion
+  href: Gimnasio.Presentacion.FrmLogin.html#Gimnasio_Presentacion_FrmLogin_btnIniciarSesion
+  name: btnIniciarSesion
+  nameWithType: FrmLogin.btnIniciarSesion
+  fullName: Gimnasio.Presentacion.FrmLogin.btnIniciarSesion
 - uid: System.Windows.Forms.Button
   commentId: T:System.Windows.Forms.Button
   parent: System.Windows.Forms
@@ -19135,12 +19134,12 @@ references:
   name: FrmPrincipal
   nameWithType: FrmPrincipal
   fullName: Gimnasio.Presentacion.FrmPrincipal
-- uid: Gimnasio.Presentacion.FrmLogin.btIniciarSesion_Click*
-  commentId: Overload:Gimnasio.Presentacion.FrmLogin.btIniciarSesion_Click
-  href: Gimnasio.Presentacion.FrmLogin.html#Gimnasio_Presentacion_FrmLogin_btIniciarSesion_Click_System_Object_System_EventArgs_
-  name: btIniciarSesion_Click
-  nameWithType: FrmLogin.btIniciarSesion_Click
-  fullName: Gimnasio.Presentacion.FrmLogin.btIniciarSesion_Click
+- uid: Gimnasio.Presentacion.FrmLogin.btnIniciarSesion_Click*
+  commentId: Overload:Gimnasio.Presentacion.FrmLogin.btnIniciarSesion_Click
+  href: Gimnasio.Presentacion.FrmLogin.html#Gimnasio_Presentacion_FrmLogin_btnIniciarSesion_Click_System_Object_System_EventArgs_
+  name: btnIniciarSesion_Click
+  nameWithType: FrmLogin.btnIniciarSesion_Click
+  fullName: Gimnasio.Presentacion.FrmLogin.btnIniciarSesion_Click
 - uid: Gimnasio.Negocio
   commentId: N:Gimnasio.Negocio
   isExternal: true

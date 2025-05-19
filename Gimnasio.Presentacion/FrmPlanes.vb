@@ -6,10 +6,12 @@ Imports Gimnasio.Errores
 ''' Formulario para la gestión de planes en el sistema de gimnasio. Permite listar, buscar, insertar, actualizar y eliminar planes.
 ''' Utiliza la clase <see cref="Gimnasio.Negocio.NPlanes"/> para la lógica de negocio y la clase <see cref="Gimnasio.Entidades.Planes"/> como entidad.
 ''' El acceso a las operaciones de mantenimiento depende del rol del usuario (<see cref="Gimnasio.Entidades.Usuarios"/>).
+''' </summary>
+''' <remarks>
 ''' Todas las operaciones de esta capa están envueltas en bloques Try...Catch. 
 ''' El manejo de errores se realiza a través de <see cref="Gimnasio.Errores.ManejarErrores.Mostrar(String, Exception)"/>
 ''' que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.
-''' </summary>
+''' </remarks>
 
 Public Class FrmPlanes
 

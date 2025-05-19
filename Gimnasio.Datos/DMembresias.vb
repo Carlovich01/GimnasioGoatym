@@ -6,7 +6,8 @@ Imports Gimnasio.Errores
 ''' Clase de acceso a datos para la gestión de membresías en el sistema de gimnasio.
 ''' Hereda de <see cref="ConexionBase"/> y utiliza la entidad <see cref="Membresias"/>.
 ''' Proporciona métodos CRUD y de búsqueda para la tabla membresias_miembro y la vista vista_membresias.
-''' 
+''' </summary>
+''' <remarks>
 ''' La vista_membresias es una vista SQL que consolida información relevante de las membresías,
 ''' uniendo datos de las tablas membresias_miembro, miembros y planes_membresia.
 ''' <code>
@@ -34,7 +35,7 @@ Imports Gimnasio.Errores
 ''' </code>
 ''' 
 ''' Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo
-''' </summary>
+''' </remarks>
 Public Class DMembresias
     Inherits ConexionBase
 

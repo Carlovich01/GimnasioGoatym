@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class FrmPlanes | Goatym ">
       
-      <meta name="description" content="Formulario para la gesti&#243;n de planes en el sistema de gimnasio. Permite listar, buscar, insertar, actualizar y eliminar planes. Utiliza la clase  para la l&#243;gica de negocio y la clase  como entidad. El acceso a las operaciones de mantenimiento depende del rol del usuario (). Todas las operaciones de esta capa est&#225;n envueltas en bloques Try...Catch. El manejo de errores se realiza a trav&#233;s de  que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.">
+      <meta name="description" content="Formulario para la gesti&#243;n de planes en el sistema de gimnasio. Permite listar, buscar, insertar, actualizar y eliminar planes. Utiliza la clase  para la l&#243;gica de negocio y la clase  como entidad. El acceso a las operaciones de mantenimiento depende del rol del usuario ().">
       <link rel="icon" href="../images/logo.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Gimnasio_Presentacion_FrmPlanes" data-uid="Gimnasio.Presentacion.FrmPlanes" class="text-break">
-Class FrmPlanes  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L14"><i class="bi bi-code-slash"></i></a>
+Class FrmPlanes  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L16"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -98,10 +98,7 @@ Class FrmPlanes  <a class="header-action link-secondary" title="View source" hre
 
   <div class="markdown summary"><p>Formulario para la gestión de planes en el sistema de gimnasio. Permite listar, buscar, insertar, actualizar y eliminar planes.
 Utiliza la clase <a class="xref" href="Gimnasio.Negocio.NPlanes.html">NPlanes</a> para la lógica de negocio y la clase <a class="xref" href="Gimnasio.Entidades.Planes.html">Planes</a> como entidad.
-El acceso a las operaciones de mantenimiento depende del rol del usuario (<a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a>).
-Todas las operaciones de esta capa están envueltas en bloques Try...Catch.
-El manejo de errores se realiza a través de <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Mostrar_System_String_System_Exception_">Mostrar(string, Exception)</a>
-que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.</p>
+El acceso a las operaciones de mantenimiento depende del rol del usuario (<a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a>).</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -131,6 +128,11 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
+  <h2 id="Gimnasio_Presentacion_FrmPlanes_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Todas las operaciones de esta capa están envueltas en bloques Try...Catch.
+El manejo de errores se realiza a través de <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Mostrar_System_String_System_Exception_">Mostrar(string, Exception)</a>
+que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.</p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -141,7 +143,7 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
   <h3 id="Gimnasio_Presentacion_FrmPlanes__ctor_Gimnasio_Entidades_Usuarios_" data-uid="Gimnasio.Presentacion.FrmPlanes.#ctor(Gimnasio.Entidades.Usuarios)">
   FrmPlanes(Usuarios)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Constructor del formulario.</p>
@@ -194,11 +196,6 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icontainer">IContainer</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -211,7 +208,7 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
   <h3 id="Gimnasio_Presentacion_FrmPlanes_esNuevo" data-uid="Gimnasio.Presentacion.FrmPlanes.esNuevo">
   esNuevo
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indica si la operación actual es de inserción (True) o actualización (False).</p>
@@ -225,11 +222,6 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -242,7 +234,7 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
   <h3 id="Gimnasio_Presentacion_FrmPlanes_nPlanes" data-uid="Gimnasio.Presentacion.FrmPlanes.nPlanes">
   nPlanes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Instancia de la capa de negocio para planes.</p>
@@ -256,11 +248,6 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Gimnasio.Negocio.NPlanes.html">NPlanes</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -292,11 +279,6 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -323,11 +305,6 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -354,11 +331,6 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -385,11 +357,6 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -416,11 +383,6 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -447,11 +409,6 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.combobox">ComboBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -478,11 +435,6 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.datagridview">DataGridView</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -509,11 +461,6 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -540,11 +487,6 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -571,11 +513,6 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -602,11 +539,6 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -633,11 +565,6 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -664,11 +591,6 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -695,11 +617,6 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.panel">Panel</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -726,11 +643,6 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.panel">Panel</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -757,11 +669,6 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.picturebox">PictureBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -788,11 +695,6 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -819,11 +721,6 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -850,11 +747,6 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -881,11 +773,6 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -912,11 +799,6 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -943,11 +825,6 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -964,7 +841,7 @@ public class FrmPlanes : Form, IOleControl.Interface, IOleObject.Interface, IOle
 
   <h3 id="Gimnasio_Presentacion_FrmPlanes_ActualizarDgv" data-uid="Gimnasio.Presentacion.FrmPlanes.ActualizarDgv">
   ActualizarDgv()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L69"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Actualiza el DataGridView con la lista de planes completa obtenida de la capa de negocio con <a class="xref" href="Gimnasio.Negocio.NPlanes.html#Gimnasio_Negocio_NPlanes_Listar">Listar()</a>.
@@ -992,7 +869,7 @@ También actualiza la etiqueta que muestra el total de planes.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPlanes_ActualizarDgv_System_Data_DataTable_" data-uid="Gimnasio.Presentacion.FrmPlanes.ActualizarDgv(System.Data.DataTable)">
   ActualizarDgv(DataTable)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L83"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L85"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Actualiza el DataGridView con un DataTable específico de planes, por ejemplo, tras una búsqueda o filtrado.
@@ -1059,7 +936,7 @@ También actualiza la etiqueta con el total de miembros.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPlanes_HabilitarIngreso" data-uid="Gimnasio.Presentacion.FrmPlanes.HabilitarIngreso">
   HabilitarIngreso()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L110"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L112"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><ul>
@@ -1090,7 +967,7 @@ También actualiza la etiqueta con el total de miembros.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPlanes_HabilitarListado" data-uid="Gimnasio.Presentacion.FrmPlanes.HabilitarListado">
   HabilitarListado()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L98"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Habilita la vista de listado de planes y oculta el panel de ingreso de datos.</p>
@@ -1143,7 +1020,7 @@ También actualiza la etiqueta con el total de miembros.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPlanes_btnActualizar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPlanes.btnActualizar_Click(System.Object,System.EventArgs)">
   btnActualizar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L151"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L153"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en &quot;Actualizar&quot;.</p>
@@ -1192,7 +1069,7 @@ También actualiza la etiqueta con el total de miembros.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPlanes_btnCancelar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPlanes.btnCancelar_Click(System.Object,System.EventArgs)">
   btnCancelar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L220"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L222"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Cancelar&quot;. Vuelve a la vista de listado de planes.</p>
@@ -1226,7 +1103,7 @@ También actualiza la etiqueta con el total de miembros.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPlanes_btnEliminar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPlanes.btnEliminar_Click(System.Object,System.EventArgs)">
   btnEliminar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L237"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L239"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en &quot;Eliminar&quot;.</p>
@@ -1271,7 +1148,7 @@ También actualiza la etiqueta con el total de miembros.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPlanes_btnGuardar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPlanes.btnGuardar_Click(System.Object,System.EventArgs)">
   btnGuardar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L183"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L185"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en &quot;Guardar&quot;.</p>
@@ -1317,7 +1194,7 @@ También actualiza la etiqueta con el total de miembros.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPlanes_btnInsertar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPlanes.btnInsertar_Click(System.Object,System.EventArgs)">
   btnInsertar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L130"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L132"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Insertar&quot;.</p>
@@ -1356,7 +1233,7 @@ También actualiza la etiqueta con el total de miembros.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPlanes_cb_SelectedIndexChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPlanes.cb_SelectedIndexChanged(System.Object,System.EventArgs)">
   cb_SelectedIndexChanged(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L276"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L278"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al cambiar la opción seleccionada en el ComboBox de búsqueda. Se encarga de:</p>
@@ -1394,7 +1271,7 @@ También actualiza la etiqueta con el total de miembros.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPlanes_frmPlanes_Load_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPlanes.frmPlanes_Load(System.Object,System.EventArgs)">
   frmPlanes_Load(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L49"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al cargar el formulario. Actualiza el listado de planes con <a class="xref" href="Gimnasio.Presentacion.FrmPlanes.html#Gimnasio_Presentacion_FrmPlanes_ActualizarDgv">ActualizarDgv()</a>
@@ -1429,7 +1306,7 @@ configura las columnas del DataGridView y establece una opción de busqueda del 
 
   <h3 id="Gimnasio_Presentacion_FrmPlanes_pbReiniciar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPlanes.pbReiniciar_Click(System.Object,System.EventArgs)">
   pbReiniciar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L320"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L322"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Reiniciar&quot;. Actualiza el listado de planes y limpia el campo de busqueda.</p>
@@ -1463,7 +1340,7 @@ configura las columnas del DataGridView y establece una opción de busqueda del 
 
   <h3 id="Gimnasio_Presentacion_FrmPlanes_tbBuscar_KeyDown_System_Object_System_Windows_Forms_KeyEventArgs_" data-uid="Gimnasio.Presentacion.FrmPlanes.tbBuscar_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
   tbBuscar_KeyDown(object, KeyEventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L296"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L298"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al presionar una tecla en el campo de búsqueda.</p>
@@ -1513,7 +1390,7 @@ configura las columnas del DataGridView y establece una opción de busqueda del 
 
   <h3 id="Gimnasio_Presentacion_FrmPlanes_tbBuscar_TextChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPlanes.tbBuscar_TextChanged(System.Object,System.EventArgs)">
   tbBuscar_TextChanged(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L261"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L263"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al modificar el texto del campo de búsqueda.</p>
@@ -1551,7 +1428,7 @@ pasando el texto ingresado y actualiza el listado de planes llamando a <a class=
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L14" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPlanes.vb/#L16" class="edit-link">Edit this page</a>
         </div>
 
 

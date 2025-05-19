@@ -13,11 +13,6 @@ items:
   - Gimnasio.Presentacion.FrmReclamos.HabilitarListado
   - Gimnasio.Presentacion.FrmReclamos.HabilitarRespuesta
   - Gimnasio.Presentacion.FrmReclamos.InitializeComponent
-  - Gimnasio.Presentacion.FrmReclamos.Label1
-  - Gimnasio.Presentacion.FrmReclamos.Label2
-  - Gimnasio.Presentacion.FrmReclamos.Label3
-  - Gimnasio.Presentacion.FrmReclamos.Label4
-  - Gimnasio.Presentacion.FrmReclamos.Label5
   - Gimnasio.Presentacion.FrmReclamos.TbRespuesta
   - Gimnasio.Presentacion.FrmReclamos.btnActualizar
   - Gimnasio.Presentacion.FrmReclamos.btnActualizar_Click(System.Object,System.EventArgs)
@@ -40,7 +35,12 @@ items:
   - Gimnasio.Presentacion.FrmReclamos.dgvListado
   - Gimnasio.Presentacion.FrmReclamos.esNuevo
   - Gimnasio.Presentacion.FrmReclamos.frmReclamos_Load(System.Object,System.EventArgs)
+  - Gimnasio.Presentacion.FrmReclamos.lblBuscar
+  - Gimnasio.Presentacion.FrmReclamos.lblDNI
   - Gimnasio.Presentacion.FrmReclamos.lblDatosIngreso
+  - Gimnasio.Presentacion.FrmReclamos.lblDescripcion
+  - Gimnasio.Presentacion.FrmReclamos.lblResponder
+  - Gimnasio.Presentacion.FrmReclamos.lblTipo
   - Gimnasio.Presentacion.FrmReclamos.lblTotal
   - Gimnasio.Presentacion.FrmReclamos.nReclamos
   - Gimnasio.Presentacion.FrmReclamos.panelDatosIngreso
@@ -67,7 +67,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: FrmReclamos
     path: ../Gimnasio.Presentacion/FrmReclamos.vb
-    startLine: 12
+    startLine: 17
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -78,6 +78,12 @@ items:
 
     Utiliza la clase <xref href="Gimnasio.Presentacion.FrmReclamos.nReclamos" data-throw-if-not-resolved="false"></xref> para la lógica de negocio y la clase <xref href="Gimnasio.Entidades.Reclamos" data-throw-if-not-resolved="false"></xref> como entidad.
 
+    Todas las operaciones de esta capa están envueltas en bloques Try...Catch. 
+
+    El manejo de errores se realiza a través de <xref href="Gimnasio.Errores.ManejarErrores.Mostrar(System.String%2cSystem.Exception)" data-throw-if-not-resolved="false"></xref>
+
+    que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.
+  remarks: >-
     Todas las operaciones de esta capa están envueltas en bloques Try...Catch. 
 
     El manejo de errores se realiza a través de <xref href="Gimnasio.Errores.ManejarErrores.Mostrar(System.String%2cSystem.Exception)" data-throw-if-not-resolved="false"></xref>
@@ -978,35 +984,35 @@ items:
       type: System.Windows.Forms.Panel
     content.vb: Friend Overridable Property panelDatosIngreso As Panel
   overload: Gimnasio.Presentacion.FrmReclamos.panelDatosIngreso*
-- uid: Gimnasio.Presentacion.FrmReclamos.Label1
-  commentId: P:Gimnasio.Presentacion.FrmReclamos.Label1
-  id: Label1
+- uid: Gimnasio.Presentacion.FrmReclamos.lblBuscar
+  commentId: P:Gimnasio.Presentacion.FrmReclamos.lblBuscar
+  id: lblBuscar
   parent: Gimnasio.Presentacion.FrmReclamos
   langs:
   - csharp
   - vb
-  name: Label1
-  nameWithType: FrmReclamos.Label1
-  fullName: Gimnasio.Presentacion.FrmReclamos.Label1
+  name: lblBuscar
+  nameWithType: FrmReclamos.lblBuscar
+  fullName: Gimnasio.Presentacion.FrmReclamos.lblBuscar
   type: Property
   source:
     remote:
       path: Gimnasio.Presentacion/FrmReclamos.Designer.vb
       branch: main
       repo: https://github.com/Carlovich01/gimnasio3.git
-    id: Label1
+    id: lblBuscar
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
     startLine: 427
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
   syntax:
-    content: internal virtual Label Label1 { get; set; }
+    content: internal virtual Label lblBuscar { get; set; }
     parameters: []
     return:
       type: System.Windows.Forms.Label
-    content.vb: Friend Overridable Property Label1 As Label
-  overload: Gimnasio.Presentacion.FrmReclamos.Label1*
+    content.vb: Friend Overridable Property lblBuscar As Label
+  overload: Gimnasio.Presentacion.FrmReclamos.lblBuscar*
 - uid: Gimnasio.Presentacion.FrmReclamos.btnEliminar
   commentId: P:Gimnasio.Presentacion.FrmReclamos.btnEliminar
   id: btnEliminar
@@ -1239,35 +1245,35 @@ items:
       type: System.Windows.Forms.Button
     content.vb: Friend Overridable Property btnResponder As Button
   overload: Gimnasio.Presentacion.FrmReclamos.btnResponder*
-- uid: Gimnasio.Presentacion.FrmReclamos.Label3
-  commentId: P:Gimnasio.Presentacion.FrmReclamos.Label3
-  id: Label3
+- uid: Gimnasio.Presentacion.FrmReclamos.lblDNI
+  commentId: P:Gimnasio.Presentacion.FrmReclamos.lblDNI
+  id: lblDNI
   parent: Gimnasio.Presentacion.FrmReclamos
   langs:
   - csharp
   - vb
-  name: Label3
-  nameWithType: FrmReclamos.Label3
-  fullName: Gimnasio.Presentacion.FrmReclamos.Label3
+  name: lblDNI
+  nameWithType: FrmReclamos.lblDNI
+  fullName: Gimnasio.Presentacion.FrmReclamos.lblDNI
   type: Property
   source:
     remote:
       path: Gimnasio.Presentacion/FrmReclamos.Designer.vb
       branch: main
       repo: https://github.com/Carlovich01/gimnasio3.git
-    id: Label3
+    id: lblDNI
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
     startLine: 436
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
   syntax:
-    content: internal virtual Label Label3 { get; set; }
+    content: internal virtual Label lblDNI { get; set; }
     parameters: []
     return:
       type: System.Windows.Forms.Label
-    content.vb: Friend Overridable Property Label3 As Label
-  overload: Gimnasio.Presentacion.FrmReclamos.Label3*
+    content.vb: Friend Overridable Property lblDNI As Label
+  overload: Gimnasio.Presentacion.FrmReclamos.lblDNI*
 - uid: Gimnasio.Presentacion.FrmReclamos.tbDNI
   commentId: P:Gimnasio.Presentacion.FrmReclamos.tbDNI
   id: tbDNI
@@ -1413,64 +1419,64 @@ items:
       type: System.Windows.Forms.TextBox
     content.vb: Friend Overridable Property tbDescripcion As TextBox
   overload: Gimnasio.Presentacion.FrmReclamos.tbDescripcion*
-- uid: Gimnasio.Presentacion.FrmReclamos.Label2
-  commentId: P:Gimnasio.Presentacion.FrmReclamos.Label2
-  id: Label2
+- uid: Gimnasio.Presentacion.FrmReclamos.lblDescripcion
+  commentId: P:Gimnasio.Presentacion.FrmReclamos.lblDescripcion
+  id: lblDescripcion
   parent: Gimnasio.Presentacion.FrmReclamos
   langs:
   - csharp
   - vb
-  name: Label2
-  nameWithType: FrmReclamos.Label2
-  fullName: Gimnasio.Presentacion.FrmReclamos.Label2
+  name: lblDescripcion
+  nameWithType: FrmReclamos.lblDescripcion
+  fullName: Gimnasio.Presentacion.FrmReclamos.lblDescripcion
   type: Property
   source:
     remote:
       path: Gimnasio.Presentacion/FrmReclamos.Designer.vb
       branch: main
       repo: https://github.com/Carlovich01/gimnasio3.git
-    id: Label2
+    id: lblDescripcion
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
     startLine: 442
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
   syntax:
-    content: internal virtual Label Label2 { get; set; }
+    content: internal virtual Label lblDescripcion { get; set; }
     parameters: []
     return:
       type: System.Windows.Forms.Label
-    content.vb: Friend Overridable Property Label2 As Label
-  overload: Gimnasio.Presentacion.FrmReclamos.Label2*
-- uid: Gimnasio.Presentacion.FrmReclamos.Label4
-  commentId: P:Gimnasio.Presentacion.FrmReclamos.Label4
-  id: Label4
+    content.vb: Friend Overridable Property lblDescripcion As Label
+  overload: Gimnasio.Presentacion.FrmReclamos.lblDescripcion*
+- uid: Gimnasio.Presentacion.FrmReclamos.lblTipo
+  commentId: P:Gimnasio.Presentacion.FrmReclamos.lblTipo
+  id: lblTipo
   parent: Gimnasio.Presentacion.FrmReclamos
   langs:
   - csharp
   - vb
-  name: Label4
-  nameWithType: FrmReclamos.Label4
-  fullName: Gimnasio.Presentacion.FrmReclamos.Label4
+  name: lblTipo
+  nameWithType: FrmReclamos.lblTipo
+  fullName: Gimnasio.Presentacion.FrmReclamos.lblTipo
   type: Property
   source:
     remote:
       path: Gimnasio.Presentacion/FrmReclamos.Designer.vb
       branch: main
       repo: https://github.com/Carlovich01/gimnasio3.git
-    id: Label4
+    id: lblTipo
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
     startLine: 443
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
   syntax:
-    content: internal virtual Label Label4 { get; set; }
+    content: internal virtual Label lblTipo { get; set; }
     parameters: []
     return:
       type: System.Windows.Forms.Label
-    content.vb: Friend Overridable Property Label4 As Label
-  overload: Gimnasio.Presentacion.FrmReclamos.Label4*
+    content.vb: Friend Overridable Property lblTipo As Label
+  overload: Gimnasio.Presentacion.FrmReclamos.lblTipo*
 - uid: Gimnasio.Presentacion.FrmReclamos.lblDatosIngreso
   commentId: P:Gimnasio.Presentacion.FrmReclamos.lblDatosIngreso
   id: lblDatosIngreso
@@ -1529,35 +1535,35 @@ items:
       type: System.Windows.Forms.Panel
     content.vb: Friend Overridable Property panelRespuestaIngreso As Panel
   overload: Gimnasio.Presentacion.FrmReclamos.panelRespuestaIngreso*
-- uid: Gimnasio.Presentacion.FrmReclamos.Label5
-  commentId: P:Gimnasio.Presentacion.FrmReclamos.Label5
-  id: Label5
+- uid: Gimnasio.Presentacion.FrmReclamos.lblResponder
+  commentId: P:Gimnasio.Presentacion.FrmReclamos.lblResponder
+  id: lblResponder
   parent: Gimnasio.Presentacion.FrmReclamos
   langs:
   - csharp
   - vb
-  name: Label5
-  nameWithType: FrmReclamos.Label5
-  fullName: Gimnasio.Presentacion.FrmReclamos.Label5
+  name: lblResponder
+  nameWithType: FrmReclamos.lblResponder
+  fullName: Gimnasio.Presentacion.FrmReclamos.lblResponder
   type: Property
   source:
     remote:
       path: Gimnasio.Presentacion/FrmReclamos.Designer.vb
       branch: main
       repo: https://github.com/Carlovich01/gimnasio3.git
-    id: Label5
+    id: lblResponder
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
     startLine: 446
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
   syntax:
-    content: internal virtual Label Label5 { get; set; }
+    content: internal virtual Label lblResponder { get; set; }
     parameters: []
     return:
       type: System.Windows.Forms.Label
-    content.vb: Friend Overridable Property Label5 As Label
-  overload: Gimnasio.Presentacion.FrmReclamos.Label5*
+    content.vb: Friend Overridable Property lblResponder As Label
+  overload: Gimnasio.Presentacion.FrmReclamos.lblResponder*
 - uid: Gimnasio.Presentacion.FrmReclamos.tbCancelarRespuesta
   commentId: P:Gimnasio.Presentacion.FrmReclamos.tbCancelarRespuesta
   id: tbCancelarRespuesta
@@ -1692,7 +1698,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: nReclamos
     path: ../Gimnasio.Presentacion/FrmReclamos.vb
-    startLine: 16
+    startLine: 21
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1721,7 +1727,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: esNuevo
     path: ../Gimnasio.Presentacion/FrmReclamos.vb
-    startLine: 20
+    startLine: 25
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1750,7 +1756,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: .ctor
     path: ../Gimnasio.Presentacion/FrmReclamos.vb
-    startLine: 27
+    startLine: 32
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1788,7 +1794,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: frmReclamos_Load
     path: ../Gimnasio.Presentacion/FrmReclamos.vb
-    startLine: 43
+    startLine: 48
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1827,7 +1833,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ActualizarDgv
     path: ../Gimnasio.Presentacion/FrmReclamos.vb
-    startLine: 66
+    startLine: 71
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1860,7 +1866,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ActualizarDgv
     path: ../Gimnasio.Presentacion/FrmReclamos.vb
-    startLine: 82
+    startLine: 87
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1897,7 +1903,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: HabilitarListado
     path: ../Gimnasio.Presentacion/FrmReclamos.vb
-    startLine: 95
+    startLine: 100
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1925,7 +1931,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: HabilitarIngreso
     path: ../Gimnasio.Presentacion/FrmReclamos.vb
-    startLine: 111
+    startLine: 116
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1960,7 +1966,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: HabilitarRespuesta
     path: ../Gimnasio.Presentacion/FrmReclamos.vb
-    startLine: 130
+    startLine: 135
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1993,7 +1999,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnInsertar_Click
     path: ../Gimnasio.Presentacion/FrmReclamos.vb
-    startLine: 147
+    startLine: 152
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2036,7 +2042,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnActualizar_Click
     path: ../Gimnasio.Presentacion/FrmReclamos.vb
-    startLine: 166
+    startLine: 171
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2085,7 +2091,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnResponder_Click
     path: ../Gimnasio.Presentacion/FrmReclamos.vb
-    startLine: 192
+    startLine: 197
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2130,7 +2136,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnGuardar_Click
     path: ../Gimnasio.Presentacion/FrmReclamos.vb
-    startLine: 217
+    startLine: 222
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2181,7 +2187,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbGuardarRespuesta_Click
     path: ../Gimnasio.Presentacion/FrmReclamos.vb
-    startLine: 262
+    startLine: 267
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2228,7 +2234,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnCancelar_Click
     path: ../Gimnasio.Presentacion/FrmReclamos.vb
-    startLine: 283
+    startLine: 288
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2264,7 +2270,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnEliminar_Click
     path: ../Gimnasio.Presentacion/FrmReclamos.vb
-    startLine: 299
+    startLine: 304
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2311,7 +2317,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: cb_SelectedIndexChanged
     path: ../Gimnasio.Presentacion/FrmReclamos.vb
-    startLine: 328
+    startLine: 333
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2356,7 +2362,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnCambiarEstado_Click
     path: ../Gimnasio.Presentacion/FrmReclamos.vb
-    startLine: 352
+    startLine: 357
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2405,7 +2411,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbCancelarRespuesta_Click
     path: ../Gimnasio.Presentacion/FrmReclamos.vb
-    startLine: 378
+    startLine: 383
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -20224,12 +20230,12 @@ references:
   name: panelDatosIngreso
   nameWithType: FrmReclamos.panelDatosIngreso
   fullName: Gimnasio.Presentacion.FrmReclamos.panelDatosIngreso
-- uid: Gimnasio.Presentacion.FrmReclamos.Label1*
-  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.Label1
-  href: Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_Label1
-  name: Label1
-  nameWithType: FrmReclamos.Label1
-  fullName: Gimnasio.Presentacion.FrmReclamos.Label1
+- uid: Gimnasio.Presentacion.FrmReclamos.lblBuscar*
+  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.lblBuscar
+  href: Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_lblBuscar
+  name: lblBuscar
+  nameWithType: FrmReclamos.lblBuscar
+  fullName: Gimnasio.Presentacion.FrmReclamos.lblBuscar
 - uid: System.Windows.Forms.Label
   commentId: T:System.Windows.Forms.Label
   parent: System.Windows.Forms
@@ -20310,12 +20316,12 @@ references:
   name: btnResponder
   nameWithType: FrmReclamos.btnResponder
   fullName: Gimnasio.Presentacion.FrmReclamos.btnResponder
-- uid: Gimnasio.Presentacion.FrmReclamos.Label3*
-  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.Label3
-  href: Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_Label3
-  name: Label3
-  nameWithType: FrmReclamos.Label3
-  fullName: Gimnasio.Presentacion.FrmReclamos.Label3
+- uid: Gimnasio.Presentacion.FrmReclamos.lblDNI*
+  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.lblDNI
+  href: Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_lblDNI
+  name: lblDNI
+  nameWithType: FrmReclamos.lblDNI
+  fullName: Gimnasio.Presentacion.FrmReclamos.lblDNI
 - uid: Gimnasio.Presentacion.FrmReclamos.tbDNI*
   commentId: Overload:Gimnasio.Presentacion.FrmReclamos.tbDNI
   href: Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_tbDNI
@@ -20354,18 +20360,18 @@ references:
   name: tbDescripcion
   nameWithType: FrmReclamos.tbDescripcion
   fullName: Gimnasio.Presentacion.FrmReclamos.tbDescripcion
-- uid: Gimnasio.Presentacion.FrmReclamos.Label2*
-  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.Label2
-  href: Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_Label2
-  name: Label2
-  nameWithType: FrmReclamos.Label2
-  fullName: Gimnasio.Presentacion.FrmReclamos.Label2
-- uid: Gimnasio.Presentacion.FrmReclamos.Label4*
-  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.Label4
-  href: Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_Label4
-  name: Label4
-  nameWithType: FrmReclamos.Label4
-  fullName: Gimnasio.Presentacion.FrmReclamos.Label4
+- uid: Gimnasio.Presentacion.FrmReclamos.lblDescripcion*
+  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.lblDescripcion
+  href: Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_lblDescripcion
+  name: lblDescripcion
+  nameWithType: FrmReclamos.lblDescripcion
+  fullName: Gimnasio.Presentacion.FrmReclamos.lblDescripcion
+- uid: Gimnasio.Presentacion.FrmReclamos.lblTipo*
+  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.lblTipo
+  href: Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_lblTipo
+  name: lblTipo
+  nameWithType: FrmReclamos.lblTipo
+  fullName: Gimnasio.Presentacion.FrmReclamos.lblTipo
 - uid: Gimnasio.Presentacion.FrmReclamos.lblDatosIngreso*
   commentId: Overload:Gimnasio.Presentacion.FrmReclamos.lblDatosIngreso
   href: Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_lblDatosIngreso
@@ -20378,12 +20384,12 @@ references:
   name: panelRespuestaIngreso
   nameWithType: FrmReclamos.panelRespuestaIngreso
   fullName: Gimnasio.Presentacion.FrmReclamos.panelRespuestaIngreso
-- uid: Gimnasio.Presentacion.FrmReclamos.Label5*
-  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.Label5
-  href: Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_Label5
-  name: Label5
-  nameWithType: FrmReclamos.Label5
-  fullName: Gimnasio.Presentacion.FrmReclamos.Label5
+- uid: Gimnasio.Presentacion.FrmReclamos.lblResponder*
+  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.lblResponder
+  href: Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_lblResponder
+  name: lblResponder
+  nameWithType: FrmReclamos.lblResponder
+  fullName: Gimnasio.Presentacion.FrmReclamos.lblResponder
 - uid: Gimnasio.Presentacion.FrmReclamos.tbCancelarRespuesta*
   commentId: Overload:Gimnasio.Presentacion.FrmReclamos.tbCancelarRespuesta
   href: Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_tbCancelarRespuesta

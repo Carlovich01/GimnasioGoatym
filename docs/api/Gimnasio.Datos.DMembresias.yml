@@ -33,7 +33,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: DMembresias
     path: ../Gimnasio.Datos/DMembresias.vb
-    startLine: 37
+    startLine: 38
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -43,8 +43,7 @@ items:
     Hereda de <xref href="Gimnasio.Datos.ConexionBase" data-throw-if-not-resolved="false"></xref> y utiliza la entidad <xref href="Gimnasio.Entidades.Membresias" data-throw-if-not-resolved="false"></xref>.
 
     Proporciona métodos CRUD y de búsqueda para la tabla membresias_miembro y la vista vista_membresias.
-
-
+  remarks: >-
     La vista_membresias es una vista SQL que consolida información relevante de las membresías,
 
     uniendo datos de las tablas membresias_miembro, miembros y planes_membresia.
@@ -109,7 +108,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Listar
     path: ../Gimnasio.Datos/DMembresias.vb
-    startLine: 44
+    startLine: 45
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -140,7 +139,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Insertar
     path: ../Gimnasio.Datos/DMembresias.vb
-    startLine: 58
+    startLine: 59
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -172,7 +171,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Actualizar
     path: ../Gimnasio.Datos/DMembresias.vb
-    startLine: 79
+    startLine: 80
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -207,7 +206,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Eliminar
     path: ../Gimnasio.Datos/DMembresias.vb
-    startLine: 100
+    startLine: 101
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -242,7 +241,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ObtenerIdMembresia
     path: ../Gimnasio.Datos/DMembresias.vb
-    startLine: 119
+    startLine: 120
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -280,7 +279,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ActualizarEstadoYFechas
     path: ../Gimnasio.Datos/DMembresias.vb
-    startLine: 139
+    startLine: 140
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -315,7 +314,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ActualizarAEstadoInactiva
     path: ../Gimnasio.Datos/DMembresias.vb
-    startLine: 162
+    startLine: 163
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -346,7 +345,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ObtenerDuracionPorMembresia
     path: ../Gimnasio.Datos/DMembresias.vb
-    startLine: 181
+    startLine: 182
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -387,7 +386,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ObtenerPorDni
     path: ../Gimnasio.Datos/DMembresias.vb
-    startLine: 203
+    startLine: 204
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -425,7 +424,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorDni
     path: ../Gimnasio.Datos/DMembresias.vb
-    startLine: 222
+    startLine: 223
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -466,7 +465,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorNombrePlan
     path: ../Gimnasio.Datos/DMembresias.vb
-    startLine: 241
+    startLine: 242
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -507,7 +506,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorEstado
     path: ../Gimnasio.Datos/DMembresias.vb
-    startLine: 259
+    startLine: 260
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -545,7 +544,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: VerificarExistenciaDeMiembroYPlan
     path: ../Gimnasio.Datos/DMembresias.vb
-    startLine: 278
+    startLine: 279
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -583,7 +582,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ObtenerMembresiaMasReciente
     path: ../Gimnasio.Datos/DMembresias.vb
-    startLine: 301
+    startLine: 302
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos

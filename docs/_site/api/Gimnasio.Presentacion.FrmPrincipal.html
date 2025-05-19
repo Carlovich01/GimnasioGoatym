@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class FrmPrincipal | Goatym ">
       
-      <meta name="description" content="Formulario principal de la aplicaci&#243;n del gimnasio. Gestiona la navegaci&#243;n entre los diferentes m&#243;dulos y controla el acceso seg&#250;n el rol del usuario. Utiliza la clase  para identificar al usuario logueado y su rol. Llama a formularios secundarios como , , , , ,  y . Todas las operaciones de esta capa est&#225;n envueltas en bloques Try...Catch. El manejo de errores se realiza a trav&#233;s de  que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.">
+      <meta name="description" content="Formulario principal de la aplicaci&#243;n del gimnasio. Gestiona la navegaci&#243;n entre los diferentes m&#243;dulos y controla el acceso seg&#250;n el rol del usuario. Utiliza la clase  para identificar al usuario logueado y su rol. Llama a formularios secundarios como , , , , ,  y .">
       <link rel="icon" href="../images/logo.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Gimnasio_Presentacion_FrmPrincipal" data-uid="Gimnasio.Presentacion.FrmPrincipal" class="text-break">
-Class FrmPrincipal  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L14"><i class="bi bi-code-slash"></i></a>
+Class FrmPrincipal  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L16"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,10 +99,7 @@ Class FrmPrincipal  <a class="header-action link-secondary" title="View source" 
   <div class="markdown summary"><p>Formulario principal de la aplicación del gimnasio. Gestiona la navegación entre los diferentes módulos y controla el acceso según el rol del usuario.
 Utiliza la clase <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a> para identificar al usuario logueado y su rol. Llama a formularios secundarios como <a class="xref" href="Gimnasio.Presentacion.FrmPlanes.html">FrmPlanes</a>,
 <a class="xref" href="Gimnasio.Presentacion.FrmMiembros.html">FrmMiembros</a>, <a class="xref" href="Gimnasio.Presentacion.FrmMembresias.html">FrmMembresias</a>, <a class="xref" href="Gimnasio.Presentacion.FrmPagos.html">FrmPagos</a>, <a class="xref" href="Gimnasio.Presentacion.FrmRegistroAsistencias.html">FrmRegistroAsistencias</a>, <a class="xref" href="Gimnasio.Presentacion.FrmReclamos.html">FrmReclamos</a> y
-<a class="xref" href="Gimnasio.Presentacion.FrmUsuarios.html">FrmUsuarios</a>.
-Todas las operaciones de esta capa están envueltas en bloques Try...Catch.
-El manejo de errores se realiza a través de <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Mostrar_System_String_System_Exception_">Mostrar(string, Exception)</a>
-que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.</p>
+<a class="xref" href="Gimnasio.Presentacion.FrmUsuarios.html">FrmUsuarios</a>.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -132,6 +129,11 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
 
 
 
+  <h2 id="Gimnasio_Presentacion_FrmPrincipal_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Todas las operaciones de esta capa están envueltas en bloques Try...Catch.
+El manejo de errores se realiza a través de <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Mostrar_System_String_System_Exception_">Mostrar(string, Exception)</a>
+que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.</p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -142,7 +144,7 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal__ctor_Gimnasio_Entidades_Usuarios_" data-uid="Gimnasio.Presentacion.FrmPrincipal.#ctor(Gimnasio.Entidades.Usuarios)">
   FrmPrincipal(Usuarios)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Constructor del formulario principal.</p>
@@ -201,11 +203,6 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
 
 
 
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icontainer">IContainer</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -218,7 +215,7 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_usuarioActual" data-uid="Gimnasio.Presentacion.FrmPrincipal.usuarioActual">
   usuarioActual
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Usuario actualmente logueado en la aplicación.</p>
@@ -232,11 +229,6 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
 
 
 
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -268,11 +260,6 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.panel">Panel</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -281,41 +268,10 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
 
 
 
-  <a id="Gimnasio_Presentacion_FrmPrincipal_PictureBox1_" data-uid="Gimnasio.Presentacion.FrmPrincipal.PictureBox1*"></a>
+  <a id="Gimnasio_Presentacion_FrmPrincipal_ToolStripPesta_as_" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripPesta&#241;as*"></a>
 
-  <h3 id="Gimnasio_Presentacion_FrmPrincipal_PictureBox1" data-uid="Gimnasio.Presentacion.FrmPrincipal.PictureBox1">
-  PictureBox1
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L229"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">internal virtual PictureBox PictureBox1 { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.picturebox">PictureBox</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gimnasio_Presentacion_FrmPrincipal_ToolStrip1_" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStrip1*"></a>
-
-  <h3 id="Gimnasio_Presentacion_FrmPrincipal_ToolStrip1" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStrip1">
-  ToolStrip1
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_ToolStripPesta_as" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripPesta&#241;as">
+  ToolStripPesta&#241;as
   <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L227"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -323,18 +279,13 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">internal virtual ToolStrip ToolStrip1 { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">internal virtual ToolStrip ToolStripPesta&#241;as { get; set; }</code></pre>
   </div>
 
 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstrip">ToolStrip</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -361,11 +312,6 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripseparator">ToolStripSeparator</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -392,11 +338,6 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripseparator">ToolStripSeparator</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -423,11 +364,6 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripseparator">ToolStripSeparator</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -454,11 +390,6 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripseparator">ToolStripSeparator</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -485,11 +416,6 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripseparator">ToolStripSeparator</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -516,11 +442,6 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripseparator">ToolStripSeparator</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -547,11 +468,6 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripseparator">ToolStripSeparator</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -578,11 +494,6 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripseparator">ToolStripSeparator</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -609,11 +520,6 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripbutton">ToolStripButton</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -640,11 +546,6 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripbutton">ToolStripButton</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -671,11 +572,6 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripbutton">ToolStripButton</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -702,11 +598,6 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripbutton">ToolStripButton</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -733,11 +624,6 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripbutton">ToolStripButton</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -764,11 +650,6 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripbutton">ToolStripButton</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -795,11 +676,6 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripdropdownbutton">ToolStripDropDownButton</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -826,11 +702,6 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripbutton">ToolStripButton</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -857,11 +728,32 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.toolstripmenuitem">ToolStripMenuItem</a></dt>
-    <dd></dd>
-  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_pbLogo_" data-uid="Gimnasio.Presentacion.FrmPrincipal.pbLogo*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_pbLogo" data-uid="Gimnasio.Presentacion.FrmPrincipal.pbLogo">
+  pbLogo
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L229"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual PictureBox pbLogo { get; set; }</code></pre>
+  </div>
+
+
+
+
+
 
 
 
@@ -937,7 +829,7 @@ public class FrmPrincipal : Form, IOleControl.Interface, IOleObject.Interface, I
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_MostrarFormulario_System_Windows_Forms_Form_" data-uid="Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario(System.Windows.Forms.Form)">
   MostrarFormulario(Form)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L72"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Muestra un formulario secundario dentro del panel principal de la aplicación.</p>
@@ -978,7 +870,7 @@ lo elimina y libera sus recursos para evitar fugas de memoria.</li>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_btRegistroAsistencias_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btRegistroAsistencias_Click(System.Object,System.EventArgs)">
   btRegistroAsistencias_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L143"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que abre el formulario de registro de asistencias <a class="xref" href="Gimnasio.Presentacion.FrmRegistroAsistencias.html">FrmRegistroAsistencias</a>.</p>
@@ -1012,7 +904,7 @@ lo elimina y libera sus recursos para evitar fugas de memoria.</li>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnMembresias_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnMembresias_Click(System.Object,System.EventArgs)">
   btnMembresias_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L119"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que abre el formulario de membresías <a class="xref" href="Gimnasio.Presentacion.FrmMembresias.html">FrmMembresias</a>.</p>
@@ -1046,7 +938,7 @@ lo elimina y libera sus recursos para evitar fugas de memoria.</li>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnMiembros_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnMiembros_Click(System.Object,System.EventArgs)">
   btnMiembros_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L105"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L107"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que abre el formulario de miembros <a class="xref" href="Gimnasio.Presentacion.FrmMiembros.html">FrmMiembros</a>.</p>
@@ -1080,7 +972,7 @@ lo elimina y libera sus recursos para evitar fugas de memoria.</li>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnPagos_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnPagos_Click(System.Object,System.EventArgs)">
   btnPagos_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L129"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L131"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que abre el formulario de pagos <a class="xref" href="Gimnasio.Presentacion.FrmPagos.html">FrmPagos</a>.</p>
@@ -1114,7 +1006,7 @@ lo elimina y libera sus recursos para evitar fugas de memoria.</li>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnPlanes_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnPlanes_Click(System.Object,System.EventArgs)">
   btnPlanes_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L93"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L95"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que abre el formulario de planes <a class="xref" href="Gimnasio.Presentacion.FrmPlanes.html">FrmPlanes</a>.</p>
@@ -1148,7 +1040,7 @@ lo elimina y libera sus recursos para evitar fugas de memoria.</li>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnReclamos_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnReclamos_Click(System.Object,System.EventArgs)">
   btnReclamos_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L153"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L155"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que abre el formulario de reclamos <a class="xref" href="Gimnasio.Presentacion.FrmReclamos.html">FrmReclamos</a>.</p>
@@ -1182,7 +1074,7 @@ lo elimina y libera sus recursos para evitar fugas de memoria.</li>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnUsuarios_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnUsuarios_Click(System.Object,System.EventArgs)">
   btnUsuarios_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L166"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L168"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que abre el formulario de usuarios <a class="xref" href="Gimnasio.Presentacion.FrmUsuarios.html">FrmUsuarios</a>.
@@ -1217,7 +1109,7 @@ Solo visible para usuarios con rol de administrador.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_frmPrincipal_FormClosed_System_Object_System_Windows_Forms_FormClosedEventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.frmPrincipal_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)">
   frmPrincipal_FormClosed(object, FormClosedEventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L198"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L200"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1250,7 +1142,7 @@ Solo visible para usuarios con rol de administrador.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_frmPrincipal_Load_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.frmPrincipal_Load(System.Object,System.EventArgs)">
   frmPrincipal_Load(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al cargar el formulario principal. Muestra un mensaje de bienvenida al usuario con su nombre y rol.
@@ -1285,7 +1177,7 @@ Actualiza el estado de las membresías utilizando <a class="xref" href="Gimnasio
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_miCerrarSesion_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.miCerrarSesion_Click(System.Object,System.EventArgs)">
   miCerrarSesion_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L184"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L186"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><ul>
@@ -1330,7 +1222,7 @@ Actualiza el estado de las membresías utilizando <a class="xref" href="Gimnasio
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_obtenerUsuarioActual" data-uid="Gimnasio.Presentacion.FrmPrincipal.obtenerUsuarioActual">
   obtenerUsuarioActual()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Devuelve el usuario actualmente logueado.</p>
@@ -1363,7 +1255,7 @@ Actualiza el estado de las membresías utilizando <a class="xref" href="Gimnasio
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L14" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L16" class="edit-link">Edit this page</a>
         </div>
 
 

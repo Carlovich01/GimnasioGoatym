@@ -89,7 +89,7 @@
 
 
   <h1 id="Gimnasio_Presentacion_FrmReclamos" data-uid="Gimnasio.Presentacion.FrmReclamos" class="text-break">
-Class FrmReclamos  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L13"><i class="bi bi-code-slash"></i></a>
+Class FrmReclamos  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L18"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -131,6 +131,11 @@ public class FrmReclamos : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
+  <h2 id="Gimnasio_Presentacion_FrmReclamos_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Todas las operaciones de esta capa están envueltas en bloques Try...Catch.
+El manejo de errores se realiza a través de <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Mostrar_System_String_System_Exception_">Mostrar(string, Exception)</a>
+que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.</p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -141,7 +146,7 @@ public class FrmReclamos : Form, IOleControl.Interface, IOleObject.Interface, IO
 
   <h3 id="Gimnasio_Presentacion_FrmReclamos__ctor_Gimnasio_Entidades_Usuarios_" data-uid="Gimnasio.Presentacion.FrmReclamos.#ctor(Gimnasio.Entidades.Usuarios)">
   FrmReclamos(Usuarios)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L28"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Constructor del formulario de reclamos. Inicializa los componentes del formulario.
@@ -191,11 +196,6 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
 
 
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icontainer">IContainer</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -208,7 +208,7 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
   <h3 id="Gimnasio_Presentacion_FrmReclamos_esNuevo" data-uid="Gimnasio.Presentacion.FrmReclamos.esNuevo">
   esNuevo
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indica si la operación actual es de inserción (<code>True</code>) o actualización (<code>False</code>).</p>
@@ -222,11 +222,6 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
 
 
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -239,7 +234,7 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
   <h3 id="Gimnasio_Presentacion_FrmReclamos_nReclamos" data-uid="Gimnasio.Presentacion.FrmReclamos.nReclamos">
   nReclamos
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Instancia de la capa de negocio para reclamos.</p>
@@ -253,11 +248,6 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
 
 
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Gimnasio.Negocio.NReclamos.html">NReclamos</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -269,161 +259,6 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
   <h2 class="section" id="properties">Properties
 </h2>
-
-
-  <a id="Gimnasio_Presentacion_FrmReclamos_Label1_" data-uid="Gimnasio.Presentacion.FrmReclamos.Label1*"></a>
-
-  <h3 id="Gimnasio_Presentacion_FrmReclamos_Label1" data-uid="Gimnasio.Presentacion.FrmReclamos.Label1">
-  Label1
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L428"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">internal virtual Label Label1 { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gimnasio_Presentacion_FrmReclamos_Label2_" data-uid="Gimnasio.Presentacion.FrmReclamos.Label2*"></a>
-
-  <h3 id="Gimnasio_Presentacion_FrmReclamos_Label2" data-uid="Gimnasio.Presentacion.FrmReclamos.Label2">
-  Label2
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L443"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">internal virtual Label Label2 { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gimnasio_Presentacion_FrmReclamos_Label3_" data-uid="Gimnasio.Presentacion.FrmReclamos.Label3*"></a>
-
-  <h3 id="Gimnasio_Presentacion_FrmReclamos_Label3" data-uid="Gimnasio.Presentacion.FrmReclamos.Label3">
-  Label3
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L437"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">internal virtual Label Label3 { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gimnasio_Presentacion_FrmReclamos_Label4_" data-uid="Gimnasio.Presentacion.FrmReclamos.Label4*"></a>
-
-  <h3 id="Gimnasio_Presentacion_FrmReclamos_Label4" data-uid="Gimnasio.Presentacion.FrmReclamos.Label4">
-  Label4
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L444"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">internal virtual Label Label4 { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gimnasio_Presentacion_FrmReclamos_Label5_" data-uid="Gimnasio.Presentacion.FrmReclamos.Label5*"></a>
-
-  <h3 id="Gimnasio_Presentacion_FrmReclamos_Label5" data-uid="Gimnasio.Presentacion.FrmReclamos.Label5">
-  Label5
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L447"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">internal virtual Label Label5 { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
 
 
   <a id="Gimnasio_Presentacion_FrmReclamos_TbRespuesta_" data-uid="Gimnasio.Presentacion.FrmReclamos.TbRespuesta*"></a>
@@ -444,11 +279,6 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -475,11 +305,6 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -506,11 +331,6 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -537,11 +357,6 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -568,11 +383,6 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -599,11 +409,6 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -630,11 +435,6 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -661,11 +461,6 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -692,11 +487,6 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.combobox">ComboBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -723,11 +513,6 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.combobox">ComboBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -754,11 +539,58 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.datagridview">DataGridView</a></dt>
-    <dd></dd>
-  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_lblBuscar_" data-uid="Gimnasio.Presentacion.FrmReclamos.lblBuscar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_lblBuscar" data-uid="Gimnasio.Presentacion.FrmReclamos.lblBuscar">
+  lblBuscar
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L428"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblBuscar { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_lblDNI_" data-uid="Gimnasio.Presentacion.FrmReclamos.lblDNI*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_lblDNI" data-uid="Gimnasio.Presentacion.FrmReclamos.lblDNI">
+  lblDNI
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L437"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblDNI { get; set; }</code></pre>
+  </div>
+
+
+
+
+
 
 
 
@@ -785,11 +617,84 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_lblDescripcion_" data-uid="Gimnasio.Presentacion.FrmReclamos.lblDescripcion*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_lblDescripcion" data-uid="Gimnasio.Presentacion.FrmReclamos.lblDescripcion">
+  lblDescripcion
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L443"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblDescripcion { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_lblResponder_" data-uid="Gimnasio.Presentacion.FrmReclamos.lblResponder*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_lblResponder" data-uid="Gimnasio.Presentacion.FrmReclamos.lblResponder">
+  lblResponder
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L447"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblResponder { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmReclamos_lblTipo_" data-uid="Gimnasio.Presentacion.FrmReclamos.lblTipo*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmReclamos_lblTipo" data-uid="Gimnasio.Presentacion.FrmReclamos.lblTipo">
+  lblTipo
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.Designer.vb/#L444"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblTipo { get; set; }</code></pre>
+  </div>
+
+
+
+
+
 
 
 
@@ -816,11 +721,6 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -847,11 +747,6 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.panel">Panel</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -878,11 +773,6 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.panel">Panel</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -909,11 +799,6 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.panel">Panel</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -940,11 +825,6 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -971,11 +851,6 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -1002,11 +877,6 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -1033,11 +903,6 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -1064,11 +929,6 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -1085,7 +945,7 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
   <h3 id="Gimnasio_Presentacion_FrmReclamos_ActualizarDgv" data-uid="Gimnasio.Presentacion.FrmReclamos.ActualizarDgv">
   ActualizarDgv()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L67"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L72"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Actualiza el DataGridView con la lista de reclamos obtenida desde la capa de negocio mediante <a class="xref" href="Gimnasio.Negocio.NReclamos.html#Gimnasio_Negocio_NReclamos_Listar">Listar()</a>.</p>
@@ -1116,7 +976,7 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
   <h3 id="Gimnasio_Presentacion_FrmReclamos_ActualizarDgv_System_Data_DataTable_" data-uid="Gimnasio.Presentacion.FrmReclamos.ActualizarDgv(System.Data.DataTable)">
   ActualizarDgv(DataTable)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L83"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Actualiza el DataGridView con una lista específica de reclamos proporcionada como parámetro.</p>
@@ -1186,7 +1046,7 @@ Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, camb
 
   <h3 id="Gimnasio_Presentacion_FrmReclamos_HabilitarIngreso" data-uid="Gimnasio.Presentacion.FrmReclamos.HabilitarIngreso">
   HabilitarIngreso()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L112"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L117"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Muestra el panel de datos de ingreso y lo ajusta para ocupar todo el espacio disponible.
@@ -1216,7 +1076,7 @@ Limpia los campos de descripción, DNI y respuesta para asegurar que no contenga
 
   <h3 id="Gimnasio_Presentacion_FrmReclamos_HabilitarListado" data-uid="Gimnasio.Presentacion.FrmReclamos.HabilitarListado">
   HabilitarListado()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L101"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Habilita la vista de listado de reclamos y oculta los paneles de ingreso y respuesta.</p>
@@ -1243,7 +1103,7 @@ Limpia los campos de descripción, DNI y respuesta para asegurar que no contenga
 
   <h3 id="Gimnasio_Presentacion_FrmReclamos_HabilitarRespuesta" data-uid="Gimnasio.Presentacion.FrmReclamos.HabilitarRespuesta">
   HabilitarRespuesta()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L131"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L136"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Muestra el panel de respuesta y lo ajusta para ocupar todo el espacio disponible en el formulario.
@@ -1298,7 +1158,7 @@ Limpia el campo de texto de respuesta para asegurar que no contenga datos previo
 
   <h3 id="Gimnasio_Presentacion_FrmReclamos_btnActualizar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnActualizar_Click(System.Object,System.EventArgs)">
   btnActualizar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L167"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L172"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Actualizar&quot;.</p>
@@ -1340,7 +1200,7 @@ Limpia el campo de texto de respuesta para asegurar que no contenga datos previo
 
   <h3 id="Gimnasio_Presentacion_FrmReclamos_btnCambiarEstado_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnCambiarEstado_Click(System.Object,System.EventArgs)">
   btnCambiarEstado_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L353"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L358"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Cambiar Estado&quot;.</p>
@@ -1382,7 +1242,7 @@ Limpia el campo de texto de respuesta para asegurar que no contenga datos previo
 
   <h3 id="Gimnasio_Presentacion_FrmReclamos_btnCancelar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnCancelar_Click(System.Object,System.EventArgs)">
   btnCancelar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L284"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L289"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Cancelar&quot;. Vuelve a la vista de listado de reclamos.</p>
@@ -1416,7 +1276,7 @@ Limpia el campo de texto de respuesta para asegurar que no contenga datos previo
 
   <h3 id="Gimnasio_Presentacion_FrmReclamos_btnEliminar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnEliminar_Click(System.Object,System.EventArgs)">
   btnEliminar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L300"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L305"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Eliminar&quot;.</p>
@@ -1457,7 +1317,7 @@ Limpia el campo de texto de respuesta para asegurar que no contenga datos previo
 
   <h3 id="Gimnasio_Presentacion_FrmReclamos_btnGuardar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnGuardar_Click(System.Object,System.EventArgs)">
   btnGuardar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L218"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L223"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Guardar&quot;.</p>
@@ -1500,7 +1360,7 @@ Limpia el campo de texto de respuesta para asegurar que no contenga datos previo
 
   <h3 id="Gimnasio_Presentacion_FrmReclamos_btnInsertar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnInsertar_Click(System.Object,System.EventArgs)">
   btnInsertar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L148"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L153"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Insertar&quot;.</p>
@@ -1539,7 +1399,7 @@ Limpia el campo de texto de respuesta para asegurar que no contenga datos previo
 
   <h3 id="Gimnasio_Presentacion_FrmReclamos_btnResponder_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmReclamos.btnResponder_Click(System.Object,System.EventArgs)">
   btnResponder_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L193"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L198"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Responder&quot;.</p>
@@ -1579,7 +1439,7 @@ Limpia el campo de texto de respuesta para asegurar que no contenga datos previo
 
   <h3 id="Gimnasio_Presentacion_FrmReclamos_cb_SelectedIndexChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmReclamos.cb_SelectedIndexChanged(System.Object,System.EventArgs)">
   cb_SelectedIndexChanged(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L329"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L334"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al cambiar la opción seleccionada en el ComboBox de búsqueda de reclamos.</p>
@@ -1624,7 +1484,7 @@ Limpia el campo de texto de respuesta para asegurar que no contenga datos previo
 
   <h3 id="Gimnasio_Presentacion_FrmReclamos_frmReclamos_Load_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmReclamos.frmReclamos_Load(System.Object,System.EventArgs)">
   frmReclamos_Load(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al cargar el formulario.
@@ -1659,7 +1519,7 @@ Inicializa el listado de reclamos, configura las columnas del DataGridView y sel
 
   <h3 id="Gimnasio_Presentacion_FrmReclamos_tbCancelarRespuesta_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmReclamos.tbCancelarRespuesta_Click(System.Object,System.EventArgs)">
   tbCancelarRespuesta_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L379"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L384"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Cancelar Respuesta&quot;. Vuelve a la vista de listado de reclamos.</p>
@@ -1693,7 +1553,7 @@ Inicializa el listado de reclamos, configura las columnas del DataGridView y sel
 
   <h3 id="Gimnasio_Presentacion_FrmReclamos_tbGuardarRespuesta_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmReclamos.tbGuardarRespuesta_Click(System.Object,System.EventArgs)">
   tbGuardarRespuesta_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L263"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L268"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Guardar Respuesta&quot;.</p>
@@ -1734,7 +1594,7 @@ Inicializa el listado de reclamos, configura las columnas del DataGridView y sel
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L13" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmReclamos.vb/#L18" class="edit-link">Edit this page</a>
         </div>
 
 

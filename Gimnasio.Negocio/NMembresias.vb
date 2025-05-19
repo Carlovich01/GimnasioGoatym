@@ -7,10 +7,12 @@ Imports System.Net
 ''' <summary>
 ''' Lógica de negocio para la gestión de membresías en el sistema de gimnasio.
 ''' Interactúa con la capa de datos <see cref="DMembresias"/> y la entidad <see cref="Membresias"/>.
+''' </summary>
+''' <remarks>
 ''' Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.  
 ''' Si ocurre una excepción, se registra el error utilizando <see cref="ManejarErrores.Log"/> en un log.txt
 ''' Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).
-''' </summary>
+''' </remarks>
 Public Class NMembresias
     ''' <summary>
     ''' Instancia de la capa de datos para membresías.

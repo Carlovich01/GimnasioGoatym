@@ -6,7 +6,8 @@ Imports Gimnasio.Errores
 ''' Clase de acceso a datos para la gestión de asistencias.
 ''' Hereda de <see cref="ConexionBase"/> y utiliza la entidad <see cref="Asistencia"/>.
 ''' Proporciona métodos CRUD y de búsqueda para la tabla asistencia y la vista vista_asistencia.
-''' 
+''' </summary>
+'''<remarks>
 ''' La vista consolida la información relevante de los registros de asistencias,
 ''' permitiendo consultar en una sola consulta datos de la asistencia, el miembro, la membresía y el plan asociado.
 ''' Realiza LEFT JOIN entre la asistencia y las demás tablas, permitiendo obtener la información de asistencia
@@ -32,7 +33,7 @@ Imports Gimnasio.Errores
 ''' </code>
 ''' 
 ''' Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo
-''' </summary>
+''' </remarks>
 Public Class DAsistencia
     Inherits ConexionBase
     ''' <summary>

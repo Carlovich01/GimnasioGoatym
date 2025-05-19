@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class NPagos | Goatym ">
       
-      <meta name="description" content="L&#243;gica de negocio para la gesti&#243;n de pagos en el sistema de gimnasio. Interact&#250;a con la capa de datos  y la entidad . Todas las operaciones de la capa de negocio est&#225;n envueltas en bloques Try...Catch. Si ocurre una excepci&#243;n, se registra el error utilizando  en un log.txt Luego, la excepci&#243;n se propaga nuevamente mediante Throw New Exception(ex.Message).">
+      <meta name="description" content="L&#243;gica de negocio para la gesti&#243;n de pagos en el sistema de gimnasio. Interact&#250;a con la capa de datos  y la entidad .">
       <link rel="icon" href="../images/logo.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Gimnasio_Negocio_NPagos" data-uid="Gimnasio.Negocio.NPagos" class="text-break">
-Class NPagos  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L13"><i class="bi bi-code-slash"></i></a>
+Class NPagos  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L15"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,10 +97,7 @@ Class NPagos  <a class="header-action link-secondary" title="View source" href="
   </div>
 
   <div class="markdown summary"><p>Lógica de negocio para la gestión de pagos en el sistema de gimnasio.
-Interactúa con la capa de datos <a class="xref" href="Gimnasio.Negocio.NPagos.html#Gimnasio_Negocio_NPagos_dPagos">dPagos</a> y la entidad <a class="xref" href="Gimnasio.Entidades.Pagos.html">Pagos</a>.
-Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.<br>
-Si ocurre una excepción, se registra el error utilizando <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_">Log(string, Exception)</a> en un log.txt
-Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).</p>
+Interactúa con la capa de datos <a class="xref" href="Gimnasio.Negocio.NPagos.html#Gimnasio_Negocio_NPagos_dPagos">dPagos</a> y la entidad <a class="xref" href="Gimnasio.Entidades.Pagos.html">Pagos</a>.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -123,6 +120,11 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
 
 
+  <h2 id="Gimnasio_Negocio_NPagos_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.<br>
+Si ocurre una excepción, se registra el error utilizando <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_">Log(string, Exception)</a> en un log.txt
+Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).</p>
+</div>
 
 
   <h2 class="section" id="fields">Fields
@@ -132,7 +134,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NPagos_dPagos" data-uid="Gimnasio.Negocio.NPagos.dPagos">
   dPagos
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Instancia de la capa de datos para pagos.</p>
@@ -146,11 +148,6 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
 
 
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Gimnasio.Datos.DPagos.html">DPagos</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -168,7 +165,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NPagos_Actualizar_Gimnasio_Entidades_Pagos_" data-uid="Gimnasio.Negocio.NPagos.Actualizar(Gimnasio.Entidades.Pagos)">
   Actualizar(Pagos)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L90"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Actualiza un pago existente en el sistema.</p>
@@ -201,7 +198,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NPagos_Eliminar_System_UInt32_" data-uid="Gimnasio.Negocio.NPagos.Eliminar(System.UInt32)">
   Eliminar(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L104"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L106"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Elimina un pago del sistema según su id con <a class="xref" href="Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_Eliminar_System_UInt32_">Eliminar(uint)</a>.</p>
@@ -234,7 +231,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NPagos_Insertar_Gimnasio_Entidades_Pagos_" data-uid="Gimnasio.Negocio.NPagos.Insertar(Gimnasio.Entidades.Pagos)">
   Insertar(Pagos)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L63"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><ol>
@@ -278,7 +275,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NPagos_Listar" data-uid="Gimnasio.Negocio.NPagos.Listar">
   Listar()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Obtiene la lista de todos los pagos registrados con <a class="xref" href="Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_Listar">Listar()</a>.</p>
@@ -311,7 +308,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NPagos_ListarPorDni_System_String_" data-uid="Gimnasio.Negocio.NPagos.ListarPorDni(System.String)">
   ListarPorDni(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L133"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L135"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Realiza una validación y busca pagos por DNI del miembro utilizando la capa de datos <a class="xref" href="Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_ListarPorDni_System_String_">ListarPorDni(string)</a>.</p>
@@ -350,7 +347,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NPagos_ListarPorFecha_System_DateTime_System_DateTime_" data-uid="Gimnasio.Negocio.NPagos.ListarPorFecha(System.DateTime,System.DateTime)">
   ListarPorFecha(DateTime, DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L119"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L121"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Busca pagos por rango de fechas utilizando la capa de datos <a class="xref" href="Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_ListarPorFecha_System_DateTime_System_DateTime_">ListarPorFecha(DateTime, DateTime)</a>.</p>
@@ -392,7 +389,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NPagos_ListarPorMetodoPago_System_String_" data-uid="Gimnasio.Negocio.NPagos.ListarPorMetodoPago(System.String)">
   ListarPorMetodoPago(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L167"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L169"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Busca pagos por método de pago utilizando la capa de datos <a class="xref" href="Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_ListarPorMetodoPago_System_String_">ListarPorMetodoPago(string)</a>.</p>
@@ -431,7 +428,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NPagos_ListarPorMontos_System_Decimal_System_Decimal_" data-uid="Gimnasio.Negocio.NPagos.ListarPorMontos(System.Decimal,System.Decimal)">
   ListarPorMontos(decimal, decimal)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L182"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L184"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Realiza una validación y Busca pagos por rango de montos utilizando la capa de datos <a class="xref" href="Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_ListarPorMontos_System_Decimal_System_Decimal_">ListarPorMontos(decimal, decimal)</a>.</p>
@@ -473,7 +470,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NPagos_ListarPorNombrePlan_System_String_" data-uid="Gimnasio.Negocio.NPagos.ListarPorNombrePlan(System.String)">
   ListarPorNombrePlan(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L150"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L152"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Realiza una validación y Busca pagos por nombre de plan utilizando la capa de datos <a class="xref" href="Gimnasio.Datos.DPagos.html#Gimnasio_Datos_DPagos_ListarPorNombrePlan_System_String_">ListarPorNombrePlan(string)</a>.</p>
@@ -512,7 +509,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NPagos_ValidarCampos_Gimnasio_Entidades_Pagos_" data-uid="Gimnasio.Negocio.NPagos.ValidarCampos(Gimnasio.Entidades.Pagos)">
   ValidarCampos(Pagos)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Valida los campos de la entidad <a class="xref" href="Gimnasio.Entidades.Pagos.html">Pagos</a> antes de realizar operaciones de inserción.</p>
@@ -545,7 +542,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L13" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPagos.vb/#L15" class="edit-link">Edit this page</a>
         </div>
 
 

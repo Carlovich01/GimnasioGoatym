@@ -29,7 +29,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: NReclamos
     path: ../Gimnasio.Negocio/NReclamos.vb
-    startLine: 12
+    startLine: 14
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -37,7 +37,7 @@ items:
     Lógica de negocio para la gestión de reclamos en el sistema de gimnasio.
 
     Interactúa con la capa de datos <xref href="Gimnasio.Negocio.NReclamos.dReclamos" data-throw-if-not-resolved="false"></xref> y la entidad <xref href="Gimnasio.Entidades.Reclamos" data-throw-if-not-resolved="false"></xref>.
-
+  remarks: >-
     Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.  
 
     Si ocurre una excepción, se registra el error utilizando <xref href="Gimnasio.Errores.ManejarErrores.Log(System.String%2cSystem.Exception)" data-throw-if-not-resolved="false"></xref> en un log.txt
@@ -76,7 +76,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: dReclamos
     path: ../Gimnasio.Negocio/NReclamos.vb
-    startLine: 16
+    startLine: 18
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -105,7 +105,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ValidarCampos
     path: ../Gimnasio.Negocio/NReclamos.vb
-    startLine: 22
+    startLine: 24
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -137,7 +137,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Listar
     path: ../Gimnasio.Negocio/NReclamos.vb
-    startLine: 32
+    startLine: 34
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -168,7 +168,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Insertar
     path: ../Gimnasio.Negocio/NReclamos.vb
-    startLine: 45
+    startLine: 47
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -200,7 +200,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Actualizar
     path: ../Gimnasio.Negocio/NReclamos.vb
-    startLine: 59
+    startLine: 61
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -232,7 +232,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Eliminar
     path: ../Gimnasio.Negocio/NReclamos.vb
-    startLine: 73
+    startLine: 75
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -267,7 +267,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ActualizarElEstadoAResuelto
     path: ../Gimnasio.Negocio/NReclamos.vb
-    startLine: 86
+    startLine: 88
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -302,7 +302,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ActualizarElEstadoAPendiente
     path: ../Gimnasio.Negocio/NReclamos.vb
-    startLine: 99
+    startLine: 101
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -337,7 +337,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorEstado
     path: ../Gimnasio.Negocio/NReclamos.vb
-    startLine: 113
+    startLine: 115
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -375,7 +375,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ActualizarRespuesta
     path: ../Gimnasio.Negocio/NReclamos.vb
-    startLine: 126
+    startLine: 128
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio

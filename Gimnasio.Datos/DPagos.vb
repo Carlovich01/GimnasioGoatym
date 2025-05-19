@@ -6,7 +6,8 @@ Imports Gimnasio.Errores
 ''' Clase de acceso a datos para la gestión de pagos en el sistema de gimnasio.
 ''' Hereda de <see cref="ConexionBase"/> y utiliza la entidad <see cref="Pagos"/>.
 ''' Proporciona métodos CRUD y de búsqueda para la tabla pagos y la vista vista_pagos.
-''' 
+''' </summary>
+''' <remarks>
 ''' La vista consolida la información relevante de los registros de pagos,
 ''' Permite consultar en una sola consulta los datos del pago, el miembro, el plan, el usuario que registró el pago.
 ''' Realiza LEFT JOIN entre pagos y las demás tablas, permitiendo obtener la información de pagos
@@ -37,7 +38,7 @@ Imports Gimnasio.Errores
 ''' </code>
 ''' 
 ''' Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo
-''' </summary>
+''' </remarks>>
 Public Class DPagos
     Inherits ConexionBase
 

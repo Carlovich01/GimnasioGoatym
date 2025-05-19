@@ -37,8 +37,7 @@ items:
     Hereda de <xref href="Gimnasio.Datos.ConexionBase" data-throw-if-not-resolved="false"></xref> y utiliza la entidad <xref href="Gimnasio.Entidades.Reclamos" data-throw-if-not-resolved="false"></xref>.
 
     Proporciona métodos CRUD y de búsqueda para la tabla reclamos y la vista vista_reclamos.
-
-
+  remarks: >-
     La vista consolida la información relevante de los reclamos, permitiendo consultar en una sola consulta datos del reclamo 
 
     y el miembro que lo realizo.

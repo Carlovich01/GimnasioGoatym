@@ -25,7 +25,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: DUsuarios
     path: ../Gimnasio.Datos/DUsuarios.vb
-    startLine: 32
+    startLine: 33
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -35,8 +35,7 @@ items:
     Hereda de <xref href="Gimnasio.Datos.ConexionBase" data-throw-if-not-resolved="false"></xref> y utiliza la entidad <xref href="Gimnasio.Entidades.Usuarios" data-throw-if-not-resolved="false"></xref>.
 
     Proporciona métodos CRUD y de búsqueda para la tabla usuarios_sistema y la vista_usuarios.
-
-
+  remarks: >-
     La vista consolida la información relevante de los registros de usuarios,
 
     permitiendo consultar en una sola consulta datos de los usuarios y sus roles.
@@ -97,7 +96,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Listar
     path: ../Gimnasio.Datos/DUsuarios.vb
-    startLine: 39
+    startLine: 40
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -128,7 +127,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Insertar
     path: ../Gimnasio.Datos/DUsuarios.vb
-    startLine: 53
+    startLine: 54
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -160,7 +159,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Actualizar
     path: ../Gimnasio.Datos/DUsuarios.vb
-    startLine: 77
+    startLine: 78
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -195,7 +194,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Eliminar
     path: ../Gimnasio.Datos/DUsuarios.vb
-    startLine: 102
+    startLine: 103
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -230,7 +229,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorNombre
     path: ../Gimnasio.Datos/DUsuarios.vb
-    startLine: 121
+    startLine: 122
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -271,7 +270,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ObtenerPorUsername
     path: ../Gimnasio.Datos/DUsuarios.vb
-    startLine: 142
+    startLine: 143
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos

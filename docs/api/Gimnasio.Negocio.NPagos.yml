@@ -30,7 +30,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: NPagos
     path: ../Gimnasio.Negocio/NPagos.vb
-    startLine: 12
+    startLine: 14
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -38,7 +38,7 @@ items:
     Lógica de negocio para la gestión de pagos en el sistema de gimnasio.
 
     Interactúa con la capa de datos <xref href="Gimnasio.Negocio.NPagos.dPagos" data-throw-if-not-resolved="false"></xref> y la entidad <xref href="Gimnasio.Entidades.Pagos" data-throw-if-not-resolved="false"></xref>.
-
+  remarks: >-
     Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.  
 
     Si ocurre una excepción, se registra el error utilizando <xref href="Gimnasio.Errores.ManejarErrores.Log(System.String%2cSystem.Exception)" data-throw-if-not-resolved="false"></xref> en un log.txt
@@ -77,7 +77,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: dPagos
     path: ../Gimnasio.Negocio/NPagos.vb
-    startLine: 16
+    startLine: 18
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -106,7 +106,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ValidarCampos
     path: ../Gimnasio.Negocio/NPagos.vb
-    startLine: 22
+    startLine: 24
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -138,7 +138,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Listar
     path: ../Gimnasio.Negocio/NPagos.vb
-    startLine: 43
+    startLine: 45
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -169,7 +169,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Insertar
     path: ../Gimnasio.Negocio/NPagos.vb
-    startLine: 62
+    startLine: 64
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -210,7 +210,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Actualizar
     path: ../Gimnasio.Negocio/NPagos.vb
-    startLine: 89
+    startLine: 91
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -242,7 +242,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Eliminar
     path: ../Gimnasio.Negocio/NPagos.vb
-    startLine: 103
+    startLine: 105
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -277,7 +277,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorFecha
     path: ../Gimnasio.Negocio/NPagos.vb
-    startLine: 118
+    startLine: 120
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -318,7 +318,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorDni
     path: ../Gimnasio.Negocio/NPagos.vb
-    startLine: 132
+    startLine: 134
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -356,7 +356,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorNombrePlan
     path: ../Gimnasio.Negocio/NPagos.vb
-    startLine: 149
+    startLine: 151
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -394,7 +394,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorMetodoPago
     path: ../Gimnasio.Negocio/NPagos.vb
-    startLine: 166
+    startLine: 168
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -432,7 +432,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorMontos
     path: ../Gimnasio.Negocio/NPagos.vb
-    startLine: 181
+    startLine: 183
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio

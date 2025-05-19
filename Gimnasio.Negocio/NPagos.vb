@@ -6,10 +6,12 @@ Imports Gimnasio.Errores
 ''' <summary>
 ''' Lógica de negocio para la gestión de pagos en el sistema de gimnasio.
 ''' Interactúa con la capa de datos <see cref="DPagos"/> y la entidad <see cref="Pagos"/>.
+''' </summary>
+''' <remarks>
 ''' Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.  
 ''' Si ocurre una excepción, se registra el error utilizando <see cref="ManejarErrores.Log"/> en un log.txt
 ''' Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).
-''' </summary>
+''' </remarks>
 Public Class NPagos
     ''' <summary>
     ''' Instancia de la capa de datos para pagos.

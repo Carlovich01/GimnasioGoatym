@@ -3051,19 +3051,6 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmAsistencias.InitializeComponent
   nameWithType: FrmAsistencias.InitializeComponent
-- uid: Gimnasio.Presentacion.FrmAsistencias.Label2
-  name: Label2
-  href: api/Gimnasio.Presentacion.FrmAsistencias.html#Gimnasio_Presentacion_FrmAsistencias_Label2
-  commentId: P:Gimnasio.Presentacion.FrmAsistencias.Label2
-  fullName: Gimnasio.Presentacion.FrmAsistencias.Label2
-  nameWithType: FrmAsistencias.Label2
-- uid: Gimnasio.Presentacion.FrmAsistencias.Label2*
-  name: Label2
-  href: api/Gimnasio.Presentacion.FrmAsistencias.html#Gimnasio_Presentacion_FrmAsistencias_Label2_
-  commentId: Overload:Gimnasio.Presentacion.FrmAsistencias.Label2
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmAsistencias.Label2
-  nameWithType: FrmAsistencias.Label2
 - uid: Gimnasio.Presentacion.FrmAsistencias.components
   name: components
   href: api/Gimnasio.Presentacion.FrmAsistencias.html#Gimnasio_Presentacion_FrmAsistencias_components
@@ -3118,6 +3105,19 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmAsistencias.labelResultado
   nameWithType: FrmAsistencias.labelResultado
+- uid: Gimnasio.Presentacion.FrmAsistencias.lblParaIngresarDNI
+  name: lblParaIngresarDNI
+  href: api/Gimnasio.Presentacion.FrmAsistencias.html#Gimnasio_Presentacion_FrmAsistencias_lblParaIngresarDNI
+  commentId: P:Gimnasio.Presentacion.FrmAsistencias.lblParaIngresarDNI
+  fullName: Gimnasio.Presentacion.FrmAsistencias.lblParaIngresarDNI
+  nameWithType: FrmAsistencias.lblParaIngresarDNI
+- uid: Gimnasio.Presentacion.FrmAsistencias.lblParaIngresarDNI*
+  name: lblParaIngresarDNI
+  href: api/Gimnasio.Presentacion.FrmAsistencias.html#Gimnasio_Presentacion_FrmAsistencias_lblParaIngresarDNI_
+  commentId: Overload:Gimnasio.Presentacion.FrmAsistencias.lblParaIngresarDNI
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmAsistencias.lblParaIngresarDNI
+  nameWithType: FrmAsistencias.lblParaIngresarDNI
 - uid: Gimnasio.Presentacion.FrmAsistencias.nAsistencias
   name: nAsistencias
   href: api/Gimnasio.Presentacion.FrmAsistencias.html#Gimnasio_Presentacion_FrmAsistencias_nAsistencias
@@ -3201,48 +3201,35 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmLogin.InitializeComponent
   nameWithType: FrmLogin.InitializeComponent
-- uid: Gimnasio.Presentacion.FrmLogin.PictureBox1
-  name: PictureBox1
-  href: api/Gimnasio.Presentacion.FrmLogin.html#Gimnasio_Presentacion_FrmLogin_PictureBox1
-  commentId: P:Gimnasio.Presentacion.FrmLogin.PictureBox1
-  fullName: Gimnasio.Presentacion.FrmLogin.PictureBox1
-  nameWithType: FrmLogin.PictureBox1
-- uid: Gimnasio.Presentacion.FrmLogin.PictureBox1*
-  name: PictureBox1
-  href: api/Gimnasio.Presentacion.FrmLogin.html#Gimnasio_Presentacion_FrmLogin_PictureBox1_
-  commentId: Overload:Gimnasio.Presentacion.FrmLogin.PictureBox1
+- uid: Gimnasio.Presentacion.FrmLogin.btnIniciarSesion
+  name: btnIniciarSesion
+  href: api/Gimnasio.Presentacion.FrmLogin.html#Gimnasio_Presentacion_FrmLogin_btnIniciarSesion
+  commentId: P:Gimnasio.Presentacion.FrmLogin.btnIniciarSesion
+  fullName: Gimnasio.Presentacion.FrmLogin.btnIniciarSesion
+  nameWithType: FrmLogin.btnIniciarSesion
+- uid: Gimnasio.Presentacion.FrmLogin.btnIniciarSesion*
+  name: btnIniciarSesion
+  href: api/Gimnasio.Presentacion.FrmLogin.html#Gimnasio_Presentacion_FrmLogin_btnIniciarSesion_
+  commentId: Overload:Gimnasio.Presentacion.FrmLogin.btnIniciarSesion
   isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmLogin.PictureBox1
-  nameWithType: FrmLogin.PictureBox1
-- uid: Gimnasio.Presentacion.FrmLogin.btIniciarSesion
-  name: btIniciarSesion
-  href: api/Gimnasio.Presentacion.FrmLogin.html#Gimnasio_Presentacion_FrmLogin_btIniciarSesion
-  commentId: P:Gimnasio.Presentacion.FrmLogin.btIniciarSesion
-  fullName: Gimnasio.Presentacion.FrmLogin.btIniciarSesion
-  nameWithType: FrmLogin.btIniciarSesion
-- uid: Gimnasio.Presentacion.FrmLogin.btIniciarSesion*
-  name: btIniciarSesion
-  href: api/Gimnasio.Presentacion.FrmLogin.html#Gimnasio_Presentacion_FrmLogin_btIniciarSesion_
-  commentId: Overload:Gimnasio.Presentacion.FrmLogin.btIniciarSesion
+  fullName: Gimnasio.Presentacion.FrmLogin.btnIniciarSesion
+  nameWithType: FrmLogin.btnIniciarSesion
+- uid: Gimnasio.Presentacion.FrmLogin.btnIniciarSesion_Click(System.Object,System.EventArgs)
+  name: btnIniciarSesion_Click(object, EventArgs)
+  href: api/Gimnasio.Presentacion.FrmLogin.html#Gimnasio_Presentacion_FrmLogin_btnIniciarSesion_Click_System_Object_System_EventArgs_
+  commentId: M:Gimnasio.Presentacion.FrmLogin.btnIniciarSesion_Click(System.Object,System.EventArgs)
+  name.vb: btnIniciarSesion_Click(Object, EventArgs)
+  fullName: Gimnasio.Presentacion.FrmLogin.btnIniciarSesion_Click(object, System.EventArgs)
+  fullName.vb: Gimnasio.Presentacion.FrmLogin.btnIniciarSesion_Click(Object, System.EventArgs)
+  nameWithType: FrmLogin.btnIniciarSesion_Click(object, EventArgs)
+  nameWithType.vb: FrmLogin.btnIniciarSesion_Click(Object, EventArgs)
+- uid: Gimnasio.Presentacion.FrmLogin.btnIniciarSesion_Click*
+  name: btnIniciarSesion_Click
+  href: api/Gimnasio.Presentacion.FrmLogin.html#Gimnasio_Presentacion_FrmLogin_btnIniciarSesion_Click_
+  commentId: Overload:Gimnasio.Presentacion.FrmLogin.btnIniciarSesion_Click
   isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmLogin.btIniciarSesion
-  nameWithType: FrmLogin.btIniciarSesion
-- uid: Gimnasio.Presentacion.FrmLogin.btIniciarSesion_Click(System.Object,System.EventArgs)
-  name: btIniciarSesion_Click(object, EventArgs)
-  href: api/Gimnasio.Presentacion.FrmLogin.html#Gimnasio_Presentacion_FrmLogin_btIniciarSesion_Click_System_Object_System_EventArgs_
-  commentId: M:Gimnasio.Presentacion.FrmLogin.btIniciarSesion_Click(System.Object,System.EventArgs)
-  name.vb: btIniciarSesion_Click(Object, EventArgs)
-  fullName: Gimnasio.Presentacion.FrmLogin.btIniciarSesion_Click(object, System.EventArgs)
-  fullName.vb: Gimnasio.Presentacion.FrmLogin.btIniciarSesion_Click(Object, System.EventArgs)
-  nameWithType: FrmLogin.btIniciarSesion_Click(object, EventArgs)
-  nameWithType.vb: FrmLogin.btIniciarSesion_Click(Object, EventArgs)
-- uid: Gimnasio.Presentacion.FrmLogin.btIniciarSesion_Click*
-  name: btIniciarSesion_Click
-  href: api/Gimnasio.Presentacion.FrmLogin.html#Gimnasio_Presentacion_FrmLogin_btIniciarSesion_Click_
-  commentId: Overload:Gimnasio.Presentacion.FrmLogin.btIniciarSesion_Click
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmLogin.btIniciarSesion_Click
-  nameWithType: FrmLogin.btIniciarSesion_Click
+  fullName: Gimnasio.Presentacion.FrmLogin.btnIniciarSesion_Click
+  nameWithType: FrmLogin.btnIniciarSesion_Click
 - uid: Gimnasio.Presentacion.FrmLogin.components
   name: components
   href: api/Gimnasio.Presentacion.FrmLogin.html#Gimnasio_Presentacion_FrmLogin_components
@@ -3291,6 +3278,19 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmLogin.lblUsuario
   nameWithType: FrmLogin.lblUsuario
+- uid: Gimnasio.Presentacion.FrmLogin.pbLogo
+  name: pbLogo
+  href: api/Gimnasio.Presentacion.FrmLogin.html#Gimnasio_Presentacion_FrmLogin_pbLogo
+  commentId: P:Gimnasio.Presentacion.FrmLogin.pbLogo
+  fullName: Gimnasio.Presentacion.FrmLogin.pbLogo
+  nameWithType: FrmLogin.pbLogo
+- uid: Gimnasio.Presentacion.FrmLogin.pbLogo*
+  name: pbLogo
+  href: api/Gimnasio.Presentacion.FrmLogin.html#Gimnasio_Presentacion_FrmLogin_pbLogo_
+  commentId: Overload:Gimnasio.Presentacion.FrmLogin.pbLogo
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmLogin.pbLogo
+  nameWithType: FrmLogin.pbLogo
 - uid: Gimnasio.Presentacion.FrmLogin.pbMostrarContraseña
   name: pbMostrarContraseña
   href: api/Gimnasio.Presentacion.FrmLogin.html#Gimnasio_Presentacion_FrmLogin_pbMostrarContrase_a
@@ -3419,32 +3419,6 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmMembresias.BtnPagar_Click
   nameWithType: FrmMembresias.BtnPagar_Click
-- uid: Gimnasio.Presentacion.FrmMembresias.Button1
-  name: Button1
-  href: api/Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_Button1
-  commentId: P:Gimnasio.Presentacion.FrmMembresias.Button1
-  fullName: Gimnasio.Presentacion.FrmMembresias.Button1
-  nameWithType: FrmMembresias.Button1
-- uid: Gimnasio.Presentacion.FrmMembresias.Button1*
-  name: Button1
-  href: api/Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_Button1_
-  commentId: Overload:Gimnasio.Presentacion.FrmMembresias.Button1
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmMembresias.Button1
-  nameWithType: FrmMembresias.Button1
-- uid: Gimnasio.Presentacion.FrmMembresias.Button2
-  name: Button2
-  href: api/Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_Button2
-  commentId: P:Gimnasio.Presentacion.FrmMembresias.Button2
-  fullName: Gimnasio.Presentacion.FrmMembresias.Button2
-  nameWithType: FrmMembresias.Button2
-- uid: Gimnasio.Presentacion.FrmMembresias.Button2*
-  name: Button2
-  href: api/Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_Button2_
-  commentId: Overload:Gimnasio.Presentacion.FrmMembresias.Button2
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmMembresias.Button2
-  nameWithType: FrmMembresias.Button2
 - uid: Gimnasio.Presentacion.FrmMembresias.Dispose(System.Boolean)
   name: Dispose(bool)
   href: api/Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_Dispose_System_Boolean_
@@ -4399,71 +4373,6 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmMiembros.InitializeComponent
   nameWithType: FrmMiembros.InitializeComponent
-- uid: Gimnasio.Presentacion.FrmMiembros.Label1
-  name: Label1
-  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_Label1
-  commentId: P:Gimnasio.Presentacion.FrmMiembros.Label1
-  fullName: Gimnasio.Presentacion.FrmMiembros.Label1
-  nameWithType: FrmMiembros.Label1
-- uid: Gimnasio.Presentacion.FrmMiembros.Label1*
-  name: Label1
-  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_Label1_
-  commentId: Overload:Gimnasio.Presentacion.FrmMiembros.Label1
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmMiembros.Label1
-  nameWithType: FrmMiembros.Label1
-- uid: Gimnasio.Presentacion.FrmMiembros.Label2
-  name: Label2
-  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_Label2
-  commentId: P:Gimnasio.Presentacion.FrmMiembros.Label2
-  fullName: Gimnasio.Presentacion.FrmMiembros.Label2
-  nameWithType: FrmMiembros.Label2
-- uid: Gimnasio.Presentacion.FrmMiembros.Label2*
-  name: Label2
-  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_Label2_
-  commentId: Overload:Gimnasio.Presentacion.FrmMiembros.Label2
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmMiembros.Label2
-  nameWithType: FrmMiembros.Label2
-- uid: Gimnasio.Presentacion.FrmMiembros.Label3
-  name: Label3
-  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_Label3
-  commentId: P:Gimnasio.Presentacion.FrmMiembros.Label3
-  fullName: Gimnasio.Presentacion.FrmMiembros.Label3
-  nameWithType: FrmMiembros.Label3
-- uid: Gimnasio.Presentacion.FrmMiembros.Label3*
-  name: Label3
-  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_Label3_
-  commentId: Overload:Gimnasio.Presentacion.FrmMiembros.Label3
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmMiembros.Label3
-  nameWithType: FrmMiembros.Label3
-- uid: Gimnasio.Presentacion.FrmMiembros.Label5
-  name: Label5
-  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_Label5
-  commentId: P:Gimnasio.Presentacion.FrmMiembros.Label5
-  fullName: Gimnasio.Presentacion.FrmMiembros.Label5
-  nameWithType: FrmMiembros.Label5
-- uid: Gimnasio.Presentacion.FrmMiembros.Label5*
-  name: Label5
-  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_Label5_
-  commentId: Overload:Gimnasio.Presentacion.FrmMiembros.Label5
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmMiembros.Label5
-  nameWithType: FrmMiembros.Label5
-- uid: Gimnasio.Presentacion.FrmMiembros.Label6
-  name: Label6
-  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_Label6
-  commentId: P:Gimnasio.Presentacion.FrmMiembros.Label6
-  fullName: Gimnasio.Presentacion.FrmMiembros.Label6
-  nameWithType: FrmMiembros.Label6
-- uid: Gimnasio.Presentacion.FrmMiembros.Label6*
-  name: Label6
-  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_Label6_
-  commentId: Overload:Gimnasio.Presentacion.FrmMiembros.Label6
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmMiembros.Label6
-  nameWithType: FrmMiembros.Label6
 - uid: Gimnasio.Presentacion.FrmMiembros.btnActualizar
   name: btnActualizar
   href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_btnActualizar
@@ -4698,19 +4607,32 @@ references:
   commentId: F:Gimnasio.Presentacion.FrmMiembros.frmPrincipal
   fullName: Gimnasio.Presentacion.FrmMiembros.frmPrincipal
   nameWithType: FrmMiembros.frmPrincipal
-- uid: Gimnasio.Presentacion.FrmMiembros.labelTelefono
-  name: labelTelefono
-  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_labelTelefono
-  commentId: P:Gimnasio.Presentacion.FrmMiembros.labelTelefono
-  fullName: Gimnasio.Presentacion.FrmMiembros.labelTelefono
-  nameWithType: FrmMiembros.labelTelefono
-- uid: Gimnasio.Presentacion.FrmMiembros.labelTelefono*
-  name: labelTelefono
-  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_labelTelefono_
-  commentId: Overload:Gimnasio.Presentacion.FrmMiembros.labelTelefono
+- uid: Gimnasio.Presentacion.FrmMiembros.lblApellido
+  name: lblApellido
+  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_lblApellido
+  commentId: P:Gimnasio.Presentacion.FrmMiembros.lblApellido
+  fullName: Gimnasio.Presentacion.FrmMiembros.lblApellido
+  nameWithType: FrmMiembros.lblApellido
+- uid: Gimnasio.Presentacion.FrmMiembros.lblApellido*
+  name: lblApellido
+  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_lblApellido_
+  commentId: Overload:Gimnasio.Presentacion.FrmMiembros.lblApellido
   isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmMiembros.labelTelefono
-  nameWithType: FrmMiembros.labelTelefono
+  fullName: Gimnasio.Presentacion.FrmMiembros.lblApellido
+  nameWithType: FrmMiembros.lblApellido
+- uid: Gimnasio.Presentacion.FrmMiembros.lblDNI
+  name: lblDNI
+  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_lblDNI
+  commentId: P:Gimnasio.Presentacion.FrmMiembros.lblDNI
+  fullName: Gimnasio.Presentacion.FrmMiembros.lblDNI
+  nameWithType: FrmMiembros.lblDNI
+- uid: Gimnasio.Presentacion.FrmMiembros.lblDNI*
+  name: lblDNI
+  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_lblDNI_
+  commentId: Overload:Gimnasio.Presentacion.FrmMiembros.lblDNI
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmMiembros.lblDNI
+  nameWithType: FrmMiembros.lblDNI
 - uid: Gimnasio.Presentacion.FrmMiembros.lblDatosIngreso
   name: lblDatosIngreso
   href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_lblDatosIngreso
@@ -4724,6 +4646,58 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmMiembros.lblDatosIngreso
   nameWithType: FrmMiembros.lblDatosIngreso
+- uid: Gimnasio.Presentacion.FrmMiembros.lblEmail
+  name: lblEmail
+  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_lblEmail
+  commentId: P:Gimnasio.Presentacion.FrmMiembros.lblEmail
+  fullName: Gimnasio.Presentacion.FrmMiembros.lblEmail
+  nameWithType: FrmMiembros.lblEmail
+- uid: Gimnasio.Presentacion.FrmMiembros.lblEmail*
+  name: lblEmail
+  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_lblEmail_
+  commentId: Overload:Gimnasio.Presentacion.FrmMiembros.lblEmail
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmMiembros.lblEmail
+  nameWithType: FrmMiembros.lblEmail
+- uid: Gimnasio.Presentacion.FrmMiembros.lblGenero
+  name: lblGenero
+  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_lblGenero
+  commentId: P:Gimnasio.Presentacion.FrmMiembros.lblGenero
+  fullName: Gimnasio.Presentacion.FrmMiembros.lblGenero
+  nameWithType: FrmMiembros.lblGenero
+- uid: Gimnasio.Presentacion.FrmMiembros.lblGenero*
+  name: lblGenero
+  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_lblGenero_
+  commentId: Overload:Gimnasio.Presentacion.FrmMiembros.lblGenero
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmMiembros.lblGenero
+  nameWithType: FrmMiembros.lblGenero
+- uid: Gimnasio.Presentacion.FrmMiembros.lblNombre
+  name: lblNombre
+  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_lblNombre
+  commentId: P:Gimnasio.Presentacion.FrmMiembros.lblNombre
+  fullName: Gimnasio.Presentacion.FrmMiembros.lblNombre
+  nameWithType: FrmMiembros.lblNombre
+- uid: Gimnasio.Presentacion.FrmMiembros.lblNombre*
+  name: lblNombre
+  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_lblNombre_
+  commentId: Overload:Gimnasio.Presentacion.FrmMiembros.lblNombre
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmMiembros.lblNombre
+  nameWithType: FrmMiembros.lblNombre
+- uid: Gimnasio.Presentacion.FrmMiembros.lblTelefono
+  name: lblTelefono
+  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_lblTelefono
+  commentId: P:Gimnasio.Presentacion.FrmMiembros.lblTelefono
+  fullName: Gimnasio.Presentacion.FrmMiembros.lblTelefono
+  nameWithType: FrmMiembros.lblTelefono
+- uid: Gimnasio.Presentacion.FrmMiembros.lblTelefono*
+  name: lblTelefono
+  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_lblTelefono_
+  commentId: Overload:Gimnasio.Presentacion.FrmMiembros.lblTelefono
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmMiembros.lblTelefono
+  nameWithType: FrmMiembros.lblTelefono
 - uid: Gimnasio.Presentacion.FrmMiembros.lblTotal
   name: lblTotal
   href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_lblTotal
@@ -4962,45 +4936,6 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmPagos.BtnBuscarFecha
   nameWithType: FrmPagos.BtnBuscarFecha
-- uid: Gimnasio.Presentacion.FrmPagos.Button1
-  name: Button1
-  href: api/Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Button1
-  commentId: P:Gimnasio.Presentacion.FrmPagos.Button1
-  fullName: Gimnasio.Presentacion.FrmPagos.Button1
-  nameWithType: FrmPagos.Button1
-- uid: Gimnasio.Presentacion.FrmPagos.Button1*
-  name: Button1
-  href: api/Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Button1_
-  commentId: Overload:Gimnasio.Presentacion.FrmPagos.Button1
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmPagos.Button1
-  nameWithType: FrmPagos.Button1
-- uid: Gimnasio.Presentacion.FrmPagos.Button2
-  name: Button2
-  href: api/Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Button2
-  commentId: P:Gimnasio.Presentacion.FrmPagos.Button2
-  fullName: Gimnasio.Presentacion.FrmPagos.Button2
-  nameWithType: FrmPagos.Button2
-- uid: Gimnasio.Presentacion.FrmPagos.Button2*
-  name: Button2
-  href: api/Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Button2_
-  commentId: Overload:Gimnasio.Presentacion.FrmPagos.Button2
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmPagos.Button2
-  nameWithType: FrmPagos.Button2
-- uid: Gimnasio.Presentacion.FrmPagos.Button3
-  name: Button3
-  href: api/Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Button3
-  commentId: P:Gimnasio.Presentacion.FrmPagos.Button3
-  fullName: Gimnasio.Presentacion.FrmPagos.Button3
-  nameWithType: FrmPagos.Button3
-- uid: Gimnasio.Presentacion.FrmPagos.Button3*
-  name: Button3
-  href: api/Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Button3_
-  commentId: Overload:Gimnasio.Presentacion.FrmPagos.Button3
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmPagos.Button3
-  nameWithType: FrmPagos.Button3
 - uid: Gimnasio.Presentacion.FrmPagos.Dispose(System.Boolean)
   name: Dispose(bool)
   href: api/Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Dispose_System_Boolean_
@@ -5056,32 +4991,6 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmPagos.InitializeComponent
   nameWithType: FrmPagos.InitializeComponent
-- uid: Gimnasio.Presentacion.FrmPagos.Label4
-  name: Label4
-  href: api/Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Label4
-  commentId: P:Gimnasio.Presentacion.FrmPagos.Label4
-  fullName: Gimnasio.Presentacion.FrmPagos.Label4
-  nameWithType: FrmPagos.Label4
-- uid: Gimnasio.Presentacion.FrmPagos.Label4*
-  name: Label4
-  href: api/Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Label4_
-  commentId: Overload:Gimnasio.Presentacion.FrmPagos.Label4
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmPagos.Label4
-  nameWithType: FrmPagos.Label4
-- uid: Gimnasio.Presentacion.FrmPagos.Label5
-  name: Label5
-  href: api/Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Label5
-  commentId: P:Gimnasio.Presentacion.FrmPagos.Label5
-  fullName: Gimnasio.Presentacion.FrmPagos.Label5
-  nameWithType: FrmPagos.Label5
-- uid: Gimnasio.Presentacion.FrmPagos.Label5*
-  name: Label5
-  href: api/Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Label5_
-  commentId: Overload:Gimnasio.Presentacion.FrmPagos.Label5
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmPagos.Label5
-  nameWithType: FrmPagos.Label5
 - uid: Gimnasio.Presentacion.FrmPagos.PanelFecha
   name: PanelFecha
   href: api/Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_PanelFecha
@@ -6358,32 +6267,19 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmPrincipal.PanelDeFormularios
   nameWithType: FrmPrincipal.PanelDeFormularios
-- uid: Gimnasio.Presentacion.FrmPrincipal.PictureBox1
-  name: PictureBox1
-  href: api/Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_PictureBox1
-  commentId: P:Gimnasio.Presentacion.FrmPrincipal.PictureBox1
-  fullName: Gimnasio.Presentacion.FrmPrincipal.PictureBox1
-  nameWithType: FrmPrincipal.PictureBox1
-- uid: Gimnasio.Presentacion.FrmPrincipal.PictureBox1*
-  name: PictureBox1
-  href: api/Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_PictureBox1_
-  commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.PictureBox1
+- uid: Gimnasio.Presentacion.FrmPrincipal.ToolStripPestañas
+  name: ToolStripPestañas
+  href: api/Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_ToolStripPesta_as
+  commentId: P:Gimnasio.Presentacion.FrmPrincipal.ToolStripPestañas
+  fullName: Gimnasio.Presentacion.FrmPrincipal.ToolStripPestañas
+  nameWithType: FrmPrincipal.ToolStripPestañas
+- uid: Gimnasio.Presentacion.FrmPrincipal.ToolStripPestañas*
+  name: ToolStripPestañas
+  href: api/Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_ToolStripPesta_as_
+  commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.ToolStripPestañas
   isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmPrincipal.PictureBox1
-  nameWithType: FrmPrincipal.PictureBox1
-- uid: Gimnasio.Presentacion.FrmPrincipal.ToolStrip1
-  name: ToolStrip1
-  href: api/Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_ToolStrip1
-  commentId: P:Gimnasio.Presentacion.FrmPrincipal.ToolStrip1
-  fullName: Gimnasio.Presentacion.FrmPrincipal.ToolStrip1
-  nameWithType: FrmPrincipal.ToolStrip1
-- uid: Gimnasio.Presentacion.FrmPrincipal.ToolStrip1*
-  name: ToolStrip1
-  href: api/Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_ToolStrip1_
-  commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.ToolStrip1
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmPrincipal.ToolStrip1
-  nameWithType: FrmPrincipal.ToolStrip1
+  fullName: Gimnasio.Presentacion.FrmPrincipal.ToolStripPestañas
+  nameWithType: FrmPrincipal.ToolStripPestañas
 - uid: Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator1
   name: ToolStripSeparator1
   href: api/Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_ToolStripSeparator1
@@ -6784,6 +6680,19 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmPrincipal.obtenerUsuarioActual
   nameWithType: FrmPrincipal.obtenerUsuarioActual
+- uid: Gimnasio.Presentacion.FrmPrincipal.pbLogo
+  name: pbLogo
+  href: api/Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_pbLogo
+  commentId: P:Gimnasio.Presentacion.FrmPrincipal.pbLogo
+  fullName: Gimnasio.Presentacion.FrmPrincipal.pbLogo
+  nameWithType: FrmPrincipal.pbLogo
+- uid: Gimnasio.Presentacion.FrmPrincipal.pbLogo*
+  name: pbLogo
+  href: api/Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_pbLogo_
+  commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.pbLogo
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmPrincipal.pbLogo
+  nameWithType: FrmPrincipal.pbLogo
 - uid: Gimnasio.Presentacion.FrmPrincipal.usuarioActual
   name: usuarioActual
   href: api/Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_usuarioActual
@@ -6902,71 +6811,6 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmReclamos.InitializeComponent
   nameWithType: FrmReclamos.InitializeComponent
-- uid: Gimnasio.Presentacion.FrmReclamos.Label1
-  name: Label1
-  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_Label1
-  commentId: P:Gimnasio.Presentacion.FrmReclamos.Label1
-  fullName: Gimnasio.Presentacion.FrmReclamos.Label1
-  nameWithType: FrmReclamos.Label1
-- uid: Gimnasio.Presentacion.FrmReclamos.Label1*
-  name: Label1
-  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_Label1_
-  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.Label1
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmReclamos.Label1
-  nameWithType: FrmReclamos.Label1
-- uid: Gimnasio.Presentacion.FrmReclamos.Label2
-  name: Label2
-  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_Label2
-  commentId: P:Gimnasio.Presentacion.FrmReclamos.Label2
-  fullName: Gimnasio.Presentacion.FrmReclamos.Label2
-  nameWithType: FrmReclamos.Label2
-- uid: Gimnasio.Presentacion.FrmReclamos.Label2*
-  name: Label2
-  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_Label2_
-  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.Label2
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmReclamos.Label2
-  nameWithType: FrmReclamos.Label2
-- uid: Gimnasio.Presentacion.FrmReclamos.Label3
-  name: Label3
-  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_Label3
-  commentId: P:Gimnasio.Presentacion.FrmReclamos.Label3
-  fullName: Gimnasio.Presentacion.FrmReclamos.Label3
-  nameWithType: FrmReclamos.Label3
-- uid: Gimnasio.Presentacion.FrmReclamos.Label3*
-  name: Label3
-  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_Label3_
-  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.Label3
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmReclamos.Label3
-  nameWithType: FrmReclamos.Label3
-- uid: Gimnasio.Presentacion.FrmReclamos.Label4
-  name: Label4
-  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_Label4
-  commentId: P:Gimnasio.Presentacion.FrmReclamos.Label4
-  fullName: Gimnasio.Presentacion.FrmReclamos.Label4
-  nameWithType: FrmReclamos.Label4
-- uid: Gimnasio.Presentacion.FrmReclamos.Label4*
-  name: Label4
-  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_Label4_
-  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.Label4
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmReclamos.Label4
-  nameWithType: FrmReclamos.Label4
-- uid: Gimnasio.Presentacion.FrmReclamos.Label5
-  name: Label5
-  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_Label5
-  commentId: P:Gimnasio.Presentacion.FrmReclamos.Label5
-  fullName: Gimnasio.Presentacion.FrmReclamos.Label5
-  nameWithType: FrmReclamos.Label5
-- uid: Gimnasio.Presentacion.FrmReclamos.Label5*
-  name: Label5
-  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_Label5_
-  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.Label5
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmReclamos.Label5
-  nameWithType: FrmReclamos.Label5
 - uid: Gimnasio.Presentacion.FrmReclamos.TbRespuesta
   name: TbRespuesta
   href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_TbRespuesta
@@ -7266,6 +7110,32 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmReclamos.frmReclamos_Load
   nameWithType: FrmReclamos.frmReclamos_Load
+- uid: Gimnasio.Presentacion.FrmReclamos.lblBuscar
+  name: lblBuscar
+  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_lblBuscar
+  commentId: P:Gimnasio.Presentacion.FrmReclamos.lblBuscar
+  fullName: Gimnasio.Presentacion.FrmReclamos.lblBuscar
+  nameWithType: FrmReclamos.lblBuscar
+- uid: Gimnasio.Presentacion.FrmReclamos.lblBuscar*
+  name: lblBuscar
+  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_lblBuscar_
+  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.lblBuscar
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmReclamos.lblBuscar
+  nameWithType: FrmReclamos.lblBuscar
+- uid: Gimnasio.Presentacion.FrmReclamos.lblDNI
+  name: lblDNI
+  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_lblDNI
+  commentId: P:Gimnasio.Presentacion.FrmReclamos.lblDNI
+  fullName: Gimnasio.Presentacion.FrmReclamos.lblDNI
+  nameWithType: FrmReclamos.lblDNI
+- uid: Gimnasio.Presentacion.FrmReclamos.lblDNI*
+  name: lblDNI
+  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_lblDNI_
+  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.lblDNI
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmReclamos.lblDNI
+  nameWithType: FrmReclamos.lblDNI
 - uid: Gimnasio.Presentacion.FrmReclamos.lblDatosIngreso
   name: lblDatosIngreso
   href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_lblDatosIngreso
@@ -7279,6 +7149,45 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmReclamos.lblDatosIngreso
   nameWithType: FrmReclamos.lblDatosIngreso
+- uid: Gimnasio.Presentacion.FrmReclamos.lblDescripcion
+  name: lblDescripcion
+  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_lblDescripcion
+  commentId: P:Gimnasio.Presentacion.FrmReclamos.lblDescripcion
+  fullName: Gimnasio.Presentacion.FrmReclamos.lblDescripcion
+  nameWithType: FrmReclamos.lblDescripcion
+- uid: Gimnasio.Presentacion.FrmReclamos.lblDescripcion*
+  name: lblDescripcion
+  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_lblDescripcion_
+  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.lblDescripcion
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmReclamos.lblDescripcion
+  nameWithType: FrmReclamos.lblDescripcion
+- uid: Gimnasio.Presentacion.FrmReclamos.lblResponder
+  name: lblResponder
+  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_lblResponder
+  commentId: P:Gimnasio.Presentacion.FrmReclamos.lblResponder
+  fullName: Gimnasio.Presentacion.FrmReclamos.lblResponder
+  nameWithType: FrmReclamos.lblResponder
+- uid: Gimnasio.Presentacion.FrmReclamos.lblResponder*
+  name: lblResponder
+  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_lblResponder_
+  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.lblResponder
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmReclamos.lblResponder
+  nameWithType: FrmReclamos.lblResponder
+- uid: Gimnasio.Presentacion.FrmReclamos.lblTipo
+  name: lblTipo
+  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_lblTipo
+  commentId: P:Gimnasio.Presentacion.FrmReclamos.lblTipo
+  fullName: Gimnasio.Presentacion.FrmReclamos.lblTipo
+  nameWithType: FrmReclamos.lblTipo
+- uid: Gimnasio.Presentacion.FrmReclamos.lblTipo*
+  name: lblTipo
+  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_lblTipo_
+  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.lblTipo
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmReclamos.lblTipo
+  nameWithType: FrmReclamos.lblTipo
 - uid: Gimnasio.Presentacion.FrmReclamos.lblTotal
   name: lblTotal
   href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_lblTotal
@@ -7520,58 +7429,6 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.InitializeComponent
   nameWithType: FrmRegistroAsistencias.InitializeComponent
-- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Label1
-  name: Label1
-  href: api/Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_Label1
-  commentId: P:Gimnasio.Presentacion.FrmRegistroAsistencias.Label1
-  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.Label1
-  nameWithType: FrmRegistroAsistencias.Label1
-- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Label1*
-  name: Label1
-  href: api/Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_Label1_
-  commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.Label1
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.Label1
-  nameWithType: FrmRegistroAsistencias.Label1
-- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Label2
-  name: Label2
-  href: api/Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_Label2
-  commentId: P:Gimnasio.Presentacion.FrmRegistroAsistencias.Label2
-  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.Label2
-  nameWithType: FrmRegistroAsistencias.Label2
-- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Label2*
-  name: Label2
-  href: api/Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_Label2_
-  commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.Label2
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.Label2
-  nameWithType: FrmRegistroAsistencias.Label2
-- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Label3
-  name: Label3
-  href: api/Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_Label3
-  commentId: P:Gimnasio.Presentacion.FrmRegistroAsistencias.Label3
-  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.Label3
-  nameWithType: FrmRegistroAsistencias.Label3
-- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Label3*
-  name: Label3
-  href: api/Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_Label3_
-  commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.Label3
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.Label3
-  nameWithType: FrmRegistroAsistencias.Label3
-- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Label4
-  name: Label4
-  href: api/Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_Label4
-  commentId: P:Gimnasio.Presentacion.FrmRegistroAsistencias.Label4
-  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.Label4
-  nameWithType: FrmRegistroAsistencias.Label4
-- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Label4*
-  name: Label4
-  href: api/Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_Label4_
-  commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.Label4
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.Label4
-  nameWithType: FrmRegistroAsistencias.Label4
 - uid: Gimnasio.Presentacion.FrmRegistroAsistencias.PanelFecha
   name: PanelFecha
   href: api/Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_PanelFecha
@@ -7794,6 +7651,32 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.frmRegistroAsistencias_Load
   nameWithType: FrmRegistroAsistencias.frmRegistroAsistencias_Load
+- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.lblFin
+  name: lblFin
+  href: api/Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_lblFin
+  commentId: P:Gimnasio.Presentacion.FrmRegistroAsistencias.lblFin
+  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.lblFin
+  nameWithType: FrmRegistroAsistencias.lblFin
+- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.lblFin*
+  name: lblFin
+  href: api/Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_lblFin_
+  commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.lblFin
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.lblFin
+  nameWithType: FrmRegistroAsistencias.lblFin
+- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.lblInicio
+  name: lblInicio
+  href: api/Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_lblInicio
+  commentId: P:Gimnasio.Presentacion.FrmRegistroAsistencias.lblInicio
+  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.lblInicio
+  nameWithType: FrmRegistroAsistencias.lblInicio
+- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.lblInicio*
+  name: lblInicio
+  href: api/Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_lblInicio_
+  commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.lblInicio
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.lblInicio
+  nameWithType: FrmRegistroAsistencias.lblInicio
 - uid: Gimnasio.Presentacion.FrmRegistroAsistencias.lblTotal
   name: lblTotal
   href: api/Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_lblTotal
@@ -7951,58 +7834,6 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmUsuarios.InitializeComponent
   nameWithType: FrmUsuarios.InitializeComponent
-- uid: Gimnasio.Presentacion.FrmUsuarios.Label1
-  name: Label1
-  href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_Label1
-  commentId: P:Gimnasio.Presentacion.FrmUsuarios.Label1
-  fullName: Gimnasio.Presentacion.FrmUsuarios.Label1
-  nameWithType: FrmUsuarios.Label1
-- uid: Gimnasio.Presentacion.FrmUsuarios.Label1*
-  name: Label1
-  href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_Label1_
-  commentId: Overload:Gimnasio.Presentacion.FrmUsuarios.Label1
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmUsuarios.Label1
-  nameWithType: FrmUsuarios.Label1
-- uid: Gimnasio.Presentacion.FrmUsuarios.Label2
-  name: Label2
-  href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_Label2
-  commentId: P:Gimnasio.Presentacion.FrmUsuarios.Label2
-  fullName: Gimnasio.Presentacion.FrmUsuarios.Label2
-  nameWithType: FrmUsuarios.Label2
-- uid: Gimnasio.Presentacion.FrmUsuarios.Label2*
-  name: Label2
-  href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_Label2_
-  commentId: Overload:Gimnasio.Presentacion.FrmUsuarios.Label2
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmUsuarios.Label2
-  nameWithType: FrmUsuarios.Label2
-- uid: Gimnasio.Presentacion.FrmUsuarios.Label3
-  name: Label3
-  href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_Label3
-  commentId: P:Gimnasio.Presentacion.FrmUsuarios.Label3
-  fullName: Gimnasio.Presentacion.FrmUsuarios.Label3
-  nameWithType: FrmUsuarios.Label3
-- uid: Gimnasio.Presentacion.FrmUsuarios.Label3*
-  name: Label3
-  href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_Label3_
-  commentId: Overload:Gimnasio.Presentacion.FrmUsuarios.Label3
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmUsuarios.Label3
-  nameWithType: FrmUsuarios.Label3
-- uid: Gimnasio.Presentacion.FrmUsuarios.Label6
-  name: Label6
-  href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_Label6
-  commentId: P:Gimnasio.Presentacion.FrmUsuarios.Label6
-  fullName: Gimnasio.Presentacion.FrmUsuarios.Label6
-  nameWithType: FrmUsuarios.Label6
-- uid: Gimnasio.Presentacion.FrmUsuarios.Label6*
-  name: Label6
-  href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_Label6_
-  commentId: Overload:Gimnasio.Presentacion.FrmUsuarios.Label6
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmUsuarios.Label6
-  nameWithType: FrmUsuarios.Label6
 - uid: Gimnasio.Presentacion.FrmUsuarios.btnActualizar
   name: btnActualizar
   href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_btnActualizar
@@ -8215,19 +8046,32 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmUsuarios.frmUsuarios_Load
   nameWithType: FrmUsuarios.frmUsuarios_Load
-- uid: Gimnasio.Presentacion.FrmUsuarios.labelTelefono
-  name: labelTelefono
-  href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_labelTelefono
-  commentId: P:Gimnasio.Presentacion.FrmUsuarios.labelTelefono
-  fullName: Gimnasio.Presentacion.FrmUsuarios.labelTelefono
-  nameWithType: FrmUsuarios.labelTelefono
-- uid: Gimnasio.Presentacion.FrmUsuarios.labelTelefono*
-  name: labelTelefono
-  href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_labelTelefono_
-  commentId: Overload:Gimnasio.Presentacion.FrmUsuarios.labelTelefono
+- uid: Gimnasio.Presentacion.FrmUsuarios.labelRol
+  name: labelRol
+  href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_labelRol
+  commentId: P:Gimnasio.Presentacion.FrmUsuarios.labelRol
+  fullName: Gimnasio.Presentacion.FrmUsuarios.labelRol
+  nameWithType: FrmUsuarios.labelRol
+- uid: Gimnasio.Presentacion.FrmUsuarios.labelRol*
+  name: labelRol
+  href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_labelRol_
+  commentId: Overload:Gimnasio.Presentacion.FrmUsuarios.labelRol
   isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmUsuarios.labelTelefono
-  nameWithType: FrmUsuarios.labelTelefono
+  fullName: Gimnasio.Presentacion.FrmUsuarios.labelRol
+  nameWithType: FrmUsuarios.labelRol
+- uid: Gimnasio.Presentacion.FrmUsuarios.lblContraseña
+  name: lblContraseña
+  href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_lblContrase_a
+  commentId: P:Gimnasio.Presentacion.FrmUsuarios.lblContraseña
+  fullName: Gimnasio.Presentacion.FrmUsuarios.lblContraseña
+  nameWithType: FrmUsuarios.lblContraseña
+- uid: Gimnasio.Presentacion.FrmUsuarios.lblContraseña*
+  name: lblContraseña
+  href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_lblContrase_a_
+  commentId: Overload:Gimnasio.Presentacion.FrmUsuarios.lblContraseña
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmUsuarios.lblContraseña
+  nameWithType: FrmUsuarios.lblContraseña
 - uid: Gimnasio.Presentacion.FrmUsuarios.lblDatosIngreso
   name: lblDatosIngreso
   href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_lblDatosIngreso
@@ -8241,6 +8085,45 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmUsuarios.lblDatosIngreso
   nameWithType: FrmUsuarios.lblDatosIngreso
+- uid: Gimnasio.Presentacion.FrmUsuarios.lblEmail
+  name: lblEmail
+  href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_lblEmail
+  commentId: P:Gimnasio.Presentacion.FrmUsuarios.lblEmail
+  fullName: Gimnasio.Presentacion.FrmUsuarios.lblEmail
+  nameWithType: FrmUsuarios.lblEmail
+- uid: Gimnasio.Presentacion.FrmUsuarios.lblEmail*
+  name: lblEmail
+  href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_lblEmail_
+  commentId: Overload:Gimnasio.Presentacion.FrmUsuarios.lblEmail
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmUsuarios.lblEmail
+  nameWithType: FrmUsuarios.lblEmail
+- uid: Gimnasio.Presentacion.FrmUsuarios.lblNombreCompleto
+  name: lblNombreCompleto
+  href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_lblNombreCompleto
+  commentId: P:Gimnasio.Presentacion.FrmUsuarios.lblNombreCompleto
+  fullName: Gimnasio.Presentacion.FrmUsuarios.lblNombreCompleto
+  nameWithType: FrmUsuarios.lblNombreCompleto
+- uid: Gimnasio.Presentacion.FrmUsuarios.lblNombreCompleto*
+  name: lblNombreCompleto
+  href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_lblNombreCompleto_
+  commentId: Overload:Gimnasio.Presentacion.FrmUsuarios.lblNombreCompleto
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmUsuarios.lblNombreCompleto
+  nameWithType: FrmUsuarios.lblNombreCompleto
+- uid: Gimnasio.Presentacion.FrmUsuarios.lblNombreUsuario
+  name: lblNombreUsuario
+  href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_lblNombreUsuario
+  commentId: P:Gimnasio.Presentacion.FrmUsuarios.lblNombreUsuario
+  fullName: Gimnasio.Presentacion.FrmUsuarios.lblNombreUsuario
+  nameWithType: FrmUsuarios.lblNombreUsuario
+- uid: Gimnasio.Presentacion.FrmUsuarios.lblNombreUsuario*
+  name: lblNombreUsuario
+  href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_lblNombreUsuario_
+  commentId: Overload:Gimnasio.Presentacion.FrmUsuarios.lblNombreUsuario
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmUsuarios.lblNombreUsuario
+  nameWithType: FrmUsuarios.lblNombreUsuario
 - uid: Gimnasio.Presentacion.FrmUsuarios.lblTotal
   name: lblTotal
   href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_lblTotal

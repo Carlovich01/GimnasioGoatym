@@ -9,15 +9,10 @@ items:
   - Gimnasio.Presentacion.FrmPagos.ActualizarDgv
   - Gimnasio.Presentacion.FrmPagos.ActualizarDgv(System.Data.DataTable)
   - Gimnasio.Presentacion.FrmPagos.BtnBuscarFecha
-  - Gimnasio.Presentacion.FrmPagos.Button1
-  - Gimnasio.Presentacion.FrmPagos.Button2
-  - Gimnasio.Presentacion.FrmPagos.Button3
   - Gimnasio.Presentacion.FrmPagos.Dispose(System.Boolean)
   - Gimnasio.Presentacion.FrmPagos.HabilitarEdicionPago
   - Gimnasio.Presentacion.FrmPagos.HabilitarListado
   - Gimnasio.Presentacion.FrmPagos.InitializeComponent
-  - Gimnasio.Presentacion.FrmPagos.Label4
-  - Gimnasio.Presentacion.FrmPagos.Label5
   - Gimnasio.Presentacion.FrmPagos.PanelFecha
   - Gimnasio.Presentacion.FrmPagos.PanelMonto
   - Gimnasio.Presentacion.FrmPagos.btnActualizar
@@ -79,7 +74,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: FrmPagos
     path: ../Gimnasio.Presentacion/FrmPagos.vb
-    startLine: 11
+    startLine: 13
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -87,7 +82,7 @@ items:
     Formulario para la gestión y consulta de pagos en el sistema del gimnasio. Permite listar, buscar, actualizar y eliminar pagos.
 
     Utiliza la clase <xref href="Gimnasio.Negocio.NPagos" data-throw-if-not-resolved="false"></xref> para la lógica de negocio y la clase <xref href="Gimnasio.Entidades.Pagos" data-throw-if-not-resolved="false"></xref> como entidad.
-
+  remarks: >-
     Todas las operaciones de esta capa están envueltas en bloques Try...Catch. 
 
     El manejo de errores se realiza a través de <xref href="Gimnasio.Errores.ManejarErrores.Mostrar(System.String%2cSystem.Exception)" data-throw-if-not-resolved="false"></xref>
@@ -948,7 +943,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: lblComprobante
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 575
+    startLine: 502
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -977,7 +972,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: panelListado
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 576
+    startLine: 503
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1006,7 +1001,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnActualizar
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 577
+    startLine: 504
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1035,7 +1030,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: PanelFecha
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 578
+    startLine: 505
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1064,7 +1059,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: dtpFechaInicio
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 579
+    startLine: 506
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1093,7 +1088,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: dtpFechaFin
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 580
+    startLine: 507
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1122,7 +1117,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: BtnBuscarFecha
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 581
+    startLine: 508
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1151,7 +1146,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: PanelMonto
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 582
+    startLine: 509
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1180,7 +1175,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnBuscarMonto
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 583
+    startLine: 510
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1209,7 +1204,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: lblHasta
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 584
+    startLine: 511
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1238,7 +1233,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: lblDesde
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 585
+    startLine: 512
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1267,7 +1262,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbMontoFinal
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 586
+    startLine: 513
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1296,7 +1291,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbMontoInicial
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 587
+    startLine: 514
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1307,93 +1302,6 @@ items:
       type: System.Windows.Forms.TextBox
     content.vb: Friend Overridable Property tbMontoInicial As TextBox
   overload: Gimnasio.Presentacion.FrmPagos.tbMontoInicial*
-- uid: Gimnasio.Presentacion.FrmPagos.Label4
-  commentId: P:Gimnasio.Presentacion.FrmPagos.Label4
-  id: Label4
-  parent: Gimnasio.Presentacion.FrmPagos
-  langs:
-  - csharp
-  - vb
-  name: Label4
-  nameWithType: FrmPagos.Label4
-  fullName: Gimnasio.Presentacion.FrmPagos.Label4
-  type: Property
-  source:
-    remote:
-      path: Gimnasio.Presentacion/FrmPagos.Designer.vb
-      branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
-    id: Label4
-    path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 588
-  assemblies:
-  - Gimnasio.Presentacion
-  namespace: Gimnasio.Presentacion
-  syntax:
-    content: internal virtual Label Label4 { get; set; }
-    parameters: []
-    return:
-      type: System.Windows.Forms.Label
-    content.vb: Friend Overridable Property Label4 As Label
-  overload: Gimnasio.Presentacion.FrmPagos.Label4*
-- uid: Gimnasio.Presentacion.FrmPagos.Label5
-  commentId: P:Gimnasio.Presentacion.FrmPagos.Label5
-  id: Label5
-  parent: Gimnasio.Presentacion.FrmPagos
-  langs:
-  - csharp
-  - vb
-  name: Label5
-  nameWithType: FrmPagos.Label5
-  fullName: Gimnasio.Presentacion.FrmPagos.Label5
-  type: Property
-  source:
-    remote:
-      path: Gimnasio.Presentacion/FrmPagos.Designer.vb
-      branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
-    id: Label5
-    path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 589
-  assemblies:
-  - Gimnasio.Presentacion
-  namespace: Gimnasio.Presentacion
-  syntax:
-    content: internal virtual Label Label5 { get; set; }
-    parameters: []
-    return:
-      type: System.Windows.Forms.Label
-    content.vb: Friend Overridable Property Label5 As Label
-  overload: Gimnasio.Presentacion.FrmPagos.Label5*
-- uid: Gimnasio.Presentacion.FrmPagos.Button1
-  commentId: P:Gimnasio.Presentacion.FrmPagos.Button1
-  id: Button1
-  parent: Gimnasio.Presentacion.FrmPagos
-  langs:
-  - csharp
-  - vb
-  name: Button1
-  nameWithType: FrmPagos.Button1
-  fullName: Gimnasio.Presentacion.FrmPagos.Button1
-  type: Property
-  source:
-    remote:
-      path: Gimnasio.Presentacion/FrmPagos.Designer.vb
-      branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
-    id: Button1
-    path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 590
-  assemblies:
-  - Gimnasio.Presentacion
-  namespace: Gimnasio.Presentacion
-  syntax:
-    content: internal virtual Button Button1 { get; set; }
-    parameters: []
-    return:
-      type: System.Windows.Forms.Button
-    content.vb: Friend Overridable Property Button1 As Button
-  overload: Gimnasio.Presentacion.FrmPagos.Button1*
 - uid: Gimnasio.Presentacion.FrmPagos.pbReiniciar
   commentId: P:Gimnasio.Presentacion.FrmPagos.pbReiniciar
   id: pbReiniciar
@@ -1412,7 +1320,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: pbReiniciar
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 591
+    startLine: 515
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1441,7 +1349,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnEliminar
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 592
+    startLine: 516
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1470,7 +1378,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: cbOpcionBuscar
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 593
+    startLine: 517
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1499,7 +1407,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: lbIngresosTotales
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 594
+    startLine: 518
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1528,7 +1436,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: lblTotal
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 595
+    startLine: 519
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1557,7 +1465,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: dgvListado
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 596
+    startLine: 520
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1586,7 +1494,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbBuscar
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 597
+    startLine: 521
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1615,7 +1523,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: lblFin
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 598
+    startLine: 522
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1644,7 +1552,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: lblInicio
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 599
+    startLine: 523
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1673,7 +1581,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: panelEdicionPago
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 600
+    startLine: 524
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1702,7 +1610,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbIDpago
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 601
+    startLine: 525
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1731,7 +1639,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: lblPagoIngreso
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 602
+    startLine: 526
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1760,7 +1668,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnCancelarPago
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 603
+    startLine: 527
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1789,7 +1697,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnGuardarPago
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 604
+    startLine: 528
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1800,64 +1708,6 @@ items:
       type: System.Windows.Forms.Button
     content.vb: Friend Overridable Property btnGuardarPago As Button
   overload: Gimnasio.Presentacion.FrmPagos.btnGuardarPago*
-- uid: Gimnasio.Presentacion.FrmPagos.Button2
-  commentId: P:Gimnasio.Presentacion.FrmPagos.Button2
-  id: Button2
-  parent: Gimnasio.Presentacion.FrmPagos
-  langs:
-  - csharp
-  - vb
-  name: Button2
-  nameWithType: FrmPagos.Button2
-  fullName: Gimnasio.Presentacion.FrmPagos.Button2
-  type: Property
-  source:
-    remote:
-      path: Gimnasio.Presentacion/FrmPagos.Designer.vb
-      branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
-    id: Button2
-    path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 605
-  assemblies:
-  - Gimnasio.Presentacion
-  namespace: Gimnasio.Presentacion
-  syntax:
-    content: internal virtual Button Button2 { get; set; }
-    parameters: []
-    return:
-      type: System.Windows.Forms.Button
-    content.vb: Friend Overridable Property Button2 As Button
-  overload: Gimnasio.Presentacion.FrmPagos.Button2*
-- uid: Gimnasio.Presentacion.FrmPagos.Button3
-  commentId: P:Gimnasio.Presentacion.FrmPagos.Button3
-  id: Button3
-  parent: Gimnasio.Presentacion.FrmPagos
-  langs:
-  - csharp
-  - vb
-  name: Button3
-  nameWithType: FrmPagos.Button3
-  fullName: Gimnasio.Presentacion.FrmPagos.Button3
-  type: Property
-  source:
-    remote:
-      path: Gimnasio.Presentacion/FrmPagos.Designer.vb
-      branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
-    id: Button3
-    path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 606
-  assemblies:
-  - Gimnasio.Presentacion
-  namespace: Gimnasio.Presentacion
-  syntax:
-    content: internal virtual Button Button3 { get; set; }
-    parameters: []
-    return:
-      type: System.Windows.Forms.Button
-    content.vb: Friend Overridable Property Button3 As Button
-  overload: Gimnasio.Presentacion.FrmPagos.Button3*
 - uid: Gimnasio.Presentacion.FrmPagos.cbMetodo
   commentId: P:Gimnasio.Presentacion.FrmPagos.cbMetodo
   id: cbMetodo
@@ -1876,7 +1726,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: cbMetodo
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 607
+    startLine: 529
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1905,7 +1755,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbNotas
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 608
+    startLine: 530
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1934,7 +1784,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbComprobante
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 609
+    startLine: 531
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1963,7 +1813,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbMonto
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 610
+    startLine: 532
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1992,7 +1842,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: lblNotas
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 611
+    startLine: 533
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2021,7 +1871,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: lblMetodo
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 612
+    startLine: 534
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2050,7 +1900,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: lblMonto
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
-    startLine: 613
+    startLine: 535
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2079,7 +1929,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: nPagos
     path: ../Gimnasio.Presentacion/FrmPagos.vb
-    startLine: 15
+    startLine: 17
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2108,7 +1958,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: .ctor
     path: ../Gimnasio.Presentacion/FrmPagos.vb
-    startLine: 21
+    startLine: 23
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2143,7 +1993,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: frmPagos_Load
     path: ../Gimnasio.Presentacion/FrmPagos.vb
-    startLine: 37
+    startLine: 39
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2186,7 +2036,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ActualizarDgv
     path: ../Gimnasio.Presentacion/FrmPagos.vb
-    startLine: 71
+    startLine: 73
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2219,7 +2069,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ActualizarDgv
     path: ../Gimnasio.Presentacion/FrmPagos.vb
-    startLine: 94
+    startLine: 96
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2256,7 +2106,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: HabilitarListado
     path: ../Gimnasio.Presentacion/FrmPagos.vb
-    startLine: 113
+    startLine: 115
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2284,7 +2134,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: HabilitarEdicionPago
     path: ../Gimnasio.Presentacion/FrmPagos.vb
-    startLine: 128
+    startLine: 130
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2319,7 +2169,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnActualizar_Click
     path: ../Gimnasio.Presentacion/FrmPagos.vb
-    startLine: 150
+    startLine: 152
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2362,7 +2212,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnGuardarPago_Click
     path: ../Gimnasio.Presentacion/FrmPagos.vb
-    startLine: 174
+    startLine: 176
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2405,7 +2255,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: dtpFechaInicio_ValueChanged
     path: ../Gimnasio.Presentacion/FrmPagos.vb
-    startLine: 201
+    startLine: 203
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2441,7 +2291,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: dtpFechaFin_ValueChanged
     path: ../Gimnasio.Presentacion/FrmPagos.vb
-    startLine: 212
+    startLine: 214
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2477,7 +2327,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnBuscarFecha_Click
     path: ../Gimnasio.Presentacion/FrmPagos.vb
-    startLine: 228
+    startLine: 230
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2524,7 +2374,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: cb_SelectedIndexChanged
     path: ../Gimnasio.Presentacion/FrmPagos.vb
-    startLine: 253
+    startLine: 255
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2572,7 +2422,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbBuscar_TextChanged
     path: ../Gimnasio.Presentacion/FrmPagos.vb
-    startLine: 310
+    startLine: 312
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2615,7 +2465,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnBuscarMonto_Click
     path: ../Gimnasio.Presentacion/FrmPagos.vb
-    startLine: 332
+    startLine: 334
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2661,7 +2511,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnEliminar_Click
     path: ../Gimnasio.Presentacion/FrmPagos.vb
-    startLine: 362
+    startLine: 364
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2710,7 +2560,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: pbReiniciar_Click
     path: ../Gimnasio.Presentacion/FrmPagos.vb
-    startLine: 390
+    startLine: 392
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2754,7 +2604,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnCancelarPago_Click
     path: ../Gimnasio.Presentacion/FrmPagos.vb
-    startLine: 417
+    startLine: 419
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -20695,24 +20545,6 @@ references:
   name: tbMontoInicial
   nameWithType: FrmPagos.tbMontoInicial
   fullName: Gimnasio.Presentacion.FrmPagos.tbMontoInicial
-- uid: Gimnasio.Presentacion.FrmPagos.Label4*
-  commentId: Overload:Gimnasio.Presentacion.FrmPagos.Label4
-  href: Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Label4
-  name: Label4
-  nameWithType: FrmPagos.Label4
-  fullName: Gimnasio.Presentacion.FrmPagos.Label4
-- uid: Gimnasio.Presentacion.FrmPagos.Label5*
-  commentId: Overload:Gimnasio.Presentacion.FrmPagos.Label5
-  href: Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Label5
-  name: Label5
-  nameWithType: FrmPagos.Label5
-  fullName: Gimnasio.Presentacion.FrmPagos.Label5
-- uid: Gimnasio.Presentacion.FrmPagos.Button1*
-  commentId: Overload:Gimnasio.Presentacion.FrmPagos.Button1
-  href: Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Button1
-  name: Button1
-  nameWithType: FrmPagos.Button1
-  fullName: Gimnasio.Presentacion.FrmPagos.Button1
 - uid: Gimnasio.Presentacion.FrmPagos.pbReiniciar*
   commentId: Overload:Gimnasio.Presentacion.FrmPagos.pbReiniciar
   href: Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_pbReiniciar
@@ -20821,18 +20653,6 @@ references:
   name: btnGuardarPago
   nameWithType: FrmPagos.btnGuardarPago
   fullName: Gimnasio.Presentacion.FrmPagos.btnGuardarPago
-- uid: Gimnasio.Presentacion.FrmPagos.Button2*
-  commentId: Overload:Gimnasio.Presentacion.FrmPagos.Button2
-  href: Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Button2
-  name: Button2
-  nameWithType: FrmPagos.Button2
-  fullName: Gimnasio.Presentacion.FrmPagos.Button2
-- uid: Gimnasio.Presentacion.FrmPagos.Button3*
-  commentId: Overload:Gimnasio.Presentacion.FrmPagos.Button3
-  href: Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Button3
-  name: Button3
-  nameWithType: FrmPagos.Button3
-  fullName: Gimnasio.Presentacion.FrmPagos.Button3
 - uid: Gimnasio.Presentacion.FrmPagos.cbMetodo*
   commentId: Overload:Gimnasio.Presentacion.FrmPagos.cbMetodo
   href: Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_cbMetodo

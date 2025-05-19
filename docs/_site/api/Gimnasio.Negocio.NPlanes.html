@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class NPlanes | Goatym ">
       
-      <meta name="description" content="L&#243;gica de negocio para la gesti&#243;n de planes en el sistema de gimnasio. Interact&#250;a con la capa de datos  y la entidad . Todas las operaciones de la capa de negocio est&#225;n envueltas en bloques Try...Catch. Si ocurre una excepci&#243;n, se registra el error utilizando  en un log.txt Luego, la excepci&#243;n se propaga nuevamente mediante Throw New Exception(ex.Message) para que pueda ser gestionada en la interfaz de usuario.">
+      <meta name="description" content="L&#243;gica de negocio para la gesti&#243;n de planes en el sistema de gimnasio. Interact&#250;a con la capa de datos  y la entidad .">
       <link rel="icon" href="../images/logo.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Gimnasio_Negocio_NPlanes" data-uid="Gimnasio.Negocio.NPlanes" class="text-break">
-Class NPlanes  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPlanes.vb/#L13"><i class="bi bi-code-slash"></i></a>
+Class NPlanes  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPlanes.vb/#L15"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,10 +97,7 @@ Class NPlanes  <a class="header-action link-secondary" title="View source" href=
   </div>
 
   <div class="markdown summary"><p>Lógica de negocio para la gestión de planes en el sistema de gimnasio.
-Interactúa con la capa de datos <a class="xref" href="Gimnasio.Negocio.NPlanes.html#Gimnasio_Negocio_NPlanes_dPlanes">dPlanes</a> y la entidad <a class="xref" href="Gimnasio.Entidades.Planes.html">Planes</a>.
-Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.<br>
-Si ocurre una excepción, se registra el error utilizando <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_">Log(string, Exception)</a> en un log.txt
-Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message) para que pueda ser gestionada en la interfaz de usuario.</p>
+Interactúa con la capa de datos <a class="xref" href="Gimnasio.Negocio.NPlanes.html#Gimnasio_Negocio_NPlanes_dPlanes">dPlanes</a> y la entidad <a class="xref" href="Gimnasio.Entidades.Planes.html">Planes</a>.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -123,6 +120,11 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
 
 
+  <h2 id="Gimnasio_Negocio_NPlanes_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.<br>
+Si ocurre una excepción, se registra el error utilizando <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_">Log(string, Exception)</a> en un log.txt
+Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message) para que pueda ser gestionada en la interfaz de usuario.</p>
+</div>
 
 
   <h2 class="section" id="fields">Fields
@@ -132,7 +134,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NPlanes_dPlanes" data-uid="Gimnasio.Negocio.NPlanes.dPlanes">
   dPlanes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPlanes.vb/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPlanes.vb/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Instancia de la capa de datos para planes.</p>
@@ -146,11 +148,6 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
 
 
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Gimnasio.Datos.DPlanes.html">DPlanes</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -168,7 +165,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NPlanes_Actualizar_Gimnasio_Entidades_Planes_" data-uid="Gimnasio.Negocio.NPlanes.Actualizar(Gimnasio.Entidades.Planes)">
   Actualizar(Planes)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPlanes.vb/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPlanes.vb/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><ol>
@@ -204,7 +201,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NPlanes_Eliminar_System_UInt32_" data-uid="Gimnasio.Negocio.NPlanes.Eliminar(System.UInt32)">
   Eliminar(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPlanes.vb/#L90"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPlanes.vb/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Elimina un plan según su id con <a class="xref" href="Gimnasio.Datos.DPlanes.html#Gimnasio_Datos_DPlanes_Eliminar_System_UInt32_">Eliminar(uint)</a>.</p>
@@ -237,7 +234,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NPlanes_Insertar_Gimnasio_Entidades_Planes_" data-uid="Gimnasio.Negocio.NPlanes.Insertar(Gimnasio.Entidades.Planes)">
   Insertar(Planes)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPlanes.vb/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPlanes.vb/#L59"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><ol>
@@ -278,7 +275,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NPlanes_Listar" data-uid="Gimnasio.Negocio.NPlanes.Listar">
   Listar()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPlanes.vb/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPlanes.vb/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Obtiene la lista de todos los planes registrados con <a class="xref" href="Gimnasio.Datos.DPlanes.html#Gimnasio_Datos_DPlanes_Listar">Listar()</a>.</p>
@@ -311,7 +308,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NPlanes_ListarPorDuracion_System_UInt32_" data-uid="Gimnasio.Negocio.NPlanes.ListarPorDuracion(System.UInt32)">
   ListarPorDuracion(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPlanes.vb/#L121"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPlanes.vb/#L123"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Realiza una validación y busca planes por duración utilizando la capa de datos <a class="xref" href="Gimnasio.Datos.DPlanes.html#Gimnasio_Datos_DPlanes_ListarPorDuracion_System_UInt32_">ListarPorDuracion(uint)</a>.</p>
@@ -350,7 +347,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NPlanes_ListarPorNombre_System_String_" data-uid="Gimnasio.Negocio.NPlanes.ListarPorNombre(System.String)">
   ListarPorNombre(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPlanes.vb/#L104"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPlanes.vb/#L106"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Realiza una validación y busca planes por nombre utilizando la capa de datos <a class="xref" href="Gimnasio.Datos.DPlanes.html#Gimnasio_Datos_DPlanes_ListarPorNombre_System_String_">ListarPorNombre(string)</a>.</p>
@@ -389,7 +386,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NPlanes_ListarPorPrecio_System_Decimal_" data-uid="Gimnasio.Negocio.NPlanes.ListarPorPrecio(System.Decimal)">
   ListarPorPrecio(decimal)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPlanes.vb/#L138"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPlanes.vb/#L140"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Realiza una validación y busca planes por precio utilizando la capa de datos <a class="xref" href="Gimnasio.Datos.DPlanes.html#Gimnasio_Datos_DPlanes_ListarPorPrecio_System_Decimal_">ListarPorPrecio(decimal)</a>.</p>
@@ -428,7 +425,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NPlanes_ValidarCampos_Gimnasio_Entidades_Planes_" data-uid="Gimnasio.Negocio.NPlanes.ValidarCampos(Gimnasio.Entidades.Planes)">
   ValidarCampos(Planes)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPlanes.vb/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPlanes.vb/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Valida los campos de la entidad <a class="xref" href="Gimnasio.Entidades.Planes.html">Planes</a> antes de realizar operaciones de inserción o actualización.</p>
@@ -461,7 +458,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPlanes.vb/#L13" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NPlanes.vb/#L15" class="edit-link">Edit this page</a>
         </div>
 
 

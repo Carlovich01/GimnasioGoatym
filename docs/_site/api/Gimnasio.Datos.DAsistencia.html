@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class DAsistencia | Goatym ">
       
-      <meta name="description" content="Clase de acceso a datos para la gesti&#243;n de asistencias. Hereda de  y utiliza la entidad . Proporciona m&#233;todos CRUD y de b&#250;squeda para la tabla asistencia y la vista vista_asistencia. La vista consolida la informaci&#243;n relevante de los registros de asistencias, permitiendo consultar en una sola consulta datos de la asistencia, el miembro, la membres&#237;a y el plan asociado. Realiza LEFT JOIN entre la asistencia y las dem&#225;s tablas, permitiendo obtener la informaci&#243;n de asistencia incluso si los datos de miembro, membres&#237;a o plan no est&#225;n presentes. VIEW `vista_asistencia` AS    SELECT         `a`.`id_asistencia` AS `id_asistencia`,        `a`.`id_miembro` AS `id_miembro`,        `a`.`id_membresia_valida` AS `id_membresia`,        `m`.`dni` AS `dni_miembro`,        `m`.`nombre` AS `nombre_miembro`,        `m`.`apellido` AS `apellido_miembro`,       `a`.`fecha_hora_checkin` AS `fecha_ingreso`,        `a`.`resultado` AS `resultado`,       `pm`.`nombre_plan` AS `nombre_plan_membresia`    FROM       (((`asistencia` `a`       LEFT JOIN `miembros` `m` ON ((`a`.`id_miembro` = `m`.`id_miembro`)))       LEFT JOIN `membresias_miembro` `mm` ON ((`a`.`id_membresia_valida` = `mm`.`id_membresia`)))       LEFT JOIN `planes_membresia` `pm` ON ((`mm`.`id_plan` = `pm`.`id_plan`)))    ORDER BY `a`.`fecha_hora_checkin` DESC Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo">
+      <meta name="description" content="Clase de acceso a datos para la gesti&#243;n de asistencias. Hereda de  y utiliza la entidad . Proporciona m&#233;todos CRUD y de b&#250;squeda para la tabla asistencia y la vista vista_asistencia.">
       <link rel="icon" href="../images/logo.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Gimnasio_Datos_DAsistencia" data-uid="Gimnasio.Datos.DAsistencia" class="text-break">
-Class DAsistencia  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DAsistencia.vb/#L36"><i class="bi bi-code-slash"></i></a>
+Class DAsistencia  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DAsistencia.vb/#L37"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,28 +99,6 @@ Class DAsistencia  <a class="header-action link-secondary" title="View source" h
   <div class="markdown summary"><p>Clase de acceso a datos para la gestión de asistencias.
 Hereda de <a class="xref" href="Gimnasio.Datos.ConexionBase.html">ConexionBase</a> y utiliza la entidad <a class="xref" href="Gimnasio.Entidades.Asistencia.html">Asistencia</a>.
 Proporciona métodos CRUD y de búsqueda para la tabla asistencia y la vista vista_asistencia.</p>
-<p>La vista consolida la información relevante de los registros de asistencias,
-permitiendo consultar en una sola consulta datos de la asistencia, el miembro, la membresía y el plan asociado.
-Realiza LEFT JOIN entre la asistencia y las demás tablas, permitiendo obtener la información de asistencia
-incluso si los datos de miembro, membresía o plan no están presentes.</p>
-<pre><code class="lang-csharp">VIEW `vista_asistencia` AS
-   SELECT 
-       `a`.`id_asistencia` AS `id_asistencia`,
-       `a`.`id_miembro` AS `id_miembro`,
-       `a`.`id_membresia_valida` AS `id_membresia`,
-       `m`.`dni` AS `dni_miembro`,
-       `m`.`nombre` AS `nombre_miembro`,
-       `m`.`apellido` AS `apellido_miembro`,
-      `a`.`fecha_hora_checkin` AS `fecha_ingreso`,
-       `a`.`resultado` AS `resultado`,
-      `pm`.`nombre_plan` AS `nombre_plan_membresia`
-   FROM
-      (((`asistencia` `a`
-      LEFT JOIN `miembros` `m` ON ((`a`.`id_miembro` = `m`.`id_miembro`)))
-      LEFT JOIN `membresias_miembro` `mm` ON ((`a`.`id_membresia_valida` = `mm`.`id_membresia`)))
-      LEFT JOIN `planes_membresia` `pm` ON ((`mm`.`id_plan` = `pm`.`id_plan`)))
-   ORDER BY `a`.`fecha_hora_checkin` DESC</code></pre>
-<p>Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -144,6 +122,30 @@ incluso si los datos de miembro, membresía o plan no están presentes.</p>
 
 
 
+  <h2 id="Gimnasio_Datos_DAsistencia_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>La vista consolida la información relevante de los registros de asistencias,
+permitiendo consultar en una sola consulta datos de la asistencia, el miembro, la membresía y el plan asociado.
+Realiza LEFT JOIN entre la asistencia y las demás tablas, permitiendo obtener la información de asistencia
+incluso si los datos de miembro, membresía o plan no están presentes.</p>
+<pre><code class="lang-csharp">VIEW `vista_asistencia` AS
+   SELECT 
+       `a`.`id_asistencia` AS `id_asistencia`,
+       `a`.`id_miembro` AS `id_miembro`,
+       `a`.`id_membresia_valida` AS `id_membresia`,
+       `m`.`dni` AS `dni_miembro`,
+       `m`.`nombre` AS `nombre_miembro`,
+       `m`.`apellido` AS `apellido_miembro`,
+      `a`.`fecha_hora_checkin` AS `fecha_ingreso`,
+       `a`.`resultado` AS `resultado`,
+      `pm`.`nombre_plan` AS `nombre_plan_membresia`
+   FROM
+      (((`asistencia` `a`
+      LEFT JOIN `miembros` `m` ON ((`a`.`id_miembro` = `m`.`id_miembro`)))
+      LEFT JOIN `membresias_miembro` `mm` ON ((`a`.`id_membresia_valida` = `mm`.`id_membresia`)))
+      LEFT JOIN `planes_membresia` `pm` ON ((`mm`.`id_plan` = `pm`.`id_plan`)))
+   ORDER BY `a`.`fecha_hora_checkin` DESC</code></pre>
+<p>Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo</p>
+</div>
 
 
   <h2 class="section" id="methods">Methods
@@ -154,7 +156,7 @@ incluso si los datos de miembro, membresía o plan no están presentes.</p>
 
   <h3 id="Gimnasio_Datos_DAsistencia_Eliminar_System_UInt32_" data-uid="Gimnasio.Datos.DAsistencia.Eliminar(System.UInt32)">
   Eliminar(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DAsistencia.vb/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DAsistencia.vb/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Recibe el id de la asistencia a eliminar y ejecuta una sentencia SQL (DELETE) que elimina el registro de asistencia correspondiente.</p>
@@ -187,7 +189,7 @@ incluso si los datos de miembro, membresía o plan no están presentes.</p>
 
   <h3 id="Gimnasio_Datos_DAsistencia_Listar" data-uid="Gimnasio.Datos.DAsistencia.Listar">
   Listar()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DAsistencia.vb/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DAsistencia.vb/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Realiza una consulta SQL (SELECT) que obtiene todos los registros de la vista_asistencia.</p>
@@ -220,7 +222,7 @@ incluso si los datos de miembro, membresía o plan no están presentes.</p>
 
   <h3 id="Gimnasio_Datos_DAsistencia_ListarPorDNI_System_String_" data-uid="Gimnasio.Datos.DAsistencia.ListarPorDNI(System.String)">
   ListarPorDNI(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DAsistencia.vb/#L98"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DAsistencia.vb/#L99"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Realiza una consulta SQL (SELECT) sobre la vista_asistencia para obtener los registros de asistencias
@@ -260,7 +262,7 @@ cuyo DNI del miembro coincida parcial o totalmente con el valor proporcionado.</
 
   <h3 id="Gimnasio_Datos_DAsistencia_ListarPorFecha_System_DateTime_System_DateTime_" data-uid="Gimnasio.Datos.DAsistencia.ListarPorFecha(System.DateTime,System.DateTime)">
   ListarPorFecha(DateTime, DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DAsistencia.vb/#L118"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DAsistencia.vb/#L119"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Realiza una consulta SQL (SELECT) sobre la vista_asistencia para obtener los registros de asistencias cuya fecha de ingreso se encuentre
@@ -303,7 +305,7 @@ dentro del rango proporcionado.</p>
 
   <h3 id="Gimnasio_Datos_DAsistencia_RegistrarAsistencia_Gimnasio_Entidades_Asistencia_" data-uid="Gimnasio.Datos.DAsistencia.RegistrarAsistencia(Gimnasio.Entidades.Asistencia)">
   RegistrarAsistencia(Asistencia)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DAsistencia.vb/#L74"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DAsistencia.vb/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Recibe una instancia de Asistencia y ejecuta una sentencia SQL (INSERT) que inserta un nuevo registro de asistencia con los datos proporcionados.
@@ -337,7 +339,7 @@ Si el id_miembro o id_membresia_valida son nulos, se insertará NULL en la base 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DAsistencia.vb/#L36" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DAsistencia.vb/#L37" class="edit-link">Edit this page</a>
         </div>
 
 

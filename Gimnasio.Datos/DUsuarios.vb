@@ -6,7 +6,8 @@ Imports Gimnasio.Errores
 ''' Clase de acceso a datos para la gestión de usuarios en el sistema de gimnasio.
 ''' Hereda de <see cref="ConexionBase"/> y utiliza la entidad <see cref="Usuarios"/>.
 ''' Proporciona métodos CRUD y de búsqueda para la tabla usuarios_sistema y la vista_usuarios.
-''' 
+''' </summary>
+''' <remarks>
 ''' La vista consolida la información relevante de los registros de usuarios,
 ''' permitiendo consultar en una sola consulta datos de los usuarios y sus roles.
 ''' Realiza JOIN entre la tabla de usuarios y la tabla de roles, permitiendo obtener la información de usuario junto con su rol asociado.
@@ -29,7 +30,7 @@ Imports Gimnasio.Errores
 ''' </code>
 ''' 
 ''' Los diccionarios se utilizan para asociar los parámetros de la consulta con los parámetros del método.
-''' </summary>
+''' </remarks>
 Public Class DUsuarios
     Inherits ConexionBase
 

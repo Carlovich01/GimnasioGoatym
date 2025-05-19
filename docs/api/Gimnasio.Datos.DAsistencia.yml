@@ -24,7 +24,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: DAsistencia
     path: ../Gimnasio.Datos/DAsistencia.vb
-    startLine: 35
+    startLine: 36
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -34,8 +34,7 @@ items:
     Hereda de <xref href="Gimnasio.Datos.ConexionBase" data-throw-if-not-resolved="false"></xref> y utiliza la entidad <xref href="Gimnasio.Entidades.Asistencia" data-throw-if-not-resolved="false"></xref>.
 
     Proporciona métodos CRUD y de búsqueda para la tabla asistencia y la vista vista_asistencia.
-
-
+  remarks: >-
     La vista consolida la información relevante de los registros de asistencias,
 
     permitiendo consultar en una sola consulta datos de la asistencia, el miembro, la membresía y el plan asociado.
@@ -100,7 +99,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Listar
     path: ../Gimnasio.Datos/DAsistencia.vb
-    startLine: 41
+    startLine: 42
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -131,7 +130,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Eliminar
     path: ../Gimnasio.Datos/DAsistencia.vb
-    startLine: 55
+    startLine: 56
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -166,7 +165,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: RegistrarAsistencia
     path: ../Gimnasio.Datos/DAsistencia.vb
-    startLine: 73
+    startLine: 74
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -201,7 +200,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorDNI
     path: ../Gimnasio.Datos/DAsistencia.vb
-    startLine: 97
+    startLine: 98
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -242,7 +241,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorFecha
     path: ../Gimnasio.Datos/DAsistencia.vb
-    startLine: 117
+    startLine: 118
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos

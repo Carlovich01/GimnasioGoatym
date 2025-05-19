@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class FrmAsistencias | Goatym ">
       
-      <meta name="description" content="Formulario para el registro de asistencias de miembros mediante el ingreso de DNI. Permite registrar el ingreso, mostrar el estado de las membres&#237;as y los d&#237;as restantes. Utiliza la clase  para la l&#243;gica de negocio de asistencias y  para la consulta de membres&#237;as. Todas las operaciones de esta capa est&#225;n envueltas en bloques Try...Catch. El manejo de errores se realiza a trav&#233;s de  que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.">
+      <meta name="description" content="Formulario para el registro de asistencias de miembros mediante el ingreso de DNI. Permite registrar el ingreso, mostrar el estado de las membres&#237;as y los d&#237;as restantes. Utiliza la clase  para la l&#243;gica de negocio de asistencias y  para la consulta de membres&#237;as.">
       <link rel="icon" href="../images/logo.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Gimnasio_Presentacion_FrmAsistencias" data-uid="Gimnasio.Presentacion.FrmAsistencias" class="text-break">
-Class FrmAsistencias  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.vb/#L12"><i class="bi bi-code-slash"></i></a>
+Class FrmAsistencias  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.vb/#L14"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -98,10 +98,7 @@ Class FrmAsistencias  <a class="header-action link-secondary" title="View source
 
   <div class="markdown summary"><p>Formulario para el registro de asistencias de miembros mediante el ingreso de DNI.
 Permite registrar el ingreso, mostrar el estado de las membresías y los días restantes.
-Utiliza la clase <a class="xref" href="Gimnasio.Negocio.NAsistencia.html">NAsistencia</a> para la lógica de negocio de asistencias y <a class="xref" href="Gimnasio.Negocio.NMembresias.html">NMembresias</a> para la consulta de membresías.
-Todas las operaciones de esta capa están envueltas en bloques Try...Catch.
-El manejo de errores se realiza a través de <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Mostrar_System_String_System_Exception_">Mostrar(string, Exception)</a>
-que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.</p>
+Utiliza la clase <a class="xref" href="Gimnasio.Negocio.NAsistencia.html">NAsistencia</a> para la lógica de negocio de asistencias y <a class="xref" href="Gimnasio.Negocio.NMembresias.html">NMembresias</a> para la consulta de membresías.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -131,6 +128,11 @@ public class FrmAsistencias : Form, IOleControl.Interface, IOleObject.Interface,
 
 
 
+  <h2 id="Gimnasio_Presentacion_FrmAsistencias_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Todas las operaciones de esta capa están envueltas en bloques Try...Catch.
+El manejo de errores se realiza a través de <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Mostrar_System_String_System_Exception_">Mostrar(string, Exception)</a>
+que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.</p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -141,7 +143,7 @@ public class FrmAsistencias : Form, IOleControl.Interface, IOleObject.Interface,
 
   <h3 id="Gimnasio_Presentacion_FrmAsistencias__ctor_Gimnasio_Presentacion_FrmRegistroAsistencias_" data-uid="Gimnasio.Presentacion.FrmAsistencias.#ctor(Gimnasio.Presentacion.FrmRegistroAsistencias)">
   FrmAsistencias(FrmRegistroAsistencias)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.vb/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.vb/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Constructor del formulario <a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html">FrmAsistencias</a>.</p>
@@ -194,11 +196,6 @@ public class FrmAsistencias : Form, IOleControl.Interface, IOleObject.Interface,
 
 
 
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icontainer">IContainer</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -211,7 +208,7 @@ public class FrmAsistencias : Form, IOleControl.Interface, IOleObject.Interface,
 
   <h3 id="Gimnasio_Presentacion_FrmAsistencias_frmRegistro" data-uid="Gimnasio.Presentacion.FrmAsistencias.frmRegistro">
   frmRegistro
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.vb/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.vb/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Referencia al formulario <a class="xref" href="Gimnasio.Presentacion.FrmRegistroAsistencias.html">FrmRegistroAsistencias</a> desde el formulario de asistencias.</p>
@@ -225,11 +222,6 @@ public class FrmAsistencias : Form, IOleControl.Interface, IOleObject.Interface,
 
 
 
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Gimnasio.Presentacion.FrmRegistroAsistencias.html">FrmRegistroAsistencias</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -242,7 +234,7 @@ public class FrmAsistencias : Form, IOleControl.Interface, IOleObject.Interface,
 
   <h3 id="Gimnasio_Presentacion_FrmAsistencias_nAsistencias" data-uid="Gimnasio.Presentacion.FrmAsistencias.nAsistencias">
   nAsistencias
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.vb/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.vb/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Instancia de la capa de negocio para asistencias.</p>
@@ -256,11 +248,6 @@ public class FrmAsistencias : Form, IOleControl.Interface, IOleObject.Interface,
 
 
 
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Gimnasio.Negocio.NAsistencia.html">NAsistencia</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -272,37 +259,6 @@ public class FrmAsistencias : Form, IOleControl.Interface, IOleObject.Interface,
 
   <h2 class="section" id="properties">Properties
 </h2>
-
-
-  <a id="Gimnasio_Presentacion_FrmAsistencias_Label2_" data-uid="Gimnasio.Presentacion.FrmAsistencias.Label2*"></a>
-
-  <h3 id="Gimnasio_Presentacion_FrmAsistencias_Label2" data-uid="Gimnasio.Presentacion.FrmAsistencias.Label2">
-  Label2
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.Designer.vb/#L125"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">internal virtual Label Label2 { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
 
 
   <a id="Gimnasio_Presentacion_FrmAsistencias_dgvListado_" data-uid="Gimnasio.Presentacion.FrmAsistencias.dgvListado*"></a>
@@ -323,11 +279,6 @@ public class FrmAsistencias : Form, IOleControl.Interface, IOleObject.Interface,
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.datagridview">DataGridView</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -354,11 +305,32 @@ public class FrmAsistencias : Form, IOleControl.Interface, IOleObject.Interface,
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmAsistencias_lblParaIngresarDNI_" data-uid="Gimnasio.Presentacion.FrmAsistencias.lblParaIngresarDNI*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmAsistencias_lblParaIngresarDNI" data-uid="Gimnasio.Presentacion.FrmAsistencias.lblParaIngresarDNI">
+  lblParaIngresarDNI
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.Designer.vb/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblParaIngresarDNI { get; set; }</code></pre>
+  </div>
+
+
+
+
+
 
 
 
@@ -385,11 +357,6 @@ public class FrmAsistencias : Form, IOleControl.Interface, IOleObject.Interface,
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -465,7 +432,7 @@ public class FrmAsistencias : Form, IOleControl.Interface, IOleObject.Interface,
 
   <h3 id="Gimnasio_Presentacion_FrmAsistencias_frmAsistencias_Load_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmAsistencias.frmAsistencias_Load(System.Object,System.EventArgs)">
   frmAsistencias_Load(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.vb/#L37"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.vb/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al cargar el formulario. Oculta el DataGriedView.</p>
@@ -499,7 +466,7 @@ public class FrmAsistencias : Form, IOleControl.Interface, IOleObject.Interface,
 
   <h3 id="Gimnasio_Presentacion_FrmAsistencias_tbDNI_KeyPress_System_Object_System_Windows_Forms_KeyPressEventArgs_" data-uid="Gimnasio.Presentacion.FrmAsistencias.tbDNI_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
   tbDNI_KeyPress(object, KeyPressEventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.vb/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.vb/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al presionar una tecla en el campo de texto del DNI.</p>
@@ -547,7 +514,7 @@ public class FrmAsistencias : Form, IOleControl.Interface, IOleObject.Interface,
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.vb/#L12" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmAsistencias.vb/#L14" class="edit-link">Edit this page</a>
         </div>
 
 

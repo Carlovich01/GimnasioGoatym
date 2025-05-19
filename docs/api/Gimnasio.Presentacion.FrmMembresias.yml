@@ -10,8 +10,6 @@ items:
   - Gimnasio.Presentacion.FrmMembresias.ActualizarDgv(System.Data.DataTable)
   - Gimnasio.Presentacion.FrmMembresias.BtnPagar
   - Gimnasio.Presentacion.FrmMembresias.BtnPagar_Click(System.Object,System.EventArgs)
-  - Gimnasio.Presentacion.FrmMembresias.Button1
-  - Gimnasio.Presentacion.FrmMembresias.Button2
   - Gimnasio.Presentacion.FrmMembresias.Dispose(System.Boolean)
   - Gimnasio.Presentacion.FrmMembresias.HabilitarIngreso
   - Gimnasio.Presentacion.FrmMembresias.HabilitarIngresoConMiembro(System.String)
@@ -90,7 +88,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: FrmMembresias
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 11
+    startLine: 13
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -98,7 +96,7 @@ items:
     Formulario para la gestión de membresías en el sistema del gimnasio. Permite listar, buscar, agregar, actualizar, eliminar membresías y registrar pagos.
 
     Utiliza la clase <xref href="Gimnasio.Negocio.NMembresias" data-throw-if-not-resolved="false"></xref> para la lógica de negocio y la clase <xref href="Gimnasio.Entidades.Membresias" data-throw-if-not-resolved="false"></xref> como entidad.
-
+  remarks: >-
     Todas las operaciones de esta capa están envueltas en bloques Try...Catch. 
 
     El manejo de errores se realiza a través de <xref href="Gimnasio.Errores.ManejarErrores.Mostrar(System.String%2cSystem.Exception)" data-throw-if-not-resolved="false"></xref>
@@ -959,7 +957,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: panelListado
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 676
+    startLine: 646
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -988,7 +986,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnActualizar
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 677
+    startLine: 647
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1017,7 +1015,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnEliminar
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 678
+    startLine: 648
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1046,7 +1044,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: BtnPagar
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 679
+    startLine: 649
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1075,7 +1073,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: cbOpcionBuscar
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 680
+    startLine: 650
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1104,7 +1102,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: lblTotal
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 681
+    startLine: 651
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1133,7 +1131,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: dgvListado
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 682
+    startLine: 652
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1162,7 +1160,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbBuscar
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 683
+    startLine: 653
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1191,7 +1189,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnInsertar
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 684
+    startLine: 654
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1220,7 +1218,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: panelDatosIngreso
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 685
+    startLine: 655
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1249,7 +1247,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: lblDatosIngreso
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 686
+    startLine: 656
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1278,7 +1276,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: dgvMiembro
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 687
+    startLine: 657
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1307,7 +1305,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: lblMiembro
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 688
+    startLine: 658
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1336,7 +1334,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbBuscarMiembro
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 689
+    startLine: 659
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1365,7 +1363,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: cbOpcionBuscarMiembro
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 690
+    startLine: 660
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1394,7 +1392,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: dgvPlan
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 691
+    startLine: 661
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1423,7 +1421,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbBuscarPlan
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 692
+    startLine: 662
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1452,7 +1450,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnGuardar
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 693
+    startLine: 663
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1481,7 +1479,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnCancelar
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 694
+    startLine: 664
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1510,7 +1508,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: cbBuscarOpcionPlan
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 695
+    startLine: 665
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1539,7 +1537,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: lblPlan
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 696
+    startLine: 666
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1568,7 +1566,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: panelPagoIngreso
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 697
+    startLine: 667
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1597,7 +1595,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnCancelarPago
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 698
+    startLine: 668
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1626,7 +1624,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnGuardarPago
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 699
+    startLine: 669
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1637,64 +1635,6 @@ items:
       type: System.Windows.Forms.Button
     content.vb: Friend Overridable Property btnGuardarPago As Button
   overload: Gimnasio.Presentacion.FrmMembresias.btnGuardarPago*
-- uid: Gimnasio.Presentacion.FrmMembresias.Button1
-  commentId: P:Gimnasio.Presentacion.FrmMembresias.Button1
-  id: Button1
-  parent: Gimnasio.Presentacion.FrmMembresias
-  langs:
-  - csharp
-  - vb
-  name: Button1
-  nameWithType: FrmMembresias.Button1
-  fullName: Gimnasio.Presentacion.FrmMembresias.Button1
-  type: Property
-  source:
-    remote:
-      path: Gimnasio.Presentacion/FrmMembresias.Designer.vb
-      branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
-    id: Button1
-    path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 700
-  assemblies:
-  - Gimnasio.Presentacion
-  namespace: Gimnasio.Presentacion
-  syntax:
-    content: internal virtual Button Button1 { get; set; }
-    parameters: []
-    return:
-      type: System.Windows.Forms.Button
-    content.vb: Friend Overridable Property Button1 As Button
-  overload: Gimnasio.Presentacion.FrmMembresias.Button1*
-- uid: Gimnasio.Presentacion.FrmMembresias.Button2
-  commentId: P:Gimnasio.Presentacion.FrmMembresias.Button2
-  id: Button2
-  parent: Gimnasio.Presentacion.FrmMembresias
-  langs:
-  - csharp
-  - vb
-  name: Button2
-  nameWithType: FrmMembresias.Button2
-  fullName: Gimnasio.Presentacion.FrmMembresias.Button2
-  type: Property
-  source:
-    remote:
-      path: Gimnasio.Presentacion/FrmMembresias.Designer.vb
-      branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
-    id: Button2
-    path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 701
-  assemblies:
-  - Gimnasio.Presentacion
-  namespace: Gimnasio.Presentacion
-  syntax:
-    content: internal virtual Button Button2 { get; set; }
-    parameters: []
-    return:
-      type: System.Windows.Forms.Button
-    content.vb: Friend Overridable Property Button2 As Button
-  overload: Gimnasio.Presentacion.FrmMembresias.Button2*
 - uid: Gimnasio.Presentacion.FrmMembresias.cbMetodo
   commentId: P:Gimnasio.Presentacion.FrmMembresias.cbMetodo
   id: cbMetodo
@@ -1713,7 +1653,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: cbMetodo
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 702
+    startLine: 670
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1742,7 +1682,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbNotas
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 703
+    startLine: 671
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1771,7 +1711,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbComprobante
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 704
+    startLine: 672
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1800,7 +1740,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbMonto
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 705
+    startLine: 673
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1829,7 +1769,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: lblNotas
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 706
+    startLine: 674
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1858,7 +1798,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: lblComprobante
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 707
+    startLine: 675
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1887,7 +1827,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: lblMetodo
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 708
+    startLine: 676
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1916,7 +1856,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: lblMonto
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 709
+    startLine: 677
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1945,7 +1885,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: lblPagoIngreso
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 710
+    startLine: 678
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1974,7 +1914,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: pbReiniciar
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 711
+    startLine: 679
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2003,7 +1943,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbIDplan
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 712
+    startLine: 680
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2032,7 +1972,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbIDmembresia
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 713
+    startLine: 681
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2061,7 +2001,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbIDpago
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 714
+    startLine: 682
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2090,7 +2030,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbIDmiembro
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 715
+    startLine: 683
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2119,7 +2059,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: pbReiniciarMiembro
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 716
+    startLine: 684
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2148,7 +2088,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: pbReiniciarPlan
     path: ../Gimnasio.Presentacion/FrmMembresias.Designer.vb
-    startLine: 717
+    startLine: 685
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2177,7 +2117,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: nMembresias
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 16
+    startLine: 18
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2206,7 +2146,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: usuarioActual
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 21
+    startLine: 23
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2235,7 +2175,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: esNuevo
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 26
+    startLine: 28
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2264,7 +2204,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: .ctor
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 32
+    startLine: 34
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2299,7 +2239,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: frmMembresias_Load
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 45
+    startLine: 47
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2338,7 +2278,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ActualizarDgv
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 78
+    startLine: 80
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2369,7 +2309,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ActualizarDgv
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 92
+    startLine: 94
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2404,7 +2344,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: HabilitarListado
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 104
+    startLine: 106
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2432,7 +2372,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: HabilitarIngreso
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 122
+    startLine: 124
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2471,7 +2411,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: HabilitarIngresoConMiembro
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 171
+    startLine: 173
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2517,7 +2457,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnInsertar_Click
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 191
+    startLine: 193
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2560,7 +2500,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnActualizar_Click
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 215
+    startLine: 217
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2608,7 +2548,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnGuardar_Click
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 258
+    startLine: 260
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2660,7 +2600,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnCancelar_Click
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 303
+    startLine: 305
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2696,7 +2636,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: HabilitarIngresoPago
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 318
+    startLine: 320
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2731,7 +2671,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: BtnPagar_Click
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 345
+    startLine: 347
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2777,7 +2717,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnGuardarPago_Click
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 377
+    startLine: 379
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2824,7 +2764,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnCancelarPago_Click
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 401
+    startLine: 403
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2860,7 +2800,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnEliminar_Click
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 422
+    startLine: 424
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2906,7 +2846,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbBuscarMembresias_TextChanged
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 449
+    startLine: 451
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2948,7 +2888,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: cb_SelectedIndexChanged
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 473
+    startLine: 475
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2996,7 +2936,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbBuscarMiembro_TextChanged
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 499
+    startLine: 501
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -3041,7 +2981,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbBuscarPlan_TextChanged
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 519
+    startLine: 521
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -3082,7 +3022,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: pbReiniciar_Click
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 537
+    startLine: 539
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -3125,7 +3065,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: pbReiniciarMiembro_Click
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 557
+    startLine: 559
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -3166,7 +3106,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: pbReiniciarPlan_Click
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 572
+    startLine: 574
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -21188,18 +21128,6 @@ references:
   name: btnGuardarPago
   nameWithType: FrmMembresias.btnGuardarPago
   fullName: Gimnasio.Presentacion.FrmMembresias.btnGuardarPago
-- uid: Gimnasio.Presentacion.FrmMembresias.Button1*
-  commentId: Overload:Gimnasio.Presentacion.FrmMembresias.Button1
-  href: Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_Button1
-  name: Button1
-  nameWithType: FrmMembresias.Button1
-  fullName: Gimnasio.Presentacion.FrmMembresias.Button1
-- uid: Gimnasio.Presentacion.FrmMembresias.Button2*
-  commentId: Overload:Gimnasio.Presentacion.FrmMembresias.Button2
-  href: Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_Button2
-  name: Button2
-  nameWithType: FrmMembresias.Button2
-  fullName: Gimnasio.Presentacion.FrmMembresias.Button2
 - uid: Gimnasio.Presentacion.FrmMembresias.cbMetodo*
   commentId: Overload:Gimnasio.Presentacion.FrmMembresias.cbMetodo
   href: Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_cbMetodo

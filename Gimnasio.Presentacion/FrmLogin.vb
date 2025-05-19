@@ -4,10 +4,12 @@ Imports Gimnasio.Errores
 
 ''' <summary>
 ''' Formulario de inicio de sesión para el sistema de gimnasio. Permite al usuario ingresar sus credenciales y acceder al sistema principal.
+''' </summary>
+''' <remarks>
 ''' Todas las operaciones de esta capa están envueltas en bloques Try...Catch. 
 ''' El manejo de errores se realiza a través de <see cref="Gimnasio.Errores.ManejarErrores.Mostrar(String, Exception)"/>
 ''' que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario. 
-''' </summary>
+''' </remarks>
 Public Class FrmLogin
     ''' <summary>
     ''' Evento que se ejecuta al cargar el formulario. Inicializa el formato de los controles
@@ -43,7 +45,7 @@ Public Class FrmLogin
     '''         - Crea y muestra el formulario principal <see cref="FrmPrincipal"/>, pasando el usuario autenticado como parámetro.
     '''     - Si las credenciales son incorrectas, lanza una excepción y muestra un mensaje de error.
     ''' </summary>
-    Private Sub btIniciarSesion_Click(sender As Object, e As EventArgs) Handles btIniciarSesion.Click
+    Private Sub btnIniciarSesion_Click(sender As Object, e As EventArgs) Handles btnIniciarSesion.Click
         Try
             Dim username As String = tbUsuario.Text
             Dim password As String = tbContraseña.Text

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class DUsuarios | Goatym ">
       
-      <meta name="description" content="Clase de acceso a datos para la gesti&#243;n de usuarios en el sistema de gimnasio. Hereda de  y utiliza la entidad . Proporciona m&#233;todos CRUD y de b&#250;squeda para la tabla usuarios_sistema y la vista_usuarios. La vista consolida la informaci&#243;n relevante de los registros de usuarios, permitiendo consultar en una sola consulta datos de los usuarios y sus roles. Realiza JOIN entre la tabla de usuarios y la tabla de roles, permitiendo obtener la informaci&#243;n de usuario junto con su rol asociado. VIEW `vista_usuarios` AS    SELECT         `u`.`id_usuario` AS `id_usuario`,        `u`.`username` AS `username`,        `u`.`password_hash` AS `password_hash`,        `u`.`nombre_completo` AS `nombre_completo`,        `u`.`email` AS `email`,        `r`.`nombre_rol` AS `nombre_rol`,        `u`.`fecha_creacion` AS `fecha_creacion`,        `u`.`ultima_modificacion` AS `ultima_modificacion`    FROM        (`usuarios_sistema` `u`        JOIN `roles` `r` ON ((`u`.`id_rol` = `r`.`id_rol`)))    ORDER BY `u`.`ultima_modificacion` DESC Los diccionarios se utilizan para asociar los par&#225;metros de la consulta con los par&#225;metros del m&#233;todo.">
+      <meta name="description" content="Clase de acceso a datos para la gesti&#243;n de usuarios en el sistema de gimnasio. Hereda de  y utiliza la entidad . Proporciona m&#233;todos CRUD y de b&#250;squeda para la tabla usuarios_sistema y la vista_usuarios.">
       <link rel="icon" href="../images/logo.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Gimnasio_Datos_DUsuarios" data-uid="Gimnasio.Datos.DUsuarios" class="text-break">
-Class DUsuarios  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DUsuarios.vb/#L33"><i class="bi bi-code-slash"></i></a>
+Class DUsuarios  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DUsuarios.vb/#L34"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,24 +99,6 @@ Class DUsuarios  <a class="header-action link-secondary" title="View source" hre
   <div class="markdown summary"><p>Clase de acceso a datos para la gestión de usuarios en el sistema de gimnasio.
 Hereda de <a class="xref" href="Gimnasio.Datos.ConexionBase.html">ConexionBase</a> y utiliza la entidad <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a>.
 Proporciona métodos CRUD y de búsqueda para la tabla usuarios_sistema y la vista_usuarios.</p>
-<p>La vista consolida la información relevante de los registros de usuarios,
-permitiendo consultar en una sola consulta datos de los usuarios y sus roles.
-Realiza JOIN entre la tabla de usuarios y la tabla de roles, permitiendo obtener la información de usuario junto con su rol asociado.</p>
-<pre><code class="lang-csharp">VIEW `vista_usuarios` AS
-   SELECT 
-       `u`.`id_usuario` AS `id_usuario`,
-       `u`.`username` AS `username`,
-       `u`.`password_hash` AS `password_hash`,
-       `u`.`nombre_completo` AS `nombre_completo`,
-       `u`.`email` AS `email`,
-       `r`.`nombre_rol` AS `nombre_rol`,
-       `u`.`fecha_creacion` AS `fecha_creacion`,
-       `u`.`ultima_modificacion` AS `ultima_modificacion`
-   FROM
-       (`usuarios_sistema` `u`
-       JOIN `roles` `r` ON ((`u`.`id_rol` = `r`.`id_rol`)))
-   ORDER BY `u`.`ultima_modificacion` DESC</code></pre>
-<p>Los diccionarios se utilizan para asociar los parámetros de la consulta con los parámetros del método.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -140,6 +122,26 @@ Realiza JOIN entre la tabla de usuarios y la tabla de roles, permitiendo obtener
 
 
 
+  <h2 id="Gimnasio_Datos_DUsuarios_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>La vista consolida la información relevante de los registros de usuarios,
+permitiendo consultar en una sola consulta datos de los usuarios y sus roles.
+Realiza JOIN entre la tabla de usuarios y la tabla de roles, permitiendo obtener la información de usuario junto con su rol asociado.</p>
+<pre><code class="lang-csharp">VIEW `vista_usuarios` AS
+   SELECT 
+       `u`.`id_usuario` AS `id_usuario`,
+       `u`.`username` AS `username`,
+       `u`.`password_hash` AS `password_hash`,
+       `u`.`nombre_completo` AS `nombre_completo`,
+       `u`.`email` AS `email`,
+       `r`.`nombre_rol` AS `nombre_rol`,
+       `u`.`fecha_creacion` AS `fecha_creacion`,
+       `u`.`ultima_modificacion` AS `ultima_modificacion`
+   FROM
+       (`usuarios_sistema` `u`
+       JOIN `roles` `r` ON ((`u`.`id_rol` = `r`.`id_rol`)))
+   ORDER BY `u`.`ultima_modificacion` DESC</code></pre>
+<p>Los diccionarios se utilizan para asociar los parámetros de la consulta con los parámetros del método.</p>
+</div>
 
 
   <h2 class="section" id="methods">Methods
@@ -150,7 +152,7 @@ Realiza JOIN entre la tabla de usuarios y la tabla de roles, permitiendo obtener
 
   <h3 id="Gimnasio_Datos_DUsuarios_Actualizar_Gimnasio_Entidades_Usuarios_" data-uid="Gimnasio.Datos.DUsuarios.Actualizar(Gimnasio.Entidades.Usuarios)">
   Actualizar(Usuarios)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DUsuarios.vb/#L78"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DUsuarios.vb/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Recibe una instancia de usuarios y ejecuta una sentencia SQL (UPDATE) que actualiza los datos de un registro de usuario existente que
@@ -184,7 +186,7 @@ corresponde al id de la instancia.</p>
 
   <h3 id="Gimnasio_Datos_DUsuarios_Eliminar_System_UInt32_" data-uid="Gimnasio.Datos.DUsuarios.Eliminar(System.UInt32)">
   Eliminar(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DUsuarios.vb/#L103"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DUsuarios.vb/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Recibe el id del usuario a eliminar y ejecuta una sentencia SQL (DELETE) que elimina el registro de usuario correspondiente.</p>
@@ -217,7 +219,7 @@ corresponde al id de la instancia.</p>
 
   <h3 id="Gimnasio_Datos_DUsuarios_Insertar_Gimnasio_Entidades_Usuarios_" data-uid="Gimnasio.Datos.DUsuarios.Insertar(Gimnasio.Entidades.Usuarios)">
   Insertar(Usuarios)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DUsuarios.vb/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DUsuarios.vb/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Recibe una instancia de Usuarios y ejecuta una sentencia SQL (INSERT) que inserta un nuevo registro de usuarios con los datos proporcionados.</p>
@@ -250,7 +252,7 @@ corresponde al id de la instancia.</p>
 
   <h3 id="Gimnasio_Datos_DUsuarios_Listar" data-uid="Gimnasio.Datos.DUsuarios.Listar">
   Listar()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DUsuarios.vb/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DUsuarios.vb/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Realiza una consulta SQL (SELECT) que obtiene todos los registros de la vista_usuarios.</p>
@@ -283,7 +285,7 @@ corresponde al id de la instancia.</p>
 
   <h3 id="Gimnasio_Datos_DUsuarios_ListarPorNombre_System_String_" data-uid="Gimnasio.Datos.DUsuarios.ListarPorNombre(System.String)">
   ListarPorNombre(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DUsuarios.vb/#L122"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DUsuarios.vb/#L123"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Recibe el nombre de un usuario y ejecuta una sentencia SQL (SELECT) que obtiene los registros de usuario que tienen ese nombre.
@@ -323,7 +325,7 @@ Permite buscar por parte del nombre utilizando la cláusula LIKE.</p>
 
   <h3 id="Gimnasio_Datos_DUsuarios_ObtenerPorUsername_System_String_" data-uid="Gimnasio.Datos.DUsuarios.ObtenerPorUsername(System.String)">
   ObtenerPorUsername(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DUsuarios.vb/#L143"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DUsuarios.vb/#L144"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Recibe un username y ejecuta una sentencia SQL (SELECT) que obtiene el registro de usuario correspondiente.
@@ -363,7 +365,7 @@ Luego convierte el DataTable en una instancia de Usuarios o retorna Nothing en c
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DUsuarios.vb/#L33" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/DUsuarios.vb/#L34" class="edit-link">Edit this page</a>
         </div>
 
 

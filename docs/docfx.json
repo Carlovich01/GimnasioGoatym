@@ -11,7 +11,7 @@
             }
         ],
         "dest": "api",
-        "includePrivateMembers": true 
+        "includePrivateMembers": true
     }
   ],
   "build": {
@@ -26,17 +26,22 @@
       }
     ],
     "resource": [
-      {
-        "files": [
-          "images/**"
-        ]
-      }
+        {
+            "files": [
+                "images/**"
+            ]
+        },
+        {
+            "files": [
+                "*.sql"
+            ]
+        }
     ],
     "output": "_site",
     "template": [
-      "default",
-       "modern",
-       "templates/mi-plantilla"
+        "default",
+        "modern",
+        "templates/mi-plantilla"
     ],
     "globalMetadata": {
         "_appName": "Goatym",

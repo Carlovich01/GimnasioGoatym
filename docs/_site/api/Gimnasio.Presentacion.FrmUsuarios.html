@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class FrmUsuarios | Goatym ">
       
-      <meta name="description" content="Formulario para la gesti&#243;n de usuarios del sistema del gimnasio. Permite listar, buscar, agregar, actualizar y eliminar usuarios. Utiliza la clase  para la l&#243;gica de negocio y la clase  como entidad. Todas las operaciones de esta capa est&#225;n envueltas en bloques Try...Catch. El manejo de errores se realiza a trav&#233;s de  que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.">
+      <meta name="description" content="Formulario para la gesti&#243;n de usuarios del sistema del gimnasio. Permite listar, buscar, agregar, actualizar y eliminar usuarios. Utiliza la clase  para la l&#243;gica de negocio y la clase  como entidad.">
       <link rel="icon" href="../images/logo.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Gimnasio_Presentacion_FrmUsuarios" data-uid="Gimnasio.Presentacion.FrmUsuarios" class="text-break">
-Class FrmUsuarios  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L12"><i class="bi bi-code-slash"></i></a>
+Class FrmUsuarios  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L14"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,10 +97,7 @@ Class FrmUsuarios  <a class="header-action link-secondary" title="View source" h
   </div>
 
   <div class="markdown summary"><p>Formulario para la gestión de usuarios del sistema del gimnasio. Permite listar, buscar, agregar, actualizar y eliminar usuarios.
-Utiliza la clase <a class="xref" href="Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_nUsuarios">nUsuarios</a> para la lógica de negocio y la clase <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a> como entidad.
-Todas las operaciones de esta capa están envueltas en bloques Try...Catch.
-El manejo de errores se realiza a través de <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Mostrar_System_String_System_Exception_">Mostrar(string, Exception)</a>
-que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.</p>
+Utiliza la clase <a class="xref" href="Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_nUsuarios">nUsuarios</a> para la lógica de negocio y la clase <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a> como entidad.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -130,6 +127,11 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
+  <h2 id="Gimnasio_Presentacion_FrmUsuarios_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Todas las operaciones de esta capa están envueltas en bloques Try...Catch.
+El manejo de errores se realiza a través de <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Mostrar_System_String_System_Exception_">Mostrar(string, Exception)</a>
+que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.</p>
+</div>
 
 
   <h2 class="section" id="fields">Fields
@@ -152,11 +154,6 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icontainer">IContainer</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -169,7 +166,7 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
   <h3 id="Gimnasio_Presentacion_FrmUsuarios_esNuevo" data-uid="Gimnasio.Presentacion.FrmUsuarios.esNuevo">
   esNuevo
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indica si la operación actual es de inserción (<code>True</code>) o actualización (<code>False</code>).</p>
@@ -183,11 +180,6 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -200,7 +192,7 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
   <h3 id="Gimnasio_Presentacion_FrmUsuarios_nUsuarios" data-uid="Gimnasio.Presentacion.FrmUsuarios.nUsuarios">
   nUsuarios
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Instancia de la capa de negocio para usuarios.</p>
@@ -214,11 +206,6 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Gimnasio.Negocio.NUsuarios.html">NUsuarios</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -230,130 +217,6 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
   <h2 class="section" id="properties">Properties
 </h2>
-
-
-  <a id="Gimnasio_Presentacion_FrmUsuarios_Label1_" data-uid="Gimnasio.Presentacion.FrmUsuarios.Label1*"></a>
-
-  <h3 id="Gimnasio_Presentacion_FrmUsuarios_Label1" data-uid="Gimnasio.Presentacion.FrmUsuarios.Label1">
-  Label1
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.Designer.vb/#L423"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">internal virtual Label Label1 { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gimnasio_Presentacion_FrmUsuarios_Label2_" data-uid="Gimnasio.Presentacion.FrmUsuarios.Label2*"></a>
-
-  <h3 id="Gimnasio_Presentacion_FrmUsuarios_Label2" data-uid="Gimnasio.Presentacion.FrmUsuarios.Label2">
-  Label2
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.Designer.vb/#L416"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">internal virtual Label Label2 { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gimnasio_Presentacion_FrmUsuarios_Label3_" data-uid="Gimnasio.Presentacion.FrmUsuarios.Label3*"></a>
-
-  <h3 id="Gimnasio_Presentacion_FrmUsuarios_Label3" data-uid="Gimnasio.Presentacion.FrmUsuarios.Label3">
-  Label3
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.Designer.vb/#L418"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">internal virtual Label Label3 { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gimnasio_Presentacion_FrmUsuarios_Label6_" data-uid="Gimnasio.Presentacion.FrmUsuarios.Label6*"></a>
-
-  <h3 id="Gimnasio_Presentacion_FrmUsuarios_Label6" data-uid="Gimnasio.Presentacion.FrmUsuarios.Label6">
-  Label6
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.Designer.vb/#L422"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">internal virtual Label Label6 { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
 
 
   <a id="Gimnasio_Presentacion_FrmUsuarios_btnActualizar_" data-uid="Gimnasio.Presentacion.FrmUsuarios.btnActualizar*"></a>
@@ -374,11 +237,6 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -405,11 +263,6 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -436,11 +289,6 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -467,11 +315,6 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -498,11 +341,6 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -529,11 +367,6 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.combobox">ComboBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -560,11 +393,6 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.combobox">ComboBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -591,11 +419,6 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.datagridview">DataGridView</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -604,10 +427,10 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
-  <a id="Gimnasio_Presentacion_FrmUsuarios_labelTelefono_" data-uid="Gimnasio.Presentacion.FrmUsuarios.labelTelefono*"></a>
+  <a id="Gimnasio_Presentacion_FrmUsuarios_labelRol_" data-uid="Gimnasio.Presentacion.FrmUsuarios.labelRol*"></a>
 
-  <h3 id="Gimnasio_Presentacion_FrmUsuarios_labelTelefono" data-uid="Gimnasio.Presentacion.FrmUsuarios.labelTelefono">
-  labelTelefono
+  <h3 id="Gimnasio_Presentacion_FrmUsuarios_labelRol" data-uid="Gimnasio.Presentacion.FrmUsuarios.labelRol">
+  labelRol
   <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.Designer.vb/#L417"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -615,18 +438,39 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">internal virtual Label labelTelefono { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">internal virtual Label labelRol { get; set; }</code></pre>
   </div>
 
 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmUsuarios_lblContrase_a_" data-uid="Gimnasio.Presentacion.FrmUsuarios.lblContrase&#241;a*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmUsuarios_lblContrase_a" data-uid="Gimnasio.Presentacion.FrmUsuarios.lblContrase&#241;a">
+  lblContrase&#241;a
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.Designer.vb/#L423"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblContrase&#241;a { get; set; }</code></pre>
+  </div>
+
+
+
+
+
 
 
 
@@ -653,11 +497,84 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmUsuarios_lblEmail_" data-uid="Gimnasio.Presentacion.FrmUsuarios.lblEmail*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmUsuarios_lblEmail" data-uid="Gimnasio.Presentacion.FrmUsuarios.lblEmail">
+  lblEmail
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.Designer.vb/#L418"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblEmail { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmUsuarios_lblNombreCompleto_" data-uid="Gimnasio.Presentacion.FrmUsuarios.lblNombreCompleto*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmUsuarios_lblNombreCompleto" data-uid="Gimnasio.Presentacion.FrmUsuarios.lblNombreCompleto">
+  lblNombreCompleto
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.Designer.vb/#L416"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblNombreCompleto { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmUsuarios_lblNombreUsuario_" data-uid="Gimnasio.Presentacion.FrmUsuarios.lblNombreUsuario*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmUsuarios_lblNombreUsuario" data-uid="Gimnasio.Presentacion.FrmUsuarios.lblNombreUsuario">
+  lblNombreUsuario
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.Designer.vb/#L422"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal virtual Label lblNombreUsuario { get; set; }</code></pre>
+  </div>
+
+
+
+
+
 
 
 
@@ -684,11 +601,6 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -715,11 +627,6 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.panel">Panel</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -746,11 +653,6 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.panel">Panel</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -777,11 +679,6 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.picturebox">PictureBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -808,11 +705,6 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.picturebox">PictureBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -839,11 +731,6 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -870,11 +757,6 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -901,11 +783,6 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -932,11 +809,6 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -963,11 +835,6 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -994,11 +861,6 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -1015,7 +877,7 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
   <h3 id="Gimnasio_Presentacion_FrmUsuarios_ActualizarDgv" data-uid="Gimnasio.Presentacion.FrmUsuarios.ActualizarDgv">
   ActualizarDgv()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L50"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Actualiza el DataGridView con la lista de usuarios obtenida desde la capa de negocio mediante <a class="xref" href="Gimnasio.Negocio.NUsuarios.html#Gimnasio_Negocio_NUsuarios_Listar">Listar()</a>.</p>
@@ -1046,7 +908,7 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
   <h3 id="Gimnasio_Presentacion_FrmUsuarios_ActualizarDgv_System_Data_DataTable_" data-uid="Gimnasio.Presentacion.FrmUsuarios.ActualizarDgv(System.Data.DataTable)">
   ActualizarDgv(DataTable)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L63"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Actualiza el DataGridView con una lista específica de usuarios proporcionada como parámetro.</p>
@@ -1115,7 +977,7 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
   <h3 id="Gimnasio_Presentacion_FrmUsuarios_HabilitarIngreso" data-uid="Gimnasio.Presentacion.FrmUsuarios.HabilitarIngreso">
   HabilitarIngreso()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L90"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><ul>
@@ -1146,7 +1008,7 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
   <h3 id="Gimnasio_Presentacion_FrmUsuarios_HabilitarListado" data-uid="Gimnasio.Presentacion.FrmUsuarios.HabilitarListado">
   HabilitarListado()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Habilita la vista de listado de usuarios y oculta el panel de ingreso.</p>
@@ -1199,7 +1061,7 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
   <h3 id="Gimnasio_Presentacion_FrmUsuarios_btnActualizar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmUsuarios.btnActualizar_Click(System.Object,System.EventArgs)">
   btnActualizar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L128"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L130"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Actualizar&quot; en el formulario de usuarios.</p>
@@ -1245,7 +1107,7 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
   <h3 id="Gimnasio_Presentacion_FrmUsuarios_btnCancelar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmUsuarios.btnCancelar_Click(System.Object,System.EventArgs)">
   btnCancelar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L186"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L188"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Cancelar&quot;. Vuelve a la vista de listado de usuarios.</p>
@@ -1279,7 +1141,7 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
   <h3 id="Gimnasio_Presentacion_FrmUsuarios_btnEliminar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmUsuarios.btnEliminar_Click(System.Object,System.EventArgs)">
   btnEliminar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L237"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L239"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1312,7 +1174,7 @@ public class FrmUsuarios : Form, IOleControl.Interface, IOleObject.Interface, IO
 
   <h3 id="Gimnasio_Presentacion_FrmUsuarios_btnGuardar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmUsuarios.btnGuardar_Click(System.Object,System.EventArgs)">
   btnGuardar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L157"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L159"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Guardar&quot; en el formulario de usuarios.</p>
@@ -1354,7 +1216,7 @@ mostrando un mensaje de éxito.</li>
 
   <h3 id="Gimnasio_Presentacion_FrmUsuarios_btnInsertar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmUsuarios.btnInsertar_Click(System.Object,System.EventArgs)">
   btnInsertar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L108"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L110"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Insertar&quot; en el formulario de usuarios.</p>
@@ -1393,7 +1255,7 @@ mostrando un mensaje de éxito.</li>
 
   <h3 id="Gimnasio_Presentacion_FrmUsuarios_frmUsuarios_Load_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmUsuarios.frmUsuarios_Load(System.Object,System.EventArgs)">
   frmUsuarios_Load(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al cargar el formulario. Inicializa el listado de usuarios y configura las columnas del DataGridView.
@@ -1428,7 +1290,7 @@ Selecciona una opcion por defecto del comboBox.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmUsuarios_pbMostrarContrase_a_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmUsuarios.pbMostrarContrase&#241;a_Click(System.Object,System.EventArgs)">
   pbMostrarContrase&#241;a_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L197"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L199"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el icono para mostrar u ocultar la contraseña. Cambia la visibilidad del campo de contraseña.</p>
@@ -1462,7 +1324,7 @@ Selecciona una opcion por defecto del comboBox.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmUsuarios_pbReiniciar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmUsuarios.pbReiniciar_Click(System.Object,System.EventArgs)">
   pbReiniciar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L263"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L265"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón o icono de &quot;Reiniciar&quot; en el formulario de usuarios.</p>
@@ -1500,7 +1362,7 @@ Selecciona una opcion por defecto del comboBox.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmUsuarios_tbBuscar_TextChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmUsuarios.tbBuscar_TextChanged(System.Object,System.EventArgs)">
   tbBuscar_TextChanged(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L217"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L219"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al cambiar el texto en el campo de búsqueda de usuarios.</p>
@@ -1539,7 +1401,7 @@ filtra los usuarios utilizando <a class="xref" href="Gimnasio.Negocio.NUsuarios.
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L12" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmUsuarios.vb/#L14" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class DReclamos | Goatym ">
       
-      <meta name="description" content="Clase de acceso a datos para la gesti&#243;n de reclamos en el sistema de gimnasio. Hereda de  y utiliza la entidad . Proporciona m&#233;todos CRUD y de b&#250;squeda para la tabla reclamos y la vista vista_reclamos. La vista consolida la informaci&#243;n relevante de los reclamos, permitiendo consultar en una sola consulta datos del reclamo y el miembro que lo realizo. Realiza LEFT JOIN entre la reclamos y miembros, permitiendo obtener la informaci&#243;n de reclamo incluso si los datos de miembro no est&#225;n presentes. VIEW `vista_reclamos` As SELECT        `r`.`id_reclamos` AS `id_reclamos`,        `r`.`tipo` AS `tipo`,        `r`.`descripcion` AS `descripcion`,        `r`.`fecha_envio` AS `fecha_envio`,        `r`.`estado` AS `estado`,        `r`.`respuesta` AS `respuesta`,        `r`.`fecha_respuesta` AS `fecha_respuesta`,        `m`.`dni` AS `dni_miembro` FROM        (`reclamos` `r`        LEFT JOIN `miembros` `m` On ((`r`.`id_miembro` = `m`.`id_miembro`)))    ORDER BY `r`.`fecha_envio` DESC Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo">
+      <meta name="description" content="Clase de acceso a datos para la gesti&#243;n de reclamos en el sistema de gimnasio. Hereda de  y utiliza la entidad . Proporciona m&#233;todos CRUD y de b&#250;squeda para la tabla reclamos y la vista vista_reclamos.">
       <link rel="icon" href="../images/logo.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -99,24 +99,6 @@ Class DReclamos  <a class="header-action link-secondary" title="View source" hre
   <div class="markdown summary"><p>Clase de acceso a datos para la gestión de reclamos en el sistema de gimnasio.
 Hereda de <a class="xref" href="Gimnasio.Datos.ConexionBase.html">ConexionBase</a> y utiliza la entidad <a class="xref" href="Gimnasio.Entidades.Reclamos.html">Reclamos</a>.
 Proporciona métodos CRUD y de búsqueda para la tabla reclamos y la vista vista_reclamos.</p>
-<p>La vista consolida la información relevante de los reclamos, permitiendo consultar en una sola consulta datos del reclamo
-y el miembro que lo realizo.
-Realiza LEFT JOIN entre la reclamos y miembros, permitiendo obtener la información de reclamo incluso si los datos de miembro no están presentes.</p>
-<pre><code class="lang-csharp">VIEW `vista_reclamos` As
-SELECT
-       `r`.`id_reclamos` AS `id_reclamos`,
-       `r`.`tipo` AS `tipo`,
-       `r`.`descripcion` AS `descripcion`,
-       `r`.`fecha_envio` AS `fecha_envio`,
-       `r`.`estado` AS `estado`,
-       `r`.`respuesta` AS `respuesta`,
-       `r`.`fecha_respuesta` AS `fecha_respuesta`,
-       `m`.`dni` AS `dni_miembro`
-FROM
-       (`reclamos` `r`
-       LEFT JOIN `miembros` `m` On ((`r`.`id_miembro` = `m`.`id_miembro`)))
-   ORDER BY `r`.`fecha_envio` DESC</code></pre>
-<p>Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -140,6 +122,26 @@ FROM
 
 
 
+  <h2 id="Gimnasio_Datos_DReclamos_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>La vista consolida la información relevante de los reclamos, permitiendo consultar en una sola consulta datos del reclamo
+y el miembro que lo realizo.
+Realiza LEFT JOIN entre la reclamos y miembros, permitiendo obtener la información de reclamo incluso si los datos de miembro no están presentes.</p>
+<pre><code class="lang-csharp">VIEW `vista_reclamos` As
+SELECT
+       `r`.`id_reclamos` AS `id_reclamos`,
+       `r`.`tipo` AS `tipo`,
+       `r`.`descripcion` AS `descripcion`,
+       `r`.`fecha_envio` AS `fecha_envio`,
+       `r`.`estado` AS `estado`,
+       `r`.`respuesta` AS `respuesta`,
+       `r`.`fecha_respuesta` AS `fecha_respuesta`,
+       `m`.`dni` AS `dni_miembro`
+FROM
+       (`reclamos` `r`
+       LEFT JOIN `miembros` `m` On ((`r`.`id_miembro` = `m`.`id_miembro`)))
+   ORDER BY `r`.`fecha_envio` DESC</code></pre>
+<p>Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo</p>
+</div>
 
 
   <h2 class="section" id="methods">Methods

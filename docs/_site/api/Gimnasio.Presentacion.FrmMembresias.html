@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class FrmMembresias | Goatym ">
       
-      <meta name="description" content="Formulario para la gesti&#243;n de membres&#237;as en el sistema del gimnasio. Permite listar, buscar, agregar, actualizar, eliminar membres&#237;as y registrar pagos. Utiliza la clase  para la l&#243;gica de negocio y la clase  como entidad. Todas las operaciones de esta capa est&#225;n envueltas en bloques Try...Catch. El manejo de errores se realiza a trav&#233;s de  que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.">
+      <meta name="description" content="Formulario para la gesti&#243;n de membres&#237;as en el sistema del gimnasio. Permite listar, buscar, agregar, actualizar, eliminar membres&#237;as y registrar pagos. Utiliza la clase  para la l&#243;gica de negocio y la clase  como entidad.">
       <link rel="icon" href="../images/logo.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Gimnasio_Presentacion_FrmMembresias" data-uid="Gimnasio.Presentacion.FrmMembresias" class="text-break">
-Class FrmMembresias  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L12"><i class="bi bi-code-slash"></i></a>
+Class FrmMembresias  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L14"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,10 +97,7 @@ Class FrmMembresias  <a class="header-action link-secondary" title="View source"
   </div>
 
   <div class="markdown summary"><p>Formulario para la gestión de membresías en el sistema del gimnasio. Permite listar, buscar, agregar, actualizar, eliminar membresías y registrar pagos.
-Utiliza la clase <a class="xref" href="Gimnasio.Negocio.NMembresias.html">NMembresias</a> para la lógica de negocio y la clase <a class="xref" href="Gimnasio.Entidades.Membresias.html">Membresias</a> como entidad.
-Todas las operaciones de esta capa están envueltas en bloques Try...Catch.
-El manejo de errores se realiza a través de <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Mostrar_System_String_System_Exception_">Mostrar(string, Exception)</a>
-que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.</p>
+Utiliza la clase <a class="xref" href="Gimnasio.Negocio.NMembresias.html">NMembresias</a> para la lógica de negocio y la clase <a class="xref" href="Gimnasio.Entidades.Membresias.html">Membresias</a> como entidad.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -130,6 +127,11 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
+  <h2 id="Gimnasio_Presentacion_FrmMembresias_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Todas las operaciones de esta capa están envueltas en bloques Try...Catch.
+El manejo de errores se realiza a través de <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Mostrar_System_String_System_Exception_">Mostrar(string, Exception)</a>
+que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.</p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
@@ -140,7 +142,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias__ctor_Gimnasio_Entidades_Usuarios_" data-uid="Gimnasio.Presentacion.FrmMembresias.#ctor(Gimnasio.Entidades.Usuarios)">
   FrmMembresias(Usuarios)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Constructor que inicializa el formulario. Si es recepcionista oculta el boton de eliminar.</p>
@@ -189,11 +191,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icontainer">IContainer</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -206,7 +203,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_esNuevo" data-uid="Gimnasio.Presentacion.FrmMembresias.esNuevo">
   esNuevo
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L27"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Indica si la operación actual es de inserción (True) o actualización (False).</p>
@@ -220,11 +217,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -237,7 +229,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_nMembresias" data-uid="Gimnasio.Presentacion.FrmMembresias.nMembresias">
   nMembresias
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Instancia de la capa de negocio para membresías.</p>
@@ -251,11 +243,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Gimnasio.Negocio.NMembresias.html">NMembresias</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -268,7 +255,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_usuarioActual" data-uid="Gimnasio.Presentacion.FrmMembresias.usuarioActual">
   usuarioActual
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Usuario actualmente logueado, utilizado para registrar pagos.</p>
@@ -282,11 +269,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -304,7 +286,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_BtnPagar" data-uid="Gimnasio.Presentacion.FrmMembresias.BtnPagar">
   BtnPagar
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L680"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L650"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -318,73 +300,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gimnasio_Presentacion_FrmMembresias_Button1_" data-uid="Gimnasio.Presentacion.FrmMembresias.Button1*"></a>
-
-  <h3 id="Gimnasio_Presentacion_FrmMembresias_Button1" data-uid="Gimnasio.Presentacion.FrmMembresias.Button1">
-  Button1
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L701"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">internal virtual Button Button1 { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Gimnasio_Presentacion_FrmMembresias_Button2_" data-uid="Gimnasio.Presentacion.FrmMembresias.Button2*"></a>
-
-  <h3 id="Gimnasio_Presentacion_FrmMembresias_Button2" data-uid="Gimnasio.Presentacion.FrmMembresias.Button2">
-  Button2
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L702"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">internal virtual Button Button2 { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -397,7 +312,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_btnActualizar" data-uid="Gimnasio.Presentacion.FrmMembresias.btnActualizar">
   btnActualizar
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L678"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L648"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -411,11 +326,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -428,7 +338,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_btnCancelar" data-uid="Gimnasio.Presentacion.FrmMembresias.btnCancelar">
   btnCancelar
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L695"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L665"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -442,11 +352,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -459,7 +364,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_btnCancelarPago" data-uid="Gimnasio.Presentacion.FrmMembresias.btnCancelarPago">
   btnCancelarPago
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L699"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L669"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -473,11 +378,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -490,7 +390,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_btnEliminar" data-uid="Gimnasio.Presentacion.FrmMembresias.btnEliminar">
   btnEliminar
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L679"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L649"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -504,11 +404,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -521,7 +416,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_btnGuardar" data-uid="Gimnasio.Presentacion.FrmMembresias.btnGuardar">
   btnGuardar
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L694"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L664"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -535,11 +430,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -552,7 +442,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_btnGuardarPago" data-uid="Gimnasio.Presentacion.FrmMembresias.btnGuardarPago">
   btnGuardarPago
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L700"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L670"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -566,11 +456,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -583,7 +468,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_btnInsertar" data-uid="Gimnasio.Presentacion.FrmMembresias.btnInsertar">
   btnInsertar
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L685"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L655"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -597,11 +482,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -614,7 +494,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_cbBuscarOpcionPlan" data-uid="Gimnasio.Presentacion.FrmMembresias.cbBuscarOpcionPlan">
   cbBuscarOpcionPlan
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L696"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L666"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -628,11 +508,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.combobox">ComboBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -645,7 +520,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_cbMetodo" data-uid="Gimnasio.Presentacion.FrmMembresias.cbMetodo">
   cbMetodo
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L703"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L671"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -659,11 +534,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.combobox">ComboBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -676,7 +546,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_cbOpcionBuscar" data-uid="Gimnasio.Presentacion.FrmMembresias.cbOpcionBuscar">
   cbOpcionBuscar
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L681"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L651"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -690,11 +560,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.combobox">ComboBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -707,7 +572,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_cbOpcionBuscarMiembro" data-uid="Gimnasio.Presentacion.FrmMembresias.cbOpcionBuscarMiembro">
   cbOpcionBuscarMiembro
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L691"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L661"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -721,11 +586,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.combobox">ComboBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -738,7 +598,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_dgvListado" data-uid="Gimnasio.Presentacion.FrmMembresias.dgvListado">
   dgvListado
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L683"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L653"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -752,11 +612,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.datagridview">DataGridView</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -769,7 +624,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_dgvMiembro" data-uid="Gimnasio.Presentacion.FrmMembresias.dgvMiembro">
   dgvMiembro
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L688"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L658"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -783,11 +638,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.datagridview">DataGridView</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -800,7 +650,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_dgvPlan" data-uid="Gimnasio.Presentacion.FrmMembresias.dgvPlan">
   dgvPlan
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L692"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L662"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -814,11 +664,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.datagridview">DataGridView</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -831,7 +676,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_lblComprobante" data-uid="Gimnasio.Presentacion.FrmMembresias.lblComprobante">
   lblComprobante
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L708"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L676"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -845,11 +690,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -862,7 +702,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_lblDatosIngreso" data-uid="Gimnasio.Presentacion.FrmMembresias.lblDatosIngreso">
   lblDatosIngreso
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L687"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L657"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -876,11 +716,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -893,7 +728,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_lblMetodo" data-uid="Gimnasio.Presentacion.FrmMembresias.lblMetodo">
   lblMetodo
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L709"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L677"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -907,11 +742,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -924,7 +754,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_lblMiembro" data-uid="Gimnasio.Presentacion.FrmMembresias.lblMiembro">
   lblMiembro
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L689"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L659"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -938,11 +768,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -955,7 +780,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_lblMonto" data-uid="Gimnasio.Presentacion.FrmMembresias.lblMonto">
   lblMonto
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L710"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L678"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -969,11 +794,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -986,7 +806,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_lblNotas" data-uid="Gimnasio.Presentacion.FrmMembresias.lblNotas">
   lblNotas
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L707"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L675"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1000,11 +820,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -1017,7 +832,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_lblPagoIngreso" data-uid="Gimnasio.Presentacion.FrmMembresias.lblPagoIngreso">
   lblPagoIngreso
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L711"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L679"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1031,11 +846,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -1048,7 +858,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_lblPlan" data-uid="Gimnasio.Presentacion.FrmMembresias.lblPlan">
   lblPlan
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L697"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L667"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1062,11 +872,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -1079,7 +884,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_lblTotal" data-uid="Gimnasio.Presentacion.FrmMembresias.lblTotal">
   lblTotal
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L682"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L652"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1093,11 +898,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.label">Label</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -1110,7 +910,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_panelDatosIngreso" data-uid="Gimnasio.Presentacion.FrmMembresias.panelDatosIngreso">
   panelDatosIngreso
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L686"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L656"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1124,11 +924,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.panel">Panel</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -1141,7 +936,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_panelListado" data-uid="Gimnasio.Presentacion.FrmMembresias.panelListado">
   panelListado
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L677"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L647"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1155,11 +950,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.panel">Panel</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -1172,7 +962,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_panelPagoIngreso" data-uid="Gimnasio.Presentacion.FrmMembresias.panelPagoIngreso">
   panelPagoIngreso
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L698"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L668"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1186,11 +976,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.panel">Panel</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -1203,7 +988,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_pbReiniciar" data-uid="Gimnasio.Presentacion.FrmMembresias.pbReiniciar">
   pbReiniciar
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L712"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L680"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1217,11 +1002,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.picturebox">PictureBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -1234,7 +1014,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_pbReiniciarMiembro" data-uid="Gimnasio.Presentacion.FrmMembresias.pbReiniciarMiembro">
   pbReiniciarMiembro
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L717"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L685"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1248,11 +1028,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.picturebox">PictureBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -1265,7 +1040,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_pbReiniciarPlan" data-uid="Gimnasio.Presentacion.FrmMembresias.pbReiniciarPlan">
   pbReiniciarPlan
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L718"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L686"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1279,11 +1054,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.picturebox">PictureBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -1296,7 +1066,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_tbBuscar" data-uid="Gimnasio.Presentacion.FrmMembresias.tbBuscar">
   tbBuscar
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L684"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L654"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1310,11 +1080,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -1327,7 +1092,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_tbBuscarMiembro" data-uid="Gimnasio.Presentacion.FrmMembresias.tbBuscarMiembro">
   tbBuscarMiembro
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L690"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L660"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1341,11 +1106,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -1358,7 +1118,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_tbBuscarPlan" data-uid="Gimnasio.Presentacion.FrmMembresias.tbBuscarPlan">
   tbBuscarPlan
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L693"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L663"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1372,11 +1132,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -1389,7 +1144,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_tbComprobante" data-uid="Gimnasio.Presentacion.FrmMembresias.tbComprobante">
   tbComprobante
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L705"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L673"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1403,11 +1158,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -1420,7 +1170,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_tbIDmembresia" data-uid="Gimnasio.Presentacion.FrmMembresias.tbIDmembresia">
   tbIDmembresia
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L714"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L682"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1434,11 +1184,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -1451,7 +1196,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_tbIDmiembro" data-uid="Gimnasio.Presentacion.FrmMembresias.tbIDmiembro">
   tbIDmiembro
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L716"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L684"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1465,11 +1210,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -1482,7 +1222,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_tbIDpago" data-uid="Gimnasio.Presentacion.FrmMembresias.tbIDpago">
   tbIDpago
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L715"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L683"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1496,11 +1236,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -1513,7 +1248,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_tbIDplan" data-uid="Gimnasio.Presentacion.FrmMembresias.tbIDplan">
   tbIDplan
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L713"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L681"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1527,11 +1262,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -1544,7 +1274,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_tbMonto" data-uid="Gimnasio.Presentacion.FrmMembresias.tbMonto">
   tbMonto
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L706"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L674"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1558,11 +1288,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -1575,7 +1300,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_tbNotas" data-uid="Gimnasio.Presentacion.FrmMembresias.tbNotas">
   tbNotas
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L704"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.Designer.vb/#L672"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1589,11 +1314,6 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.textbox">TextBox</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -1610,7 +1330,7 @@ public class FrmMembresias : Form, IOleControl.Interface, IOleObject.Interface, 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_ActualizarDgv" data-uid="Gimnasio.Presentacion.FrmMembresias.ActualizarDgv">
   ActualizarDgv()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Actualiza el DataGridView con la lista de membresías completa obtenida de la capa de negocio <a class="xref" href="Gimnasio.Negocio.NMembresias.html#Gimnasio_Negocio_NMembresias_Listar">Listar()</a>.
@@ -1638,7 +1358,7 @@ También actualiza la etiqueta que muestra el total de membresias.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_ActualizarDgv_System_Data_DataTable_" data-uid="Gimnasio.Presentacion.FrmMembresias.ActualizarDgv(System.Data.DataTable)">
   ActualizarDgv(DataTable)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L93"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L95"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Actualiza el DataGridView con un DataTable específico de membresía, por ejemplo, tras una búsqueda o filtrado.
@@ -1672,7 +1392,7 @@ También actualiza la etiqueta con el total de membresias.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_BtnPagar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.BtnPagar_Click(System.Object,System.EventArgs)">
   BtnPagar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L346"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L348"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Pagar&quot;.</p>
@@ -1758,7 +1478,7 @@ También actualiza la etiqueta con el total de membresias.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_HabilitarIngreso" data-uid="Gimnasio.Presentacion.FrmMembresias.HabilitarIngreso">
   HabilitarIngreso()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L123"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L125"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><ul>
@@ -1792,7 +1512,7 @@ También actualiza la etiqueta con el total de membresias.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_HabilitarIngresoConMiembro_System_String_" data-uid="Gimnasio.Presentacion.FrmMembresias.HabilitarIngresoConMiembro(System.String)">
   HabilitarIngresoConMiembro(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L172"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L174"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><ul>
@@ -1832,7 +1552,7 @@ También actualiza la etiqueta con el total de membresias.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_HabilitarIngresoPago" data-uid="Gimnasio.Presentacion.FrmMembresias.HabilitarIngresoPago">
   HabilitarIngresoPago()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L319"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L321"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><ul>
@@ -1864,7 +1584,7 @@ También actualiza la etiqueta con el total de membresias.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_HabilitarListado" data-uid="Gimnasio.Presentacion.FrmMembresias.HabilitarListado">
   HabilitarListado()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L105"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L107"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Habilita la vista de listado de membresías y oculta los paneles de ingreso y pago.</p>
@@ -1917,7 +1637,7 @@ También actualiza la etiqueta con el total de membresias.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_btnActualizar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.btnActualizar_Click(System.Object,System.EventArgs)">
   btnActualizar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L216"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L218"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Actualizar&quot;.</p>
@@ -1972,7 +1692,7 @@ También actualiza la etiqueta con el total de membresias.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_btnCancelarPago_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.btnCancelarPago_Click(System.Object,System.EventArgs)">
   btnCancelarPago_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L402"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L404"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Cancelar Pago&quot;. Vuelve a la vista de listado de membresías.</p>
@@ -2006,7 +1726,7 @@ También actualiza la etiqueta con el total de membresias.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_btnCancelar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.btnCancelar_Click(System.Object,System.EventArgs)">
   btnCancelar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L304"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L306"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Cancelar&quot;. Vuelve a la vista de listado de membresías.</p>
@@ -2040,7 +1760,7 @@ También actualiza la etiqueta con el total de membresias.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_btnEliminar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.btnEliminar_Click(System.Object,System.EventArgs)">
   btnEliminar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L423"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L425"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Eliminar&quot;.</p>
@@ -2096,7 +1816,7 @@ También actualiza la etiqueta con el total de membresias.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_btnGuardarPago_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.btnGuardarPago_Click(System.Object,System.EventArgs)">
   btnGuardarPago_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L378"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L380"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Guardar Pago&quot;.</p>
@@ -2137,7 +1857,7 @@ También actualiza la etiqueta con el total de membresias.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_btnGuardar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.btnGuardar_Click(System.Object,System.EventArgs)">
   btnGuardar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L259"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L261"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Guardar&quot;.</p>
@@ -2194,7 +1914,7 @@ precarga el monto y método de pago, y detiene la ejecución para esperar el reg
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_btnInsertar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.btnInsertar_Click(System.Object,System.EventArgs)">
   btnInsertar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L192"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L194"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Insertar&quot;.</p>
@@ -2233,7 +1953,7 @@ precarga el monto y método de pago, y detiene la ejecución para esperar el reg
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_cb_SelectedIndexChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.cb_SelectedIndexChanged(System.Object,System.EventArgs)">
   cb_SelectedIndexChanged(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L474"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L476"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al cambiar la opción seleccionada en el ComboBox de búsqueda de membresías.</p>
@@ -2287,7 +2007,7 @@ precarga el monto y método de pago, y detiene la ejecución para esperar el reg
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_frmMembresias_Load_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.frmMembresias_Load(System.Object,System.EventArgs)">
   frmMembresias_Load(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al cargar el formulario. Inicializa el listado de membresías con <a class="xref" href="Gimnasio.Negocio.NMembresias.html#Gimnasio_Negocio_NMembresias_Listar">Listar()</a>,
@@ -2322,7 +2042,7 @@ configura las columnas del DataGridView y establece una opción de busqueda del 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_pbReiniciarMiembro_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.pbReiniciarMiembro_Click(System.Object,System.EventArgs)">
   pbReiniciarMiembro_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L558"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L560"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón de reinicio pbReiniciarMiembro.
@@ -2358,7 +2078,7 @@ utilizando el método <a class="xref" href="Gimnasio.Negocio.NMiembros.html#Gimn
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_pbReiniciarPlan_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.pbReiniciarPlan_Click(System.Object,System.EventArgs)">
   pbReiniciarPlan_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L573"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L575"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón de reinicio pbReiniciarPlan.
@@ -2394,7 +2114,7 @@ utilizando el método <a class="xref" href="Gimnasio.Negocio.NPlanes.html#Gimnas
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_pbReiniciar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.pbReiniciar_Click(System.Object,System.EventArgs)">
   pbReiniciar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L538"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L540"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón de reinicio en la gestión de membresías.
@@ -2433,7 +2153,7 @@ Según la opción seleccionada en el ComboBox cbOpcionBuscar:</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_tbBuscarMembresias_TextChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.tbBuscarMembresias_TextChanged(System.Object,System.EventArgs)">
   tbBuscarMembresias_TextChanged(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L450"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L452"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta cada vez que cambia el texto en el campo de búsqueda de membresías.</p>
@@ -2476,7 +2196,7 @@ Según la opción seleccionada en el ComboBox cbOpcionBuscar:</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_tbBuscarMiembro_TextChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.tbBuscarMiembro_TextChanged(System.Object,System.EventArgs)">
   tbBuscarMiembro_TextChanged(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L500"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L502"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta cada vez que cambia el texto en el campo de búsqueda de miembros tbBuscarMiembro en el panel de ingreso de membresías.
@@ -2516,7 +2236,7 @@ El resultado de la búsqueda se muestra en el DataGridView dgvMiembro.</li>
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_tbBuscarPlan_TextChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.tbBuscarPlan_TextChanged(System.Object,System.EventArgs)">
   tbBuscarPlan_TextChanged(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L520"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L522"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta cada vez que cambia el texto en el campo de búsqueda de planes.</p>
@@ -2558,7 +2278,7 @@ El resultado de la búsqueda se muestra en el DataGridView dgvMiembro.</li>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L12" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L14" class="edit-link">Edit this page</a>
         </div>
 
 

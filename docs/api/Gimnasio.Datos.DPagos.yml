@@ -28,7 +28,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: DPagos
     path: ../Gimnasio.Datos/DPagos.vb
-    startLine: 40
+    startLine: 41
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -38,8 +38,7 @@ items:
     Hereda de <xref href="Gimnasio.Datos.ConexionBase" data-throw-if-not-resolved="false"></xref> y utiliza la entidad <xref href="Gimnasio.Entidades.Pagos" data-throw-if-not-resolved="false"></xref>.
 
     Proporciona métodos CRUD y de búsqueda para la tabla pagos y la vista vista_pagos.
-
-
+  remarks: >-
     La vista consolida la información relevante de los registros de pagos,
 
     Permite consultar en una sola consulta los datos del pago, el miembro, el plan, el usuario que registró el pago.
@@ -109,7 +108,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Listar
     path: ../Gimnasio.Datos/DPagos.vb
-    startLine: 47
+    startLine: 48
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -140,7 +139,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Insertar
     path: ../Gimnasio.Datos/DPagos.vb
-    startLine: 62
+    startLine: 63
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -175,7 +174,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Actualizar
     path: ../Gimnasio.Datos/DPagos.vb
-    startLine: 85
+    startLine: 86
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -210,7 +209,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Eliminar
     path: ../Gimnasio.Datos/DPagos.vb
-    startLine: 106
+    startLine: 107
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -245,7 +244,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorFecha
     path: ../Gimnasio.Datos/DPagos.vb
-    startLine: 126
+    startLine: 127
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -289,7 +288,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorDni
     path: ../Gimnasio.Datos/DPagos.vb
-    startLine: 146
+    startLine: 147
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -330,7 +329,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorNombrePlan
     path: ../Gimnasio.Datos/DPagos.vb
-    startLine: 165
+    startLine: 166
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -371,7 +370,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorMetodoPago
     path: ../Gimnasio.Datos/DPagos.vb
-    startLine: 183
+    startLine: 184
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -409,7 +408,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorMontos
     path: ../Gimnasio.Datos/DPagos.vb
-    startLine: 203
+    startLine: 204
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos

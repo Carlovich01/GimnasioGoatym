@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title> | Goatym </title>
+      <title>Base de datos | Goatym </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content=" | Goatym ">
+      <meta name="title" content="Base de datos | Goatym ">
       
       
       <link rel="icon" href="images/logo.ico">
@@ -85,7 +85,201 @@
         </div>
 
         <article data-uid="">
+<h1 id="base-de-datos">Base de datos</h1>
 
+<ul>
+<li>Para la base de Datos se utilizo MySql Server y MySql Workbench. Ambos en la version 8.0.42.</li>
+<li>Descarga la base de datos aquí
+👉 <a href="goatym.sql">goatym.sql</a></li>
+</ul>
+<h2 id="diagrama-entidad-relación">Diagrama Entidad Relación</h2>
+<p><img src="images/GoatymDer.png" alt="DER"></p>
+<h2 id="relaciones">Relaciones</h2>
+<ul>
+<li>Cada <strong>plan</strong> puede ser la base para 0 o muchas <strong>membresías</strong>. Cada <strong>membresía</strong> debe estar asociada a un único <strong>plan</strong>.</li>
+<li>Cada <strong>miembro</strong> puede tener 0 o muchas <strong>membresías</strong>. Cada <strong>membresía</strong> pertenece a un <strong>miembro</strong>.</li>
+<li>Cada <strong>membresía</strong> puede tener 0 o muchos <strong>pagos</strong> asociados (renovaciones). Cada <strong>pago</strong> puede estar vinculado a una <strong>membresía</strong> o a ninguna (si la membresía fue eliminada).</li>
+<li>Cada <strong>pago</strong> es registrado por un <strong>usuario del sistema</strong> o no (en caso de ser borrado). Cada <strong>usuario</strong> del sistema puede registrar 0 o muchos <strong>pagos</strong>.</li>
+<li>Cada <strong>usuario</strong> del sistema le corresponde un <strong>rol</strong> (administrador o recepcionista). Cada <strong>rol</strong> puede tener asociado 0 o muchos <strong>usuarios</strong> del sistema.</li>
+<li>Cada <strong>miembro</strong> puede generar 0 o muchos registros de <strong>asistencias</strong>. Cada intento de <strong>asistencia</strong> puede estar vinculado a un <strong>miembro</strong> o ninguno (en caso de que se ingrese incorrectamente un DNI)</li>
+<li>Cada <strong>membresía</strong> puede validar 0 o muchos intentos de <strong>asistencia</strong>. Cada intento de <strong>asistencia</strong> puede estar vinculado a una <strong>membresía</strong> que permitió el acceso o no (en caso de que este vencida o no exista).</li>
+<li>Cada <strong>miembro</strong> puede realizar 0 o muchos <strong>reclamos</strong>. Cada <strong>reclamo</strong> puede estar asociado a un <strong>miembro</strong> o ninguno (en caso de reclamos anónimos).</li>
+</ul>
+<h2 id="tablas-y-sus-características">Tablas y sus Características:</h2>
+<ol>
+<li><strong>Tabla <code>planes_membresia</code></strong>
+<ul>
+<li><strong>Descripción:</strong> Define los tipos de suscripciones o planes que ofrece el gimnasio.</li>
+<li><img src="images/TablaPlan.png" alt="Tabla Planes_Membresia"></li>
+<li><strong>Campos Clave:</strong>
+<ul>
+<li><code>id_plan</code> (INT UNSIGNED, NOT NULL, AUTO_INCREMENT): Llave primaria. Identificador único para cada plan.</li>
+<li><code>nombre_plan</code> (VARCHAR(100), NOT NULL): Llave única. Nombre descriptivo del plan.</li>
+</ul>
+</li>
+<li><strong>Restricciones de Llave Foránea:</strong> No posee llaves foráneas directas, pero es referenciada por la tabla <code>membresias_miembro</code>.</li>
+</ul>
+</li>
+<li><strong>Tabla <code>miembros</code></strong>
+<ul>
+<li><strong>Descripción:</strong> Contiene la información de los clientes del gimnasio.</li>
+<li><img src="images/TablaMiembro.png" alt="Tabla Miembros"></li>
+<li><strong>Campos Clave:</strong>
+<ul>
+<li><code>id_miembro</code> (INT UNSIGNED, NOT NULL, AUTO_INCREMENT): Llave primaria. Identificador único para cada miembro.</li>
+<li><code>dni</code> (VARCHAR(15), NOT NULL): Llave única. Documento Nacional de Identidad del miembro.</li>
+</ul>
+</li>
+<li><strong>Restricciones de Llave Foránea:</strong> No posee llaves foráneas directas, pero es referenciada por las tablas <code>asistencia</code>, <code>membresias_miembro</code> y <code>reclamos</code>.</li>
+</ul>
+</li>
+<li><strong>Tabla <code>membresias_miembro</code></strong>
+<ul>
+<li><strong>Descripción:</strong> Almacena las instancias de suscripción de los miembros a los diferentes planes ofrecidos.</li>
+<li><img src="images/TablaMembresia.png" alt="Tabla Membresias"></li>
+<li><strong>Campos Clave:</strong>
+<ul>
+<li><code>id_membresia</code> (INT UNSIGNED, NOT NULL, AUTO_INCREMENT): Llave primaria. Identificador único para cada membresía de un miembro.</li>
+<li><code>id_miembro</code> (INT UNSIGNED, NOT NULL): Llave foránea. Referencia al miembro al que pertenece la membresía.</li>
+<li><code>id_plan</code> (INT UNSIGNED, NOT NULL): Llave foránea. Referencia al plan de membresía contratado.</li>
+</ul>
+</li>
+<li><strong>Restricciones de Llave Foránea:</strong>
+<ul>
+<li><code>fk_membresia_miembro</code>: <code>id_miembro</code> referencia a <code>id_miembro</code> en la tabla <code>miembros</code>.
+<ul>
+<li>ON DELETE RESTRICT: Impide la eliminación de un miembro si tiene membresías asociadas.</li>
+<li>ON UPDATE CASCADE: Si se actualiza el <code>id_miembro</code> en la tabla <code>miembros</code>, se actualizará correspondientemente en esta tabla.</li>
+</ul>
+</li>
+<li><code>fk_membresia_plan</code>: <code>id_plan</code> referencia a <code>id_plan</code> en la tabla <code>planes_membresia</code>.
+<ul>
+<li>ON DELETE RESTRICT: Impide la eliminación de un plan si hay membresías de miembros asociadas a él.</li>
+<li>ON UPDATE CASCADE: Si se actualiza el <code>id_plan</code> en la tabla <code>planes_membresia</code>, se actualizará correspondientemente en esta tabla.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Tabla <code>pagos</code></strong>
+<ul>
+<li><strong>Descripción:</strong> Registra las transacciones económicas realizadas por los miembros.</li>
+<li><img src="images/TablaPago.png" alt="Tabla Pago"></li>
+<li><strong>Campos Clave:</strong>
+<ul>
+<li><code>id_pago</code> (INT UNSIGNED, NOT NULL, AUTO_INCREMENT): Llave primaria. Identificador único para cada pago.</li>
+<li><code>id_membresia</code> (INT UNSIGNED): Llave foránea. Membresía específica que se está pagando o renovando.</li>
+<li><code>id_usuario_registro</code> (INT UNSIGNED): Llave foránea opcional. Usuario del sistema que registró el pago.</li>
+</ul>
+</li>
+<li><strong>Restricciones de Llave Foránea:</strong>
+<ul>
+<li><code>fk_pago_membresia</code>: <code>id_membresia</code> referencia a <code>id_membresia</code> en la tabla <code>membresias_miembro</code>.
+<ul>
+<li>ON DELETE SET NULL: Si se elimina la membresía referenciada, el valor de <code>id_membresia</code> en esta tabla se establecerá en NULL.</li>
+<li>ON UPDATE CASCADE: Si se actualiza el <code>id_membresia</code> en la tabla <code>membresias_miembro</code>, se actualizará correspondientemente en esta tabla.</li>
+</ul>
+</li>
+<li><code>fk_pago_usuario</code>: <code>id_usuario_registro</code> referencia a <code>id_usuario</code> en la tabla <code>usuarios_sistema</code>.
+<ul>
+<li>ON DELETE SET NULL: Si se elimina el usuario del sistema referenciado, el valor de <code>id_usuario_registro</code> en esta tabla se establecerá en NULL.</li>
+<li>ON UPDATE CASCADE: Si se actualiza el <code>id_usuario</code> en la tabla <code>usuarios_sistema</code>, se actualizará correspondientemente en esta tabla.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Tabla <code>usuarios_sistema</code></strong>
+<ul>
+<li><strong>Descripción:</strong> Contiene la información de los usuarios (personal del gimnasio) que operan el sistema.</li>
+<li><img src="images/TablaUsuariosSistema.png" alt="Tabla Usuarios"></li>
+<li><strong>Campos Clave:</strong>
+<ul>
+<li><code>id_usuario</code> (INT UNSIGNED, NOT NULL, AUTO_INCREMENT): Llave primaria. Identificador único para cada usuario del sistema.</li>
+<li><code>username</code> (VARCHAR(50), NOT NULL): Llave única. Nombre de usuario para el login.</li>
+<li><code>id_rol</code> (INT UNSIGNED, NOT NULL): Llave foránea. Rol del usuario en el sistema.</li>
+</ul>
+</li>
+<li><strong>Restricciones de Llave Foránea:</strong>
+<ul>
+<li><code>fk_usuario_rol</code>: <code>id_rol</code> referencia a <code>id_rol</code> en la tabla <code>roles</code>.
+<ul>
+<li>ON DELETE RESTRICT: Impide la eliminación de un rol si hay usuarios del sistema asociados a él.</li>
+<li>ON UPDATE CASCADE: Si se actualiza el <code>id_rol</code> en la tabla <code>roles</code>, se actualizará correspondientemente en esta tabla.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Tabla <code>roles</code></strong>
+<ul>
+<li><strong>Descripción:</strong> Define los roles de los usuarios que pueden operar el sistema (ej: Administrador, Recepcionista).</li>
+<li><img src="images/TablaRol.png" alt="Tabla Roles"></li>
+<li><strong>Campos Clave:</strong>
+<ul>
+<li><code>id_rol</code> (INT UNSIGNED, NOT NULL, AUTO_INCREMENT): Llave primaria. Identificador único para cada rol.</li>
+<li><code>nombre_rol</code> (ENUM('Administrador','Recepcionista'), NOT NULL): Llave única. Nombre del rol.</li>
+</ul>
+</li>
+<li><strong>Restricciones de Llave Foránea:</strong> No posee llaves foráneas directas, pero es referenciada por la tabla <code>usuarios_sistema</code>.</li>
+</ul>
+</li>
+<li><strong>Tabla <code>asistencia</code></strong>
+<ul>
+<li><strong>Descripción:</strong> Registra los intentos de ingreso (check-ins) de los miembros al gimnasio.</li>
+<li><img src="images/TablaAsistencia.png" alt="Tabla Asistencia"></li>
+<li><strong>Campos Clave:</strong>
+<ul>
+<li><code>id_asistencia</code> (BIGINT UNSIGNED, NOT NULL, AUTO_INCREMENT): Llave primaria. Identificador único para cada registro de asistencia.</li>
+<li><code>id_miembro</code> (INT UNSIGNED): Llave foránea. Referencia al miembro que realizó el check-in.</li>
+<li><code>id_membresia_valida</code> (INT UNSIGNED): Llave foránea opcional. ID de la membresía que permitió el acceso exitoso.</li>
+</ul>
+</li>
+<li><strong>Restricciones de Llave Foránea:</strong>
+<ul>
+<li><code>fk_asistencia_membresia_valida</code>: <code>id_membresia_valida</code> referencia a <code>id_membresia</code> en la tabla <code>membresias_miembro</code>.
+<ul>
+<li>ON DELETE SET NULL: Si se elimina la membresía referenciada, el valor de <code>id_membresia_valida</code> en esta tabla se establecerá en NULL.</li>
+<li>ON UPDATE CASCADE: Si se actualiza el <code>id_membresia</code> en la tabla <code>membresias_miembro</code>, se actualizará correspondientemente en esta tabla.</li>
+</ul>
+</li>
+<li><code>fk_asistencia_miembro</code>: <code>id_miembro</code> referencia a <code>id_miembro</code> en la tabla <code>miembros</code>.
+<ul>
+<li>ON DELETE CASCADE: Si se elimina el miembro referenciado, se eliminarán también sus registros de asistencia.</li>
+<li>ON UPDATE CASCADE: Si se actualiza el <code>id_miembro</code> en la tabla <code>miembros</code>, se actualizará correspondientemente en esta tabla.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Tabla <code>reclamos</code></strong>
+<ul>
+<li><strong>Descripción:</strong> Almacena las sugerencias y reclamos realizados por los miembros.</li>
+<li><img src="images/TablaReclamos.png" alt="Tabla Reclamos"></li>
+<li><strong>Campos Clave:</strong>
+<ul>
+<li><code>id_reclamos</code> (INT, NOT NULL, AUTO_INCREMENT): Llave primaria. Identificador único para cada reclamo o sugerencia.</li>
+<li><code>id_miembro</code> (INT UNSIGNED): Llave foránea opcional. Miembro que realizó el reclamo o sugerencia.</li>
+</ul>
+</li>
+<li><strong>Restricciones de Llave Foránea:</strong>
+<ul>
+<li><code>fk_reclamos_miembros1</code>: <code>id_miembro</code> referencia a <code>id_miembro</code> en la tabla <code>miembros</code>.
+<ul>
+<li>ON DELETE SET NULL: Si se elimina el miembro referenciado, el valor de <code>id_miembro</code> en esta tabla se establecerá en NULL.</li>
+<li>ON UPDATE CASCADE: Si se actualiza el <code>id_miembro</code> en la tabla <code>miembros</code>, se actualizará correspondientemente en esta tabla.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>Adicionalmente, la base de datos cuenta con varias vistas (<code>vista_asistencia</code>, <code>vista_membresias</code>, <code>vista_pagos</code>, <code>vista_reclamos</code>, <code>vista_usuarios</code>) que simplifican consultas comunes al predefinir uniones entre tablas y seleccionar campos específicos.</p>
 
 </article>
 

@@ -31,7 +31,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: NMembresias
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 13
+    startLine: 15
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -39,7 +39,7 @@ items:
     Lógica de negocio para la gestión de membresías en el sistema de gimnasio.
 
     Interactúa con la capa de datos <xref href="Gimnasio.Negocio.NMembresias.dMembresias" data-throw-if-not-resolved="false"></xref> y la entidad <xref href="Gimnasio.Entidades.Membresias" data-throw-if-not-resolved="false"></xref>.
-
+  remarks: >-
     Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.  
 
     Si ocurre una excepción, se registra el error utilizando <xref href="Gimnasio.Errores.ManejarErrores.Log(System.String%2cSystem.Exception)" data-throw-if-not-resolved="false"></xref> en un log.txt
@@ -78,7 +78,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: dMembresias
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 17
+    startLine: 19
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -107,7 +107,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ActualizaAEstadoInactiva
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 22
+    startLine: 24
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -135,7 +135,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Listar
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 36
+    startLine: 38
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -169,7 +169,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Insertar
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 52
+    startLine: 54
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -206,7 +206,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Actualizar
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 71
+    startLine: 73
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -241,7 +241,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Eliminar
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 87
+    startLine: 89
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -276,7 +276,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ObtenerIdMembresia
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 101
+    startLine: 103
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -311,7 +311,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ObtenerPorDni
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 115
+    startLine: 117
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -349,7 +349,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorDni
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 129
+    startLine: 131
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -387,7 +387,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorNombrePlan
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 144
+    startLine: 146
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -429,7 +429,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorEstado
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 158
+    startLine: 160
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -467,7 +467,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ObtenerMembresiaMasReciente
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 172
+    startLine: 174
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio

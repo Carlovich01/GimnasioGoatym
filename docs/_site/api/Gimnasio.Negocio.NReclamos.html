@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class NReclamos | Goatym ">
       
-      <meta name="description" content="L&#243;gica de negocio para la gesti&#243;n de reclamos en el sistema de gimnasio. Interact&#250;a con la capa de datos  y la entidad . Todas las operaciones de la capa de negocio est&#225;n envueltas en bloques Try...Catch. Si ocurre una excepci&#243;n, se registra el error utilizando  en un log.txt Luego, la excepci&#243;n se propaga nuevamente mediante Throw New Exception(ex.Message) para que pueda ser gestionada en la interfaz de usuario.">
+      <meta name="description" content="L&#243;gica de negocio para la gesti&#243;n de reclamos en el sistema de gimnasio. Interact&#250;a con la capa de datos  y la entidad .">
       <link rel="icon" href="../images/logo.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Gimnasio_Negocio_NReclamos" data-uid="Gimnasio.Negocio.NReclamos" class="text-break">
-Class NReclamos  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NReclamos.vb/#L13"><i class="bi bi-code-slash"></i></a>
+Class NReclamos  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NReclamos.vb/#L15"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,10 +97,7 @@ Class NReclamos  <a class="header-action link-secondary" title="View source" hre
   </div>
 
   <div class="markdown summary"><p>Lógica de negocio para la gestión de reclamos en el sistema de gimnasio.
-Interactúa con la capa de datos <a class="xref" href="Gimnasio.Negocio.NReclamos.html#Gimnasio_Negocio_NReclamos_dReclamos">dReclamos</a> y la entidad <a class="xref" href="Gimnasio.Entidades.Reclamos.html">Reclamos</a>.
-Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.<br>
-Si ocurre una excepción, se registra el error utilizando <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_">Log(string, Exception)</a> en un log.txt
-Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message) para que pueda ser gestionada en la interfaz de usuario.</p>
+Interactúa con la capa de datos <a class="xref" href="Gimnasio.Negocio.NReclamos.html#Gimnasio_Negocio_NReclamos_dReclamos">dReclamos</a> y la entidad <a class="xref" href="Gimnasio.Entidades.Reclamos.html">Reclamos</a>.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -123,6 +120,11 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
 
 
+  <h2 id="Gimnasio_Negocio_NReclamos_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.<br>
+Si ocurre una excepción, se registra el error utilizando <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_">Log(string, Exception)</a> en un log.txt
+Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message) para que pueda ser gestionada en la interfaz de usuario.</p>
+</div>
 
 
   <h2 class="section" id="fields">Fields
@@ -132,7 +134,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NReclamos_dReclamos" data-uid="Gimnasio.Negocio.NReclamos.dReclamos">
   dReclamos
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NReclamos.vb/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NReclamos.vb/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Instancia de la capa de datos para reclamos.</p>
@@ -146,11 +148,6 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
 
 
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Gimnasio.Datos.DReclamos.html">DReclamos</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -168,7 +165,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NReclamos_Actualizar_Gimnasio_Entidades_Reclamos_" data-uid="Gimnasio.Negocio.NReclamos.Actualizar(Gimnasio.Entidades.Reclamos)">
   Actualizar(Reclamos)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NReclamos.vb/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NReclamos.vb/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Valida los campos y actualiza los datos de un reclamo existente con <a class="xref" href="Gimnasio.Datos.DReclamos.html#Gimnasio_Datos_DReclamos_Actualizar_Gimnasio_Entidades_Reclamos_">Actualizar(Reclamos)</a></p>
@@ -201,7 +198,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NReclamos_ActualizarElEstadoAPendiente_System_UInt32_" data-uid="Gimnasio.Negocio.NReclamos.ActualizarElEstadoAPendiente(System.UInt32)">
   ActualizarElEstadoAPendiente(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NReclamos.vb/#L100"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NReclamos.vb/#L102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Cambia el estado de un reclamo a &quot;pendiente&quot; utilizando <a class="xref" href="Gimnasio.Datos.DReclamos.html#Gimnasio_Datos_DReclamos_ActualizarElEstadoAPendiente_System_UInt32_">ActualizarElEstadoAPendiente(uint)</a>.</p>
@@ -234,7 +231,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NReclamos_ActualizarElEstadoAResuelto_System_UInt32_" data-uid="Gimnasio.Negocio.NReclamos.ActualizarElEstadoAResuelto(System.UInt32)">
   ActualizarElEstadoAResuelto(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NReclamos.vb/#L87"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NReclamos.vb/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Cambia el estado de un reclamo a &quot;resuelto&quot; utilizando <a class="xref" href="Gimnasio.Datos.DReclamos.html#Gimnasio_Datos_DReclamos_ActualizarElEstadoAResuelto_System_UInt32_">ActualizarElEstadoAResuelto(uint)</a>.</p>
@@ -267,7 +264,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NReclamos_ActualizarRespuesta_Gimnasio_Entidades_Reclamos_" data-uid="Gimnasio.Negocio.NReclamos.ActualizarRespuesta(Gimnasio.Entidades.Reclamos)">
   ActualizarRespuesta(Reclamos)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NReclamos.vb/#L127"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NReclamos.vb/#L129"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Actualiza la respuesta de un reclamo utilizando <a class="xref" href="Gimnasio.Datos.DReclamos.html#Gimnasio_Datos_DReclamos_ActualizarRespuesta_Gimnasio_Entidades_Reclamos_">ActualizarRespuesta(Reclamos)</a>.</p>
@@ -300,7 +297,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NReclamos_Eliminar_System_UInt32_" data-uid="Gimnasio.Negocio.NReclamos.Eliminar(System.UInt32)">
   Eliminar(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NReclamos.vb/#L74"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NReclamos.vb/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Elimina un reclamo del sistema según su id con <a class="xref" href="Gimnasio.Datos.DReclamos.html#Gimnasio_Datos_DReclamos_Eliminar_System_UInt32_">Eliminar(uint)</a></p>
@@ -333,7 +330,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NReclamos_Insertar_Gimnasio_Entidades_Reclamos_" data-uid="Gimnasio.Negocio.NReclamos.Insertar(Gimnasio.Entidades.Reclamos)">
   Insertar(Reclamos)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NReclamos.vb/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NReclamos.vb/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Valida los campos e inserta un nuevo reclamo en el sistema con <a class="xref" href="Gimnasio.Datos.DReclamos.html#Gimnasio_Datos_DReclamos_Insertar_Gimnasio_Entidades_Reclamos_">Insertar(Reclamos)</a>.</p>
@@ -366,7 +363,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NReclamos_Listar" data-uid="Gimnasio.Negocio.NReclamos.Listar">
   Listar()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NReclamos.vb/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NReclamos.vb/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Obtiene la lista de todos los reclamos registrados con <a class="xref" href="Gimnasio.Datos.DReclamos.html#Gimnasio_Datos_DReclamos_Listar">Listar()</a>.</p>
@@ -399,7 +396,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NReclamos_ListarPorEstado_System_String_" data-uid="Gimnasio.Negocio.NReclamos.ListarPorEstado(System.String)">
   ListarPorEstado(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NReclamos.vb/#L114"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NReclamos.vb/#L116"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Busca reclamos por estado utilizando la capa de datos <a class="xref" href="Gimnasio.Datos.DReclamos.html#Gimnasio_Datos_DReclamos_ListarPorEstado_System_String_">ListarPorEstado(string)</a>.</p>
@@ -438,7 +435,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NReclamos_ValidarCampos_Gimnasio_Entidades_Reclamos_" data-uid="Gimnasio.Negocio.NReclamos.ValidarCampos(Gimnasio.Entidades.Reclamos)">
   ValidarCampos(Reclamos)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NReclamos.vb/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NReclamos.vb/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Valida los campos de la entidad <a class="xref" href="Gimnasio.Entidades.Reclamos.html">Reclamos</a> antes de realizar operaciones de inserción o actualización.</p>
@@ -471,7 +468,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NReclamos.vb/#L13" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NReclamos.vb/#L15" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -22,12 +22,12 @@ Partial Class FrmMembresias
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle7 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As DataGridViewCellStyle = New DataGridViewCellStyle()
         panelListado = New Panel()
         pbReiniciar = New PictureBox()
         btnActualizar = New Button()
@@ -59,8 +59,6 @@ Partial Class FrmMembresias
         lblPagoIngreso = New Label()
         btnCancelarPago = New Button()
         btnGuardarPago = New Button()
-        Button1 = New Button()
-        Button2 = New Button()
         cbMetodo = New ComboBox()
         tbNotas = New TextBox()
         tbComprobante = New TextBox()
@@ -113,7 +111,7 @@ Partial Class FrmMembresias
         ' 
         btnActualizar.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         btnActualizar.Cursor = Cursors.Hand
-        btnActualizar.Font = New Font("Segoe UI", 12F)
+        btnActualizar.Font = New Font("Segoe UI", 12.0F)
         btnActualizar.Location = New Point(242, 685)
         btnActualizar.Name = "btnActualizar"
         btnActualizar.Size = New Size(87, 31)
@@ -125,7 +123,7 @@ Partial Class FrmMembresias
         ' 
         btnEliminar.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         btnEliminar.Cursor = Cursors.Hand
-        btnEliminar.Font = New Font("Segoe UI", 12F)
+        btnEliminar.Font = New Font("Segoe UI", 12.0F)
         btnEliminar.Location = New Point(352, 685)
         btnEliminar.Name = "btnEliminar"
         btnEliminar.Size = New Size(90, 30)
@@ -137,7 +135,7 @@ Partial Class FrmMembresias
         ' 
         BtnPagar.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         BtnPagar.Cursor = Cursors.Hand
-        BtnPagar.Font = New Font("Segoe UI", 12F)
+        BtnPagar.Font = New Font("Segoe UI", 12.0F)
         BtnPagar.Location = New Point(125, 684)
         BtnPagar.Name = "BtnPagar"
         BtnPagar.Size = New Size(90, 31)
@@ -149,7 +147,7 @@ Partial Class FrmMembresias
         ' 
         cbOpcionBuscar.Cursor = Cursors.Hand
         cbOpcionBuscar.DropDownStyle = ComboBoxStyle.DropDownList
-        cbOpcionBuscar.Font = New Font("Segoe UI", 12F)
+        cbOpcionBuscar.Font = New Font("Segoe UI", 12.0F)
         cbOpcionBuscar.FormattingEnabled = True
         cbOpcionBuscar.Items.AddRange(New Object() {"Buscar por DNI", "Buscar por Plan ", "Membresias Activas", "Membresias Inactivas"})
         cbOpcionBuscar.Location = New Point(720, 12)
@@ -162,7 +160,7 @@ Partial Class FrmMembresias
         lblTotal.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         lblTotal.AutoSize = True
         lblTotal.BackColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
-        lblTotal.Font = New Font("Segoe UI", 12F)
+        lblTotal.Font = New Font("Segoe UI", 12.0F)
         lblTotal.ForeColor = Color.White
         lblTotal.Location = New Point(811, 686)
         lblTotal.Name = "lblTotal"
@@ -178,35 +176,35 @@ Partial Class FrmMembresias
         dgvListado.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         dgvListado.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvListado.BackgroundColor = Color.FromArgb(CByte(85), CByte(96), CByte(105))
-        DataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = SystemColors.Window
-        DataGridViewCellStyle7.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle7.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = DataGridViewTriState.True
-        dgvListado.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Window
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9.0F)
+        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        dgvListado.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         dgvListado.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvListado.GridColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
         dgvListado.Location = New Point(11, 56)
         dgvListado.MultiSelect = False
         dgvListado.Name = "dgvListado"
         dgvListado.ReadOnly = True
-        DataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = SystemColors.Window
-        DataGridViewCellStyle8.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle8.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = DataGridViewTriState.True
-        dgvListado.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = SystemColors.Window
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9.0F)
+        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        dgvListado.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         dgvListado.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         dgvListado.Size = New Size(986, 618)
         dgvListado.TabIndex = 35
         ' 
         ' tbBuscar
         ' 
-        tbBuscar.Font = New Font("Segoe UI", 12F)
+        tbBuscar.Font = New Font("Segoe UI", 12.0F)
         tbBuscar.Location = New Point(11, 12)
         tbBuscar.Name = "tbBuscar"
         tbBuscar.Size = New Size(683, 29)
@@ -216,7 +214,7 @@ Partial Class FrmMembresias
         ' 
         btnInsertar.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         btnInsertar.Cursor = Cursors.Hand
-        btnInsertar.Font = New Font("Segoe UI", 12F)
+        btnInsertar.Font = New Font("Segoe UI", 12.0F)
         btnInsertar.Location = New Point(11, 685)
         btnInsertar.Name = "btnInsertar"
         btnInsertar.Size = New Size(92, 28)
@@ -292,7 +290,7 @@ Partial Class FrmMembresias
         ' lblPlan
         ' 
         lblPlan.AutoSize = True
-        lblPlan.Font = New Font("Segoe UI", 12F)
+        lblPlan.Font = New Font("Segoe UI", 12.0F)
         lblPlan.ForeColor = Color.White
         lblPlan.Location = New Point(13, 249)
         lblPlan.Name = "lblPlan"
@@ -303,7 +301,7 @@ Partial Class FrmMembresias
         ' lblDatosIngreso
         ' 
         lblDatosIngreso.AutoSize = True
-        lblDatosIngreso.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblDatosIngreso.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblDatosIngreso.ForeColor = Color.White
         lblDatosIngreso.Location = New Point(13, 13)
         lblDatosIngreso.Name = "lblDatosIngreso"
@@ -314,7 +312,7 @@ Partial Class FrmMembresias
         ' lblMiembro
         ' 
         lblMiembro.AutoSize = True
-        lblMiembro.Font = New Font("Segoe UI", 12F)
+        lblMiembro.Font = New Font("Segoe UI", 12.0F)
         lblMiembro.ForeColor = Color.White
         lblMiembro.Location = New Point(13, 60)
         lblMiembro.Name = "lblMiembro"
@@ -330,35 +328,35 @@ Partial Class FrmMembresias
         dgvPlan.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         dgvPlan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvPlan.BackgroundColor = Color.FromArgb(CByte(85), CByte(96), CByte(105))
-        DataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = SystemColors.Window
-        DataGridViewCellStyle9.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle9.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = DataGridViewTriState.True
-        dgvPlan.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = SystemColors.Window
+        DataGridViewCellStyle3.Font = New Font("Segoe UI", 9.0F)
+        DataGridViewCellStyle3.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
+        dgvPlan.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         dgvPlan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvPlan.GridColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
         dgvPlan.Location = New Point(13, 292)
         dgvPlan.MultiSelect = False
         dgvPlan.Name = "dgvPlan"
         dgvPlan.ReadOnly = True
-        DataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = SystemColors.Window
-        DataGridViewCellStyle10.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle10.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = DataGridViewTriState.True
-        dgvPlan.RowHeadersDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = SystemColors.Window
+        DataGridViewCellStyle4.Font = New Font("Segoe UI", 9.0F)
+        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
+        dgvPlan.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         dgvPlan.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         dgvPlan.Size = New Size(928, 178)
         dgvPlan.TabIndex = 56
         ' 
         ' tbBuscarPlan
         ' 
-        tbBuscarPlan.Font = New Font("Segoe UI", 12F)
+        tbBuscarPlan.Font = New Font("Segoe UI", 12.0F)
         tbBuscarPlan.Location = New Point(113, 249)
         tbBuscarPlan.Name = "tbBuscarPlan"
         tbBuscarPlan.Size = New Size(596, 29)
@@ -373,7 +371,7 @@ Partial Class FrmMembresias
         btnGuardar.FlatAppearance.MouseDownBackColor = Color.White
         btnGuardar.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         btnGuardar.FlatStyle = FlatStyle.Flat
-        btnGuardar.Font = New Font("Segoe UI", 12F)
+        btnGuardar.Font = New Font("Segoe UI", 12.0F)
         btnGuardar.Location = New Point(13, 488)
         btnGuardar.Name = "btnGuardar"
         btnGuardar.Size = New Size(83, 31)
@@ -391,7 +389,7 @@ Partial Class FrmMembresias
         btnCancelar.FlatAppearance.MouseDownBackColor = Color.White
         btnCancelar.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         btnCancelar.FlatStyle = FlatStyle.Flat
-        btnCancelar.Font = New Font("Segoe UI", 12F)
+        btnCancelar.Font = New Font("Segoe UI", 12.0F)
         btnCancelar.Location = New Point(162, 488)
         btnCancelar.Name = "btnCancelar"
         btnCancelar.Size = New Size(82, 31)
@@ -403,7 +401,7 @@ Partial Class FrmMembresias
         ' 
         cbBuscarOpcionPlan.Cursor = Cursors.Hand
         cbBuscarOpcionPlan.DropDownStyle = ComboBoxStyle.DropDownList
-        cbBuscarOpcionPlan.Font = New Font("Segoe UI", 12F)
+        cbBuscarOpcionPlan.Font = New Font("Segoe UI", 12.0F)
         cbBuscarOpcionPlan.FormattingEnabled = True
         cbBuscarOpcionPlan.Items.AddRange(New Object() {"Buscar por nombre"})
         cbBuscarOpcionPlan.Location = New Point(722, 249)
@@ -419,35 +417,35 @@ Partial Class FrmMembresias
         dgvMiembro.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
         dgvMiembro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvMiembro.BackgroundColor = Color.FromArgb(CByte(85), CByte(96), CByte(105))
-        DataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = SystemColors.Window
-        DataGridViewCellStyle11.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle11.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = DataGridViewTriState.True
-        dgvMiembro.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = SystemColors.Window
+        DataGridViewCellStyle5.Font = New Font("Segoe UI", 9.0F)
+        DataGridViewCellStyle5.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = DataGridViewTriState.True
+        dgvMiembro.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         dgvMiembro.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvMiembro.GridColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
         dgvMiembro.Location = New Point(13, 100)
         dgvMiembro.MultiSelect = False
         dgvMiembro.Name = "dgvMiembro"
         dgvMiembro.ReadOnly = True
-        DataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = SystemColors.Window
-        DataGridViewCellStyle12.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle12.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = DataGridViewTriState.True
-        dgvMiembro.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = SystemColors.Window
+        DataGridViewCellStyle6.Font = New Font("Segoe UI", 9.0F)
+        DataGridViewCellStyle6.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = DataGridViewTriState.True
+        dgvMiembro.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
         dgvMiembro.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         dgvMiembro.Size = New Size(928, 129)
         dgvMiembro.TabIndex = 49
         ' 
         ' tbBuscarMiembro
         ' 
-        tbBuscarMiembro.Font = New Font("Segoe UI", 12F)
+        tbBuscarMiembro.Font = New Font("Segoe UI", 12.0F)
         tbBuscarMiembro.Location = New Point(113, 57)
         tbBuscarMiembro.Name = "tbBuscarMiembro"
         tbBuscarMiembro.Size = New Size(596, 29)
@@ -457,7 +455,7 @@ Partial Class FrmMembresias
         ' 
         cbOpcionBuscarMiembro.Cursor = Cursors.Hand
         cbOpcionBuscarMiembro.DropDownStyle = ComboBoxStyle.DropDownList
-        cbOpcionBuscarMiembro.Font = New Font("Segoe UI", 12F)
+        cbOpcionBuscarMiembro.Font = New Font("Segoe UI", 12.0F)
         cbOpcionBuscarMiembro.FormattingEnabled = True
         cbOpcionBuscarMiembro.Items.AddRange(New Object() {"Buscar por nombre", "Buscar por DNI"})
         cbOpcionBuscarMiembro.Location = New Point(722, 57)
@@ -472,8 +470,6 @@ Partial Class FrmMembresias
         panelPagoIngreso.Controls.Add(lblPagoIngreso)
         panelPagoIngreso.Controls.Add(btnCancelarPago)
         panelPagoIngreso.Controls.Add(btnGuardarPago)
-        panelPagoIngreso.Controls.Add(Button1)
-        panelPagoIngreso.Controls.Add(Button2)
         panelPagoIngreso.Controls.Add(cbMetodo)
         panelPagoIngreso.Controls.Add(tbNotas)
         panelPagoIngreso.Controls.Add(tbComprobante)
@@ -501,7 +497,7 @@ Partial Class FrmMembresias
         ' lblPagoIngreso
         ' 
         lblPagoIngreso.AutoSize = True
-        lblPagoIngreso.Font = New Font("Segoe UI", 12F)
+        lblPagoIngreso.Font = New Font("Segoe UI", 12.0F)
         lblPagoIngreso.ForeColor = Color.White
         lblPagoIngreso.Location = New Point(209, 71)
         lblPagoIngreso.Name = "lblPagoIngreso"
@@ -514,9 +510,9 @@ Partial Class FrmMembresias
         btnCancelarPago.BackColor = Color.FromArgb(CByte(123), CByte(179), CByte(75))
         btnCancelarPago.Cursor = Cursors.Hand
         btnCancelarPago.FlatStyle = FlatStyle.Flat
-        btnCancelarPago.Font = New Font("Segoe UI", 12F)
+        btnCancelarPago.Font = New Font("Segoe UI", 12.0F)
         btnCancelarPago.ForeColor = Color.Black
-        btnCancelarPago.Location = New Point(363, 399)
+        btnCancelarPago.Location = New Point(364, 399)
         btnCancelarPago.Name = "btnCancelarPago"
         btnCancelarPago.Size = New Size(85, 34)
         btnCancelarPago.TabIndex = 20
@@ -528,7 +524,7 @@ Partial Class FrmMembresias
         btnGuardarPago.BackColor = Color.FromArgb(CByte(123), CByte(179), CByte(75))
         btnGuardarPago.Cursor = Cursors.Hand
         btnGuardarPago.FlatStyle = FlatStyle.Flat
-        btnGuardarPago.Font = New Font("Segoe UI", 12F)
+        btnGuardarPago.Font = New Font("Segoe UI", 12.0F)
         btnGuardarPago.ForeColor = Color.Black
         btnGuardarPago.Location = New Point(200, 399)
         btnGuardarPago.Name = "btnGuardarPago"
@@ -537,37 +533,11 @@ Partial Class FrmMembresias
         btnGuardarPago.Text = "Guardar"
         btnGuardarPago.UseVisualStyleBackColor = False
         ' 
-        ' Button1
-        ' 
-        Button1.BackColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
-        Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Segoe UI", 12F)
-        Button1.ForeColor = Color.White
-        Button1.Location = New Point(363, 399)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(85, 34)
-        Button1.TabIndex = 20
-        Button1.Text = "Cancelar"
-        Button1.UseVisualStyleBackColor = False
-        ' 
-        ' Button2
-        ' 
-        Button2.BackColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
-        Button2.FlatStyle = FlatStyle.Flat
-        Button2.Font = New Font("Segoe UI", 12F)
-        Button2.ForeColor = Color.White
-        Button2.Location = New Point(200, 399)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(83, 34)
-        Button2.TabIndex = 19
-        Button2.Text = "Guardar"
-        Button2.UseVisualStyleBackColor = False
-        ' 
         ' cbMetodo
         ' 
         cbMetodo.Cursor = Cursors.Hand
         cbMetodo.DropDownStyle = ComboBoxStyle.DropDownList
-        cbMetodo.Font = New Font("Segoe UI", 12F)
+        cbMetodo.Font = New Font("Segoe UI", 12.0F)
         cbMetodo.ForeColor = SystemColors.ControlText
         cbMetodo.FormattingEnabled = True
         cbMetodo.Items.AddRange(New Object() {"Efectivo", "Tarjeta Débito", "Tarjeta Crédito", "Transferencia Bancaria", "Mercado Pago", "Otro"})
@@ -578,7 +548,7 @@ Partial Class FrmMembresias
         ' 
         ' tbNotas
         ' 
-        tbNotas.Font = New Font("Segoe UI", 12F)
+        tbNotas.Font = New Font("Segoe UI", 12.0F)
         tbNotas.ForeColor = SystemColors.ControlText
         tbNotas.Location = New Point(200, 307)
         tbNotas.Name = "tbNotas"
@@ -587,7 +557,7 @@ Partial Class FrmMembresias
         ' 
         ' tbComprobante
         ' 
-        tbComprobante.Font = New Font("Segoe UI", 12F)
+        tbComprobante.Font = New Font("Segoe UI", 12.0F)
         tbComprobante.ForeColor = SystemColors.ControlText
         tbComprobante.Location = New Point(200, 251)
         tbComprobante.Name = "tbComprobante"
@@ -596,7 +566,7 @@ Partial Class FrmMembresias
         ' 
         ' tbMonto
         ' 
-        tbMonto.Font = New Font("Segoe UI", 12F)
+        tbMonto.Font = New Font("Segoe UI", 12.0F)
         tbMonto.ForeColor = SystemColors.ControlText
         tbMonto.Location = New Point(200, 145)
         tbMonto.Name = "tbMonto"
@@ -607,7 +577,7 @@ Partial Class FrmMembresias
         ' lblNotas
         ' 
         lblNotas.AutoSize = True
-        lblNotas.Font = New Font("Segoe UI", 12F)
+        lblNotas.Font = New Font("Segoe UI", 12.0F)
         lblNotas.ForeColor = Color.White
         lblNotas.Location = New Point(118, 310)
         lblNotas.Name = "lblNotas"
@@ -618,7 +588,7 @@ Partial Class FrmMembresias
         ' lblComprobante
         ' 
         lblComprobante.AutoSize = True
-        lblComprobante.Font = New Font("Segoe UI", 12F)
+        lblComprobante.Font = New Font("Segoe UI", 12.0F)
         lblComprobante.ForeColor = Color.White
         lblComprobante.Location = New Point(64, 259)
         lblComprobante.Name = "lblComprobante"
@@ -629,7 +599,7 @@ Partial Class FrmMembresias
         ' lblMetodo
         ' 
         lblMetodo.AutoSize = True
-        lblMetodo.Font = New Font("Segoe UI", 12F)
+        lblMetodo.Font = New Font("Segoe UI", 12.0F)
         lblMetodo.ForeColor = Color.White
         lblMetodo.Location = New Point(107, 202)
         lblMetodo.Name = "lblMetodo"
@@ -640,7 +610,7 @@ Partial Class FrmMembresias
         ' lblMonto
         ' 
         lblMonto.AutoSize = True
-        lblMonto.Font = New Font("Segoe UI", 12F)
+        lblMonto.Font = New Font("Segoe UI", 12.0F)
         lblMonto.ForeColor = Color.White
         lblMonto.Location = New Point(115, 145)
         lblMonto.Name = "lblMonto"
@@ -650,7 +620,7 @@ Partial Class FrmMembresias
         ' 
         ' FrmMembresias
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
         ClientSize = New Size(1008, 729)
@@ -698,8 +668,6 @@ Partial Class FrmMembresias
     Friend WithEvents panelPagoIngreso As Panel
     Friend WithEvents btnCancelarPago As Button
     Friend WithEvents btnGuardarPago As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
     Friend WithEvents cbMetodo As ComboBox
     Friend WithEvents tbNotas As TextBox
     Friend WithEvents tbComprobante As TextBox

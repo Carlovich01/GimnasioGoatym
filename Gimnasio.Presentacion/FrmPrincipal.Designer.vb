@@ -23,7 +23,7 @@ Partial Class FrmPrincipal
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrincipal))
-        ToolStrip1 = New ToolStrip()
+        ToolStripPestañas = New ToolStrip()
         btnPlanes = New ToolStripButton()
         ToolStripSeparator3 = New ToolStripSeparator()
         btnMiembros = New ToolStripButton()
@@ -42,21 +42,21 @@ Partial Class FrmPrincipal
         miCerrarSesión = New ToolStripMenuItem()
         ToolStripSeparator7 = New ToolStripSeparator()
         PanelDeFormularios = New Panel()
-        PictureBox1 = New PictureBox()
-        ToolStrip1.SuspendLayout()
+        pbLogo = New PictureBox()
+        ToolStripPestañas.SuspendLayout()
         PanelDeFormularios.SuspendLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(pbLogo, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' ToolStrip1
+        ' ToolStripPestañas
         ' 
-        ToolStrip1.BackColor = Color.FromArgb(CByte(123), CByte(179), CByte(75))
-        ToolStrip1.Items.AddRange(New ToolStripItem() {btnPlanes, ToolStripSeparator3, btnMiembros, ToolStripSeparator1, btnMembresias, ToolStripSeparator2, btnPagos, ToolStripSeparator4, btRegistroAsistencias, ToolStripSeparator6, btnReclamos, ToolStripSeparator8, btnUsuarios, ToolStripSeparator5, btnUsuarioLogueado, ToolStripSeparator7})
-        ToolStrip1.Location = New Point(0, 0)
-        ToolStrip1.Name = "ToolStrip1"
-        ToolStrip1.Size = New Size(1008, 28)
-        ToolStrip1.TabIndex = 0
-        ToolStrip1.Text = "ToolStrip1"
+        ToolStripPestañas.BackColor = Color.FromArgb(CByte(123), CByte(179), CByte(75))
+        ToolStripPestañas.Items.AddRange(New ToolStripItem() {btnPlanes, ToolStripSeparator3, btnMiembros, ToolStripSeparator1, btnMembresias, ToolStripSeparator2, btnPagos, ToolStripSeparator4, btRegistroAsistencias, ToolStripSeparator6, btnReclamos, ToolStripSeparator8, btnUsuarios, ToolStripSeparator5, btnUsuarioLogueado, ToolStripSeparator7})
+        ToolStripPestañas.Location = New Point(0, 0)
+        ToolStripPestañas.Name = "ToolStripPestañas"
+        ToolStripPestañas.Size = New Size(1008, 28)
+        ToolStripPestañas.TabIndex = 0
+        ToolStripPestañas.Text = "ToolStrip1"
         ' 
         ' btnPlanes
         ' 
@@ -176,7 +176,7 @@ Partial Class FrmPrincipal
         ' miCerrarSesión
         ' 
         miCerrarSesión.Name = "miCerrarSesión"
-        miCerrarSesión.Size = New Size(180, 26)
+        miCerrarSesión.Size = New Size(174, 26)
         miCerrarSesión.Text = "Cerrar Sesión"
         ' 
         ' ToolStripSeparator7
@@ -187,23 +187,23 @@ Partial Class FrmPrincipal
         ' PanelDeFormularios
         ' 
         PanelDeFormularios.BackColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
-        PanelDeFormularios.Controls.Add(PictureBox1)
+        PanelDeFormularios.Controls.Add(pbLogo)
         PanelDeFormularios.Dock = DockStyle.Fill
         PanelDeFormularios.Location = New Point(0, 28)
         PanelDeFormularios.Name = "PanelDeFormularios"
         PanelDeFormularios.Size = New Size(1008, 701)
         PanelDeFormularios.TabIndex = 1
         ' 
-        ' PictureBox1
+        ' pbLogo
         ' 
-        PictureBox1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(140, 109)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(755, 472)
-        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
-        PictureBox1.TabIndex = 0
-        PictureBox1.TabStop = False
+        pbLogo.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        pbLogo.Image = CType(resources.GetObject("pbLogo.Image"), Image)
+        pbLogo.Location = New Point(140, 109)
+        pbLogo.Name = "pbLogo"
+        pbLogo.Size = New Size(755, 472)
+        pbLogo.SizeMode = PictureBoxSizeMode.Zoom
+        pbLogo.TabIndex = 0
+        pbLogo.TabStop = False
         ' 
         ' FrmPrincipal
         ' 
@@ -212,21 +212,21 @@ Partial Class FrmPrincipal
         BackColor = Color.FromArgb(CByte(123), CByte(179), CByte(75))
         ClientSize = New Size(1008, 729)
         Controls.Add(PanelDeFormularios)
-        Controls.Add(ToolStrip1)
+        Controls.Add(ToolStripPestañas)
         Name = "FrmPrincipal"
         Text = "Goatym"
         WindowState = FormWindowState.Maximized
-        ToolStrip1.ResumeLayout(False)
-        ToolStrip1.PerformLayout()
+        ToolStripPestañas.ResumeLayout(False)
+        ToolStripPestañas.PerformLayout()
         PanelDeFormularios.ResumeLayout(False)
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(pbLogo, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
-    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents ToolStripPestañas As ToolStrip
     Friend WithEvents PanelDeFormularios As Panel
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents pbLogo As PictureBox
     Friend WithEvents btnPlanes As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents btnMembresias As ToolStripButton

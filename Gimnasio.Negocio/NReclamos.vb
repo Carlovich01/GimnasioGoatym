@@ -6,10 +6,12 @@ Imports Gimnasio.Errores
 ''' <summary>
 ''' Lógica de negocio para la gestión de reclamos en el sistema de gimnasio.
 ''' Interactúa con la capa de datos <see cref="DReclamos"/> y la entidad <see cref="Reclamos"/>.
+''' </summary>
+''' <remarks>
 ''' Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.  
 ''' Si ocurre una excepción, se registra el error utilizando <see cref="ManejarErrores.Log"/> en un log.txt
 ''' Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message) para que pueda ser gestionada en la interfaz de usuario.
-''' </summary>
+''' </remarks>
 Public Class NReclamos
     ''' <summary>
     ''' Instancia de la capa de datos para reclamos.

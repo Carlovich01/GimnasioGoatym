@@ -7,10 +7,12 @@ Imports Gimnasio.Errores
 ''' Utiliza la clase <see cref="Usuarios"/> para identificar al usuario logueado y su rol. Llama a formularios secundarios como <see cref="FrmPlanes"/>,
 ''' <see cref="FrmMiembros"/>, <see cref="FrmMembresias"/>, <see cref="FrmPagos"/>, <see cref="FrmRegistroAsistencias"/>, <see cref="FrmReclamos"/> y 
 ''' <see cref="FrmUsuarios"/>.
+''' </summary>
+''' <remarks>
 ''' Todas las operaciones de esta capa están envueltas en bloques Try...Catch. 
 ''' El manejo de errores se realiza a través de <see cref="Gimnasio.Errores.ManejarErrores.Mostrar(String, Exception)"/>
 ''' que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.
-''' </summary>
+''' </remarks>
 Public Class FrmPrincipal
     ''' <summary>
     ''' Usuario actualmente logueado en la aplicación.

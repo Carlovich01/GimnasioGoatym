@@ -22,7 +22,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gimnasio.Datos.ConexionBase",
-      "Summary": "<p sourcefile=\"api/Gimnasio.Datos.ConexionBase.yml\" sourcestartlinenumber=\"1\">Clase base para la gestión de la conexión y operaciones con la base de datos MySQL.\nProporciona métodos genéricos para ejecutar consultas y comandos SQL.</p>\n<p sourcefile=\"api/Gimnasio.Datos.ConexionBase.yml\" sourcestartlinenumber=\"4\">Beneficios de utilizar <xref href=\"Gimnasio.Datos.ConexionBase.ExecuteQuery(System.String%2cSystem.Collections.Generic.Dictionary%7bSystem.String%2cSystem.Object%7d)\" data-throw-if-not-resolved=\"false\"></xref> y <xref href=\"Gimnasio.Datos.ConexionBase.ExecuteNonQuery(System.String%2cSystem.Collections.Generic.Dictionary%7bSystem.String%2cSystem.Object%7d)\" data-throw-if-not-resolved=\"false\"></xref>:</p>\n<ul sourcefile=\"api/Gimnasio.Datos.ConexionBase.yml\" sourcestartlinenumber=\"5\">\n<li sourcefile=\"api/Gimnasio.Datos.ConexionBase.yml\" sourcestartlinenumber=\"5\">Centralizan y simplifican el acceso a datos, evitando duplicación de código.</li>\n<li sourcefile=\"api/Gimnasio.Datos.ConexionBase.yml\" sourcestartlinenumber=\"6\">Permiten el uso de parámetros, ayudando a prevenir inyecciones SQL.</li>\n<li sourcefile=\"api/Gimnasio.Datos.ConexionBase.yml\" sourcestartlinenumber=\"7\">Manejan automáticamente la apertura y cierre de conexiones.</li>\n<li sourcefile=\"api/Gimnasio.Datos.ConexionBase.yml\" sourcestartlinenumber=\"8\">Facilitan el mantenimiento y la escalabilidad del acceso a la base de datos.</li>\n</ul>\n<p sourcefile=\"api/Gimnasio.Datos.ConexionBase.yml\" sourcestartlinenumber=\"10\">Todas las operaciones de acceso a datos están envueltas en bloques Try...Catch.</p>\n<ul sourcefile=\"api/Gimnasio.Datos.ConexionBase.yml\" sourcestartlinenumber=\"11\">\n<li sourcefile=\"api/Gimnasio.Datos.ConexionBase.yml\" sourcestartlinenumber=\"11\">Si ocurre una excepción durante la ejecución de una consulta o comando SQL, el error se registra en el archivo de log\nmediante <xref href=\"Gimnasio.Errores.ManejarErrores.Log(System.String%2cSystem.Exception)\" data-throw-if-not-resolved=\"false\"></xref>.</li>\n<li sourcefile=\"api/Gimnasio.Datos.ConexionBase.yml\" sourcestartlinenumber=\"13\">Tras registrar el error, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).</li>\n</ul>\n"
+      "Summary": "<p sourcefile=\"api/Gimnasio.Datos.ConexionBase.yml\" sourcestartlinenumber=\"1\">Clase base para la gestión de la conexión y operaciones con la base de datos MySQL.\nProporciona métodos genéricos para ejecutar consultas y comandos SQL.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -36,7 +36,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gimnasio.Datos.DAsistencia",
-      "Summary": "<p sourcefile=\"api/Gimnasio.Datos.DAsistencia.yml\" sourcestartlinenumber=\"1\">Clase de acceso a datos para la gestión de asistencias.\nHereda de <xref href=\"Gimnasio.Datos.ConexionBase\" data-throw-if-not-resolved=\"false\"></xref> y utiliza la entidad <xref href=\"Gimnasio.Entidades.Asistencia\" data-throw-if-not-resolved=\"false\"></xref>.\nProporciona métodos CRUD y de búsqueda para la tabla asistencia y la vista vista_asistencia.</p>\n<p sourcefile=\"api/Gimnasio.Datos.DAsistencia.yml\" sourcestartlinenumber=\"5\">La vista consolida la información relevante de los registros de asistencias,\npermitiendo consultar en una sola consulta datos de la asistencia, el miembro, la membresía y el plan asociado.\nRealiza LEFT JOIN entre la asistencia y las demás tablas, permitiendo obtener la información de asistencia\nincluso si los datos de miembro, membresía o plan no están presentes.</p>\n<pre><code class=\"lang-csharp\">VIEW `vista_asistencia` AS\n   SELECT \n       `a`.`id_asistencia` AS `id_asistencia`,\n       `a`.`id_miembro` AS `id_miembro`,\n       `a`.`id_membresia_valida` AS `id_membresia`,\n       `m`.`dni` AS `dni_miembro`,\n       `m`.`nombre` AS `nombre_miembro`,\n       `m`.`apellido` AS `apellido_miembro`,\n      `a`.`fecha_hora_checkin` AS `fecha_ingreso`,\n       `a`.`resultado` AS `resultado`,\n      `pm`.`nombre_plan` AS `nombre_plan_membresia`\n   FROM\n      (((`asistencia` `a`\n      LEFT JOIN `miembros` `m` ON ((`a`.`id_miembro` = `m`.`id_miembro`)))\n      LEFT JOIN `membresias_miembro` `mm` ON ((`a`.`id_membresia_valida` = `mm`.`id_membresia`)))\n      LEFT JOIN `planes_membresia` `pm` ON ((`mm`.`id_plan` = `pm`.`id_plan`)))\n   ORDER BY `a`.`fecha_hora_checkin` DESC</code></pre>\n<p sourcefile=\"api/Gimnasio.Datos.DAsistencia.yml\" sourcestartlinenumber=\"27\">Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo</p>\n"
+      "Summary": "<p sourcefile=\"api/Gimnasio.Datos.DAsistencia.yml\" sourcestartlinenumber=\"1\">Clase de acceso a datos para la gestión de asistencias.\nHereda de <xref href=\"Gimnasio.Datos.ConexionBase\" data-throw-if-not-resolved=\"false\"></xref> y utiliza la entidad <xref href=\"Gimnasio.Entidades.Asistencia\" data-throw-if-not-resolved=\"false\"></xref>.\nProporciona métodos CRUD y de búsqueda para la tabla asistencia y la vista vista_asistencia.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -50,7 +50,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gimnasio.Datos.DMembresias",
-      "Summary": "<p sourcefile=\"api/Gimnasio.Datos.DMembresias.yml\" sourcestartlinenumber=\"1\">Clase de acceso a datos para la gestión de membresías en el sistema de gimnasio.\nHereda de <xref href=\"Gimnasio.Datos.ConexionBase\" data-throw-if-not-resolved=\"false\"></xref> y utiliza la entidad <xref href=\"Gimnasio.Entidades.Membresias\" data-throw-if-not-resolved=\"false\"></xref>.\nProporciona métodos CRUD y de búsqueda para la tabla membresias_miembro y la vista vista_membresias.</p>\n<p sourcefile=\"api/Gimnasio.Datos.DMembresias.yml\" sourcestartlinenumber=\"5\">La vista_membresias es una vista SQL que consolida información relevante de las membresías,\nuniendo datos de las tablas membresias_miembro, miembros y planes_membresia.</p>\n<pre><code class=\"lang-csharp\">VIEW `vista_membresias` AS\n   SELECT \n       `mm`.`id_membresia` AS `id_membresia`,\n       `mm`.`id_miembro` AS `id_miembro`,\n       `mm`.`id_plan` AS `id_plan`,\n       `m`.`dni` AS `dni_miembro`,\n       `m`.`apellido` AS `apellido_miembro`,\n       `m`.`nombre` AS `nombre_miembro`,\n       `p`.`nombre_plan` AS `nombre_plan`,\n       `p`.`precio` AS `precio_plan`,\n       `p`.`duracion_dias` AS `duracion_dias_plan`,\n       `mm`.`fecha_inicio` AS `fecha_inicio`,\n       `mm`.`fecha_fin` AS `fecha_fin`,\n       `mm`.`estado_membresia` AS `estado_membresia`,\n       `mm`.`fecha_registro` AS `fecha_registro`,\n       `mm`.`ultima_modificacion` AS `ultima_modificacion`\n   FROM\n       ((`membresias_miembro` `mm`\n       JOIN `miembros` `m` ON ((`mm`.`id_miembro` = `m`.`id_miembro`)))\n       JOIN `planes_membresia` `p` ON ((`mm`.`id_plan` = `p`.`id_plan`)))\n   ORDER BY `mm`.`ultima_modificacion` DESC</code></pre>\n<p sourcefile=\"api/Gimnasio.Datos.DMembresias.yml\" sourcestartlinenumber=\"29\">Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo</p>\n"
+      "Summary": "<p sourcefile=\"api/Gimnasio.Datos.DMembresias.yml\" sourcestartlinenumber=\"1\">Clase de acceso a datos para la gestión de membresías en el sistema de gimnasio.\nHereda de <xref href=\"Gimnasio.Datos.ConexionBase\" data-throw-if-not-resolved=\"false\"></xref> y utiliza la entidad <xref href=\"Gimnasio.Entidades.Membresias\" data-throw-if-not-resolved=\"false\"></xref>.\nProporciona métodos CRUD y de búsqueda para la tabla membresias_miembro y la vista vista_membresias.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -64,7 +64,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gimnasio.Datos.DMiembros",
-      "Summary": "<p sourcefile=\"api/Gimnasio.Datos.DMiembros.yml\" sourcestartlinenumber=\"1\">Clase de acceso a datos para la gestión de miembros en el sistema de gimnasio.\nHereda de <xref href=\"Gimnasio.Datos.ConexionBase\" data-throw-if-not-resolved=\"false\"></xref> y utiliza la entidad <xref href=\"Gimnasio.Entidades.Miembros\" data-throw-if-not-resolved=\"false\"></xref>.\nProporciona métodos CRUD y de búsqueda para la tabla miembros.</p>\n<p sourcefile=\"api/Gimnasio.Datos.DMiembros.yml\" sourcestartlinenumber=\"5\">Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo</p>\n"
+      "Summary": "<p sourcefile=\"api/Gimnasio.Datos.DMiembros.yml\" sourcestartlinenumber=\"1\">Clase de acceso a datos para la gestión de miembros en el sistema de gimnasio.\nHereda de <xref href=\"Gimnasio.Datos.ConexionBase\" data-throw-if-not-resolved=\"false\"></xref> y utiliza la entidad <xref href=\"Gimnasio.Entidades.Miembros\" data-throw-if-not-resolved=\"false\"></xref>.\nProporciona métodos CRUD y de búsqueda para la tabla miembros.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -78,7 +78,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gimnasio.Datos.DPagos",
-      "Summary": "<p sourcefile=\"api/Gimnasio.Datos.DPagos.yml\" sourcestartlinenumber=\"1\">Clase de acceso a datos para la gestión de pagos en el sistema de gimnasio.\nHereda de <xref href=\"Gimnasio.Datos.ConexionBase\" data-throw-if-not-resolved=\"false\"></xref> y utiliza la entidad <xref href=\"Gimnasio.Entidades.Pagos\" data-throw-if-not-resolved=\"false\"></xref>.\nProporciona métodos CRUD y de búsqueda para la tabla pagos y la vista vista_pagos.</p>\n<p sourcefile=\"api/Gimnasio.Datos.DPagos.yml\" sourcestartlinenumber=\"5\">La vista consolida la información relevante de los registros de pagos,\nPermite consultar en una sola consulta los datos del pago, el miembro, el plan, el usuario que registró el pago.\nRealiza LEFT JOIN entre pagos y las demás tablas, permitiendo obtener la información de pagos\nincluso si los datos de miembro, membresía, plan o usuario no están presentes.</p>\n<pre><code class=\"lang-csharp\">VIEW `vista_pagos` AS\n   SELECT \n       `p`.`id_pago` AS `id_pago`,\n       `p`.`id_membresia` AS `id_membresia`,\n       `p`.`id_usuario_registro` AS `id_usuario_registro`,\n       `m`.`apellido` AS `apellido_miembro`,\n       `m`.`nombre` AS `nombre_miembro`,\n       `m`.`dni` AS `dni_miembro`,\n       `pm`.`nombre_plan` AS `nombre_plan`,\n       `p`.`monto_pagado` AS `monto`,\n       `p`.`metodo_pago` AS `metodo`,\n       `p`.`numero_comprobante` AS `comprobante`,\n       `p`.`notas` AS `notas`,\n       `p`.`fecha_pago` AS `fecha_pago`,\n       `us`.`nombre_completo` AS `nombre_usuario`\n   FROM\n       ((((`pagos` `p`\n       LEFT JOIN `membresias_miembro` `mm` ON ((`p`.`id_membresia` = `mm`.`id_membresia`)))\n       LEFT JOIN `miembros` `m` ON ((`mm`.`id_miembro` = `m`.`id_miembro`)))\n       LEFT JOIN `planes_membresia` `pm` ON ((`mm`.`id_plan` = `pm`.`id_plan`)))\n       LEFT JOIN `usuarios_sistema` `us` ON ((`p`.`id_usuario_registro` = `us`.`id_usuario`)))\n   ORDER BY `p`.`fecha_pago` DESC</code></pre>\n<p sourcefile=\"api/Gimnasio.Datos.DPagos.yml\" sourcestartlinenumber=\"32\">Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo</p>\n"
+      "Summary": "<p sourcefile=\"api/Gimnasio.Datos.DPagos.yml\" sourcestartlinenumber=\"1\">Clase de acceso a datos para la gestión de pagos en el sistema de gimnasio.\nHereda de <xref href=\"Gimnasio.Datos.ConexionBase\" data-throw-if-not-resolved=\"false\"></xref> y utiliza la entidad <xref href=\"Gimnasio.Entidades.Pagos\" data-throw-if-not-resolved=\"false\"></xref>.\nProporciona métodos CRUD y de búsqueda para la tabla pagos y la vista vista_pagos.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -92,7 +92,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gimnasio.Datos.DPlanes",
-      "Summary": "<p sourcefile=\"api/Gimnasio.Datos.DPlanes.yml\" sourcestartlinenumber=\"1\">Clase de acceso a datos para la gestión de planes de membresía.\nHereda de <xref href=\"Gimnasio.Datos.ConexionBase\" data-throw-if-not-resolved=\"false\"></xref> y utiliza la entidad <xref href=\"Gimnasio.Entidades.Planes\" data-throw-if-not-resolved=\"false\"></xref>.\nProporciona métodos CRUD y de búsqueda para la tabla <code>planes_membresia</code>.</p>\n<p sourcefile=\"api/Gimnasio.Datos.DPlanes.yml\" sourcestartlinenumber=\"5\">Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo</p>\n"
+      "Summary": "<p sourcefile=\"api/Gimnasio.Datos.DPlanes.yml\" sourcestartlinenumber=\"1\">Clase de acceso a datos para la gestión de planes de membresía.\nHereda de <xref href=\"Gimnasio.Datos.ConexionBase\" data-throw-if-not-resolved=\"false\"></xref> y utiliza la entidad <xref href=\"Gimnasio.Entidades.Planes\" data-throw-if-not-resolved=\"false\"></xref>.\nProporciona métodos CRUD y de búsqueda para la tabla <code>planes_membresia</code>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -106,7 +106,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gimnasio.Datos.DReclamos",
-      "Summary": "<p sourcefile=\"api/Gimnasio.Datos.DReclamos.yml\" sourcestartlinenumber=\"1\">Clase de acceso a datos para la gestión de reclamos en el sistema de gimnasio.\nHereda de <xref href=\"Gimnasio.Datos.ConexionBase\" data-throw-if-not-resolved=\"false\"></xref> y utiliza la entidad <xref href=\"Gimnasio.Entidades.Reclamos\" data-throw-if-not-resolved=\"false\"></xref>.\nProporciona métodos CRUD y de búsqueda para la tabla reclamos y la vista vista_reclamos.</p>\n<p sourcefile=\"api/Gimnasio.Datos.DReclamos.yml\" sourcestartlinenumber=\"5\">La vista consolida la información relevante de los reclamos, permitiendo consultar en una sola consulta datos del reclamo\ny el miembro que lo realizo.\nRealiza LEFT JOIN entre la reclamos y miembros, permitiendo obtener la información de reclamo incluso si los datos de miembro no están presentes.</p>\n<pre><code class=\"lang-csharp\">VIEW `vista_reclamos` As\nSELECT\n       `r`.`id_reclamos` AS `id_reclamos`,\n       `r`.`tipo` AS `tipo`,\n       `r`.`descripcion` AS `descripcion`,\n       `r`.`fecha_envio` AS `fecha_envio`,\n       `r`.`estado` AS `estado`,\n       `r`.`respuesta` AS `respuesta`,\n       `r`.`fecha_respuesta` AS `fecha_respuesta`,\n       `m`.`dni` AS `dni_miembro`\nFROM\n       (`reclamos` `r`\n       LEFT JOIN `miembros` `m` On ((`r`.`id_miembro` = `m`.`id_miembro`)))\n   ORDER BY `r`.`fecha_envio` DESC</code></pre>\n<p sourcefile=\"api/Gimnasio.Datos.DReclamos.yml\" sourcestartlinenumber=\"23\">Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo</p>\n"
+      "Summary": "<p sourcefile=\"api/Gimnasio.Datos.DReclamos.yml\" sourcestartlinenumber=\"1\">Clase de acceso a datos para la gestión de reclamos en el sistema de gimnasio.\nHereda de <xref href=\"Gimnasio.Datos.ConexionBase\" data-throw-if-not-resolved=\"false\"></xref> y utiliza la entidad <xref href=\"Gimnasio.Entidades.Reclamos\" data-throw-if-not-resolved=\"false\"></xref>.\nProporciona métodos CRUD y de búsqueda para la tabla reclamos y la vista vista_reclamos.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -120,7 +120,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gimnasio.Datos.DUsuarios",
-      "Summary": "<p sourcefile=\"api/Gimnasio.Datos.DUsuarios.yml\" sourcestartlinenumber=\"1\">Clase de acceso a datos para la gestión de usuarios en el sistema de gimnasio.\nHereda de <xref href=\"Gimnasio.Datos.ConexionBase\" data-throw-if-not-resolved=\"false\"></xref> y utiliza la entidad <xref href=\"Gimnasio.Entidades.Usuarios\" data-throw-if-not-resolved=\"false\"></xref>.\nProporciona métodos CRUD y de búsqueda para la tabla usuarios_sistema y la vista_usuarios.</p>\n<p sourcefile=\"api/Gimnasio.Datos.DUsuarios.yml\" sourcestartlinenumber=\"5\">La vista consolida la información relevante de los registros de usuarios,\npermitiendo consultar en una sola consulta datos de los usuarios y sus roles.\nRealiza JOIN entre la tabla de usuarios y la tabla de roles, permitiendo obtener la información de usuario junto con su rol asociado.</p>\n<pre><code class=\"lang-csharp\">VIEW `vista_usuarios` AS\n   SELECT \n       `u`.`id_usuario` AS `id_usuario`,\n       `u`.`username` AS `username`,\n       `u`.`password_hash` AS `password_hash`,\n       `u`.`nombre_completo` AS `nombre_completo`,\n       `u`.`email` AS `email`,\n       `r`.`nombre_rol` AS `nombre_rol`,\n       `u`.`fecha_creacion` AS `fecha_creacion`,\n       `u`.`ultima_modificacion` AS `ultima_modificacion`\n   FROM\n       (`usuarios_sistema` `u`\n       JOIN `roles` `r` ON ((`u`.`id_rol` = `r`.`id_rol`)))\n   ORDER BY `u`.`ultima_modificacion` DESC</code></pre>\n<p sourcefile=\"api/Gimnasio.Datos.DUsuarios.yml\" sourcestartlinenumber=\"24\">Los diccionarios se utilizan para asociar los parámetros de la consulta con los parámetros del método.</p>\n"
+      "Summary": "<p sourcefile=\"api/Gimnasio.Datos.DUsuarios.yml\" sourcestartlinenumber=\"1\">Clase de acceso a datos para la gestión de usuarios en el sistema de gimnasio.\nHereda de <xref href=\"Gimnasio.Datos.ConexionBase\" data-throw-if-not-resolved=\"false\"></xref> y utiliza la entidad <xref href=\"Gimnasio.Entidades.Usuarios\" data-throw-if-not-resolved=\"false\"></xref>.\nProporciona métodos CRUD y de búsqueda para la tabla usuarios_sistema y la vista_usuarios.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -288,7 +288,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gimnasio.Negocio.NAsistencia",
-      "Summary": "<p sourcefile=\"api/Gimnasio.Negocio.NAsistencia.yml\" sourcestartlinenumber=\"1\">Lógica de negocio para la gestión de asistencias en el sistema de gimnasio.\nInteractúa con la capa de datos <xref href=\"Gimnasio.Datos.DAsistencia\" data-throw-if-not-resolved=\"false\"></xref> y la entidad <xref href=\"Gimnasio.Entidades.Asistencia\" data-throw-if-not-resolved=\"false\"></xref>.\nTodas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.<br>\nSi ocurre una excepción, se registra el error utilizando <xref href=\"Gimnasio.Errores.ManejarErrores.Log(System.String%2cSystem.Exception)\" data-throw-if-not-resolved=\"false\"></xref> en un log.txt\nLuego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).</p>\n"
+      "Summary": "<p sourcefile=\"api/Gimnasio.Negocio.NAsistencia.yml\" sourcestartlinenumber=\"1\">Lógica de negocio para la gestión de asistencias en el sistema de gimnasio.\nInteractúa con la capa de datos <xref href=\"Gimnasio.Datos.DAsistencia\" data-throw-if-not-resolved=\"false\"></xref> y la entidad <xref href=\"Gimnasio.Entidades.Asistencia\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -302,7 +302,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gimnasio.Negocio.NMembresias",
-      "Summary": "<p sourcefile=\"api/Gimnasio.Negocio.NMembresias.yml\" sourcestartlinenumber=\"1\">Lógica de negocio para la gestión de membresías en el sistema de gimnasio.\nInteractúa con la capa de datos <xref href=\"Gimnasio.Negocio.NMembresias.dMembresias\" data-throw-if-not-resolved=\"false\"></xref> y la entidad <xref href=\"Gimnasio.Entidades.Membresias\" data-throw-if-not-resolved=\"false\"></xref>.\nTodas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.<br>\nSi ocurre una excepción, se registra el error utilizando <xref href=\"Gimnasio.Errores.ManejarErrores.Log(System.String%2cSystem.Exception)\" data-throw-if-not-resolved=\"false\"></xref> en un log.txt\nLuego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).</p>\n"
+      "Summary": "<p sourcefile=\"api/Gimnasio.Negocio.NMembresias.yml\" sourcestartlinenumber=\"1\">Lógica de negocio para la gestión de membresías en el sistema de gimnasio.\nInteractúa con la capa de datos <xref href=\"Gimnasio.Negocio.NMembresias.dMembresias\" data-throw-if-not-resolved=\"false\"></xref> y la entidad <xref href=\"Gimnasio.Entidades.Membresias\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -316,7 +316,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gimnasio.Negocio.NMiembros",
-      "Summary": "<p sourcefile=\"api/Gimnasio.Negocio.NMiembros.yml\" sourcestartlinenumber=\"1\">Lógica de negocio para la gestión de miembros en el sistema de gimnasio.\nInteractúa con la capa de datos <xref href=\"Gimnasio.Negocio.NMiembros.dMiembros\" data-throw-if-not-resolved=\"false\"></xref> y la entidad <xref href=\"Gimnasio.Entidades.Miembros\" data-throw-if-not-resolved=\"false\"></xref>.\nTodas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.<br>\nSi ocurre una excepción, se registra el error utilizando <xref href=\"Gimnasio.Errores.ManejarErrores.Log(System.String%2cSystem.Exception)\" data-throw-if-not-resolved=\"false\"></xref> en un log.txt\nLuego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).</p>\n"
+      "Summary": "<p sourcefile=\"api/Gimnasio.Negocio.NMiembros.yml\" sourcestartlinenumber=\"1\">Lógica de negocio para la gestión de miembros en el sistema de gimnasio.\nInteractúa con la capa de datos <xref href=\"Gimnasio.Negocio.NMiembros.dMiembros\" data-throw-if-not-resolved=\"false\"></xref> y la entidad <xref href=\"Gimnasio.Entidades.Miembros\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -330,7 +330,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gimnasio.Negocio.NPagos",
-      "Summary": "<p sourcefile=\"api/Gimnasio.Negocio.NPagos.yml\" sourcestartlinenumber=\"1\">Lógica de negocio para la gestión de pagos en el sistema de gimnasio.\nInteractúa con la capa de datos <xref href=\"Gimnasio.Negocio.NPagos.dPagos\" data-throw-if-not-resolved=\"false\"></xref> y la entidad <xref href=\"Gimnasio.Entidades.Pagos\" data-throw-if-not-resolved=\"false\"></xref>.\nTodas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.<br>\nSi ocurre una excepción, se registra el error utilizando <xref href=\"Gimnasio.Errores.ManejarErrores.Log(System.String%2cSystem.Exception)\" data-throw-if-not-resolved=\"false\"></xref> en un log.txt\nLuego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).</p>\n"
+      "Summary": "<p sourcefile=\"api/Gimnasio.Negocio.NPagos.yml\" sourcestartlinenumber=\"1\">Lógica de negocio para la gestión de pagos en el sistema de gimnasio.\nInteractúa con la capa de datos <xref href=\"Gimnasio.Negocio.NPagos.dPagos\" data-throw-if-not-resolved=\"false\"></xref> y la entidad <xref href=\"Gimnasio.Entidades.Pagos\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -344,7 +344,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gimnasio.Negocio.NPlanes",
-      "Summary": "<p sourcefile=\"api/Gimnasio.Negocio.NPlanes.yml\" sourcestartlinenumber=\"1\">Lógica de negocio para la gestión de planes en el sistema de gimnasio.\nInteractúa con la capa de datos <xref href=\"Gimnasio.Negocio.NPlanes.dPlanes\" data-throw-if-not-resolved=\"false\"></xref> y la entidad <xref href=\"Gimnasio.Entidades.Planes\" data-throw-if-not-resolved=\"false\"></xref>.\nTodas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.<br>\nSi ocurre una excepción, se registra el error utilizando <xref href=\"Gimnasio.Errores.ManejarErrores.Log(System.String%2cSystem.Exception)\" data-throw-if-not-resolved=\"false\"></xref> en un log.txt\nLuego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message) para que pueda ser gestionada en la interfaz de usuario.</p>\n"
+      "Summary": "<p sourcefile=\"api/Gimnasio.Negocio.NPlanes.yml\" sourcestartlinenumber=\"1\">Lógica de negocio para la gestión de planes en el sistema de gimnasio.\nInteractúa con la capa de datos <xref href=\"Gimnasio.Negocio.NPlanes.dPlanes\" data-throw-if-not-resolved=\"false\"></xref> y la entidad <xref href=\"Gimnasio.Entidades.Planes\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -358,7 +358,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gimnasio.Negocio.NReclamos",
-      "Summary": "<p sourcefile=\"api/Gimnasio.Negocio.NReclamos.yml\" sourcestartlinenumber=\"1\">Lógica de negocio para la gestión de reclamos en el sistema de gimnasio.\nInteractúa con la capa de datos <xref href=\"Gimnasio.Negocio.NReclamos.dReclamos\" data-throw-if-not-resolved=\"false\"></xref> y la entidad <xref href=\"Gimnasio.Entidades.Reclamos\" data-throw-if-not-resolved=\"false\"></xref>.\nTodas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.<br>\nSi ocurre una excepción, se registra el error utilizando <xref href=\"Gimnasio.Errores.ManejarErrores.Log(System.String%2cSystem.Exception)\" data-throw-if-not-resolved=\"false\"></xref> en un log.txt\nLuego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message) para que pueda ser gestionada en la interfaz de usuario.</p>\n"
+      "Summary": "<p sourcefile=\"api/Gimnasio.Negocio.NReclamos.yml\" sourcestartlinenumber=\"1\">Lógica de negocio para la gestión de reclamos en el sistema de gimnasio.\nInteractúa con la capa de datos <xref href=\"Gimnasio.Negocio.NReclamos.dReclamos\" data-throw-if-not-resolved=\"false\"></xref> y la entidad <xref href=\"Gimnasio.Entidades.Reclamos\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -372,7 +372,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gimnasio.Negocio.NUsuarios",
-      "Summary": "<p sourcefile=\"api/Gimnasio.Negocio.NUsuarios.yml\" sourcestartlinenumber=\"1\">Lógica de negocio para la gestión de usuarios en el sistema de gimnasio.\nInteractúa con la capa de datos <xref href=\"Gimnasio.Negocio.NUsuarios.dUsuarios\" data-throw-if-not-resolved=\"false\"></xref> y la entidad <xref href=\"Gimnasio.Entidades.Usuarios\" data-throw-if-not-resolved=\"false\"></xref>.\nTodas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.<br>\nSi ocurre una excepción, se registra el error utilizando <xref href=\"Gimnasio.Errores.ManejarErrores.Log(System.String%2cSystem.Exception)\" data-throw-if-not-resolved=\"false\"></xref> en un log.txt\nLuego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message) para que pueda ser gestionada en la interfaz de usuario.</p>\n"
+      "Summary": "<p sourcefile=\"api/Gimnasio.Negocio.NUsuarios.yml\" sourcestartlinenumber=\"1\">Lógica de negocio para la gestión de usuarios en el sistema de gimnasio.\nInteractúa con la capa de datos <xref href=\"Gimnasio.Negocio.NUsuarios.dUsuarios\" data-throw-if-not-resolved=\"false\"></xref> y la entidad <xref href=\"Gimnasio.Entidades.Usuarios\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -400,7 +400,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gimnasio.Presentacion.FrmAsistencias",
-      "Summary": "<p sourcefile=\"api/Gimnasio.Presentacion.FrmAsistencias.yml\" sourcestartlinenumber=\"1\">Formulario para el registro de asistencias de miembros mediante el ingreso de DNI.\nPermite registrar el ingreso, mostrar el estado de las membresías y los días restantes.\nUtiliza la clase <xref href=\"Gimnasio.Negocio.NAsistencia\" data-throw-if-not-resolved=\"false\"></xref> para la lógica de negocio de asistencias y <xref href=\"Gimnasio.Negocio.NMembresias\" data-throw-if-not-resolved=\"false\"></xref> para la consulta de membresías.\nTodas las operaciones de esta capa están envueltas en bloques Try...Catch.\nEl manejo de errores se realiza a través de <xref href=\"Gimnasio.Errores.ManejarErrores.Mostrar(System.String%2cSystem.Exception)\" data-throw-if-not-resolved=\"false\"></xref>\nque permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.</p>\n"
+      "Summary": "<p sourcefile=\"api/Gimnasio.Presentacion.FrmAsistencias.yml\" sourcestartlinenumber=\"1\">Formulario para el registro de asistencias de miembros mediante el ingreso de DNI.\nPermite registrar el ingreso, mostrar el estado de las membresías y los días restantes.\nUtiliza la clase <xref href=\"Gimnasio.Negocio.NAsistencia\" data-throw-if-not-resolved=\"false\"></xref> para la lógica de negocio de asistencias y <xref href=\"Gimnasio.Negocio.NMembresias\" data-throw-if-not-resolved=\"false\"></xref> para la consulta de membresías.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -414,7 +414,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gimnasio.Presentacion.FrmLogin",
-      "Summary": "<p sourcefile=\"api/Gimnasio.Presentacion.FrmLogin.yml\" sourcestartlinenumber=\"1\">Formulario de inicio de sesión para el sistema de gimnasio. Permite al usuario ingresar sus credenciales y acceder al sistema principal.\nTodas las operaciones de esta capa están envueltas en bloques Try...Catch.\nEl manejo de errores se realiza a través de <xref href=\"Gimnasio.Errores.ManejarErrores.Mostrar(System.String%2cSystem.Exception)\" data-throw-if-not-resolved=\"false\"></xref>\nque permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.</p>\n"
+      "Summary": "<p sourcefile=\"api/Gimnasio.Presentacion.FrmLogin.yml\" sourcestartlinenumber=\"1\">Formulario de inicio de sesión para el sistema de gimnasio. Permite al usuario ingresar sus credenciales y acceder al sistema principal.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -428,7 +428,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gimnasio.Presentacion.FrmMembresias",
-      "Summary": "<p sourcefile=\"api/Gimnasio.Presentacion.FrmMembresias.yml\" sourcestartlinenumber=\"1\">Formulario para la gestión de membresías en el sistema del gimnasio. Permite listar, buscar, agregar, actualizar, eliminar membresías y registrar pagos.\nUtiliza la clase <xref href=\"Gimnasio.Negocio.NMembresias\" data-throw-if-not-resolved=\"false\"></xref> para la lógica de negocio y la clase <xref href=\"Gimnasio.Entidades.Membresias\" data-throw-if-not-resolved=\"false\"></xref> como entidad.\nTodas las operaciones de esta capa están envueltas en bloques Try...Catch.\nEl manejo de errores se realiza a través de <xref href=\"Gimnasio.Errores.ManejarErrores.Mostrar(System.String%2cSystem.Exception)\" data-throw-if-not-resolved=\"false\"></xref>\nque permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.</p>\n"
+      "Summary": "<p sourcefile=\"api/Gimnasio.Presentacion.FrmMembresias.yml\" sourcestartlinenumber=\"1\">Formulario para la gestión de membresías en el sistema del gimnasio. Permite listar, buscar, agregar, actualizar, eliminar membresías y registrar pagos.\nUtiliza la clase <xref href=\"Gimnasio.Negocio.NMembresias\" data-throw-if-not-resolved=\"false\"></xref> para la lógica de negocio y la clase <xref href=\"Gimnasio.Entidades.Membresias\" data-throw-if-not-resolved=\"false\"></xref> como entidad.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -442,7 +442,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gimnasio.Presentacion.FrmMiembros",
-      "Summary": "<p sourcefile=\"api/Gimnasio.Presentacion.FrmMiembros.yml\" sourcestartlinenumber=\"1\">Formulario para la gestión de miembros en el sistema del gimnasio. Permite listar, buscar, agregar, actualizar y eliminar miembros.\nUtiliza la clase <xref href=\"Gimnasio.Negocio.NMiembros\" data-throw-if-not-resolved=\"false\"></xref> para la lógica de negocio y la clase <xref href=\"Gimnasio.Entidades.Miembros\" data-throw-if-not-resolved=\"false\"></xref> como entidad.\nTodas las operaciones de esta capa están envueltas en bloques Try...Catch.\nEl manejo de errores se realiza a través de <xref href=\"Gimnasio.Errores.ManejarErrores.Mostrar(System.String%2cSystem.Exception)\" data-throw-if-not-resolved=\"false\"></xref>\nque permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.</p>\n"
+      "Summary": "<p sourcefile=\"api/Gimnasio.Presentacion.FrmMiembros.yml\" sourcestartlinenumber=\"1\">Formulario para la gestión de miembros en el sistema del gimnasio. Permite listar, buscar, agregar, actualizar y eliminar miembros.\nUtiliza la clase <xref href=\"Gimnasio.Negocio.NMiembros\" data-throw-if-not-resolved=\"false\"></xref> para la lógica de negocio y la clase <xref href=\"Gimnasio.Entidades.Miembros\" data-throw-if-not-resolved=\"false\"></xref> como entidad.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -456,7 +456,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gimnasio.Presentacion.FrmPagos",
-      "Summary": "<p sourcefile=\"api/Gimnasio.Presentacion.FrmPagos.yml\" sourcestartlinenumber=\"1\">Formulario para la gestión y consulta de pagos en el sistema del gimnasio. Permite listar, buscar, actualizar y eliminar pagos.\nUtiliza la clase <xref href=\"Gimnasio.Negocio.NPagos\" data-throw-if-not-resolved=\"false\"></xref> para la lógica de negocio y la clase <xref href=\"Gimnasio.Entidades.Pagos\" data-throw-if-not-resolved=\"false\"></xref> como entidad.\nTodas las operaciones de esta capa están envueltas en bloques Try...Catch.\nEl manejo de errores se realiza a través de <xref href=\"Gimnasio.Errores.ManejarErrores.Mostrar(System.String%2cSystem.Exception)\" data-throw-if-not-resolved=\"false\"></xref>\nque permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.</p>\n"
+      "Summary": "<p sourcefile=\"api/Gimnasio.Presentacion.FrmPagos.yml\" sourcestartlinenumber=\"1\">Formulario para la gestión y consulta de pagos en el sistema del gimnasio. Permite listar, buscar, actualizar y eliminar pagos.\nUtiliza la clase <xref href=\"Gimnasio.Negocio.NPagos\" data-throw-if-not-resolved=\"false\"></xref> para la lógica de negocio y la clase <xref href=\"Gimnasio.Entidades.Pagos\" data-throw-if-not-resolved=\"false\"></xref> como entidad.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -470,7 +470,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gimnasio.Presentacion.FrmPlanes",
-      "Summary": "<p sourcefile=\"api/Gimnasio.Presentacion.FrmPlanes.yml\" sourcestartlinenumber=\"1\">Formulario para la gestión de planes en el sistema de gimnasio. Permite listar, buscar, insertar, actualizar y eliminar planes.\nUtiliza la clase <xref href=\"Gimnasio.Negocio.NPlanes\" data-throw-if-not-resolved=\"false\"></xref> para la lógica de negocio y la clase <xref href=\"Gimnasio.Entidades.Planes\" data-throw-if-not-resolved=\"false\"></xref> como entidad.\nEl acceso a las operaciones de mantenimiento depende del rol del usuario (<xref href=\"Gimnasio.Entidades.Usuarios\" data-throw-if-not-resolved=\"false\"></xref>).\nTodas las operaciones de esta capa están envueltas en bloques Try...Catch.\nEl manejo de errores se realiza a través de <xref href=\"Gimnasio.Errores.ManejarErrores.Mostrar(System.String%2cSystem.Exception)\" data-throw-if-not-resolved=\"false\"></xref>\nque permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.</p>\n"
+      "Summary": "<p sourcefile=\"api/Gimnasio.Presentacion.FrmPlanes.yml\" sourcestartlinenumber=\"1\">Formulario para la gestión de planes en el sistema de gimnasio. Permite listar, buscar, insertar, actualizar y eliminar planes.\nUtiliza la clase <xref href=\"Gimnasio.Negocio.NPlanes\" data-throw-if-not-resolved=\"false\"></xref> para la lógica de negocio y la clase <xref href=\"Gimnasio.Entidades.Planes\" data-throw-if-not-resolved=\"false\"></xref> como entidad.\nEl acceso a las operaciones de mantenimiento depende del rol del usuario (<xref href=\"Gimnasio.Entidades.Usuarios\" data-throw-if-not-resolved=\"false\"></xref>).</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -484,7 +484,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gimnasio.Presentacion.FrmPrincipal",
-      "Summary": "<p sourcefile=\"api/Gimnasio.Presentacion.FrmPrincipal.yml\" sourcestartlinenumber=\"1\">Formulario principal de la aplicación del gimnasio. Gestiona la navegación entre los diferentes módulos y controla el acceso según el rol del usuario.\nUtiliza la clase <xref href=\"Gimnasio.Entidades.Usuarios\" data-throw-if-not-resolved=\"false\"></xref> para identificar al usuario logueado y su rol. Llama a formularios secundarios como <xref href=\"Gimnasio.Presentacion.FrmPlanes\" data-throw-if-not-resolved=\"false\"></xref>,\n<xref href=\"Gimnasio.Presentacion.FrmMiembros\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Gimnasio.Presentacion.FrmMembresias\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Gimnasio.Presentacion.FrmPagos\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Gimnasio.Presentacion.FrmRegistroAsistencias\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Gimnasio.Presentacion.FrmReclamos\" data-throw-if-not-resolved=\"false\"></xref> y\n<xref href=\"Gimnasio.Presentacion.FrmUsuarios\" data-throw-if-not-resolved=\"false\"></xref>.\nTodas las operaciones de esta capa están envueltas en bloques Try...Catch.\nEl manejo de errores se realiza a través de <xref href=\"Gimnasio.Errores.ManejarErrores.Mostrar(System.String%2cSystem.Exception)\" data-throw-if-not-resolved=\"false\"></xref>\nque permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.</p>\n"
+      "Summary": "<p sourcefile=\"api/Gimnasio.Presentacion.FrmPrincipal.yml\" sourcestartlinenumber=\"1\">Formulario principal de la aplicación del gimnasio. Gestiona la navegación entre los diferentes módulos y controla el acceso según el rol del usuario.\nUtiliza la clase <xref href=\"Gimnasio.Entidades.Usuarios\" data-throw-if-not-resolved=\"false\"></xref> para identificar al usuario logueado y su rol. Llama a formularios secundarios como <xref href=\"Gimnasio.Presentacion.FrmPlanes\" data-throw-if-not-resolved=\"false\"></xref>,\n<xref href=\"Gimnasio.Presentacion.FrmMiembros\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Gimnasio.Presentacion.FrmMembresias\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Gimnasio.Presentacion.FrmPagos\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Gimnasio.Presentacion.FrmRegistroAsistencias\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Gimnasio.Presentacion.FrmReclamos\" data-throw-if-not-resolved=\"false\"></xref> y\n<xref href=\"Gimnasio.Presentacion.FrmUsuarios\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -526,7 +526,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gimnasio.Presentacion.FrmUsuarios",
-      "Summary": "<p sourcefile=\"api/Gimnasio.Presentacion.FrmUsuarios.yml\" sourcestartlinenumber=\"1\">Formulario para la gestión de usuarios del sistema del gimnasio. Permite listar, buscar, agregar, actualizar y eliminar usuarios.\nUtiliza la clase <xref href=\"Gimnasio.Presentacion.FrmUsuarios.nUsuarios\" data-throw-if-not-resolved=\"false\"></xref> para la lógica de negocio y la clase <xref href=\"Gimnasio.Entidades.Usuarios\" data-throw-if-not-resolved=\"false\"></xref> como entidad.\nTodas las operaciones de esta capa están envueltas en bloques Try...Catch.\nEl manejo de errores se realiza a través de <xref href=\"Gimnasio.Errores.ManejarErrores.Mostrar(System.String%2cSystem.Exception)\" data-throw-if-not-resolved=\"false\"></xref>\nque permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.</p>\n"
+      "Summary": "<p sourcefile=\"api/Gimnasio.Presentacion.FrmUsuarios.yml\" sourcestartlinenumber=\"1\">Formulario para la gestión de usuarios del sistema del gimnasio. Permite listar, buscar, agregar, actualizar y eliminar usuarios.\nUtiliza la clase <xref href=\"Gimnasio.Presentacion.FrmUsuarios.nUsuarios\" data-throw-if-not-resolved=\"false\"></xref> para la lógica de negocio y la clase <xref href=\"Gimnasio.Entidades.Usuarios\" data-throw-if-not-resolved=\"false\"></xref> como entidad.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -651,6 +651,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "goatym.sql",
+      "output": {
+        "resource": {
+          "relative_path": "goatym.sql"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/CasosDeUso.svg",
       "output": {
         "resource": {
@@ -665,6 +675,96 @@
       "output": {
         "resource": {
           "relative_path": "images/ClaseUML.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/GoatymDer.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/GoatymDer.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/TablaAsistencia.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/TablaAsistencia.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/TablaMembresia.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/TablaMembresia.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/TablaMiembro.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/TablaMiembro.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/TablaPago.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/TablaPago.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/TablaPlan.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/TablaPlan.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/TablaReclamos.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/TablaReclamos.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/TablaRol.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/TablaRol.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/TablaUsuariosSistema.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/TablaUsuariosSistema.png"
         }
       },
       "version": ""

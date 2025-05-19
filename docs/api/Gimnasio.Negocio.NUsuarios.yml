@@ -28,7 +28,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: NUsuarios
     path: ../Gimnasio.Negocio/NUsuarios.vb
-    startLine: 14
+    startLine: 16
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -36,7 +36,7 @@ items:
     Lógica de negocio para la gestión de usuarios en el sistema de gimnasio.
 
     Interactúa con la capa de datos <xref href="Gimnasio.Negocio.NUsuarios.dUsuarios" data-throw-if-not-resolved="false"></xref> y la entidad <xref href="Gimnasio.Entidades.Usuarios" data-throw-if-not-resolved="false"></xref>.
-
+  remarks: >-
     Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.  
 
     Si ocurre una excepción, se registra el error utilizando <xref href="Gimnasio.Errores.ManejarErrores.Log(System.String%2cSystem.Exception)" data-throw-if-not-resolved="false"></xref> en un log.txt
@@ -75,7 +75,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: dUsuarios
     path: ../Gimnasio.Negocio/NUsuarios.vb
-    startLine: 18
+    startLine: 20
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -104,7 +104,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ValidarCampos
     path: ../Gimnasio.Negocio/NUsuarios.vb
-    startLine: 24
+    startLine: 26
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -136,7 +136,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: GenerarHash
     path: ../Gimnasio.Negocio/NUsuarios.vb
-    startLine: 53
+    startLine: 55
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -174,7 +174,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Listar
     path: ../Gimnasio.Negocio/NUsuarios.vb
-    startLine: 70
+    startLine: 72
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -205,7 +205,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Insertar
     path: ../Gimnasio.Negocio/NUsuarios.vb
-    startLine: 87
+    startLine: 89
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -244,7 +244,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Actualizar
     path: ../Gimnasio.Negocio/NUsuarios.vb
-    startLine: 107
+    startLine: 109
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -281,7 +281,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Eliminar
     path: ../Gimnasio.Negocio/NUsuarios.vb
-    startLine: 122
+    startLine: 124
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -316,7 +316,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorNombre
     path: ../Gimnasio.Negocio/NUsuarios.vb
-    startLine: 136
+    startLine: 138
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -354,7 +354,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ValidarCredenciales
     path: ../Gimnasio.Negocio/NUsuarios.vb
-    startLine: 161
+    startLine: 163
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio

@@ -6,9 +6,10 @@ Imports Gimnasio.Errores
 ''' Clase de acceso a datos para la gestión de miembros en el sistema de gimnasio.
 ''' Hereda de <see cref="ConexionBase"/> y utiliza la entidad <see cref="Miembros"/>.
 ''' Proporciona métodos CRUD y de búsqueda para la tabla miembros.
-''' 
-''' Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo
 ''' </summary>
+''' <remarks>
+''' Los diccionarios se utilizan para asociar los parametros de la consulta con los parametros del metodo
+''' </remarks>
 Public Class DMiembros
     Inherits ConexionBase
 

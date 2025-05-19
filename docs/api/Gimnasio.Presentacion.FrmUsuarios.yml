@@ -11,10 +11,6 @@ items:
   - Gimnasio.Presentacion.FrmUsuarios.HabilitarIngreso
   - Gimnasio.Presentacion.FrmUsuarios.HabilitarListado
   - Gimnasio.Presentacion.FrmUsuarios.InitializeComponent
-  - Gimnasio.Presentacion.FrmUsuarios.Label1
-  - Gimnasio.Presentacion.FrmUsuarios.Label2
-  - Gimnasio.Presentacion.FrmUsuarios.Label3
-  - Gimnasio.Presentacion.FrmUsuarios.Label6
   - Gimnasio.Presentacion.FrmUsuarios.btnActualizar
   - Gimnasio.Presentacion.FrmUsuarios.btnActualizar_Click(System.Object,System.EventArgs)
   - Gimnasio.Presentacion.FrmUsuarios.btnCancelar
@@ -31,8 +27,12 @@ items:
   - Gimnasio.Presentacion.FrmUsuarios.dgvListado
   - Gimnasio.Presentacion.FrmUsuarios.esNuevo
   - Gimnasio.Presentacion.FrmUsuarios.frmUsuarios_Load(System.Object,System.EventArgs)
-  - Gimnasio.Presentacion.FrmUsuarios.labelTelefono
+  - Gimnasio.Presentacion.FrmUsuarios.labelRol
+  - Gimnasio.Presentacion.FrmUsuarios.lblContraseña
   - Gimnasio.Presentacion.FrmUsuarios.lblDatosIngreso
+  - Gimnasio.Presentacion.FrmUsuarios.lblEmail
+  - Gimnasio.Presentacion.FrmUsuarios.lblNombreCompleto
+  - Gimnasio.Presentacion.FrmUsuarios.lblNombreUsuario
   - Gimnasio.Presentacion.FrmUsuarios.lblTotal
   - Gimnasio.Presentacion.FrmUsuarios.nUsuarios
   - Gimnasio.Presentacion.FrmUsuarios.panelDatosIngreso
@@ -62,7 +62,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: FrmUsuarios
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
-    startLine: 11
+    startLine: 13
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -70,7 +70,7 @@ items:
     Formulario para la gestión de usuarios del sistema del gimnasio. Permite listar, buscar, agregar, actualizar y eliminar usuarios.
 
     Utiliza la clase <xref href="Gimnasio.Presentacion.FrmUsuarios.nUsuarios" data-throw-if-not-resolved="false"></xref> para la lógica de negocio y la clase <xref href="Gimnasio.Entidades.Usuarios" data-throw-if-not-resolved="false"></xref> como entidad.
-
+  remarks: >-
     Todas las operaciones de esta capa están envueltas en bloques Try...Catch. 
 
     El manejo de errores se realiza a través de <xref href="Gimnasio.Errores.ManejarErrores.Mostrar(System.String%2cSystem.Exception)" data-throw-if-not-resolved="false"></xref>
@@ -1319,93 +1319,93 @@ items:
       type: System.Windows.Forms.Button
     content.vb: Friend Overridable Property btnGuardar As Button
   overload: Gimnasio.Presentacion.FrmUsuarios.btnGuardar*
-- uid: Gimnasio.Presentacion.FrmUsuarios.Label2
-  commentId: P:Gimnasio.Presentacion.FrmUsuarios.Label2
-  id: Label2
+- uid: Gimnasio.Presentacion.FrmUsuarios.lblNombreCompleto
+  commentId: P:Gimnasio.Presentacion.FrmUsuarios.lblNombreCompleto
+  id: lblNombreCompleto
   parent: Gimnasio.Presentacion.FrmUsuarios
   langs:
   - csharp
   - vb
-  name: Label2
-  nameWithType: FrmUsuarios.Label2
-  fullName: Gimnasio.Presentacion.FrmUsuarios.Label2
+  name: lblNombreCompleto
+  nameWithType: FrmUsuarios.lblNombreCompleto
+  fullName: Gimnasio.Presentacion.FrmUsuarios.lblNombreCompleto
   type: Property
   source:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
       repo: https://github.com/Carlovich01/gimnasio3.git
-    id: Label2
+    id: lblNombreCompleto
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 415
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
   syntax:
-    content: internal virtual Label Label2 { get; set; }
+    content: internal virtual Label lblNombreCompleto { get; set; }
     parameters: []
     return:
       type: System.Windows.Forms.Label
-    content.vb: Friend Overridable Property Label2 As Label
-  overload: Gimnasio.Presentacion.FrmUsuarios.Label2*
-- uid: Gimnasio.Presentacion.FrmUsuarios.labelTelefono
-  commentId: P:Gimnasio.Presentacion.FrmUsuarios.labelTelefono
-  id: labelTelefono
+    content.vb: Friend Overridable Property lblNombreCompleto As Label
+  overload: Gimnasio.Presentacion.FrmUsuarios.lblNombreCompleto*
+- uid: Gimnasio.Presentacion.FrmUsuarios.labelRol
+  commentId: P:Gimnasio.Presentacion.FrmUsuarios.labelRol
+  id: labelRol
   parent: Gimnasio.Presentacion.FrmUsuarios
   langs:
   - csharp
   - vb
-  name: labelTelefono
-  nameWithType: FrmUsuarios.labelTelefono
-  fullName: Gimnasio.Presentacion.FrmUsuarios.labelTelefono
+  name: labelRol
+  nameWithType: FrmUsuarios.labelRol
+  fullName: Gimnasio.Presentacion.FrmUsuarios.labelRol
   type: Property
   source:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
       repo: https://github.com/Carlovich01/gimnasio3.git
-    id: labelTelefono
+    id: labelRol
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 416
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
   syntax:
-    content: internal virtual Label labelTelefono { get; set; }
+    content: internal virtual Label labelRol { get; set; }
     parameters: []
     return:
       type: System.Windows.Forms.Label
-    content.vb: Friend Overridable Property labelTelefono As Label
-  overload: Gimnasio.Presentacion.FrmUsuarios.labelTelefono*
-- uid: Gimnasio.Presentacion.FrmUsuarios.Label3
-  commentId: P:Gimnasio.Presentacion.FrmUsuarios.Label3
-  id: Label3
+    content.vb: Friend Overridable Property labelRol As Label
+  overload: Gimnasio.Presentacion.FrmUsuarios.labelRol*
+- uid: Gimnasio.Presentacion.FrmUsuarios.lblEmail
+  commentId: P:Gimnasio.Presentacion.FrmUsuarios.lblEmail
+  id: lblEmail
   parent: Gimnasio.Presentacion.FrmUsuarios
   langs:
   - csharp
   - vb
-  name: Label3
-  nameWithType: FrmUsuarios.Label3
-  fullName: Gimnasio.Presentacion.FrmUsuarios.Label3
+  name: lblEmail
+  nameWithType: FrmUsuarios.lblEmail
+  fullName: Gimnasio.Presentacion.FrmUsuarios.lblEmail
   type: Property
   source:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
       repo: https://github.com/Carlovich01/gimnasio3.git
-    id: Label3
+    id: lblEmail
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 417
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
   syntax:
-    content: internal virtual Label Label3 { get; set; }
+    content: internal virtual Label lblEmail { get; set; }
     parameters: []
     return:
       type: System.Windows.Forms.Label
-    content.vb: Friend Overridable Property Label3 As Label
-  overload: Gimnasio.Presentacion.FrmUsuarios.Label3*
+    content.vb: Friend Overridable Property lblEmail As Label
+  overload: Gimnasio.Presentacion.FrmUsuarios.lblEmail*
 - uid: Gimnasio.Presentacion.FrmUsuarios.tbNombreCompleto
   commentId: P:Gimnasio.Presentacion.FrmUsuarios.tbNombreCompleto
   id: tbNombreCompleto
@@ -1493,64 +1493,64 @@ items:
       type: System.Windows.Forms.TextBox
     content.vb: Friend Overridable Property tbContraseña As TextBox
   overload: Gimnasio.Presentacion.FrmUsuarios.tbContraseña*
-- uid: Gimnasio.Presentacion.FrmUsuarios.Label6
-  commentId: P:Gimnasio.Presentacion.FrmUsuarios.Label6
-  id: Label6
+- uid: Gimnasio.Presentacion.FrmUsuarios.lblNombreUsuario
+  commentId: P:Gimnasio.Presentacion.FrmUsuarios.lblNombreUsuario
+  id: lblNombreUsuario
   parent: Gimnasio.Presentacion.FrmUsuarios
   langs:
   - csharp
   - vb
-  name: Label6
-  nameWithType: FrmUsuarios.Label6
-  fullName: Gimnasio.Presentacion.FrmUsuarios.Label6
+  name: lblNombreUsuario
+  nameWithType: FrmUsuarios.lblNombreUsuario
+  fullName: Gimnasio.Presentacion.FrmUsuarios.lblNombreUsuario
   type: Property
   source:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
       repo: https://github.com/Carlovich01/gimnasio3.git
-    id: Label6
+    id: lblNombreUsuario
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 421
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
   syntax:
-    content: internal virtual Label Label6 { get; set; }
+    content: internal virtual Label lblNombreUsuario { get; set; }
     parameters: []
     return:
       type: System.Windows.Forms.Label
-    content.vb: Friend Overridable Property Label6 As Label
-  overload: Gimnasio.Presentacion.FrmUsuarios.Label6*
-- uid: Gimnasio.Presentacion.FrmUsuarios.Label1
-  commentId: P:Gimnasio.Presentacion.FrmUsuarios.Label1
-  id: Label1
+    content.vb: Friend Overridable Property lblNombreUsuario As Label
+  overload: Gimnasio.Presentacion.FrmUsuarios.lblNombreUsuario*
+- uid: Gimnasio.Presentacion.FrmUsuarios.lblContraseña
+  commentId: P:Gimnasio.Presentacion.FrmUsuarios.lblContraseña
+  id: lblContraseña
   parent: Gimnasio.Presentacion.FrmUsuarios
   langs:
   - csharp
   - vb
-  name: Label1
-  nameWithType: FrmUsuarios.Label1
-  fullName: Gimnasio.Presentacion.FrmUsuarios.Label1
+  name: lblContraseña
+  nameWithType: FrmUsuarios.lblContraseña
+  fullName: Gimnasio.Presentacion.FrmUsuarios.lblContraseña
   type: Property
   source:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
       repo: https://github.com/Carlovich01/gimnasio3.git
-    id: Label1
+    id: lblContraseña
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 422
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
   syntax:
-    content: internal virtual Label Label1 { get; set; }
+    content: internal virtual Label lblContraseña { get; set; }
     parameters: []
     return:
       type: System.Windows.Forms.Label
-    content.vb: Friend Overridable Property Label1 As Label
-  overload: Gimnasio.Presentacion.FrmUsuarios.Label1*
+    content.vb: Friend Overridable Property lblContraseña As Label
+  overload: Gimnasio.Presentacion.FrmUsuarios.lblContraseña*
 - uid: Gimnasio.Presentacion.FrmUsuarios.lblDatosIngreso
   commentId: P:Gimnasio.Presentacion.FrmUsuarios.lblDatosIngreso
   id: lblDatosIngreso
@@ -1656,7 +1656,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: nUsuarios
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
-    startLine: 15
+    startLine: 17
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1685,7 +1685,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: esNuevo
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
-    startLine: 19
+    startLine: 21
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1714,7 +1714,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: frmUsuarios_Load
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
-    startLine: 25
+    startLine: 27
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1753,7 +1753,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ActualizarDgv
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
-    startLine: 47
+    startLine: 49
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1786,7 +1786,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ActualizarDgv
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
-    startLine: 62
+    startLine: 64
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1822,7 +1822,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: HabilitarListado
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
-    startLine: 75
+    startLine: 77
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1850,7 +1850,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: HabilitarIngreso
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
-    startLine: 89
+    startLine: 91
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1883,7 +1883,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnInsertar_Click
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
-    startLine: 107
+    startLine: 109
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1926,7 +1926,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnActualizar_Click
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
-    startLine: 127
+    startLine: 129
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1972,7 +1972,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnGuardar_Click
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
-    startLine: 156
+    startLine: 158
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2021,7 +2021,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnCancelar_Click
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
-    startLine: 185
+    startLine: 187
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2057,7 +2057,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: pbMostrarContraseña_Click
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
-    startLine: 196
+    startLine: 198
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2093,7 +2093,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbBuscar_TextChanged
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
-    startLine: 216
+    startLine: 218
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2136,7 +2136,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnEliminar_Click
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
-    startLine: 236
+    startLine: 238
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2171,7 +2171,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: pbReiniciar_Click
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
-    startLine: 262
+    startLine: 264
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -20115,24 +20115,24 @@ references:
   name: btnGuardar
   nameWithType: FrmUsuarios.btnGuardar
   fullName: Gimnasio.Presentacion.FrmUsuarios.btnGuardar
-- uid: Gimnasio.Presentacion.FrmUsuarios.Label2*
-  commentId: Overload:Gimnasio.Presentacion.FrmUsuarios.Label2
-  href: Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_Label2
-  name: Label2
-  nameWithType: FrmUsuarios.Label2
-  fullName: Gimnasio.Presentacion.FrmUsuarios.Label2
-- uid: Gimnasio.Presentacion.FrmUsuarios.labelTelefono*
-  commentId: Overload:Gimnasio.Presentacion.FrmUsuarios.labelTelefono
-  href: Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_labelTelefono
-  name: labelTelefono
-  nameWithType: FrmUsuarios.labelTelefono
-  fullName: Gimnasio.Presentacion.FrmUsuarios.labelTelefono
-- uid: Gimnasio.Presentacion.FrmUsuarios.Label3*
-  commentId: Overload:Gimnasio.Presentacion.FrmUsuarios.Label3
-  href: Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_Label3
-  name: Label3
-  nameWithType: FrmUsuarios.Label3
-  fullName: Gimnasio.Presentacion.FrmUsuarios.Label3
+- uid: Gimnasio.Presentacion.FrmUsuarios.lblNombreCompleto*
+  commentId: Overload:Gimnasio.Presentacion.FrmUsuarios.lblNombreCompleto
+  href: Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_lblNombreCompleto
+  name: lblNombreCompleto
+  nameWithType: FrmUsuarios.lblNombreCompleto
+  fullName: Gimnasio.Presentacion.FrmUsuarios.lblNombreCompleto
+- uid: Gimnasio.Presentacion.FrmUsuarios.labelRol*
+  commentId: Overload:Gimnasio.Presentacion.FrmUsuarios.labelRol
+  href: Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_labelRol
+  name: labelRol
+  nameWithType: FrmUsuarios.labelRol
+  fullName: Gimnasio.Presentacion.FrmUsuarios.labelRol
+- uid: Gimnasio.Presentacion.FrmUsuarios.lblEmail*
+  commentId: Overload:Gimnasio.Presentacion.FrmUsuarios.lblEmail
+  href: Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_lblEmail
+  name: lblEmail
+  nameWithType: FrmUsuarios.lblEmail
+  fullName: Gimnasio.Presentacion.FrmUsuarios.lblEmail
 - uid: Gimnasio.Presentacion.FrmUsuarios.tbNombreCompleto*
   commentId: Overload:Gimnasio.Presentacion.FrmUsuarios.tbNombreCompleto
   href: Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_tbNombreCompleto
@@ -20151,18 +20151,18 @@ references:
   name: tbContraseña
   nameWithType: FrmUsuarios.tbContraseña
   fullName: Gimnasio.Presentacion.FrmUsuarios.tbContraseña
-- uid: Gimnasio.Presentacion.FrmUsuarios.Label6*
-  commentId: Overload:Gimnasio.Presentacion.FrmUsuarios.Label6
-  href: Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_Label6
-  name: Label6
-  nameWithType: FrmUsuarios.Label6
-  fullName: Gimnasio.Presentacion.FrmUsuarios.Label6
-- uid: Gimnasio.Presentacion.FrmUsuarios.Label1*
-  commentId: Overload:Gimnasio.Presentacion.FrmUsuarios.Label1
-  href: Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_Label1
-  name: Label1
-  nameWithType: FrmUsuarios.Label1
-  fullName: Gimnasio.Presentacion.FrmUsuarios.Label1
+- uid: Gimnasio.Presentacion.FrmUsuarios.lblNombreUsuario*
+  commentId: Overload:Gimnasio.Presentacion.FrmUsuarios.lblNombreUsuario
+  href: Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_lblNombreUsuario
+  name: lblNombreUsuario
+  nameWithType: FrmUsuarios.lblNombreUsuario
+  fullName: Gimnasio.Presentacion.FrmUsuarios.lblNombreUsuario
+- uid: Gimnasio.Presentacion.FrmUsuarios.lblContraseña*
+  commentId: Overload:Gimnasio.Presentacion.FrmUsuarios.lblContraseña
+  href: Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_lblContraseña
+  name: lblContraseña
+  nameWithType: FrmUsuarios.lblContraseña
+  fullName: Gimnasio.Presentacion.FrmUsuarios.lblContraseña
 - uid: Gimnasio.Presentacion.FrmUsuarios.lblDatosIngreso*
   commentId: Overload:Gimnasio.Presentacion.FrmUsuarios.lblDatosIngreso
   href: Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_lblDatosIngreso

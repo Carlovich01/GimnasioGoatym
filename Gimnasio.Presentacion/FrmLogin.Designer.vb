@@ -23,26 +23,26 @@ Partial Class FrmLogin
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLogin))
-        PictureBox1 = New PictureBox()
+        pbLogo = New PictureBox()
         tbUsuario = New TextBox()
         tbContraseña = New TextBox()
         lblUsuario = New Label()
         lblContraseña = New Label()
-        btIniciarSesion = New Button()
+        btnIniciarSesion = New Button()
         pbMostrarContraseña = New PictureBox()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(pbLogo, ComponentModel.ISupportInitialize).BeginInit()
         CType(pbMostrarContraseña, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' PictureBox1
+        ' pbLogo
         ' 
-        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(193, 12)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(302, 253)
-        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
-        PictureBox1.TabIndex = 1
-        PictureBox1.TabStop = False
+        pbLogo.Image = CType(resources.GetObject("pbLogo.Image"), Image)
+        pbLogo.Location = New Point(193, 12)
+        pbLogo.Name = "pbLogo"
+        pbLogo.Size = New Size(302, 253)
+        pbLogo.SizeMode = PictureBoxSizeMode.Zoom
+        pbLogo.TabIndex = 1
+        pbLogo.TabStop = False
         ' 
         ' tbUsuario
         ' 
@@ -85,18 +85,18 @@ Partial Class FrmLogin
         lblContraseña.TabIndex = 3
         lblContraseña.Text = "Contraseña:"
         ' 
-        ' btIniciarSesion
+        ' btnIniciarSesion
         ' 
-        btIniciarSesion.BackColor = Color.FromArgb(CByte(123), CByte(179), CByte(75))
-        btIniciarSesion.Cursor = Cursors.Hand
-        btIniciarSesion.FlatStyle = FlatStyle.Flat
-        btIniciarSesion.Font = New Font("Segoe UI", 16F)
-        btIniciarSesion.Location = New Point(260, 432)
-        btIniciarSesion.Name = "btIniciarSesion"
-        btIniciarSesion.Size = New Size(159, 43)
-        btIniciarSesion.TabIndex = 4
-        btIniciarSesion.Text = "Iniciar Sesión"
-        btIniciarSesion.UseVisualStyleBackColor = False
+        btnIniciarSesion.BackColor = Color.FromArgb(CByte(123), CByte(179), CByte(75))
+        btnIniciarSesion.Cursor = Cursors.Hand
+        btnIniciarSesion.FlatStyle = FlatStyle.Flat
+        btnIniciarSesion.Font = New Font("Segoe UI", 16F)
+        btnIniciarSesion.Location = New Point(260, 432)
+        btnIniciarSesion.Name = "btnIniciarSesion"
+        btnIniciarSesion.Size = New Size(159, 43)
+        btnIniciarSesion.TabIndex = 4
+        btnIniciarSesion.Text = "Iniciar Sesión"
+        btnIniciarSesion.UseVisualStyleBackColor = False
         ' 
         ' pbMostrarContraseña
         ' 
@@ -115,26 +115,26 @@ Partial Class FrmLogin
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
         ClientSize = New Size(682, 503)
-        Controls.Add(btIniciarSesion)
+        Controls.Add(btnIniciarSesion)
         Controls.Add(lblContraseña)
         Controls.Add(lblUsuario)
         Controls.Add(tbContraseña)
         Controls.Add(tbUsuario)
-        Controls.Add(PictureBox1)
+        Controls.Add(pbLogo)
         Controls.Add(pbMostrarContraseña)
         Name = "FrmLogin"
         Text = "Inicio de Sesión"
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(pbLogo, ComponentModel.ISupportInitialize).EndInit()
         CType(pbMostrarContraseña, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents pbLogo As PictureBox
     Friend WithEvents tbUsuario As TextBox
     Friend WithEvents tbContraseña As TextBox
     Friend WithEvents lblUsuario As Label
     Friend WithEvents lblContraseña As Label
-    Friend WithEvents btIniciarSesion As Button
+    Friend WithEvents btnIniciarSesion As Button
     Friend WithEvents pbMostrarContraseña As PictureBox
 End Class

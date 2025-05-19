@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class NMembresias | Goatym ">
       
-      <meta name="description" content="L&#243;gica de negocio para la gesti&#243;n de membres&#237;as en el sistema de gimnasio. Interact&#250;a con la capa de datos  y la entidad . Todas las operaciones de la capa de negocio est&#225;n envueltas en bloques Try...Catch. Si ocurre una excepci&#243;n, se registra el error utilizando  en un log.txt Luego, la excepci&#243;n se propaga nuevamente mediante Throw New Exception(ex.Message).">
+      <meta name="description" content="L&#243;gica de negocio para la gesti&#243;n de membres&#237;as en el sistema de gimnasio. Interact&#250;a con la capa de datos  y la entidad .">
       <link rel="icon" href="../images/logo.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Gimnasio_Negocio_NMembresias" data-uid="Gimnasio.Negocio.NMembresias" class="text-break">
-Class NMembresias  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L14"><i class="bi bi-code-slash"></i></a>
+Class NMembresias  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L16"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,10 +97,7 @@ Class NMembresias  <a class="header-action link-secondary" title="View source" h
   </div>
 
   <div class="markdown summary"><p>Lógica de negocio para la gestión de membresías en el sistema de gimnasio.
-Interactúa con la capa de datos <a class="xref" href="Gimnasio.Negocio.NMembresias.html#Gimnasio_Negocio_NMembresias_dMembresias">dMembresias</a> y la entidad <a class="xref" href="Gimnasio.Entidades.Membresias.html">Membresias</a>.
-Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.<br>
-Si ocurre una excepción, se registra el error utilizando <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_">Log(string, Exception)</a> en un log.txt
-Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).</p>
+Interactúa con la capa de datos <a class="xref" href="Gimnasio.Negocio.NMembresias.html#Gimnasio_Negocio_NMembresias_dMembresias">dMembresias</a> y la entidad <a class="xref" href="Gimnasio.Entidades.Membresias.html">Membresias</a>.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -123,6 +120,11 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
 
 
+  <h2 id="Gimnasio_Negocio_NMembresias_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.<br>
+Si ocurre una excepción, se registra el error utilizando <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_">Log(string, Exception)</a> en un log.txt
+Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).</p>
+</div>
 
 
   <h2 class="section" id="fields">Fields
@@ -132,7 +134,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NMembresias_dMembresias" data-uid="Gimnasio.Negocio.NMembresias.dMembresias">
   dMembresias
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Instancia de la capa de datos para membresías.</p>
@@ -146,11 +148,6 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
 
 
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Gimnasio.Datos.DMembresias.html">DMembresias</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -168,7 +165,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NMembresias_ActualizaAEstadoInactiva" data-uid="Gimnasio.Negocio.NMembresias.ActualizaAEstadoInactiva">
   ActualizaAEstadoInactiva()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Actualiza el estado de las membresías vencidas a &quot;Inactiva&quot; utilizando <a class="xref" href="Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ActualizarAEstadoInactiva">ActualizarAEstadoInactiva()</a>.</p>
@@ -195,7 +192,7 @@ Luego, la excepción se propaga nuevamente mediante Throw New Exception(ex.Messa
 
   <h3 id="Gimnasio_Negocio_NMembresias_Actualizar_Gimnasio_Entidades_Membresias_" data-uid="Gimnasio.Negocio.NMembresias.Actualizar(Gimnasio.Entidades.Membresias)">
   Actualizar(Membresias)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L72"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Actualiza los datos de una membresía existente. Valida que no exista con <a class="xref" href="Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_VerificarExistenciaDeMiembroYPlan_Gimnasio_Entidades_Membresias_">VerificarExistenciaDeMiembroYPlan(Membresias)</a>
@@ -229,7 +226,7 @@ Si no existe, actualiza la membresía en la base de datos con <a class="xref" hr
 
   <h3 id="Gimnasio_Negocio_NMembresias_Eliminar_System_UInt32_" data-uid="Gimnasio.Negocio.NMembresias.Eliminar(System.UInt32)">
   Eliminar(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L88"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L90"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Elimina una membresía según su id con <a class="xref" href="Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_Eliminar_System_UInt32_">Eliminar(uint)</a>.</p>
@@ -262,7 +259,7 @@ Si no existe, actualiza la membresía en la base de datos con <a class="xref" hr
 
   <h3 id="Gimnasio_Negocio_NMembresias_Insertar_Gimnasio_Entidades_Membresias_" data-uid="Gimnasio.Negocio.NMembresias.Insertar(Gimnasio.Entidades.Membresias)">
   Insertar(Membresias)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Inserta una nueva membresía en el sistema. Valida que no exista una membresía activa o pendiente de pago para el mismo miembro y plan
@@ -297,7 +294,7 @@ Si no existe, establece la fecha de inicio y fin de la membresía y la inserta e
 
   <h3 id="Gimnasio_Negocio_NMembresias_Listar" data-uid="Gimnasio.Negocio.NMembresias.Listar">
   Listar()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L37"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Obtiene la lista de todas las membresías registradas con <a class="xref" href="Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_Listar">Listar()</a>.
@@ -331,7 +328,7 @@ Antes de listar, actualiza el estado de las membresías vencidas a inactivas med
 
   <h3 id="Gimnasio_Negocio_NMembresias_ListarPorDni_System_String_" data-uid="Gimnasio.Negocio.NMembresias.ListarPorDni(System.String)">
   ListarPorDni(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L130"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L132"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Busca membresías por DNI del miembro con <a class="xref" href="Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ListarPorDni_System_String_">ListarPorDni(string)</a>.</p>
@@ -370,7 +367,7 @@ Antes de listar, actualiza el estado de las membresías vencidas a inactivas med
 
   <h3 id="Gimnasio_Negocio_NMembresias_ListarPorEstado_System_String_" data-uid="Gimnasio.Negocio.NMembresias.ListarPorEstado(System.String)">
   ListarPorEstado(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L159"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L161"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Busca membresías por estado con <a class="xref" href="Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ListarPorEstado_System_String_">ListarPorEstado(string)</a>.</p>
@@ -409,7 +406,7 @@ Antes de listar, actualiza el estado de las membresías vencidas a inactivas med
 
   <h3 id="Gimnasio_Negocio_NMembresias_ListarPorNombrePlan_System_String_" data-uid="Gimnasio.Negocio.NMembresias.ListarPorNombrePlan(System.String)">
   ListarPorNombrePlan(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L145"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L147"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Busca membresías por nombre de plan con <a class="xref" href="Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ListarPorNombrePlan_System_String_">ListarPorNombrePlan(string)</a>.</p>
@@ -454,7 +451,7 @@ Antes de listar, actualiza el estado de las membresías vencidas a inactivas med
 
   <h3 id="Gimnasio_Negocio_NMembresias_ObtenerIdMembresia_Gimnasio_Entidades_Membresias_" data-uid="Gimnasio.Negocio.NMembresias.ObtenerIdMembresia(Gimnasio.Entidades.Membresias)">
   ObtenerIdMembresia(Membresias)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L102"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Obtiene el id de una membresía específica con <a class="xref" href="Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ObtenerIdMembresia_Gimnasio_Entidades_Membresias_">ObtenerIdMembresia(Membresias)</a></p>
@@ -493,7 +490,7 @@ Antes de listar, actualiza el estado de las membresías vencidas a inactivas med
 
   <h3 id="Gimnasio_Negocio_NMembresias_ObtenerMembresiaMasReciente_System_UInt32_" data-uid="Gimnasio.Negocio.NMembresias.ObtenerMembresiaMasReciente(System.UInt32)">
   ObtenerMembresiaMasReciente(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L173"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L175"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Obtiene la membresía más reciente de un miembro con <a class="xref" href="Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ObtenerMembresiaMasReciente_System_UInt32_">ObtenerMembresiaMasReciente(uint)</a>.</p>
@@ -532,7 +529,7 @@ Antes de listar, actualiza el estado de las membresías vencidas a inactivas med
 
   <h3 id="Gimnasio_Negocio_NMembresias_ObtenerPorDni_System_String_" data-uid="Gimnasio.Negocio.NMembresias.ObtenerPorDni(System.String)">
   ObtenerPorDni(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L116"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L118"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Obtiene una membresía por el DNI del miembro con <a class="xref" href="Gimnasio.Datos.DMembresias.html#Gimnasio_Datos_DMembresias_ObtenerPorDni_System_String_">ObtenerPorDni(string)</a>.</p>
@@ -571,7 +568,7 @@ Antes de listar, actualiza el estado de las membresías vencidas a inactivas med
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L14" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Negocio/NMembresias.vb/#L16" class="edit-link">Edit this page</a>
         </div>
 
 

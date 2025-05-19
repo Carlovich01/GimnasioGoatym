@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmRegistroAsistencias
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,22 +20,20 @@ Partial Class FrmRegistroAsistencias
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         cbOpcionBuscar = New ComboBox()
         lblTotal = New Label()
         dgvListado = New DataGridView()
         tbBuscar = New TextBox()
         PanelFecha = New Panel()
         btnBuscar = New Button()
-        Label4 = New Label()
-        Label3 = New Label()
+        lblFin = New Label()
+        lblInicio = New Label()
         dtpFechaInicio = New DateTimePicker()
         dtpFechaFin = New DateTimePicker()
-        Label2 = New Label()
-        Label1 = New Label()
         BtnBuscarFecha = New Button()
         btnEliminar = New Button()
         btnInsertar = New Button()
@@ -78,28 +76,28 @@ Partial Class FrmRegistroAsistencias
         dgvListado.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         dgvListado.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvListado.BackgroundColor = Color.FromArgb(CByte(85), CByte(96), CByte(105))
-        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = SystemColors.Window
-        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        dgvListado.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = SystemColors.Window
+        DataGridViewCellStyle3.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle3.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
+        dgvListado.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         dgvListado.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvListado.GridColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
         dgvListado.Location = New Point(11, 57)
         dgvListado.MultiSelect = False
         dgvListado.Name = "dgvListado"
         dgvListado.ReadOnly = True
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = SystemColors.Window
-        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        dgvListado.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = SystemColors.Window
+        DataGridViewCellStyle4.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
+        dgvListado.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         dgvListado.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         dgvListado.Size = New Size(986, 618)
         dgvListado.TabIndex = 25
@@ -115,12 +113,10 @@ Partial Class FrmRegistroAsistencias
         ' PanelFecha
         ' 
         PanelFecha.Controls.Add(btnBuscar)
-        PanelFecha.Controls.Add(Label4)
-        PanelFecha.Controls.Add(Label3)
+        PanelFecha.Controls.Add(lblFin)
+        PanelFecha.Controls.Add(lblInicio)
         PanelFecha.Controls.Add(dtpFechaInicio)
         PanelFecha.Controls.Add(dtpFechaFin)
-        PanelFecha.Controls.Add(Label2)
-        PanelFecha.Controls.Add(Label1)
         PanelFecha.Controls.Add(BtnBuscarFecha)
         PanelFecha.Location = New Point(269, 2)
         PanelFecha.Name = "PanelFecha"
@@ -138,27 +134,27 @@ Partial Class FrmRegistroAsistencias
         btnBuscar.Text = "Buscar Fecha"
         btnBuscar.UseVisualStyleBackColor = True
         ' 
-        ' Label4
+        ' lblFin
         ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 12F)
-        Label4.ForeColor = Color.White
-        Label4.Location = New Point(299, 19)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(49, 21)
-        Label4.TabIndex = 26
-        Label4.Text = "Hasta"
+        lblFin.AutoSize = True
+        lblFin.Font = New Font("Segoe UI", 12F)
+        lblFin.ForeColor = Color.White
+        lblFin.Location = New Point(319, 18)
+        lblFin.Name = "lblFin"
+        lblFin.Size = New Size(34, 21)
+        lblFin.TabIndex = 26
+        lblFin.Text = "Fin:"
         ' 
-        ' Label3
+        ' lblInicio
         ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 12F)
-        Label3.ForeColor = Color.White
-        Label3.Location = New Point(13, 19)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(56, 21)
-        Label3.TabIndex = 26
-        Label3.Text = "Desde:"
+        lblInicio.AutoSize = True
+        lblInicio.Font = New Font("Segoe UI", 12F)
+        lblInicio.ForeColor = Color.White
+        lblInicio.Location = New Point(19, 18)
+        lblInicio.Name = "lblInicio"
+        lblInicio.Size = New Size(50, 21)
+        lblInicio.TabIndex = 26
+        lblInicio.Text = "Inicio:"
         ' 
         ' dtpFechaInicio
         ' 
@@ -177,32 +173,6 @@ Partial Class FrmRegistroAsistencias
         dtpFechaFin.Name = "dtpFechaFin"
         dtpFechaFin.Size = New Size(200, 29)
         dtpFechaFin.TabIndex = 25
-        ' 
-        ' Label2
-        ' 
-        Label2.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
-        Label2.AutoSize = True
-        Label2.BackColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
-        Label2.Font = New Font("Segoe UI", 12F)
-        Label2.ForeColor = Color.White
-        Label2.Location = New Point(740, -36)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(34, 21)
-        Label2.TabIndex = 21
-        Label2.Text = "Fin:"
-        ' 
-        ' Label1
-        ' 
-        Label1.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
-        Label1.AutoSize = True
-        Label1.BackColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
-        Label1.Font = New Font("Segoe UI", 12F)
-        Label1.ForeColor = Color.White
-        Label1.Location = New Point(473, -36)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(50, 21)
-        Label1.TabIndex = 21
-        Label1.Text = "Inicio:"
         ' 
         ' BtnBuscarFecha
         ' 
@@ -260,10 +230,10 @@ Partial Class FrmRegistroAsistencias
         Controls.Add(pbReiniciar)
         Controls.Add(btnInsertar)
         Controls.Add(btnEliminar)
-        Controls.Add(PanelFecha)
         Controls.Add(cbOpcionBuscar)
         Controls.Add(lblTotal)
         Controls.Add(dgvListado)
+        Controls.Add(PanelFecha)
         Controls.Add(tbBuscar)
         Name = "FrmRegistroAsistencias"
         Text = "FrmRegistroAsistencias"
@@ -279,12 +249,10 @@ Partial Class FrmRegistroAsistencias
     Friend WithEvents dgvListado As DataGridView
     Friend WithEvents tbBuscar As TextBox
     Friend WithEvents PanelFecha As Panel
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents lblFin As Label
+    Friend WithEvents lblInicio As Label
     Friend WithEvents dtpFechaInicio As DateTimePicker
     Friend WithEvents dtpFechaFin As DateTimePicker
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents BtnBuscarFecha As Button
     Friend WithEvents btnBuscar As Button
     Friend WithEvents btnEliminar As Button

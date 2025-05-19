@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ConexionBase | Goatym ">
       
-      <meta name="description" content="Clase base para la gesti&#243;n de la conexi&#243;n y operaciones con la base de datos MySQL. Proporciona m&#233;todos gen&#233;ricos para ejecutar consultas y comandos SQL. Beneficios de utilizar  y :  Centralizan y simplifican el acceso a datos, evitando duplicaci&#243;n de c&#243;digo. Permiten el uso de par&#225;metros, ayudando a prevenir inyecciones SQL. Manejan autom&#225;ticamente la apertura y cierre de conexiones. Facilitan el mantenimiento y la escalabilidad del acceso a la base de datos.  Todas las operaciones de acceso a datos est&#225;n envueltas en bloques Try...Catch.  Si ocurre una excepci&#243;n durante la ejecuci&#243;n de una consulta o comando SQL, el error se registra en el archivo de log mediante . Tras registrar el error, la excepci&#243;n se propaga nuevamente mediante Throw New Exception(ex.Message).">
+      <meta name="description" content="Clase base para la gesti&#243;n de la conexi&#243;n y operaciones con la base de datos MySQL. Proporciona m&#233;todos gen&#233;ricos para ejecutar consultas y comandos SQL.">
       <link rel="icon" href="../images/logo.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Gimnasio_Datos_ConexionBase" data-uid="Gimnasio.Datos.ConexionBase" class="text-break">
-Class ConexionBase  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/Conexion.vb/#L19"><i class="bi bi-code-slash"></i></a>
+Class ConexionBase  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/Conexion.vb/#L20"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -98,19 +98,6 @@ Class ConexionBase  <a class="header-action link-secondary" title="View source" 
 
   <div class="markdown summary"><p>Clase base para la gestión de la conexión y operaciones con la base de datos MySQL.
 Proporciona métodos genéricos para ejecutar consultas y comandos SQL.</p>
-<p>Beneficios de utilizar <a class="xref" href="Gimnasio.Datos.ConexionBase.html#Gimnasio_Datos_ConexionBase_ExecuteQuery_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__">ExecuteQuery(string, Dictionary&lt;string, object&gt;)</a> y <a class="xref" href="Gimnasio.Datos.ConexionBase.html#Gimnasio_Datos_ConexionBase_ExecuteNonQuery_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__">ExecuteNonQuery(string, Dictionary&lt;string, object&gt;)</a>:</p>
-<ul>
-<li>Centralizan y simplifican el acceso a datos, evitando duplicación de código.</li>
-<li>Permiten el uso de parámetros, ayudando a prevenir inyecciones SQL.</li>
-<li>Manejan automáticamente la apertura y cierre de conexiones.</li>
-<li>Facilitan el mantenimiento y la escalabilidad del acceso a la base de datos.</li>
-</ul>
-<p>Todas las operaciones de acceso a datos están envueltas en bloques Try...Catch.</p>
-<ul>
-<li>Si ocurre una excepción durante la ejecución de una consulta o comando SQL, el error se registra en el archivo de log
-mediante <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_">Log(string, Exception)</a>.</li>
-<li>Tras registrar el error, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).</li>
-</ul>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -145,6 +132,21 @@ mediante <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Err
 
 
 
+  <h2 id="Gimnasio_Datos_ConexionBase_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Beneficios de utilizar <a class="xref" href="Gimnasio.Datos.ConexionBase.html#Gimnasio_Datos_ConexionBase_ExecuteQuery_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__">ExecuteQuery(string, Dictionary&lt;string, object&gt;)</a> y <a class="xref" href="Gimnasio.Datos.ConexionBase.html#Gimnasio_Datos_ConexionBase_ExecuteNonQuery_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__">ExecuteNonQuery(string, Dictionary&lt;string, object&gt;)</a>:</p>
+<ul>
+<li>Centralizan y simplifican el acceso a datos, evitando duplicación de código.</li>
+<li>Permiten el uso de parámetros, ayudando a prevenir inyecciones SQL.</li>
+<li>Manejan automáticamente la apertura y cierre de conexiones.</li>
+<li>Facilitan el mantenimiento y la escalabilidad del acceso a la base de datos.</li>
+</ul>
+<p>Todas las operaciones de acceso a datos están envueltas en bloques Try...Catch.</p>
+<ul>
+<li>Si ocurre una excepción durante la ejecución de una consulta o comando SQL, el error se registra en el archivo de log
+mediante <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Errores_ManejarErrores_Log_System_String_System_Exception_">Log(string, Exception)</a>.</li>
+<li>Tras registrar el error, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).</li>
+</ul>
+</div>
 
 
   <h2 class="section" id="fields">Fields
@@ -154,7 +156,7 @@ mediante <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Err
 
   <h3 id="Gimnasio_Datos_ConexionBase_connectionString" data-uid="Gimnasio.Datos.ConexionBase.connectionString">
   connectionString
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/Conexion.vb/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/Conexion.vb/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Cadena de conexión a la base de datos MySQL.</p>
@@ -168,11 +170,6 @@ mediante <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Err
 
 
 
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -190,7 +187,7 @@ mediante <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Err
 
   <h3 id="Gimnasio_Datos_ConexionBase_ExecuteNonQuery_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__" data-uid="Gimnasio.Datos.ConexionBase.ExecuteNonQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
   ExecuteNonQuery(string, Dictionary&lt;string, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/Conexion.vb/#L67"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/Conexion.vb/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Ejecuta un comando SQL sobre la base de datos MySQL que no retorna resultados (por ejemplo, INSERT, UPDATE o DELETE). Proceso:</p>
@@ -232,7 +229,7 @@ mediante <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Err
 
   <h3 id="Gimnasio_Datos_ConexionBase_ExecuteQuery_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__" data-uid="Gimnasio.Datos.ConexionBase.ExecuteQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
   ExecuteQuery(string, Dictionary&lt;string, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/Conexion.vb/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/Conexion.vb/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Ejecuta una consulta SQL sobre la base de datos MySQL y retorna los resultados en un DataTable. Proceso:</p>
@@ -280,7 +277,7 @@ mediante <a class="xref" href="Gimnasio.Errores.ManejarErrores.html#Gimnasio_Err
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/Conexion.vb/#L19" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Datos/Conexion.vb/#L20" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -8,12 +8,12 @@ items:
   - Gimnasio.Presentacion.FrmAsistencias.#ctor(Gimnasio.Presentacion.FrmRegistroAsistencias)
   - Gimnasio.Presentacion.FrmAsistencias.Dispose(System.Boolean)
   - Gimnasio.Presentacion.FrmAsistencias.InitializeComponent
-  - Gimnasio.Presentacion.FrmAsistencias.Label2
   - Gimnasio.Presentacion.FrmAsistencias.components
   - Gimnasio.Presentacion.FrmAsistencias.dgvListado
   - Gimnasio.Presentacion.FrmAsistencias.frmAsistencias_Load(System.Object,System.EventArgs)
   - Gimnasio.Presentacion.FrmAsistencias.frmRegistro
   - Gimnasio.Presentacion.FrmAsistencias.labelResultado
+  - Gimnasio.Presentacion.FrmAsistencias.lblParaIngresarDNI
   - Gimnasio.Presentacion.FrmAsistencias.nAsistencias
   - Gimnasio.Presentacion.FrmAsistencias.tbDNI
   - Gimnasio.Presentacion.FrmAsistencias.tbDNI_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)
@@ -31,7 +31,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: FrmAsistencias
     path: ../Gimnasio.Presentacion/FrmAsistencias.vb
-    startLine: 11
+    startLine: 13
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -41,7 +41,7 @@ items:
     Permite registrar el ingreso, mostrar el estado de las membresías y los días restantes.
 
     Utiliza la clase <xref href="Gimnasio.Negocio.NAsistencia" data-throw-if-not-resolved="false"></xref> para la lógica de negocio de asistencias y <xref href="Gimnasio.Negocio.NMembresias" data-throw-if-not-resolved="false"></xref> para la consulta de membresías.
-
+  remarks: >-
     Todas las operaciones de esta capa están envueltas en bloques Try...Catch. 
 
     El manejo de errores se realiza a través de <xref href="Gimnasio.Errores.ManejarErrores.Mostrar(System.String%2cSystem.Exception)" data-throw-if-not-resolved="false"></xref>
@@ -913,35 +913,35 @@ items:
       type: System.Windows.Forms.TextBox
     content.vb: Friend Overridable Property tbDNI As TextBox
   overload: Gimnasio.Presentacion.FrmAsistencias.tbDNI*
-- uid: Gimnasio.Presentacion.FrmAsistencias.Label2
-  commentId: P:Gimnasio.Presentacion.FrmAsistencias.Label2
-  id: Label2
+- uid: Gimnasio.Presentacion.FrmAsistencias.lblParaIngresarDNI
+  commentId: P:Gimnasio.Presentacion.FrmAsistencias.lblParaIngresarDNI
+  id: lblParaIngresarDNI
   parent: Gimnasio.Presentacion.FrmAsistencias
   langs:
   - csharp
   - vb
-  name: Label2
-  nameWithType: FrmAsistencias.Label2
-  fullName: Gimnasio.Presentacion.FrmAsistencias.Label2
+  name: lblParaIngresarDNI
+  nameWithType: FrmAsistencias.lblParaIngresarDNI
+  fullName: Gimnasio.Presentacion.FrmAsistencias.lblParaIngresarDNI
   type: Property
   source:
     remote:
       path: Gimnasio.Presentacion/FrmAsistencias.Designer.vb
       branch: main
       repo: https://github.com/Carlovich01/gimnasio3.git
-    id: Label2
+    id: lblParaIngresarDNI
     path: ../Gimnasio.Presentacion/FrmAsistencias.Designer.vb
     startLine: 124
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
   syntax:
-    content: internal virtual Label Label2 { get; set; }
+    content: internal virtual Label lblParaIngresarDNI { get; set; }
     parameters: []
     return:
       type: System.Windows.Forms.Label
-    content.vb: Friend Overridable Property Label2 As Label
-  overload: Gimnasio.Presentacion.FrmAsistencias.Label2*
+    content.vb: Friend Overridable Property lblParaIngresarDNI As Label
+  overload: Gimnasio.Presentacion.FrmAsistencias.lblParaIngresarDNI*
 - uid: Gimnasio.Presentacion.FrmAsistencias.labelResultado
   commentId: P:Gimnasio.Presentacion.FrmAsistencias.labelResultado
   id: labelResultado
@@ -1018,7 +1018,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: nAsistencias
     path: ../Gimnasio.Presentacion/FrmAsistencias.vb
-    startLine: 15
+    startLine: 17
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1047,7 +1047,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: frmRegistro
     path: ../Gimnasio.Presentacion/FrmAsistencias.vb
-    startLine: 20
+    startLine: 22
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1076,7 +1076,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: .ctor
     path: ../Gimnasio.Presentacion/FrmAsistencias.vb
-    startLine: 28
+    startLine: 30
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1116,7 +1116,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: frmAsistencias_Load
     path: ../Gimnasio.Presentacion/FrmAsistencias.vb
-    startLine: 36
+    startLine: 38
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1152,7 +1152,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbDNI_KeyPress
     path: ../Gimnasio.Presentacion/FrmAsistencias.vb
-    startLine: 57
+    startLine: 59
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -18982,12 +18982,12 @@ references:
   name: TextBox
   nameWithType: TextBox
   fullName: System.Windows.Forms.TextBox
-- uid: Gimnasio.Presentacion.FrmAsistencias.Label2*
-  commentId: Overload:Gimnasio.Presentacion.FrmAsistencias.Label2
-  href: Gimnasio.Presentacion.FrmAsistencias.html#Gimnasio_Presentacion_FrmAsistencias_Label2
-  name: Label2
-  nameWithType: FrmAsistencias.Label2
-  fullName: Gimnasio.Presentacion.FrmAsistencias.Label2
+- uid: Gimnasio.Presentacion.FrmAsistencias.lblParaIngresarDNI*
+  commentId: Overload:Gimnasio.Presentacion.FrmAsistencias.lblParaIngresarDNI
+  href: Gimnasio.Presentacion.FrmAsistencias.html#Gimnasio_Presentacion_FrmAsistencias_lblParaIngresarDNI
+  name: lblParaIngresarDNI
+  nameWithType: FrmAsistencias.lblParaIngresarDNI
+  fullName: Gimnasio.Presentacion.FrmAsistencias.lblParaIngresarDNI
 - uid: System.Windows.Forms.Label
   commentId: T:System.Windows.Forms.Label
   parent: System.Windows.Forms

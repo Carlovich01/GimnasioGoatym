@@ -22,10 +22,10 @@ Partial Class FrmReclamos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         panelListado = New Panel()
-        Label1 = New Label()
+        lblBuscar = New Label()
         btnEliminar = New Button()
         cbOpcionBuscar = New ComboBox()
         lblTotal = New Label()
@@ -35,21 +35,21 @@ Partial Class FrmReclamos
         btnInsertar = New Button()
         btnResponder = New Button()
         panelRespuestaIngreso = New Panel()
-        Label5 = New Label()
+        lblResponder = New Label()
         tbCancelarRespuesta = New Button()
         tbGuardarRespuesta = New Button()
         TbRespuesta = New TextBox()
         panelDatosIngreso = New Panel()
         tbID = New TextBox()
         lblDatosIngreso = New Label()
-        Label3 = New Label()
+        lblDNI = New Label()
         tbDNI = New TextBox()
         cbTipo = New ComboBox()
         btnCancelar = New Button()
         btnGuardar = New Button()
         tbDescripcion = New TextBox()
-        Label2 = New Label()
-        Label4 = New Label()
+        lblDescripcion = New Label()
+        lblTipo = New Label()
         panelListado.SuspendLayout()
         CType(dgvListado, ComponentModel.ISupportInitialize).BeginInit()
         panelRespuestaIngreso.SuspendLayout()
@@ -58,7 +58,7 @@ Partial Class FrmReclamos
         ' 
         ' panelListado
         ' 
-        panelListado.Controls.Add(Label1)
+        panelListado.Controls.Add(lblBuscar)
         panelListado.Controls.Add(btnEliminar)
         panelListado.Controls.Add(cbOpcionBuscar)
         panelListado.Controls.Add(lblTotal)
@@ -73,16 +73,16 @@ Partial Class FrmReclamos
         panelListado.Size = New Size(1008, 729)
         panelListado.TabIndex = 0
         ' 
-        ' Label1
+        ' lblBuscar
         ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 12F)
-        Label1.ForeColor = Color.White
-        Label1.Location = New Point(17, 15)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(87, 21)
-        Label1.TabIndex = 54
-        Label1.Text = "Buscar por:"
+        lblBuscar.AutoSize = True
+        lblBuscar.Font = New Font("Segoe UI", 12F)
+        lblBuscar.ForeColor = Color.White
+        lblBuscar.Location = New Point(17, 15)
+        lblBuscar.Name = "lblBuscar"
+        lblBuscar.Size = New Size(87, 21)
+        lblBuscar.TabIndex = 54
+        lblBuscar.Text = "Buscar por:"
         ' 
         ' btnEliminar
         ' 
@@ -153,28 +153,28 @@ Partial Class FrmReclamos
         dgvListado.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         dgvListado.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvListado.BackgroundColor = Color.FromArgb(CByte(85), CByte(96), CByte(105))
-        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = SystemColors.Window
-        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        dgvListado.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = SystemColors.Window
+        DataGridViewCellStyle3.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle3.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
+        dgvListado.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         dgvListado.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvListado.GridColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
         dgvListado.Location = New Point(11, 57)
         dgvListado.MultiSelect = False
         dgvListado.Name = "dgvListado"
         dgvListado.ReadOnly = True
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = SystemColors.Window
-        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        dgvListado.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = SystemColors.Window
+        DataGridViewCellStyle4.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
+        dgvListado.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         dgvListado.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         dgvListado.Size = New Size(986, 618)
         dgvListado.TabIndex = 46
@@ -205,7 +205,7 @@ Partial Class FrmReclamos
         ' 
         ' panelRespuestaIngreso
         ' 
-        panelRespuestaIngreso.Controls.Add(Label5)
+        panelRespuestaIngreso.Controls.Add(lblResponder)
         panelRespuestaIngreso.Controls.Add(tbCancelarRespuesta)
         panelRespuestaIngreso.Controls.Add(tbGuardarRespuesta)
         panelRespuestaIngreso.Controls.Add(TbRespuesta)
@@ -215,16 +215,16 @@ Partial Class FrmReclamos
         panelRespuestaIngreso.TabIndex = 55
         panelRespuestaIngreso.Visible = False
         ' 
-        ' Label5
+        ' lblResponder
         ' 
-        Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.ForeColor = Color.White
-        Label5.Location = New Point(231, 24)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(85, 21)
-        Label5.TabIndex = 57
-        Label5.Text = "Responder"
+        lblResponder.AutoSize = True
+        lblResponder.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblResponder.ForeColor = Color.White
+        lblResponder.Location = New Point(231, 24)
+        lblResponder.Name = "lblResponder"
+        lblResponder.Size = New Size(85, 21)
+        lblResponder.TabIndex = 57
+        lblResponder.Text = "Responder"
         ' 
         ' tbCancelarRespuesta
         ' 
@@ -236,7 +236,7 @@ Partial Class FrmReclamos
         tbCancelarRespuesta.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         tbCancelarRespuesta.FlatStyle = FlatStyle.Flat
         tbCancelarRespuesta.Font = New Font("Segoe UI", 12F)
-        tbCancelarRespuesta.Location = New Point(362, 380)
+        tbCancelarRespuesta.Location = New Point(190, 380)
         tbCancelarRespuesta.Name = "tbCancelarRespuesta"
         tbCancelarRespuesta.Size = New Size(126, 29)
         tbCancelarRespuesta.TabIndex = 56
@@ -252,7 +252,7 @@ Partial Class FrmReclamos
         tbGuardarRespuesta.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         tbGuardarRespuesta.FlatStyle = FlatStyle.Flat
         tbGuardarRespuesta.Font = New Font("Segoe UI", 12F)
-        tbGuardarRespuesta.Location = New Point(129, 380)
+        tbGuardarRespuesta.Location = New Point(23, 380)
         tbGuardarRespuesta.Name = "tbGuardarRespuesta"
         tbGuardarRespuesta.Size = New Size(126, 29)
         tbGuardarRespuesta.TabIndex = 55
@@ -272,14 +272,14 @@ Partial Class FrmReclamos
         ' 
         panelDatosIngreso.Controls.Add(tbID)
         panelDatosIngreso.Controls.Add(lblDatosIngreso)
-        panelDatosIngreso.Controls.Add(Label3)
+        panelDatosIngreso.Controls.Add(lblDNI)
         panelDatosIngreso.Controls.Add(tbDNI)
         panelDatosIngreso.Controls.Add(cbTipo)
         panelDatosIngreso.Controls.Add(btnCancelar)
         panelDatosIngreso.Controls.Add(btnGuardar)
         panelDatosIngreso.Controls.Add(tbDescripcion)
-        panelDatosIngreso.Controls.Add(Label2)
-        panelDatosIngreso.Controls.Add(Label4)
+        panelDatosIngreso.Controls.Add(lblDescripcion)
+        panelDatosIngreso.Controls.Add(lblTipo)
         panelDatosIngreso.Location = New Point(303, 191)
         panelDatosIngreso.Name = "panelDatosIngreso"
         panelDatosIngreso.Size = New Size(616, 432)
@@ -306,16 +306,16 @@ Partial Class FrmReclamos
         lblDatosIngreso.TabIndex = 54
         lblDatosIngreso.Text = "Agregar reclamo"
         ' 
-        ' Label3
+        ' lblDNI
         ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 12F)
-        Label3.ForeColor = Color.White
-        Label3.Location = New Point(23, 267)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(113, 21)
-        Label3.TabIndex = 52
-        Label3.Text = "DNI (opcional):"
+        lblDNI.AutoSize = True
+        lblDNI.Font = New Font("Segoe UI", 12F)
+        lblDNI.ForeColor = Color.White
+        lblDNI.Location = New Point(23, 267)
+        lblDNI.Name = "lblDNI"
+        lblDNI.Size = New Size(113, 21)
+        lblDNI.TabIndex = 52
+        lblDNI.Text = "DNI (opcional):"
         ' 
         ' tbDNI
         ' 
@@ -380,27 +380,27 @@ Partial Class FrmReclamos
         tbDescripcion.Size = New Size(418, 111)
         tbDescripcion.TabIndex = 47
         ' 
-        ' Label2
+        ' lblDescripcion
         ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 12F)
-        Label2.ForeColor = Color.White
-        Label2.Location = New Point(25, 112)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(111, 21)
-        Label2.TabIndex = 45
-        Label2.Text = "Descripcion(*):"
+        lblDescripcion.AutoSize = True
+        lblDescripcion.Font = New Font("Segoe UI", 12F)
+        lblDescripcion.ForeColor = Color.White
+        lblDescripcion.Location = New Point(25, 112)
+        lblDescripcion.Name = "lblDescripcion"
+        lblDescripcion.Size = New Size(111, 21)
+        lblDescripcion.TabIndex = 45
+        lblDescripcion.Text = "Descripcion(*):"
         ' 
-        ' Label4
+        ' lblTipo
         ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 12F)
-        Label4.ForeColor = Color.White
-        Label4.Location = New Point(76, 40)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(60, 21)
-        Label4.TabIndex = 46
-        Label4.Text = "Tipo(*):"
+        lblTipo.AutoSize = True
+        lblTipo.Font = New Font("Segoe UI", 12F)
+        lblTipo.ForeColor = Color.White
+        lblTipo.Location = New Point(76, 40)
+        lblTipo.Name = "lblTipo"
+        lblTipo.Size = New Size(60, 21)
+        lblTipo.TabIndex = 46
+        lblTipo.Text = "Tipo(*):"
         ' 
         ' FrmReclamos
         ' 
@@ -408,8 +408,8 @@ Partial Class FrmReclamos
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
         ClientSize = New Size(1008, 729)
-        Controls.Add(panelRespuestaIngreso)
         Controls.Add(panelDatosIngreso)
+        Controls.Add(panelRespuestaIngreso)
         Controls.Add(panelListado)
         Name = "FrmReclamos"
         Text = "FrmReclamos"
@@ -425,7 +425,7 @@ Partial Class FrmReclamos
 
     Friend WithEvents panelListado As Panel
     Friend WithEvents panelDatosIngreso As Panel
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblBuscar As Label
     Friend WithEvents btnEliminar As Button
     Friend WithEvents cbOpcionBuscar As ComboBox
     Friend WithEvents lblTotal As Label
@@ -434,17 +434,17 @@ Partial Class FrmReclamos
     Friend WithEvents dgvListado As DataGridView
     Friend WithEvents btnInsertar As Button
     Friend WithEvents btnResponder As Button
-    Friend WithEvents Label3 As Label
+    Friend WithEvents lblDNI As Label
     Friend WithEvents tbDNI As TextBox
     Friend WithEvents cbTipo As ComboBox
     Friend WithEvents btnCancelar As Button
     Friend WithEvents btnGuardar As Button
     Friend WithEvents tbDescripcion As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents lblDescripcion As Label
+    Friend WithEvents lblTipo As Label
     Friend WithEvents lblDatosIngreso As Label
     Friend WithEvents panelRespuestaIngreso As Panel
-    Friend WithEvents Label5 As Label
+    Friend WithEvents lblResponder As Label
     Friend WithEvents tbCancelarRespuesta As Button
     Friend WithEvents tbGuardarRespuesta As Button
     Friend WithEvents TbRespuesta As TextBox

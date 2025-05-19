@@ -10,8 +10,7 @@ items:
   - Gimnasio.Presentacion.FrmPrincipal.InitializeComponent
   - Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario(System.Windows.Forms.Form)
   - Gimnasio.Presentacion.FrmPrincipal.PanelDeFormularios
-  - Gimnasio.Presentacion.FrmPrincipal.PictureBox1
-  - Gimnasio.Presentacion.FrmPrincipal.ToolStrip1
+  - Gimnasio.Presentacion.FrmPrincipal.ToolStripPestañas
   - Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator1
   - Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator2
   - Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator3
@@ -41,6 +40,7 @@ items:
   - Gimnasio.Presentacion.FrmPrincipal.miCerrarSesion_Click(System.Object,System.EventArgs)
   - Gimnasio.Presentacion.FrmPrincipal.miCerrarSesión
   - Gimnasio.Presentacion.FrmPrincipal.obtenerUsuarioActual
+  - Gimnasio.Presentacion.FrmPrincipal.pbLogo
   - Gimnasio.Presentacion.FrmPrincipal.usuarioActual
   langs:
   - csharp
@@ -56,7 +56,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: FrmPrincipal
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 13
+    startLine: 15
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -68,7 +68,7 @@ items:
     <xref href="Gimnasio.Presentacion.FrmMiembros" data-throw-if-not-resolved="false"></xref>, <xref href="Gimnasio.Presentacion.FrmMembresias" data-throw-if-not-resolved="false"></xref>, <xref href="Gimnasio.Presentacion.FrmPagos" data-throw-if-not-resolved="false"></xref>, <xref href="Gimnasio.Presentacion.FrmRegistroAsistencias" data-throw-if-not-resolved="false"></xref>, <xref href="Gimnasio.Presentacion.FrmReclamos" data-throw-if-not-resolved="false"></xref> y 
 
     <xref href="Gimnasio.Presentacion.FrmUsuarios" data-throw-if-not-resolved="false"></xref>.
-
+  remarks: >-
     Todas las operaciones de esta capa están envueltas en bloques Try...Catch. 
 
     El manejo de errores se realiza a través de <xref href="Gimnasio.Errores.ManejarErrores.Mostrar(System.String%2cSystem.Exception)" data-throw-if-not-resolved="false"></xref>
@@ -911,35 +911,35 @@ items:
     content: private void InitializeComponent()
     content.vb: Private Sub InitializeComponent()
   overload: Gimnasio.Presentacion.FrmPrincipal.InitializeComponent*
-- uid: Gimnasio.Presentacion.FrmPrincipal.ToolStrip1
-  commentId: P:Gimnasio.Presentacion.FrmPrincipal.ToolStrip1
-  id: ToolStrip1
+- uid: Gimnasio.Presentacion.FrmPrincipal.ToolStripPestañas
+  commentId: P:Gimnasio.Presentacion.FrmPrincipal.ToolStripPestañas
+  id: ToolStripPestañas
   parent: Gimnasio.Presentacion.FrmPrincipal
   langs:
   - csharp
   - vb
-  name: ToolStrip1
-  nameWithType: FrmPrincipal.ToolStrip1
-  fullName: Gimnasio.Presentacion.FrmPrincipal.ToolStrip1
+  name: ToolStripPestañas
+  nameWithType: FrmPrincipal.ToolStripPestañas
+  fullName: Gimnasio.Presentacion.FrmPrincipal.ToolStripPestañas
   type: Property
   source:
     remote:
       path: Gimnasio.Presentacion/FrmPrincipal.Designer.vb
       branch: main
       repo: https://github.com/Carlovich01/gimnasio3.git
-    id: ToolStrip1
+    id: ToolStripPestañas
     path: ../Gimnasio.Presentacion/FrmPrincipal.Designer.vb
     startLine: 226
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
   syntax:
-    content: internal virtual ToolStrip ToolStrip1 { get; set; }
+    content: internal virtual ToolStrip ToolStripPestañas { get; set; }
     parameters: []
     return:
       type: System.Windows.Forms.ToolStrip
-    content.vb: Friend Overridable Property ToolStrip1 As ToolStrip
-  overload: Gimnasio.Presentacion.FrmPrincipal.ToolStrip1*
+    content.vb: Friend Overridable Property ToolStripPestañas As ToolStrip
+  overload: Gimnasio.Presentacion.FrmPrincipal.ToolStripPestañas*
 - uid: Gimnasio.Presentacion.FrmPrincipal.PanelDeFormularios
   commentId: P:Gimnasio.Presentacion.FrmPrincipal.PanelDeFormularios
   id: PanelDeFormularios
@@ -969,35 +969,35 @@ items:
       type: System.Windows.Forms.Panel
     content.vb: Friend Overridable Property PanelDeFormularios As Panel
   overload: Gimnasio.Presentacion.FrmPrincipal.PanelDeFormularios*
-- uid: Gimnasio.Presentacion.FrmPrincipal.PictureBox1
-  commentId: P:Gimnasio.Presentacion.FrmPrincipal.PictureBox1
-  id: PictureBox1
+- uid: Gimnasio.Presentacion.FrmPrincipal.pbLogo
+  commentId: P:Gimnasio.Presentacion.FrmPrincipal.pbLogo
+  id: pbLogo
   parent: Gimnasio.Presentacion.FrmPrincipal
   langs:
   - csharp
   - vb
-  name: PictureBox1
-  nameWithType: FrmPrincipal.PictureBox1
-  fullName: Gimnasio.Presentacion.FrmPrincipal.PictureBox1
+  name: pbLogo
+  nameWithType: FrmPrincipal.pbLogo
+  fullName: Gimnasio.Presentacion.FrmPrincipal.pbLogo
   type: Property
   source:
     remote:
       path: Gimnasio.Presentacion/FrmPrincipal.Designer.vb
       branch: main
       repo: https://github.com/Carlovich01/gimnasio3.git
-    id: PictureBox1
+    id: pbLogo
     path: ../Gimnasio.Presentacion/FrmPrincipal.Designer.vb
     startLine: 228
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
   syntax:
-    content: internal virtual PictureBox PictureBox1 { get; set; }
+    content: internal virtual PictureBox pbLogo { get; set; }
     parameters: []
     return:
       type: System.Windows.Forms.PictureBox
-    content.vb: Friend Overridable Property PictureBox1 As PictureBox
-  overload: Gimnasio.Presentacion.FrmPrincipal.PictureBox1*
+    content.vb: Friend Overridable Property pbLogo As PictureBox
+  overload: Gimnasio.Presentacion.FrmPrincipal.pbLogo*
 - uid: Gimnasio.Presentacion.FrmPrincipal.btnPlanes
   commentId: P:Gimnasio.Presentacion.FrmPrincipal.btnPlanes
   id: btnPlanes
@@ -1509,7 +1509,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: usuarioActual
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 17
+    startLine: 19
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1538,7 +1538,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: .ctor
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 28
+    startLine: 30
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1583,7 +1583,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: obtenerUsuarioActual
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 43
+    startLine: 45
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1614,7 +1614,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: frmPrincipal_Load
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 51
+    startLine: 53
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1653,7 +1653,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: MostrarFormulario
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 71
+    startLine: 73
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1698,7 +1698,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnPlanes_Click
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 92
+    startLine: 94
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1734,7 +1734,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnMiembros_Click
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 104
+    startLine: 106
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1770,7 +1770,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnMembresias_Click
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 116
+    startLine: 118
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1806,7 +1806,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnPagos_Click
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 128
+    startLine: 130
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1842,7 +1842,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btRegistroAsistencias_Click
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 140
+    startLine: 142
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1878,7 +1878,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnReclamos_Click
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 152
+    startLine: 154
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1914,7 +1914,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnUsuarios_Click
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 165
+    startLine: 167
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1953,7 +1953,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: miCerrarSesion_Click
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 183
+    startLine: 185
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1998,7 +1998,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: frmPrincipal_FormClosed
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 197
+    startLine: 199
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -19832,12 +19832,12 @@ references:
   name: InitializeComponent
   nameWithType: FrmPrincipal.InitializeComponent
   fullName: Gimnasio.Presentacion.FrmPrincipal.InitializeComponent
-- uid: Gimnasio.Presentacion.FrmPrincipal.ToolStrip1*
-  commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.ToolStrip1
-  href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_ToolStrip1
-  name: ToolStrip1
-  nameWithType: FrmPrincipal.ToolStrip1
-  fullName: Gimnasio.Presentacion.FrmPrincipal.ToolStrip1
+- uid: Gimnasio.Presentacion.FrmPrincipal.ToolStripPestañas*
+  commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.ToolStripPestañas
+  href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_ToolStripPestañas
+  name: ToolStripPestañas
+  nameWithType: FrmPrincipal.ToolStripPestañas
+  fullName: Gimnasio.Presentacion.FrmPrincipal.ToolStripPestañas
 - uid: System.Windows.Forms.ToolStrip
   commentId: T:System.Windows.Forms.ToolStrip
   parent: System.Windows.Forms
@@ -19860,12 +19860,12 @@ references:
   name: Panel
   nameWithType: Panel
   fullName: System.Windows.Forms.Panel
-- uid: Gimnasio.Presentacion.FrmPrincipal.PictureBox1*
-  commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.PictureBox1
-  href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_PictureBox1
-  name: PictureBox1
-  nameWithType: FrmPrincipal.PictureBox1
-  fullName: Gimnasio.Presentacion.FrmPrincipal.PictureBox1
+- uid: Gimnasio.Presentacion.FrmPrincipal.pbLogo*
+  commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.pbLogo
+  href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_pbLogo
+  name: pbLogo
+  nameWithType: FrmPrincipal.pbLogo
+  fullName: Gimnasio.Presentacion.FrmPrincipal.pbLogo
 - uid: System.Windows.Forms.PictureBox
   commentId: T:System.Windows.Forms.PictureBox
   parent: System.Windows.Forms

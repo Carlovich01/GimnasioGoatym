@@ -61,7 +61,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: FrmPlanes
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
-    startLine: 13
+    startLine: 15
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -71,7 +71,7 @@ items:
     Utiliza la clase <xref href="Gimnasio.Negocio.NPlanes" data-throw-if-not-resolved="false"></xref> para la lógica de negocio y la clase <xref href="Gimnasio.Entidades.Planes" data-throw-if-not-resolved="false"></xref> como entidad.
 
     El acceso a las operaciones de mantenimiento depende del rol del usuario (<xref href="Gimnasio.Entidades.Usuarios" data-throw-if-not-resolved="false"></xref>).
-
+  remarks: >-
     Todas las operaciones de esta capa están envueltas en bloques Try...Catch. 
 
     El manejo de errores se realiza a través de <xref href="Gimnasio.Errores.ManejarErrores.Mostrar(System.String%2cSystem.Exception)" data-throw-if-not-resolved="false"></xref>
@@ -1570,7 +1570,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: nPlanes
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
-    startLine: 18
+    startLine: 20
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1599,7 +1599,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: esNuevo
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
-    startLine: 23
+    startLine: 25
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1628,7 +1628,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: .ctor
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
-    startLine: 32
+    startLine: 34
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1668,7 +1668,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: frmPlanes_Load
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
-    startLine: 48
+    startLine: 50
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1707,7 +1707,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ActualizarDgv
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
-    startLine: 68
+    startLine: 70
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1738,7 +1738,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ActualizarDgv
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
-    startLine: 82
+    startLine: 84
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1773,7 +1773,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: HabilitarListado
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
-    startLine: 95
+    startLine: 97
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1801,7 +1801,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: HabilitarIngreso
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
-    startLine: 109
+    startLine: 111
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1834,7 +1834,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnInsertar_Click
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
-    startLine: 129
+    startLine: 131
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1877,7 +1877,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnActualizar_Click
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
-    startLine: 150
+    startLine: 152
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1922,7 +1922,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnGuardar_Click
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
-    startLine: 182
+    startLine: 184
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1969,7 +1969,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnCancelar_Click
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
-    startLine: 219
+    startLine: 221
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2005,7 +2005,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnEliminar_Click
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
-    startLine: 236
+    startLine: 238
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2049,7 +2049,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbBuscar_TextChanged
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
-    startLine: 260
+    startLine: 262
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2089,7 +2089,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: cb_SelectedIndexChanged
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
-    startLine: 275
+    startLine: 277
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2130,7 +2130,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbBuscar_KeyDown
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
-    startLine: 295
+    startLine: 297
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2176,7 +2176,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: pbReiniciar_Click
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
-    startLine: 319
+    startLine: 321
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion

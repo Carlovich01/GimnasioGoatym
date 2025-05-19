@@ -25,7 +25,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: NAsistencia
     path: ../Gimnasio.Negocio/NAsistencia.vb
-    startLine: 12
+    startLine: 14
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -33,7 +33,7 @@ items:
     Lógica de negocio para la gestión de asistencias en el sistema de gimnasio.
 
     Interactúa con la capa de datos <xref href="Gimnasio.Datos.DAsistencia" data-throw-if-not-resolved="false"></xref> y la entidad <xref href="Gimnasio.Entidades.Asistencia" data-throw-if-not-resolved="false"></xref>.
-
+  remarks: >-
     Todas las operaciones de la capa de negocio están envueltas en bloques Try...Catch.  
 
     Si ocurre una excepción, se registra el error utilizando <xref href="Gimnasio.Errores.ManejarErrores.Log(System.String%2cSystem.Exception)" data-throw-if-not-resolved="false"></xref> en un log.txt
@@ -72,7 +72,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: dAsistencias
     path: ../Gimnasio.Negocio/NAsistencia.vb
-    startLine: 16
+    startLine: 18
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -101,7 +101,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Listar
     path: ../Gimnasio.Negocio/NAsistencia.vb
-    startLine: 22
+    startLine: 24
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -132,7 +132,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: RegistrarIngresoPorDNI
     path: ../Gimnasio.Negocio/NAsistencia.vb
-    startLine: 50
+    startLine: 52
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -180,7 +180,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorDNI
     path: ../Gimnasio.Negocio/NAsistencia.vb
-    startLine: 99
+    startLine: 101
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -218,7 +218,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ListarPorFecha
     path: ../Gimnasio.Negocio/NAsistencia.vb
-    startLine: 118
+    startLine: 120
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -259,7 +259,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: Eliminar
     path: ../Gimnasio.Negocio/NAsistencia.vb
-    startLine: 131
+    startLine: 133
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio

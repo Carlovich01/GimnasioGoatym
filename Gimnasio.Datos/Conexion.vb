@@ -4,7 +4,8 @@ Imports Gimnasio.Errores
 ''' <summary>
 ''' Clase base para la gestión de la conexión y operaciones con la base de datos MySQL.
 ''' Proporciona métodos genéricos para ejecutar consultas y comandos SQL.
-''' 
+''' </summary>
+''' <remarks>
 ''' Beneficios de utilizar <see cref="ExecuteQuery"/> y <see cref="ExecuteNonQuery"/>:
 ''' - Centralizan y simplifican el acceso a datos, evitando duplicación de código.
 ''' - Permiten el uso de parámetros, ayudando a prevenir inyecciones SQL.
@@ -15,7 +16,7 @@ Imports Gimnasio.Errores
 ''' - Si ocurre una excepción durante la ejecución de una consulta o comando SQL, el error se registra en el archivo de log 
 ''' mediante <see cref="ManejarErrores.Log"/>.
 ''' - Tras registrar el error, la excepción se propaga nuevamente mediante Throw New Exception(ex.Message).
-''' </summary>
+''' </remarks>
 Public Class ConexionBase
     ''' <summary>
     ''' Cadena de conexión a la base de datos MySQL.
