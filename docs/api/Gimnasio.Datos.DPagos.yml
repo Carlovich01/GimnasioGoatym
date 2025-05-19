@@ -25,7 +25,7 @@ items:
     remote:
       path: Gimnasio.Datos/DPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: DPagos
     path: ../Gimnasio.Datos/DPagos.vb
     startLine: 41
@@ -105,7 +105,7 @@ items:
     remote:
       path: Gimnasio.Datos/DPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Listar
     path: ../Gimnasio.Datos/DPagos.vb
     startLine: 48
@@ -136,7 +136,7 @@ items:
     remote:
       path: Gimnasio.Datos/DPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Insertar
     path: ../Gimnasio.Datos/DPagos.vb
     startLine: 63
@@ -171,7 +171,7 @@ items:
     remote:
       path: Gimnasio.Datos/DPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Actualizar
     path: ../Gimnasio.Datos/DPagos.vb
     startLine: 86
@@ -206,7 +206,7 @@ items:
     remote:
       path: Gimnasio.Datos/DPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Eliminar
     path: ../Gimnasio.Datos/DPagos.vb
     startLine: 107
@@ -241,7 +241,7 @@ items:
     remote:
       path: Gimnasio.Datos/DPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorFecha
     path: ../Gimnasio.Datos/DPagos.vb
     startLine: 127
@@ -285,7 +285,7 @@ items:
     remote:
       path: Gimnasio.Datos/DPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorDni
     path: ../Gimnasio.Datos/DPagos.vb
     startLine: 147
@@ -326,7 +326,7 @@ items:
     remote:
       path: Gimnasio.Datos/DPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorNombrePlan
     path: ../Gimnasio.Datos/DPagos.vb
     startLine: 166
@@ -367,7 +367,7 @@ items:
     remote:
       path: Gimnasio.Datos/DPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorMetodoPago
     path: ../Gimnasio.Datos/DPagos.vb
     startLine: 184
@@ -405,7 +405,7 @@ items:
     remote:
       path: Gimnasio.Datos/DPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorMontos
     path: ../Gimnasio.Datos/DPagos.vb
     startLine: 204

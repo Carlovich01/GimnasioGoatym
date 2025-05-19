@@ -32,7 +32,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Reclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Reclamos
     path: ../Gimnasio.Entidades/Reclamos.vb
     startLine: 4
@@ -73,7 +73,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Reclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _idReclamos
     path: ../Gimnasio.Entidades/Reclamos.vb
     startLine: 8
@@ -102,7 +102,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Reclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _tipo
     path: ../Gimnasio.Entidades/Reclamos.vb
     startLine: 12
@@ -131,7 +131,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Reclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _descripcion
     path: ../Gimnasio.Entidades/Reclamos.vb
     startLine: 16
@@ -160,7 +160,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Reclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _fechaEnvio
     path: ../Gimnasio.Entidades/Reclamos.vb
     startLine: 20
@@ -189,7 +189,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Reclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _estado
     path: ../Gimnasio.Entidades/Reclamos.vb
     startLine: 24
@@ -218,7 +218,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Reclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _respuesta
     path: ../Gimnasio.Entidades/Reclamos.vb
     startLine: 28
@@ -247,7 +247,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Reclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _fechaRespuesta
     path: ../Gimnasio.Entidades/Reclamos.vb
     startLine: 32
@@ -276,7 +276,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Reclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _idMiembro
     path: ../Gimnasio.Entidades/Reclamos.vb
     startLine: 36
@@ -305,7 +305,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Reclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: IdReclamos
     path: ../Gimnasio.Entidades/Reclamos.vb
     startLine: 41
@@ -336,7 +336,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Reclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Tipo
     path: ../Gimnasio.Entidades/Reclamos.vb
     startLine: 53
@@ -367,7 +367,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Reclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Descripcion
     path: ../Gimnasio.Entidades/Reclamos.vb
     startLine: 65
@@ -398,7 +398,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Reclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: FechaEnvio
     path: ../Gimnasio.Entidades/Reclamos.vb
     startLine: 77
@@ -429,7 +429,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Reclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Estado
     path: ../Gimnasio.Entidades/Reclamos.vb
     startLine: 89
@@ -460,7 +460,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Reclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Respuesta
     path: ../Gimnasio.Entidades/Reclamos.vb
     startLine: 101
@@ -491,7 +491,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Reclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: FechaRespuesta
     path: ../Gimnasio.Entidades/Reclamos.vb
     startLine: 113
@@ -522,7 +522,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Reclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: IdMiembro
     path: ../Gimnasio.Entidades/Reclamos.vb
     startLine: 125

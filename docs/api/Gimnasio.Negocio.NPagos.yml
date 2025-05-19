@@ -27,7 +27,7 @@ items:
     remote:
       path: Gimnasio.Negocio/NPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: NPagos
     path: ../Gimnasio.Negocio/NPagos.vb
     startLine: 14
@@ -74,7 +74,7 @@ items:
     remote:
       path: Gimnasio.Negocio/NPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: dPagos
     path: ../Gimnasio.Negocio/NPagos.vb
     startLine: 18
@@ -103,7 +103,7 @@ items:
     remote:
       path: Gimnasio.Negocio/NPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ValidarCampos
     path: ../Gimnasio.Negocio/NPagos.vb
     startLine: 24
@@ -135,7 +135,7 @@ items:
     remote:
       path: Gimnasio.Negocio/NPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Listar
     path: ../Gimnasio.Negocio/NPagos.vb
     startLine: 45
@@ -166,7 +166,7 @@ items:
     remote:
       path: Gimnasio.Negocio/NPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Insertar
     path: ../Gimnasio.Negocio/NPagos.vb
     startLine: 64
@@ -207,7 +207,7 @@ items:
     remote:
       path: Gimnasio.Negocio/NPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Actualizar
     path: ../Gimnasio.Negocio/NPagos.vb
     startLine: 91
@@ -239,7 +239,7 @@ items:
     remote:
       path: Gimnasio.Negocio/NPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Eliminar
     path: ../Gimnasio.Negocio/NPagos.vb
     startLine: 105
@@ -274,7 +274,7 @@ items:
     remote:
       path: Gimnasio.Negocio/NPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorFecha
     path: ../Gimnasio.Negocio/NPagos.vb
     startLine: 120
@@ -315,7 +315,7 @@ items:
     remote:
       path: Gimnasio.Negocio/NPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorDni
     path: ../Gimnasio.Negocio/NPagos.vb
     startLine: 134
@@ -353,7 +353,7 @@ items:
     remote:
       path: Gimnasio.Negocio/NPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorNombrePlan
     path: ../Gimnasio.Negocio/NPagos.vb
     startLine: 151
@@ -391,7 +391,7 @@ items:
     remote:
       path: Gimnasio.Negocio/NPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorMetodoPago
     path: ../Gimnasio.Negocio/NPagos.vb
     startLine: 168
@@ -429,7 +429,7 @@ items:
     remote:
       path: Gimnasio.Negocio/NPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorMontos
     path: ../Gimnasio.Negocio/NPagos.vb
     startLine: 183

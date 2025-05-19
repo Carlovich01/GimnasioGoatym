@@ -30,7 +30,7 @@ items:
     remote:
       path: Gimnasio.Datos/DMembresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: DMembresias
     path: ../Gimnasio.Datos/DMembresias.vb
     startLine: 38
@@ -105,7 +105,7 @@ items:
     remote:
       path: Gimnasio.Datos/DMembresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Listar
     path: ../Gimnasio.Datos/DMembresias.vb
     startLine: 45
@@ -136,7 +136,7 @@ items:
     remote:
       path: Gimnasio.Datos/DMembresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Insertar
     path: ../Gimnasio.Datos/DMembresias.vb
     startLine: 59
@@ -168,7 +168,7 @@ items:
     remote:
       path: Gimnasio.Datos/DMembresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Actualizar
     path: ../Gimnasio.Datos/DMembresias.vb
     startLine: 80
@@ -203,7 +203,7 @@ items:
     remote:
       path: Gimnasio.Datos/DMembresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Eliminar
     path: ../Gimnasio.Datos/DMembresias.vb
     startLine: 101
@@ -238,7 +238,7 @@ items:
     remote:
       path: Gimnasio.Datos/DMembresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ObtenerIdMembresia
     path: ../Gimnasio.Datos/DMembresias.vb
     startLine: 120
@@ -276,7 +276,7 @@ items:
     remote:
       path: Gimnasio.Datos/DMembresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ActualizarEstadoYFechas
     path: ../Gimnasio.Datos/DMembresias.vb
     startLine: 140
@@ -311,7 +311,7 @@ items:
     remote:
       path: Gimnasio.Datos/DMembresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ActualizarAEstadoInactiva
     path: ../Gimnasio.Datos/DMembresias.vb
     startLine: 163
@@ -342,7 +342,7 @@ items:
     remote:
       path: Gimnasio.Datos/DMembresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ObtenerDuracionPorMembresia
     path: ../Gimnasio.Datos/DMembresias.vb
     startLine: 182
@@ -383,7 +383,7 @@ items:
     remote:
       path: Gimnasio.Datos/DMembresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ObtenerPorDni
     path: ../Gimnasio.Datos/DMembresias.vb
     startLine: 204
@@ -421,7 +421,7 @@ items:
     remote:
       path: Gimnasio.Datos/DMembresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorDni
     path: ../Gimnasio.Datos/DMembresias.vb
     startLine: 223
@@ -462,7 +462,7 @@ items:
     remote:
       path: Gimnasio.Datos/DMembresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorNombrePlan
     path: ../Gimnasio.Datos/DMembresias.vb
     startLine: 242
@@ -503,7 +503,7 @@ items:
     remote:
       path: Gimnasio.Datos/DMembresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorEstado
     path: ../Gimnasio.Datos/DMembresias.vb
     startLine: 260
@@ -541,7 +541,7 @@ items:
     remote:
       path: Gimnasio.Datos/DMembresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: VerificarExistenciaDeMiembroYPlan
     path: ../Gimnasio.Datos/DMembresias.vb
     startLine: 279
@@ -579,7 +579,7 @@ items:
     remote:
       path: Gimnasio.Datos/DMembresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ObtenerMembresiaMasReciente
     path: ../Gimnasio.Datos/DMembresias.vb
     startLine: 302

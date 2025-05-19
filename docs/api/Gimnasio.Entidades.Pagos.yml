@@ -32,7 +32,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Pagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Pagos
     path: ../Gimnasio.Entidades/Pagos.vb
     startLine: 4
@@ -73,7 +73,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Pagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _idPago
     path: ../Gimnasio.Entidades/Pagos.vb
     startLine: 8
@@ -102,7 +102,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Pagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _idMembresia
     path: ../Gimnasio.Entidades/Pagos.vb
     startLine: 12
@@ -131,7 +131,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Pagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _idUsuarioRegistro
     path: ../Gimnasio.Entidades/Pagos.vb
     startLine: 16
@@ -160,7 +160,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Pagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _fechaPago
     path: ../Gimnasio.Entidades/Pagos.vb
     startLine: 20
@@ -189,7 +189,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Pagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _montoPagado
     path: ../Gimnasio.Entidades/Pagos.vb
     startLine: 24
@@ -218,7 +218,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Pagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _metodoPago
     path: ../Gimnasio.Entidades/Pagos.vb
     startLine: 28
@@ -247,7 +247,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Pagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _numeroComprobante
     path: ../Gimnasio.Entidades/Pagos.vb
     startLine: 32
@@ -276,7 +276,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Pagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _notas
     path: ../Gimnasio.Entidades/Pagos.vb
     startLine: 36
@@ -305,7 +305,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Pagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: IdPago
     path: ../Gimnasio.Entidades/Pagos.vb
     startLine: 41
@@ -336,7 +336,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Pagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: IdMembresia
     path: ../Gimnasio.Entidades/Pagos.vb
     startLine: 53
@@ -367,7 +367,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Pagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: IdUsuarioRegistro
     path: ../Gimnasio.Entidades/Pagos.vb
     startLine: 65
@@ -398,7 +398,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Pagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: FechaPago
     path: ../Gimnasio.Entidades/Pagos.vb
     startLine: 77
@@ -429,7 +429,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Pagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: MontoPagado
     path: ../Gimnasio.Entidades/Pagos.vb
     startLine: 89
@@ -460,7 +460,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Pagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: MetodoPago
     path: ../Gimnasio.Entidades/Pagos.vb
     startLine: 101
@@ -491,7 +491,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Pagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: NumeroComprobante
     path: ../Gimnasio.Entidades/Pagos.vb
     startLine: 113
@@ -522,7 +522,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Pagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Notas
     path: ../Gimnasio.Entidades/Pagos.vb
     startLine: 125

@@ -21,7 +21,7 @@ items:
     remote:
       path: Gimnasio.Datos/DAsistencia.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: DAsistencia
     path: ../Gimnasio.Datos/DAsistencia.vb
     startLine: 36
@@ -96,7 +96,7 @@ items:
     remote:
       path: Gimnasio.Datos/DAsistencia.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Listar
     path: ../Gimnasio.Datos/DAsistencia.vb
     startLine: 42
@@ -127,7 +127,7 @@ items:
     remote:
       path: Gimnasio.Datos/DAsistencia.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Eliminar
     path: ../Gimnasio.Datos/DAsistencia.vb
     startLine: 56
@@ -162,7 +162,7 @@ items:
     remote:
       path: Gimnasio.Datos/DAsistencia.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: RegistrarAsistencia
     path: ../Gimnasio.Datos/DAsistencia.vb
     startLine: 74
@@ -197,7 +197,7 @@ items:
     remote:
       path: Gimnasio.Datos/DAsistencia.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorDNI
     path: ../Gimnasio.Datos/DAsistencia.vb
     startLine: 98
@@ -238,7 +238,7 @@ items:
     remote:
       path: Gimnasio.Datos/DAsistencia.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorFecha
     path: ../Gimnasio.Datos/DAsistencia.vb
     startLine: 118

@@ -24,7 +24,7 @@ items:
     remote:
       path: Gimnasio.Datos/DReclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: DReclamos
     path: ../Gimnasio.Datos/DReclamos.vb
     startLine: 32
@@ -95,7 +95,7 @@ items:
     remote:
       path: Gimnasio.Datos/DReclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Listar
     path: ../Gimnasio.Datos/DReclamos.vb
     startLine: 39
@@ -126,7 +126,7 @@ items:
     remote:
       path: Gimnasio.Datos/DReclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Insertar
     path: ../Gimnasio.Datos/DReclamos.vb
     startLine: 55
@@ -163,7 +163,7 @@ items:
     remote:
       path: Gimnasio.Datos/DReclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Actualizar
     path: ../Gimnasio.Datos/DReclamos.vb
     startLine: 75
@@ -198,7 +198,7 @@ items:
     remote:
       path: Gimnasio.Datos/DReclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Eliminar
     path: ../Gimnasio.Datos/DReclamos.vb
     startLine: 95
@@ -233,7 +233,7 @@ items:
     remote:
       path: Gimnasio.Datos/DReclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ActualizarElEstadoAResuelto
     path: ../Gimnasio.Datos/DReclamos.vb
     startLine: 113
@@ -271,7 +271,7 @@ items:
     remote:
       path: Gimnasio.Datos/DReclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ActualizarElEstadoAPendiente
     path: ../Gimnasio.Datos/DReclamos.vb
     startLine: 131
@@ -309,7 +309,7 @@ items:
     remote:
       path: Gimnasio.Datos/DReclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ActualizarRespuesta
     path: ../Gimnasio.Datos/DReclamos.vb
     startLine: 149
@@ -344,7 +344,7 @@ items:
     remote:
       path: Gimnasio.Datos/DReclamos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorEstado
     path: ../Gimnasio.Datos/DReclamos.vb
     startLine: 169

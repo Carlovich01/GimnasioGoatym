@@ -23,7 +23,7 @@ items:
     remote:
       path: Gimnasio.Datos/DPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: DPlanes
     path: ../Gimnasio.Datos/DPlanes.vb
     startLine: 12
@@ -71,7 +71,7 @@ items:
     remote:
       path: Gimnasio.Datos/DPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Listar
     path: ../Gimnasio.Datos/DPlanes.vb
     startLine: 19
@@ -102,7 +102,7 @@ items:
     remote:
       path: Gimnasio.Datos/DPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Insertar
     path: ../Gimnasio.Datos/DPlanes.vb
     startLine: 36
@@ -143,7 +143,7 @@ items:
     remote:
       path: Gimnasio.Datos/DPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Actualizar
     path: ../Gimnasio.Datos/DPlanes.vb
     startLine: 62
@@ -180,7 +180,7 @@ items:
     remote:
       path: Gimnasio.Datos/DPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Eliminar
     path: ../Gimnasio.Datos/DPlanes.vb
     startLine: 85
@@ -222,7 +222,7 @@ items:
     remote:
       path: Gimnasio.Datos/DPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorNombre
     path: ../Gimnasio.Datos/DPlanes.vb
     startLine: 109
@@ -263,7 +263,7 @@ items:
     remote:
       path: Gimnasio.Datos/DPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorDuracion
     path: ../Gimnasio.Datos/DPlanes.vb
     startLine: 128
@@ -304,7 +304,7 @@ items:
     remote:
       path: Gimnasio.Datos/DPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorPrecio
     path: ../Gimnasio.Datos/DPlanes.vb
     startLine: 147

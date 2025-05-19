@@ -26,7 +26,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Resources
     path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
     startLine: 24
@@ -63,7 +63,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: resourceMan
     path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
     startLine: 30
@@ -90,7 +90,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: resourceCulture
     path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
     startLine: 32
@@ -117,7 +117,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ResourceManager
     path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
     startLine: 37
@@ -148,7 +148,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Culture
     path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
     startLine: 52
@@ -182,7 +182,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: casa
     path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
     startLine: 65
@@ -213,7 +213,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ojo_abierto
     path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
     startLine: 75
@@ -244,7 +244,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ojo_cerrado
     path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
     startLine: 85
@@ -275,7 +275,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ojoContraseña
     path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
     startLine: 95
@@ -306,7 +306,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: reiniciar
     path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
     startLine: 105
@@ -337,7 +337,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/My Project/Resources.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: usuario
     path: ../Gimnasio.Presentacion/My Project/Resources.Designer.vb
     startLine: 115

@@ -58,7 +58,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: FrmPlanes
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
     startLine: 15
@@ -840,7 +840,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Dispose
     path: ../Gimnasio.Presentacion/FrmPlanes.Designer.vb
     startLine: 5
@@ -876,7 +876,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: components
     path: ../Gimnasio.Presentacion/FrmPlanes.Designer.vb
     startLine: 17
@@ -903,7 +903,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: InitializeComponent
     path: ../Gimnasio.Presentacion/FrmPlanes.Designer.vb
     startLine: 22
@@ -929,7 +929,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: panelListado
     path: ../Gimnasio.Presentacion/FrmPlanes.Designer.vb
     startLine: 357
@@ -958,7 +958,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: panelDatosIngreso
     path: ../Gimnasio.Presentacion/FrmPlanes.Designer.vb
     startLine: 358
@@ -987,7 +987,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: cbOpcionBuscar
     path: ../Gimnasio.Presentacion/FrmPlanes.Designer.vb
     startLine: 359
@@ -1016,7 +1016,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblTotal
     path: ../Gimnasio.Presentacion/FrmPlanes.Designer.vb
     startLine: 360
@@ -1045,7 +1045,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnActualizar
     path: ../Gimnasio.Presentacion/FrmPlanes.Designer.vb
     startLine: 361
@@ -1074,7 +1074,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnEliminar
     path: ../Gimnasio.Presentacion/FrmPlanes.Designer.vb
     startLine: 362
@@ -1103,7 +1103,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: dgvListado
     path: ../Gimnasio.Presentacion/FrmPlanes.Designer.vb
     startLine: 363
@@ -1132,7 +1132,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbBuscar
     path: ../Gimnasio.Presentacion/FrmPlanes.Designer.vb
     startLine: 364
@@ -1161,7 +1161,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnInsertar
     path: ../Gimnasio.Presentacion/FrmPlanes.Designer.vb
     startLine: 365
@@ -1190,7 +1190,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnCancelar
     path: ../Gimnasio.Presentacion/FrmPlanes.Designer.vb
     startLine: 366
@@ -1219,7 +1219,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnGuardar
     path: ../Gimnasio.Presentacion/FrmPlanes.Designer.vb
     startLine: 367
@@ -1248,7 +1248,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbDescripcion
     path: ../Gimnasio.Presentacion/FrmPlanes.Designer.vb
     startLine: 368
@@ -1277,7 +1277,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblDescripcion
     path: ../Gimnasio.Presentacion/FrmPlanes.Designer.vb
     startLine: 369
@@ -1306,7 +1306,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbPrecio
     path: ../Gimnasio.Presentacion/FrmPlanes.Designer.vb
     startLine: 370
@@ -1335,7 +1335,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblDuracion
     path: ../Gimnasio.Presentacion/FrmPlanes.Designer.vb
     startLine: 371
@@ -1364,7 +1364,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbDuracion
     path: ../Gimnasio.Presentacion/FrmPlanes.Designer.vb
     startLine: 372
@@ -1393,7 +1393,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblPrecio
     path: ../Gimnasio.Presentacion/FrmPlanes.Designer.vb
     startLine: 373
@@ -1422,7 +1422,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbNombre
     path: ../Gimnasio.Presentacion/FrmPlanes.Designer.vb
     startLine: 374
@@ -1451,7 +1451,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblNombre
     path: ../Gimnasio.Presentacion/FrmPlanes.Designer.vb
     startLine: 375
@@ -1480,7 +1480,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblDatosIngreso
     path: ../Gimnasio.Presentacion/FrmPlanes.Designer.vb
     startLine: 376
@@ -1509,7 +1509,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: pbReiniciar
     path: ../Gimnasio.Presentacion/FrmPlanes.Designer.vb
     startLine: 377
@@ -1538,7 +1538,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbID
     path: ../Gimnasio.Presentacion/FrmPlanes.Designer.vb
     startLine: 378
@@ -1567,7 +1567,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: nPlanes
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
     startLine: 20
@@ -1596,7 +1596,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: esNuevo
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
     startLine: 25
@@ -1625,7 +1625,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: .ctor
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
     startLine: 34
@@ -1665,7 +1665,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: frmPlanes_Load
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
     startLine: 50
@@ -1704,7 +1704,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ActualizarDgv
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
     startLine: 70
@@ -1735,7 +1735,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ActualizarDgv
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
     startLine: 84
@@ -1770,7 +1770,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: HabilitarListado
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
     startLine: 97
@@ -1798,7 +1798,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: HabilitarIngreso
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
     startLine: 111
@@ -1831,7 +1831,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnInsertar_Click
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
     startLine: 131
@@ -1874,7 +1874,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnActualizar_Click
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
     startLine: 152
@@ -1919,7 +1919,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnGuardar_Click
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
     startLine: 184
@@ -1966,7 +1966,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnCancelar_Click
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
     startLine: 221
@@ -2002,7 +2002,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnEliminar_Click
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
     startLine: 238
@@ -2046,7 +2046,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbBuscar_TextChanged
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
     startLine: 262
@@ -2086,7 +2086,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: cb_SelectedIndexChanged
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
     startLine: 277
@@ -2127,7 +2127,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbBuscar_KeyDown
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
     startLine: 297
@@ -2173,7 +2173,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPlanes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: pbReiniciar_Click
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
     startLine: 321

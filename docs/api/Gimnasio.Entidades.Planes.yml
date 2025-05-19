@@ -30,7 +30,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Planes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Planes
     path: ../Gimnasio.Entidades/Planes.vb
     startLine: 4
@@ -71,7 +71,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Planes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _IdPlan
     path: ../Gimnasio.Entidades/Planes.vb
     startLine: 8
@@ -100,7 +100,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Planes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _NombrePlan
     path: ../Gimnasio.Entidades/Planes.vb
     startLine: 12
@@ -129,7 +129,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Planes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _Descripcion
     path: ../Gimnasio.Entidades/Planes.vb
     startLine: 16
@@ -158,7 +158,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Planes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _DuracionDias
     path: ../Gimnasio.Entidades/Planes.vb
     startLine: 20
@@ -187,7 +187,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Planes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _Precio
     path: ../Gimnasio.Entidades/Planes.vb
     startLine: 24
@@ -216,7 +216,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Planes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _FechaCreacion
     path: ../Gimnasio.Entidades/Planes.vb
     startLine: 28
@@ -245,7 +245,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Planes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _UltimaModificacion
     path: ../Gimnasio.Entidades/Planes.vb
     startLine: 32
@@ -274,7 +274,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Planes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: IdPlan
     path: ../Gimnasio.Entidades/Planes.vb
     startLine: 37
@@ -305,7 +305,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Planes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: NombrePlan
     path: ../Gimnasio.Entidades/Planes.vb
     startLine: 49
@@ -336,7 +336,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Planes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Descripcion
     path: ../Gimnasio.Entidades/Planes.vb
     startLine: 61
@@ -367,7 +367,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Planes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: DuracionDias
     path: ../Gimnasio.Entidades/Planes.vb
     startLine: 73
@@ -398,7 +398,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Planes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Precio
     path: ../Gimnasio.Entidades/Planes.vb
     startLine: 85
@@ -429,7 +429,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Planes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: FechaCreacion
     path: ../Gimnasio.Entidades/Planes.vb
     startLine: 97
@@ -460,7 +460,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Planes.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: UltimaModificacion
     path: ../Gimnasio.Entidades/Planes.vb
     startLine: 109

@@ -71,7 +71,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: FrmPagos
     path: ../Gimnasio.Presentacion/FrmPagos.vb
     startLine: 13
@@ -851,7 +851,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Dispose
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 5
@@ -887,7 +887,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: components
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 17
@@ -914,7 +914,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: InitializeComponent
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 22
@@ -940,7 +940,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblComprobante
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 502
@@ -969,7 +969,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: panelListado
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 503
@@ -998,7 +998,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnActualizar
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 504
@@ -1027,7 +1027,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: PanelFecha
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 505
@@ -1056,7 +1056,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: dtpFechaInicio
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 506
@@ -1085,7 +1085,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: dtpFechaFin
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 507
@@ -1114,7 +1114,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: BtnBuscarFecha
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 508
@@ -1143,7 +1143,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: PanelMonto
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 509
@@ -1172,7 +1172,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnBuscarMonto
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 510
@@ -1201,7 +1201,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblHasta
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 511
@@ -1230,7 +1230,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblDesde
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 512
@@ -1259,7 +1259,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbMontoFinal
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 513
@@ -1288,7 +1288,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbMontoInicial
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 514
@@ -1317,7 +1317,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: pbReiniciar
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 515
@@ -1346,7 +1346,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnEliminar
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 516
@@ -1375,7 +1375,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: cbOpcionBuscar
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 517
@@ -1404,7 +1404,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lbIngresosTotales
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 518
@@ -1433,7 +1433,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblTotal
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 519
@@ -1462,7 +1462,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: dgvListado
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 520
@@ -1491,7 +1491,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbBuscar
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 521
@@ -1520,7 +1520,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblFin
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 522
@@ -1549,7 +1549,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblInicio
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 523
@@ -1578,7 +1578,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: panelEdicionPago
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 524
@@ -1607,7 +1607,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbIDpago
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 525
@@ -1636,7 +1636,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblPagoIngreso
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 526
@@ -1665,7 +1665,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnCancelarPago
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 527
@@ -1694,7 +1694,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnGuardarPago
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 528
@@ -1723,7 +1723,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: cbMetodo
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 529
@@ -1752,7 +1752,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbNotas
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 530
@@ -1781,7 +1781,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbComprobante
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 531
@@ -1810,7 +1810,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbMonto
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 532
@@ -1839,7 +1839,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblNotas
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 533
@@ -1868,7 +1868,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblMetodo
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 534
@@ -1897,7 +1897,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblMonto
     path: ../Gimnasio.Presentacion/FrmPagos.Designer.vb
     startLine: 535
@@ -1926,7 +1926,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: nPagos
     path: ../Gimnasio.Presentacion/FrmPagos.vb
     startLine: 17
@@ -1955,7 +1955,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: .ctor
     path: ../Gimnasio.Presentacion/FrmPagos.vb
     startLine: 23
@@ -1990,7 +1990,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: frmPagos_Load
     path: ../Gimnasio.Presentacion/FrmPagos.vb
     startLine: 39
@@ -2033,7 +2033,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ActualizarDgv
     path: ../Gimnasio.Presentacion/FrmPagos.vb
     startLine: 73
@@ -2066,7 +2066,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ActualizarDgv
     path: ../Gimnasio.Presentacion/FrmPagos.vb
     startLine: 96
@@ -2103,7 +2103,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: HabilitarListado
     path: ../Gimnasio.Presentacion/FrmPagos.vb
     startLine: 115
@@ -2131,7 +2131,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: HabilitarEdicionPago
     path: ../Gimnasio.Presentacion/FrmPagos.vb
     startLine: 130
@@ -2166,7 +2166,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnActualizar_Click
     path: ../Gimnasio.Presentacion/FrmPagos.vb
     startLine: 152
@@ -2209,7 +2209,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnGuardarPago_Click
     path: ../Gimnasio.Presentacion/FrmPagos.vb
     startLine: 176
@@ -2252,7 +2252,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: dtpFechaInicio_ValueChanged
     path: ../Gimnasio.Presentacion/FrmPagos.vb
     startLine: 203
@@ -2288,7 +2288,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: dtpFechaFin_ValueChanged
     path: ../Gimnasio.Presentacion/FrmPagos.vb
     startLine: 214
@@ -2324,7 +2324,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnBuscarFecha_Click
     path: ../Gimnasio.Presentacion/FrmPagos.vb
     startLine: 230
@@ -2371,7 +2371,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: cb_SelectedIndexChanged
     path: ../Gimnasio.Presentacion/FrmPagos.vb
     startLine: 255
@@ -2419,7 +2419,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbBuscar_TextChanged
     path: ../Gimnasio.Presentacion/FrmPagos.vb
     startLine: 312
@@ -2462,7 +2462,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnBuscarMonto_Click
     path: ../Gimnasio.Presentacion/FrmPagos.vb
     startLine: 334
@@ -2508,7 +2508,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnEliminar_Click
     path: ../Gimnasio.Presentacion/FrmPagos.vb
     startLine: 364
@@ -2557,7 +2557,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: pbReiniciar_Click
     path: ../Gimnasio.Presentacion/FrmPagos.vb
     startLine: 392
@@ -2601,7 +2601,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmPagos.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnCancelarPago_Click
     path: ../Gimnasio.Presentacion/FrmPagos.vb
     startLine: 419

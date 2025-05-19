@@ -19,7 +19,7 @@ items:
     remote:
       path: Gimnasio.Datos/Conexion.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ConexionBase
     path: ../Gimnasio.Datos/Conexion.vb
     startLine: 19
@@ -87,7 +87,7 @@ items:
     remote:
       path: Gimnasio.Datos/Conexion.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: connectionString
     path: ../Gimnasio.Datos/Conexion.vb
     startLine: 23
@@ -116,7 +116,7 @@ items:
     remote:
       path: Gimnasio.Datos/Conexion.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ExecuteQuery
     path: ../Gimnasio.Datos/Conexion.vb
     startLine: 35
@@ -166,7 +166,7 @@ items:
     remote:
       path: Gimnasio.Datos/Conexion.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ExecuteNonQuery
     path: ../Gimnasio.Datos/Conexion.vb
     startLine: 67

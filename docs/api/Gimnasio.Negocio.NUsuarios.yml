@@ -25,7 +25,7 @@ items:
     remote:
       path: Gimnasio.Negocio/NUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: NUsuarios
     path: ../Gimnasio.Negocio/NUsuarios.vb
     startLine: 16
@@ -72,7 +72,7 @@ items:
     remote:
       path: Gimnasio.Negocio/NUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: dUsuarios
     path: ../Gimnasio.Negocio/NUsuarios.vb
     startLine: 20
@@ -101,7 +101,7 @@ items:
     remote:
       path: Gimnasio.Negocio/NUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ValidarCampos
     path: ../Gimnasio.Negocio/NUsuarios.vb
     startLine: 26
@@ -133,7 +133,7 @@ items:
     remote:
       path: Gimnasio.Negocio/NUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: GenerarHash
     path: ../Gimnasio.Negocio/NUsuarios.vb
     startLine: 55
@@ -171,7 +171,7 @@ items:
     remote:
       path: Gimnasio.Negocio/NUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Listar
     path: ../Gimnasio.Negocio/NUsuarios.vb
     startLine: 72
@@ -202,7 +202,7 @@ items:
     remote:
       path: Gimnasio.Negocio/NUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Insertar
     path: ../Gimnasio.Negocio/NUsuarios.vb
     startLine: 89
@@ -241,7 +241,7 @@ items:
     remote:
       path: Gimnasio.Negocio/NUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Actualizar
     path: ../Gimnasio.Negocio/NUsuarios.vb
     startLine: 109
@@ -278,7 +278,7 @@ items:
     remote:
       path: Gimnasio.Negocio/NUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Eliminar
     path: ../Gimnasio.Negocio/NUsuarios.vb
     startLine: 124
@@ -313,7 +313,7 @@ items:
     remote:
       path: Gimnasio.Negocio/NUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorNombre
     path: ../Gimnasio.Negocio/NUsuarios.vb
     startLine: 138
@@ -351,7 +351,7 @@ items:
     remote:
       path: Gimnasio.Negocio/NUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ValidarCredenciales
     path: ../Gimnasio.Negocio/NUsuarios.vb
     startLine: 163

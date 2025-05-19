@@ -34,7 +34,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Miembros.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Miembros
     path: ../Gimnasio.Entidades/Miembros.vb
     startLine: 4
@@ -75,7 +75,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Miembros.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _idMiembro
     path: ../Gimnasio.Entidades/Miembros.vb
     startLine: 8
@@ -104,7 +104,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Miembros.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _dni
     path: ../Gimnasio.Entidades/Miembros.vb
     startLine: 12
@@ -133,7 +133,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Miembros.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _nombre
     path: ../Gimnasio.Entidades/Miembros.vb
     startLine: 16
@@ -162,7 +162,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Miembros.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _apellido
     path: ../Gimnasio.Entidades/Miembros.vb
     startLine: 20
@@ -191,7 +191,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Miembros.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _genero
     path: ../Gimnasio.Entidades/Miembros.vb
     startLine: 24
@@ -220,7 +220,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Miembros.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _telefono
     path: ../Gimnasio.Entidades/Miembros.vb
     startLine: 28
@@ -249,7 +249,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Miembros.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _email
     path: ../Gimnasio.Entidades/Miembros.vb
     startLine: 32
@@ -278,7 +278,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Miembros.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _fechaRegistro
     path: ../Gimnasio.Entidades/Miembros.vb
     startLine: 36
@@ -307,7 +307,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Miembros.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _ultimaModificacion
     path: ../Gimnasio.Entidades/Miembros.vb
     startLine: 40
@@ -336,7 +336,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Miembros.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: IdMiembro
     path: ../Gimnasio.Entidades/Miembros.vb
     startLine: 45
@@ -367,7 +367,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Miembros.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Dni
     path: ../Gimnasio.Entidades/Miembros.vb
     startLine: 57
@@ -398,7 +398,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Miembros.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Nombre
     path: ../Gimnasio.Entidades/Miembros.vb
     startLine: 69
@@ -429,7 +429,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Miembros.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Apellido
     path: ../Gimnasio.Entidades/Miembros.vb
     startLine: 81
@@ -460,7 +460,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Miembros.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Genero
     path: ../Gimnasio.Entidades/Miembros.vb
     startLine: 93
@@ -491,7 +491,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Miembros.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Telefono
     path: ../Gimnasio.Entidades/Miembros.vb
     startLine: 105
@@ -522,7 +522,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Miembros.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Email
     path: ../Gimnasio.Entidades/Miembros.vb
     startLine: 117
@@ -553,7 +553,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Miembros.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: FechaRegistro
     path: ../Gimnasio.Entidades/Miembros.vb
     startLine: 129
@@ -584,7 +584,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Miembros.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: UltimaModificacion
     path: ../Gimnasio.Entidades/Miembros.vb
     startLine: 141

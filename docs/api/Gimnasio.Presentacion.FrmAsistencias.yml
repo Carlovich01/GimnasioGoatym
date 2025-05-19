@@ -29,7 +29,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmAsistencias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: FrmAsistencias
     path: ../Gimnasio.Presentacion/FrmAsistencias.vb
     startLine: 13
@@ -811,7 +811,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmAsistencias.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Dispose
     path: ../Gimnasio.Presentacion/FrmAsistencias.Designer.vb
     startLine: 5
@@ -847,7 +847,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmAsistencias.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: components
     path: ../Gimnasio.Presentacion/FrmAsistencias.Designer.vb
     startLine: 17
@@ -874,7 +874,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmAsistencias.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: InitializeComponent
     path: ../Gimnasio.Presentacion/FrmAsistencias.Designer.vb
     startLine: 22
@@ -900,7 +900,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmAsistencias.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbDNI
     path: ../Gimnasio.Presentacion/FrmAsistencias.Designer.vb
     startLine: 123
@@ -929,7 +929,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmAsistencias.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblParaIngresarDNI
     path: ../Gimnasio.Presentacion/FrmAsistencias.Designer.vb
     startLine: 124
@@ -958,7 +958,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmAsistencias.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: labelResultado
     path: ../Gimnasio.Presentacion/FrmAsistencias.Designer.vb
     startLine: 125
@@ -987,7 +987,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmAsistencias.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: dgvListado
     path: ../Gimnasio.Presentacion/FrmAsistencias.Designer.vb
     startLine: 126
@@ -1016,7 +1016,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmAsistencias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: nAsistencias
     path: ../Gimnasio.Presentacion/FrmAsistencias.vb
     startLine: 17
@@ -1045,7 +1045,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmAsistencias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: frmRegistro
     path: ../Gimnasio.Presentacion/FrmAsistencias.vb
     startLine: 22
@@ -1074,7 +1074,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmAsistencias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: .ctor
     path: ../Gimnasio.Presentacion/FrmAsistencias.vb
     startLine: 30
@@ -1114,7 +1114,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmAsistencias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: frmAsistencias_Load
     path: ../Gimnasio.Presentacion/FrmAsistencias.vb
     startLine: 38
@@ -1150,7 +1150,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmAsistencias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbDNI_KeyPress
     path: ../Gimnasio.Presentacion/FrmAsistencias.vb
     startLine: 59
@@ -1202,7 +1202,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmAsistencias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: frmAsistencia_FormClosed
     path: ../Gimnasio.Presentacion/FrmAsistencias.vb
     startLine: 125

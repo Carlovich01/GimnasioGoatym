@@ -26,7 +26,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Asistencia.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Asistencia
     path: ../Gimnasio.Entidades/Asistencia.vb
     startLine: 4
@@ -67,7 +67,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Asistencia.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _idAsistencia
     path: ../Gimnasio.Entidades/Asistencia.vb
     startLine: 8
@@ -96,7 +96,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Asistencia.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _idMiembro
     path: ../Gimnasio.Entidades/Asistencia.vb
     startLine: 12
@@ -125,7 +125,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Asistencia.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _fechaHoraCheckin
     path: ../Gimnasio.Entidades/Asistencia.vb
     startLine: 16
@@ -154,7 +154,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Asistencia.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _resultado
     path: ../Gimnasio.Entidades/Asistencia.vb
     startLine: 20
@@ -183,7 +183,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Asistencia.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _idMembresiaValida
     path: ../Gimnasio.Entidades/Asistencia.vb
     startLine: 24
@@ -212,7 +212,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Asistencia.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: IdAsistencia
     path: ../Gimnasio.Entidades/Asistencia.vb
     startLine: 29
@@ -243,7 +243,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Asistencia.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: IdMiembro
     path: ../Gimnasio.Entidades/Asistencia.vb
     startLine: 41
@@ -274,7 +274,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Asistencia.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: FechaHoraCheckin
     path: ../Gimnasio.Entidades/Asistencia.vb
     startLine: 53
@@ -305,7 +305,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Asistencia.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Resultado
     path: ../Gimnasio.Entidades/Asistencia.vb
     startLine: 65
@@ -336,7 +336,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Asistencia.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: IdMembresiaValida
     path: ../Gimnasio.Entidades/Asistencia.vb
     startLine: 77

@@ -59,7 +59,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: FrmUsuarios
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
     startLine: 13
@@ -839,7 +839,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Dispose
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 5
@@ -875,7 +875,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: components
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 17
@@ -902,7 +902,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: InitializeComponent
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 22
@@ -928,7 +928,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: panelListado
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 401
@@ -957,7 +957,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnEliminar
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 402
@@ -986,7 +986,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: cbOpcionBuscar
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 403
@@ -1015,7 +1015,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblTotal
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 404
@@ -1044,7 +1044,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnActualizar
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 405
@@ -1073,7 +1073,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: dgvListado
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 406
@@ -1102,7 +1102,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbBuscar
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 407
@@ -1131,7 +1131,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnInsertar
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 408
@@ -1160,7 +1160,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: panelDatosIngreso
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 409
@@ -1189,7 +1189,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: pbMostrarContraseña
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 410
@@ -1218,7 +1218,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbEmail
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 411
@@ -1247,7 +1247,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: cbRol
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 412
@@ -1276,7 +1276,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnCancelar
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 413
@@ -1305,7 +1305,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnGuardar
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 414
@@ -1334,7 +1334,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblNombreCompleto
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 415
@@ -1363,7 +1363,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: labelRol
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 416
@@ -1392,7 +1392,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblEmail
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 417
@@ -1421,7 +1421,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbNombreCompleto
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 418
@@ -1450,7 +1450,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbNombreUsuario
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 419
@@ -1479,7 +1479,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbContraseña
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 420
@@ -1508,7 +1508,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblNombreUsuario
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 421
@@ -1537,7 +1537,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblContraseña
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 422
@@ -1566,7 +1566,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblDatosIngreso
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 423
@@ -1595,7 +1595,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: pbReiniciar
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 424
@@ -1624,7 +1624,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.Designer.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbID
     path: ../Gimnasio.Presentacion/FrmUsuarios.Designer.vb
     startLine: 425
@@ -1653,7 +1653,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: nUsuarios
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
     startLine: 17
@@ -1682,7 +1682,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: esNuevo
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
     startLine: 21
@@ -1711,7 +1711,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: frmUsuarios_Load
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
     startLine: 27
@@ -1750,7 +1750,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ActualizarDgv
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
     startLine: 49
@@ -1783,7 +1783,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ActualizarDgv
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
     startLine: 64
@@ -1819,7 +1819,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: HabilitarListado
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
     startLine: 77
@@ -1847,7 +1847,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: HabilitarIngreso
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
     startLine: 91
@@ -1880,7 +1880,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnInsertar_Click
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
     startLine: 109
@@ -1923,7 +1923,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnActualizar_Click
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
     startLine: 129
@@ -1969,7 +1969,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnGuardar_Click
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
     startLine: 158
@@ -2018,7 +2018,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnCancelar_Click
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
     startLine: 187
@@ -2054,7 +2054,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: pbMostrarContraseña_Click
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
     startLine: 198
@@ -2090,7 +2090,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbBuscar_TextChanged
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
     startLine: 218
@@ -2133,7 +2133,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnEliminar_Click
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
     startLine: 238
@@ -2168,7 +2168,7 @@ items:
     remote:
       path: Gimnasio.Presentacion/FrmUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: pbReiniciar_Click
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
     startLine: 264

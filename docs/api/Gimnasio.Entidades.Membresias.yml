@@ -34,7 +34,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Membresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Membresias
     path: ../Gimnasio.Entidades/Membresias.vb
     startLine: 4
@@ -75,7 +75,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Membresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _idMembresia
     path: ../Gimnasio.Entidades/Membresias.vb
     startLine: 8
@@ -104,7 +104,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Membresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _idMiembro
     path: ../Gimnasio.Entidades/Membresias.vb
     startLine: 12
@@ -133,7 +133,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Membresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _idPlan
     path: ../Gimnasio.Entidades/Membresias.vb
     startLine: 16
@@ -162,7 +162,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Membresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _fechaInicio
     path: ../Gimnasio.Entidades/Membresias.vb
     startLine: 20
@@ -191,7 +191,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Membresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _fechaFin
     path: ../Gimnasio.Entidades/Membresias.vb
     startLine: 24
@@ -220,7 +220,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Membresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _estadoMembresia
     path: ../Gimnasio.Entidades/Membresias.vb
     startLine: 28
@@ -249,7 +249,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Membresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _fechaRegistro
     path: ../Gimnasio.Entidades/Membresias.vb
     startLine: 32
@@ -278,7 +278,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Membresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _ultimaModificacion
     path: ../Gimnasio.Entidades/Membresias.vb
     startLine: 36
@@ -307,7 +307,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Membresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: _diasRestantes
     path: ../Gimnasio.Entidades/Membresias.vb
     startLine: 40
@@ -336,7 +336,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Membresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: IdMembresia
     path: ../Gimnasio.Entidades/Membresias.vb
     startLine: 45
@@ -367,7 +367,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Membresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: IdMiembro
     path: ../Gimnasio.Entidades/Membresias.vb
     startLine: 57
@@ -398,7 +398,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Membresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: IdPlan
     path: ../Gimnasio.Entidades/Membresias.vb
     startLine: 69
@@ -429,7 +429,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Membresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: FechaInicio
     path: ../Gimnasio.Entidades/Membresias.vb
     startLine: 81
@@ -460,7 +460,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Membresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: FechaFin
     path: ../Gimnasio.Entidades/Membresias.vb
     startLine: 93
@@ -491,7 +491,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Membresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: EstadoMembresia
     path: ../Gimnasio.Entidades/Membresias.vb
     startLine: 105
@@ -522,7 +522,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Membresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: FechaRegistro
     path: ../Gimnasio.Entidades/Membresias.vb
     startLine: 117
@@ -553,7 +553,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Membresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: UltimaModificacion
     path: ../Gimnasio.Entidades/Membresias.vb
     startLine: 129
@@ -584,7 +584,7 @@ items:
     remote:
       path: Gimnasio.Entidades/Membresias.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: DiasRestantes
     path: ../Gimnasio.Entidades/Membresias.vb
     startLine: 141

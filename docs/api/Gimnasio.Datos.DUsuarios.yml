@@ -22,7 +22,7 @@ items:
     remote:
       path: Gimnasio.Datos/DUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: DUsuarios
     path: ../Gimnasio.Datos/DUsuarios.vb
     startLine: 33
@@ -93,7 +93,7 @@ items:
     remote:
       path: Gimnasio.Datos/DUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Listar
     path: ../Gimnasio.Datos/DUsuarios.vb
     startLine: 40
@@ -124,7 +124,7 @@ items:
     remote:
       path: Gimnasio.Datos/DUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Insertar
     path: ../Gimnasio.Datos/DUsuarios.vb
     startLine: 54
@@ -156,7 +156,7 @@ items:
     remote:
       path: Gimnasio.Datos/DUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Actualizar
     path: ../Gimnasio.Datos/DUsuarios.vb
     startLine: 78
@@ -191,7 +191,7 @@ items:
     remote:
       path: Gimnasio.Datos/DUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Eliminar
     path: ../Gimnasio.Datos/DUsuarios.vb
     startLine: 103
@@ -226,7 +226,7 @@ items:
     remote:
       path: Gimnasio.Datos/DUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorNombre
     path: ../Gimnasio.Datos/DUsuarios.vb
     startLine: 122
@@ -267,7 +267,7 @@ items:
     remote:
       path: Gimnasio.Datos/DUsuarios.vb
       branch: main
-      repo: https://github.com/Carlovich01/gimnasio3.git
+      repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ObtenerPorUsername
     path: ../Gimnasio.Datos/DUsuarios.vb
     startLine: 143

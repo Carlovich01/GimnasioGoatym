@@ -119,18 +119,4 @@ items:
   - uid: Gimnasio.Presentacion.FrmUsuarios
     name: FrmUsuarios
     type: Class
-- uid: Gimnasio.Presentacion.My
-  name: Gimnasio.Presentacion.My
-  type: Namespace
-  items:
-  - uid: Gimnasio.Presentacion.My.MyProject
-    name: MyProject
-    type: Class
-- uid: Gimnasio.Presentacion.My.Resources
-  name: Gimnasio.Presentacion.My.Resources
-  type: Namespace
-  items:
-  - uid: Gimnasio.Presentacion.My.Resources.Resources
-    name: Resources
-    type: Class
 memberLayout: SamePage
