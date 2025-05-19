@@ -42,7 +42,7 @@ Public Class FrmLogin
     ''' - Instancia la capa de negocio <see cref="NUsuarios"/> y llama a <see cref="NUsuarios.ValidarCredenciales"/> para verificar las credenciales.
     '''     - Si las credenciales son correctas (el método devuelve un objeto <see cref="Usuarios"/> distinto de Nothing):
     '''         - Oculta el formulario de login.
-    '''         - Crea y muestra el formulario principal <see cref="FrmPrincipal"/>, pasando el usuario autenticado como parámetro.
+    '''         - Crea y muestra el formulario principal <see cref="FrmPrincipal"/>, pasando el usuario autenticado y la referencia a este formulario como parámetros.
     '''     - Si las credenciales son incorrectas, lanza una excepción y muestra un mensaje de error.
     ''' </summary>
     Private Sub btnIniciarSesion_Click(sender As Object, e As EventArgs) Handles btnIniciarSesion.Click

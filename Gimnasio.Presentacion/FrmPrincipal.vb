@@ -204,6 +204,10 @@ Public Class FrmPrincipal
         End Try
     End Sub
 
+    ''' <summary>
+    ''' - Se ejecuta al hacer clic en el elemento de menú "Salir".
+    ''' - Libera recursos de el formulario de login como de este formulario.
+    ''' </summary>
     Private Sub frmPrincipal_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
         Try
             frmLogin.Dispose()
