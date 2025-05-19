@@ -21,6 +21,28 @@ Public Class FrmRegistroAsistencias
     Private nAsistencias As New NAsistencia()
 
     ''' <summary>
+    ''' Referencia a la instancia del formulario <see cref="FrmAsistencias"/> asociada a este formulario de registro de asistencias.
+    ''' Permite la comunicación y sincronización entre ambos formularios.
+    ''' </summary>
+    Private frmAsistencia As FrmAsistencias
+
+    ''' <summary>
+    ''' Devuelve la instancia actual del formulario <see cref="FrmAsistencias"/> asociada a este formulario.
+    ''' </summary>
+    ''' <returns>Instancia de <see cref="FrmAsistencias"/> o Nothing si no existe.</returns>
+    Public Function GetFrmAsistencia() As FrmAsistencias
+        Return frmAsistencia
+    End Function
+
+    ''' <summary>
+    ''' Asigna una instancia del formulario <see cref="FrmAsistencias"/> a este formulario de registro de asistencias.
+    ''' </summary>
+    ''' <param name="frm">Instancia de <see cref="FrmAsistencias"/> a asociar.</param>
+    Public Sub SetFrmAsistencia(frm As FrmAsistencias)
+        frmAsistencia = frm
+    End Sub
+
+    ''' <summary>
     ''' Constructor del formulario de asistencias. Si el usuario es recepcionista, oculta el boton de eliminar.
     ''' </summary>
     ''' <param name="usuario">Instancia de <see cref="Usuarios"/> que representa al usuario logueado.</param>
@@ -96,14 +118,22 @@ Public Class FrmRegistroAsistencias
 
     ''' <summary>
     ''' Evento que se ejecuta al hacer clic en el botón "Insertar" en el formulario de registro de asistencias.
-    ''' - Crea una nueva instancia del formulario <see cref="FrmAsistencias"/>, 
-    ''' pasando como parámetro la instancia actual de <see cref="FrmRegistroAsistencias"/> para permitir la comunicación entre formularios.
-    ''' - Muestra el formulario de registro de asistencias para permitir el ingreso de una nueva asistencia mediante el DNI del miembro.
+    ''' - Verifica si ya existe una instancia activa y no liberada del formulario <see cref="FrmAsistencias"/> asociada a este formulario.
+    '''   - Si ya está abierta, muestra un mensaje informando al usuario y lleva el formulario existente al frente y le da el foco.
+    '''   - Si no existe o ya fue cerrada, crea una nueva instancia de <see cref="FrmAsistencias"/>, pasando como parámetro la instancia actual de
+    '''   este formulario.
+    ''' - Muestra el formulario <see cref="FrmAsistencias"/> para permitir el registro de una nueva asistencia mediante el ingreso de DNI.
     ''' </summary>
     Private Sub btnInsertar_Click(sender As Object, e As EventArgs) Handles btnInsertar.Click
         Try
-            Dim frm As New FrmAsistencias(Me)
-            frm.Show()
+            If frmAsistencia IsNot Nothing AndAlso Not frmAsistencia.IsDisposed Then
+                MessageBox.Show("El formulario de registro de asistencias ya está abierto.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                frmAsistencia.BringToFront()
+                frmAsistencia.Focus()
+                Return
+            End If
+            frmAsistencia = New FrmAsistencias(Me)
+            frmAsistencia.Show()
         Catch ex As Exception
             ManejarErrores.Mostrar("Error al abrir el formulario de registro de asistencias", ex)
         End Try

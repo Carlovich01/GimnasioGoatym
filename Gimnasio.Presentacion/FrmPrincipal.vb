@@ -26,7 +26,6 @@ Public Class FrmPrincipal
 
     ''' <summary>
     ''' Referencia al formulario de registro de asistencias <see cref="FrmRegistroAsistencias"/>.
-    ''' Se utiliza para mantener la instancia viva entre cambios de formularios.
     ''' </summary>
     Private frmRegistroAsistencias As FrmRegistroAsistencias
 
@@ -76,19 +75,32 @@ Public Class FrmPrincipal
 
     ''' <summary>
     ''' Muestra un formulario secundario dentro del panel principal de la aplicación.
-    ''' - Si ya existe un formulario cargado en el panel y no es una instancia de <see cref="FrmRegistroAsistencias"/>, 
-    ''' lo elimina y libera sus recursos para evitar fugas de memoria.
+    ''' - Si ya existe un formulario cargado en el panel, lo libera de memoria correctamente:
+    '''   - Si el formulario actual es una instancia de <see cref="FrmRegistroAsistencias"/>, verifica si 
+    '''   su formulario hijo (<see cref="FrmAsistencias"/>) está abierto.
+    '''     - Si <see cref="FrmAsistencias"/> no está abierto o ya fue liberado, elimina y libera la instancia 
+    '''     de <see cref="FrmRegistroAsistencias"/> y su referencia.
+    '''     - Si <see cref="FrmAsistencias"/> sigue abierto, mantiene la instancia de <see cref="FrmRegistroAsistencias"/> viva 
+    '''     para preservar su estado.
+    '''   - Si el formulario actual no es <see cref="FrmRegistroAsistencias"/>, lo elimina y libera normalmente.
     ''' - Limpia el panel de cualquier control previo.
     ''' - Configura el formulario recibido como parámetro para que no sea de nivel superior, sin bordes y ajustado al tamaño del panel principal.
     ''' - Agrega el formulario al panel y lo muestra.
-    ''' - Permite mantener la instancia de <see cref="FrmRegistroAsistencias"/> viva entre cambios de formularios, evitando su destrucción.
     ''' </summary>
     ''' <param name="formulario">Instancia de <see cref="Form"/> a mostrar en el panel principal.</param>
     Public Sub MostrarFormulario(formulario As Form)
         Try
             If PanelDeFormularios.Controls.Count > 0 AndAlso TypeOf PanelDeFormularios.Controls(0) Is Form Then
-                If Not TypeOf PanelDeFormularios.Controls(0) Is FrmRegistroAsistencias Then
-                    PanelDeFormularios.Controls(0).Dispose()
+                Dim formActual = CType(PanelDeFormularios.Controls(0), Form)
+                If TypeOf formActual Is FrmRegistroAsistencias Then
+                    Dim frmReg = CType(formActual, FrmRegistroAsistencias)
+                    Dim frmAsist As FrmAsistencias = frmReg.GetFrmAsistencia()
+                    If frmAsist Is Nothing OrElse frmAsist.IsDisposed Then
+                        formActual.Dispose()
+                        frmRegistroAsistencias = Nothing
+                    End If
+                Else
+                    formActual.Dispose()
                 End If
             End If
             PanelDeFormularios.Controls.Clear()
@@ -151,9 +163,12 @@ Public Class FrmPrincipal
     End Sub
 
     ''' <summary>
-    ''' Evento que abre el formulario de registro de asistencias <see cref="FrmRegistroAsistencias"/>.
+    ''' Evento que se ejecuta al hacer clic en el botón para abrir el formulario de registro de asistencias (<see cref="FrmRegistroAsistencias"/>).
+    ''' - Si no existe una instancia activa de <see cref="FrmRegistroAsistencias"/>, crea una nueva pasando el usuario actualmente logueado.
+    ''' - Si ya existe una instancia activa, reutiliza la misma para evitar duplicados y mantener el estado.
+    ''' - Llama a <see cref="MostrarFormulario"/> para mostrar el formulario de registro de asistencias en el panel principal de la aplicación.
     ''' </summary>
-    Private Sub btRegistroAsistencias_Click(sender As Object, e As EventArgs) Handles btRegistroAsistencias.Click
+    Private Sub btnRegistroAsistencias_Click(sender As Object, e As EventArgs) Handles btRegistroAsistencias.Click
         Try
 
             If frmRegistroAsistencias Is Nothing Then
@@ -220,7 +235,6 @@ Public Class FrmPrincipal
     Private Sub frmPrincipal_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
         Try
             frmLogin.Dispose()
-            Me.Dispose()
         Catch ex As Exception
             ManejarErrores.Mostrar("Error al liberar recursos al cerrar la aplicación", ex)
         End Try

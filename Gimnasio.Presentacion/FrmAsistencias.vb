@@ -115,4 +115,20 @@ Public Class FrmAsistencias
             ManejarErrores.Mostrar("Error al registrar asistencia", ex)
         End Try
     End Sub
+
+    '''<summary>
+    '''Evento que se ejecuta al cerrarse el formulario <see cref="FrmAsistencias"/>.
+    ''' - Se encarga de limpiar la referencia al formulario <see cref="FrmAsistencias"/> en el formulario padre <see cref="FrmRegistroAsistencias"/>,
+    '''   llamando a <see cref="FrmRegistroAsistencias.SetFrmAsistencia(FrmAsistencias)"/>. 
+    '''   Esto asegura que el formulario padre no mantenga una referencia a una instancia ya cerrada.
+    '''</summary>
+
+    Private Sub frmAsistencia_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
+        Try
+            frmRegistro.SetFrmAsistencia(Nothing)
+        Catch ex As Exception
+            ManejarErrores.Mostrar("Error al liberar recursos al cerrar la aplicación", ex)
+        End Try
+    End Sub
+
 End Class
