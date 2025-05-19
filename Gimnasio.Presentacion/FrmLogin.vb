@@ -8,7 +8,7 @@ Imports Gimnasio.Errores
 ''' <remarks>
 ''' Todas las operaciones de esta capa están envueltas en bloques Try...Catch. 
 ''' El manejo de errores se realiza a través de <see cref="Gimnasio.Errores.ManejarErrores.Mostrar(String, Exception)"/>
-''' que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario. 
+''' que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usuario.    
 ''' </remarks>
 Public Class FrmLogin
     ''' <summary>
