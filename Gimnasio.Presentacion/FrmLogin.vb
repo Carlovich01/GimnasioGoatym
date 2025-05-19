@@ -27,8 +27,8 @@ Public Class FrmLogin
     ''' </summary>
     Public Sub Formato()
         Try
-            tbUsuario.Text = "admin"
-            tbContraseña.Text = "1234"
+            tbUsuario.Text = ""
+            tbContraseña.Text = ""
             tbContraseña.UseSystemPasswordChar = True
         Catch ex As Exception
             ManejarErrores.Mostrar("Error al establecer el formato del formulario de inicio de sesión", ex)
