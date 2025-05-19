@@ -59,7 +59,7 @@ Public Class FrmLogin
             usuarioActual = nUsuarios.ValidarCredenciales(username, password)
             If usuarioActual IsNot Nothing Then
                 Me.Hide()
-                Dim frmPrincipal As New FrmPrincipal(usuarioActual)
+                Dim frmPrincipal As New FrmPrincipal(Me, usuarioActual)
                 frmPrincipal.Show()
             Else
                 Throw New Exception("Usuario o contraseña incorrectos")

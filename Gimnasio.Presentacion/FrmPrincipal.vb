@@ -15,6 +15,11 @@ Imports Gimnasio.Errores
 ''' </remarks>
 Public Class FrmPrincipal
     ''' <summary>
+    ''' Referencia al formulario de login <see cref="FrmLogin"/>. 
+    ''' Se utiliza para mostrar el formulario de login al cerrar sesión.
+    ''' </summary>
+    Private frmLogin As FrmLogin
+    ''' <summary>
     ''' Usuario actualmente logueado en la aplicación.
     ''' </summary>
     Private usuarioActual As Usuarios
@@ -22,14 +27,16 @@ Public Class FrmPrincipal
     ''' <summary>
     ''' Constructor del formulario principal.
     ''' - Inicializa los componentes visuales del formulario.
+    ''' - Guarda la referencia a la instancia del formulario de login.
     ''' - Asigna el usuario actualmente logueado recibido como parámetro.
     ''' - Muestra el nombre completo del usuario en el botón btnUsuarioLogueado.
     ''' - Si el usuario tiene el rol de recepcionista IdRol = 2:
     '''     - Oculta y deshabilita el apartado de usuarios.
     ''' </summary>
     ''' <param name="usuario">Instancia de <see cref="Usuarios"/> que representa al usuario logueado.</param>
-    Public Sub New(usuario As Usuarios)
+    Public Sub New(frmLogin As FrmLogin, usuario As Usuarios)
         InitializeComponent()
+        Me.frmLogin = frmLogin
         usuarioActual = usuario
         btnUsuarioLogueado.Text = usuarioActual.NombreCompleto
         If usuarioActual.IdRol = 2 Then
@@ -188,8 +195,8 @@ Public Class FrmPrincipal
             Dim resultado = MessageBox.Show("¿Está seguro de que desea cerrar sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If resultado = DialogResult.Yes Then
                 Me.Hide()
-                FrmLogin.Show()
-                FrmLogin.Formato()
+                frmLogin.Show()
+                frmLogin.Formato()
                 Me.Dispose()
             End If
         Catch ex As Exception
@@ -199,8 +206,8 @@ Public Class FrmPrincipal
 
     Private Sub frmPrincipal_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
         Try
+            frmLogin.Dispose()
             Me.Dispose()
-            FrmLogin.Dispose()
         Catch ex As Exception
             ManejarErrores.Mostrar("Error al liberar recursos al cerrar la aplicación", ex)
         End Try
