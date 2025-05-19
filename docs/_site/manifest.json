@@ -11,6 +11,16 @@
       }
     },
     {
+      "type": "Resource",
+      "source_relative_path": "ManualUsuario.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "ManualUsuario.pdf"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "ManagedReference",
       "source_relative_path": "api/Gimnasio.Datos.ConexionBase.yml",
       "output": {
@@ -484,7 +494,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Gimnasio.Presentacion.FrmPrincipal",
-      "Summary": "<p sourcefile=\"api/Gimnasio.Presentacion.FrmPrincipal.yml\" sourcestartlinenumber=\"1\">Formulario principal de la aplicación del gimnasio. Gestiona la navegación entre los diferentes módulos y controla el acceso según el rol del usuario.\nUtiliza la clase <xref href=\"Gimnasio.Entidades.Usuarios\" data-throw-if-not-resolved=\"false\"></xref> para identificar al usuario logueado y su rol. Llama a formularios secundarios como <xref href=\"Gimnasio.Presentacion.FrmPlanes\" data-throw-if-not-resolved=\"false\"></xref>,\n<xref href=\"Gimnasio.Presentacion.FrmMiembros\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Gimnasio.Presentacion.FrmMembresias\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Gimnasio.Presentacion.FrmPagos\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Gimnasio.Presentacion.FrmRegistroAsistencias\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Gimnasio.Presentacion.FrmReclamos\" data-throw-if-not-resolved=\"false\"></xref> y\n<xref href=\"Gimnasio.Presentacion.FrmUsuarios\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+      "Summary": "<p sourcefile=\"api/Gimnasio.Presentacion.FrmPrincipal.yml\" sourcestartlinenumber=\"1\">Formulario principal de la aplicación del gimnasio. Gestiona la navegación entre los diferentes módulos y controla el acceso según el rol del usuario.\nUtiliza la clase <xref href=\"Gimnasio.Entidades.Usuarios\" data-throw-if-not-resolved=\"false\"></xref> para identificar al usuario logueado y su rol. Llama a formularios secundarios como <xref href=\"Gimnasio.Presentacion.FrmPlanes\" data-throw-if-not-resolved=\"false\"></xref>,\n<xref href=\"Gimnasio.Presentacion.FrmMiembros\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Gimnasio.Presentacion.FrmMembresias\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Gimnasio.Presentacion.FrmPagos\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Gimnasio.Presentacion.FrmPrincipal.frmRegistroAsistencias\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Gimnasio.Presentacion.FrmReclamos\" data-throw-if-not-resolved=\"false\"></xref> y\n<xref href=\"Gimnasio.Presentacion.FrmUsuarios\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -635,6 +645,16 @@
         },
         ".json": {
           "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "arquitectura.md",
+      "output": {
+        ".html": {
+          "relative_path": "arquitectura.html"
         }
       },
       "version": ""
@@ -805,16 +825,6 @@
       "output": {
         ".html": {
           "relative_path": "manual_de_usuario.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "modelo_de_clases.md",
-      "output": {
-        ".html": {
-          "relative_path": "modelo_de_clases.html"
         }
       },
       "version": ""

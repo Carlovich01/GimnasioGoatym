@@ -10,8 +10,10 @@ items:
   - Gimnasio.Presentacion.FrmRegistroAsistencias.ActualizarDgv(System.Data.DataTable)
   - Gimnasio.Presentacion.FrmRegistroAsistencias.BtnBuscarFecha
   - Gimnasio.Presentacion.FrmRegistroAsistencias.Dispose(System.Boolean)
+  - Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia
   - Gimnasio.Presentacion.FrmRegistroAsistencias.InitializeComponent
   - Gimnasio.Presentacion.FrmRegistroAsistencias.PanelFecha
+  - Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia(Gimnasio.Presentacion.FrmAsistencias)
   - Gimnasio.Presentacion.FrmRegistroAsistencias.btnBuscar
   - Gimnasio.Presentacion.FrmRegistroAsistencias.btnBuscar_Click(System.Object,System.EventArgs)
   - Gimnasio.Presentacion.FrmRegistroAsistencias.btnEliminar
@@ -26,6 +28,7 @@ items:
   - Gimnasio.Presentacion.FrmRegistroAsistencias.dtpFechaFin_ValueChanged(System.Object,System.EventArgs)
   - Gimnasio.Presentacion.FrmRegistroAsistencias.dtpFechaInicio
   - Gimnasio.Presentacion.FrmRegistroAsistencias.dtpFechaInicio_ValueChanged(System.Object,System.EventArgs)
+  - Gimnasio.Presentacion.FrmRegistroAsistencias.frmAsistencia
   - Gimnasio.Presentacion.FrmRegistroAsistencias.frmRegistroAsistencias_Load(System.Object,System.EventArgs)
   - Gimnasio.Presentacion.FrmRegistroAsistencias.lblFin
   - Gimnasio.Presentacion.FrmRegistroAsistencias.lblInicio
@@ -1341,6 +1344,101 @@ items:
     return:
       type: Gimnasio.Negocio.NAsistencia
     content.vb: Private nAsistencias As NAsistencia
+- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.frmAsistencia
+  commentId: F:Gimnasio.Presentacion.FrmRegistroAsistencias.frmAsistencia
+  id: frmAsistencia
+  parent: Gimnasio.Presentacion.FrmRegistroAsistencias
+  langs:
+  - csharp
+  - vb
+  name: frmAsistencia
+  nameWithType: FrmRegistroAsistencias.frmAsistencia
+  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.frmAsistencia
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Presentacion/FrmRegistroAsistencias.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: frmAsistencia
+    path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
+    startLine: 26
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion
+  summary: >-
+    Referencia a la instancia del formulario <xref href="Gimnasio.Presentacion.FrmAsistencias" data-throw-if-not-resolved="false"></xref> asociada a este formulario de registro de asistencias.
+
+    Permite la comunicación y sincronización entre ambos formularios.
+  example: []
+  syntax:
+    content: private FrmAsistencias frmAsistencia
+    return:
+      type: Gimnasio.Presentacion.FrmAsistencias
+    content.vb: Private frmAsistencia As FrmAsistencias
+- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia
+  commentId: M:Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia
+  id: GetFrmAsistencia
+  parent: Gimnasio.Presentacion.FrmRegistroAsistencias
+  langs:
+  - csharp
+  - vb
+  name: GetFrmAsistencia()
+  nameWithType: FrmRegistroAsistencias.GetFrmAsistencia()
+  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia()
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Presentacion/FrmRegistroAsistencias.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: GetFrmAsistencia
+    path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
+    startLine: 32
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion
+  summary: Devuelve la instancia actual del formulario <xref href="Gimnasio.Presentacion.FrmAsistencias" data-throw-if-not-resolved="false"></xref> asociada a este formulario.
+  example: []
+  syntax:
+    content: public FrmAsistencias GetFrmAsistencia()
+    return:
+      type: Gimnasio.Presentacion.FrmAsistencias
+      description: Instancia de <xref href="Gimnasio.Presentacion.FrmAsistencias" data-throw-if-not-resolved="false"></xref> o Nothing si no existe.
+    content.vb: Public Function GetFrmAsistencia() As FrmAsistencias
+  overload: Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia*
+- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia(Gimnasio.Presentacion.FrmAsistencias)
+  commentId: M:Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia(Gimnasio.Presentacion.FrmAsistencias)
+  id: SetFrmAsistencia(Gimnasio.Presentacion.FrmAsistencias)
+  parent: Gimnasio.Presentacion.FrmRegistroAsistencias
+  langs:
+  - csharp
+  - vb
+  name: SetFrmAsistencia(FrmAsistencias)
+  nameWithType: FrmRegistroAsistencias.SetFrmAsistencia(FrmAsistencias)
+  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia(Gimnasio.Presentacion.FrmAsistencias)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Presentacion/FrmRegistroAsistencias.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: SetFrmAsistencia
+    path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
+    startLine: 40
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion
+  summary: Asigna una instancia del formulario <xref href="Gimnasio.Presentacion.FrmAsistencias" data-throw-if-not-resolved="false"></xref> a este formulario de registro de asistencias.
+  example: []
+  syntax:
+    content: public void SetFrmAsistencia(FrmAsistencias frm)
+    parameters:
+    - id: frm
+      type: Gimnasio.Presentacion.FrmAsistencias
+      description: Instancia de <xref href="Gimnasio.Presentacion.FrmAsistencias" data-throw-if-not-resolved="false"></xref> a asociar.
+    content.vb: Public Sub SetFrmAsistencia(frm As FrmAsistencias)
+  overload: Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia*
 - uid: Gimnasio.Presentacion.FrmRegistroAsistencias.#ctor(Gimnasio.Entidades.Usuarios)
   commentId: M:Gimnasio.Presentacion.FrmRegistroAsistencias.#ctor(Gimnasio.Entidades.Usuarios)
   id: '#ctor(Gimnasio.Entidades.Usuarios)'
@@ -1359,7 +1457,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: .ctor
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 26
+    startLine: 48
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1394,7 +1492,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: frmRegistroAsistencias_Load
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 42
+    startLine: 64
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1439,7 +1537,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ActualizarDgv
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 72
+    startLine: 94
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1472,7 +1570,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: ActualizarDgv
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 87
+    startLine: 109
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1508,18 +1606,18 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnInsertar_Click
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 102
+    startLine: 126
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
   summary: >-
     Evento que se ejecuta al hacer clic en el botón "Insertar" en el formulario de registro de asistencias.
 
-    - Crea una nueva instancia del formulario <xref href="Gimnasio.Presentacion.FrmAsistencias" data-throw-if-not-resolved="false"></xref>, 
-
-    pasando como parámetro la instancia actual de <xref href="Gimnasio.Presentacion.FrmRegistroAsistencias" data-throw-if-not-resolved="false"></xref> para permitir la comunicación entre formularios.
-
-    - Muestra el formulario de registro de asistencias para permitir el ingreso de una nueva asistencia mediante el DNI del miembro.
+    - Verifica si ya existe una instancia activa y no liberada del formulario <xref href="Gimnasio.Presentacion.FrmAsistencias" data-throw-if-not-resolved="false"></xref> asociada a este formulario.
+      - Si ya está abierta, muestra un mensaje informando al usuario y lleva el formulario existente al frente y le da el foco.
+      - Si no existe o ya fue cerrada, crea una nueva instancia de <xref href="Gimnasio.Presentacion.FrmAsistencias" data-throw-if-not-resolved="false"></xref>, pasando como parámetro la instancia actual de
+      este formulario.
+    - Muestra el formulario <xref href="Gimnasio.Presentacion.FrmAsistencias" data-throw-if-not-resolved="false"></xref> para permitir el registro de una nueva asistencia mediante el ingreso de DNI.
   example: []
   syntax:
     content: private void btnInsertar_Click(object sender, EventArgs e)
@@ -1551,7 +1649,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: cb_SelectedIndexChanged
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 119
+    startLine: 149
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1595,7 +1693,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: tbBuscar_TextChanged
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 143
+    startLine: 173
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1638,7 +1736,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: dtpFechaInicio_ValueChanged
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 156
+    startLine: 186
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1674,7 +1772,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: dtpFechaFin_ValueChanged
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 167
+    startLine: 197
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1710,7 +1808,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnBuscar_Click
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 182
+    startLine: 212
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1755,7 +1853,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: btnEliminar_Click
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 203
+    startLine: 233
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1802,7 +1900,7 @@ items:
       repo: https://github.com/Carlovich01/gimnasio3.git
     id: pbReiniciar_Click
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 229
+    startLine: 259
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -19752,6 +19850,25 @@ references:
   name: PictureBox
   nameWithType: PictureBox
   fullName: System.Windows.Forms.PictureBox
+- uid: Gimnasio.Presentacion.FrmAsistencias
+  commentId: T:Gimnasio.Presentacion.FrmAsistencias
+  parent: Gimnasio.Presentacion
+  href: Gimnasio.Presentacion.FrmAsistencias.html
+  name: FrmAsistencias
+  nameWithType: FrmAsistencias
+  fullName: Gimnasio.Presentacion.FrmAsistencias
+- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia*
+  commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia
+  href: Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_GetFrmAsistencia
+  name: GetFrmAsistencia
+  nameWithType: FrmRegistroAsistencias.GetFrmAsistencia
+  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia
+- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia*
+  commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia
+  href: Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_SetFrmAsistencia_Gimnasio_Presentacion_FrmAsistencias_
+  name: SetFrmAsistencia
+  nameWithType: FrmRegistroAsistencias.SetFrmAsistencia
+  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia
 - uid: Gimnasio.Entidades.Usuarios
   commentId: T:Gimnasio.Entidades.Usuarios
   parent: Gimnasio.Entidades
@@ -19881,19 +19998,6 @@ references:
     name: Data
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.data
-- uid: Gimnasio.Presentacion.FrmAsistencias
-  commentId: T:Gimnasio.Presentacion.FrmAsistencias
-  href: Gimnasio.Presentacion.FrmAsistencias.html
-  name: FrmAsistencias
-  nameWithType: FrmAsistencias
-  fullName: Gimnasio.Presentacion.FrmAsistencias
-- uid: Gimnasio.Presentacion.FrmRegistroAsistencias
-  commentId: T:Gimnasio.Presentacion.FrmRegistroAsistencias
-  parent: Gimnasio.Presentacion
-  href: Gimnasio.Presentacion.FrmRegistroAsistencias.html
-  name: FrmRegistroAsistencias
-  nameWithType: FrmRegistroAsistencias
-  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias
 - uid: Gimnasio.Presentacion.FrmRegistroAsistencias.btnInsertar_Click*
   commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.btnInsertar_Click
   href: Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_btnInsertar_Click_System_Object_System_EventArgs_

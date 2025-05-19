@@ -35,6 +35,11 @@
             "files": [
                 "*.sql"
             ]
+        },
+        {
+            "files": [
+                "*.pdf"
+            ]
         }
     ],
     "output": "_site",
@@ -51,7 +56,8 @@
         "_disableToc": false,
         "_appLogoPath": "images/logo.svg",
         "_appFaviconPath": "images/logo.ico",
-        "pdf": true
+        "pdf": true,
+        "_disableContribution": true
     }
   }
 }

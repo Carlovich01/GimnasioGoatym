@@ -1180,7 +1180,7 @@ items:
     - Instancia la capa de negocio <xref href="Gimnasio.Negocio.NUsuarios" data-throw-if-not-resolved="false"></xref> y llama a <xref href="Gimnasio.Negocio.NUsuarios.ValidarCredenciales(System.String%2cSystem.String)" data-throw-if-not-resolved="false"></xref> para verificar las credenciales.
         - Si las credenciales son correctas (el método devuelve un objeto <xref href="Gimnasio.Entidades.Usuarios" data-throw-if-not-resolved="false"></xref> distinto de Nothing):
             - Oculta el formulario de login.
-            - Crea y muestra el formulario principal <xref href="Gimnasio.Presentacion.FrmPrincipal" data-throw-if-not-resolved="false"></xref>, pasando el usuario autenticado como parámetro.
+            - Crea y muestra el formulario principal <xref href="Gimnasio.Presentacion.FrmPrincipal" data-throw-if-not-resolved="false"></xref>, pasando el usuario autenticado y la referencia a este formulario como parámetros.
         - Si las credenciales son incorrectas, lanza una excepción y muestra un mensaje de error.
   example: []
   syntax:

@@ -26,12 +26,14 @@ items:
 references:
 - uid: Gimnasio.Presentacion.FrmAsistencias
   commentId: T:Gimnasio.Presentacion.FrmAsistencias
+  parent: Gimnasio.Presentacion
   href: Gimnasio.Presentacion.FrmAsistencias.html
   name: FrmAsistencias
   nameWithType: FrmAsistencias
   fullName: Gimnasio.Presentacion.FrmAsistencias
 - uid: Gimnasio.Presentacion.FrmLogin
   commentId: T:Gimnasio.Presentacion.FrmLogin
+  parent: Gimnasio.Presentacion
   href: Gimnasio.Presentacion.FrmLogin.html
   name: FrmLogin
   nameWithType: FrmLogin

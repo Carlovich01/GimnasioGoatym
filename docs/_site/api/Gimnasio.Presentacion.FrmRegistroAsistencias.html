@@ -145,7 +145,7 @@ que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usua
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias__ctor_Gimnasio_Entidades_Usuarios_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.#ctor(Gimnasio.Entidades.Usuarios)">
   FrmRegistroAsistencias(Usuarios)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L27"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Constructor del formulario de asistencias. Si el usuario es recepcionista, oculta el boton de eliminar.</p>
@@ -189,6 +189,33 @@ que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usua
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">private IContainer components</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_frmAsistencia" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.frmAsistencia">
+  frmAsistencia
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Referencia a la instancia del formulario <a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html">FrmAsistencias</a> asociada a este formulario de registro de asistencias.
+Permite la comunicación y sincronización entre ambos formularios.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private FrmAsistencias frmAsistencia</code></pre>
   </div>
 
 
@@ -605,7 +632,7 @@ que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usua
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_ActualizarDgv" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.ActualizarDgv">
   ActualizarDgv()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L95"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Actualiza el DataGridView con la lista de asistencias obtenida desde la capa de negocio mediante <a class="xref" href="Gimnasio.Negocio.NAsistencia.html#Gimnasio_Negocio_NAsistencia_Listar">Listar()</a>.</p>
@@ -636,7 +663,7 @@ que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usua
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_ActualizarDgv_System_Data_DataTable_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.ActualizarDgv(System.Data.DataTable)">
   ActualizarDgv(DataTable)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L88"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L110"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Actualiza el DataGridView con una lista específica de asistencias proporcionada como parámetro.</p>
@@ -701,6 +728,39 @@ que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usua
 
 
 
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_GetFrmAsistencia_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_GetFrmAsistencia" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia">
+  GetFrmAsistencia()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Devuelve la instancia actual del formulario <a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html">FrmAsistencias</a> asociada a este formulario.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FrmAsistencias GetFrmAsistencia()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html">FrmAsistencias</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html">FrmAsistencias</a> o Nothing si no existe.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_InitializeComponent_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.InitializeComponent*"></a>
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_InitializeComponent" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.InitializeComponent">
@@ -727,11 +787,44 @@ que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usua
 
 
 
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_SetFrmAsistencia_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_SetFrmAsistencia_Gimnasio_Presentacion_FrmAsistencias_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia(Gimnasio.Presentacion.FrmAsistencias)">
+  SetFrmAsistencia(FrmAsistencias)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Asigna una instancia del formulario <a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html">FrmAsistencias</a> a este formulario de registro de asistencias.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFrmAsistencia(FrmAsistencias frm)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>frm</code> <a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html">FrmAsistencias</a></dt>
+    <dd><p>Instancia de <a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html">FrmAsistencias</a> a asociar.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_btnBuscar_Click_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.btnBuscar_Click*"></a>
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_btnBuscar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.btnBuscar_Click(System.Object,System.EventArgs)">
   btnBuscar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L183"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L213"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón para buscar asistencias por fecha.</p>
@@ -771,7 +864,7 @@ que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usua
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_btnEliminar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.btnEliminar_Click(System.Object,System.EventArgs)">
   btnEliminar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L204"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L234"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Eliminar&quot;.</p>
@@ -812,14 +905,19 @@ que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usua
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_btnInsertar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.btnInsertar_Click(System.Object,System.EventArgs)">
   btnInsertar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L103"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L127"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Insertar&quot; en el formulario de registro de asistencias.</p>
 <ul>
-<li>Crea una nueva instancia del formulario <a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html">FrmAsistencias</a>,
-pasando como parámetro la instancia actual de <a class="xref" href="Gimnasio.Presentacion.FrmRegistroAsistencias.html">FrmRegistroAsistencias</a> para permitir la comunicación entre formularios.</li>
-<li>Muestra el formulario de registro de asistencias para permitir el ingreso de una nueva asistencia mediante el DNI del miembro.</li>
+<li>Verifica si ya existe una instancia activa y no liberada del formulario <a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html">FrmAsistencias</a> asociada a este formulario.
+<ul>
+<li>Si ya está abierta, muestra un mensaje informando al usuario y lleva el formulario existente al frente y le da el foco.</li>
+<li>Si no existe o ya fue cerrada, crea una nueva instancia de <a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html">FrmAsistencias</a>, pasando como parámetro la instancia actual de
+este formulario.</li>
+</ul>
+</li>
+<li>Muestra el formulario <a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html">FrmAsistencias</a> para permitir el registro de una nueva asistencia mediante el ingreso de DNI.</li>
 </ul>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -851,7 +949,7 @@ pasando como parámetro la instancia actual de <a class="xref" href="Gimnasio.Pr
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_cb_SelectedIndexChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.cb_SelectedIndexChanged(System.Object,System.EventArgs)">
   cb_SelectedIndexChanged(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L120"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L150"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al cambiar la opción seleccionada en el ComboBox de búsqueda de asistencias.</p>
@@ -895,7 +993,7 @@ pasando como parámetro la instancia actual de <a class="xref" href="Gimnasio.Pr
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_dtpFechaFin_ValueChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.dtpFechaFin_ValueChanged(System.Object,System.EventArgs)">
   dtpFechaFin_ValueChanged(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L168"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L198"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al cambiar el valor del DateTimePicker para la fecha de fin. Cambia el formato a corto para mostrar solo la fecha.</p>
@@ -929,7 +1027,7 @@ pasando como parámetro la instancia actual de <a class="xref" href="Gimnasio.Pr
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_dtpFechaInicio_ValueChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.dtpFechaInicio_ValueChanged(System.Object,System.EventArgs)">
   dtpFechaInicio_ValueChanged(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L157"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L187"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al cambiar el valor del DateTimePicker para la fecha de inicio. Cambia el formato a corto para mostrar solo la fecha.</p>
@@ -963,7 +1061,7 @@ pasando como parámetro la instancia actual de <a class="xref" href="Gimnasio.Pr
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_frmRegistroAsistencias_Load_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.frmRegistroAsistencias_Load(System.Object,System.EventArgs)">
   frmRegistroAsistencias_Load(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al cargar el formulario de registro de asistencias.</p>
@@ -1004,7 +1102,7 @@ para mostrar solo la información relevante y con títulos descriptivos.</li>
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_pbReiniciar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.pbReiniciar_Click(System.Object,System.EventArgs)">
   pbReiniciar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L230"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L260"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Reiniciar&quot;.</p>
@@ -1044,7 +1142,7 @@ limpia sus formatos y actualiza el DataGridView mostrando todas las asistencias.
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_tbBuscar_TextChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.tbBuscar_TextChanged(System.Object,System.EventArgs)">
   tbBuscar_TextChanged(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L144"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L174"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al cambiar el texto en el campo de búsqueda de asistencias.</p>
@@ -1082,9 +1180,6 @@ utilizando <a class="xref" href="Gimnasio.Negocio.NAsistencia.html#Gimnasio_Nego
 
 </article>
 
-        <div class="contribution d-print-none">
-          <a href="https://github.com/Carlovich01/gimnasio3/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L17" class="edit-link">Edit this page</a>
-        </div>
 
 
       </div>

@@ -10,6 +10,7 @@ items:
   - Gimnasio.Presentacion.FrmAsistencias.InitializeComponent
   - Gimnasio.Presentacion.FrmAsistencias.components
   - Gimnasio.Presentacion.FrmAsistencias.dgvListado
+  - Gimnasio.Presentacion.FrmAsistencias.frmAsistencia_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)
   - Gimnasio.Presentacion.FrmAsistencias.frmAsistencias_Load(System.Object,System.EventArgs)
   - Gimnasio.Presentacion.FrmAsistencias.frmRegistro
   - Gimnasio.Presentacion.FrmAsistencias.labelResultado
@@ -1186,6 +1187,46 @@ items:
   nameWithType.vb: FrmAsistencias.tbDNI_KeyPress(Object, KeyPressEventArgs)
   fullName.vb: Gimnasio.Presentacion.FrmAsistencias.tbDNI_KeyPress(Object, System.Windows.Forms.KeyPressEventArgs)
   name.vb: tbDNI_KeyPress(Object, KeyPressEventArgs)
+- uid: Gimnasio.Presentacion.FrmAsistencias.frmAsistencia_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)
+  commentId: M:Gimnasio.Presentacion.FrmAsistencias.frmAsistencia_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)
+  id: frmAsistencia_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)
+  parent: Gimnasio.Presentacion.FrmAsistencias
+  langs:
+  - csharp
+  - vb
+  name: frmAsistencia_FormClosed(object, FormClosedEventArgs)
+  nameWithType: FrmAsistencias.frmAsistencia_FormClosed(object, FormClosedEventArgs)
+  fullName: Gimnasio.Presentacion.FrmAsistencias.frmAsistencia_FormClosed(object, System.Windows.Forms.FormClosedEventArgs)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Presentacion/FrmAsistencias.vb
+      branch: main
+      repo: https://github.com/Carlovich01/gimnasio3.git
+    id: frmAsistencia_FormClosed
+    path: ../Gimnasio.Presentacion/FrmAsistencias.vb
+    startLine: 125
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion
+  summary: >-
+    Evento que se ejecuta al cerrarse el formulario <xref href="Gimnasio.Presentacion.FrmAsistencias" data-throw-if-not-resolved="false"></xref>.
+     - Se encarga de limpiar la referencia al formulario <xref href="Gimnasio.Presentacion.FrmAsistencias" data-throw-if-not-resolved="false"></xref> en el formulario padre <xref href="Gimnasio.Presentacion.FrmRegistroAsistencias" data-throw-if-not-resolved="false"></xref>,
+       llamando a <xref href="Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia(Gimnasio.Presentacion.FrmAsistencias)" data-throw-if-not-resolved="false"></xref>. 
+       Esto asegura que el formulario padre no mantenga una referencia a una instancia ya cerrada.
+  example: []
+  syntax:
+    content: private void frmAsistencia_FormClosed(object sender, FormClosedEventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: System.Windows.Forms.FormClosedEventArgs
+    content.vb: Private Sub frmAsistencia_FormClosed(sender As Object, e As FormClosedEventArgs)
+  overload: Gimnasio.Presentacion.FrmAsistencias.frmAsistencia_FormClosed*
+  nameWithType.vb: FrmAsistencias.frmAsistencia_FormClosed(Object, FormClosedEventArgs)
+  fullName.vb: Gimnasio.Presentacion.FrmAsistencias.frmAsistencia_FormClosed(Object, System.Windows.Forms.FormClosedEventArgs)
+  name.vb: frmAsistencia_FormClosed(Object, FormClosedEventArgs)
 references:
 - uid: Gimnasio.Negocio.NAsistencia
   commentId: T:Gimnasio.Negocio.NAsistencia
@@ -19025,6 +19066,7 @@ references:
   fullName: Gimnasio.Presentacion.FrmRegistroAsistencias
 - uid: Gimnasio.Presentacion.FrmAsistencias
   commentId: T:Gimnasio.Presentacion.FrmAsistencias
+  parent: Gimnasio.Presentacion
   href: Gimnasio.Presentacion.FrmAsistencias.html
   name: FrmAsistencias
   nameWithType: FrmAsistencias
@@ -19136,3 +19178,41 @@ references:
   name: KeyPressEventArgs
   nameWithType: KeyPressEventArgs
   fullName: System.Windows.Forms.KeyPressEventArgs
+- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia(Gimnasio.Presentacion.FrmAsistencias)
+  commentId: M:Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia(Gimnasio.Presentacion.FrmAsistencias)
+  href: Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_SetFrmAsistencia_Gimnasio_Presentacion_FrmAsistencias_
+  name: SetFrmAsistencia(FrmAsistencias)
+  nameWithType: FrmRegistroAsistencias.SetFrmAsistencia(FrmAsistencias)
+  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia(Gimnasio.Presentacion.FrmAsistencias)
+  spec.csharp:
+  - uid: Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia(Gimnasio.Presentacion.FrmAsistencias)
+    name: SetFrmAsistencia
+    href: Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_SetFrmAsistencia_Gimnasio_Presentacion_FrmAsistencias_
+  - name: (
+  - uid: Gimnasio.Presentacion.FrmAsistencias
+    name: FrmAsistencias
+    href: Gimnasio.Presentacion.FrmAsistencias.html
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia(Gimnasio.Presentacion.FrmAsistencias)
+    name: SetFrmAsistencia
+    href: Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_SetFrmAsistencia_Gimnasio_Presentacion_FrmAsistencias_
+  - name: (
+  - uid: Gimnasio.Presentacion.FrmAsistencias
+    name: FrmAsistencias
+    href: Gimnasio.Presentacion.FrmAsistencias.html
+  - name: )
+- uid: Gimnasio.Presentacion.FrmAsistencias.frmAsistencia_FormClosed*
+  commentId: Overload:Gimnasio.Presentacion.FrmAsistencias.frmAsistencia_FormClosed
+  href: Gimnasio.Presentacion.FrmAsistencias.html#Gimnasio_Presentacion_FrmAsistencias_frmAsistencia_FormClosed_System_Object_System_Windows_Forms_FormClosedEventArgs_
+  name: frmAsistencia_FormClosed
+  nameWithType: FrmAsistencias.frmAsistencia_FormClosed
+  fullName: Gimnasio.Presentacion.FrmAsistencias.frmAsistencia_FormClosed
+- uid: System.Windows.Forms.FormClosedEventArgs
+  commentId: T:System.Windows.Forms.FormClosedEventArgs
+  parent: System.Windows.Forms
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.windows.forms.formclosedeventargs
+  name: FormClosedEventArgs
+  nameWithType: FormClosedEventArgs
+  fullName: System.Windows.Forms.FormClosedEventArgs
