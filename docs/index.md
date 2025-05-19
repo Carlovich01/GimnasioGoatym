@@ -3,6 +3,9 @@
 - Casas Alan Fernando - EISI 1244
 - Diaz Carlos Emanuel - EISI 1225
 - Gianello Ramiro Valentín - EISI 1333
+
+**Repositorio del Proyecto:** https://github.com/Carlovich01/GimnasioGoatym/tree/main
+
 ## Función Principal
 Goatym es un sistema diseñado para gestión de miembros, planes de membresía, pagos, control de asistencia y seguimiento de reclamos para un gimnasio. Además, permite la creación de usuarios con dos roles principales: Administrador y Recepcionista.
 ## Funciones detalladas del sistema
