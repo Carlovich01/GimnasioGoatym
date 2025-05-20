@@ -172,7 +172,7 @@ items:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
   summary: >-
-    Obtiene un miembro por su ID con <xref href="Gimnasio.Datos.DMiembros.ObtenerPorDni(System.String)" data-throw-if-not-resolved="false"></xref>.
+    Obtiene un miembro por su DNI con <xref href="Gimnasio.Datos.DMiembros.ObtenerPorDni(System.String)" data-throw-if-not-resolved="false"></xref>.
 
     Valida que no exista un miembro con el mismo DNI y que los campos sean correctos con <xref href="Gimnasio.Negocio.NMiembros.ValidarCampos(Gimnasio.Entidades.Miembros)" data-throw-if-not-resolved="false"></xref>.
 

@@ -359,7 +359,7 @@ items:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
   summary: >-
-    1. Busca el usuario por su nombre de usuario utilizando <xref href="Gimnasio.Datos.DUsuarios.ObtenerPorUsername(System.String)" data-throw-if-not-resolved="false"></xref>.
+    1. Le pasa el username a  <xref href="Gimnasio.Datos.DUsuarios.ObtenerPorUsername(System.String)" data-throw-if-not-resolved="false"></xref> para obtener el usuario.
        - Si no existe, retorna Nothing.
     2. Si el usuario existe, genera el hash SHA256 de la contraseña ingresada mediante <xref href="Gimnasio.Negocio.NUsuarios.GenerarHash(System.String)" data-throw-if-not-resolved="false"></xref>.
 

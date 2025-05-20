@@ -1888,7 +1888,7 @@ items:
       - Si hay una selección:
         - Cambia el modo a edición estableciendo esNuevo en False.
         - Llama a <xref href="Gimnasio.Presentacion.FrmPlanes.HabilitarIngreso" data-throw-if-not-resolved="false"></xref> para mostrar el panel de ingreso.
-        - Carga los datos del plan seleccionado en los campos de entrada
+        - Carga los datos del plan seleccionado en los campos de entrada. Si es nulo lo carga como una cadena vacia.
         - Cambia el texto del label a "Actualizar Plan" para indicar el contexto de edición.
       - Si no hay selección, lanza una excepción indicando que no se ha seleccionado ningún plan.
   example: []

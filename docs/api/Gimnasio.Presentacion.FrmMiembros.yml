@@ -1980,7 +1980,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnInsertar_Click
     path: ../Gimnasio.Presentacion/FrmMiembros.Vb
-    startLine: 130
+    startLine: 131
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2023,7 +2023,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnActualizar_Click
     path: ../Gimnasio.Presentacion/FrmMiembros.Vb
-    startLine: 151
+    startLine: 152
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2034,7 +2034,7 @@ items:
       - Si hay una selección:
         - Cambia el modo a edición estableciendo esNuevo en False.
         - Llama a <xref href="Gimnasio.Presentacion.FrmMiembros.HabilitarIngreso" data-throw-if-not-resolved="false"></xref> para mostrar el panel de ingreso.
-        - Carga los datos del miembro seleccionado en los campos de entrada.
+        - Carga los datos del miembro seleccionado en los campos de entrada. Si es nulo, asigna un valor vacío.
         - Cambia el texto del label a "Actualizar Miembro" para indicar el contexto de edición.
       - Si no hay selección, lanza una excepción indicando que no se ha seleccionado ningún miembro.
   example: []
@@ -2068,7 +2068,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnGuardar_Click
     path: ../Gimnasio.Presentacion/FrmMiembros.Vb
-    startLine: 188
+    startLine: 189
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2119,7 +2119,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnCancelar_Click
     path: ../Gimnasio.Presentacion/FrmMiembros.Vb
-    startLine: 228
+    startLine: 229
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2155,7 +2155,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnEliminar_Click
     path: ../Gimnasio.Presentacion/FrmMiembros.Vb
-    startLine: 246
+    startLine: 247
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
