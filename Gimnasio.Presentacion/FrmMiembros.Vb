@@ -117,6 +117,7 @@ Public Class FrmMiembros
         tbApellido.Clear()
         tbTelefono.Clear()
             tbEmail.Clear()
+        cbGenero.SelectedIndex = -1
         Catch ex As Exception
             ManejarErrores.Mostrar("Error al habilitar el ingreso de datos", ex)
         End Try
@@ -144,7 +145,7 @@ Public Class FrmMiembros
     '''   - Si hay una selección:
     '''     - Cambia el modo a edición estableciendo esNuevo en False.
     '''     - Llama a <see cref="HabilitarIngreso"/> para mostrar el panel de ingreso.
-    '''     - Carga los datos del miembro seleccionado en los campos de entrada.
+    '''     - Carga los datos del miembro seleccionado en los campos de entrada. Si es nulo, asigna un valor vacío.
     '''     - Cambia el texto del label a "Actualizar Miembro" para indicar el contexto de edición.
     '''   - Si no hay selección, lanza una excepción indicando que no se ha seleccionado ningún miembro.
     ''' </summary>
@@ -160,9 +161,9 @@ Public Class FrmMiembros
                 tbDni.Text = selectedRow.Cells("dni").Value
                 tbNombre.Text = selectedRow.Cells("nombre").Value
                 tbApellido.Text = selectedRow.Cells("apellido").Value
-                cbGenero.SelectedItem = selectedRow.Cells("genero").Value
-                tbTelefono.Text = selectedRow.Cells("telefono").Value
-                tbEmail.Text = selectedRow.Cells("email").Value
+                cbGenero.SelectedItem = If(IsDBNull(selectedRow.Cells("genero").Value), Nothing, selectedRow.Cells("genero").Value.ToString())
+                tbTelefono.Text = If(IsDBNull(selectedRow.Cells("telefono").Value), "", selectedRow.Cells("telefono").Value.ToString())
+                tbEmail.Text = If(IsDBNull(selectedRow.Cells("email").Value), "", selectedRow.Cells("email").Value.ToString())
                 lblDatosIngreso.Text = "Actualizar Miembro"
             Else
                 Throw New Exception("No se ha seleccionado ningún miembro.")
@@ -257,7 +258,6 @@ Public Class FrmMiembros
                     MsgBox("Miembro eliminado exitosamente.", MsgBoxStyle.Information, "Exito")
                 End If
             Else
-                MsgBox("Seleccione un Miembro para eliminar.", MsgBoxStyle.Exclamation, "Aviso")
                 Throw New Exception("No se ha seleccionado ningún miembro.")
             End If
         Catch ex As Exception

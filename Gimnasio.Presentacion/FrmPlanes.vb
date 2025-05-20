@@ -145,7 +145,7 @@ Public Class FrmPlanes
     '''   - Si hay una selección:
     '''     - Cambia el modo a edición estableciendo esNuevo en False.
     '''     - Llama a <see cref="HabilitarIngreso"/> para mostrar el panel de ingreso.
-    '''     - Carga los datos del plan seleccionado en los campos de entrada
+    '''     - Carga los datos del plan seleccionado en los campos de entrada. Si es nulo lo carga como una cadena vacia.
     '''     - Cambia el texto del label a "Actualizar Plan" para indicar el contexto de edición.
     '''   - Si no hay selección, lanza una excepción indicando que no se ha seleccionado ningún plan.
     ''' </summary>
@@ -160,7 +160,7 @@ Public Class FrmPlanes
 
                 tbID.Text = selectedRow.Cells("id_plan").Value
                 tbNombre.Text = selectedRow.Cells("nombre_plan").Value
-                tbDescripcion.Text = selectedRow.Cells("descripcion").Value
+                tbDescripcion.Text = If(IsDBNull(selectedRow.Cells("descripcion").Value), "", selectedRow.Cells("descripcion").Value.ToString())
                 tbDuracion.Text = selectedRow.Cells("duracion_dias").Value
                 tbPrecio.Text = selectedRow.Cells("precio").Value
                 lblDatosIngreso.Text = "Actualizar Plan"

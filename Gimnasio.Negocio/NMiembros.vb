@@ -91,7 +91,7 @@ Public Class NMiembros
     End Sub
 
     ''' <summary>
-    ''' Obtiene un miembro por su ID con <see cref="DMiembros.ObtenerPorDni(String)"/>.
+    ''' Obtiene un miembro por su DNI con <see cref="DMiembros.ObtenerPorDni(String)"/>.
     ''' Valida que no exista un miembro con el mismo DNI y que los campos sean correctos con <see cref="ValidarCampos(Miembros)"/>.
     ''' Por ultimo, inserta el miembro en la base de datos con <see cref="DMiembros.Insertar(Miembros)"/>.
     ''' </summary>

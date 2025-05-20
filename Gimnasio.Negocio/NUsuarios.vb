@@ -149,7 +149,7 @@ Public Class NUsuarios
     End Function
 
     ''' <summary>
-    ''' 1. Busca el usuario por su nombre de usuario utilizando <see cref="DUsuarios.ObtenerPorUsername(String)"/>.
+    ''' 1. Le pasa el username a  <see cref="DUsuarios.ObtenerPorUsername(String)"/> para obtener el usuario.
     '''    - Si no existe, retorna Nothing.
     ''' 2. Si el usuario existe, genera el hash SHA256 de la contraseña ingresada mediante <see cref="GenerarHash(String)"/>.
     ''' 3. Compara el hash generado con el hash almacenado en la base de datos.
