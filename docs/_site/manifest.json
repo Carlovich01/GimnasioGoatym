@@ -701,10 +701,40 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/ErrorMarcasWeb.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/ErrorMarcasWeb.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/GoatymDer.png",
       "output": {
         "resource": {
           "relative_path": "images/GoatymDer.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/SacarMarcaDeFrmLogin.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/SacarMarcaDeFrmLogin.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/SacarMarcaDeFrmPrincipal.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/SacarMarcaDeFrmPrincipal.png"
         }
       },
       "version": ""

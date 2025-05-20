@@ -89,7 +89,22 @@
 
 <ul>
 <li>Descarga el manual de usuario aquí 👉 <a href="ManualUsuario.pdf">Manual de Usuario</a></li>
-<li>Cuentas de prueba de roles Administrador y Recepcionista:
+</ul>
+<h2 id="instrucciones-de-instalación-y-uso">Instrucciones de instalación y uso</h2>
+<ol>
+<li>Descargar el archivo zip del proyecto y extraerlo.</li>
+<li>La base de datos es <code>goatym.sql</code> y se encuentra en la carpeta<code>\Gimnasio.Datos</code> Tambien se puede descargar en esta misma pagina web en la sección Base de Datos.</li>
+<li>Importar <code>goatym.sql</code> a MySql Workbench.</li>
+<li>Volviendo a la carpeta raiz del proyecto, abrir <code>gimnasio.sln</code> y se abrira en Visual Studio 2022</li>
+<li>Configurar la cadena de conexión de acuerdo a su base de datos, la cadena de conexion se encuentra en <code>Gimnasio.Datos\Conexion.vb</code></li>
+<li>Al compilar el Proyecto, dara el siguiente error:
+<img src="images/ErrorMarcasWeb.png" alt="Error Marcas WEb"></li>
+<li>Para solucionarlo hay que quitar las marcas que pone la Web en los archivos indicados de la siguiente forma:
+<img src="images/SacarMarcaDeFrmPrincipal.png" alt="Sacar Marcas de FrmPrincipal">
+<img src="images/SacarMarcaDeFrmLogin.png" alt="Sacar Marcas de FrmLogin"></li>
+<li>Luego, ya se podra compilar y ejecutar el proyecto.</li>
+<li>Para usar el sistema sin el Visual Studio 2022, luego de compilar el proyecto, se puede usar el archivo <code>Gimnasio.Presentacion.exe</code> que se encuentra en la carpeta <code>Gimnasio.Presentacion/bin/Debug/net9.0-windows</code></li>
+<li>Cuentas de prueba de roles Administrador y Recepcionista.
 <ul>
 <li>Usuario: admin</li>
 <li>Contraseña: 1234</li>
@@ -97,7 +112,8 @@
 <li>Contraseña: 1234</li>
 </ul>
 </li>
-</ul>
+<li>Para realizar un seguimiento de los errores, existe un registro de errores <code>log.txt</code> que se encuentra en <code>Gimnasio.Presentacion\bin\Debug\net9.0-windows\Logs\log.txt</code></li>
+</ol>
 
 </article>
 
