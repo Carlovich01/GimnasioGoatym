@@ -76,8 +76,9 @@ Public Class FrmPrincipal
     ''' <summary>
     ''' Muestra un formulario secundario dentro del panel principal de la aplicación.
     ''' - Si ya existe un formulario cargado en el panel, lo libera de memoria correctamente:
-    '''   - Si el formulario actual es una instancia de <see cref="FrmRegistroAsistencias"/>, verifica si 
-    '''   su formulario hijo (<see cref="FrmAsistencias"/>) está abierto.
+    '''   - Si el formulario actual es una instancia de <see cref="FrmRegistroAsistencias"/> verifica que:
+    '''     - Si es el mismo formulario que se intenta mostrar, no hace nada y retorna.
+    '''     - Si es diferente, verifica si su formulario hijo (<see cref="FrmAsistencias"/>) está abierto.
     '''     - Si <see cref="FrmAsistencias"/> no está abierto o ya fue liberado, elimina y libera la instancia 
     '''     de <see cref="FrmRegistroAsistencias"/> y su referencia.
     '''     - Si <see cref="FrmAsistencias"/> sigue abierto, mantiene la instancia de <see cref="FrmRegistroAsistencias"/> viva 
@@ -93,6 +94,9 @@ Public Class FrmPrincipal
             If PanelDeFormularios.Controls.Count > 0 AndAlso TypeOf PanelDeFormularios.Controls(0) Is Form Then
                 Dim formActual = CType(PanelDeFormularios.Controls(0), Form)
                 If TypeOf formActual Is FrmRegistroAsistencias Then
+                    If formActual Is formulario Then
+                        Return
+                    End If
                     Dim frmReg = CType(formActual, FrmRegistroAsistencias)
                     Dim frmAsist As FrmAsistencias = frmReg.GetFrmAsistencia()
                     If frmAsist Is Nothing OrElse frmAsist.IsDisposed Then
@@ -170,7 +174,6 @@ Public Class FrmPrincipal
     ''' </summary>
     Private Sub btnRegistroAsistencias_Click(sender As Object, e As EventArgs) Handles btRegistroAsistencias.Click
         Try
-
             If frmRegistroAsistencias Is Nothing Then
                 frmRegistroAsistencias = New FrmRegistroAsistencias(usuarioActual)
             End If
@@ -209,6 +212,7 @@ Public Class FrmPrincipal
     ''' - Se ejecuta al hacer clic en el elemento de menú "Cerrar Sesión".
     ''' - Solicita confirmación al usuario mediante un cuadro de diálogo.
     ''' - Si el usuario confirma la acción:
+    '''     - Cierra y libera los recursos del formulario Registro de Asistencia y a su hijo.
     '''     - Oculta el formulario principal.
     '''     - Muestra el formulario de login.
     '''     - Restablece los campos del formulario de login llamando a <see cref="FrmLogin.Formato()"/>.
@@ -217,6 +221,16 @@ Public Class FrmPrincipal
     Private Sub miCerrarSesion_Click(sender As Object, e As EventArgs) Handles miCerrarSesión.Click
         Try
             Dim resultado = MessageBox.Show("¿Está seguro de que desea cerrar sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If frmRegistroAsistencias IsNot Nothing Then
+                Dim frmAsist As FrmAsistencias = frmRegistroAsistencias.GetFrmAsistencia()
+                If frmAsist IsNot Nothing AndAlso Not frmAsist.IsDisposed Then
+                    frmAsist.Close()
+                    frmAsist.Dispose()
+                End If
+                frmRegistroAsistencias.Close()
+                frmRegistroAsistencias.Dispose()
+                frmRegistroAsistencias = Nothing
+            End If
             If resultado = DialogResult.Yes Then
                 Me.Hide()
                 frmLogin.Show()
