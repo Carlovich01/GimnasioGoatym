@@ -2,7 +2,6 @@
 Imports Gimnasio.Datos
 Imports System.Data
 Imports Gimnasio.Errores
-Imports System.Net
 
 ''' <summary>
 ''' Lógica de negocio para la gestión de membresías en el sistema de gimnasio.

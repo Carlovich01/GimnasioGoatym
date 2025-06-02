@@ -22,8 +22,8 @@ Partial Class FrmReclamos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         panelListado = New Panel()
         lblBuscar = New Label()
         btnEliminar = New Button()
@@ -50,14 +50,17 @@ Partial Class FrmReclamos
         tbDescripcion = New TextBox()
         lblDescripcion = New Label()
         lblTipo = New Label()
+        pbReiniciar = New PictureBox()
         panelListado.SuspendLayout()
         CType(dgvListado, ComponentModel.ISupportInitialize).BeginInit()
         panelRespuestaIngreso.SuspendLayout()
         panelDatosIngreso.SuspendLayout()
+        CType(pbReiniciar, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' panelListado
         ' 
+        panelListado.Controls.Add(pbReiniciar)
         panelListado.Controls.Add(lblBuscar)
         panelListado.Controls.Add(btnEliminar)
         panelListado.Controls.Add(cbOpcionBuscar)
@@ -153,28 +156,28 @@ Partial Class FrmReclamos
         dgvListado.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         dgvListado.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvListado.BackgroundColor = Color.FromArgb(CByte(85), CByte(96), CByte(105))
-        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = SystemColors.Window
-        DataGridViewCellStyle3.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle3.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
-        dgvListado.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Window
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        dgvListado.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         dgvListado.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvListado.GridColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
         dgvListado.Location = New Point(11, 57)
         dgvListado.MultiSelect = False
         dgvListado.Name = "dgvListado"
         dgvListado.ReadOnly = True
-        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = SystemColors.Window
-        DataGridViewCellStyle4.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
-        dgvListado.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = SystemColors.Window
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        dgvListado.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         dgvListado.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         dgvListado.Size = New Size(986, 618)
         dgvListado.TabIndex = 46
@@ -402,6 +405,18 @@ Partial Class FrmReclamos
         lblTipo.TabIndex = 46
         lblTipo.Text = "Tipo(*):"
         ' 
+        ' pbReiniciar
+        ' 
+        pbReiniciar.BackColor = Color.FromArgb(CByte(123), CByte(179), CByte(75))
+        pbReiniciar.Cursor = Cursors.Hand
+        pbReiniciar.Image = My.Resources.Resources.reiniciar
+        pbReiniciar.Location = New Point(382, 11)
+        pbReiniciar.Name = "pbReiniciar"
+        pbReiniciar.Size = New Size(34, 30)
+        pbReiniciar.SizeMode = PictureBoxSizeMode.Zoom
+        pbReiniciar.TabIndex = 55
+        pbReiniciar.TabStop = False
+        ' 
         ' FrmReclamos
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -420,6 +435,7 @@ Partial Class FrmReclamos
         panelRespuestaIngreso.PerformLayout()
         panelDatosIngreso.ResumeLayout(False)
         panelDatosIngreso.PerformLayout()
+        CType(pbReiniciar, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -449,4 +465,5 @@ Partial Class FrmReclamos
     Friend WithEvents tbGuardarRespuesta As Button
     Friend WithEvents TbRespuesta As TextBox
     Friend WithEvents tbID As TextBox
+    Friend WithEvents pbReiniciar As PictureBox
 End Class

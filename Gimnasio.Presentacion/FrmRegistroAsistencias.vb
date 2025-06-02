@@ -27,26 +27,10 @@ Public Class FrmRegistroAsistencias
     Private frmAsistencia As FrmAsistencias
 
     ''' <summary>
-    ''' Devuelve la instancia actual del formulario <see cref="FrmAsistencias"/> asociada a este formulario.
-    ''' </summary>
-    ''' <returns>Instancia de <see cref="FrmAsistencias"/> o Nothing si no existe.</returns>
-    Public Function GetFrmAsistencia() As FrmAsistencias
-        Return frmAsistencia
-    End Function
-
-    ''' <summary>
-    ''' Asigna una instancia del formulario <see cref="FrmAsistencias"/> a este formulario de registro de asistencias.
-    ''' </summary>
-    ''' <param name="frm">Instancia de <see cref="FrmAsistencias"/> a asociar.</param>
-    Public Sub SetFrmAsistencia(frm As FrmAsistencias)
-        frmAsistencia = frm
-    End Sub
-
-    ''' <summary>
     ''' Constructor del formulario de asistencias. Si el usuario es recepcionista, oculta el boton de eliminar.
     ''' </summary>
     ''' <param name="usuario">Instancia de <see cref="Usuarios"/> que representa al usuario logueado.</param>
-    Sub New(usuario As Usuarios)
+    Friend Sub New(usuario As Usuarios)
         InitializeComponent()
         If usuario.IdRol = 2 Then
             btnEliminar.Visible = False
@@ -251,13 +235,12 @@ Public Class FrmRegistroAsistencias
     End Sub
 
     ''' <summary>
-    ''' Evento que se ejecuta al hacer clic en el botón "Reiniciar".
     ''' - Si la opción seleccionada en el ComboBox es búsqueda por DNI (índice 0), 
     ''' limpia el campo de búsqueda y actualiza el DataGridView mostrando todas las asistencias.
     ''' - Si la opción seleccionada es búsqueda por fecha (índice 1), restablece los DateTimePicker de fecha de inicio y fin a la fecha actual, 
     ''' limpia sus formatos y actualiza el DataGridView mostrando todas las asistencias.
     ''' </summary>
-    Private Sub pbReiniciar_Click(sender As Object, e As EventArgs) Handles pbReiniciar.Click
+    Public Sub Reiniciar()
         Try
             Select Case cbOpcionBuscar.SelectedIndex
                 Case 0
@@ -274,6 +257,34 @@ Public Class FrmRegistroAsistencias
             End Select
         Catch ex As Exception
             ManejarErrores.Mostrar("Error al reiniciar el listado. ", ex)
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Reiniciar". LLama a <see cref="Reiniciar()"/>.
+    ''' </summary>
+    Private Sub pbReiniciar_Click(sender As Object, e As EventArgs) Handles pbReiniciar.Click
+        Try
+            Reiniciar()
+        Catch ex As Exception
+            ManejarErrores.Mostrar("Error al reiniciar el listado. ", ex)
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' Evento que se ejecuta al cerrar el formulario de registro de asistencias.
+    ''' - Verifica si existe una instancia activa y no liberada del formulario <see cref="FrmAsistencias"/> asociada a este formulario.
+    ''' - Si la instancia existe y no ha sido liberada, la cierra y libera sus recursos llamando a Close() y Dispose().
+    ''' </summary>
+    Private Sub RegistroAsis_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
+        Try
+            If frmAsistencia IsNot Nothing AndAlso Not frmAsistencia.IsDisposed Then
+                frmAsistencia.Close()
+                frmAsistencia.Dispose()
+                frmAsistencia = Nothing
+            End If
+        Catch ex As Exception
+            ManejarErrores.Mostrar("Error al liberar recursos al cerrar la aplicación", ex)
         End Try
     End Sub
 End Class

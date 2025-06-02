@@ -58,7 +58,8 @@ Public Class DMiembros
 
     ''' <summary>
     ''' Recibe una instancia de Miembros y ejecuta una sentencia SQL (UPDATE) que actualiza los campos de un registro de miembro existente que 
-    ''' corresponde al id de la instancia. 
+    ''' corresponde al id de la instancia.
+    ''' Si el DNI esta duplicado, lanza una excepción.
     ''' </summary>
     ''' <param name="Obj">Instancia de <see cref="Miembros"/> con los datos actualizados.</param>
     Public Sub Actualizar(Obj As Miembros)
@@ -75,8 +76,13 @@ Public Class DMiembros
         }
             ExecuteNonQuery(query, parameters)
         Catch ex As Exception
-            ManejarErrores.Log("Capa Datos", ex)
-            Throw
+            If ex.Message.Contains("Duplicate entry") Then
+                ManejarErrores.Log("Capa Datos", ex)
+                Throw New Exception("El DNI ya está registrado.")
+            Else
+                ManejarErrores.Log("Capa Datos", ex)
+                Throw
+            End If
         End Try
     End Sub
 

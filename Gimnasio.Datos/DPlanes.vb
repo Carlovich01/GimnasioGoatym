@@ -58,6 +58,7 @@ Public Class DPlanes
     ''' Recibe una instancia de Planes y ejecuta una sentencia SQL (UPDATE) que actualiza los campos de un registro de plan existente que 
     ''' corresponde al id de la instancia.
     ''' Los valores nulos se almacenan como NULL en la base de datos.
+    ''' Se lanza una excepción si el nombre del plan ya existe.
     ''' </summary>
     ''' <param name="Obj">Instancia de <see cref="Planes"/> con los datos actualizados.</param>
     Public Sub Actualizar(Obj As Planes)
@@ -72,6 +73,10 @@ Public Class DPlanes
         }
             ExecuteNonQuery(query, parameters)
         Catch ex As Exception
+            If ex.Message.Contains("Duplicate entry") AndAlso ex.Message.Contains("nombre_plan") Then
+                ManejarErrores.Log("Capa Datos", ex)
+                Throw New Exception("El nombre del plan " & Obj.NombrePlan & " ya existe. Por favor, elija otro nombre.")
+            End If
             ManejarErrores.Log("Capa Datos", ex)
             Throw
         End Try

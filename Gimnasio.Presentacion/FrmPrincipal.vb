@@ -25,9 +25,39 @@ Public Class FrmPrincipal
     Private usuarioActual As Usuarios
 
     ''' <summary>
+    ''' Referencia al formulario de planes <see cref="FrmPlanes"/>.
+    ''' </summary>
+    Private frmPlanes As FrmPlanes
+
+    ''' <summary>
+    ''' Referencia al formulario de miembros <see cref="FrmMiembros"/>.
+    ''' </summary>
+    Private frmMiembros As FrmMiembros
+
+    ''' <summary>
+    ''' Referencia al formulario de membresías <see cref="FrmMembresias"/>.
+    ''' </summary>
+    Private frmMembresias As FrmMembresias
+
+    ''' <summary>
+    ''' Referencia al formulario de pagos <see cref="FrmPagos"/>.
+    ''' </summary>
+    Private frmPagos As FrmPagos
+
+    ''' <summary>
     ''' Referencia al formulario de registro de asistencias <see cref="FrmRegistroAsistencias"/>.
     ''' </summary>
     Private frmRegistroAsistencias As FrmRegistroAsistencias
+
+    ''' <summary>
+    ''' Referencia al formulario de reclamos <see cref="FrmReclamos"/>.
+    ''' </summary>
+    Private frmReclamos As FrmReclamos
+
+    ''' <summary>
+    ''' Referencia al formulario de usuarios <see cref="FrmUsuarios"/>.
+    ''' </summary>
+    Private frmUsuarios As FrmUsuarios
 
     ''' <summary>
     ''' Constructor del formulario principal.
@@ -75,36 +105,17 @@ Public Class FrmPrincipal
 
     ''' <summary>
     ''' Muestra un formulario secundario dentro del panel principal de la aplicación.
-    ''' - Si ya existe un formulario cargado en el panel, lo libera de memoria correctamente:
-    '''   - Si el formulario actual es una instancia de <see cref="FrmRegistroAsistencias"/> verifica que:
-    '''     - Si es el mismo formulario que se intenta mostrar, no hace nada y retorna.
-    '''     - Si es diferente, verifica si su formulario hijo (<see cref="FrmAsistencias"/>) está abierto.
-    '''     - Si <see cref="FrmAsistencias"/> no está abierto o ya fue liberado, elimina y libera la instancia 
-    '''     de <see cref="FrmRegistroAsistencias"/> y su referencia.
-    '''     - Si <see cref="FrmAsistencias"/> sigue abierto, mantiene la instancia de <see cref="FrmRegistroAsistencias"/> viva 
-    '''     para preservar su estado.
-    '''   - Si el formulario actual no es <see cref="FrmRegistroAsistencias"/>, lo elimina y libera normalmente.
-    ''' - Limpia el panel de cualquier control previo.
-    ''' - Configura el formulario recibido como parámetro para que no sea de nivel superior, sin bordes y ajustado al tamaño del panel principal.
-    ''' - Agrega el formulario al panel y lo muestra.
+    ''' Si el formulario que se intenta mostrar ya está activo en el panel, no realiza ninguna acción para evitar recargas innecesarias.
+    ''' Si es un formulario diferente, limpia el panel, configura el formulario recibido para que se muestre embebido (sin bordes y ajustado al panel)
+    ''' y lo agrega al panel principal, mostrándolo al usuario.
     ''' </summary>
-    ''' <param name="formulario">Instancia de <see cref="Form"/> a mostrar en el panel principal.</param>
+    ''' <param name="formulario">Instancia de <see cref="Form"/> que se desea mostrar en el panel principal.</param>
     Public Sub MostrarFormulario(formulario As Form)
         Try
-            If PanelDeFormularios.Controls.Count > 0 AndAlso TypeOf PanelDeFormularios.Controls(0) Is Form Then
-                Dim formActual = CType(PanelDeFormularios.Controls(0), Form)
-                If TypeOf formActual Is FrmRegistroAsistencias Then
-                    If formActual Is formulario Then
-                        Return
-                    End If
-                    Dim frmReg = CType(formActual, FrmRegistroAsistencias)
-                    Dim frmAsist As FrmAsistencias = frmReg.GetFrmAsistencia()
-                    If frmAsist Is Nothing OrElse frmAsist.IsDisposed Then
-                        formActual.Dispose()
-                        frmRegistroAsistencias = Nothing
-                    End If
-                Else
-                    formActual.Dispose()
+            If PanelDeFormularios.Controls.Count > 0 Then
+                Dim actual As Form = TryCast(PanelDeFormularios.Controls(0), Form)
+                If actual Is formulario Then
+                    Return
                 End If
             End If
             PanelDeFormularios.Controls.Clear()
@@ -119,11 +130,17 @@ Public Class FrmPrincipal
     End Sub
 
     ''' <summary>
-    ''' Evento que abre el formulario de planes <see cref="FrmPlanes"/>.
+    ''' Evento que se ejecuta al hacer clic en el botón "Planes".
+    ''' - Si no existe una instancia previa del formulario de planes (<see cref="FrmPlanes"/>), la crea utilizando el usuario actualmente logueado.
+    ''' - Llama al método <see cref="FrmPlanes.Reiniciar"/> para restablecer el estado del formulario de planes antes de mostrarlo.
+    ''' - Muestra el formulario de planes embebido en el panel principal mediante <see cref="MostrarFormulario"/>.
     ''' </summary>
     Private Sub btnPlanes_Click(sender As Object, e As EventArgs) Handles btnPlanes.Click
         Try
-            Dim frmPlanes = New FrmPlanes(usuarioActual)
+            If frmPlanes Is Nothing Then
+                frmPlanes = New FrmPlanes(usuarioActual)
+            End If
+            frmPlanes.Reiniciar()
             MostrarFormulario(frmPlanes)
         Catch ex As Exception
             ManejarErrores.Mostrar("Error al abrir el formulario de planes", ex)
@@ -131,11 +148,18 @@ Public Class FrmPrincipal
     End Sub
 
     ''' <summary>
-    ''' Evento que abre el formulario de miembros <see cref="FrmMiembros"/>.
+    ''' Evento que se ejecuta al hacer clic en el botón "Miembros".
+    ''' - Si no existe una instancia previa del formulario de miembros (<see cref="FrmMiembros"/>), 
+    '''   la crea pasando como parámetro la instancia del formulario principal (<see cref="FrmPrincipal"/>).
+    ''' - Llama al método <see cref="FrmMiembros.Reiniciar"/> para restablecer el estado del formulario de miembros antes de mostrarlo.
+    ''' - Muestra el formulario de miembros embebido en el panel principal mediante <see cref="MostrarFormulario"/>.
     ''' </summary>
     Private Sub btnMiembros_Click(sender As Object, e As EventArgs) Handles btnMiembros.Click
         Try
-            Dim frmMiembros = New FrmMiembros(Me)
+            If frmMiembros Is Nothing Then
+                frmMiembros = New FrmMiembros(Me)
+            End If
+            frmMiembros.Reiniciar()
             MostrarFormulario(frmMiembros)
         Catch ex As Exception
             ManejarErrores.Mostrar("Error al abrir el formulario de miembros", ex)
@@ -143,11 +167,18 @@ Public Class FrmPrincipal
     End Sub
 
     ''' <summary>
-    ''' Evento que abre el formulario de membresías <see cref="FrmMembresias"/>.
+    ''' Evento que se ejecuta al hacer clic en el botón "Membresías".
+    ''' - Si no existe una instancia previa del formulario de membresías (<see cref="FrmMembresias"/>), 
+    '''   la crea utilizando el usuario actualmente logueado.
+    ''' - Llama al método <see cref="FrmMembresias.Reiniciar"/> para restablecer el estado del formulario de membresías antes de mostrarlo.
+    ''' - Muestra el formulario de membresías embebido en el panel principal mediante <see cref="MostrarFormulario"/>.
     ''' </summary>
     Private Sub btnMembresias_Click(sender As Object, e As EventArgs) Handles btnMembresias.Click
         Try
-            Dim frmMembresias = New FrmMembresias(usuarioActual)
+            If frmMembresias Is Nothing Then
+                frmMembresias = New FrmMembresias(usuarioActual)
+            End If
+            frmMembresias.Reiniciar()
             MostrarFormulario(frmMembresias)
         Catch ex As Exception
             ManejarErrores.Mostrar("Error al abrir el formulario de membresías", ex)
@@ -155,11 +186,17 @@ Public Class FrmPrincipal
     End Sub
 
     ''' <summary>
-    ''' Evento que abre el formulario de pagos <see cref="FrmPagos"/>.
+    ''' Evento que se ejecuta al hacer clic en el botón "Pagos".
+    ''' - Si no existe una instancia previa del formulario de pagos (<see cref="FrmPagos"/>), la crea utilizando el usuario actualmente logueado.
+    ''' - Llama al método <see cref="FrmPagos.Reiniciar"/> para restablecer el estado del formulario de pagos antes de mostrarlo.
+    ''' - Muestra el formulario de pagos embebido en el panel principal mediante <see cref="MostrarFormulario"/>.
     ''' </summary>
     Private Sub btnPagos_Click(sender As Object, e As EventArgs) Handles btnPagos.Click
         Try
-            Dim frmPagos = New FrmPagos(usuarioActual)
+            If frmPagos Is Nothing Then
+                frmPagos = New FrmPagos(usuarioActual)
+            End If
+            frmPagos.Reiniciar()
             MostrarFormulario(frmPagos)
         Catch ex As Exception
             ManejarErrores.Mostrar("Error al abrir el formulario de pagos", ex)
@@ -167,16 +204,18 @@ Public Class FrmPrincipal
     End Sub
 
     ''' <summary>
-    ''' Evento que se ejecuta al hacer clic en el botón para abrir el formulario de registro de asistencias (<see cref="FrmRegistroAsistencias"/>).
-    ''' - Si no existe una instancia activa de <see cref="FrmRegistroAsistencias"/>, crea una nueva pasando el usuario actualmente logueado.
-    ''' - Si ya existe una instancia activa, reutiliza la misma para evitar duplicados y mantener el estado.
-    ''' - Llama a <see cref="MostrarFormulario"/> para mostrar el formulario de registro de asistencias en el panel principal de la aplicación.
+    ''' Evento que se ejecuta al hacer clic en el botón "Registro de Asistencias".
+    ''' - Si no existe una instancia previa del formulario de registro de asistencias (<see cref="FrmRegistroAsistencias"/>), 
+    '''   la crea utilizando el usuario actualmente logueado.
+    ''' - Llama al método <see cref="FrmRegistroAsistencias.Reiniciar"/> para restablecer el estado del formulario antes de mostrarlo.
+    ''' - Muestra el formulario de registro de asistencias embebido en el panel principal mediante <see cref="MostrarFormulario"/>.
     ''' </summary>
     Private Sub btnRegistroAsistencias_Click(sender As Object, e As EventArgs) Handles btRegistroAsistencias.Click
         Try
             If frmRegistroAsistencias Is Nothing Then
                 frmRegistroAsistencias = New FrmRegistroAsistencias(usuarioActual)
             End If
+            frmRegistroAsistencias.Reiniciar()
             MostrarFormulario(frmRegistroAsistencias)
         Catch ex As Exception
             ManejarErrores.Mostrar("Error al abrir el formulario de registro de asistencias", ex)
@@ -184,11 +223,17 @@ Public Class FrmPrincipal
     End Sub
 
     ''' <summary>
-    ''' Evento que abre el formulario de reclamos <see cref="FrmReclamos"/>.
+    ''' Evento que se ejecuta al hacer clic en el botón "Reclamos".
+    ''' - Si no existe una instancia previa del formulario de reclamos (<see cref="FrmReclamos"/>), la crea utilizando el usuario actualmente logueado.
+    ''' - Llama al método <see cref="FrmReclamos.Reiniciar"/> para restablecer el estado del formulario de reclamos antes de mostrarlo.
+    ''' - Muestra el formulario de reclamos embebido en el panel principal mediante <see cref="MostrarFormulario"/>.
     ''' </summary>
     Private Sub btnReclamos_Click(sender As Object, e As EventArgs) Handles btnReclamos.Click
         Try
-            Dim frmReclamos = New FrmReclamos(usuarioActual)
+            If frmReclamos Is Nothing Then
+                frmReclamos = New FrmReclamos(usuarioActual)
+            End If
+            frmReclamos.Reiniciar()
             MostrarFormulario(frmReclamos)
         Catch ex As Exception
             ManejarErrores.Mostrar("Error al abrir el formulario de reclamos", ex)
@@ -196,12 +241,17 @@ Public Class FrmPrincipal
     End Sub
 
     ''' <summary>
-    ''' Evento que abre el formulario de usuarios <see cref="FrmUsuarios"/>.
-    ''' Solo visible para usuarios con rol de administrador.
+    ''' Evento que se ejecuta al hacer clic en el botón "Usuarios".
+    ''' - Si no existe una instancia previa del formulario de usuarios (<see cref="FrmUsuarios"/>), la crea.
+    ''' - Llama al método <see cref="FrmUsuarios.Reiniciar"/> para restablecer el estado del formulario de usuarios antes de mostrarlo.
+    ''' - Muestra el formulario de usuarios embebido en el panel principal mediante <see cref="MostrarFormulario"/>.
     ''' </summary>
     Private Sub btnUsuarios_Click(sender As Object, e As EventArgs) Handles btnUsuarios.Click
         Try
-            Dim frmUsuarios = New FrmUsuarios()
+            If frmUsuarios Is Nothing Then
+                frmUsuarios = New FrmUsuarios()
+            End If
+            frmUsuarios.Reiniciar()
             MostrarFormulario(frmUsuarios)
         Catch ex As Exception
             ManejarErrores.Mostrar("Error al abrir el formulario de usuarios", ex)
@@ -209,33 +259,90 @@ Public Class FrmPrincipal
     End Sub
 
     ''' <summary>
-    ''' - Se ejecuta al hacer clic en el elemento de menú "Cerrar Sesión".
-    ''' - Solicita confirmación al usuario mediante un cuadro de diálogo.
-    ''' - Si el usuario confirma la acción:
-    '''     - Cierra y libera los recursos del formulario Registro de Asistencia y a su hijo.
-    '''     - Oculta el formulario principal.
-    '''     - Muestra el formulario de login.
-    '''     - Restablece los campos del formulario de login llamando a <see cref="FrmLogin.Formato()"/>.
-    '''     - Libera los recursos del formulario principal.
+    ''' Muestra el formulario de gestión de membresías (<see cref="FrmMembresias"/>) en el panel principal y habilita el ingreso directo de una membresía 
+    ''' para un miembro específico. Si no existe una instancia previa del formulario de membresías, la crea utilizando el usuario actualmente logueado.
+    ''' Luego, muestra el formulario y llama al método <see cref="FrmMembresias.HabilitarIngresoConMiembro"/> pasando el DNI del miembro para facilitar la asociación.
     ''' </summary>
-    Private Sub miCerrarSesion_Click(sender As Object, e As EventArgs) Handles miCerrarSesión.Click
+    Public Sub MiembroAMembresia(dni As String)
         Try
-            Dim resultado = MessageBox.Show("¿Está seguro de que desea cerrar sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-            If frmRegistroAsistencias IsNot Nothing Then
-                Dim frmAsist As FrmAsistencias = frmRegistroAsistencias.GetFrmAsistencia()
-                If frmAsist IsNot Nothing AndAlso Not frmAsist.IsDisposed Then
-                    frmAsist.Close()
-                    frmAsist.Dispose()
-                End If
+            If frmMembresias Is Nothing Then
+                frmMembresias = New FrmMembresias(usuarioActual)
+            End If
+            MostrarFormulario(frmMembresias)
+            frmMembresias.HabilitarIngresoConMiembro(dni)
+        Catch ex As Exception
+            ManejarErrores.Mostrar("Error al abrir el formulario de membresías con miembro", ex)
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' Libera y cierra todos los formularios secundarios instanciados en el formulario principal, liberando los recursos asociados.
+    ''' Cierra y elimina las instancias de <see cref="FrmPlanes"/>, <see cref="FrmMiembros"/>, <see cref="FrmMembresias"/>, <see cref="FrmPagos"/>,
+    ''' <see cref="FrmRegistroAsistencias"/>, <see cref="FrmReclamos"/> y <see cref="FrmUsuarios"/> si están activos.
+    ''' Finalmente, libera los recursos del propio formulario principal.
+    ''' </summary>
+    Public Sub LiberarRecursos()
+        Try
+            If frmPlanes IsNot Nothing AndAlso Not frmPlanes.IsDisposed Then
+                frmPlanes.Close()
+                frmPlanes.Dispose()
+                frmPlanes = Nothing
+            End If
+
+            If frmMiembros IsNot Nothing AndAlso Not frmMiembros.IsDisposed Then
+                frmMiembros.Close()
+                frmMiembros.Dispose()
+                frmMiembros = Nothing
+            End If
+
+            If frmMembresias IsNot Nothing AndAlso Not frmMembresias.IsDisposed Then
+                frmMembresias.Close()
+                frmMembresias.Dispose()
+                frmMembresias = Nothing
+            End If
+
+            If frmPagos IsNot Nothing AndAlso Not frmPagos.IsDisposed Then
+                frmPagos.Close()
+                frmPagos.Dispose()
+                frmPagos = Nothing
+            End If
+
+            If frmRegistroAsistencias IsNot Nothing AndAlso Not frmRegistroAsistencias.IsDisposed Then
                 frmRegistroAsistencias.Close()
                 frmRegistroAsistencias.Dispose()
                 frmRegistroAsistencias = Nothing
             End If
+
+            If frmReclamos IsNot Nothing AndAlso Not frmReclamos.IsDisposed Then
+                frmReclamos.Close()
+                frmReclamos.Dispose()
+                frmReclamos = Nothing
+            End If
+
+            If frmUsuarios IsNot Nothing AndAlso Not frmUsuarios.IsDisposed Then
+                frmUsuarios.Close()
+                frmUsuarios.Dispose()
+                frmUsuarios = Nothing
+            End If
+            Me.Dispose()
+        Catch ex As Exception
+            ManejarErrores.Mostrar("Error al cerrar", ex)
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en la opción "Cerrar Sesión" del menú.
+    ''' Solicita confirmación al usuario para cerrar la sesión actual mediante un cuadro de diálogo.
+    ''' Si el usuario confirma, muestra nuevamente el formulario de login, restablece su formato 
+    ''' y libera los recursos asociados al formulario principal y sus formularios secundarios.
+    ''' </summary>
+    Private Sub miCerrarSesion_Click(sender As Object, e As EventArgs) Handles miCerrarSesión.Click
+        Try
+            Dim resultado = MessageBox.Show("¿Está seguro de que desea cerrar sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If resultado = DialogResult.Yes Then
-                Me.Hide()
                 frmLogin.Show()
                 frmLogin.Formato()
-                Me.Dispose()
+                LiberarRecursos()
             End If
         Catch ex As Exception
             ManejarErrores.Mostrar("Error al cerrar sesión", ex)
@@ -243,15 +350,15 @@ Public Class FrmPrincipal
     End Sub
 
     ''' <summary>
-    ''' - Se ejecuta al hacer clic en el elemento de menú "Salir".
-    ''' - Libera recursos de el formulario de login como de este formulario.
+    ''' Evento que se ejecuta al cerrarse el formulario principal de la aplicación. Libera todos los recursos asociados a los formularios secundarios 
+    ''' y al propio formulario principal, y cierra el formulario de login.
     ''' </summary>
     Private Sub frmPrincipal_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
         Try
-            frmLogin.Dispose()
+            LiberarRecursos()
+            frmLogin.Close()
         Catch ex As Exception
-            ManejarErrores.Mostrar("Error al liberar recursos al cerrar la aplicación", ex)
+            ManejarErrores.Mostrar("Error al cerrar la aplicación", ex)
         End Try
     End Sub
-
 End Class

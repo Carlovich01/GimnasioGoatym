@@ -30,7 +30,7 @@ Public Class FrmReclamos
     ''' Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, cambiar estado y responder.
     ''' </summary>
     ''' <param name="usuario">Instancia de <see cref="Usuarios"/> que representa al usuario logueado.</param>
-    Sub New(usuario As Usuarios)
+    Friend Sub New(usuario As Usuarios)
         InitializeComponent()
         If usuario.IdRol = 2 Then
             btnEliminar.Visible = False
@@ -352,7 +352,7 @@ Public Class FrmReclamos
     ''' - Si hay selección, obtiene el ID y el estado actual del reclamo seleccionado.
     ''' - Si el estado es "pendiente", utiliza <see cref="NReclamos.ActualizarElEstadoAResuelto"/> para cambiarlo a "resuelto" y muestra un mensaje de confirmación.
     ''' - Si el estado es "resuelto", utiliza <see cref="NReclamos.ActualizarElEstadoAPendiente"/> para cambiarlo a "pendiente" y muestra un mensaje de confirmación.
-    ''' - Actualiza el listado de reclamos en el DataGridView mediante <see cref="ActualizarDgv"/>.
+    ''' - Actualiza el listado con todos los reclamos mediante <see cref="Reiniciar"/>.
     ''' - Si no hay selección, lanza una excepción.
     ''' </summary>
     Private Sub btnCambiarEstado_Click(sender As Object, e As EventArgs) Handles btnCambiarEstado.Click
@@ -386,6 +386,31 @@ Public Class FrmReclamos
             HabilitarListado()
         Catch ex As Exception
             ManejarErrores.Mostrar("Error al cancelar respuesta", ex)
+        End Try
+    End Sub
+
+
+    ''' <summary>
+    ''' Restablece el formulario de reclamos a su estado inicial.
+    ''' - Selecciona la primera opción del ComboBox de búsqueda, mostrando todos los reclamos en el listado.
+    ''' </summary>
+    Public Sub Reiniciar()
+        Try
+            cbOpcionBuscar.SelectedIndex = 0
+            ActualizarDgv()
+        Catch ex As Exception
+            ManejarErrores.Mostrar("Error al reiniciar el formulario de reclamos", ex)
+        End Try
+    End Sub
+
+    '''<summary>
+    ''' Evento que se ejecuta al hacer clic en el boton "Reiniciar". Llama a <see cref="Reiniciar"/> 
+    '''</summary>
+    Private Sub pbReiniciar_Click(sender As Object, e As EventArgs) Handles pbReiniciar.Click
+        Try
+            Reiniciar()
+        Catch ex As Exception
+            ManejarErrores.Mostrar("Error al reiniciar", ex)
         End Try
     End Sub
 End Class

@@ -21,7 +21,7 @@ Public Class FrmPagos
     ''' Constructor del formulario de pagos. Si es recepcionista oculta el boton de Actualizar y Eliminar.
     ''' </summary>
     ''' <param name="usuario">Instancia de <see cref="Usuarios"/> que representa al usuario logueado.</param>
-    Sub New(usuario As Usuarios)
+    Friend Sub New(usuario As Usuarios)
         InitializeComponent()
         If usuario.IdRol = 2 Then
             btnActualizar.Visible = False
@@ -382,7 +382,6 @@ Public Class FrmPagos
     End Sub
 
     ''' <summary>
-    ''' Evento que se ejecuta al hacer clic en el botón "Reiniciar" (pbReiniciar) en el formulario de pagos.
     ''' - Restablece los campos de búsqueda y filtros según la opción seleccionada en el ComboBox:
     '''     - Opción 0 (por fecha): reinicia los controles de fecha al valor actual y les aplica un formato vacío y actualiza el listado completo de pagos.
     '''     - Opción 1 o 2 (por DNI o por nombre de plan): limpia el campo de búsqueda y actualiza el listado completo de pagos.
@@ -390,7 +389,7 @@ Public Class FrmPagos
     '''     - Opciones 4 a 10 (por método de pago): actualiza el listado completo de pagos y restablece la opción seleccionada 
     '''       en el ComboBox a la opción predeterminada (0).
     ''' </summary>
-    Private Sub pbReiniciar_Click(sender As Object, e As EventArgs) Handles pbReiniciar.Click
+    Public Sub Reiniciar()
         Try
             Select Case cbOpcionBuscar.SelectedIndex
                 Case 0
@@ -417,6 +416,20 @@ Public Class FrmPagos
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Reiniciar" (pbReiniciar) en el formulario de pagos. Llama al método <see cref="Reiniciar"/> 
+    ''' </summary>
+    Private Sub pbReiniciar_Click(sender As Object, e As EventArgs) Handles pbReiniciar.Click
+        Try
+            Reiniciar()
+        Catch ex As Exception
+            ManejarErrores.Mostrar("Error al reiniciar el listado. ", ex)
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Cancelar" durante la edición de un pago. Llama al método <see cref="HabilitarListado"/>
+    ''' </summary>
     Private Sub btnCancelarPago_Click(sender As Object, e As EventArgs) Handles btnCancelarPago.Click
         Try
             HabilitarListado()
@@ -424,5 +437,4 @@ Public Class FrmPagos
             ManejarErrores.Mostrar("Error al cancelar la edición del pago.", ex)
         End Try
     End Sub
-
 End Class

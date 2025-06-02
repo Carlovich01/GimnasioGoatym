@@ -262,10 +262,21 @@ Public Class FrmUsuarios
     ''' - Limpia el campo de búsqueda de usuarios (<see cref="tbBuscar"/>), eliminando cualquier texto ingresado por el usuario.
     ''' - Actualiza el listado usuarios llamando a <see cref="ActualizarDgv"/>, mostrando nuevamente la lista completa de usuarios sin filtros.
     ''' </summary>
-    Private Sub pbReiniciar_Click(sender As Object, e As EventArgs) Handles pbReiniciar.Click
+    Public Sub Reiniciar()
         Try
             tbBuscar.Clear()
             ActualizarDgv()
+        Catch ex As Exception
+            ManejarErrores.Mostrar("Error al reiniciar la búsqueda", ex)
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón o icono de "Reiniciar" en el formulario de usuarios. LLama a <see cref="Reiniciar()"/>   
+    ''' </summary>
+    Private Sub pbReiniciar_Click(sender As Object, e As EventArgs) Handles pbReiniciar.Click
+        Try
+            Reiniciar()
         Catch ex As Exception
             ManejarErrores.Mostrar("Error al reiniciar la búsqueda", ex)
         End Try

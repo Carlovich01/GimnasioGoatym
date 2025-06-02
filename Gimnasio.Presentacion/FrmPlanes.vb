@@ -32,7 +32,7 @@ Public Class FrmPlanes
     ''' </summary>
     ''' <param name="usuario">Instancia de <see cref="Usuarios"/> que representa al usuario logueado.</param>
 
-    Sub New(usuario As Usuarios)
+    Friend Sub New(usuario As Usuarios)
         InitializeComponent()
         If usuario.IdRol = 2 Then
             btnInsertar.Visible = False
@@ -317,15 +317,25 @@ Public Class FrmPlanes
     End Sub
 
     ''' <summary>
-    ''' Evento que se ejecuta al hacer clic en el botón "Reiniciar". Actualiza el listado de planes y limpia el campo de busqueda.
+    ''' Actualiza el listado de planes y limpia el campo de busqueda.
     ''' </summary>
-    Private Sub pbReiniciar_Click(sender As Object, e As EventArgs) Handles pbReiniciar.Click
+    Public Sub Reiniciar()
         Try
-            ActualizarDgv()
             tbBuscar.Clear()
+            ActualizarDgv()
         Catch ex As Exception
             ManejarErrores.Mostrar("Error al reiniciar busqueda", ex)
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Reiniciar". LLama a <see cref="Reiniciar()"/>.
+    ''' </summary>
+    Private Sub pbReiniciar_Click(sender As Object, e As EventArgs) Handles pbReiniciar.Click
+        Try
+            Reiniciar()
+        Catch ex As Exception
+            ManejarErrores.Mostrar("Error al reiniciar busqueda", ex)
+        End Try
+    End Sub
 End Class

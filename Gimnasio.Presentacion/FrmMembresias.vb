@@ -32,7 +32,7 @@ Public Class FrmMembresias
     ''' Constructor que inicializa el formulario. Si es recepcionista oculta el boton de eliminar.
     ''' </summary>
     ''' <param name="usuario">Instancia de <see cref="Usuarios"/> que representa al usuario logueado.</param>
-    Sub New(usuario As Usuarios)
+    Friend Sub New(usuario As Usuarios)
         InitializeComponent()
         usuarioActual = usuario
         If usuarioActual.IdRol = 2 Then
@@ -278,6 +278,7 @@ Public Class FrmMembresias
             If esNuevo Then
                 nMembresias.Insertar(membresia)
                 MsgBox("Membresía insertada correctamente.", MsgBoxStyle.Information, "Éxito")
+                ActualizarDgv()
                 Dim resultado = MessageBox.Show("¿Desea registrar un pago para esta membresía?", "Registrar Pago", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 If resultado = DialogResult.Yes Then
                     HabilitarIngresoPago()
@@ -292,8 +293,8 @@ Public Class FrmMembresias
                 membresia.IdMembresia = CInt(tbIDmembresia.Text)
                 nMembresias.Actualizar(membresia)
                 MsgBox("Membresía actualizada correctamente.", MsgBoxStyle.Information, "Éxito")
+                ActualizarDgv()
             End If
-            ActualizarDgv()
             HabilitarListado()
         Catch ex As Exception
             ManejarErrores.Mostrar("Error al guardar membresias", ex)
@@ -532,12 +533,11 @@ Public Class FrmMembresias
 
 
     ''' <summary>
-    ''' Evento que se ejecuta al hacer clic en el botón de reinicio en la gestión de membresías.
-    ''' Según la opción seleccionada en el ComboBox cbOpcionBuscar:
-    ''' - Si la opción es "DNI" o "Nombre de Plan" (índices 0 o 1), limpia el campo de búsqueda y actualiza el listado de membresías mostrando todos los registros.
-    ''' - Si la opción es "Activa" o "Inactiva" (índices 2 o 3), restablece la opción del ComboBox a "DNI" (índice 0) y actualiza el listado mostrando todos los registros.
+    ''' Restablece el estado del formulario de membresías según la opción de búsqueda seleccionada.
+    ''' - Si la opción de búsqueda es por DNI o por nombre de plan (índices 0 o 1), limpia el campo de búsqueda y muestra el listado completo de membresías.
+    ''' - Si la opción es por estado (Activa/Inactiva, índices 2 o 3), restablece la opción de búsqueda a la predeterminada (índice 0) y muestra el listado completo.
     ''' </summary>
-    Private Sub pbReiniciar_Click(sender As Object, e As EventArgs) Handles pbReiniciar.Click
+    Public Sub Reiniciar()
         Try
             Select Case cbOpcionBuscar.SelectedIndex
                 Case 0, 1
@@ -547,6 +547,17 @@ Public Class FrmMembresias
                     cbOpcionBuscar.SelectedIndex = 0
                     ActualizarDgv()
             End Select
+        Catch ex As Exception
+            ManejarErrores.Mostrar("Error al reiniciar el formulario de membresías", ex)
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón de reinicio general del formulario de membresía. Llama al método <see cref="Reiniciar"/>.
+    ''' </summary>
+    Private Sub pbReiniciar_Click(sender As Object, e As EventArgs) Handles pbReiniciar.Click
+        Try
+            Reiniciar()
         Catch ex As Exception
             ManejarErrores.Mostrar("Error al reiniciar el listado ", ex)
         End Try

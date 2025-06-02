@@ -122,6 +122,7 @@ Partial Class FrmLogin
         Controls.Add(tbUsuario)
         Controls.Add(pbLogo)
         Controls.Add(pbMostrarContraseña)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "FrmLogin"
         Text = "Inicio de Sesión"
         CType(pbLogo, ComponentModel.ISupportInitialize).EndInit()

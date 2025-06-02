@@ -7,7 +7,12 @@
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <ApplicationIcon>Resources\logo.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\logo.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <Import Include="System.Data" />

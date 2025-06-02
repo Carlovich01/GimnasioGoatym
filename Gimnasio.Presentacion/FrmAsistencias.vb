@@ -28,7 +28,7 @@ Public Class FrmAsistencias
     ''' - Recibe una instancia de <see cref="FrmRegistroAsistencias"/> como parámetro y la asigna al campo privado <see cref="frmRegistro"/>.
     ''' </summary>
     ''' <param name="frmRegistro">Instancia de <see cref="FrmRegistroAsistencias"/> que permite la interacción entre formularios.</param>
-    Public Sub New(frmRegistro As FrmRegistroAsistencias)
+    Friend Sub New(frmRegistro As FrmRegistroAsistencias)
         InitializeComponent()
         Me.frmRegistro = frmRegistro
     End Sub
@@ -113,21 +113,6 @@ Public Class FrmAsistencias
             End If
         Catch ex As Exception
             ManejarErrores.Mostrar("Error al registrar asistencia", ex)
-        End Try
-    End Sub
-
-    '''<summary>
-    '''Evento que se ejecuta al cerrarse el formulario <see cref="FrmAsistencias"/>.
-    ''' - Se encarga de limpiar la referencia al formulario <see cref="FrmAsistencias"/> en el formulario padre <see cref="FrmRegistroAsistencias"/>,
-    '''   llamando a <see cref="FrmRegistroAsistencias.SetFrmAsistencia(FrmAsistencias)"/>. 
-    '''   Esto asegura que el formulario padre no mantenga una referencia a una instancia ya cerrada.
-    '''</summary>
-
-    Private Sub frmAsistencia_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
-        Try
-            frmRegistro.SetFrmAsistencia(Nothing)
-        Catch ex As Exception
-            ManejarErrores.Mostrar("Error al liberar recursos al cerrar la aplicación", ex)
         End Try
     End Sub
 

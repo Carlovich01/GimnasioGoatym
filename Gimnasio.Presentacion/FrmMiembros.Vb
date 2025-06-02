@@ -31,7 +31,7 @@ Public Class FrmMiembros
     ''' Este constructor se utiliza para inicializar el formulario y establecer la referencia al formulario principal.
     ''' </summary>
     ''' <param name="frmPrincipal">Instancia de <see cref="Gimnasio.Presentacion.FrmPrincipal"/>.</param>
-    Public Sub New(frmPrincipal As FrmPrincipal)
+    Friend Sub New(frmPrincipal As FrmPrincipal)
         InitializeComponent()
         Me.frmPrincipal = frmPrincipal
     End Sub
@@ -182,7 +182,7 @@ Public Class FrmMiembros
     '''   - Si esNuevo es True:
     '''     - Utiliza <see cref="NMiembros.Insertar"/> para agregar el miembro y muestra un mensaje de éxito.
     '''     - Ofrece la opción de agregar una membresía al nuevo miembro. Si el usuario acepta, abre el formulario de membresías con 
-    ''' <see cref="FrmPrincipal.MostrarFormulario(Form)"/> y llama con el DNI a <see cref="FrmMembresias.HabilitarIngresoConMiembro(String)"/>.
+    '''     <see cref="FrmPrincipal.MiembroAMembresia(String)"/> pasando el DNI.
     '''   - Si esNuevo esFalse:
     '''     - Asigna el IdMiembro y utiliza <see cref="NMiembros.Actualizar"/> para modificar el miembro existente, mostrando un mensaje de éxito.
     '''   - Actualiza el listado de miembros llamando a <see cref="ActualizarDgv"/> y vuelve a la vista de listado con <see cref="HabilitarListado"/>.
@@ -207,10 +207,7 @@ Public Class FrmMiembros
                 MsgBox("Miembro agregado exitosamente.", MsgBoxStyle.Information, "Exito")
                 Dim resultado = MessageBox.Show("¿Desea agregar una membresía para este miembro?", "Agregar Membresía", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 If resultado = DialogResult.Yes Then
-                    Dim FrmMembresias As New FrmMembresias(frmPrincipal.obtenerUsuarioActual)
-                    frmPrincipal.MostrarFormulario(FrmMembresias)
-                    FrmMembresias.HabilitarIngresoConMiembro(miembro.Dni)
-                    Return
+                    frmPrincipal.MiembroAMembresia(miembro.Dni)
                 End If
             Else
                 miembro.IdMiembro = CUInt(tbID.Text)
@@ -297,12 +294,25 @@ Public Class FrmMiembros
     End Sub
 
     ''' <summary>
-    ''' Evento que se ejecuta al hacer clic en el botón "Reiniciar". Limpia el campo de búsqueda y actualiza al listado completo de miembros.
+    ''' Restablece el formulario de miembros a su estado inicial.
+    ''' - Limpia el campo de búsqueda.
+    ''' - Actualiza el DataGridView mostrando la lista completa de miembros.
     ''' </summary>
-    Private Sub pbReiniciar_Click(sender As Object, e As EventArgs) Handles pbReiniciar.Click
+    Public Sub Reiniciar()
         Try
             tbBuscar.Clear()
             ActualizarDgv()
+        Catch ex As Exception
+            ManejarErrores.Mostrar("Error al reiniciar la búsqueda", ex)
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' Evento que se ejecuta al hacer clic en el botón "Reiniciar". Llama al método <see cref="Reiniciar"/>
+    ''' </summary>
+    Private Sub pbReiniciar_Click(sender As Object, e As EventArgs) Handles pbReiniciar.Click
+        Try
+            Reiniciar()
         Catch ex As Exception
             ManejarErrores.Mostrar("Error al reiniciar la búsqueda", ex)
         End Try

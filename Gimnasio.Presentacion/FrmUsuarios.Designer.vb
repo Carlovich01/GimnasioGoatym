@@ -22,8 +22,8 @@ Partial Class FrmUsuarios
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         panelListado = New Panel()
         pbReiniciar = New PictureBox()
         btnEliminar = New Button()
@@ -141,28 +141,28 @@ Partial Class FrmUsuarios
         dgvListado.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         dgvListado.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvListado.BackgroundColor = Color.FromArgb(CByte(85), CByte(96), CByte(105))
-        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = SystemColors.Window
-        DataGridViewCellStyle3.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle3.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
-        dgvListado.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Window
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        dgvListado.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         dgvListado.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvListado.GridColor = Color.FromArgb(CByte(5), CByte(18), CByte(26))
         dgvListado.Location = New Point(11, 57)
         dgvListado.MultiSelect = False
         dgvListado.Name = "dgvListado"
         dgvListado.ReadOnly = True
-        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = SystemColors.Window
-        DataGridViewCellStyle4.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
-        dgvListado.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = SystemColors.Window
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        dgvListado.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         dgvListado.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         dgvListado.Size = New Size(986, 618)
         dgvListado.TabIndex = 41
@@ -336,7 +336,7 @@ Partial Class FrmUsuarios
         tbNombreCompleto.Location = New Point(195, 160)
         tbNombreCompleto.Name = "tbNombreCompleto"
         tbNombreCompleto.Size = New Size(418, 29)
-        tbNombreCompleto.TabIndex = 60
+        tbNombreCompleto.TabIndex = 62
         ' 
         ' tbNombreUsuario
         ' 
@@ -345,7 +345,7 @@ Partial Class FrmUsuarios
         tbNombreUsuario.Location = New Point(195, 49)
         tbNombreUsuario.Name = "tbNombreUsuario"
         tbNombreUsuario.Size = New Size(418, 29)
-        tbNombreUsuario.TabIndex = 61
+        tbNombreUsuario.TabIndex = 60
         ' 
         ' tbContraseña
         ' 
@@ -354,7 +354,7 @@ Partial Class FrmUsuarios
         tbContraseña.Location = New Point(195, 101)
         tbContraseña.Name = "tbContraseña"
         tbContraseña.Size = New Size(418, 29)
-        tbContraseña.TabIndex = 62
+        tbContraseña.TabIndex = 61
         tbContraseña.UseSystemPasswordChar = True
         ' 
         ' lblNombreUsuario
