@@ -12,6 +12,7 @@ items:
   - Gimnasio.Presentacion.FrmMiembros.HabilitarIngreso
   - Gimnasio.Presentacion.FrmMiembros.HabilitarListado
   - Gimnasio.Presentacion.FrmMiembros.InitializeComponent
+  - Gimnasio.Presentacion.FrmMiembros.Reiniciar
   - Gimnasio.Presentacion.FrmMiembros.btnActualizar
   - Gimnasio.Presentacion.FrmMiembros.btnActualizar_Click(System.Object,System.EventArgs)
   - Gimnasio.Presentacion.FrmMiembros.btnCancelar
@@ -1782,12 +1783,12 @@ items:
   summary: Este constructor se utiliza para inicializar el formulario y establecer la referencia al formulario principal.
   example: []
   syntax:
-    content: public FrmMiembros(FrmPrincipal frmPrincipal)
+    content: internal FrmMiembros(FrmPrincipal frmPrincipal)
     parameters:
     - id: frmPrincipal
       type: Gimnasio.Presentacion.FrmPrincipal
       description: Instancia de <xref href="Gimnasio.Presentacion.FrmPrincipal" data-throw-if-not-resolved="false"></xref>.
-    content.vb: Public Sub New(frmPrincipal As FrmPrincipal)
+    content.vb: Friend Sub New(frmPrincipal As FrmPrincipal)
   overload: Gimnasio.Presentacion.FrmMiembros.#ctor*
   nameWithType.vb: FrmMiembros.New(FrmPrincipal)
   fullName.vb: Gimnasio.Presentacion.FrmMiembros.New(Gimnasio.Presentacion.FrmPrincipal)
@@ -2084,7 +2085,7 @@ items:
       - Si esNuevo es True:
         - Utiliza <xref href="Gimnasio.Negocio.NMiembros.Insertar(Gimnasio.Entidades.Miembros)" data-throw-if-not-resolved="false"></xref> para agregar el miembro y muestra un mensaje de éxito.
         - Ofrece la opción de agregar una membresía al nuevo miembro. Si el usuario acepta, abre el formulario de membresías con 
-    <xref href="Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario(System.Windows.Forms.Form)" data-throw-if-not-resolved="false"></xref> y llama con el DNI a <xref href="Gimnasio.Presentacion.FrmMembresias.HabilitarIngresoConMiembro(System.String)" data-throw-if-not-resolved="false"></xref>.
+        <xref href="Gimnasio.Presentacion.FrmPrincipal.MiembroAMembresia(System.String)" data-throw-if-not-resolved="false"></xref> pasando el DNI.
       - Si esNuevo esFalse:
         - Asigna el IdMiembro y utiliza <xref href="Gimnasio.Negocio.NMiembros.Actualizar(Gimnasio.Entidades.Miembros)" data-throw-if-not-resolved="false"></xref> para modificar el miembro existente, mostrando un mensaje de éxito.
       - Actualiza el listado de miembros llamando a <xref href="Gimnasio.Presentacion.FrmMiembros.ActualizarDgv" data-throw-if-not-resolved="false"></xref> y vuelve a la vista de listado con <xref href="Gimnasio.Presentacion.FrmMiembros.HabilitarListado" data-throw-if-not-resolved="false"></xref>.
@@ -2119,7 +2120,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnCancelar_Click
     path: ../Gimnasio.Presentacion/FrmMiembros.Vb
-    startLine: 229
+    startLine: 226
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2155,7 +2156,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnEliminar_Click
     path: ../Gimnasio.Presentacion/FrmMiembros.Vb
-    startLine: 247
+    startLine: 244
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2200,7 +2201,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbBuscar_TextChanged
     path: ../Gimnasio.Presentacion/FrmMiembros.Vb
-    startLine: 274
+    startLine: 271
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2245,7 +2246,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: cb_SelectedIndexChanged
     path: ../Gimnasio.Presentacion/FrmMiembros.Vb
-    startLine: 289
+    startLine: 286
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2263,6 +2264,39 @@ items:
   nameWithType.vb: FrmMiembros.cb_SelectedIndexChanged(Object, EventArgs)
   fullName.vb: Gimnasio.Presentacion.FrmMiembros.cb_SelectedIndexChanged(Object, System.EventArgs)
   name.vb: cb_SelectedIndexChanged(Object, EventArgs)
+- uid: Gimnasio.Presentacion.FrmMiembros.Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmMiembros.Reiniciar
+  id: Reiniciar
+  parent: Gimnasio.Presentacion.FrmMiembros
+  langs:
+  - csharp
+  - vb
+  name: Reiniciar()
+  nameWithType: FrmMiembros.Reiniciar()
+  fullName: Gimnasio.Presentacion.FrmMiembros.Reiniciar()
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Presentacion/FrmMiembros.Vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: Reiniciar
+    path: ../Gimnasio.Presentacion/FrmMiembros.Vb
+    startLine: 300
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion
+  summary: >-
+    Restablece el formulario de miembros a su estado inicial.
+
+    - Limpia el campo de búsqueda.
+
+    - Actualiza el DataGridView mostrando la lista completa de miembros.
+  example: []
+  syntax:
+    content: public void Reiniciar()
+    content.vb: Public Sub Reiniciar()
+  overload: Gimnasio.Presentacion.FrmMiembros.Reiniciar*
 - uid: Gimnasio.Presentacion.FrmMiembros.pbReiniciar_Click(System.Object,System.EventArgs)
   commentId: M:Gimnasio.Presentacion.FrmMiembros.pbReiniciar_Click(System.Object,System.EventArgs)
   id: pbReiniciar_Click(System.Object,System.EventArgs)
@@ -2281,11 +2315,11 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: pbReiniciar_Click
     path: ../Gimnasio.Presentacion/FrmMiembros.Vb
-    startLine: 301
+    startLine: 312
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
-  summary: Evento que se ejecuta al hacer clic en el botón "Reiniciar". Limpia el campo de búsqueda y actualiza al listado completo de miembros.
+  summary: Evento que se ejecuta al hacer clic en el botón "Reiniciar". Llama al método <xref href="Gimnasio.Presentacion.FrmMiembros.Reiniciar" data-throw-if-not-resolved="false"></xref>
   example: []
   syntax:
     content: private void pbReiniciar_Click(object sender, EventArgs e)
@@ -20483,47 +20517,20 @@ references:
   - uid: Gimnasio.Entidades.Miembros
     name: Miembros
   - name: )
-- uid: Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario(System.Windows.Forms.Form)
-  commentId: M:Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario(System.Windows.Forms.Form)
+- uid: Gimnasio.Presentacion.FrmPrincipal.MiembroAMembresia(System.String)
+  commentId: M:Gimnasio.Presentacion.FrmPrincipal.MiembroAMembresia(System.String)
   isExternal: true
-  href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_MostrarFormulario_System_Windows_Forms_Form_
-  name: MostrarFormulario(Form)
-  nameWithType: FrmPrincipal.MostrarFormulario(Form)
-  fullName: Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario(System.Windows.Forms.Form)
+  href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_MiembroAMembresia_System_String_
+  name: MiembroAMembresia(string)
+  nameWithType: FrmPrincipal.MiembroAMembresia(string)
+  fullName: Gimnasio.Presentacion.FrmPrincipal.MiembroAMembresia(string)
+  nameWithType.vb: FrmPrincipal.MiembroAMembresia(String)
+  fullName.vb: Gimnasio.Presentacion.FrmPrincipal.MiembroAMembresia(String)
+  name.vb: MiembroAMembresia(String)
   spec.csharp:
-  - uid: Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario(System.Windows.Forms.Form)
-    name: MostrarFormulario
-    href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_MostrarFormulario_System_Windows_Forms_Form_
-  - name: (
-  - uid: System.Windows.Forms.Form
-    name: Form
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.windows.forms.form
-  - name: )
-  spec.vb:
-  - uid: Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario(System.Windows.Forms.Form)
-    name: MostrarFormulario
-    href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_MostrarFormulario_System_Windows_Forms_Form_
-  - name: (
-  - uid: System.Windows.Forms.Form
-    name: Form
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.windows.forms.form
-  - name: )
-- uid: Gimnasio.Presentacion.FrmMembresias.HabilitarIngresoConMiembro(System.String)
-  commentId: M:Gimnasio.Presentacion.FrmMembresias.HabilitarIngresoConMiembro(System.String)
-  isExternal: true
-  href: Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_HabilitarIngresoConMiembro_System_String_
-  name: HabilitarIngresoConMiembro(string)
-  nameWithType: FrmMembresias.HabilitarIngresoConMiembro(string)
-  fullName: Gimnasio.Presentacion.FrmMembresias.HabilitarIngresoConMiembro(string)
-  nameWithType.vb: FrmMembresias.HabilitarIngresoConMiembro(String)
-  fullName.vb: Gimnasio.Presentacion.FrmMembresias.HabilitarIngresoConMiembro(String)
-  name.vb: HabilitarIngresoConMiembro(String)
-  spec.csharp:
-  - uid: Gimnasio.Presentacion.FrmMembresias.HabilitarIngresoConMiembro(System.String)
-    name: HabilitarIngresoConMiembro
-    href: Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_HabilitarIngresoConMiembro_System_String_
+  - uid: Gimnasio.Presentacion.FrmPrincipal.MiembroAMembresia(System.String)
+    name: MiembroAMembresia
+    href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_MiembroAMembresia_System_String_
   - name: (
   - uid: System.String
     name: string
@@ -20531,9 +20538,9 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
   spec.vb:
-  - uid: Gimnasio.Presentacion.FrmMembresias.HabilitarIngresoConMiembro(System.String)
-    name: HabilitarIngresoConMiembro
-    href: Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_HabilitarIngresoConMiembro_System_String_
+  - uid: Gimnasio.Presentacion.FrmPrincipal.MiembroAMembresia(System.String)
+    name: MiembroAMembresia
+    href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_MiembroAMembresia_System_String_
   - name: (
   - uid: System.String
     name: String
@@ -20718,6 +20725,30 @@ references:
   name: cb_SelectedIndexChanged
   nameWithType: FrmMiembros.cb_SelectedIndexChanged
   fullName: Gimnasio.Presentacion.FrmMiembros.cb_SelectedIndexChanged
+- uid: Gimnasio.Presentacion.FrmMiembros.Reiniciar*
+  commentId: Overload:Gimnasio.Presentacion.FrmMiembros.Reiniciar
+  href: Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_Reiniciar
+  name: Reiniciar
+  nameWithType: FrmMiembros.Reiniciar
+  fullName: Gimnasio.Presentacion.FrmMiembros.Reiniciar
+- uid: Gimnasio.Presentacion.FrmMiembros.Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmMiembros.Reiniciar
+  href: Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_Reiniciar
+  name: Reiniciar()
+  nameWithType: FrmMiembros.Reiniciar()
+  fullName: Gimnasio.Presentacion.FrmMiembros.Reiniciar()
+  spec.csharp:
+  - uid: Gimnasio.Presentacion.FrmMiembros.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_Reiniciar
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Presentacion.FrmMiembros.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_Reiniciar
+  - name: (
+  - name: )
 - uid: Gimnasio.Presentacion.FrmMiembros.pbReiniciar_Click*
   commentId: Overload:Gimnasio.Presentacion.FrmMiembros.pbReiniciar_Click
   href: Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_pbReiniciar_Click_System_Object_System_EventArgs_

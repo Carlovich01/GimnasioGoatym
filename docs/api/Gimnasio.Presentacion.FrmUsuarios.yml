@@ -11,6 +11,7 @@ items:
   - Gimnasio.Presentacion.FrmUsuarios.HabilitarIngreso
   - Gimnasio.Presentacion.FrmUsuarios.HabilitarListado
   - Gimnasio.Presentacion.FrmUsuarios.InitializeComponent
+  - Gimnasio.Presentacion.FrmUsuarios.Reiniciar
   - Gimnasio.Presentacion.FrmUsuarios.btnActualizar
   - Gimnasio.Presentacion.FrmUsuarios.btnActualizar_Click(System.Object,System.EventArgs)
   - Gimnasio.Presentacion.FrmUsuarios.btnCancelar
@@ -2153,6 +2154,39 @@ items:
   nameWithType.vb: FrmUsuarios.btnEliminar_Click(Object, EventArgs)
   fullName.vb: Gimnasio.Presentacion.FrmUsuarios.btnEliminar_Click(Object, System.EventArgs)
   name.vb: btnEliminar_Click(Object, EventArgs)
+- uid: Gimnasio.Presentacion.FrmUsuarios.Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmUsuarios.Reiniciar
+  id: Reiniciar
+  parent: Gimnasio.Presentacion.FrmUsuarios
+  langs:
+  - csharp
+  - vb
+  name: Reiniciar()
+  nameWithType: FrmUsuarios.Reiniciar()
+  fullName: Gimnasio.Presentacion.FrmUsuarios.Reiniciar()
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Presentacion/FrmUsuarios.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: Reiniciar
+    path: ../Gimnasio.Presentacion/FrmUsuarios.vb
+    startLine: 264
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion
+  summary: >-
+    Evento que se ejecuta al hacer clic en el botón o icono de "Reiniciar" en el formulario de usuarios.
+
+    - Limpia el campo de búsqueda de usuarios (<xref href="Gimnasio.Presentacion.FrmUsuarios.tbBuscar" data-throw-if-not-resolved="false"></xref>), eliminando cualquier texto ingresado por el usuario.
+
+    - Actualiza el listado usuarios llamando a <xref href="Gimnasio.Presentacion.FrmUsuarios.ActualizarDgv" data-throw-if-not-resolved="false"></xref>, mostrando nuevamente la lista completa de usuarios sin filtros.
+  example: []
+  syntax:
+    content: public void Reiniciar()
+    content.vb: Public Sub Reiniciar()
+  overload: Gimnasio.Presentacion.FrmUsuarios.Reiniciar*
 - uid: Gimnasio.Presentacion.FrmUsuarios.pbReiniciar_Click(System.Object,System.EventArgs)
   commentId: M:Gimnasio.Presentacion.FrmUsuarios.pbReiniciar_Click(System.Object,System.EventArgs)
   id: pbReiniciar_Click(System.Object,System.EventArgs)
@@ -2171,16 +2205,11 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: pbReiniciar_Click
     path: ../Gimnasio.Presentacion/FrmUsuarios.vb
-    startLine: 264
+    startLine: 276
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
-  summary: >-
-    Evento que se ejecuta al hacer clic en el botón o icono de "Reiniciar" en el formulario de usuarios.
-
-    - Limpia el campo de búsqueda de usuarios (<xref href="Gimnasio.Presentacion.FrmUsuarios.tbBuscar" data-throw-if-not-resolved="false"></xref>), eliminando cualquier texto ingresado por el usuario.
-
-    - Actualiza el listado usuarios llamando a <xref href="Gimnasio.Presentacion.FrmUsuarios.ActualizarDgv" data-throw-if-not-resolved="false"></xref>, mostrando nuevamente la lista completa de usuarios sin filtros.
+  summary: Evento que se ejecuta al hacer clic en el botón o icono de "Reiniciar" en el formulario de usuarios. LLama a <xref href="Gimnasio.Presentacion.FrmUsuarios.Reiniciar" data-throw-if-not-resolved="false"></xref>
   example: []
   syntax:
     content: private void pbReiniciar_Click(object sender, EventArgs e)
@@ -20497,6 +20526,30 @@ references:
   name: tbBuscar
   nameWithType: FrmUsuarios.tbBuscar
   fullName: Gimnasio.Presentacion.FrmUsuarios.tbBuscar
+- uid: Gimnasio.Presentacion.FrmUsuarios.Reiniciar*
+  commentId: Overload:Gimnasio.Presentacion.FrmUsuarios.Reiniciar
+  href: Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_Reiniciar
+  name: Reiniciar
+  nameWithType: FrmUsuarios.Reiniciar
+  fullName: Gimnasio.Presentacion.FrmUsuarios.Reiniciar
+- uid: Gimnasio.Presentacion.FrmUsuarios.Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmUsuarios.Reiniciar
+  href: Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_Reiniciar
+  name: Reiniciar()
+  nameWithType: FrmUsuarios.Reiniciar()
+  fullName: Gimnasio.Presentacion.FrmUsuarios.Reiniciar()
+  spec.csharp:
+  - uid: Gimnasio.Presentacion.FrmUsuarios.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_Reiniciar
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Presentacion.FrmUsuarios.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_Reiniciar
+  - name: (
+  - name: )
 - uid: Gimnasio.Presentacion.FrmUsuarios.pbReiniciar_Click*
   commentId: Overload:Gimnasio.Presentacion.FrmUsuarios.pbReiniciar_Click
   href: Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_pbReiniciar_Click_System_Object_System_EventArgs_

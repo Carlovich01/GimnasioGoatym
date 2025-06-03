@@ -899,7 +899,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: pbLogo
     path: ../Gimnasio.Presentacion/FrmLogin.Designer.vb
-    startLine: 132
+    startLine: 133
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -928,7 +928,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbUsuario
     path: ../Gimnasio.Presentacion/FrmLogin.Designer.vb
-    startLine: 133
+    startLine: 134
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -957,7 +957,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbContraseña
     path: ../Gimnasio.Presentacion/FrmLogin.Designer.vb
-    startLine: 134
+    startLine: 135
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -986,7 +986,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblUsuario
     path: ../Gimnasio.Presentacion/FrmLogin.Designer.vb
-    startLine: 135
+    startLine: 136
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1015,7 +1015,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblContraseña
     path: ../Gimnasio.Presentacion/FrmLogin.Designer.vb
-    startLine: 136
+    startLine: 137
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1044,7 +1044,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnIniciarSesion
     path: ../Gimnasio.Presentacion/FrmLogin.Designer.vb
-    startLine: 137
+    startLine: 138
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1073,7 +1073,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: pbMostrarContraseña
     path: ../Gimnasio.Presentacion/FrmLogin.Designer.vb
-    startLine: 138
+    startLine: 139
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion

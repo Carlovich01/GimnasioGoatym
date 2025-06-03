@@ -3070,22 +3070,6 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmAsistencias.dgvListado
   nameWithType: FrmAsistencias.dgvListado
-- uid: Gimnasio.Presentacion.FrmAsistencias.frmAsistencia_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)
-  name: frmAsistencia_FormClosed(object, FormClosedEventArgs)
-  href: api/Gimnasio.Presentacion.FrmAsistencias.html#Gimnasio_Presentacion_FrmAsistencias_frmAsistencia_FormClosed_System_Object_System_Windows_Forms_FormClosedEventArgs_
-  commentId: M:Gimnasio.Presentacion.FrmAsistencias.frmAsistencia_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)
-  name.vb: frmAsistencia_FormClosed(Object, FormClosedEventArgs)
-  fullName: Gimnasio.Presentacion.FrmAsistencias.frmAsistencia_FormClosed(object, System.Windows.Forms.FormClosedEventArgs)
-  fullName.vb: Gimnasio.Presentacion.FrmAsistencias.frmAsistencia_FormClosed(Object, System.Windows.Forms.FormClosedEventArgs)
-  nameWithType: FrmAsistencias.frmAsistencia_FormClosed(object, FormClosedEventArgs)
-  nameWithType.vb: FrmAsistencias.frmAsistencia_FormClosed(Object, FormClosedEventArgs)
-- uid: Gimnasio.Presentacion.FrmAsistencias.frmAsistencia_FormClosed*
-  name: frmAsistencia_FormClosed
-  href: api/Gimnasio.Presentacion.FrmAsistencias.html#Gimnasio_Presentacion_FrmAsistencias_frmAsistencia_FormClosed_
-  commentId: Overload:Gimnasio.Presentacion.FrmAsistencias.frmAsistencia_FormClosed
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmAsistencias.frmAsistencia_FormClosed
-  nameWithType: FrmAsistencias.frmAsistencia_FormClosed
 - uid: Gimnasio.Presentacion.FrmAsistencias.frmAsistencias_Load(System.Object,System.EventArgs)
   name: frmAsistencias_Load(object, EventArgs)
   href: api/Gimnasio.Presentacion.FrmAsistencias.html#Gimnasio_Presentacion_FrmAsistencias_frmAsistencias_Load_System_Object_System_EventArgs_
@@ -3519,6 +3503,19 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmMembresias.InitializeComponent
   nameWithType: FrmMembresias.InitializeComponent
+- uid: Gimnasio.Presentacion.FrmMembresias.Reiniciar
+  name: Reiniciar()
+  href: api/Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmMembresias.Reiniciar
+  fullName: Gimnasio.Presentacion.FrmMembresias.Reiniciar()
+  nameWithType: FrmMembresias.Reiniciar()
+- uid: Gimnasio.Presentacion.FrmMembresias.Reiniciar*
+  name: Reiniciar
+  href: api/Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_Reiniciar_
+  commentId: Overload:Gimnasio.Presentacion.FrmMembresias.Reiniciar
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmMembresias.Reiniciar
+  nameWithType: FrmMembresias.Reiniciar
 - uid: Gimnasio.Presentacion.FrmMembresias.btnActualizar
   name: btnActualizar
   href: api/Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_btnActualizar
@@ -4389,6 +4386,19 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmMiembros.InitializeComponent
   nameWithType: FrmMiembros.InitializeComponent
+- uid: Gimnasio.Presentacion.FrmMiembros.Reiniciar
+  name: Reiniciar()
+  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmMiembros.Reiniciar
+  fullName: Gimnasio.Presentacion.FrmMiembros.Reiniciar()
+  nameWithType: FrmMiembros.Reiniciar()
+- uid: Gimnasio.Presentacion.FrmMiembros.Reiniciar*
+  name: Reiniciar
+  href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_Reiniciar_
+  commentId: Overload:Gimnasio.Presentacion.FrmMiembros.Reiniciar
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmMiembros.Reiniciar
+  nameWithType: FrmMiembros.Reiniciar
 - uid: Gimnasio.Presentacion.FrmMiembros.btnActualizar
   name: btnActualizar
   href: api/Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_btnActualizar
@@ -5033,6 +5043,19 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmPagos.PanelMonto
   nameWithType: FrmPagos.PanelMonto
+- uid: Gimnasio.Presentacion.FrmPagos.Reiniciar
+  name: Reiniciar()
+  href: api/Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmPagos.Reiniciar
+  fullName: Gimnasio.Presentacion.FrmPagos.Reiniciar()
+  nameWithType: FrmPagos.Reiniciar()
+- uid: Gimnasio.Presentacion.FrmPagos.Reiniciar*
+  name: Reiniciar
+  href: api/Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Reiniciar_
+  commentId: Overload:Gimnasio.Presentacion.FrmPagos.Reiniciar
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmPagos.Reiniciar
+  nameWithType: FrmPagos.Reiniciar
 - uid: Gimnasio.Presentacion.FrmPagos.btnActualizar
   name: btnActualizar
   href: api/Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_btnActualizar
@@ -5739,6 +5762,19 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmPlanes.InitializeComponent
   nameWithType: FrmPlanes.InitializeComponent
+- uid: Gimnasio.Presentacion.FrmPlanes.Reiniciar
+  name: Reiniciar()
+  href: api/Gimnasio.Presentacion.FrmPlanes.html#Gimnasio_Presentacion_FrmPlanes_Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmPlanes.Reiniciar
+  fullName: Gimnasio.Presentacion.FrmPlanes.Reiniciar()
+  nameWithType: FrmPlanes.Reiniciar()
+- uid: Gimnasio.Presentacion.FrmPlanes.Reiniciar*
+  name: Reiniciar
+  href: api/Gimnasio.Presentacion.FrmPlanes.html#Gimnasio_Presentacion_FrmPlanes_Reiniciar_
+  commentId: Overload:Gimnasio.Presentacion.FrmPlanes.Reiniciar
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmPlanes.Reiniciar
+  nameWithType: FrmPlanes.Reiniciar
 - uid: Gimnasio.Presentacion.FrmPlanes.btnActualizar
   name: btnActualizar
   href: api/Gimnasio.Presentacion.FrmPlanes.html#Gimnasio_Presentacion_FrmPlanes_btnActualizar
@@ -6257,6 +6293,35 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmPrincipal.InitializeComponent
   nameWithType: FrmPrincipal.InitializeComponent
+- uid: Gimnasio.Presentacion.FrmPrincipal.LiberarRecursos
+  name: LiberarRecursos()
+  href: api/Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_LiberarRecursos
+  commentId: M:Gimnasio.Presentacion.FrmPrincipal.LiberarRecursos
+  fullName: Gimnasio.Presentacion.FrmPrincipal.LiberarRecursos()
+  nameWithType: FrmPrincipal.LiberarRecursos()
+- uid: Gimnasio.Presentacion.FrmPrincipal.LiberarRecursos*
+  name: LiberarRecursos
+  href: api/Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_LiberarRecursos_
+  commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.LiberarRecursos
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmPrincipal.LiberarRecursos
+  nameWithType: FrmPrincipal.LiberarRecursos
+- uid: Gimnasio.Presentacion.FrmPrincipal.MiembroAMembresia(System.String)
+  name: MiembroAMembresia(string)
+  href: api/Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_MiembroAMembresia_System_String_
+  commentId: M:Gimnasio.Presentacion.FrmPrincipal.MiembroAMembresia(System.String)
+  name.vb: MiembroAMembresia(String)
+  fullName: Gimnasio.Presentacion.FrmPrincipal.MiembroAMembresia(string)
+  fullName.vb: Gimnasio.Presentacion.FrmPrincipal.MiembroAMembresia(String)
+  nameWithType: FrmPrincipal.MiembroAMembresia(string)
+  nameWithType.vb: FrmPrincipal.MiembroAMembresia(String)
+- uid: Gimnasio.Presentacion.FrmPrincipal.MiembroAMembresia*
+  name: MiembroAMembresia
+  href: api/Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_MiembroAMembresia_
+  commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.MiembroAMembresia
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmPrincipal.MiembroAMembresia
+  nameWithType: FrmPrincipal.MiembroAMembresia
 - uid: Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario(System.Windows.Forms.Form)
   name: MostrarFormulario(Form)
   href: api/Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_MostrarFormulario_System_Windows_Forms_Form_
@@ -6628,6 +6693,30 @@ references:
   commentId: F:Gimnasio.Presentacion.FrmPrincipal.frmLogin
   fullName: Gimnasio.Presentacion.FrmPrincipal.frmLogin
   nameWithType: FrmPrincipal.frmLogin
+- uid: Gimnasio.Presentacion.FrmPrincipal.frmMembresias
+  name: frmMembresias
+  href: api/Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmMembresias
+  commentId: F:Gimnasio.Presentacion.FrmPrincipal.frmMembresias
+  fullName: Gimnasio.Presentacion.FrmPrincipal.frmMembresias
+  nameWithType: FrmPrincipal.frmMembresias
+- uid: Gimnasio.Presentacion.FrmPrincipal.frmMiembros
+  name: frmMiembros
+  href: api/Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmMiembros
+  commentId: F:Gimnasio.Presentacion.FrmPrincipal.frmMiembros
+  fullName: Gimnasio.Presentacion.FrmPrincipal.frmMiembros
+  nameWithType: FrmPrincipal.frmMiembros
+- uid: Gimnasio.Presentacion.FrmPrincipal.frmPagos
+  name: frmPagos
+  href: api/Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmPagos
+  commentId: F:Gimnasio.Presentacion.FrmPrincipal.frmPagos
+  fullName: Gimnasio.Presentacion.FrmPrincipal.frmPagos
+  nameWithType: FrmPrincipal.frmPagos
+- uid: Gimnasio.Presentacion.FrmPrincipal.frmPlanes
+  name: frmPlanes
+  href: api/Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmPlanes
+  commentId: F:Gimnasio.Presentacion.FrmPrincipal.frmPlanes
+  fullName: Gimnasio.Presentacion.FrmPrincipal.frmPlanes
+  nameWithType: FrmPrincipal.frmPlanes
 - uid: Gimnasio.Presentacion.FrmPrincipal.frmPrincipal_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)
   name: frmPrincipal_FormClosed(object, FormClosedEventArgs)
   href: api/Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmPrincipal_FormClosed_System_Object_System_Windows_Forms_FormClosedEventArgs_
@@ -6660,12 +6749,24 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmPrincipal.frmPrincipal_Load
   nameWithType: FrmPrincipal.frmPrincipal_Load
+- uid: Gimnasio.Presentacion.FrmPrincipal.frmReclamos
+  name: frmReclamos
+  href: api/Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmReclamos
+  commentId: F:Gimnasio.Presentacion.FrmPrincipal.frmReclamos
+  fullName: Gimnasio.Presentacion.FrmPrincipal.frmReclamos
+  nameWithType: FrmPrincipal.frmReclamos
 - uid: Gimnasio.Presentacion.FrmPrincipal.frmRegistroAsistencias
   name: frmRegistroAsistencias
   href: api/Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmRegistroAsistencias
   commentId: F:Gimnasio.Presentacion.FrmPrincipal.frmRegistroAsistencias
   fullName: Gimnasio.Presentacion.FrmPrincipal.frmRegistroAsistencias
   nameWithType: FrmPrincipal.frmRegistroAsistencias
+- uid: Gimnasio.Presentacion.FrmPrincipal.frmUsuarios
+  name: frmUsuarios
+  href: api/Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmUsuarios
+  commentId: F:Gimnasio.Presentacion.FrmPrincipal.frmUsuarios
+  fullName: Gimnasio.Presentacion.FrmPrincipal.frmUsuarios
+  nameWithType: FrmPrincipal.frmUsuarios
 - uid: Gimnasio.Presentacion.FrmPrincipal.miCerrarSesion_Click(System.Object,System.EventArgs)
   name: miCerrarSesion_Click(object, EventArgs)
   href: api/Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_miCerrarSesion_Click_System_Object_System_EventArgs_
@@ -6839,6 +6940,19 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmReclamos.InitializeComponent
   nameWithType: FrmReclamos.InitializeComponent
+- uid: Gimnasio.Presentacion.FrmReclamos.Reiniciar
+  name: Reiniciar()
+  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmReclamos.Reiniciar
+  fullName: Gimnasio.Presentacion.FrmReclamos.Reiniciar()
+  nameWithType: FrmReclamos.Reiniciar()
+- uid: Gimnasio.Presentacion.FrmReclamos.Reiniciar*
+  name: Reiniciar
+  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_Reiniciar_
+  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.Reiniciar
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmReclamos.Reiniciar
+  nameWithType: FrmReclamos.Reiniciar
 - uid: Gimnasio.Presentacion.FrmReclamos.TbRespuesta
   name: TbRespuesta
   href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_TbRespuesta
@@ -7274,6 +7388,35 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmReclamos.panelRespuestaIngreso
   nameWithType: FrmReclamos.panelRespuestaIngreso
+- uid: Gimnasio.Presentacion.FrmReclamos.pbReiniciar
+  name: pbReiniciar
+  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_pbReiniciar
+  commentId: P:Gimnasio.Presentacion.FrmReclamos.pbReiniciar
+  fullName: Gimnasio.Presentacion.FrmReclamos.pbReiniciar
+  nameWithType: FrmReclamos.pbReiniciar
+- uid: Gimnasio.Presentacion.FrmReclamos.pbReiniciar*
+  name: pbReiniciar
+  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_pbReiniciar_
+  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.pbReiniciar
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmReclamos.pbReiniciar
+  nameWithType: FrmReclamos.pbReiniciar
+- uid: Gimnasio.Presentacion.FrmReclamos.pbReiniciar_Click(System.Object,System.EventArgs)
+  name: pbReiniciar_Click(object, EventArgs)
+  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_pbReiniciar_Click_System_Object_System_EventArgs_
+  commentId: M:Gimnasio.Presentacion.FrmReclamos.pbReiniciar_Click(System.Object,System.EventArgs)
+  name.vb: pbReiniciar_Click(Object, EventArgs)
+  fullName: Gimnasio.Presentacion.FrmReclamos.pbReiniciar_Click(object, System.EventArgs)
+  fullName.vb: Gimnasio.Presentacion.FrmReclamos.pbReiniciar_Click(Object, System.EventArgs)
+  nameWithType: FrmReclamos.pbReiniciar_Click(object, EventArgs)
+  nameWithType.vb: FrmReclamos.pbReiniciar_Click(Object, EventArgs)
+- uid: Gimnasio.Presentacion.FrmReclamos.pbReiniciar_Click*
+  name: pbReiniciar_Click
+  href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_pbReiniciar_Click_
+  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.pbReiniciar_Click
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmReclamos.pbReiniciar_Click
+  nameWithType: FrmReclamos.pbReiniciar_Click
 - uid: Gimnasio.Presentacion.FrmReclamos.tbCancelarRespuesta
   name: tbCancelarRespuesta
   href: api/Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_tbCancelarRespuesta
@@ -7444,19 +7587,6 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.Dispose
   nameWithType: FrmRegistroAsistencias.Dispose
-- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia
-  name: GetFrmAsistencia()
-  href: api/Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_GetFrmAsistencia
-  commentId: M:Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia
-  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia()
-  nameWithType: FrmRegistroAsistencias.GetFrmAsistencia()
-- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia*
-  name: GetFrmAsistencia
-  href: api/Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_GetFrmAsistencia_
-  commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia
-  isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia
-  nameWithType: FrmRegistroAsistencias.GetFrmAsistencia
 - uid: Gimnasio.Presentacion.FrmRegistroAsistencias.InitializeComponent
   name: InitializeComponent()
   href: api/Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_InitializeComponent
@@ -7483,19 +7613,35 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.PanelFecha
   nameWithType: FrmRegistroAsistencias.PanelFecha
-- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia(Gimnasio.Presentacion.FrmAsistencias)
-  name: SetFrmAsistencia(FrmAsistencias)
-  href: api/Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_SetFrmAsistencia_Gimnasio_Presentacion_FrmAsistencias_
-  commentId: M:Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia(Gimnasio.Presentacion.FrmAsistencias)
-  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia(Gimnasio.Presentacion.FrmAsistencias)
-  nameWithType: FrmRegistroAsistencias.SetFrmAsistencia(FrmAsistencias)
-- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia*
-  name: SetFrmAsistencia
-  href: api/Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_SetFrmAsistencia_
-  commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia
+- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.RegistroAsis_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)
+  name: RegistroAsis_FormClosed(object, FormClosedEventArgs)
+  href: api/Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_RegistroAsis_FormClosed_System_Object_System_Windows_Forms_FormClosedEventArgs_
+  commentId: M:Gimnasio.Presentacion.FrmRegistroAsistencias.RegistroAsis_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)
+  name.vb: RegistroAsis_FormClosed(Object, FormClosedEventArgs)
+  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.RegistroAsis_FormClosed(object, System.Windows.Forms.FormClosedEventArgs)
+  fullName.vb: Gimnasio.Presentacion.FrmRegistroAsistencias.RegistroAsis_FormClosed(Object, System.Windows.Forms.FormClosedEventArgs)
+  nameWithType: FrmRegistroAsistencias.RegistroAsis_FormClosed(object, FormClosedEventArgs)
+  nameWithType.vb: FrmRegistroAsistencias.RegistroAsis_FormClosed(Object, FormClosedEventArgs)
+- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.RegistroAsis_FormClosed*
+  name: RegistroAsis_FormClosed
+  href: api/Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_RegistroAsis_FormClosed_
+  commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.RegistroAsis_FormClosed
   isSpec: "True"
-  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia
-  nameWithType: FrmRegistroAsistencias.SetFrmAsistencia
+  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.RegistroAsis_FormClosed
+  nameWithType: FrmRegistroAsistencias.RegistroAsis_FormClosed
+- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar
+  name: Reiniciar()
+  href: api/Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar
+  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar()
+  nameWithType: FrmRegistroAsistencias.Reiniciar()
+- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar*
+  name: Reiniciar
+  href: api/Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_Reiniciar_
+  commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar
+  nameWithType: FrmRegistroAsistencias.Reiniciar
 - uid: Gimnasio.Presentacion.FrmRegistroAsistencias.btnBuscar
   name: btnBuscar
   href: api/Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_btnBuscar
@@ -7894,6 +8040,19 @@ references:
   isSpec: "True"
   fullName: Gimnasio.Presentacion.FrmUsuarios.InitializeComponent
   nameWithType: FrmUsuarios.InitializeComponent
+- uid: Gimnasio.Presentacion.FrmUsuarios.Reiniciar
+  name: Reiniciar()
+  href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmUsuarios.Reiniciar
+  fullName: Gimnasio.Presentacion.FrmUsuarios.Reiniciar()
+  nameWithType: FrmUsuarios.Reiniciar()
+- uid: Gimnasio.Presentacion.FrmUsuarios.Reiniciar*
+  name: Reiniciar
+  href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_Reiniciar_
+  commentId: Overload:Gimnasio.Presentacion.FrmUsuarios.Reiniciar
+  isSpec: "True"
+  fullName: Gimnasio.Presentacion.FrmUsuarios.Reiniciar
+  nameWithType: FrmUsuarios.Reiniciar
 - uid: Gimnasio.Presentacion.FrmUsuarios.btnActualizar
   name: btnActualizar
   href: api/Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_btnActualizar

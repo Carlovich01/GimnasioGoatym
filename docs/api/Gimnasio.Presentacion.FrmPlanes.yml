@@ -12,6 +12,7 @@ items:
   - Gimnasio.Presentacion.FrmPlanes.HabilitarIngreso
   - Gimnasio.Presentacion.FrmPlanes.HabilitarListado
   - Gimnasio.Presentacion.FrmPlanes.InitializeComponent
+  - Gimnasio.Presentacion.FrmPlanes.Reiniciar
   - Gimnasio.Presentacion.FrmPlanes.btnActualizar
   - Gimnasio.Presentacion.FrmPlanes.btnActualizar_Click(System.Object,System.EventArgs)
   - Gimnasio.Presentacion.FrmPlanes.btnCancelar
@@ -1640,12 +1641,12 @@ items:
     - Si el usuario tiene el rol de Recepcionista (IdRol = 2), deshabilita y oculta los botones de insertar, actualizar y eliminar.
   example: []
   syntax:
-    content: public FrmPlanes(Usuarios usuario)
+    content: internal FrmPlanes(Usuarios usuario)
     parameters:
     - id: usuario
       type: Gimnasio.Entidades.Usuarios
       description: Instancia de <xref href="Gimnasio.Entidades.Usuarios" data-throw-if-not-resolved="false"></xref> que representa al usuario logueado.
-    content.vb: Public Sub New(usuario As Usuarios)
+    content.vb: Friend Sub New(usuario As Usuarios)
   overload: Gimnasio.Presentacion.FrmPlanes.#ctor*
   nameWithType.vb: FrmPlanes.New(Usuarios)
   fullName.vb: Gimnasio.Presentacion.FrmPlanes.New(Gimnasio.Entidades.Usuarios)
@@ -2158,6 +2159,34 @@ items:
   nameWithType.vb: FrmPlanes.tbBuscar_KeyDown(Object, KeyEventArgs)
   fullName.vb: Gimnasio.Presentacion.FrmPlanes.tbBuscar_KeyDown(Object, System.Windows.Forms.KeyEventArgs)
   name.vb: tbBuscar_KeyDown(Object, KeyEventArgs)
+- uid: Gimnasio.Presentacion.FrmPlanes.Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmPlanes.Reiniciar
+  id: Reiniciar
+  parent: Gimnasio.Presentacion.FrmPlanes
+  langs:
+  - csharp
+  - vb
+  name: Reiniciar()
+  nameWithType: FrmPlanes.Reiniciar()
+  fullName: Gimnasio.Presentacion.FrmPlanes.Reiniciar()
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Presentacion/FrmPlanes.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: Reiniciar
+    path: ../Gimnasio.Presentacion/FrmPlanes.vb
+    startLine: 321
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion
+  summary: Actualiza el listado de planes y limpia el campo de busqueda.
+  example: []
+  syntax:
+    content: public void Reiniciar()
+    content.vb: Public Sub Reiniciar()
+  overload: Gimnasio.Presentacion.FrmPlanes.Reiniciar*
 - uid: Gimnasio.Presentacion.FrmPlanes.pbReiniciar_Click(System.Object,System.EventArgs)
   commentId: M:Gimnasio.Presentacion.FrmPlanes.pbReiniciar_Click(System.Object,System.EventArgs)
   id: pbReiniciar_Click(System.Object,System.EventArgs)
@@ -2176,11 +2205,11 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: pbReiniciar_Click
     path: ../Gimnasio.Presentacion/FrmPlanes.vb
-    startLine: 321
+    startLine: 333
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
-  summary: Evento que se ejecuta al hacer clic en el botón "Reiniciar". Actualiza el listado de planes y limpia el campo de busqueda.
+  summary: Evento que se ejecuta al hacer clic en el botón "Reiniciar". LLama a <xref href="Gimnasio.Presentacion.FrmPlanes.Reiniciar" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: private void pbReiniciar_Click(object sender, EventArgs e)
@@ -20574,6 +20603,30 @@ references:
   name: KeyEventArgs
   nameWithType: KeyEventArgs
   fullName: System.Windows.Forms.KeyEventArgs
+- uid: Gimnasio.Presentacion.FrmPlanes.Reiniciar*
+  commentId: Overload:Gimnasio.Presentacion.FrmPlanes.Reiniciar
+  href: Gimnasio.Presentacion.FrmPlanes.html#Gimnasio_Presentacion_FrmPlanes_Reiniciar
+  name: Reiniciar
+  nameWithType: FrmPlanes.Reiniciar
+  fullName: Gimnasio.Presentacion.FrmPlanes.Reiniciar
+- uid: Gimnasio.Presentacion.FrmPlanes.Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmPlanes.Reiniciar
+  href: Gimnasio.Presentacion.FrmPlanes.html#Gimnasio_Presentacion_FrmPlanes_Reiniciar
+  name: Reiniciar()
+  nameWithType: FrmPlanes.Reiniciar()
+  fullName: Gimnasio.Presentacion.FrmPlanes.Reiniciar()
+  spec.csharp:
+  - uid: Gimnasio.Presentacion.FrmPlanes.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmPlanes.html#Gimnasio_Presentacion_FrmPlanes_Reiniciar
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Presentacion.FrmPlanes.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmPlanes.html#Gimnasio_Presentacion_FrmPlanes_Reiniciar
+  - name: (
+  - name: )
 - uid: Gimnasio.Presentacion.FrmPlanes.pbReiniciar_Click*
   commentId: Overload:Gimnasio.Presentacion.FrmPlanes.pbReiniciar_Click
   href: Gimnasio.Presentacion.FrmPlanes.html#Gimnasio_Presentacion_FrmPlanes_pbReiniciar_Click_System_Object_System_EventArgs_

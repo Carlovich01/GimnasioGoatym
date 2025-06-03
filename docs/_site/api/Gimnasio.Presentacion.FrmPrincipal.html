@@ -97,9 +97,9 @@ Class FrmPrincipal  <a class="header-action link-secondary" title="View source" 
   </div>
 
   <div class="markdown summary"><p>Formulario principal de la aplicación del gimnasio. Gestiona la navegación entre los diferentes módulos y controla el acceso según el rol del usuario.
-Utiliza la clase <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a> para identificar al usuario logueado y su rol. Llama a formularios secundarios como <a class="xref" href="Gimnasio.Presentacion.FrmPlanes.html">FrmPlanes</a>,
-<a class="xref" href="Gimnasio.Presentacion.FrmMiembros.html">FrmMiembros</a>, <a class="xref" href="Gimnasio.Presentacion.FrmMembresias.html">FrmMembresias</a>, <a class="xref" href="Gimnasio.Presentacion.FrmPagos.html">FrmPagos</a>, <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmRegistroAsistencias">frmRegistroAsistencias</a>, <a class="xref" href="Gimnasio.Presentacion.FrmReclamos.html">FrmReclamos</a> y
-<a class="xref" href="Gimnasio.Presentacion.FrmUsuarios.html">FrmUsuarios</a>.</p>
+Utiliza la clase <a class="xref" href="Gimnasio.Entidades.Usuarios.html">Usuarios</a> para identificar al usuario logueado y su rol. Llama a formularios secundarios como <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmPlanes">frmPlanes</a>,
+<a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmMiembros">frmMiembros</a>, <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmMembresias">frmMembresias</a>, <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmPagos">frmPagos</a>, <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmRegistroAsistencias">frmRegistroAsistencias</a>, <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmReclamos">frmReclamos</a> y
+<a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmUsuarios">frmUsuarios</a>.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -144,7 +144,7 @@ que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usua
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal__ctor_Gimnasio_Presentacion_FrmLogin_Gimnasio_Entidades_Usuarios_" data-uid="Gimnasio.Presentacion.FrmPrincipal.#ctor(Gimnasio.Presentacion.FrmLogin,Gimnasio.Entidades.Usuarios)">
   FrmPrincipal(FrmLogin, Usuarios)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L72"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Constructor del formulario principal.</p>
@@ -243,9 +243,139 @@ Se utiliza para mostrar el formulario de login al cerrar sesión.</p>
 
 
 
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_frmMembresias" data-uid="Gimnasio.Presentacion.FrmPrincipal.frmMembresias">
+  frmMembresias
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Referencia al formulario de membresías <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmMembresias">frmMembresias</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private FrmMembresias frmMembresias</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_frmMiembros" data-uid="Gimnasio.Presentacion.FrmPrincipal.frmMiembros">
+  frmMiembros
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Referencia al formulario de miembros <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmMiembros">frmMiembros</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private FrmMiembros frmMiembros</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_frmPagos" data-uid="Gimnasio.Presentacion.FrmPrincipal.frmPagos">
+  frmPagos
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Referencia al formulario de pagos <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmPagos">frmPagos</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private FrmPagos frmPagos</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_frmPlanes" data-uid="Gimnasio.Presentacion.FrmPrincipal.frmPlanes">
+  frmPlanes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Referencia al formulario de planes <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmPlanes">frmPlanes</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private FrmPlanes frmPlanes</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_frmReclamos" data-uid="Gimnasio.Presentacion.FrmPrincipal.frmReclamos">
+  frmReclamos
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Referencia al formulario de reclamos <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmReclamos">frmReclamos</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private FrmReclamos frmReclamos</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_frmRegistroAsistencias" data-uid="Gimnasio.Presentacion.FrmPrincipal.frmRegistroAsistencias">
   frmRegistroAsistencias
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L50"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Referencia al formulario de registro de asistencias <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmRegistroAsistencias">frmRegistroAsistencias</a>.</p>
@@ -254,6 +384,32 @@ Se utiliza para mostrar el formulario de login al cerrar sesión.</p>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">private FrmRegistroAsistencias frmRegistroAsistencias</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_frmUsuarios" data-uid="Gimnasio.Presentacion.FrmPrincipal.frmUsuarios">
+  frmUsuarios
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Referencia al formulario de usuarios <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmUsuarios">frmUsuarios</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private FrmUsuarios frmUsuarios</code></pre>
   </div>
 
 
@@ -302,7 +458,7 @@ Se utiliza para mostrar el formulario de login al cerrar sesión.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_PanelDeFormularios" data-uid="Gimnasio.Presentacion.FrmPrincipal.PanelDeFormularios">
   PanelDeFormularios
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L221"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L222"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -328,7 +484,7 @@ Se utiliza para mostrar el formulario de login al cerrar sesión.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_ToolStripPesta_as" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripPesta&#241;as">
   ToolStripPesta&#241;as
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L220"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L221"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -354,7 +510,7 @@ Se utiliza para mostrar el formulario de login al cerrar sesión.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_ToolStripSeparator1" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator1">
   ToolStripSeparator1
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L224"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L225"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -380,7 +536,7 @@ Se utiliza para mostrar el formulario de login al cerrar sesión.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_ToolStripSeparator2" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator2">
   ToolStripSeparator2
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L226"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L227"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -406,7 +562,7 @@ Se utiliza para mostrar el formulario de login al cerrar sesión.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_ToolStripSeparator3" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator3">
   ToolStripSeparator3
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L228"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L229"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -432,7 +588,7 @@ Se utiliza para mostrar el formulario de login al cerrar sesión.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_ToolStripSeparator4" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator4">
   ToolStripSeparator4
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L230"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L231"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -458,7 +614,7 @@ Se utiliza para mostrar el formulario de login al cerrar sesión.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_ToolStripSeparator5" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator5">
   ToolStripSeparator5
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L236"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L237"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -484,7 +640,7 @@ Se utiliza para mostrar el formulario de login al cerrar sesión.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_ToolStripSeparator6" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator6">
   ToolStripSeparator6
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L232"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L233"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -510,7 +666,7 @@ Se utiliza para mostrar el formulario de login al cerrar sesión.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_ToolStripSeparator7" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator7">
   ToolStripSeparator7
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L239"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L240"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -536,7 +692,7 @@ Se utiliza para mostrar el formulario de login al cerrar sesión.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_ToolStripSeparator8" data-uid="Gimnasio.Presentacion.FrmPrincipal.ToolStripSeparator8">
   ToolStripSeparator8
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L233"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L234"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -562,7 +718,7 @@ Se utiliza para mostrar el formulario de login al cerrar sesión.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_btRegistroAsistencias" data-uid="Gimnasio.Presentacion.FrmPrincipal.btRegistroAsistencias">
   btRegistroAsistencias
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L234"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L235"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -588,7 +744,7 @@ Se utiliza para mostrar el formulario de login al cerrar sesión.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnMembresias" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnMembresias">
   btnMembresias
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L225"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L226"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -614,7 +770,7 @@ Se utiliza para mostrar el formulario de login al cerrar sesión.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnMiembros" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnMiembros">
   btnMiembros
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L227"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L228"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -640,7 +796,7 @@ Se utiliza para mostrar el formulario de login al cerrar sesión.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnPagos" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnPagos">
   btnPagos
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L229"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L230"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -666,7 +822,7 @@ Se utiliza para mostrar el formulario de login al cerrar sesión.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnPlanes" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnPlanes">
   btnPlanes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L223"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L224"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -692,7 +848,7 @@ Se utiliza para mostrar el formulario de login al cerrar sesión.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnReclamos" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnReclamos">
   btnReclamos
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L231"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L232"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -718,7 +874,7 @@ Se utiliza para mostrar el formulario de login al cerrar sesión.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnUsuarioLogueado" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnUsuarioLogueado">
   btnUsuarioLogueado
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L237"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L238"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -744,7 +900,7 @@ Se utiliza para mostrar el formulario de login al cerrar sesión.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnUsuarios" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnUsuarios">
   btnUsuarios
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L235"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L236"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -770,7 +926,7 @@ Se utiliza para mostrar el formulario de login al cerrar sesión.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_miCerrarSesi_n" data-uid="Gimnasio.Presentacion.FrmPrincipal.miCerrarSesi&#243;n">
   miCerrarSesi&#243;n
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L238"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L239"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -796,7 +952,7 @@ Se utiliza para mostrar el formulario de login al cerrar sesión.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_pbLogo" data-uid="Gimnasio.Presentacion.FrmPrincipal.pbLogo">
   pbLogo
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L222"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.Designer.vb/#L223"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -881,33 +1037,81 @@ Se utiliza para mostrar el formulario de login al cerrar sesión.</p>
 
 
 
+  <a id="Gimnasio_Presentacion_FrmPrincipal_LiberarRecursos_" data-uid="Gimnasio.Presentacion.FrmPrincipal.LiberarRecursos*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_LiberarRecursos" data-uid="Gimnasio.Presentacion.FrmPrincipal.LiberarRecursos">
+  LiberarRecursos()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L284"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Libera y cierra todos los formularios secundarios instanciados en el formulario principal, liberando los recursos asociados.
+Cierra y elimina las instancias de <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmPlanes">frmPlanes</a>, <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmMiembros">frmMiembros</a>, <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmMembresias">frmMembresias</a>, <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmPagos">frmPagos</a>,
+<a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmRegistroAsistencias">frmRegistroAsistencias</a>, <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmReclamos">frmReclamos</a> y <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmUsuarios">frmUsuarios</a> si están activos.
+Finalmente, libera los recursos del propio formulario principal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LiberarRecursos()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmPrincipal_MiembroAMembresia_" data-uid="Gimnasio.Presentacion.FrmPrincipal.MiembroAMembresia*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPrincipal_MiembroAMembresia_System_String_" data-uid="Gimnasio.Presentacion.FrmPrincipal.MiembroAMembresia(System.String)">
+  MiembroAMembresia(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L266"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Muestra el formulario de gestión de membresías (<a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmMembresias">frmMembresias</a>) en el panel principal y habilita el ingreso directo de una membresía
+para un miembro específico. Si no existe una instancia previa del formulario de membresías, la crea utilizando el usuario actualmente logueado.
+Luego, muestra el formulario y llama al método <a class="xref" href="Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_HabilitarIngresoConMiembro_System_String_">HabilitarIngresoConMiembro(string)</a> pasando el DNI del miembro para facilitar la asociación.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void MiembroAMembresia(string dni)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dni</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Gimnasio_Presentacion_FrmPrincipal_MostrarFormulario_" data-uid="Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario*"></a>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_MostrarFormulario_System_Windows_Forms_Form_" data-uid="Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario(System.Windows.Forms.Form)">
   MostrarFormulario(Form)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L91"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L113"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Muestra un formulario secundario dentro del panel principal de la aplicación.</p>
-<ul>
-<li>Si ya existe un formulario cargado en el panel, lo libera de memoria correctamente:
-<ul>
-<li>Si el formulario actual es una instancia de <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmRegistroAsistencias">frmRegistroAsistencias</a>, verifica si
-su formulario hijo (<a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html">FrmAsistencias</a>) está abierto.
-<ul>
-<li>Si <a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html">FrmAsistencias</a> no está abierto o ya fue liberado, elimina y libera la instancia
-de <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmRegistroAsistencias">frmRegistroAsistencias</a> y su referencia.</li>
-<li>Si <a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html">FrmAsistencias</a> sigue abierto, mantiene la instancia de <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmRegistroAsistencias">frmRegistroAsistencias</a> viva
-para preservar su estado.</li>
-</ul>
-</li>
-<li>Si el formulario actual no es <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmRegistroAsistencias">frmRegistroAsistencias</a>, lo elimina y libera normalmente.</li>
-</ul>
-</li>
-<li>Limpia el panel de cualquier control previo.</li>
-<li>Configura el formulario recibido como parámetro para que no sea de nivel superior, sin bordes y ajustado al tamaño del panel principal.</li>
-<li>Agrega el formulario al panel y lo muestra.</li>
-</ul>
+  <div class="markdown level1 summary"><p>Muestra un formulario secundario dentro del panel principal de la aplicación.
+Si el formulario que se intenta mostrar ya está activo en el panel, no realiza ninguna acción para evitar recargas innecesarias.
+Si es un formulario diferente, limpia el panel, configura el formulario recibido para que se muestre embebido (sin bordes y ajustado al panel)
+y lo agrega al panel principal, mostrándolo al usuario.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -918,7 +1122,7 @@ para preservar su estado.</li>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>formulario</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form">Form</a></dt>
-    <dd><p>Instancia de <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form">Form</a> a mostrar en el panel principal.</p>
+    <dd><p>Instancia de <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form">Form</a> que se desea mostrar en el panel principal.</p>
 </dd>
   </dl>
 
@@ -937,10 +1141,16 @@ para preservar su estado.</li>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnMembresias_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnMembresias_Click(System.Object,System.EventArgs)">
   btnMembresias_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L144"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L176"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Evento que abre el formulario de membresías <a class="xref" href="Gimnasio.Presentacion.FrmMembresias.html">FrmMembresias</a>.</p>
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Membresías&quot;.</p>
+<ul>
+<li>Si no existe una instancia previa del formulario de membresías (<a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmMembresias">frmMembresias</a>),
+la crea utilizando el usuario actualmente logueado.</li>
+<li>Llama al método <a class="xref" href="Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_Reiniciar">Reiniciar()</a> para restablecer el estado del formulario de membresías antes de mostrarlo.</li>
+<li>Muestra el formulario de membresías embebido en el panel principal mediante <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_MostrarFormulario_System_Windows_Forms_Form_">MostrarFormulario(Form)</a>.</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -971,10 +1181,16 @@ para preservar su estado.</li>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnMiembros_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnMiembros_Click(System.Object,System.EventArgs)">
   btnMiembros_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L132"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L157"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Evento que abre el formulario de miembros <a class="xref" href="Gimnasio.Presentacion.FrmMiembros.html">FrmMiembros</a>.</p>
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Miembros&quot;.</p>
+<ul>
+<li>Si no existe una instancia previa del formulario de miembros (<a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmMiembros">frmMiembros</a>),
+la crea pasando como parámetro la instancia del formulario principal (<a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html">FrmPrincipal</a>).</li>
+<li>Llama al método <a class="xref" href="Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_Reiniciar">Reiniciar()</a> para restablecer el estado del formulario de miembros antes de mostrarlo.</li>
+<li>Muestra el formulario de miembros embebido en el panel principal mediante <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_MostrarFormulario_System_Windows_Forms_Form_">MostrarFormulario(Form)</a>.</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1005,10 +1221,15 @@ para preservar su estado.</li>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnPagos_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnPagos_Click(System.Object,System.EventArgs)">
   btnPagos_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L156"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L194"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Evento que abre el formulario de pagos <a class="xref" href="Gimnasio.Presentacion.FrmPagos.html">FrmPagos</a>.</p>
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Pagos&quot;.</p>
+<ul>
+<li>Si no existe una instancia previa del formulario de pagos (<a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmPagos">frmPagos</a>), la crea utilizando el usuario actualmente logueado.</li>
+<li>Llama al método <a class="xref" href="Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Reiniciar">Reiniciar()</a> para restablecer el estado del formulario de pagos antes de mostrarlo.</li>
+<li>Muestra el formulario de pagos embebido en el panel principal mediante <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_MostrarFormulario_System_Windows_Forms_Form_">MostrarFormulario(Form)</a>.</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1039,10 +1260,15 @@ para preservar su estado.</li>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnPlanes_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnPlanes_Click(System.Object,System.EventArgs)">
   btnPlanes_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L120"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L138"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Evento que abre el formulario de planes <a class="xref" href="Gimnasio.Presentacion.FrmPlanes.html">FrmPlanes</a>.</p>
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Planes&quot;.</p>
+<ul>
+<li>Si no existe una instancia previa del formulario de planes (<a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmPlanes">frmPlanes</a>), la crea utilizando el usuario actualmente logueado.</li>
+<li>Llama al método <a class="xref" href="Gimnasio.Presentacion.FrmPlanes.html#Gimnasio_Presentacion_FrmPlanes_Reiniciar">Reiniciar()</a> para restablecer el estado del formulario de planes antes de mostrarlo.</li>
+<li>Muestra el formulario de planes embebido en el panel principal mediante <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_MostrarFormulario_System_Windows_Forms_Form_">MostrarFormulario(Form)</a>.</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1073,10 +1299,15 @@ para preservar su estado.</li>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnReclamos_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnReclamos_Click(System.Object,System.EventArgs)">
   btnReclamos_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L186"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L231"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Evento que abre el formulario de reclamos <a class="xref" href="Gimnasio.Presentacion.FrmReclamos.html">FrmReclamos</a>.</p>
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Reclamos&quot;.</p>
+<ul>
+<li>Si no existe una instancia previa del formulario de reclamos (<a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmReclamos">frmReclamos</a>), la crea utilizando el usuario actualmente logueado.</li>
+<li>Llama al método <a class="xref" href="Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_Reiniciar">Reiniciar()</a> para restablecer el estado del formulario de reclamos antes de mostrarlo.</li>
+<li>Muestra el formulario de reclamos embebido en el panel principal mediante <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_MostrarFormulario_System_Windows_Forms_Form_">MostrarFormulario(Form)</a>.</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1107,14 +1338,15 @@ para preservar su estado.</li>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnRegistroAsistencias_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnRegistroAsistencias_Click(System.Object,System.EventArgs)">
   btnRegistroAsistencias_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L171"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L213"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón para abrir el formulario de registro de asistencias (<a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmRegistroAsistencias">frmRegistroAsistencias</a>).</p>
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Registro de Asistencias&quot;.</p>
 <ul>
-<li>Si no existe una instancia activa de <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmRegistroAsistencias">frmRegistroAsistencias</a>, crea una nueva pasando el usuario actualmente logueado.</li>
-<li>Si ya existe una instancia activa, reutiliza la misma para evitar duplicados y mantener el estado.</li>
-<li>Llama a <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_MostrarFormulario_System_Windows_Forms_Form_">MostrarFormulario(Form)</a> para mostrar el formulario de registro de asistencias en el panel principal de la aplicación.</li>
+<li>Si no existe una instancia previa del formulario de registro de asistencias (<a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmRegistroAsistencias">frmRegistroAsistencias</a>),
+la crea utilizando el usuario actualmente logueado.</li>
+<li>Llama al método <a class="xref" href="Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_Reiniciar">Reiniciar()</a> para restablecer el estado del formulario antes de mostrarlo.</li>
+<li>Muestra el formulario de registro de asistencias embebido en el panel principal mediante <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_MostrarFormulario_System_Windows_Forms_Form_">MostrarFormulario(Form)</a>.</li>
 </ul>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1146,11 +1378,15 @@ para preservar su estado.</li>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_btnUsuarios_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.btnUsuarios_Click(System.Object,System.EventArgs)">
   btnUsuarios_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L199"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L249"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Evento que abre el formulario de usuarios <a class="xref" href="Gimnasio.Presentacion.FrmUsuarios.html">FrmUsuarios</a>.
-Solo visible para usuarios con rol de administrador.</p>
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Usuarios&quot;.</p>
+<ul>
+<li>Si no existe una instancia previa del formulario de usuarios (<a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmUsuarios">frmUsuarios</a>), la crea.</li>
+<li>Llama al método <a class="xref" href="Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_Reiniciar">Reiniciar()</a> para restablecer el estado del formulario de usuarios antes de mostrarlo.</li>
+<li>Muestra el formulario de usuarios embebido en el panel principal mediante <a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_MostrarFormulario_System_Windows_Forms_Form_">MostrarFormulario(Form)</a>.</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1181,13 +1417,11 @@ Solo visible para usuarios con rol de administrador.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_frmPrincipal_FormClosed_System_Object_System_Windows_Forms_FormClosedEventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.frmPrincipal_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)">
   frmPrincipal_FormClosed(object, FormClosedEventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L235"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L356"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><ul>
-<li>Se ejecuta al hacer clic en el elemento de menú &quot;Salir&quot;.</li>
-<li>Libera recursos de el formulario de login como de este formulario.</li>
-</ul>
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al cerrarse el formulario principal de la aplicación. Libera todos los recursos asociados a los formularios secundarios
+y al propio formulario principal, y cierra el formulario de login.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1218,7 +1452,7 @@ Solo visible para usuarios con rol de administrador.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_frmPrincipal_Load_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.frmPrincipal_Load(System.Object,System.EventArgs)">
   frmPrincipal_Load(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L96"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al cargar el formulario principal. Muestra un mensaje de bienvenida al usuario con su nombre y rol.
@@ -1253,21 +1487,13 @@ Actualiza el estado de las membresías utilizando <a class="xref" href="Gimnasio
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_miCerrarSesion_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPrincipal.miCerrarSesion_Click(System.Object,System.EventArgs)">
   miCerrarSesion_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L217"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L339"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><ul>
-<li>Se ejecuta al hacer clic en el elemento de menú &quot;Cerrar Sesión&quot;.</li>
-<li>Solicita confirmación al usuario mediante un cuadro de diálogo.</li>
-<li>Si el usuario confirma la acción:
-<ul>
-<li>Oculta el formulario principal.</li>
-<li>Muestra el formulario de login.</li>
-<li>Restablece los campos del formulario de login llamando a <a class="xref" href="Gimnasio.Presentacion.FrmLogin.html#Gimnasio_Presentacion_FrmLogin_Formato">Formato()</a>.</li>
-<li>Libera los recursos del formulario principal.</li>
-</ul>
-</li>
-</ul>
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en la opción &quot;Cerrar Sesión&quot; del menú.
+Solicita confirmación al usuario para cerrar la sesión actual mediante un cuadro de diálogo.
+Si el usuario confirma, muestra nuevamente el formulario de login, restablece su formato
+y libera los recursos asociados al formulario principal y sus formularios secundarios.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1298,7 +1524,7 @@ Actualiza el estado de las membresías utilizando <a class="xref" href="Gimnasio
 
   <h3 id="Gimnasio_Presentacion_FrmPrincipal_obtenerUsuarioActual" data-uid="Gimnasio.Presentacion.FrmPrincipal.obtenerUsuarioActual">
   obtenerUsuarioActual()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPrincipal.vb/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Devuelve el usuario actualmente logueado.</p>

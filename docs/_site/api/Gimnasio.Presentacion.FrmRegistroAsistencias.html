@@ -145,7 +145,7 @@ que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usua
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias__ctor_Gimnasio_Entidades_Usuarios_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.#ctor(Gimnasio.Entidades.Usuarios)">
   FrmRegistroAsistencias(Usuarios)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L49"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Constructor del formulario de asistencias. Si el usuario es recepcionista, oculta el boton de eliminar.</p>
@@ -153,7 +153,7 @@ que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usua
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FrmRegistroAsistencias(Usuarios usuario)</code></pre>
+    <pre><code class="lang-csharp hljs">internal FrmRegistroAsistencias(Usuarios usuario)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -632,7 +632,7 @@ Permite la comunicación y sincronización entre ambos formularios.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_ActualizarDgv" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.ActualizarDgv">
   ActualizarDgv()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L95"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Actualiza el DataGridView con la lista de asistencias obtenida desde la capa de negocio mediante <a class="xref" href="Gimnasio.Negocio.NAsistencia.html#Gimnasio_Negocio_NAsistencia_Listar">Listar()</a>.</p>
@@ -663,7 +663,7 @@ Permite la comunicación y sincronización entre ambos formularios.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_ActualizarDgv_System_Data_DataTable_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.ActualizarDgv(System.Data.DataTable)">
   ActualizarDgv(DataTable)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L110"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L94"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Actualiza el DataGridView con una lista específica de asistencias proporcionada como parámetro.</p>
@@ -728,39 +728,6 @@ Permite la comunicación y sincronización entre ambos formularios.</p>
 
 
 
-  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_GetFrmAsistencia_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia*"></a>
-
-  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_GetFrmAsistencia" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia">
-  GetFrmAsistencia()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L33"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Devuelve la instancia actual del formulario <a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html">FrmAsistencias</a> asociada a este formulario.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FrmAsistencias GetFrmAsistencia()</code></pre>
-  </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html">FrmAsistencias</a></dt>
-    <dd><p>Instancia de <a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html">FrmAsistencias</a> o Nothing si no existe.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
   <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_InitializeComponent_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.InitializeComponent*"></a>
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_InitializeComponent" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.InitializeComponent">
@@ -787,27 +754,64 @@ Permite la comunicación y sincronización entre ambos formularios.</p>
 
 
 
-  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_SetFrmAsistencia_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia*"></a>
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_RegistroAsis_FormClosed_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.RegistroAsis_FormClosed*"></a>
 
-  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_SetFrmAsistencia_Gimnasio_Presentacion_FrmAsistencias_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia(Gimnasio.Presentacion.FrmAsistencias)">
-  SetFrmAsistencia(FrmAsistencias)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L41"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_RegistroAsis_FormClosed_System_Object_System_Windows_Forms_FormClosedEventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.RegistroAsis_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)">
+  RegistroAsis_FormClosed(object, FormClosedEventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L279"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Asigna una instancia del formulario <a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html">FrmAsistencias</a> a este formulario de registro de asistencias.</p>
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al cerrar el formulario de registro de asistencias.</p>
+<ul>
+<li>Verifica si existe una instancia activa y no liberada del formulario <a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html">FrmAsistencias</a> asociada a este formulario.</li>
+<li>Si la instancia existe y no ha sido liberada, la cierra y libera sus recursos llamando a Close() y Dispose().</li>
+</ul>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetFrmAsistencia(FrmAsistencias frm)</code></pre>
+    <pre><code class="lang-csharp hljs">private void RegistroAsis_FormClosed(object sender, FormClosedEventArgs e)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>frm</code> <a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html">FrmAsistencias</a></dt>
-    <dd><p>Instancia de <a class="xref" href="Gimnasio.Presentacion.FrmAsistencias.html">FrmAsistencias</a> a asociar.</p>
-</dd>
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.formclosedeventargs">FormClosedEventArgs</a></dt>
+    <dd></dd>
   </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Gimnasio_Presentacion_FrmRegistroAsistencias_Reiniciar_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_Reiniciar" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar">
+  Reiniciar()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L243"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><ul>
+<li>Si la opción seleccionada en el ComboBox es búsqueda por DNI (índice 0),
+limpia el campo de búsqueda y actualiza el DataGridView mostrando todas las asistencias.</li>
+<li>Si la opción seleccionada es búsqueda por fecha (índice 1), restablece los DateTimePicker de fecha de inicio y fin a la fecha actual,
+limpia sus formatos y actualiza el DataGridView mostrando todas las asistencias.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Reiniciar()</code></pre>
+  </div>
+
 
 
 
@@ -824,7 +828,7 @@ Permite la comunicación y sincronización entre ambos formularios.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_btnBuscar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.btnBuscar_Click(System.Object,System.EventArgs)">
   btnBuscar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L213"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L197"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón para buscar asistencias por fecha.</p>
@@ -864,7 +868,7 @@ Permite la comunicación y sincronización entre ambos formularios.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_btnEliminar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.btnEliminar_Click(System.Object,System.EventArgs)">
   btnEliminar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L234"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L218"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Eliminar&quot;.</p>
@@ -905,7 +909,7 @@ Permite la comunicación y sincronización entre ambos formularios.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_btnInsertar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.btnInsertar_Click(System.Object,System.EventArgs)">
   btnInsertar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L127"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Insertar&quot; en el formulario de registro de asistencias.</p>
@@ -949,7 +953,7 @@ este formulario.</li>
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_cb_SelectedIndexChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.cb_SelectedIndexChanged(System.Object,System.EventArgs)">
   cb_SelectedIndexChanged(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L150"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L134"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al cambiar la opción seleccionada en el ComboBox de búsqueda de asistencias.</p>
@@ -993,7 +997,7 @@ este formulario.</li>
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_dtpFechaFin_ValueChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.dtpFechaFin_ValueChanged(System.Object,System.EventArgs)">
   dtpFechaFin_ValueChanged(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L198"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L182"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al cambiar el valor del DateTimePicker para la fecha de fin. Cambia el formato a corto para mostrar solo la fecha.</p>
@@ -1027,7 +1031,7 @@ este formulario.</li>
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_dtpFechaInicio_ValueChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.dtpFechaInicio_ValueChanged(System.Object,System.EventArgs)">
   dtpFechaInicio_ValueChanged(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L187"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L171"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al cambiar el valor del DateTimePicker para la fecha de inicio. Cambia el formato a corto para mostrar solo la fecha.</p>
@@ -1061,7 +1065,7 @@ este formulario.</li>
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_frmRegistroAsistencias_Load_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.frmRegistroAsistencias_Load(System.Object,System.EventArgs)">
   frmRegistroAsistencias_Load(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al cargar el formulario de registro de asistencias.</p>
@@ -1102,16 +1106,10 @@ para mostrar solo la información relevante y con títulos descriptivos.</li>
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_pbReiniciar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.pbReiniciar_Click(System.Object,System.EventArgs)">
   pbReiniciar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L260"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L266"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Reiniciar&quot;.</p>
-<ul>
-<li>Si la opción seleccionada en el ComboBox es búsqueda por DNI (índice 0),
-limpia el campo de búsqueda y actualiza el DataGridView mostrando todas las asistencias.</li>
-<li>Si la opción seleccionada es búsqueda por fecha (índice 1), restablece los DateTimePicker de fecha de inicio y fin a la fecha actual,
-limpia sus formatos y actualiza el DataGridView mostrando todas las asistencias.</li>
-</ul>
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Reiniciar&quot;. LLama a <a class="xref" href="Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_Reiniciar">Reiniciar()</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1142,7 +1140,7 @@ limpia sus formatos y actualiza el DataGridView mostrando todas las asistencias.
 
   <h3 id="Gimnasio_Presentacion_FrmRegistroAsistencias_tbBuscar_TextChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmRegistroAsistencias.tbBuscar_TextChanged(System.Object,System.EventArgs)">
   tbBuscar_TextChanged(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L174"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmRegistroAsistencias.vb/#L158"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al cambiar el texto en el campo de búsqueda de asistencias.</p>

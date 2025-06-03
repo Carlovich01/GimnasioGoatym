@@ -8,6 +8,8 @@ items:
   - Gimnasio.Presentacion.FrmPrincipal.#ctor(Gimnasio.Presentacion.FrmLogin,Gimnasio.Entidades.Usuarios)
   - Gimnasio.Presentacion.FrmPrincipal.Dispose(System.Boolean)
   - Gimnasio.Presentacion.FrmPrincipal.InitializeComponent
+  - Gimnasio.Presentacion.FrmPrincipal.LiberarRecursos
+  - Gimnasio.Presentacion.FrmPrincipal.MiembroAMembresia(System.String)
   - Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario(System.Windows.Forms.Form)
   - Gimnasio.Presentacion.FrmPrincipal.PanelDeFormularios
   - Gimnasio.Presentacion.FrmPrincipal.ToolStripPestañas
@@ -36,9 +38,15 @@ items:
   - Gimnasio.Presentacion.FrmPrincipal.btnUsuarios_Click(System.Object,System.EventArgs)
   - Gimnasio.Presentacion.FrmPrincipal.components
   - Gimnasio.Presentacion.FrmPrincipal.frmLogin
+  - Gimnasio.Presentacion.FrmPrincipal.frmMembresias
+  - Gimnasio.Presentacion.FrmPrincipal.frmMiembros
+  - Gimnasio.Presentacion.FrmPrincipal.frmPagos
+  - Gimnasio.Presentacion.FrmPrincipal.frmPlanes
   - Gimnasio.Presentacion.FrmPrincipal.frmPrincipal_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)
   - Gimnasio.Presentacion.FrmPrincipal.frmPrincipal_Load(System.Object,System.EventArgs)
+  - Gimnasio.Presentacion.FrmPrincipal.frmReclamos
   - Gimnasio.Presentacion.FrmPrincipal.frmRegistroAsistencias
+  - Gimnasio.Presentacion.FrmPrincipal.frmUsuarios
   - Gimnasio.Presentacion.FrmPrincipal.miCerrarSesion_Click(System.Object,System.EventArgs)
   - Gimnasio.Presentacion.FrmPrincipal.miCerrarSesión
   - Gimnasio.Presentacion.FrmPrincipal.obtenerUsuarioActual
@@ -65,11 +73,11 @@ items:
   summary: >-
     Formulario principal de la aplicación del gimnasio. Gestiona la navegación entre los diferentes módulos y controla el acceso según el rol del usuario.
 
-    Utiliza la clase <xref href="Gimnasio.Entidades.Usuarios" data-throw-if-not-resolved="false"></xref> para identificar al usuario logueado y su rol. Llama a formularios secundarios como <xref href="Gimnasio.Presentacion.FrmPlanes" data-throw-if-not-resolved="false"></xref>,
+    Utiliza la clase <xref href="Gimnasio.Entidades.Usuarios" data-throw-if-not-resolved="false"></xref> para identificar al usuario logueado y su rol. Llama a formularios secundarios como <xref href="Gimnasio.Presentacion.FrmPrincipal.frmPlanes" data-throw-if-not-resolved="false"></xref>,
 
-    <xref href="Gimnasio.Presentacion.FrmMiembros" data-throw-if-not-resolved="false"></xref>, <xref href="Gimnasio.Presentacion.FrmMembresias" data-throw-if-not-resolved="false"></xref>, <xref href="Gimnasio.Presentacion.FrmPagos" data-throw-if-not-resolved="false"></xref>, <xref href="Gimnasio.Presentacion.FrmPrincipal.frmRegistroAsistencias" data-throw-if-not-resolved="false"></xref>, <xref href="Gimnasio.Presentacion.FrmReclamos" data-throw-if-not-resolved="false"></xref> y 
+    <xref href="Gimnasio.Presentacion.FrmPrincipal.frmMiembros" data-throw-if-not-resolved="false"></xref>, <xref href="Gimnasio.Presentacion.FrmPrincipal.frmMembresias" data-throw-if-not-resolved="false"></xref>, <xref href="Gimnasio.Presentacion.FrmPrincipal.frmPagos" data-throw-if-not-resolved="false"></xref>, <xref href="Gimnasio.Presentacion.FrmPrincipal.frmRegistroAsistencias" data-throw-if-not-resolved="false"></xref>, <xref href="Gimnasio.Presentacion.FrmPrincipal.frmReclamos" data-throw-if-not-resolved="false"></xref> y 
 
-    <xref href="Gimnasio.Presentacion.FrmUsuarios" data-throw-if-not-resolved="false"></xref>.
+    <xref href="Gimnasio.Presentacion.FrmPrincipal.frmUsuarios" data-throw-if-not-resolved="false"></xref>.
   remarks: >-
     Todas las operaciones de esta capa están envueltas en bloques Try...Catch. 
 
@@ -931,7 +939,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ToolStripPestañas
     path: ../Gimnasio.Presentacion/FrmPrincipal.Designer.vb
-    startLine: 219
+    startLine: 220
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -960,7 +968,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: PanelDeFormularios
     path: ../Gimnasio.Presentacion/FrmPrincipal.Designer.vb
-    startLine: 220
+    startLine: 221
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -989,7 +997,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: pbLogo
     path: ../Gimnasio.Presentacion/FrmPrincipal.Designer.vb
-    startLine: 221
+    startLine: 222
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1018,7 +1026,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnPlanes
     path: ../Gimnasio.Presentacion/FrmPrincipal.Designer.vb
-    startLine: 222
+    startLine: 223
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1047,7 +1055,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ToolStripSeparator1
     path: ../Gimnasio.Presentacion/FrmPrincipal.Designer.vb
-    startLine: 223
+    startLine: 224
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1076,7 +1084,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnMembresias
     path: ../Gimnasio.Presentacion/FrmPrincipal.Designer.vb
-    startLine: 224
+    startLine: 225
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1105,7 +1113,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ToolStripSeparator2
     path: ../Gimnasio.Presentacion/FrmPrincipal.Designer.vb
-    startLine: 225
+    startLine: 226
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1134,7 +1142,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnMiembros
     path: ../Gimnasio.Presentacion/FrmPrincipal.Designer.vb
-    startLine: 226
+    startLine: 227
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1163,7 +1171,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ToolStripSeparator3
     path: ../Gimnasio.Presentacion/FrmPrincipal.Designer.vb
-    startLine: 227
+    startLine: 228
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1192,7 +1200,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnPagos
     path: ../Gimnasio.Presentacion/FrmPrincipal.Designer.vb
-    startLine: 228
+    startLine: 229
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1221,7 +1229,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ToolStripSeparator4
     path: ../Gimnasio.Presentacion/FrmPrincipal.Designer.vb
-    startLine: 229
+    startLine: 230
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1250,7 +1258,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnReclamos
     path: ../Gimnasio.Presentacion/FrmPrincipal.Designer.vb
-    startLine: 230
+    startLine: 231
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1279,7 +1287,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ToolStripSeparator6
     path: ../Gimnasio.Presentacion/FrmPrincipal.Designer.vb
-    startLine: 231
+    startLine: 232
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1308,7 +1316,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ToolStripSeparator8
     path: ../Gimnasio.Presentacion/FrmPrincipal.Designer.vb
-    startLine: 232
+    startLine: 233
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1337,7 +1345,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btRegistroAsistencias
     path: ../Gimnasio.Presentacion/FrmPrincipal.Designer.vb
-    startLine: 233
+    startLine: 234
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1366,7 +1374,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnUsuarios
     path: ../Gimnasio.Presentacion/FrmPrincipal.Designer.vb
-    startLine: 234
+    startLine: 235
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1395,7 +1403,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ToolStripSeparator5
     path: ../Gimnasio.Presentacion/FrmPrincipal.Designer.vb
-    startLine: 235
+    startLine: 236
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1424,7 +1432,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnUsuarioLogueado
     path: ../Gimnasio.Presentacion/FrmPrincipal.Designer.vb
-    startLine: 236
+    startLine: 237
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1453,7 +1461,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: miCerrarSesión
     path: ../Gimnasio.Presentacion/FrmPrincipal.Designer.vb
-    startLine: 237
+    startLine: 238
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1482,7 +1490,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ToolStripSeparator7
     path: ../Gimnasio.Presentacion/FrmPrincipal.Designer.vb
-    startLine: 238
+    startLine: 239
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1554,6 +1562,122 @@ items:
     return:
       type: Gimnasio.Entidades.Usuarios
     content.vb: Private usuarioActual As Usuarios
+- uid: Gimnasio.Presentacion.FrmPrincipal.frmPlanes
+  commentId: F:Gimnasio.Presentacion.FrmPrincipal.frmPlanes
+  id: frmPlanes
+  parent: Gimnasio.Presentacion.FrmPrincipal
+  langs:
+  - csharp
+  - vb
+  name: frmPlanes
+  nameWithType: FrmPrincipal.frmPlanes
+  fullName: Gimnasio.Presentacion.FrmPrincipal.frmPlanes
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Presentacion/FrmPrincipal.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: frmPlanes
+    path: ../Gimnasio.Presentacion/FrmPrincipal.vb
+    startLine: 29
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion
+  summary: Referencia al formulario de planes <xref href="Gimnasio.Presentacion.FrmPrincipal.frmPlanes" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: private FrmPlanes frmPlanes
+    return:
+      type: Gimnasio.Presentacion.FrmPlanes
+    content.vb: Private frmPlanes As FrmPlanes
+- uid: Gimnasio.Presentacion.FrmPrincipal.frmMiembros
+  commentId: F:Gimnasio.Presentacion.FrmPrincipal.frmMiembros
+  id: frmMiembros
+  parent: Gimnasio.Presentacion.FrmPrincipal
+  langs:
+  - csharp
+  - vb
+  name: frmMiembros
+  nameWithType: FrmPrincipal.frmMiembros
+  fullName: Gimnasio.Presentacion.FrmPrincipal.frmMiembros
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Presentacion/FrmPrincipal.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: frmMiembros
+    path: ../Gimnasio.Presentacion/FrmPrincipal.vb
+    startLine: 34
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion
+  summary: Referencia al formulario de miembros <xref href="Gimnasio.Presentacion.FrmPrincipal.frmMiembros" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: private FrmMiembros frmMiembros
+    return:
+      type: Gimnasio.Presentacion.FrmMiembros
+    content.vb: Private frmMiembros As FrmMiembros
+- uid: Gimnasio.Presentacion.FrmPrincipal.frmMembresias
+  commentId: F:Gimnasio.Presentacion.FrmPrincipal.frmMembresias
+  id: frmMembresias
+  parent: Gimnasio.Presentacion.FrmPrincipal
+  langs:
+  - csharp
+  - vb
+  name: frmMembresias
+  nameWithType: FrmPrincipal.frmMembresias
+  fullName: Gimnasio.Presentacion.FrmPrincipal.frmMembresias
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Presentacion/FrmPrincipal.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: frmMembresias
+    path: ../Gimnasio.Presentacion/FrmPrincipal.vb
+    startLine: 39
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion
+  summary: Referencia al formulario de membresías <xref href="Gimnasio.Presentacion.FrmPrincipal.frmMembresias" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: private FrmMembresias frmMembresias
+    return:
+      type: Gimnasio.Presentacion.FrmMembresias
+    content.vb: Private frmMembresias As FrmMembresias
+- uid: Gimnasio.Presentacion.FrmPrincipal.frmPagos
+  commentId: F:Gimnasio.Presentacion.FrmPrincipal.frmPagos
+  id: frmPagos
+  parent: Gimnasio.Presentacion.FrmPrincipal
+  langs:
+  - csharp
+  - vb
+  name: frmPagos
+  nameWithType: FrmPrincipal.frmPagos
+  fullName: Gimnasio.Presentacion.FrmPrincipal.frmPagos
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Presentacion/FrmPrincipal.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: frmPagos
+    path: ../Gimnasio.Presentacion/FrmPrincipal.vb
+    startLine: 44
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion
+  summary: Referencia al formulario de pagos <xref href="Gimnasio.Presentacion.FrmPrincipal.frmPagos" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: private FrmPagos frmPagos
+    return:
+      type: Gimnasio.Presentacion.FrmPagos
+    content.vb: Private frmPagos As FrmPagos
 - uid: Gimnasio.Presentacion.FrmPrincipal.frmRegistroAsistencias
   commentId: F:Gimnasio.Presentacion.FrmPrincipal.frmRegistroAsistencias
   id: frmRegistroAsistencias
@@ -1572,7 +1696,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: frmRegistroAsistencias
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 29
+    startLine: 49
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1583,6 +1707,64 @@ items:
     return:
       type: Gimnasio.Presentacion.FrmRegistroAsistencias
     content.vb: Private frmRegistroAsistencias As FrmRegistroAsistencias
+- uid: Gimnasio.Presentacion.FrmPrincipal.frmReclamos
+  commentId: F:Gimnasio.Presentacion.FrmPrincipal.frmReclamos
+  id: frmReclamos
+  parent: Gimnasio.Presentacion.FrmPrincipal
+  langs:
+  - csharp
+  - vb
+  name: frmReclamos
+  nameWithType: FrmPrincipal.frmReclamos
+  fullName: Gimnasio.Presentacion.FrmPrincipal.frmReclamos
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Presentacion/FrmPrincipal.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: frmReclamos
+    path: ../Gimnasio.Presentacion/FrmPrincipal.vb
+    startLine: 54
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion
+  summary: Referencia al formulario de reclamos <xref href="Gimnasio.Presentacion.FrmPrincipal.frmReclamos" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: private FrmReclamos frmReclamos
+    return:
+      type: Gimnasio.Presentacion.FrmReclamos
+    content.vb: Private frmReclamos As FrmReclamos
+- uid: Gimnasio.Presentacion.FrmPrincipal.frmUsuarios
+  commentId: F:Gimnasio.Presentacion.FrmPrincipal.frmUsuarios
+  id: frmUsuarios
+  parent: Gimnasio.Presentacion.FrmPrincipal
+  langs:
+  - csharp
+  - vb
+  name: frmUsuarios
+  nameWithType: FrmPrincipal.frmUsuarios
+  fullName: Gimnasio.Presentacion.FrmPrincipal.frmUsuarios
+  type: Field
+  source:
+    remote:
+      path: Gimnasio.Presentacion/FrmPrincipal.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: frmUsuarios
+    path: ../Gimnasio.Presentacion/FrmPrincipal.vb
+    startLine: 59
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion
+  summary: Referencia al formulario de usuarios <xref href="Gimnasio.Presentacion.FrmPrincipal.frmUsuarios" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: private FrmUsuarios frmUsuarios
+    return:
+      type: Gimnasio.Presentacion.FrmUsuarios
+    content.vb: Private frmUsuarios As FrmUsuarios
 - uid: Gimnasio.Presentacion.FrmPrincipal.#ctor(Gimnasio.Presentacion.FrmLogin,Gimnasio.Entidades.Usuarios)
   commentId: M:Gimnasio.Presentacion.FrmPrincipal.#ctor(Gimnasio.Presentacion.FrmLogin,Gimnasio.Entidades.Usuarios)
   id: '#ctor(Gimnasio.Presentacion.FrmLogin,Gimnasio.Entidades.Usuarios)'
@@ -1601,7 +1783,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: .ctor
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 41
+    startLine: 71
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1650,7 +1832,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: obtenerUsuarioActual
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 57
+    startLine: 87
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1681,7 +1863,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: frmPrincipal_Load
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 65
+    startLine: 95
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1720,33 +1902,25 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: MostrarFormulario
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 90
+    startLine: 112
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
   summary: >-
     Muestra un formulario secundario dentro del panel principal de la aplicación.
 
-    - Si ya existe un formulario cargado en el panel, lo libera de memoria correctamente:
-      - Si el formulario actual es una instancia de <xref href="Gimnasio.Presentacion.FrmPrincipal.frmRegistroAsistencias" data-throw-if-not-resolved="false"></xref>, verifica si 
-      su formulario hijo (<xref href="Gimnasio.Presentacion.FrmAsistencias" data-throw-if-not-resolved="false"></xref>) está abierto.
-        - Si <xref href="Gimnasio.Presentacion.FrmAsistencias" data-throw-if-not-resolved="false"></xref> no está abierto o ya fue liberado, elimina y libera la instancia 
-        de <xref href="Gimnasio.Presentacion.FrmPrincipal.frmRegistroAsistencias" data-throw-if-not-resolved="false"></xref> y su referencia.
-        - Si <xref href="Gimnasio.Presentacion.FrmAsistencias" data-throw-if-not-resolved="false"></xref> sigue abierto, mantiene la instancia de <xref href="Gimnasio.Presentacion.FrmPrincipal.frmRegistroAsistencias" data-throw-if-not-resolved="false"></xref> viva 
-        para preservar su estado.
-      - Si el formulario actual no es <xref href="Gimnasio.Presentacion.FrmPrincipal.frmRegistroAsistencias" data-throw-if-not-resolved="false"></xref>, lo elimina y libera normalmente.
-    - Limpia el panel de cualquier control previo.
+    Si el formulario que se intenta mostrar ya está activo en el panel, no realiza ninguna acción para evitar recargas innecesarias.
 
-    - Configura el formulario recibido como parámetro para que no sea de nivel superior, sin bordes y ajustado al tamaño del panel principal.
+    Si es un formulario diferente, limpia el panel, configura el formulario recibido para que se muestre embebido (sin bordes y ajustado al panel)
 
-    - Agrega el formulario al panel y lo muestra.
+    y lo agrega al panel principal, mostrándolo al usuario.
   example: []
   syntax:
     content: public void MostrarFormulario(Form formulario)
     parameters:
     - id: formulario
       type: System.Windows.Forms.Form
-      description: Instancia de <xref href="System.Windows.Forms.Form" data-throw-if-not-resolved="false"></xref> a mostrar en el panel principal.
+      description: Instancia de <xref href="System.Windows.Forms.Form" data-throw-if-not-resolved="false"></xref> que se desea mostrar en el panel principal.
     content.vb: Public Sub MostrarFormulario(formulario As Form)
   overload: Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario*
 - uid: Gimnasio.Presentacion.FrmPrincipal.btnPlanes_Click(System.Object,System.EventArgs)
@@ -1767,11 +1941,18 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnPlanes_Click
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 119
+    startLine: 137
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
-  summary: Evento que abre el formulario de planes <xref href="Gimnasio.Presentacion.FrmPlanes" data-throw-if-not-resolved="false"></xref>.
+  summary: >-
+    Evento que se ejecuta al hacer clic en el botón "Planes".
+
+    - Si no existe una instancia previa del formulario de planes (<xref href="Gimnasio.Presentacion.FrmPrincipal.frmPlanes" data-throw-if-not-resolved="false"></xref>), la crea utilizando el usuario actualmente logueado.
+
+    - Llama al método <xref href="Gimnasio.Presentacion.FrmPlanes.Reiniciar" data-throw-if-not-resolved="false"></xref> para restablecer el estado del formulario de planes antes de mostrarlo.
+
+    - Muestra el formulario de planes embebido en el panel principal mediante <xref href="Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario(System.Windows.Forms.Form)" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: private void btnPlanes_Click(object sender, EventArgs e)
@@ -1803,11 +1984,18 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnMiembros_Click
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 131
+    startLine: 156
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
-  summary: Evento que abre el formulario de miembros <xref href="Gimnasio.Presentacion.FrmMiembros" data-throw-if-not-resolved="false"></xref>.
+  summary: >-
+    Evento que se ejecuta al hacer clic en el botón "Miembros".
+
+    - Si no existe una instancia previa del formulario de miembros (<xref href="Gimnasio.Presentacion.FrmPrincipal.frmMiembros" data-throw-if-not-resolved="false"></xref>), 
+      la crea pasando como parámetro la instancia del formulario principal (<xref href="Gimnasio.Presentacion.FrmPrincipal" data-throw-if-not-resolved="false"></xref>).
+    - Llama al método <xref href="Gimnasio.Presentacion.FrmMiembros.Reiniciar" data-throw-if-not-resolved="false"></xref> para restablecer el estado del formulario de miembros antes de mostrarlo.
+
+    - Muestra el formulario de miembros embebido en el panel principal mediante <xref href="Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario(System.Windows.Forms.Form)" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: private void btnMiembros_Click(object sender, EventArgs e)
@@ -1839,11 +2027,18 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnMembresias_Click
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 143
+    startLine: 175
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
-  summary: Evento que abre el formulario de membresías <xref href="Gimnasio.Presentacion.FrmMembresias" data-throw-if-not-resolved="false"></xref>.
+  summary: >-
+    Evento que se ejecuta al hacer clic en el botón "Membresías".
+
+    - Si no existe una instancia previa del formulario de membresías (<xref href="Gimnasio.Presentacion.FrmPrincipal.frmMembresias" data-throw-if-not-resolved="false"></xref>), 
+      la crea utilizando el usuario actualmente logueado.
+    - Llama al método <xref href="Gimnasio.Presentacion.FrmMembresias.Reiniciar" data-throw-if-not-resolved="false"></xref> para restablecer el estado del formulario de membresías antes de mostrarlo.
+
+    - Muestra el formulario de membresías embebido en el panel principal mediante <xref href="Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario(System.Windows.Forms.Form)" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: private void btnMembresias_Click(object sender, EventArgs e)
@@ -1875,11 +2070,18 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnPagos_Click
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 155
+    startLine: 193
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
-  summary: Evento que abre el formulario de pagos <xref href="Gimnasio.Presentacion.FrmPagos" data-throw-if-not-resolved="false"></xref>.
+  summary: >-
+    Evento que se ejecuta al hacer clic en el botón "Pagos".
+
+    - Si no existe una instancia previa del formulario de pagos (<xref href="Gimnasio.Presentacion.FrmPrincipal.frmPagos" data-throw-if-not-resolved="false"></xref>), la crea utilizando el usuario actualmente logueado.
+
+    - Llama al método <xref href="Gimnasio.Presentacion.FrmPagos.Reiniciar" data-throw-if-not-resolved="false"></xref> para restablecer el estado del formulario de pagos antes de mostrarlo.
+
+    - Muestra el formulario de pagos embebido en el panel principal mediante <xref href="Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario(System.Windows.Forms.Form)" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: private void btnPagos_Click(object sender, EventArgs e)
@@ -1911,18 +2113,18 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnRegistroAsistencias_Click
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 170
+    startLine: 212
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
   summary: >-
-    Evento que se ejecuta al hacer clic en el botón para abrir el formulario de registro de asistencias (<xref href="Gimnasio.Presentacion.FrmPrincipal.frmRegistroAsistencias" data-throw-if-not-resolved="false"></xref>).
+    Evento que se ejecuta al hacer clic en el botón "Registro de Asistencias".
 
-    - Si no existe una instancia activa de <xref href="Gimnasio.Presentacion.FrmPrincipal.frmRegistroAsistencias" data-throw-if-not-resolved="false"></xref>, crea una nueva pasando el usuario actualmente logueado.
+    - Si no existe una instancia previa del formulario de registro de asistencias (<xref href="Gimnasio.Presentacion.FrmPrincipal.frmRegistroAsistencias" data-throw-if-not-resolved="false"></xref>), 
+      la crea utilizando el usuario actualmente logueado.
+    - Llama al método <xref href="Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar" data-throw-if-not-resolved="false"></xref> para restablecer el estado del formulario antes de mostrarlo.
 
-    - Si ya existe una instancia activa, reutiliza la misma para evitar duplicados y mantener el estado.
-
-    - Llama a <xref href="Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario(System.Windows.Forms.Form)" data-throw-if-not-resolved="false"></xref> para mostrar el formulario de registro de asistencias en el panel principal de la aplicación.
+    - Muestra el formulario de registro de asistencias embebido en el panel principal mediante <xref href="Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario(System.Windows.Forms.Form)" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: private void btnRegistroAsistencias_Click(object sender, EventArgs e)
@@ -1954,11 +2156,18 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnReclamos_Click
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 185
+    startLine: 230
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
-  summary: Evento que abre el formulario de reclamos <xref href="Gimnasio.Presentacion.FrmReclamos" data-throw-if-not-resolved="false"></xref>.
+  summary: >-
+    Evento que se ejecuta al hacer clic en el botón "Reclamos".
+
+    - Si no existe una instancia previa del formulario de reclamos (<xref href="Gimnasio.Presentacion.FrmPrincipal.frmReclamos" data-throw-if-not-resolved="false"></xref>), la crea utilizando el usuario actualmente logueado.
+
+    - Llama al método <xref href="Gimnasio.Presentacion.FrmReclamos.Reiniciar" data-throw-if-not-resolved="false"></xref> para restablecer el estado del formulario de reclamos antes de mostrarlo.
+
+    - Muestra el formulario de reclamos embebido en el panel principal mediante <xref href="Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario(System.Windows.Forms.Form)" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: private void btnReclamos_Click(object sender, EventArgs e)
@@ -1990,14 +2199,18 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnUsuarios_Click
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 198
+    startLine: 248
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
   summary: >-
-    Evento que abre el formulario de usuarios <xref href="Gimnasio.Presentacion.FrmUsuarios" data-throw-if-not-resolved="false"></xref>.
+    Evento que se ejecuta al hacer clic en el botón "Usuarios".
 
-    Solo visible para usuarios con rol de administrador.
+    - Si no existe una instancia previa del formulario de usuarios (<xref href="Gimnasio.Presentacion.FrmPrincipal.frmUsuarios" data-throw-if-not-resolved="false"></xref>), la crea.
+
+    - Llama al método <xref href="Gimnasio.Presentacion.FrmUsuarios.Reiniciar" data-throw-if-not-resolved="false"></xref> para restablecer el estado del formulario de usuarios antes de mostrarlo.
+
+    - Muestra el formulario de usuarios embebido en el panel principal mediante <xref href="Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario(System.Windows.Forms.Form)" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: private void btnUsuarios_Click(object sender, EventArgs e)
@@ -2011,6 +2224,80 @@ items:
   nameWithType.vb: FrmPrincipal.btnUsuarios_Click(Object, EventArgs)
   fullName.vb: Gimnasio.Presentacion.FrmPrincipal.btnUsuarios_Click(Object, System.EventArgs)
   name.vb: btnUsuarios_Click(Object, EventArgs)
+- uid: Gimnasio.Presentacion.FrmPrincipal.MiembroAMembresia(System.String)
+  commentId: M:Gimnasio.Presentacion.FrmPrincipal.MiembroAMembresia(System.String)
+  id: MiembroAMembresia(System.String)
+  parent: Gimnasio.Presentacion.FrmPrincipal
+  langs:
+  - csharp
+  - vb
+  name: MiembroAMembresia(string)
+  nameWithType: FrmPrincipal.MiembroAMembresia(string)
+  fullName: Gimnasio.Presentacion.FrmPrincipal.MiembroAMembresia(string)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Presentacion/FrmPrincipal.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: MiembroAMembresia
+    path: ../Gimnasio.Presentacion/FrmPrincipal.vb
+    startLine: 265
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion
+  summary: >-
+    Muestra el formulario de gestión de membresías (<xref href="Gimnasio.Presentacion.FrmPrincipal.frmMembresias" data-throw-if-not-resolved="false"></xref>) en el panel principal y habilita el ingreso directo de una membresía 
+
+    para un miembro específico. Si no existe una instancia previa del formulario de membresías, la crea utilizando el usuario actualmente logueado.
+
+    Luego, muestra el formulario y llama al método <xref href="Gimnasio.Presentacion.FrmMembresias.HabilitarIngresoConMiembro(System.String)" data-throw-if-not-resolved="false"></xref> pasando el DNI del miembro para facilitar la asociación.
+  example: []
+  syntax:
+    content: public void MiembroAMembresia(string dni)
+    parameters:
+    - id: dni
+      type: System.String
+    content.vb: Public Sub MiembroAMembresia(dni As String)
+  overload: Gimnasio.Presentacion.FrmPrincipal.MiembroAMembresia*
+  nameWithType.vb: FrmPrincipal.MiembroAMembresia(String)
+  fullName.vb: Gimnasio.Presentacion.FrmPrincipal.MiembroAMembresia(String)
+  name.vb: MiembroAMembresia(String)
+- uid: Gimnasio.Presentacion.FrmPrincipal.LiberarRecursos
+  commentId: M:Gimnasio.Presentacion.FrmPrincipal.LiberarRecursos
+  id: LiberarRecursos
+  parent: Gimnasio.Presentacion.FrmPrincipal
+  langs:
+  - csharp
+  - vb
+  name: LiberarRecursos()
+  nameWithType: FrmPrincipal.LiberarRecursos()
+  fullName: Gimnasio.Presentacion.FrmPrincipal.LiberarRecursos()
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Presentacion/FrmPrincipal.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: LiberarRecursos
+    path: ../Gimnasio.Presentacion/FrmPrincipal.vb
+    startLine: 283
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion
+  summary: >-
+    Libera y cierra todos los formularios secundarios instanciados en el formulario principal, liberando los recursos asociados.
+
+    Cierra y elimina las instancias de <xref href="Gimnasio.Presentacion.FrmPrincipal.frmPlanes" data-throw-if-not-resolved="false"></xref>, <xref href="Gimnasio.Presentacion.FrmPrincipal.frmMiembros" data-throw-if-not-resolved="false"></xref>, <xref href="Gimnasio.Presentacion.FrmPrincipal.frmMembresias" data-throw-if-not-resolved="false"></xref>, <xref href="Gimnasio.Presentacion.FrmPrincipal.frmPagos" data-throw-if-not-resolved="false"></xref>,
+
+    <xref href="Gimnasio.Presentacion.FrmPrincipal.frmRegistroAsistencias" data-throw-if-not-resolved="false"></xref>, <xref href="Gimnasio.Presentacion.FrmPrincipal.frmReclamos" data-throw-if-not-resolved="false"></xref> y <xref href="Gimnasio.Presentacion.FrmPrincipal.frmUsuarios" data-throw-if-not-resolved="false"></xref> si están activos.
+
+    Finalmente, libera los recursos del propio formulario principal.
+  example: []
+  syntax:
+    content: public void LiberarRecursos()
+    content.vb: Public Sub LiberarRecursos()
+  overload: Gimnasio.Presentacion.FrmPrincipal.LiberarRecursos*
 - uid: Gimnasio.Presentacion.FrmPrincipal.miCerrarSesion_Click(System.Object,System.EventArgs)
   commentId: M:Gimnasio.Presentacion.FrmPrincipal.miCerrarSesion_Click(System.Object,System.EventArgs)
   id: miCerrarSesion_Click(System.Object,System.EventArgs)
@@ -2029,20 +2316,18 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: miCerrarSesion_Click
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 216
+    startLine: 338
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
   summary: >-
-    - Se ejecuta al hacer clic en el elemento de menú "Cerrar Sesión".
+    Evento que se ejecuta al hacer clic en la opción "Cerrar Sesión" del menú.
 
-    - Solicita confirmación al usuario mediante un cuadro de diálogo.
+    Solicita confirmación al usuario para cerrar la sesión actual mediante un cuadro de diálogo.
 
-    - Si el usuario confirma la acción:
-        - Oculta el formulario principal.
-        - Muestra el formulario de login.
-        - Restablece los campos del formulario de login llamando a <xref href="Gimnasio.Presentacion.FrmLogin.Formato" data-throw-if-not-resolved="false"></xref>.
-        - Libera los recursos del formulario principal.
+    Si el usuario confirma, muestra nuevamente el formulario de login, restablece su formato 
+
+    y libera los recursos asociados al formulario principal y sus formularios secundarios.
   example: []
   syntax:
     content: private void miCerrarSesion_Click(object sender, EventArgs e)
@@ -2074,14 +2359,14 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: frmPrincipal_FormClosed
     path: ../Gimnasio.Presentacion/FrmPrincipal.vb
-    startLine: 234
+    startLine: 355
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
   summary: >-
-    - Se ejecuta al hacer clic en el elemento de menú "Salir".
+    Evento que se ejecuta al cerrarse el formulario principal de la aplicación. Libera todos los recursos asociados a los formularios secundarios 
 
-    - Libera recursos de el formulario de login como de este formulario.
+    y al propio formulario principal, y cierra el formulario de login.
   example: []
   syntax:
     content: private void frmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
@@ -2103,48 +2388,48 @@ references:
   name: Usuarios
   nameWithType: Usuarios
   fullName: Gimnasio.Entidades.Usuarios
-- uid: Gimnasio.Presentacion.FrmPlanes
-  commentId: T:Gimnasio.Presentacion.FrmPlanes
-  href: Gimnasio.Presentacion.FrmPlanes.html
-  name: FrmPlanes
-  nameWithType: FrmPlanes
-  fullName: Gimnasio.Presentacion.FrmPlanes
-- uid: Gimnasio.Presentacion.FrmMiembros
-  commentId: T:Gimnasio.Presentacion.FrmMiembros
-  href: Gimnasio.Presentacion.FrmMiembros.html
-  name: FrmMiembros
-  nameWithType: FrmMiembros
-  fullName: Gimnasio.Presentacion.FrmMiembros
-- uid: Gimnasio.Presentacion.FrmMembresias
-  commentId: T:Gimnasio.Presentacion.FrmMembresias
-  href: Gimnasio.Presentacion.FrmMembresias.html
-  name: FrmMembresias
-  nameWithType: FrmMembresias
-  fullName: Gimnasio.Presentacion.FrmMembresias
-- uid: Gimnasio.Presentacion.FrmPagos
-  commentId: T:Gimnasio.Presentacion.FrmPagos
-  href: Gimnasio.Presentacion.FrmPagos.html
-  name: FrmPagos
-  nameWithType: FrmPagos
-  fullName: Gimnasio.Presentacion.FrmPagos
+- uid: Gimnasio.Presentacion.FrmPrincipal.frmPlanes
+  commentId: F:Gimnasio.Presentacion.FrmPrincipal.frmPlanes
+  href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmPlanes
+  name: frmPlanes
+  nameWithType: FrmPrincipal.frmPlanes
+  fullName: Gimnasio.Presentacion.FrmPrincipal.frmPlanes
+- uid: Gimnasio.Presentacion.FrmPrincipal.frmMiembros
+  commentId: F:Gimnasio.Presentacion.FrmPrincipal.frmMiembros
+  href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmMiembros
+  name: frmMiembros
+  nameWithType: FrmPrincipal.frmMiembros
+  fullName: Gimnasio.Presentacion.FrmPrincipal.frmMiembros
+- uid: Gimnasio.Presentacion.FrmPrincipal.frmMembresias
+  commentId: F:Gimnasio.Presentacion.FrmPrincipal.frmMembresias
+  href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmMembresias
+  name: frmMembresias
+  nameWithType: FrmPrincipal.frmMembresias
+  fullName: Gimnasio.Presentacion.FrmPrincipal.frmMembresias
+- uid: Gimnasio.Presentacion.FrmPrincipal.frmPagos
+  commentId: F:Gimnasio.Presentacion.FrmPrincipal.frmPagos
+  href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmPagos
+  name: frmPagos
+  nameWithType: FrmPrincipal.frmPagos
+  fullName: Gimnasio.Presentacion.FrmPrincipal.frmPagos
 - uid: Gimnasio.Presentacion.FrmPrincipal.frmRegistroAsistencias
   commentId: F:Gimnasio.Presentacion.FrmPrincipal.frmRegistroAsistencias
   href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmRegistroAsistencias
   name: frmRegistroAsistencias
   nameWithType: FrmPrincipal.frmRegistroAsistencias
   fullName: Gimnasio.Presentacion.FrmPrincipal.frmRegistroAsistencias
-- uid: Gimnasio.Presentacion.FrmReclamos
-  commentId: T:Gimnasio.Presentacion.FrmReclamos
-  href: Gimnasio.Presentacion.FrmReclamos.html
-  name: FrmReclamos
-  nameWithType: FrmReclamos
-  fullName: Gimnasio.Presentacion.FrmReclamos
-- uid: Gimnasio.Presentacion.FrmUsuarios
-  commentId: T:Gimnasio.Presentacion.FrmUsuarios
-  href: Gimnasio.Presentacion.FrmUsuarios.html
-  name: FrmUsuarios
-  nameWithType: FrmUsuarios
-  fullName: Gimnasio.Presentacion.FrmUsuarios
+- uid: Gimnasio.Presentacion.FrmPrincipal.frmReclamos
+  commentId: F:Gimnasio.Presentacion.FrmPrincipal.frmReclamos
+  href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmReclamos
+  name: frmReclamos
+  nameWithType: FrmPrincipal.frmReclamos
+  fullName: Gimnasio.Presentacion.FrmPrincipal.frmReclamos
+- uid: Gimnasio.Presentacion.FrmPrincipal.frmUsuarios
+  commentId: F:Gimnasio.Presentacion.FrmPrincipal.frmUsuarios
+  href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_frmUsuarios
+  name: frmUsuarios
+  nameWithType: FrmPrincipal.frmUsuarios
+  fullName: Gimnasio.Presentacion.FrmPrincipal.frmUsuarios
 - uid: Gimnasio.Errores.ManejarErrores.Mostrar(System.String,System.Exception)
   commentId: M:Gimnasio.Errores.ManejarErrores.Mostrar(System.String,System.Exception)
   isExternal: true
@@ -20101,6 +20386,34 @@ references:
   name: FrmLogin
   nameWithType: FrmLogin
   fullName: Gimnasio.Presentacion.FrmLogin
+- uid: Gimnasio.Presentacion.FrmPlanes
+  commentId: T:Gimnasio.Presentacion.FrmPlanes
+  parent: Gimnasio.Presentacion
+  href: Gimnasio.Presentacion.FrmPlanes.html
+  name: FrmPlanes
+  nameWithType: FrmPlanes
+  fullName: Gimnasio.Presentacion.FrmPlanes
+- uid: Gimnasio.Presentacion.FrmMiembros
+  commentId: T:Gimnasio.Presentacion.FrmMiembros
+  parent: Gimnasio.Presentacion
+  href: Gimnasio.Presentacion.FrmMiembros.html
+  name: FrmMiembros
+  nameWithType: FrmMiembros
+  fullName: Gimnasio.Presentacion.FrmMiembros
+- uid: Gimnasio.Presentacion.FrmMembresias
+  commentId: T:Gimnasio.Presentacion.FrmMembresias
+  parent: Gimnasio.Presentacion
+  href: Gimnasio.Presentacion.FrmMembresias.html
+  name: FrmMembresias
+  nameWithType: FrmMembresias
+  fullName: Gimnasio.Presentacion.FrmMembresias
+- uid: Gimnasio.Presentacion.FrmPagos
+  commentId: T:Gimnasio.Presentacion.FrmPagos
+  parent: Gimnasio.Presentacion
+  href: Gimnasio.Presentacion.FrmPagos.html
+  name: FrmPagos
+  nameWithType: FrmPagos
+  fullName: Gimnasio.Presentacion.FrmPagos
 - uid: Gimnasio.Presentacion.FrmRegistroAsistencias
   commentId: T:Gimnasio.Presentacion.FrmRegistroAsistencias
   parent: Gimnasio.Presentacion
@@ -20108,6 +20421,20 @@ references:
   name: FrmRegistroAsistencias
   nameWithType: FrmRegistroAsistencias
   fullName: Gimnasio.Presentacion.FrmRegistroAsistencias
+- uid: Gimnasio.Presentacion.FrmReclamos
+  commentId: T:Gimnasio.Presentacion.FrmReclamos
+  parent: Gimnasio.Presentacion
+  href: Gimnasio.Presentacion.FrmReclamos.html
+  name: FrmReclamos
+  nameWithType: FrmReclamos
+  fullName: Gimnasio.Presentacion.FrmReclamos
+- uid: Gimnasio.Presentacion.FrmUsuarios
+  commentId: T:Gimnasio.Presentacion.FrmUsuarios
+  parent: Gimnasio.Presentacion
+  href: Gimnasio.Presentacion.FrmUsuarios.html
+  name: FrmUsuarios
+  nameWithType: FrmUsuarios
+  fullName: Gimnasio.Presentacion.FrmUsuarios
 - uid: Gimnasio.Presentacion.FrmPrincipal.#ctor*
   commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.#ctor
   href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal__ctor_Gimnasio_Presentacion_FrmLogin_Gimnasio_Entidades_Usuarios_
@@ -20155,43 +20482,30 @@ references:
   name: EventArgs
   nameWithType: EventArgs
   fullName: System.EventArgs
-- uid: Gimnasio.Presentacion.FrmAsistencias
-  commentId: T:Gimnasio.Presentacion.FrmAsistencias
-  parent: Gimnasio.Presentacion
-  href: Gimnasio.Presentacion.FrmAsistencias.html
-  name: FrmAsistencias
-  nameWithType: FrmAsistencias
-  fullName: Gimnasio.Presentacion.FrmAsistencias
 - uid: Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario*
   commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario
   href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_MostrarFormulario_System_Windows_Forms_Form_
   name: MostrarFormulario
   nameWithType: FrmPrincipal.MostrarFormulario
   fullName: Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario
-- uid: Gimnasio.Presentacion.FrmPrincipal.btnPlanes_Click*
-  commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.btnPlanes_Click
-  href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_btnPlanes_Click_System_Object_System_EventArgs_
-  name: btnPlanes_Click
-  nameWithType: FrmPrincipal.btnPlanes_Click
-  fullName: Gimnasio.Presentacion.FrmPrincipal.btnPlanes_Click
-- uid: Gimnasio.Presentacion.FrmPrincipal.btnMiembros_Click*
-  commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.btnMiembros_Click
-  href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_btnMiembros_Click_System_Object_System_EventArgs_
-  name: btnMiembros_Click
-  nameWithType: FrmPrincipal.btnMiembros_Click
-  fullName: Gimnasio.Presentacion.FrmPrincipal.btnMiembros_Click
-- uid: Gimnasio.Presentacion.FrmPrincipal.btnMembresias_Click*
-  commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.btnMembresias_Click
-  href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_btnMembresias_Click_System_Object_System_EventArgs_
-  name: btnMembresias_Click
-  nameWithType: FrmPrincipal.btnMembresias_Click
-  fullName: Gimnasio.Presentacion.FrmPrincipal.btnMembresias_Click
-- uid: Gimnasio.Presentacion.FrmPrincipal.btnPagos_Click*
-  commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.btnPagos_Click
-  href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_btnPagos_Click_System_Object_System_EventArgs_
-  name: btnPagos_Click
-  nameWithType: FrmPrincipal.btnPagos_Click
-  fullName: Gimnasio.Presentacion.FrmPrincipal.btnPagos_Click
+- uid: Gimnasio.Presentacion.FrmPlanes.Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmPlanes.Reiniciar
+  href: Gimnasio.Presentacion.FrmPlanes.html#Gimnasio_Presentacion_FrmPlanes_Reiniciar
+  name: Reiniciar()
+  nameWithType: FrmPlanes.Reiniciar()
+  fullName: Gimnasio.Presentacion.FrmPlanes.Reiniciar()
+  spec.csharp:
+  - uid: Gimnasio.Presentacion.FrmPlanes.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmPlanes.html#Gimnasio_Presentacion_FrmPlanes_Reiniciar
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Presentacion.FrmPlanes.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmPlanes.html#Gimnasio_Presentacion_FrmPlanes_Reiniciar
+  - name: (
+  - name: )
 - uid: Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario(System.Windows.Forms.Form)
   commentId: M:Gimnasio.Presentacion.FrmPrincipal.MostrarFormulario(System.Windows.Forms.Form)
   isExternal: true
@@ -20219,42 +20533,216 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.windows.forms.form
   - name: )
+- uid: Gimnasio.Presentacion.FrmPrincipal.btnPlanes_Click*
+  commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.btnPlanes_Click
+  href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_btnPlanes_Click_System_Object_System_EventArgs_
+  name: btnPlanes_Click
+  nameWithType: FrmPrincipal.btnPlanes_Click
+  fullName: Gimnasio.Presentacion.FrmPrincipal.btnPlanes_Click
+- uid: Gimnasio.Presentacion.FrmPrincipal
+  commentId: T:Gimnasio.Presentacion.FrmPrincipal
+  parent: Gimnasio.Presentacion
+  href: Gimnasio.Presentacion.FrmPrincipal.html
+  name: FrmPrincipal
+  nameWithType: FrmPrincipal
+  fullName: Gimnasio.Presentacion.FrmPrincipal
+- uid: Gimnasio.Presentacion.FrmMiembros.Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmMiembros.Reiniciar
+  href: Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_Reiniciar
+  name: Reiniciar()
+  nameWithType: FrmMiembros.Reiniciar()
+  fullName: Gimnasio.Presentacion.FrmMiembros.Reiniciar()
+  spec.csharp:
+  - uid: Gimnasio.Presentacion.FrmMiembros.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_Reiniciar
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Presentacion.FrmMiembros.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_Reiniciar
+  - name: (
+  - name: )
+- uid: Gimnasio.Presentacion.FrmPrincipal.btnMiembros_Click*
+  commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.btnMiembros_Click
+  href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_btnMiembros_Click_System_Object_System_EventArgs_
+  name: btnMiembros_Click
+  nameWithType: FrmPrincipal.btnMiembros_Click
+  fullName: Gimnasio.Presentacion.FrmPrincipal.btnMiembros_Click
+- uid: Gimnasio.Presentacion.FrmMembresias.Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmMembresias.Reiniciar
+  href: Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_Reiniciar
+  name: Reiniciar()
+  nameWithType: FrmMembresias.Reiniciar()
+  fullName: Gimnasio.Presentacion.FrmMembresias.Reiniciar()
+  spec.csharp:
+  - uid: Gimnasio.Presentacion.FrmMembresias.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_Reiniciar
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Presentacion.FrmMembresias.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_Reiniciar
+  - name: (
+  - name: )
+- uid: Gimnasio.Presentacion.FrmPrincipal.btnMembresias_Click*
+  commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.btnMembresias_Click
+  href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_btnMembresias_Click_System_Object_System_EventArgs_
+  name: btnMembresias_Click
+  nameWithType: FrmPrincipal.btnMembresias_Click
+  fullName: Gimnasio.Presentacion.FrmPrincipal.btnMembresias_Click
+- uid: Gimnasio.Presentacion.FrmPagos.Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmPagos.Reiniciar
+  href: Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Reiniciar
+  name: Reiniciar()
+  nameWithType: FrmPagos.Reiniciar()
+  fullName: Gimnasio.Presentacion.FrmPagos.Reiniciar()
+  spec.csharp:
+  - uid: Gimnasio.Presentacion.FrmPagos.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Reiniciar
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Presentacion.FrmPagos.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Reiniciar
+  - name: (
+  - name: )
+- uid: Gimnasio.Presentacion.FrmPrincipal.btnPagos_Click*
+  commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.btnPagos_Click
+  href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_btnPagos_Click_System_Object_System_EventArgs_
+  name: btnPagos_Click
+  nameWithType: FrmPrincipal.btnPagos_Click
+  fullName: Gimnasio.Presentacion.FrmPrincipal.btnPagos_Click
+- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar
+  href: Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_Reiniciar
+  name: Reiniciar()
+  nameWithType: FrmRegistroAsistencias.Reiniciar()
+  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar()
+  spec.csharp:
+  - uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_Reiniciar
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_Reiniciar
+  - name: (
+  - name: )
 - uid: Gimnasio.Presentacion.FrmPrincipal.btnRegistroAsistencias_Click*
   commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.btnRegistroAsistencias_Click
   href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_btnRegistroAsistencias_Click_System_Object_System_EventArgs_
   name: btnRegistroAsistencias_Click
   nameWithType: FrmPrincipal.btnRegistroAsistencias_Click
   fullName: Gimnasio.Presentacion.FrmPrincipal.btnRegistroAsistencias_Click
+- uid: Gimnasio.Presentacion.FrmReclamos.Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmReclamos.Reiniciar
+  href: Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_Reiniciar
+  name: Reiniciar()
+  nameWithType: FrmReclamos.Reiniciar()
+  fullName: Gimnasio.Presentacion.FrmReclamos.Reiniciar()
+  spec.csharp:
+  - uid: Gimnasio.Presentacion.FrmReclamos.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_Reiniciar
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Presentacion.FrmReclamos.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_Reiniciar
+  - name: (
+  - name: )
 - uid: Gimnasio.Presentacion.FrmPrincipal.btnReclamos_Click*
   commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.btnReclamos_Click
   href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_btnReclamos_Click_System_Object_System_EventArgs_
   name: btnReclamos_Click
   nameWithType: FrmPrincipal.btnReclamos_Click
   fullName: Gimnasio.Presentacion.FrmPrincipal.btnReclamos_Click
+- uid: Gimnasio.Presentacion.FrmUsuarios.Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmUsuarios.Reiniciar
+  href: Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_Reiniciar
+  name: Reiniciar()
+  nameWithType: FrmUsuarios.Reiniciar()
+  fullName: Gimnasio.Presentacion.FrmUsuarios.Reiniciar()
+  spec.csharp:
+  - uid: Gimnasio.Presentacion.FrmUsuarios.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_Reiniciar
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Presentacion.FrmUsuarios.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmUsuarios.html#Gimnasio_Presentacion_FrmUsuarios_Reiniciar
+  - name: (
+  - name: )
 - uid: Gimnasio.Presentacion.FrmPrincipal.btnUsuarios_Click*
   commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.btnUsuarios_Click
   href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_btnUsuarios_Click_System_Object_System_EventArgs_
   name: btnUsuarios_Click
   nameWithType: FrmPrincipal.btnUsuarios_Click
   fullName: Gimnasio.Presentacion.FrmPrincipal.btnUsuarios_Click
-- uid: Gimnasio.Presentacion.FrmLogin.Formato
-  commentId: M:Gimnasio.Presentacion.FrmLogin.Formato
-  href: Gimnasio.Presentacion.FrmLogin.html#Gimnasio_Presentacion_FrmLogin_Formato
-  name: Formato()
-  nameWithType: FrmLogin.Formato()
-  fullName: Gimnasio.Presentacion.FrmLogin.Formato()
+- uid: Gimnasio.Presentacion.FrmMembresias.HabilitarIngresoConMiembro(System.String)
+  commentId: M:Gimnasio.Presentacion.FrmMembresias.HabilitarIngresoConMiembro(System.String)
+  isExternal: true
+  href: Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_HabilitarIngresoConMiembro_System_String_
+  name: HabilitarIngresoConMiembro(string)
+  nameWithType: FrmMembresias.HabilitarIngresoConMiembro(string)
+  fullName: Gimnasio.Presentacion.FrmMembresias.HabilitarIngresoConMiembro(string)
+  nameWithType.vb: FrmMembresias.HabilitarIngresoConMiembro(String)
+  fullName.vb: Gimnasio.Presentacion.FrmMembresias.HabilitarIngresoConMiembro(String)
+  name.vb: HabilitarIngresoConMiembro(String)
   spec.csharp:
-  - uid: Gimnasio.Presentacion.FrmLogin.Formato
-    name: Formato
-    href: Gimnasio.Presentacion.FrmLogin.html#Gimnasio_Presentacion_FrmLogin_Formato
+  - uid: Gimnasio.Presentacion.FrmMembresias.HabilitarIngresoConMiembro(System.String)
+    name: HabilitarIngresoConMiembro
+    href: Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_HabilitarIngresoConMiembro_System_String_
   - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
   spec.vb:
-  - uid: Gimnasio.Presentacion.FrmLogin.Formato
-    name: Formato
-    href: Gimnasio.Presentacion.FrmLogin.html#Gimnasio_Presentacion_FrmLogin_Formato
+  - uid: Gimnasio.Presentacion.FrmMembresias.HabilitarIngresoConMiembro(System.String)
+    name: HabilitarIngresoConMiembro
+    href: Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_HabilitarIngresoConMiembro_System_String_
   - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
+- uid: Gimnasio.Presentacion.FrmPrincipal.MiembroAMembresia*
+  commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.MiembroAMembresia
+  href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_MiembroAMembresia_System_String_
+  name: MiembroAMembresia
+  nameWithType: FrmPrincipal.MiembroAMembresia
+  fullName: Gimnasio.Presentacion.FrmPrincipal.MiembroAMembresia
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Gimnasio.Presentacion.FrmPrincipal.LiberarRecursos*
+  commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.LiberarRecursos
+  href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_LiberarRecursos
+  name: LiberarRecursos
+  nameWithType: FrmPrincipal.LiberarRecursos
+  fullName: Gimnasio.Presentacion.FrmPrincipal.LiberarRecursos
 - uid: Gimnasio.Presentacion.FrmPrincipal.miCerrarSesion_Click*
   commentId: Overload:Gimnasio.Presentacion.FrmPrincipal.miCerrarSesion_Click
   href: Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_miCerrarSesion_Click_System_Object_System_EventArgs_

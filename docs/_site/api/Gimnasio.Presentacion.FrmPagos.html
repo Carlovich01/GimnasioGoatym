@@ -150,7 +150,7 @@ que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usua
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FrmPagos(Usuarios usuario)</code></pre>
+    <pre><code class="lang-csharp hljs">internal FrmPagos(Usuarios usuario)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1300,6 +1300,43 @@ y calcula el total de ingresos sumando los valores de la columna &quot;monto&quo
 
 
 
+  <a id="Gimnasio_Presentacion_FrmPagos_Reiniciar_" data-uid="Gimnasio.Presentacion.FrmPagos.Reiniciar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmPagos_Reiniciar" data-uid="Gimnasio.Presentacion.FrmPagos.Reiniciar">
+  Reiniciar()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPagos.vb/#L392"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><ul>
+<li>Restablece los campos de búsqueda y filtros según la opción seleccionada en el ComboBox:
+<ul>
+<li>Opción 0 (por fecha): reinicia los controles de fecha al valor actual y les aplica un formato vacío y actualiza el listado completo de pagos.</li>
+<li>Opción 1 o 2 (por DNI o por nombre de plan): limpia el campo de búsqueda y actualiza el listado completo de pagos.</li>
+<li>Opción 3 (por monto): limpia los campos de monto inicial y final y actualiza el listado completo de pagos.</li>
+<li>Opciones 4 a 10 (por método de pago): actualiza el listado completo de pagos y restablece la opción seleccionada
+en el ComboBox a la opción predeterminada (0).</li>
+</ul>
+</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Reiniciar()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Gimnasio_Presentacion_FrmPagos_btnActualizar_Click_" data-uid="Gimnasio.Presentacion.FrmPagos.btnActualizar_Click*"></a>
 
   <h3 id="Gimnasio_Presentacion_FrmPagos_btnActualizar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPagos.btnActualizar_Click(System.Object,System.EventArgs)">
@@ -1433,10 +1470,11 @@ y actualiza el DataGridView con los resultados filtrados.</li>
 
   <h3 id="Gimnasio_Presentacion_FrmPagos_btnCancelarPago_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPagos.btnCancelarPago_Click(System.Object,System.EventArgs)">
   btnCancelarPago_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPagos.vb/#L420"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPagos.vb/#L433"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Cancelar&quot; durante la edición de un pago. Llama al método <a class="xref" href="Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_HabilitarListado">HabilitarListado()</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -1699,21 +1737,10 @@ También inicializa los controles de selección de fecha dtpFechaInicio y dtpFec
 
   <h3 id="Gimnasio_Presentacion_FrmPagos_pbReiniciar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmPagos.pbReiniciar_Click(System.Object,System.EventArgs)">
   pbReiniciar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPagos.vb/#L393"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmPagos.vb/#L422"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Reiniciar&quot; (pbReiniciar) en el formulario de pagos.</p>
-<ul>
-<li>Restablece los campos de búsqueda y filtros según la opción seleccionada en el ComboBox:
-<ul>
-<li>Opción 0 (por fecha): reinicia los controles de fecha al valor actual y les aplica un formato vacío y actualiza el listado completo de pagos.</li>
-<li>Opción 1 o 2 (por DNI o por nombre de plan): limpia el campo de búsqueda y actualiza el listado completo de pagos.</li>
-<li>Opción 3 (por monto): limpia los campos de monto inicial y final y actualiza el listado completo de pagos.</li>
-<li>Opciones 4 a 10 (por método de pago): actualiza el listado completo de pagos y restablece la opción seleccionada
-en el ComboBox a la opción predeterminada (0).</li>
-</ul>
-</li>
-</ul>
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Reiniciar&quot; (pbReiniciar) en el formulario de pagos. Llama al método <a class="xref" href="Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Reiniciar">Reiniciar()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

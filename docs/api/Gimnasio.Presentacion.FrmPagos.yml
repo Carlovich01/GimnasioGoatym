@@ -15,6 +15,7 @@ items:
   - Gimnasio.Presentacion.FrmPagos.InitializeComponent
   - Gimnasio.Presentacion.FrmPagos.PanelFecha
   - Gimnasio.Presentacion.FrmPagos.PanelMonto
+  - Gimnasio.Presentacion.FrmPagos.Reiniciar
   - Gimnasio.Presentacion.FrmPagos.btnActualizar
   - Gimnasio.Presentacion.FrmPagos.btnActualizar_Click(System.Object,System.EventArgs)
   - Gimnasio.Presentacion.FrmPagos.btnBuscarFecha_Click(System.Object,System.EventArgs)
@@ -1965,12 +1966,12 @@ items:
   summary: Constructor del formulario de pagos. Si es recepcionista oculta el boton de Actualizar y Eliminar.
   example: []
   syntax:
-    content: public FrmPagos(Usuarios usuario)
+    content: internal FrmPagos(Usuarios usuario)
     parameters:
     - id: usuario
       type: Gimnasio.Entidades.Usuarios
       description: Instancia de <xref href="Gimnasio.Entidades.Usuarios" data-throw-if-not-resolved="false"></xref> que representa al usuario logueado.
-    content.vb: Public Sub New(usuario As Usuarios)
+    content.vb: Friend Sub New(usuario As Usuarios)
   overload: Gimnasio.Presentacion.FrmPagos.#ctor*
   nameWithType.vb: FrmPagos.New(Usuarios)
   fullName.vb: Gimnasio.Presentacion.FrmPagos.New(Gimnasio.Entidades.Usuarios)
@@ -2542,6 +2543,40 @@ items:
   nameWithType.vb: FrmPagos.btnEliminar_Click(Object, EventArgs)
   fullName.vb: Gimnasio.Presentacion.FrmPagos.btnEliminar_Click(Object, System.EventArgs)
   name.vb: btnEliminar_Click(Object, EventArgs)
+- uid: Gimnasio.Presentacion.FrmPagos.Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmPagos.Reiniciar
+  id: Reiniciar
+  parent: Gimnasio.Presentacion.FrmPagos
+  langs:
+  - csharp
+  - vb
+  name: Reiniciar()
+  nameWithType: FrmPagos.Reiniciar()
+  fullName: Gimnasio.Presentacion.FrmPagos.Reiniciar()
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Presentacion/FrmPagos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: Reiniciar
+    path: ../Gimnasio.Presentacion/FrmPagos.vb
+    startLine: 391
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion
+  summary: >-
+    - Restablece los campos de búsqueda y filtros según la opción seleccionada en el ComboBox:
+        - Opción 0 (por fecha): reinicia los controles de fecha al valor actual y les aplica un formato vacío y actualiza el listado completo de pagos.
+        - Opción 1 o 2 (por DNI o por nombre de plan): limpia el campo de búsqueda y actualiza el listado completo de pagos.
+        - Opción 3 (por monto): limpia los campos de monto inicial y final y actualiza el listado completo de pagos.
+        - Opciones 4 a 10 (por método de pago): actualiza el listado completo de pagos y restablece la opción seleccionada 
+          en el ComboBox a la opción predeterminada (0).
+  example: []
+  syntax:
+    content: public void Reiniciar()
+    content.vb: Public Sub Reiniciar()
+  overload: Gimnasio.Presentacion.FrmPagos.Reiniciar*
 - uid: Gimnasio.Presentacion.FrmPagos.pbReiniciar_Click(System.Object,System.EventArgs)
   commentId: M:Gimnasio.Presentacion.FrmPagos.pbReiniciar_Click(System.Object,System.EventArgs)
   id: pbReiniciar_Click(System.Object,System.EventArgs)
@@ -2560,19 +2595,11 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: pbReiniciar_Click
     path: ../Gimnasio.Presentacion/FrmPagos.vb
-    startLine: 392
+    startLine: 421
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
-  summary: >-
-    Evento que se ejecuta al hacer clic en el botón "Reiniciar" (pbReiniciar) en el formulario de pagos.
-
-    - Restablece los campos de búsqueda y filtros según la opción seleccionada en el ComboBox:
-        - Opción 0 (por fecha): reinicia los controles de fecha al valor actual y les aplica un formato vacío y actualiza el listado completo de pagos.
-        - Opción 1 o 2 (por DNI o por nombre de plan): limpia el campo de búsqueda y actualiza el listado completo de pagos.
-        - Opción 3 (por monto): limpia los campos de monto inicial y final y actualiza el listado completo de pagos.
-        - Opciones 4 a 10 (por método de pago): actualiza el listado completo de pagos y restablece la opción seleccionada 
-          en el ComboBox a la opción predeterminada (0).
+  summary: Evento que se ejecuta al hacer clic en el botón "Reiniciar" (pbReiniciar) en el formulario de pagos. Llama al método <xref href="Gimnasio.Presentacion.FrmPagos.Reiniciar" data-throw-if-not-resolved="false"></xref>
   example: []
   syntax:
     content: private void pbReiniciar_Click(object sender, EventArgs e)
@@ -2604,10 +2631,12 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnCancelarPago_Click
     path: ../Gimnasio.Presentacion/FrmPagos.vb
-    startLine: 419
+    startLine: 432
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
+  summary: Evento que se ejecuta al hacer clic en el botón "Cancelar" durante la edición de un pago. Llama al método <xref href="Gimnasio.Presentacion.FrmPagos.HabilitarListado" data-throw-if-not-resolved="false"></xref>
+  example: []
   syntax:
     content: private void btnCancelarPago_Click(object sender, EventArgs e)
     parameters:
@@ -21075,12 +21104,54 @@ references:
   name: btnEliminar_Click
   nameWithType: FrmPagos.btnEliminar_Click
   fullName: Gimnasio.Presentacion.FrmPagos.btnEliminar_Click
+- uid: Gimnasio.Presentacion.FrmPagos.Reiniciar*
+  commentId: Overload:Gimnasio.Presentacion.FrmPagos.Reiniciar
+  href: Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Reiniciar
+  name: Reiniciar
+  nameWithType: FrmPagos.Reiniciar
+  fullName: Gimnasio.Presentacion.FrmPagos.Reiniciar
+- uid: Gimnasio.Presentacion.FrmPagos.Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmPagos.Reiniciar
+  href: Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Reiniciar
+  name: Reiniciar()
+  nameWithType: FrmPagos.Reiniciar()
+  fullName: Gimnasio.Presentacion.FrmPagos.Reiniciar()
+  spec.csharp:
+  - uid: Gimnasio.Presentacion.FrmPagos.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Reiniciar
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Presentacion.FrmPagos.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_Reiniciar
+  - name: (
+  - name: )
 - uid: Gimnasio.Presentacion.FrmPagos.pbReiniciar_Click*
   commentId: Overload:Gimnasio.Presentacion.FrmPagos.pbReiniciar_Click
   href: Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_pbReiniciar_Click_System_Object_System_EventArgs_
   name: pbReiniciar_Click
   nameWithType: FrmPagos.pbReiniciar_Click
   fullName: Gimnasio.Presentacion.FrmPagos.pbReiniciar_Click
+- uid: Gimnasio.Presentacion.FrmPagos.HabilitarListado
+  commentId: M:Gimnasio.Presentacion.FrmPagos.HabilitarListado
+  href: Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_HabilitarListado
+  name: HabilitarListado()
+  nameWithType: FrmPagos.HabilitarListado()
+  fullName: Gimnasio.Presentacion.FrmPagos.HabilitarListado()
+  spec.csharp:
+  - uid: Gimnasio.Presentacion.FrmPagos.HabilitarListado
+    name: HabilitarListado
+    href: Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_HabilitarListado
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Presentacion.FrmPagos.HabilitarListado
+    name: HabilitarListado
+    href: Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_HabilitarListado
+  - name: (
+  - name: )
 - uid: Gimnasio.Presentacion.FrmPagos.btnCancelarPago_Click*
   commentId: Overload:Gimnasio.Presentacion.FrmPagos.btnCancelarPago_Click
   href: Gimnasio.Presentacion.FrmPagos.html#Gimnasio_Presentacion_FrmPagos_btnCancelarPago_Click_System_Object_System_EventArgs_

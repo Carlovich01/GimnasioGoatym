@@ -135,11 +135,12 @@ Proporciona métodos CRUD y de búsqueda para la tabla miembros.</p>
 
   <h3 id="Gimnasio_Datos_DMiembros_Actualizar_Gimnasio_Entidades_Miembros_" data-uid="Gimnasio.Datos.DMiembros.Actualizar(Gimnasio.Entidades.Miembros)">
   Actualizar(Miembros)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Datos/DMiembros.vb/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Datos/DMiembros.vb/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Recibe una instancia de Miembros y ejecuta una sentencia SQL (UPDATE) que actualiza los campos de un registro de miembro existente que
-corresponde al id de la instancia.</p>
+corresponde al id de la instancia.
+Si el DNI esta duplicado, lanza una excepción.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -169,7 +170,7 @@ corresponde al id de la instancia.</p>
 
   <h3 id="Gimnasio_Datos_DMiembros_Eliminar_System_UInt32_" data-uid="Gimnasio.Datos.DMiembros.Eliminar(System.UInt32)">
   Eliminar(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Datos/DMiembros.vb/#L88"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Datos/DMiembros.vb/#L94"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Recibe el id del miembro a eliminar y ejecuta una sentencia SQL (DELETE) que elimina el registro de miembro correspondiente.
@@ -271,7 +272,7 @@ Si el DNI esta duplicado, lanza una excepción.</p>
 
   <h3 id="Gimnasio_Datos_DMiembros_ListarPorDni_System_String_" data-uid="Gimnasio.Datos.DMiembros.ListarPorDni(System.String)">
   ListarPorDni(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Datos/DMiembros.vb/#L152"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Datos/DMiembros.vb/#L158"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Recibe el Dni o parte del Dni del miembro a buscar y ejecuta una sentencia SQL (SELECT) que busca coincidencias en la base de datos.
@@ -312,7 +313,7 @@ Los resultados se ordenan por la fecha de última modificación.</p>
 
   <h3 id="Gimnasio_Datos_DMiembros_ListarPorNombre_System_String_" data-uid="Gimnasio.Datos.DMiembros.ListarPorNombre(System.String)">
   ListarPorNombre(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Datos/DMiembros.vb/#L113"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Datos/DMiembros.vb/#L119"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Recibe el nombre o parte del nombre/apellido del miembro a buscar y ejecuta una sentencia SQL (SELECT) que busca coincidencias
@@ -353,7 +354,7 @@ Los resultados se ordenan por la fecha de última modificación.</p>
 
   <h3 id="Gimnasio_Datos_DMiembros_ObtenerPorDni_System_String_" data-uid="Gimnasio.Datos.DMiembros.ObtenerPorDni(System.String)">
   ObtenerPorDni(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Datos/DMiembros.vb/#L132"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Datos/DMiembros.vb/#L138"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Recibe el Dni del miembro a buscar y ejecuta una sentencia SQL (SELECT) que busca coincidencias exactas en la base de datos.</p>

@@ -150,7 +150,7 @@ que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usua
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FrmMiembros(FrmPrincipal frmPrincipal)</code></pre>
+    <pre><code class="lang-csharp hljs">internal FrmMiembros(FrmPrincipal frmPrincipal)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1141,6 +1141,37 @@ También actualiza la etiqueta con el total de miembros.</p>
 
 
 
+  <a id="Gimnasio_Presentacion_FrmMiembros_Reiniciar_" data-uid="Gimnasio.Presentacion.FrmMiembros.Reiniciar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmMiembros_Reiniciar" data-uid="Gimnasio.Presentacion.FrmMiembros.Reiniciar">
+  Reiniciar()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMiembros.Vb/#L301"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Restablece el formulario de miembros a su estado inicial.</p>
+<ul>
+<li>Limpia el campo de búsqueda.</li>
+<li>Actualiza el DataGridView mostrando la lista completa de miembros.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Reiniciar()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Gimnasio_Presentacion_FrmMiembros_btnActualizar_Click_" data-uid="Gimnasio.Presentacion.FrmMiembros.btnActualizar_Click*"></a>
 
   <h3 id="Gimnasio_Presentacion_FrmMiembros_btnActualizar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMiembros.btnActualizar_Click(System.Object,System.EventArgs)">
@@ -1194,7 +1225,7 @@ También actualiza la etiqueta con el total de miembros.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMiembros_btnCancelar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMiembros.btnCancelar_Click(System.Object,System.EventArgs)">
   btnCancelar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMiembros.Vb/#L230"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMiembros.Vb/#L227"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Cancelar&quot;. Vuelve a la vista de listado de miembros.</p>
@@ -1228,7 +1259,7 @@ También actualiza la etiqueta con el total de miembros.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMiembros_btnEliminar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMiembros.btnEliminar_Click(System.Object,System.EventArgs)">
   btnEliminar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMiembros.Vb/#L248"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMiembros.Vb/#L245"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Eliminar&quot;.</p>
@@ -1291,7 +1322,7 @@ También actualiza la etiqueta con el total de miembros.</p>
 <ul>
 <li>Utiliza <a class="xref" href="Gimnasio.Negocio.NMiembros.html#Gimnasio_Negocio_NMiembros_Insertar_Gimnasio_Entidades_Miembros_">Insertar(Miembros)</a> para agregar el miembro y muestra un mensaje de éxito.</li>
 <li>Ofrece la opción de agregar una membresía al nuevo miembro. Si el usuario acepta, abre el formulario de membresías con
-<a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_MostrarFormulario_System_Windows_Forms_Form_">MostrarFormulario(Form)</a> y llama con el DNI a <a class="xref" href="Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_HabilitarIngresoConMiembro_System_String_">HabilitarIngresoConMiembro(string)</a>.</li>
+<a class="xref" href="Gimnasio.Presentacion.FrmPrincipal.html#Gimnasio_Presentacion_FrmPrincipal_MiembroAMembresia_System_String_">MiembroAMembresia(string)</a> pasando el DNI.</li>
 </ul>
 </li>
 <li>Si esNuevo esFalse:
@@ -1372,7 +1403,7 @@ También actualiza la etiqueta con el total de miembros.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMiembros_cb_SelectedIndexChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMiembros.cb_SelectedIndexChanged(System.Object,System.EventArgs)">
   cb_SelectedIndexChanged(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMiembros.Vb/#L290"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMiembros.Vb/#L287"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Al cambiar de opción del ComboBox limpia el campo de busqueda y actualiza al listado completo de miembros</p>
@@ -1445,10 +1476,10 @@ También actualiza la etiqueta con el total de miembros.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMiembros_pbReiniciar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMiembros.pbReiniciar_Click(System.Object,System.EventArgs)">
   pbReiniciar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMiembros.Vb/#L302"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMiembros.Vb/#L313"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Reiniciar&quot;. Limpia el campo de búsqueda y actualiza al listado completo de miembros.</p>
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Reiniciar&quot;. Llama al método <a class="xref" href="Gimnasio.Presentacion.FrmMiembros.html#Gimnasio_Presentacion_FrmMiembros_Reiniciar">Reiniciar()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1479,7 +1510,7 @@ También actualiza la etiqueta con el total de miembros.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMiembros_tbBuscar_TextChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMiembros.tbBuscar_TextChanged(System.Object,System.EventArgs)">
   tbBuscar_TextChanged(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMiembros.Vb/#L275"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMiembros.Vb/#L272"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta cada vez que cambia el texto en el campo de búsqueda (<code>tbBuscar</code>).</p>

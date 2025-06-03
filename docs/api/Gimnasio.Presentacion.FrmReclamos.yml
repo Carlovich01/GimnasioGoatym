@@ -13,6 +13,7 @@ items:
   - Gimnasio.Presentacion.FrmReclamos.HabilitarListado
   - Gimnasio.Presentacion.FrmReclamos.HabilitarRespuesta
   - Gimnasio.Presentacion.FrmReclamos.InitializeComponent
+  - Gimnasio.Presentacion.FrmReclamos.Reiniciar
   - Gimnasio.Presentacion.FrmReclamos.TbRespuesta
   - Gimnasio.Presentacion.FrmReclamos.btnActualizar
   - Gimnasio.Presentacion.FrmReclamos.btnActualizar_Click(System.Object,System.EventArgs)
@@ -46,6 +47,8 @@ items:
   - Gimnasio.Presentacion.FrmReclamos.panelDatosIngreso
   - Gimnasio.Presentacion.FrmReclamos.panelListado
   - Gimnasio.Presentacion.FrmReclamos.panelRespuestaIngreso
+  - Gimnasio.Presentacion.FrmReclamos.pbReiniciar
+  - Gimnasio.Presentacion.FrmReclamos.pbReiniciar_Click(System.Object,System.EventArgs)
   - Gimnasio.Presentacion.FrmReclamos.tbCancelarRespuesta
   - Gimnasio.Presentacion.FrmReclamos.tbCancelarRespuesta_Click(System.Object,System.EventArgs)
   - Gimnasio.Presentacion.FrmReclamos.tbDNI
@@ -944,7 +947,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: panelListado
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 425
+    startLine: 441
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -973,7 +976,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: panelDatosIngreso
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 426
+    startLine: 442
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1002,7 +1005,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblBuscar
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 427
+    startLine: 443
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1031,7 +1034,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnEliminar
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 428
+    startLine: 444
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1060,7 +1063,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: cbOpcionBuscar
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 429
+    startLine: 445
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1089,7 +1092,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblTotal
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 430
+    startLine: 446
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1118,7 +1121,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnActualizar
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 431
+    startLine: 447
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1147,7 +1150,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnCambiarEstado
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 432
+    startLine: 448
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1176,7 +1179,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: dgvListado
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 433
+    startLine: 449
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1205,7 +1208,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnInsertar
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 434
+    startLine: 450
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1234,7 +1237,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnResponder
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 435
+    startLine: 451
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1263,7 +1266,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblDNI
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 436
+    startLine: 452
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1292,7 +1295,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbDNI
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 437
+    startLine: 453
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1321,7 +1324,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: cbTipo
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 438
+    startLine: 454
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1350,7 +1353,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnCancelar
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 439
+    startLine: 455
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1379,7 +1382,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnGuardar
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 440
+    startLine: 456
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1408,7 +1411,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbDescripcion
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 441
+    startLine: 457
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1437,7 +1440,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblDescripcion
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 442
+    startLine: 458
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1466,7 +1469,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblTipo
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 443
+    startLine: 459
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1495,7 +1498,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblDatosIngreso
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 444
+    startLine: 460
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1524,7 +1527,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: panelRespuestaIngreso
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 445
+    startLine: 461
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1553,7 +1556,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: lblResponder
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 446
+    startLine: 462
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1582,7 +1585,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbCancelarRespuesta
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 447
+    startLine: 463
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1611,7 +1614,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbGuardarRespuesta
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 448
+    startLine: 464
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1640,7 +1643,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: TbRespuesta
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 449
+    startLine: 465
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1669,7 +1672,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbID
     path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
-    startLine: 450
+    startLine: 466
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1680,6 +1683,35 @@ items:
       type: System.Windows.Forms.TextBox
     content.vb: Friend Overridable Property tbID As TextBox
   overload: Gimnasio.Presentacion.FrmReclamos.tbID*
+- uid: Gimnasio.Presentacion.FrmReclamos.pbReiniciar
+  commentId: P:Gimnasio.Presentacion.FrmReclamos.pbReiniciar
+  id: pbReiniciar
+  parent: Gimnasio.Presentacion.FrmReclamos
+  langs:
+  - csharp
+  - vb
+  name: pbReiniciar
+  nameWithType: FrmReclamos.pbReiniciar
+  fullName: Gimnasio.Presentacion.FrmReclamos.pbReiniciar
+  type: Property
+  source:
+    remote:
+      path: Gimnasio.Presentacion/FrmReclamos.Designer.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: pbReiniciar
+    path: ../Gimnasio.Presentacion/FrmReclamos.Designer.vb
+    startLine: 467
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion
+  syntax:
+    content: internal virtual PictureBox pbReiniciar { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Forms.PictureBox
+    content.vb: Friend Overridable Property pbReiniciar As PictureBox
+  overload: Gimnasio.Presentacion.FrmReclamos.pbReiniciar*
 - uid: Gimnasio.Presentacion.FrmReclamos.nReclamos
   commentId: F:Gimnasio.Presentacion.FrmReclamos.nReclamos
   id: nReclamos
@@ -1766,12 +1798,12 @@ items:
     Si el rol del usuario es 2 (recepcionista), oculta los botones de eliminar, cambiar estado y responder.
   example: []
   syntax:
-    content: public FrmReclamos(Usuarios usuario)
+    content: internal FrmReclamos(Usuarios usuario)
     parameters:
     - id: usuario
       type: Gimnasio.Entidades.Usuarios
       description: Instancia de <xref href="Gimnasio.Entidades.Usuarios" data-throw-if-not-resolved="false"></xref> que representa al usuario logueado.
-    content.vb: Public Sub New(usuario As Usuarios)
+    content.vb: Friend Sub New(usuario As Usuarios)
   overload: Gimnasio.Presentacion.FrmReclamos.#ctor*
   nameWithType.vb: FrmReclamos.New(Usuarios)
   fullName.vb: Gimnasio.Presentacion.FrmReclamos.New(Gimnasio.Entidades.Usuarios)
@@ -2377,7 +2409,7 @@ items:
 
     - Si el estado es "resuelto", utiliza <xref href="Gimnasio.Negocio.NReclamos.ActualizarElEstadoAPendiente(System.UInt32)" data-throw-if-not-resolved="false"></xref> para cambiarlo a "pendiente" y muestra un mensaje de confirmación.
 
-    - Actualiza el listado de reclamos en el DataGridView mediante <xref href="Gimnasio.Presentacion.FrmReclamos.ActualizarDgv" data-throw-if-not-resolved="false"></xref>.
+    - Actualiza el listado con todos los reclamos mediante <xref href="Gimnasio.Presentacion.FrmReclamos.Reiniciar" data-throw-if-not-resolved="false"></xref>.
 
     - Si no hay selección, lanza una excepción.
   example: []
@@ -2429,6 +2461,73 @@ items:
   nameWithType.vb: FrmReclamos.tbCancelarRespuesta_Click(Object, EventArgs)
   fullName.vb: Gimnasio.Presentacion.FrmReclamos.tbCancelarRespuesta_Click(Object, System.EventArgs)
   name.vb: tbCancelarRespuesta_Click(Object, EventArgs)
+- uid: Gimnasio.Presentacion.FrmReclamos.Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmReclamos.Reiniciar
+  id: Reiniciar
+  parent: Gimnasio.Presentacion.FrmReclamos
+  langs:
+  - csharp
+  - vb
+  name: Reiniciar()
+  nameWithType: FrmReclamos.Reiniciar()
+  fullName: Gimnasio.Presentacion.FrmReclamos.Reiniciar()
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Presentacion/FrmReclamos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: Reiniciar
+    path: ../Gimnasio.Presentacion/FrmReclamos.vb
+    startLine: 396
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion
+  summary: >-
+    Restablece el formulario de reclamos a su estado inicial.
+
+    - Selecciona la primera opción del ComboBox de búsqueda, mostrando todos los reclamos en el listado.
+  example: []
+  syntax:
+    content: public void Reiniciar()
+    content.vb: Public Sub Reiniciar()
+  overload: Gimnasio.Presentacion.FrmReclamos.Reiniciar*
+- uid: Gimnasio.Presentacion.FrmReclamos.pbReiniciar_Click(System.Object,System.EventArgs)
+  commentId: M:Gimnasio.Presentacion.FrmReclamos.pbReiniciar_Click(System.Object,System.EventArgs)
+  id: pbReiniciar_Click(System.Object,System.EventArgs)
+  parent: Gimnasio.Presentacion.FrmReclamos
+  langs:
+  - csharp
+  - vb
+  name: pbReiniciar_Click(object, EventArgs)
+  nameWithType: FrmReclamos.pbReiniciar_Click(object, EventArgs)
+  fullName: Gimnasio.Presentacion.FrmReclamos.pbReiniciar_Click(object, System.EventArgs)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Presentacion/FrmReclamos.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: pbReiniciar_Click
+    path: ../Gimnasio.Presentacion/FrmReclamos.vb
+    startLine: 408
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion
+  summary: Evento que se ejecuta al hacer clic en el boton "Reiniciar". Llama a <xref href="Gimnasio.Presentacion.FrmReclamos.Reiniciar" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: private void pbReiniciar_Click(object sender, EventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: System.EventArgs
+    content.vb: Private Sub pbReiniciar_Click(sender As Object, e As EventArgs)
+  overload: Gimnasio.Presentacion.FrmReclamos.pbReiniciar_Click*
+  nameWithType.vb: FrmReclamos.pbReiniciar_Click(Object, EventArgs)
+  fullName.vb: Gimnasio.Presentacion.FrmReclamos.pbReiniciar_Click(Object, System.EventArgs)
+  name.vb: pbReiniciar_Click(Object, EventArgs)
 references:
 - uid: Gimnasio.Presentacion.FrmReclamos.nReclamos
   commentId: F:Gimnasio.Presentacion.FrmReclamos.nReclamos
@@ -20414,6 +20513,20 @@ references:
   name: tbID
   nameWithType: FrmReclamos.tbID
   fullName: Gimnasio.Presentacion.FrmReclamos.tbID
+- uid: Gimnasio.Presentacion.FrmReclamos.pbReiniciar*
+  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.pbReiniciar
+  href: Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_pbReiniciar
+  name: pbReiniciar
+  nameWithType: FrmReclamos.pbReiniciar
+  fullName: Gimnasio.Presentacion.FrmReclamos.pbReiniciar
+- uid: System.Windows.Forms.PictureBox
+  commentId: T:System.Windows.Forms.PictureBox
+  parent: System.Windows.Forms
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.windows.forms.picturebox
+  name: PictureBox
+  nameWithType: PictureBox
+  fullName: System.Windows.Forms.PictureBox
 - uid: Gimnasio.Negocio.NReclamos
   commentId: T:Gimnasio.Negocio.NReclamos
   parent: Gimnasio.Negocio
@@ -20869,6 +20982,24 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.uint32
   - name: )
+- uid: Gimnasio.Presentacion.FrmReclamos.Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmReclamos.Reiniciar
+  href: Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_Reiniciar
+  name: Reiniciar()
+  nameWithType: FrmReclamos.Reiniciar()
+  fullName: Gimnasio.Presentacion.FrmReclamos.Reiniciar()
+  spec.csharp:
+  - uid: Gimnasio.Presentacion.FrmReclamos.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_Reiniciar
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Presentacion.FrmReclamos.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_Reiniciar
+  - name: (
+  - name: )
 - uid: Gimnasio.Presentacion.FrmReclamos.btnCambiarEstado_Click*
   commentId: Overload:Gimnasio.Presentacion.FrmReclamos.btnCambiarEstado_Click
   href: Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_btnCambiarEstado_Click_System_Object_System_EventArgs_
@@ -20881,3 +21012,15 @@ references:
   name: tbCancelarRespuesta_Click
   nameWithType: FrmReclamos.tbCancelarRespuesta_Click
   fullName: Gimnasio.Presentacion.FrmReclamos.tbCancelarRespuesta_Click
+- uid: Gimnasio.Presentacion.FrmReclamos.Reiniciar*
+  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.Reiniciar
+  href: Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_Reiniciar
+  name: Reiniciar
+  nameWithType: FrmReclamos.Reiniciar
+  fullName: Gimnasio.Presentacion.FrmReclamos.Reiniciar
+- uid: Gimnasio.Presentacion.FrmReclamos.pbReiniciar_Click*
+  commentId: Overload:Gimnasio.Presentacion.FrmReclamos.pbReiniciar_Click
+  href: Gimnasio.Presentacion.FrmReclamos.html#Gimnasio_Presentacion_FrmReclamos_pbReiniciar_Click_System_Object_System_EventArgs_
+  name: pbReiniciar_Click
+  nameWithType: FrmReclamos.pbReiniciar_Click
+  fullName: Gimnasio.Presentacion.FrmReclamos.pbReiniciar_Click

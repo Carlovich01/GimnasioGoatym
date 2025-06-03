@@ -10,10 +10,10 @@ items:
   - Gimnasio.Presentacion.FrmRegistroAsistencias.ActualizarDgv(System.Data.DataTable)
   - Gimnasio.Presentacion.FrmRegistroAsistencias.BtnBuscarFecha
   - Gimnasio.Presentacion.FrmRegistroAsistencias.Dispose(System.Boolean)
-  - Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia
   - Gimnasio.Presentacion.FrmRegistroAsistencias.InitializeComponent
   - Gimnasio.Presentacion.FrmRegistroAsistencias.PanelFecha
-  - Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia(Gimnasio.Presentacion.FrmAsistencias)
+  - Gimnasio.Presentacion.FrmRegistroAsistencias.RegistroAsis_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)
+  - Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar
   - Gimnasio.Presentacion.FrmRegistroAsistencias.btnBuscar
   - Gimnasio.Presentacion.FrmRegistroAsistencias.btnBuscar_Click(System.Object,System.EventArgs)
   - Gimnasio.Presentacion.FrmRegistroAsistencias.btnEliminar
@@ -1376,69 +1376,6 @@ items:
     return:
       type: Gimnasio.Presentacion.FrmAsistencias
     content.vb: Private frmAsistencia As FrmAsistencias
-- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia
-  commentId: M:Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia
-  id: GetFrmAsistencia
-  parent: Gimnasio.Presentacion.FrmRegistroAsistencias
-  langs:
-  - csharp
-  - vb
-  name: GetFrmAsistencia()
-  nameWithType: FrmRegistroAsistencias.GetFrmAsistencia()
-  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia()
-  type: Method
-  source:
-    remote:
-      path: Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-      branch: main
-      repo: https://github.com/Carlovich01/GimnasioGoatym
-    id: GetFrmAsistencia
-    path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 32
-  assemblies:
-  - Gimnasio.Presentacion
-  namespace: Gimnasio.Presentacion
-  summary: Devuelve la instancia actual del formulario <xref href="Gimnasio.Presentacion.FrmAsistencias" data-throw-if-not-resolved="false"></xref> asociada a este formulario.
-  example: []
-  syntax:
-    content: public FrmAsistencias GetFrmAsistencia()
-    return:
-      type: Gimnasio.Presentacion.FrmAsistencias
-      description: Instancia de <xref href="Gimnasio.Presentacion.FrmAsistencias" data-throw-if-not-resolved="false"></xref> o Nothing si no existe.
-    content.vb: Public Function GetFrmAsistencia() As FrmAsistencias
-  overload: Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia*
-- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia(Gimnasio.Presentacion.FrmAsistencias)
-  commentId: M:Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia(Gimnasio.Presentacion.FrmAsistencias)
-  id: SetFrmAsistencia(Gimnasio.Presentacion.FrmAsistencias)
-  parent: Gimnasio.Presentacion.FrmRegistroAsistencias
-  langs:
-  - csharp
-  - vb
-  name: SetFrmAsistencia(FrmAsistencias)
-  nameWithType: FrmRegistroAsistencias.SetFrmAsistencia(FrmAsistencias)
-  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia(Gimnasio.Presentacion.FrmAsistencias)
-  type: Method
-  source:
-    remote:
-      path: Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-      branch: main
-      repo: https://github.com/Carlovich01/GimnasioGoatym
-    id: SetFrmAsistencia
-    path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 40
-  assemblies:
-  - Gimnasio.Presentacion
-  namespace: Gimnasio.Presentacion
-  summary: Asigna una instancia del formulario <xref href="Gimnasio.Presentacion.FrmAsistencias" data-throw-if-not-resolved="false"></xref> a este formulario de registro de asistencias.
-  example: []
-  syntax:
-    content: public void SetFrmAsistencia(FrmAsistencias frm)
-    parameters:
-    - id: frm
-      type: Gimnasio.Presentacion.FrmAsistencias
-      description: Instancia de <xref href="Gimnasio.Presentacion.FrmAsistencias" data-throw-if-not-resolved="false"></xref> a asociar.
-    content.vb: Public Sub SetFrmAsistencia(frm As FrmAsistencias)
-  overload: Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia*
 - uid: Gimnasio.Presentacion.FrmRegistroAsistencias.#ctor(Gimnasio.Entidades.Usuarios)
   commentId: M:Gimnasio.Presentacion.FrmRegistroAsistencias.#ctor(Gimnasio.Entidades.Usuarios)
   id: '#ctor(Gimnasio.Entidades.Usuarios)'
@@ -1457,19 +1394,19 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: .ctor
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 48
+    startLine: 32
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
   summary: Constructor del formulario de asistencias. Si el usuario es recepcionista, oculta el boton de eliminar.
   example: []
   syntax:
-    content: public FrmRegistroAsistencias(Usuarios usuario)
+    content: internal FrmRegistroAsistencias(Usuarios usuario)
     parameters:
     - id: usuario
       type: Gimnasio.Entidades.Usuarios
       description: Instancia de <xref href="Gimnasio.Entidades.Usuarios" data-throw-if-not-resolved="false"></xref> que representa al usuario logueado.
-    content.vb: Public Sub New(usuario As Usuarios)
+    content.vb: Friend Sub New(usuario As Usuarios)
   overload: Gimnasio.Presentacion.FrmRegistroAsistencias.#ctor*
   nameWithType.vb: FrmRegistroAsistencias.New(Usuarios)
   fullName.vb: Gimnasio.Presentacion.FrmRegistroAsistencias.New(Gimnasio.Entidades.Usuarios)
@@ -1492,7 +1429,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: frmRegistroAsistencias_Load
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 64
+    startLine: 48
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1537,7 +1474,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ActualizarDgv
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 94
+    startLine: 78
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1570,7 +1507,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ActualizarDgv
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 109
+    startLine: 93
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1606,7 +1543,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnInsertar_Click
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 126
+    startLine: 110
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1649,7 +1586,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: cb_SelectedIndexChanged
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 149
+    startLine: 133
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1693,7 +1630,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbBuscar_TextChanged
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 173
+    startLine: 157
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1736,7 +1673,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: dtpFechaInicio_ValueChanged
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 186
+    startLine: 170
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1772,7 +1709,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: dtpFechaFin_ValueChanged
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 197
+    startLine: 181
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1808,7 +1745,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnBuscar_Click
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 212
+    startLine: 196
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1853,7 +1790,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnEliminar_Click
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 233
+    startLine: 217
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -1882,6 +1819,41 @@ items:
   nameWithType.vb: FrmRegistroAsistencias.btnEliminar_Click(Object, EventArgs)
   fullName.vb: Gimnasio.Presentacion.FrmRegistroAsistencias.btnEliminar_Click(Object, System.EventArgs)
   name.vb: btnEliminar_Click(Object, EventArgs)
+- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar
+  id: Reiniciar
+  parent: Gimnasio.Presentacion.FrmRegistroAsistencias
+  langs:
+  - csharp
+  - vb
+  name: Reiniciar()
+  nameWithType: FrmRegistroAsistencias.Reiniciar()
+  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar()
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Presentacion/FrmRegistroAsistencias.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: Reiniciar
+    path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
+    startLine: 242
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion
+  summary: >-
+    - Si la opción seleccionada en el ComboBox es búsqueda por DNI (índice 0), 
+
+    limpia el campo de búsqueda y actualiza el DataGridView mostrando todas las asistencias.
+
+    - Si la opción seleccionada es búsqueda por fecha (índice 1), restablece los DateTimePicker de fecha de inicio y fin a la fecha actual, 
+
+    limpia sus formatos y actualiza el DataGridView mostrando todas las asistencias.
+  example: []
+  syntax:
+    content: public void Reiniciar()
+    content.vb: Public Sub Reiniciar()
+  overload: Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar*
 - uid: Gimnasio.Presentacion.FrmRegistroAsistencias.pbReiniciar_Click(System.Object,System.EventArgs)
   commentId: M:Gimnasio.Presentacion.FrmRegistroAsistencias.pbReiniciar_Click(System.Object,System.EventArgs)
   id: pbReiniciar_Click(System.Object,System.EventArgs)
@@ -1900,20 +1872,11 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: pbReiniciar_Click
     path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
-    startLine: 259
+    startLine: 265
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
-  summary: >-
-    Evento que se ejecuta al hacer clic en el botón "Reiniciar".
-
-    - Si la opción seleccionada en el ComboBox es búsqueda por DNI (índice 0), 
-
-    limpia el campo de búsqueda y actualiza el DataGridView mostrando todas las asistencias.
-
-    - Si la opción seleccionada es búsqueda por fecha (índice 1), restablece los DateTimePicker de fecha de inicio y fin a la fecha actual, 
-
-    limpia sus formatos y actualiza el DataGridView mostrando todas las asistencias.
+  summary: Evento que se ejecuta al hacer clic en el botón "Reiniciar". LLama a <xref href="Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: private void pbReiniciar_Click(object sender, EventArgs e)
@@ -1927,6 +1890,47 @@ items:
   nameWithType.vb: FrmRegistroAsistencias.pbReiniciar_Click(Object, EventArgs)
   fullName.vb: Gimnasio.Presentacion.FrmRegistroAsistencias.pbReiniciar_Click(Object, System.EventArgs)
   name.vb: pbReiniciar_Click(Object, EventArgs)
+- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.RegistroAsis_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)
+  commentId: M:Gimnasio.Presentacion.FrmRegistroAsistencias.RegistroAsis_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)
+  id: RegistroAsis_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)
+  parent: Gimnasio.Presentacion.FrmRegistroAsistencias
+  langs:
+  - csharp
+  - vb
+  name: RegistroAsis_FormClosed(object, FormClosedEventArgs)
+  nameWithType: FrmRegistroAsistencias.RegistroAsis_FormClosed(object, FormClosedEventArgs)
+  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.RegistroAsis_FormClosed(object, System.Windows.Forms.FormClosedEventArgs)
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Presentacion/FrmRegistroAsistencias.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: RegistroAsis_FormClosed
+    path: ../Gimnasio.Presentacion/FrmRegistroAsistencias.vb
+    startLine: 278
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion
+  summary: >-
+    Evento que se ejecuta al cerrar el formulario de registro de asistencias.
+
+    - Verifica si existe una instancia activa y no liberada del formulario <xref href="Gimnasio.Presentacion.FrmAsistencias" data-throw-if-not-resolved="false"></xref> asociada a este formulario.
+
+    - Si la instancia existe y no ha sido liberada, la cierra y libera sus recursos llamando a Close() y Dispose().
+  example: []
+  syntax:
+    content: private void RegistroAsis_FormClosed(object sender, FormClosedEventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: System.Windows.Forms.FormClosedEventArgs
+    content.vb: Private Sub RegistroAsis_FormClosed(sender As Object, e As FormClosedEventArgs)
+  overload: Gimnasio.Presentacion.FrmRegistroAsistencias.RegistroAsis_FormClosed*
+  nameWithType.vb: FrmRegistroAsistencias.RegistroAsis_FormClosed(Object, FormClosedEventArgs)
+  fullName.vb: Gimnasio.Presentacion.FrmRegistroAsistencias.RegistroAsis_FormClosed(Object, System.Windows.Forms.FormClosedEventArgs)
+  name.vb: RegistroAsis_FormClosed(Object, FormClosedEventArgs)
 references:
 - uid: Gimnasio.Negocio.NAsistencia
   commentId: T:Gimnasio.Negocio.NAsistencia
@@ -19857,18 +19861,6 @@ references:
   name: FrmAsistencias
   nameWithType: FrmAsistencias
   fullName: Gimnasio.Presentacion.FrmAsistencias
-- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia*
-  commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia
-  href: Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_GetFrmAsistencia
-  name: GetFrmAsistencia
-  nameWithType: FrmRegistroAsistencias.GetFrmAsistencia
-  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.GetFrmAsistencia
-- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia*
-  commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia
-  href: Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_SetFrmAsistencia_Gimnasio_Presentacion_FrmAsistencias_
-  name: SetFrmAsistencia
-  nameWithType: FrmRegistroAsistencias.SetFrmAsistencia
-  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.SetFrmAsistencia
 - uid: Gimnasio.Entidades.Usuarios
   commentId: T:Gimnasio.Entidades.Usuarios
   parent: Gimnasio.Entidades
@@ -20136,9 +20128,47 @@ references:
   name: btnEliminar_Click
   nameWithType: FrmRegistroAsistencias.btnEliminar_Click
   fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.btnEliminar_Click
+- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar*
+  commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar
+  href: Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_Reiniciar
+  name: Reiniciar
+  nameWithType: FrmRegistroAsistencias.Reiniciar
+  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar
+- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar
+  href: Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_Reiniciar
+  name: Reiniciar()
+  nameWithType: FrmRegistroAsistencias.Reiniciar()
+  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar()
+  spec.csharp:
+  - uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_Reiniciar
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Presentacion.FrmRegistroAsistencias.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_Reiniciar
+  - name: (
+  - name: )
 - uid: Gimnasio.Presentacion.FrmRegistroAsistencias.pbReiniciar_Click*
   commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.pbReiniciar_Click
   href: Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_pbReiniciar_Click_System_Object_System_EventArgs_
   name: pbReiniciar_Click
   nameWithType: FrmRegistroAsistencias.pbReiniciar_Click
   fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.pbReiniciar_Click
+- uid: Gimnasio.Presentacion.FrmRegistroAsistencias.RegistroAsis_FormClosed*
+  commentId: Overload:Gimnasio.Presentacion.FrmRegistroAsistencias.RegistroAsis_FormClosed
+  href: Gimnasio.Presentacion.FrmRegistroAsistencias.html#Gimnasio_Presentacion_FrmRegistroAsistencias_RegistroAsis_FormClosed_System_Object_System_Windows_Forms_FormClosedEventArgs_
+  name: RegistroAsis_FormClosed
+  nameWithType: FrmRegistroAsistencias.RegistroAsis_FormClosed
+  fullName: Gimnasio.Presentacion.FrmRegistroAsistencias.RegistroAsis_FormClosed
+- uid: System.Windows.Forms.FormClosedEventArgs
+  commentId: T:System.Windows.Forms.FormClosedEventArgs
+  parent: System.Windows.Forms
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.windows.forms.formclosedeventargs
+  name: FormClosedEventArgs
+  nameWithType: FormClosedEventArgs
+  fullName: System.Windows.Forms.FormClosedEventArgs

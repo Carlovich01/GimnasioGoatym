@@ -150,7 +150,7 @@ que permite guardar el error en un log.txt y a su vez mostrar un mensaje al usua
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FrmMembresias(Usuarios usuario)</code></pre>
+    <pre><code class="lang-csharp hljs">internal FrmMembresias(Usuarios usuario)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1392,7 +1392,7 @@ También actualiza la etiqueta con el total de membresias.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_BtnPagar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.BtnPagar_Click(System.Object,System.EventArgs)">
   BtnPagar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L348"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L349"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Pagar&quot;.</p>
@@ -1552,7 +1552,7 @@ También actualiza la etiqueta con el total de membresias.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_HabilitarIngresoPago" data-uid="Gimnasio.Presentacion.FrmMembresias.HabilitarIngresoPago">
   HabilitarIngresoPago()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L321"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L322"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><ul>
@@ -1633,6 +1633,37 @@ También actualiza la etiqueta con el total de membresias.</p>
 
 
 
+  <a id="Gimnasio_Presentacion_FrmMembresias_Reiniciar_" data-uid="Gimnasio.Presentacion.FrmMembresias.Reiniciar*"></a>
+
+  <h3 id="Gimnasio_Presentacion_FrmMembresias_Reiniciar" data-uid="Gimnasio.Presentacion.FrmMembresias.Reiniciar">
+  Reiniciar()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L540"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Restablece el estado del formulario de membresías según la opción de búsqueda seleccionada.</p>
+<ul>
+<li>Si la opción de búsqueda es por DNI o por nombre de plan (índices 0 o 1), limpia el campo de búsqueda y muestra el listado completo de membresías.</li>
+<li>Si la opción es por estado (Activa/Inactiva, índices 2 o 3), restablece la opción de búsqueda a la predeterminada (índice 0) y muestra el listado completo.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Reiniciar()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Gimnasio_Presentacion_FrmMembresias_btnActualizar_Click_" data-uid="Gimnasio.Presentacion.FrmMembresias.btnActualizar_Click*"></a>
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_btnActualizar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.btnActualizar_Click(System.Object,System.EventArgs)">
@@ -1692,7 +1723,7 @@ También actualiza la etiqueta con el total de membresias.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_btnCancelarPago_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.btnCancelarPago_Click(System.Object,System.EventArgs)">
   btnCancelarPago_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L404"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L405"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Cancelar Pago&quot;. Vuelve a la vista de listado de membresías.</p>
@@ -1726,7 +1757,7 @@ También actualiza la etiqueta con el total de membresias.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_btnCancelar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.btnCancelar_Click(System.Object,System.EventArgs)">
   btnCancelar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L306"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L307"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Cancelar&quot;. Vuelve a la vista de listado de membresías.</p>
@@ -1760,7 +1791,7 @@ También actualiza la etiqueta con el total de membresias.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_btnEliminar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.btnEliminar_Click(System.Object,System.EventArgs)">
   btnEliminar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L425"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L426"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Eliminar&quot;.</p>
@@ -1816,7 +1847,7 @@ También actualiza la etiqueta con el total de membresias.</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_btnGuardarPago_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.btnGuardarPago_Click(System.Object,System.EventArgs)">
   btnGuardarPago_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L380"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L381"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón &quot;Guardar Pago&quot;.</p>
@@ -1953,7 +1984,7 @@ precarga el monto y método de pago, y detiene la ejecución para esperar el reg
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_cb_SelectedIndexChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.cb_SelectedIndexChanged(System.Object,System.EventArgs)">
   cb_SelectedIndexChanged(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L476"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L477"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al cambiar la opción seleccionada en el ComboBox de búsqueda de membresías.</p>
@@ -2042,7 +2073,7 @@ configura las columnas del DataGridView y establece una opción de busqueda del 
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_pbReiniciarMiembro_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.pbReiniciarMiembro_Click(System.Object,System.EventArgs)">
   pbReiniciarMiembro_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L560"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L571"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón de reinicio pbReiniciarMiembro.
@@ -2078,7 +2109,7 @@ utilizando el método <a class="xref" href="Gimnasio.Negocio.NMiembros.html#Gimn
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_pbReiniciarPlan_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.pbReiniciarPlan_Click(System.Object,System.EventArgs)">
   pbReiniciarPlan_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L575"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L586"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón de reinicio pbReiniciarPlan.
@@ -2114,15 +2145,10 @@ utilizando el método <a class="xref" href="Gimnasio.Negocio.NPlanes.html#Gimnas
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_pbReiniciar_Click_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.pbReiniciar_Click(System.Object,System.EventArgs)">
   pbReiniciar_Click(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L540"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L558"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón de reinicio en la gestión de membresías.
-Según la opción seleccionada en el ComboBox cbOpcionBuscar:</p>
-<ul>
-<li>Si la opción es &quot;DNI&quot; o &quot;Nombre de Plan&quot; (índices 0 o 1), limpia el campo de búsqueda y actualiza el listado de membresías mostrando todos los registros.</li>
-<li>Si la opción es &quot;Activa&quot; o &quot;Inactiva&quot; (índices 2 o 3), restablece la opción del ComboBox a &quot;DNI&quot; (índice 0) y actualiza el listado mostrando todos los registros.</li>
-</ul>
+  <div class="markdown level1 summary"><p>Evento que se ejecuta al hacer clic en el botón de reinicio general del formulario de membresía. Llama al método <a class="xref" href="Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_Reiniciar">Reiniciar()</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2153,7 +2179,7 @@ Según la opción seleccionada en el ComboBox cbOpcionBuscar:</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_tbBuscarMembresias_TextChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.tbBuscarMembresias_TextChanged(System.Object,System.EventArgs)">
   tbBuscarMembresias_TextChanged(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L452"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L453"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta cada vez que cambia el texto en el campo de búsqueda de membresías.</p>
@@ -2196,7 +2222,7 @@ Según la opción seleccionada en el ComboBox cbOpcionBuscar:</p>
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_tbBuscarMiembro_TextChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.tbBuscarMiembro_TextChanged(System.Object,System.EventArgs)">
   tbBuscarMiembro_TextChanged(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L502"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L503"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta cada vez que cambia el texto en el campo de búsqueda de miembros tbBuscarMiembro en el panel de ingreso de membresías.
@@ -2236,7 +2262,7 @@ El resultado de la búsqueda se muestra en el DataGridView dgvMiembro.</li>
 
   <h3 id="Gimnasio_Presentacion_FrmMembresias_tbBuscarPlan_TextChanged_System_Object_System_EventArgs_" data-uid="Gimnasio.Presentacion.FrmMembresias.tbBuscarPlan_TextChanged(System.Object,System.EventArgs)">
   tbBuscarPlan_TextChanged(object, EventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L522"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Carlovich01/GimnasioGoatym/blob/main/Gimnasio.Presentacion/FrmMembresias.vb/#L523"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evento que se ejecuta cada vez que cambia el texto en el campo de búsqueda de planes.</p>

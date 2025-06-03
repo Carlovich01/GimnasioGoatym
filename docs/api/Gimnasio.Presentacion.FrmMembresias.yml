@@ -16,6 +16,7 @@ items:
   - Gimnasio.Presentacion.FrmMembresias.HabilitarIngresoPago
   - Gimnasio.Presentacion.FrmMembresias.HabilitarListado
   - Gimnasio.Presentacion.FrmMembresias.InitializeComponent
+  - Gimnasio.Presentacion.FrmMembresias.Reiniciar
   - Gimnasio.Presentacion.FrmMembresias.btnActualizar
   - Gimnasio.Presentacion.FrmMembresias.btnActualizar_Click(System.Object,System.EventArgs)
   - Gimnasio.Presentacion.FrmMembresias.btnCancelar
@@ -2211,12 +2212,12 @@ items:
   summary: Constructor que inicializa el formulario. Si es recepcionista oculta el boton de eliminar.
   example: []
   syntax:
-    content: public FrmMembresias(Usuarios usuario)
+    content: internal FrmMembresias(Usuarios usuario)
     parameters:
     - id: usuario
       type: Gimnasio.Entidades.Usuarios
       description: Instancia de <xref href="Gimnasio.Entidades.Usuarios" data-throw-if-not-resolved="false"></xref> que representa al usuario logueado.
-    content.vb: Public Sub New(usuario As Usuarios)
+    content.vb: Friend Sub New(usuario As Usuarios)
   overload: Gimnasio.Presentacion.FrmMembresias.#ctor*
   nameWithType.vb: FrmMembresias.New(Usuarios)
   fullName.vb: Gimnasio.Presentacion.FrmMembresias.New(Gimnasio.Entidades.Usuarios)
@@ -2600,7 +2601,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnCancelar_Click
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 305
+    startLine: 306
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2636,7 +2637,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: HabilitarIngresoPago
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 320
+    startLine: 321
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2671,7 +2672,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: BtnPagar_Click
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 347
+    startLine: 348
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2717,7 +2718,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnGuardarPago_Click
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 379
+    startLine: 380
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2764,7 +2765,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnCancelarPago_Click
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 403
+    startLine: 404
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2800,7 +2801,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: btnEliminar_Click
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 424
+    startLine: 425
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2846,7 +2847,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbBuscarMembresias_TextChanged
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 451
+    startLine: 452
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2888,7 +2889,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: cb_SelectedIndexChanged
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 475
+    startLine: 476
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2936,7 +2937,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbBuscarMiembro_TextChanged
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 501
+    startLine: 502
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -2981,7 +2982,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: tbBuscarPlan_TextChanged
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 521
+    startLine: 522
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -3004,6 +3005,39 @@ items:
   nameWithType.vb: FrmMembresias.tbBuscarPlan_TextChanged(Object, EventArgs)
   fullName.vb: Gimnasio.Presentacion.FrmMembresias.tbBuscarPlan_TextChanged(Object, System.EventArgs)
   name.vb: tbBuscarPlan_TextChanged(Object, EventArgs)
+- uid: Gimnasio.Presentacion.FrmMembresias.Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmMembresias.Reiniciar
+  id: Reiniciar
+  parent: Gimnasio.Presentacion.FrmMembresias
+  langs:
+  - csharp
+  - vb
+  name: Reiniciar()
+  nameWithType: FrmMembresias.Reiniciar()
+  fullName: Gimnasio.Presentacion.FrmMembresias.Reiniciar()
+  type: Method
+  source:
+    remote:
+      path: Gimnasio.Presentacion/FrmMembresias.vb
+      branch: main
+      repo: https://github.com/Carlovich01/GimnasioGoatym
+    id: Reiniciar
+    path: ../Gimnasio.Presentacion/FrmMembresias.vb
+    startLine: 539
+  assemblies:
+  - Gimnasio.Presentacion
+  namespace: Gimnasio.Presentacion
+  summary: >-
+    Restablece el estado del formulario de membresías según la opción de búsqueda seleccionada.
+
+    - Si la opción de búsqueda es por DNI o por nombre de plan (índices 0 o 1), limpia el campo de búsqueda y muestra el listado completo de membresías.
+
+    - Si la opción es por estado (Activa/Inactiva, índices 2 o 3), restablece la opción de búsqueda a la predeterminada (índice 0) y muestra el listado completo.
+  example: []
+  syntax:
+    content: public void Reiniciar()
+    content.vb: Public Sub Reiniciar()
+  overload: Gimnasio.Presentacion.FrmMembresias.Reiniciar*
 - uid: Gimnasio.Presentacion.FrmMembresias.pbReiniciar_Click(System.Object,System.EventArgs)
   commentId: M:Gimnasio.Presentacion.FrmMembresias.pbReiniciar_Click(System.Object,System.EventArgs)
   id: pbReiniciar_Click(System.Object,System.EventArgs)
@@ -3022,18 +3056,11 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: pbReiniciar_Click
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 539
+    startLine: 557
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
-  summary: >-
-    Evento que se ejecuta al hacer clic en el botón de reinicio en la gestión de membresías.
-
-    Según la opción seleccionada en el ComboBox cbOpcionBuscar:
-
-    - Si la opción es "DNI" o "Nombre de Plan" (índices 0 o 1), limpia el campo de búsqueda y actualiza el listado de membresías mostrando todos los registros.
-
-    - Si la opción es "Activa" o "Inactiva" (índices 2 o 3), restablece la opción del ComboBox a "DNI" (índice 0) y actualiza el listado mostrando todos los registros.
+  summary: Evento que se ejecuta al hacer clic en el botón de reinicio general del formulario de membresía. Llama al método <xref href="Gimnasio.Presentacion.FrmMembresias.Reiniciar" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: private void pbReiniciar_Click(object sender, EventArgs e)
@@ -3065,7 +3092,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: pbReiniciarMiembro_Click
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 559
+    startLine: 570
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -3106,7 +3133,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: pbReiniciarPlan_Click
     path: ../Gimnasio.Presentacion/FrmMembresias.vb
-    startLine: 574
+    startLine: 585
   assemblies:
   - Gimnasio.Presentacion
   namespace: Gimnasio.Presentacion
@@ -21767,6 +21794,30 @@ references:
   name: tbBuscarPlan_TextChanged
   nameWithType: FrmMembresias.tbBuscarPlan_TextChanged
   fullName: Gimnasio.Presentacion.FrmMembresias.tbBuscarPlan_TextChanged
+- uid: Gimnasio.Presentacion.FrmMembresias.Reiniciar*
+  commentId: Overload:Gimnasio.Presentacion.FrmMembresias.Reiniciar
+  href: Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_Reiniciar
+  name: Reiniciar
+  nameWithType: FrmMembresias.Reiniciar
+  fullName: Gimnasio.Presentacion.FrmMembresias.Reiniciar
+- uid: Gimnasio.Presentacion.FrmMembresias.Reiniciar
+  commentId: M:Gimnasio.Presentacion.FrmMembresias.Reiniciar
+  href: Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_Reiniciar
+  name: Reiniciar()
+  nameWithType: FrmMembresias.Reiniciar()
+  fullName: Gimnasio.Presentacion.FrmMembresias.Reiniciar()
+  spec.csharp:
+  - uid: Gimnasio.Presentacion.FrmMembresias.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_Reiniciar
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Gimnasio.Presentacion.FrmMembresias.Reiniciar
+    name: Reiniciar
+    href: Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_Reiniciar
+  - name: (
+  - name: )
 - uid: Gimnasio.Presentacion.FrmMembresias.pbReiniciar_Click*
   commentId: Overload:Gimnasio.Presentacion.FrmMembresias.pbReiniciar_Click
   href: Gimnasio.Presentacion.FrmMembresias.html#Gimnasio_Presentacion_FrmMembresias_pbReiniciar_Click_System_Object_System_EventArgs_

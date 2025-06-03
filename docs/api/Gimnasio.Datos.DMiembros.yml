@@ -142,7 +142,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Actualizar
     path: ../Gimnasio.Datos/DMiembros.vb
-    startLine: 63
+    startLine: 64
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -150,6 +150,8 @@ items:
     Recibe una instancia de Miembros y ejecuta una sentencia SQL (UPDATE) que actualiza los campos de un registro de miembro existente que 
 
     corresponde al id de la instancia.
+
+    Si el DNI esta duplicado, lanza una excepción.
   example: []
   syntax:
     content: public void Actualizar(Miembros Obj)
@@ -177,7 +179,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Eliminar
     path: ../Gimnasio.Datos/DMiembros.vb
-    startLine: 87
+    startLine: 93
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -215,7 +217,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorNombre
     path: ../Gimnasio.Datos/DMiembros.vb
-    startLine: 112
+    startLine: 118
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -258,7 +260,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ObtenerPorDni
     path: ../Gimnasio.Datos/DMiembros.vb
-    startLine: 131
+    startLine: 137
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos
@@ -296,7 +298,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorDni
     path: ../Gimnasio.Datos/DMiembros.vb
-    startLine: 151
+    startLine: 157
   assemblies:
   - Gimnasio.Datos
   namespace: Gimnasio.Datos

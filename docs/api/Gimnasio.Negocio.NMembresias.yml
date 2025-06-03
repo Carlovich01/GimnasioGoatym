@@ -31,7 +31,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: NMembresias
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 15
+    startLine: 14
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -78,7 +78,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: dMembresias
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 19
+    startLine: 18
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -107,7 +107,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ActualizaAEstadoInactiva
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 24
+    startLine: 23
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -135,7 +135,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Listar
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 38
+    startLine: 37
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -169,7 +169,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Insertar
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 54
+    startLine: 53
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -206,7 +206,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Actualizar
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 73
+    startLine: 72
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -241,7 +241,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: Eliminar
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 89
+    startLine: 88
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -276,7 +276,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ObtenerIdMembresia
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 103
+    startLine: 102
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -311,7 +311,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ObtenerPorDni
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 117
+    startLine: 116
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -349,7 +349,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorDni
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 131
+    startLine: 130
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -387,7 +387,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorNombrePlan
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 146
+    startLine: 145
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -429,7 +429,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ListarPorEstado
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 160
+    startLine: 159
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio
@@ -467,7 +467,7 @@ items:
       repo: https://github.com/Carlovich01/GimnasioGoatym
     id: ObtenerMembresiaMasReciente
     path: ../Gimnasio.Negocio/NMembresias.vb
-    startLine: 174
+    startLine: 173
   assemblies:
   - Gimnasio.Negocio
   namespace: Gimnasio.Negocio

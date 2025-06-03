@@ -40,24 +40,28 @@ references:
   fullName: Gimnasio.Presentacion.FrmLogin
 - uid: Gimnasio.Presentacion.FrmMembresias
   commentId: T:Gimnasio.Presentacion.FrmMembresias
+  parent: Gimnasio.Presentacion
   href: Gimnasio.Presentacion.FrmMembresias.html
   name: FrmMembresias
   nameWithType: FrmMembresias
   fullName: Gimnasio.Presentacion.FrmMembresias
 - uid: Gimnasio.Presentacion.FrmMiembros
   commentId: T:Gimnasio.Presentacion.FrmMiembros
+  parent: Gimnasio.Presentacion
   href: Gimnasio.Presentacion.FrmMiembros.html
   name: FrmMiembros
   nameWithType: FrmMiembros
   fullName: Gimnasio.Presentacion.FrmMiembros
 - uid: Gimnasio.Presentacion.FrmPagos
   commentId: T:Gimnasio.Presentacion.FrmPagos
+  parent: Gimnasio.Presentacion
   href: Gimnasio.Presentacion.FrmPagos.html
   name: FrmPagos
   nameWithType: FrmPagos
   fullName: Gimnasio.Presentacion.FrmPagos
 - uid: Gimnasio.Presentacion.FrmPlanes
   commentId: T:Gimnasio.Presentacion.FrmPlanes
+  parent: Gimnasio.Presentacion
   href: Gimnasio.Presentacion.FrmPlanes.html
   name: FrmPlanes
   nameWithType: FrmPlanes
@@ -71,6 +75,7 @@ references:
   fullName: Gimnasio.Presentacion.FrmPrincipal
 - uid: Gimnasio.Presentacion.FrmReclamos
   commentId: T:Gimnasio.Presentacion.FrmReclamos
+  parent: Gimnasio.Presentacion
   href: Gimnasio.Presentacion.FrmReclamos.html
   name: FrmReclamos
   nameWithType: FrmReclamos
@@ -84,6 +89,7 @@ references:
   fullName: Gimnasio.Presentacion.FrmRegistroAsistencias
 - uid: Gimnasio.Presentacion.FrmUsuarios
   commentId: T:Gimnasio.Presentacion.FrmUsuarios
+  parent: Gimnasio.Presentacion
   href: Gimnasio.Presentacion.FrmUsuarios.html
   name: FrmUsuarios
   nameWithType: FrmUsuarios
